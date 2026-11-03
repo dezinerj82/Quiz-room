@@ -734,8 +734,35 @@ async function folder(){return qrFolder('Scores')}
 function report(entry){const lines=["Name: "+entry.name,"Subject: "+entry.subject,"Level: "+(entry.level||entry.attempts[0]?.level||"Unknown"),"Chapter: "+entry.chapter,""];entry.attempts.forEach((a,i)=>{lines.push("Attempt "+(i+1),"Completed: "+a.time,"Quiz version: "+a.version,"Score: "+Math.round(a.score/a.total*100)+"% ("+a.score+" out of "+a.total+")","Incorrect questions: "+(a.incorrect.length?a.incorrect.join(", "):"None"));if(a.unanswered.length)lines.push("Unanswered questions: "+a.unanswered.join(", "));lines.push("")});return lines.join("\n")}
 async function saveScore(scoreKey){const indicator=document.getElementById('driveSaveStatus');if(!activeEmail){indicator.textContent='Sign in to save your score.';return}try{const entry=loadScoreHistory()[scoreKey];if(!entry)throw Error('Score history unavailable in this browser.');const id=await folder();const date=(new Date()).toISOString().slice(0,10).replace(/-/g,"");const number=String(entry.chapter||"quiz").replace(/[^a-z0-9]+/gi,"").toLowerCase().slice(0,45);const file=activeEmail.replace(/[^a-z0-9@._-]/gi,"_")+"_"+String(entry.subject).toLowerCase()+"_"+number+"_"+date+".txt";const q=new URL("https://www.googleapis.com/drive/v3/files");q.searchParams.set("q","'"+id+"' in parents and name = '"+file.replace(/'/g,"\\'")+"' and trashed = false");q.searchParams.set("fields","files(id,name)");const found=await api(q);if(found.files?.length>1)throw Error("Duplicate score filenames found.");const existing=found.files?.[0];const boundary="isaac_quiz_upload";const meta=existing?{}:{name:file,parents:[id]};let content=report({...entry,attempts:entry.attempts.slice(-1)});if(existing){const prev=await fetch("https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(existing.id)+"?alt=media",{headers:{Authorization:"Bearer "+token},cache:"no-store"});if(!prev.ok)throw Error("Could not read existing score history.");const oldText=await prev.text();const nextAttempt=(oldText.match(/^Attempt \d+/gm)||[]).length+1;content=oldText.trimEnd()+"\n\n"+content.split("\n").slice(4).join("\n").replace(/^Attempt 1/m,"Attempt "+nextAttempt)}const body="--"+boundary+"\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"+JSON.stringify(meta)+"\r\n--"+boundary+"\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n"+content+"\r\n--"+boundary+"--";await api("https://www.googleapis.com/upload/drive/v3/files"+(existing?"/"+encodeURIComponent(existing.id):"")+"?uploadType=multipart",{method:existing?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body});indicator.textContent="Score saved to Google Drive.";}catch(e){console.error("Quiz Room score sync:",e);indicator.textContent="Google Drive save failed. Score retained locally: "+e.message}}
 
-async function qrRoot(){const u=new URL("https://www.googleapis.com/drive/v3/files");u.searchParams.set("q","name = 'Quiz Room' and mimeType = 'application/vnd.google-apps.folder' and trashed = false");u.searchParams.set("fields","files(id,name)");const r=await api(u);if(r.files?.length)return r.files[0].id;const made=await api("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:"Quiz Room",mimeType:"application/vnd.google-apps.folder"})});return made.id}
-async function qrFolder(name){const root=await qrRoot();const u=new URL("https://www.googleapis.com/drive/v3/files");u.searchParams.set("q","'"+root+"' in parents and name = '"+name+"' and mimeType = 'application/vnd.google-apps.folder' and trashed = false");u.searchParams.set("fields","files(id,name)");const r=await api(u);if(r.files?.length)return r.files[0].id;const made=await api("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,mimeType:"application/vnd.google-apps.folder",parents:[root]})});return made.id}
+// Keep one Drive root per Google account. Share pending folder requests to prevent duplicate creation.
+const qrFolderRequests=new Map();
+function qrDriveCacheKey(name){return "quiz_room_folder_v2:"+activeEmail.toLowerCase()+":"+name}
+async function qrFindOrCreateFolder(name,parent){
+ const key=(parent||"root")+":"+name;
+ if(qrFolderRequests.has(key))return qrFolderRequests.get(key);
+ const task=(async()=>{
+  const cacheKey=qrDriveCacheKey(key);
+  let cached="";try{cached=localStorage.getItem(cacheKey)||""}catch(e){}
+  if(cached){
+   try{const check=await api("https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(cached)+"?fields=id,name,mimeType,parents,trashed");if(!check.trashed&&check.name===name&&check.mimeType==="application/vnd.google-apps.folder"&&(!parent||check.parents?.includes(parent)))return cached}catch(e){}
+  }
+  const u=new URL("https://www.googleapis.com/drive/v3/files");
+  const safeName=name.replace(/\\/g,"\\\\").replace(/'/g,"\\'");
+  u.searchParams.set("q","name = '"+safeName+"' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"+(parent?" and '"+parent+"' in parents":" and 'root' in parents"));
+  u.searchParams.set("fields","nextPageToken,files(id,name,createdTime)");
+  u.searchParams.set("page_size","100");
+  const found=await api(u);
+  // Stable choice if duplicates already exist; do not delete or move any user files.
+  const items=(found.files||[]).sort((a,b)=>String(a.createdTime||"").localeCompare(String(b.createdTime||""))||a.id.localeCompare(b.id));
+  const id=items.length?items[0].id:(await api("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,mimeType:"application/vnd.google-apps.folder",...(parent?{parents:[parent]}:{})})})).id;
+  try{localStorage.setItem(cacheKey,id)}catch(e){}
+  return id;
+ })();
+ qrFolderRequests.set(key,task);
+ try{return await task}finally{qrFolderRequests.delete(key)}
+}
+async function qrRoot(){return qrFindOrCreateFolder("Quiz Room",null)}
+async function qrFolder(name){return qrFindOrCreateFolder(name,await qrRoot())}
 async function qrFileId(folderName,name){const id=await qrFolder(folderName),u=new URL("https://www.googleapis.com/drive/v3/files");u.searchParams.set("q","'"+id+"' in parents and name = '"+name+"' and trashed = false");u.searchParams.set("fields","files(id,name)");const r=await api(u);return {parent:id,file:r.files?.[0]?.id}}
 window.qrDriveRead=async(folderName,name)=>{const f=await qrFileId(folderName,name);if(!f.file)return null;const r=await fetch("https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(f.file)+"?alt=media",{headers:{Authorization:"Bearer "+token}});if(!r.ok)throw Error("Google Drive read failed ("+r.status+")");return r.text()};
 window.qrDriveWrite=async(folderName,name,content)=>{const f=await qrFileId(folderName,name),boundary="quiz_room_data_boundary",meta=f.file?{}:{name,parents:[f.parent]},body="--"+boundary+"\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"+JSON.stringify(meta)+"\r\n--"+boundary+"\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"+content+"\r\n--"+boundary+"--";await api("https://www.googleapis.com/upload/drive/v3/files"+(f.file?"/"+encodeURIComponent(f.file):"")+"?uploadType=multipart",{method:f.file?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body})};
