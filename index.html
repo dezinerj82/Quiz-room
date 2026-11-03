@@ -764,7 +764,7 @@ async function saveScore(scoreKey){
   merged.attempts.push(latest);
   const boundary="quiz_room_score_json";
   const metadata=existing?{}:{name:filename,parents:[id],mimeType:"application/json"};
-  const body="--"+boundary+"\\r\\nContent-Type: application/json; charset=UTF-8\\r\\n\\r\\n"+JSON.stringify(metadata)+"\\r\\n--"+boundary+"\\r\\nContent-Type: application/json; charset=UTF-8\\r\\n\\r\\n"+JSON.stringify(merged)+"\\r\\n--"+boundary+"--";
+  const body="--"+boundary+"\r\nContent-Type: application/json; charset=UTF-8\\r\\n\\r\\n"+JSON.stringify(metadata)+"\\r\\n--"+boundary+"\\r\\nContent-Type: application/json; charset=UTF-8\\r\\n\\r\\n"+JSON.stringify(merged)+"\\r\\n--"+boundary+"--";
   await api("https://www.googleapis.com/upload/drive/v3/files"+(existing?"/"+encodeURIComponent(existing.id):"")+"?uploadType=multipart",{method:existing?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body});
   indicator.textContent='Score saved to Google Drive.';
  }catch(e){console.error('Quiz Room score sync:',e);indicator.textContent='Google Drive save failed. Score retained locally: '+e.message}
