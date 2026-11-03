@@ -68,5 +68,18 @@
       "heading": "ACTIVE GOLDEN RULE STORAGE POLICY",
       "rules": "- GitHub backup/Github rule.json records only active website functionality, processes, operational conditions and content rules. Never include personal data, user-specific accounts, credentials, private score data or ChatGPT memory instructions.\n- Keep GitHub website rules in each repository's own backup/Github rule.json; do not treat one repository's file as the rule file for another repository.\n- Personal context and ChatGPT-specific workflows belong in the relevant ChatGPT Project source, not in public GitHub files. Updates to Project sources require an available supported write mechanism; do not claim unattended or periodic updates without a configured automation and verified destination.\n- Reconcile rules when requirements change: remove retired, invalid, cancelled and superseded rules. Preserve only currently active, valid requirements."
     }
-  ]
+  ],
+  "rule_update_process": {
+    "on_every_relevant_change": "Update this JSON backup in the same change as the affected process or reference path; remove superseded requirements, do not append conflicting versions.",
+    "priority": "Current verified source code and latest explicit user decisions take precedence over historical narrative within imported sections.",
+    "related_rule": "dezinerj82/Goldenrule/Quiz room/Private rule.json",
+    "reference_library": "dezinerj82/Goldenrule/Quiz room/Reference/",
+    "rename_note": "Private repository must be renamed from Project-goldenrule to Goldenrule in GitHub Settings; paths become authoritative after rename."
+  },
+  "current_decisions": {
+    "scores": "New scores JSON in student's private Google Drive; historical sample scores may be discarded.",
+    "library": "Scanned materials stored privately under Quiz room/Reference; never expose copyrighted scans in public Pages.",
+    "rules": "Golden rules preserved as JSON. Quiz authoring logic unchanged without explicit instruction.",
+    "profile": "1:1 crop with drag and zoom before saving avatar."
+  }
 }
