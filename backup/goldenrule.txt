@@ -1,5 +1,5 @@
 ISAAC QUIZ TIME — ACTIVE PROJECT COMMAND
-Updated: 2026-10-29
+Updated: 2026-11-03
 Repository: https://github.com/dezinerj82/Isaac-Quiz
 Live site: https://dezinerj82.github.io/Isaac-Quiz/
 
@@ -106,3 +106,10 @@ SCORE REPORT — MANUAL GITHUB UPLOAD
 - The home page has a monospace student-name input below Quiz Time. Press Enter to save the name on that browser. Each completed quiz automatically records exactly one attempt in browser localStorage, including subject, chapter/topic, completion time in Malaysia time, percentage, fraction, incorrect question numbers and unanswered numbers when applicable.
 - Download Score produces a plain TXT file named username_subject_chapter_YYYYMMDD.txt with only lowercase ASCII letters, digits and underscores. Attempts for the same student/subject/chapter/date append in order; attempts on different dates create separate files. A second download includes all attempts recorded in that browser for the same file. Browser history is device/browser-specific and can be lost when site data is cleared; downloading is the durable backup.
 - The user manually uploads TXT reports into the GitHub score/ folder. There is no automatic GitHub upload or external backend. Future analysis may compare missed question numbers and score trends. Once quiz content is published, preserve its question text/order for accurate tracking; introduce corrections or fresh questions as a new version instead.
+
+
+ACTIVE GOLDEN RULE STORAGE POLICY
+- GitHub backup/goldenrule.txt records only active website functionality, processes, operational conditions and content rules. Never include personal data, user-specific accounts, credentials, private score data or ChatGPT memory instructions.
+- Keep GitHub website rules in each repository's own backup/goldenrule.txt; do not treat one repository's file as the rule file for another repository.
+- Personal context and ChatGPT-specific workflows belong in the relevant ChatGPT Project source, not in public GitHub files. Updates to Project sources require an available supported write mechanism; do not claim unattended or periodic updates without a configured automation and verified destination.
+- Reconcile rules when requirements change: remove retired, invalid, cancelled and superseded rules. Preserve only currently active, valid requirements.
