@@ -445,7 +445,7 @@ function availableEntries(level,s,category){
 }
 function availableCategories(level,s){return quizCategories.filter(category=>availableEntries(level,s,category).length>0)}
 
-const SCORE_GITHUB_REPO='dezinerj82/Isaac-Quiz';
+const SCORE_GITHUB_REPO='dezinerj82/Quiz-room';
 let remoteScoreReports=[],scoreReportsPromise=null;
 function activeStudentName(){return ($('studentName').value||'').trim()}
 function scoreGroup(chapter){
