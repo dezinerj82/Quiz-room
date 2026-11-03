@@ -637,6 +637,7 @@ function recordScoreAttempt(){
  history[filename]={name,subject,chapter,attempts:[...attempts,{time:now.time,score,total:questions.length,incorrect,unanswered,version:chapter}]};
  latestScoreKey=filename;
  try{localStorage.setItem(SCORE_STORAGE_KEY,JSON.stringify(history))}catch(e){console.warn('Score history could not be saved',e)}
+ if(window.isaacSaveGoogleScore)window.isaacSaveGoogleScore();
 }
 function downloadScore(){
  if(!scoreAttemptRecorded)recordScoreAttempt();
@@ -647,4 +648,44 @@ function downloadScore(){
  const url=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download=latestScoreKey;link.click();setTimeout(()=>URL.revokeObjectURL(url),500);
 }
 $('subjects').innerHTML=names.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');document.querySelector('#home .rainbow').innerHTML=rainbow('Quiz time');try{$('studentName').value=localStorage.getItem('isaac_quiz_student_name')||''}catch(e){}let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=names.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
+</script><style id="isaac-google-auth-v1">
+body.auth-locked>main,body.auth-locked>section{display:none!important}
+#googleGate{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;background:white;font-family:Fredoka,Nunito,Arial,sans-serif;color:#29335f}
+#googleGate.hidden{display:none!important}
+#googleGate h1{font-size:clamp(48px,9vw,90px);margin:0;color:#525ea7}
+#googleGate .account-list{display:grid;gap:12px;width:min(420px,100%)}
+#googleGate button{border:0;border-radius:22px;padding:18px 25px;font-size:20px;font-weight:700;background:#525ea7;color:white;box-shadow:0 6px 0 #29335f16,0 12px 22px #29335f15;transition:transform .2s,opacity .2s}
+#googleGate button:nth-child(even){background:#5facd3}
+#googleGate button:hover{transform:translateY(-2px)}
+#googleGate button:disabled{opacity:.65;cursor:wait}
+#googleGate #otherGoogle{background:#ffc349;color:#29335f}
+#googleGate .status{font-size:15px;min-height:20px;text-align:center}
+#googleGate .spinner{display:inline-block;width:17px;height:17px;border:3px solid #ffffff80;border-top-color:white;border-radius:50%;animation:googleSpin .8s linear infinite;margin-right:10px;vertical-align:middle}
+@keyframes googleSpin{to{transform:rotate(360deg)}}
+</style>
+<div id="googleGate" role="region" aria-label="Google account login"><h1>Quiz time</h1><p>Choose your Google account to continue.</p><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div></div>
+<script>
+(()=>{
+"use strict";
+const CLIENT_ID="789168568609-beodk1ohqkhtfm00h7pdbk4ee24u5dgn.apps.googleusercontent.com";
+const SCOPES="https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
+const STORE="isaac_google_accounts_v1",MARKER="isaac-quiz-scores",FOLDER="Isaac Quiz Scores";
+let token="",expires=0,activeEmail="",client=null,pending="",busy=false;
+const gate=document.getElementById("googleGate"),accounts=document.getElementById("googleAccounts"),other=document.getElementById("otherGoogle"),status=document.getElementById("googleStatus");
+document.body.classList.add("auth-locked");
+const saved=()=>{try{return JSON.parse(localStorage.getItem(STORE)||"[]").filter(x=>typeof x.email==="string").slice(0,12)}catch{return []}};
+const say=x=>status.textContent=x;
+function render(){accounts.replaceChildren();for(const a of saved()){const b=document.createElement("button");b.type="button";b.textContent=a.name&&a.name!==a.email?a.name+" ("+a.email+")":a.email;b.addEventListener("click",()=>login(a.email));accounts.append(b)}other.textContent=saved().length?"Choose other account":"Login to start"}
+function setBusy(v){busy=v;accounts.querySelectorAll("button").forEach(b=>b.disabled=v);other.disabled=v;if(v){say("Connecting to Google…");other.innerHTML='<span class="spinner"></span>Connecting'}else{render()}}
+async function googleReady(){if(window.google?.accounts?.oauth2)return;await new Promise((resolve,reject)=>{const e=document.createElement("script");e.src="https://accounts.google.com/gsi/client";e.async=true;e.onload=resolve;e.onerror=()=>reject(Error("Google sign-in could not load."));document.head.append(e)})}
+async function login(email=""){if(busy)return;setBusy(true);pending=email.toLowerCase();try{await googleReady();if(!client)client=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,callback:handleToken,error_callback:()=>{setBusy(false);say("Google sign-in was cancelled or blocked.")}});client.requestAccessToken({prompt:email?"":"select_account",...(email?{hint:email}:{})})}catch(e){setBusy(false);say(e.message)}}
+async function handleToken(response){try{if(!response.access_token)throw Error("Google authentication was not completed.");const scopes=(response.scope||"").split(/\s+/);if(!SCOPES.split(" ").every(x=>scopes.includes(x)))throw Error("Google Drive permission is required.");const u=await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{headers:{Authorization:"Bearer "+response.access_token},cache:"no-store"});if(!u.ok)throw Error("Could not verify Google account.");const info=await u.json();if(!info.email||info.email_verified===false)throw Error("Google email was not verified.");if(pending&&pending!==info.email.toLowerCase())throw Error("Different Google account selected. Please choose the matching account.");token=response.access_token;expires=Date.now()+Math.max(0,(Number(response.expires_in)||3600)-60)*1000;activeEmail=info.email.toLowerCase();const arr=saved().filter(x=>x.email!==activeEmail);arr.unshift({email:activeEmail,name:info.name||activeEmail});localStorage.setItem(STORE,JSON.stringify(arr.slice(0,12)));gate.classList.add("hidden");document.body.classList.remove("auth-locked");setBusy(false)}catch(e){token="";activeEmail="";setBusy(false);say(e.message)}}
+async function api(url,options={}){if(!token||Date.now()>=expires)throw Error("Google Drive session expired. Return to the login page to reconnect.");const r=await fetch(url,{...options,headers:{...(options.headers||{}),Authorization:"Bearer "+token}});if(!r.ok)throw Error("Google Drive save failed ("+r.status+").");return r.json()}
+async function folder(){const q="mimeType = 'application/vnd.google-apps.folder' and trashed = false and appProperties has { key='purpose' and value='"+MARKER+"' }";const u=new URL("https://www.googleapis.com/drive/v3/files");u.searchParams.set("q",q);u.searchParams.set("fields","nextPageToken,files(id,name,appProperties)");const found=await api(u);if(found.files?.length>1)throw Error("Multiple quiz score folders found.");if(found.files?.length)return found.files[0].id;const made=await api("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:FOLDER,mimeType:"application/vnd.google-apps.folder",appProperties:{purpose:MARKER}})});return made.id}
+function report(entry){const lines=["Name: "+entry.name,"Subject: "+entry.subject,"Chapter: "+entry.chapter,""];entry.attempts.forEach((a,i)=>{lines.push("Attempt "+(i+1),"Completed: "+a.time,"Quiz version: "+a.version,"Score: "+Math.round(a.score/a.total*100)+"% ("+a.score+" out of "+a.total+")","Incorrect questions: "+(a.incorrect.length?a.incorrect.join(", "):"None"));if(a.unanswered.length)lines.push("Unanswered questions: "+a.unanswered.join(", "));lines.push("")});return lines.join("\n")}
+async function saveScore(){if(!activeEmail)return;try{const entry=loadScoreHistory()[latestScoreKey];if(!entry)return;const id=await folder();const date=(new Date()).toISOString().slice(0,10).replace(/-/g,"");const number=String(entry.chapter||"quiz").replace(/[^a-z0-9]+/gi,"").toLowerCase().slice(0,45);const file=activeEmail.replace(/[^a-z0-9@._-]/gi,"_")+"_"+String(entry.subject).toLowerCase()+"_"+number+"_"+date+".txt";const q=new URL("https://www.googleapis.com/drive/v3/files");q.searchParams.set("q","'"+id+"' in parents and name = '"+file.replace(/'/g,"\\'")+"' and trashed = false");q.searchParams.set("fields","files(id,name)");const found=await api(q);if(found.files?.length>1)throw Error("Duplicate score filenames found.");const existing=found.files?.[0];const boundary="isaac_quiz_upload";const meta=existing?{}:{name:file,parents:[id]};const body="--"+boundary+"\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n"+JSON.stringify(meta)+"\r\n--"+boundary+"\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n"+report(entry)+"\r\n--"+boundary+"--";await api("https://www.googleapis.com/upload/drive/v3/files"+(existing?"/"+encodeURIComponent(existing.id):"")+"?uploadType=multipart",{method:existing?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body});}catch(e){console.error("Isaac score sync:",e);alert("Score saved locally, but Google Drive sync failed: "+e.message)}}
+window.isaacSaveGoogleScore=saveScore;
+other.addEventListener("click",()=>login(""));
+render();
+})();
 </script></body></html>
