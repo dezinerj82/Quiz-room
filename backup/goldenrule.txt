@@ -1,10 +1,10 @@
-ISAAC QUIZ TIME — ACTIVE PROJECT COMMAND
+QUIZ ROOM — ACTIVE PROJECT COMMAND
 Updated: 2026-11-03
-Repository: https://github.com/dezinerj82/Isaac-Quiz
-Live site: https://dezinerj82.github.io/Isaac-Quiz/
+Repository: https://github.com/dezinerj82/Quiz-room
+Live site: https://dezinerj82.github.io/Quiz-room/
 
 RESUME IN A NEW CHAT
-Continue my Isaac Quiz Time project directly in GitHub repository dezinerj82/Isaac-Quiz. Read the latest root goldenrule.txt and inspect the current main branch and relevant files before making changes. This file contains only active exam/quiz rules and how to work with me; the GitHub source files themselves are the authoritative backup for visual design. Preserve all existing functionality and content. Follow my newest instructions, update this file when operational or exam rules change, and never rebuild the project unnecessarily.
+Continue my Quiz Room project directly in GitHub repository dezinerj82/Quiz-room. Read the latest root goldenrule.txt and inspect the current main branch and relevant files before making changes. This file contains only active exam/quiz rules and how to work with me; the GitHub source files themselves are the authoritative backup for visual design. Preserve all existing functionality and content. Follow my newest instructions, update this file when operational or exam rules change, and never rebuild the project unnecessarily.
 
 HOW TO WORK WITH ME
 - Website navigation hierarchy: Subject -> School Level -> Category (Exercise, Quiz, Exam) -> available quiz sets. Automatically show a school level or category only when it has at least one real playable quiz; hide empty levels/categories, and reveal them when their first quiz is implemented. Keep subjects separate.
@@ -16,7 +16,7 @@ HOW TO WORK WITH ME
 - A successful commit is NOT proof that GitHub Pages has deployed or that the website was browser-tested. Do not say the live site is Ready without confirming deployment.
 - On successful completion and verification of the requested GitHub task, respond ONLY with the green badge: Completed. If the task fails and requires user action, respond with a red badge: Failed - action required, plus brief safe repair options. Always pursue the safest available fix; never leave an error without a clear recovery plan.
 - Keep goldenrule.txt current and consolidated. Remove superseded instructions rather than accumulating contradictory historical rules. Do not add purely visual CSS/layout/color/font descriptions here.
-- Treat this room as the working conversation for Isaac Quiz Time. For quiz-related GitHub implementation requests, make the actual repository changes rather than merely suggesting edits. For questions and planning discussions, answer naturally and concisely; use the completion badge only after a requested implementation has actually been committed and verified as far as available tools allow.
+- Treat this room as the working conversation for Quiz Room. For quiz-related GitHub implementation requests, make the actual repository changes rather than merely suggesting edits. For questions and planning discussions, answer naturally and concisely; use the completion badge only after a requested implementation has actually been committed and verified as far as available tools allow.
 - Communicate in short, clear, direct English. The user prefers minimal commentary and visually simple guidance; avoid long explanations unless requested. Do not address the user by name. Preserve established decisions unless the user explicitly revises them.
 - Treat screenshots as references for website modifications, not requests to generate images. The user wants advance warning when this conversation becomes very long so they can back up the current rules and resume in a new chat; exact context capacity cannot be measured, so warn when substantial context loss is becoming likely.
 - Goldenrule.txt is the authoritative home for active quiz rules, quiz quality standards, workflows, and room-specific collaboration preferences. GitHub source files are authoritative for design and implemented behavior; backup/PMxmodule.txt is authoritative for subject, book, and chapter inventories. Keep these responsibilities separate. When a quiz or room-workflow rule changes, reconcile goldenrule.txt in the same task, replacing superseded rules instead of stacking conflicting versions.
@@ -51,7 +51,7 @@ EXAM TIMER AND RESULTS
 
 BACKUP AND RECOVERY
 - Subject booklist, module, chapter and exam-scope inventories belong in separate year-specific files under backup/, e.g. backup/PM3module.txt and, when PM4 sources arrive, backup/PM4module.txt. Do not duplicate these inventories in goldenrule.txt. Keep each year file current: reconcile new source materials, replace superseded entries and remove retired data instead of accumulating contradictions.
-- For a current source-and-assets backup, open https://github.com/dezinerj82/Isaac-Quiz, select Code > Download ZIP and store it safely. This contains the tracked project files and visual design but not Git history.
+- For a current source-and-assets backup, open https://github.com/dezinerj82/Quiz-room, select Code > Download ZIP and store it safely. This contains the tracked project files and visual design but not Git history.
 - To preserve commit history too, use Git clone or a mirror clone and keep a separate secure copy. Never include access tokens/passwords.
 - Before restoring a backup, compare it with current main and avoid overwriting newer work blindly.
 - A future chat must fetch the latest goldenrule.txt and current GitHub files; do not rely on a stale saved prompt or screenshots.
