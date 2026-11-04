@@ -515,7 +515,7 @@ body:not(.auth-locked) .level-button{background:var(--qr-secondary)!important;co
 body:not(.auth-locked) .version{background:var(--qr-focus)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .pill,body:not(.auth-locked) .resultbutton{background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .exitpill{background:var(--qr-warning)!important;color:var(--qr-primary)!important}
-body:not(.auth-locked) button:disabled{background:color-mix(in srgb,var(--qr-primary) 13%,white)!important;color:color-mix(in srgb,var(--qr-primary) 55%,white)!important}
+body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:color-mix(in srgb,var(--qr-primary) 13%,white)!important;color:color-mix(in srgb,var(--qr-primary) 55%,white)!important}
 body:not(.auth-locked) .answer{border-radius:20px!important;background:color-mix(in srgb,var(--qr-secondary) 12%,white)!important;color:var(--qr-primary)!important;border-color:color-mix(in srgb,var(--qr-secondary) 40%,white)!important}
 body:not(.auth-locked) .answer .letter,body:not(.auth-locked) .number{background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .answer.correct{background:color-mix(in srgb,var(--qr-success) 23%,white)!important;border-color:var(--qr-success)!important}
@@ -1266,27 +1266,6 @@ body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:focus-visible
   padding-inline:10px!important;gap:3px!important;
  }
  body:not(.auth-locked) #quiz #timer .flip-digit{width:12px!important;font-size:15px!important}
-}
-
-
-/* === 43 | qr-inactive-overlay-theme === */
-/* Inactive controls use the existing theme colors with a translucent surface,
-   not a separate inactive color group. Keep answers visible after submission. */
-body:not(.auth-locked) button:disabled:not(.answer):not(.letter),
-body:not(.auth-locked) input:disabled:not([type="checkbox"]):not([type="radio"]),
-body:not(.auth-locked) input[readonly]:not([type="checkbox"]):not([type="radio"]),
-body:not(.auth-locked) select:disabled,
-body:not(.auth-locked) textarea:disabled,
-body:not(.auth-locked) textarea[readonly]{
-  background:color-mix(in srgb,var(--qr-background) 12%,white)!important;
-  color:color-mix(in srgb,var(--qr-primary) 68%,white)!important;
-  border-color:color-mix(in srgb,var(--qr-primary) 10%,white)!important;
-  box-shadow:none!important;
-  cursor:not-allowed!important;
-}
-body:not(.auth-locked) button:disabled:not(.answer):not(.letter){
-  opacity:.7!important;
-  transform:none!important;
 }
 </style><style id="qr-profile-separated-views">
 /* Profile sections use the existing theme, density and pill controls. */
