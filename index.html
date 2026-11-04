@@ -10,7 +10,7 @@ button{cursor:pointer;touch-action:manipulation}
 .versionlist{display:grid;gap:var(--density-space,18px)}
 #results .resultpanel{margin:0 auto;text-align:center}
 .time-warning{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;background:color-mix(in srgb,var(--qr-primary) 50%,transparent)}
-.time-warning-card{width:min(420px,100%);padding:var(--density-pad,28px);border-radius:var(--density-radius);background:var(--qr-background);text-align:center}
+.time-warning-card{width:min(420px,100%);padding:var(--qr-unified-padding);border-radius:var(--density-radius);background:var(--qr-background);text-align:center}
 
 
 
@@ -426,7 +426,7 @@ body:not(.auth-locked) .chapter-placeholder{
 html:not(.qr-font-ready) #googleGate{visibility:hidden}
 #googleGate{
  min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
- gap:var(--density-space,18px);padding:var(--density-pad,28px);background:var(--qr-background);
+ gap:var(--density-space,18px);padding:var(--qr-unified-padding);background:var(--qr-background);
  color:var(--qr-primary);font-family:var(--qr-font);
 }
 #googleGate.hidden{display:none!important}
