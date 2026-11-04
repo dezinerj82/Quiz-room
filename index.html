@@ -1,20 +1,20 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style id="qr-auth-first-paint">body.auth-locked>main,body.auth-locked>section{display:none!important}body.auth-locked{background:#fff!important}</style><meta name="theme-color" content="#ffffff"><title>Quiz time</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet"><style id="quiz-room-consolidated-styles">
 /* Current Quiz Room structural foundation. Visual treatments come from the shared theme. */
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:var(--qr-font);color:var(--qr-primary)}
+html,body{min-height:100%;font-family:var(--qr-font);color:var(--qr-primary)}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer;touch-action:manipulation}
 .hidden{display:none!important}
 .screen{min-height:100dvh;width:100%}
 .tile,.version,.pill,.level-button{border:0;font-weight:700}
 .versionlist{display:grid;gap:var(--density-space,18px)}
-#selection .level-grid{display:flex;flex-wrap:wrap;gap:var(--density-space,18px)}
-#selection .chapter-items{display:grid;gap:var(--density-space,18px)}
+
+
 #quiz .qr-quiz-content{display:flex;flex-direction:column;gap:var(--density-space,18px)}
 #quiz .topbar{display:flex;align-items:center;justify-content:flex-end;gap:var(--density-space,18px)}
 #quiz .quizactions{display:flex;align-items:center;gap:var(--density-space,18px)}
 #quiz .questionmeta{display:flex;align-items:center;justify-content:space-between;gap:var(--density-space,18px)}
-#quiz .questioncard{display:flex;flex-direction:column;gap:var(--density-space,18px);min-width:0}
+#quiz .questioncard{display:flex;flex-direction:column;gap:var(--density-space,18px);}
 #quiz .questionheading{display:flex;align-items:flex-start;gap:var(--density-space,18px);min-width:0}
 #quiz .questionheading .number{flex:0 0 auto;display:grid;place-items:center}
 #quiz .questiontitle{margin:0;min-width:0}
@@ -38,7 +38,7 @@ button{cursor:pointer;touch-action:manipulation}
 .time-warning-card{width:min(420px,100%);padding:var(--density-pad,28px);border-radius:var(--density-radius);background:white;text-align:center}
 @media(max-width:650px){#quiz .answers{grid-template-columns:1fr}#quiz .matchrow,#quiz .stepgrid{grid-template-columns:1fr}}
 
-/* === 24 | quiz-room-dashboard-style === */
+/* quiz-room-dashboard-style */
 
 body{background:#f5f4ff!important;color:#26365a}
 body:not(.auth-locked)>section#quizStart,body:not(.auth-locked)>main#home,body:not(.auth-locked)>section#dashboard,body:not(.auth-locked)>section#notesPage,body:not(.auth-locked)>section#profilePage,body:not(.auth-locked)>section#scoresPage{max-width:none;width:100%;min-height:100vh;margin:0;padding:0}
@@ -69,7 +69,7 @@ body:not(.auth-locked)>section#quizStart,body:not(.auth-locked)>main#home,body:n
 @media(max-width:740px){.qr-shell{grid-template-columns:1fr}.qr-side{position:sticky;top:0;z-index:10;flex-direction:row;justify-content:space-around;padding:7px;overflow:auto}.qr-side button{flex:0 0 53px}.qr-main{padding:18px}.qr-grid{grid-template-columns:1fr}.qr-card{padding:18px}.qr-avatar{width:64px;height:64px}}
 
 
-/* === 25 | qr-quiz-frame-style === */
+/* qr-quiz-frame-style */
 
 body:not(.auth-locked)>#selection,body:not(.auth-locked)>#quiz,body:not(.auth-locked)>#results{width:100%!important;max-width:none!important;min-height:100vh!important;padding:0!important;margin:0!important;background:#f5f4ff!important}
 #selection .qr-main,#quiz .qr-main,#results .qr-main{max-width:1240px;min-width:0}
@@ -78,24 +78,24 @@ body:not(.auth-locked)>#selection,body:not(.auth-locked)>#quiz,body:not(.auth-lo
 @media(max-width:740px){#selection .qr-main,#quiz .qr-main,#results .qr-main{padding:18px}}
 
 
-/* === 26 | qr-crop-style === */
+/* qr-crop-style */
 .qr-crop-modal{position:fixed;inset:0;z-index:9999;background:#202a4c99;display:flex;align-items:center;justify-content:center;padding:16px}.qr-crop-modal.hidden{display:none!important}.qr-crop-box{background:white;border-radius:24px;padding:24px;max-width:380px;width:100%;box-sizing:border-box;}.qr-crop-box h2{margin-top:0}.qr-crop-box canvas{display:block;max-width:100%;height:auto;aspect-ratio:1;touch-action:none;cursor:grab;border-radius:14px;margin:12px auto}.qr-crop-box label{display:block;margin-top:12px}
 
-/* === 27 | qr-responsive-white-layout === */
+/* qr-responsive-white-layout */
 
 /* Consistent viewport-wide dashboard frame on every page. */
 html,body{width:100%;min-width:0;margin:0;overflow-x:hidden;background:#fff!important}
 body:not(.auth-locked)>#home,body:not(.auth-locked)>#quizStart,body:not(.auth-locked)>#notesPage,body:not(.auth-locked)>#scoresPage,body:not(.auth-locked)>#profilePage,body:not(.auth-locked)>#selection,body:not(.auth-locked)>#quiz,body:not(.auth-locked)>#results{display:block;width:100%!important;max-width:none!important;min-height:100dvh!important;padding:0!important;margin:0!important;background:#fff!important}
 body:not(.auth-locked) .qr-shell{display:grid!important;align-items:stretch;width:100%;max-width:100%;min-height:100dvh;margin:0!important}
-body:not(.auth-locked) .qr-side{position:sticky;top:0;align-self:start;height:100dvh;box-sizing:border-box;width:88px;min-width:0;background:#fff;border-right:1px solid #e8eaf1;padding:20px 8px;gap:10px;z-index:30}
-body:not(.auth-locked) .qr-side button{width:64px;max-width:100%;min-height:54px;height:auto;color:#354a80}
+body:not(.auth-locked) .qr-side{position:sticky;top:0;align-self:start;height:100dvh;min-width:0;border-right:1px solid #e8eaf1;z-index:30}
+
 body:not(.auth-locked) .qr-side button:hover,body:not(.auth-locked) .qr-side button.active{background:#f2f5fb}
-body:not(.auth-locked) .qr-main{max-width:1300px;}
-body:not(.auth-locked) .qr-top{top:0;margin:0 0 18px;padding:10px 0 14px;min-width:0}
+
+body:not(.auth-locked) .qr-top{top:0;min-width:0}
 body:not(.auth-locked) .qr-card{min-width:0;max-width:100%;background:#fff;box-sizing:border-box;border:1px solid #eef0f5;}
 body:not(.auth-locked) .qr-hero{background:#f7f9fd!important}
 body:not(.auth-locked) .qr-list-item{background:#f7f9fd}
-body:not(.auth-locked) .qr-btn{background:#eaf0fc}
+
 body:not(.auth-locked) .qr-grid{width:100%}
 #quizStart .qr-card{width:100%!important;max-width:none!important;margin:0}
 #quizStart #subjects.tilegrid{width:100%!important;max-width:100%;display:grid;justify-content:start;align-items:stretch;}
@@ -103,15 +103,15 @@ body:not(.auth-locked) .qr-grid{width:100%}
 #selection,#quiz,#results{background:#fff!important}
 #selection .qr-quiz-content,#quiz .qr-quiz-content,#results .qr-quiz-content{max-width:100%;overflow-wrap:anywhere}
 @media(max-width:740px){
-body:not(.auth-locked) .qr-side{width:68px;position:sticky;top:0;height:100dvh;flex-direction:column;justify-content:flex-start;padding:12px 5px;gap:8px;overflow-x:hidden;overflow-y:auto}
-body:not(.auth-locked) .qr-side button{flex:0 0 auto;width:56px;min-height:50px;font-size:11px}
+body:not(.auth-locked) .qr-side{position:sticky;top:0;height:100dvh;flex-direction:column;justify-content:flex-start;gap:8px;overflow-x:hidden;}
+body:not(.auth-locked) .qr-side button{flex:0 0 auto;}
 body:not(.auth-locked) .qr-top h1{font-size:clamp(23px,5vw,30px)}
 #quizStart #subjects.tilegrid .tile{min-height:72px;font-size:17px}
 }
 @media(max-width:380px){#quizStart #subjects.tilegrid{grid-template-columns:minmax(0,1fr)}}
 
 
-/* === 28 | qr-ui-retirement-20261103 === */
+/* qr-ui-retirement */
 
 /* Retire legacy oversized controls, highlights and multi-color headings. */
 #quizStart #subjects.tilegrid{grid-template-columns:repeat(auto-fill,minmax(112px,142px));gap:10px}
@@ -133,10 +133,10 @@ body:not(.auth-locked) .qr-top h1{font-size:clamp(23px,5vw,30px)}
 @media(max-width:740px){#quizStart #subjects.tilegrid{grid-template-columns:repeat(auto-fill,minmax(105px,1fr))}#selection .level-grid .level-button{min-width:75px;font-size:14px}#selection .chapter-items{grid-template-columns:minmax(0,1fr)}}
 
 
-/* === 29 | qr-photo-crop-controls === */
+/* qr-photo-crop-controls */
 .qr-photo-tools{display:flex;align-items:center;gap:16px;margin:12px 0}.qr-photo-tools button:disabled{opacity:var(--qr-inactive-opacity);cursor:not-allowed}.qr-photo-tools img{object-fit:cover;border-radius:50%;border:1px solid #e1e5ef}.qr-crop-modal:not(.hidden){display:flex!important}
 
-/* === 30 | qr-balanced-layout-20261103 === */
+/* qr-balanced-layout */
 
 /* Fluid, centered content with consistent rhythm at all viewport sizes. */
 body:not(.auth-locked) .qr-main{margin-inline:auto!important;}
@@ -159,16 +159,16 @@ body:not(.auth-locked) .qr-card{width:100%;}
 }
 
 
-/* === 31 | qr-theme-v1 === */
+/* qr-theme */
 
 :root{--qr-font:Nunito,"Google Sans",Roboto,"Segoe UI",sans-serif;--qr-primary:#223A5E;--qr-secondary:#79C8D6;--qr-navigation:#F1CCB7;--qr-background:#79C8D6;--qr-focus:#FEDC8B;--qr-success:#62CFA5;--qr-warning:#E97A8D;--qr-cat1:#50ADE1;--qr-cat2:#B16BD6;--qr-cat3:#FF9E8B;--qr-cat4:#DF74A8;--qr-cat5:#FB8B89;--qr-cat6:#FEDC8B;--qr-cat7:#79C8D6;--qr-content-width:1160px;--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
 body:not(.auth-locked) .qr-side{border-color:#223A5E1c}
-body:not(.auth-locked) .qr-side button{background:transparent;color:var(--qr-primary)}
+
 body:not(.auth-locked) .qr-side button:hover,body:not(.auth-locked) .qr-side button:focus-visible{background:var(--qr-focus)}
 body:not(.auth-locked) .qr-top h1,body:not(.auth-locked) .qr-card h2{color:var(--qr-primary)}
-body:not(.auth-locked) .qr-btn{background:var(--qr-secondary);color:var(--qr-primary)}
+
 body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-visible,body:not(.auth-locked) select:focus-visible{outline:3px solid var(--qr-focus);outline-offset:2px}
 #quizStart #subjects.tilegrid .tile:nth-child(7n+1){background:var(--qr-cat1)}
 #quizStart #subjects.tilegrid .tile:nth-child(7n+2){background:var(--qr-cat2)}
@@ -189,18 +189,18 @@ body:not(.auth-locked) .qr-card{padding:calc(clamp(18px,2.5vw,30px)*var(--qr-spa
 @media(max-width:740px){body:not(.auth-locked) .qr-card{padding:16px!important}}
 
 
-/* === 32 | qr-integrated-tab-layout === */
+/* qr-integrated-tab-layout */
 
 /* Joined active tab: navigation fades into the main panel, without shadows. */
 body:not(.auth-locked) .qr-shell{background:var(--qr-navigation)}
 body:not(.auth-locked) .qr-side{border:0!important;background:var(--qr-navigation)!important;}
-body:not(.auth-locked) .qr-side button{position:relative;border:0!important;background:linear-gradient(90deg,var(--qr-navigation) 0%,color-mix(in srgb,var(--qr-navigation) 50%,transparent) 75%,transparent 100%)!important;color:var(--qr-primary)!important;transition:background .18s ease}
+body:not(.auth-locked) .qr-side button{border:0!important;background:linear-gradient(90deg,var(--qr-navigation) 0%,color-mix(in srgb,var(--qr-navigation) 50%,transparent) 75%,transparent 100%)!important;color:var(--qr-primary)!important;transition:background .18s ease}
 body:not(.auth-locked) .qr-side button:not(.active):hover{background:linear-gradient(90deg,var(--qr-focus),color-mix(in srgb,var(--qr-focus) 20%,transparent))!important}
-body:not(.auth-locked) .qr-side button.active{z-index:2;}
-body:not(.auth-locked) .qr-side button.active::before,body:not(.auth-locked) .qr-side button.active::after{content:"";position:absolute;right:0;width:18px;height:18px;pointer-events:none}
-body:not(.auth-locked) .qr-side button.active::before{top:-18px;border-radius:0 0 18px 0;}
-body:not(.auth-locked) .qr-side button.active::after{bottom:-18px;border-radius:0 18px 0 0;}
-body:not(.auth-locked) .qr-main{min-width:0;width:100%;min-height:100dvh;box-sizing:border-box;background:var(--qr-background)!important;border-radius:20px 0 0 20px;}
+
+
+
+
+body:not(.auth-locked) .qr-main{min-height:100dvh;background:var(--qr-background)!important;}
 body:not(.auth-locked) .qr-top{background:transparent!important}
 body:not(.auth-locked) .qr-card{border-radius:20px;}
 body:not(.auth-locked) .qr-top,body:not(.auth-locked) .qr-grid,body:not(.auth-locked) .qr-card{max-width:100%}
@@ -208,11 +208,11 @@ body:not(.auth-locked) .qr-top,body:not(.auth-locked) .qr-grid,body:not(.auth-lo
 body:not(.auth-locked) .qr-shell{grid-template-columns:68px minmax(0,1fr)!important}
 body:not(.auth-locked) .qr-side{width:68px!important;overflow-y:auto!important}
 body:not(.auth-locked) .qr-side button{min-height:50px!important;height:50px!important;border-radius:14px 0 0 14px!important}
-body:not(.auth-locked) .qr-main{border-radius:16px 0 0 16px}
+
 }
 
 
-/* === 33 | qr-shadowless-current-design === */
+/* qr-shadowless-current-design */
 
 /* Current design: no elevation, no legacy shadows. */
 html,body,body:not(.auth-locked) .qr-shell,body:not(.auth-locked) .qr-main,body:not(.auth-locked) .qr-side,body:not(.auth-locked) .qr-side button,body:not(.auth-locked) .qr-card,body:not(.auth-locked) .qr-hero,body:not(.auth-locked) .qr-top,body:not(.auth-locked) button,body:not(.auth-locked) input,body:not(.auth-locked) select,body:not(.auth-locked) textarea,body:not(.auth-locked) .questioncard,body:not(.auth-locked) .answer,body:not(.auth-locked) .resultpanel{box-shadow:none!important;text-shadow:none!important;filter:none!important}
@@ -224,7 +224,7 @@ body:not(.auth-locked) .qr-grid>*{min-width:0}
 @media(max-width:740px){body:not(.auth-locked) .qr-grid{grid-template-columns:minmax(0,1fr)}}
 
 
-/* === 34 | qr-current-buttons-20261103 === */
+/* qr-current-buttons */
 
 /* Theme-only capsule buttons. The active sidebar tab is the sole joined-edge exception. */
 :root{--qr-button-radius:999px}
@@ -243,7 +243,7 @@ box-shadow:none!important;
 font-family:var(--qr-font)!important;
 }
 body:not(.auth-locked) .qr-side button{
-display:flex!important;align-items:center;justify-content:center;
+display:flex!important;align-items:center;
 font-family:var(--qr-font)!important;
 box-shadow:none!important;
 }
@@ -269,7 +269,7 @@ body:not(.auth-locked) .answer.wrong,body:not(.auth-locked) .answer.incorrect{ba
 body:not(.auth-locked) .qr-side button:focus-visible,body:not(.auth-locked) button:focus-visible{outline:3px solid var(--qr-focus)!important;outline-offset:2px}
 
 
-/* === 35 | qr-rounded-panels-20261103 === */
+/* qr-rounded-panels */
 
 /* Rounded rectangular surfaces throughout; preserve actual circular elements. */
 :root{--qr-panel-radius:28px;--qr-inner-radius:22px;--qr-small-radius:16px}
@@ -318,10 +318,10 @@ body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 @media(max-width:740px){:root{--qr-panel-radius:22px;--qr-inner-radius:18px;--qr-small-radius:13px}}
 
 
-/* === 36 | qr-quiz-sidebar-lock === */
+/* qr-quiz-sidebar-lock */
 #quiz:not(.hidden) .qr-side{pointer-events:none!important}#quiz:not(.hidden) .qr-side button{cursor:not-allowed!important;opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button.active{opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button:disabled{background:inherit;color:var(--qr-primary)!important}
 
-/* === 37 | qr-seamless-active-tab === */
+/* qr-seamless-active-tab */
 
 /* Curved tab joins made from background-color geometry, not shadows. */
 body:not(.auth-locked) .qr-main{border-top-left-radius:0!important}
@@ -334,7 +334,7 @@ body:not(.auth-locked) .qr-side button.active::after{border-radius:0!important;
 }
 
 
-/* === 38 | qr-sidebar-reference-and-density-v2 === */
+/* qr-sidebar-reference-and-density */
 
 /* Reference layout: broad capsule tabs, active tab joined into the main panel. */
 :root{--qr-rail-width:clamp(150px,17vw,230px);--qr-panel-pad:30px;--qr-card-gap:18px;--qr-card-pad:28px;--qr-control-height:48px;--qr-type-scale:1}
@@ -367,7 +367,7 @@ body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 }
 
 
-/* === 39 | qr-smoother-tab-curves-20261103 === */
+/* qr-smoother-tab-curves */
 
 /* Longer straight shoulder before a smooth concave join. No elevation shadows. */
 :root{--qr-tab-height:54px;--qr-tab-gap:13px;--qr-tab-curve:26px;--qr-tab-shoulder:24px}
@@ -385,7 +385,7 @@ background:radial-gradient(circle at calc(100% - var(--qr-tab-shoulder) - var(--
 @media(max-width:740px){:root{--qr-tab-height:46px;--qr-tab-gap:10px;--qr-tab-curve:20px;--qr-tab-shoulder:14px}}
 
 
-/* === 40 | qr-nav-gradient-direction-20261103 === */
+/* qr-nav-gradient-direction */
 
 /* Unselected navigation: stronger at the right edge, softer toward the left. */
 body:not(.auth-locked) .qr-side button:not(.active){
@@ -396,7 +396,7 @@ var(--qr-navigation) 100%)!important;
 }
 
 
-/* === 41 | qr-active-tab-curve-repair === */
+/* qr-active-tab-curve-repair */
 
 /* Solid, seamless concave joins: no rectangular gradient artifacts. */
 body:not(.auth-locked) .qr-side button.active::before,
@@ -423,7 +423,7 @@ body:not(.auth-locked) .qr-side button.active::after{bottom:-26px!important;-web
 }
 
 
-/* === 42 | qr-unified-density-presets-v3 === */
+/* qr-unified-density-presets */
 
 /* Unified component density. The navigation rail, joined tab and fluid frame never resize. */
 :root,html[data-qr-density="comfortable"]{
@@ -482,7 +482,7 @@ body:not(.auth-locked) .qr-main .answer{box-shadow:none!important;text-shadow:no
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
 
 
-/* === 43 | qr-sidebar-density-and-offset-v4 === */
+/* qr-sidebar-density-and-offset */
 
 /* Navigation density applies to every dashboard screen, including active quizzes.
    Shift the existing sidebar position another 10px down, keeping gaps preset-based. */
@@ -510,7 +510,7 @@ line-height:1.2!important;
 }
 
 
-/* === 44 | qr-main-panel-extend-left-10px === */
+/* qr-main-panel-extend-left-10px */
 
 /* Expand only the right panel 10px left; preserve its original rounded corner and sidebar. */
 body:not(.auth-locked) .qr-shell > .qr-main{
@@ -520,14 +520,14 @@ max-width:none!important;
 }
 
 
-/* === 45 | qr-content-frame-20261103 === */
+/* qr-content-frame */
 
 /* Center content inside the unchanged right panel; no seam bridge. */
 body:not(.auth-locked) .qr-main > *{box-sizing:border-box!important;width:calc(100% - 48px)!important;max-width:1240px!important;margin-left:auto!important;margin-right:auto!important}
 @media(max-width:740px){body:not(.auth-locked) .qr-main > *{width:calc(100% - 24px)!important}}
 
 
-/* === 46 | qr-sidebar-lower-and-join-20261103 === */
+/* qr-sidebar-lower-and-join */
 
 /* Shift all four menu buttons down 30px, preserve their preset spacing. */
 body:not(.auth-locked) .qr-side{padding-top:calc(clamp(22px,4vw,56px) + 45px)!important}
@@ -536,7 +536,7 @@ body:not(.auth-locked) .qr-side{padding-top:calc(clamp(22px,4vw,56px) + 45px)!im
 body:not(.auth-locked) .qr-side button.active{width:calc(100% + 5.7px)!important}
 
 
-/* === 47 | qr-main-content-top-spacing-20261103 === */
+/* qr-main-content-top-spacing */
 
 /* Lower right-panel content 24px without moving the panel or sidebar. */
 body:not(.auth-locked) .qr-shell > .qr-main{
@@ -544,7 +544,7 @@ padding-top:calc(var(--density-space) + 24px)!important;
 }
 
 
-/* === 48 | qr-dashboard-layout-parity-20261103 === */
+/* qr-dashboard-layout-parity */
 
 /* Keep the dashboard frame consistent on Scores and every Quiz screen. */
 body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr-shell{
@@ -568,7 +568,7 @@ body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr
 }
 
 
-/* === 49 | qr-quiz-content-polish-20261103 === */
+/* qr-quiz-content-polish */
 
 /* Layout-only polish. Quiz logic, colors, sidebar and dashboard geometry stay unchanged. */
 body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
@@ -660,7 +660,7 @@ body:not(.auth-locked) #results .resultscore{margin:0!important}
 }
 
 
-/* === 50 | qr-quiz-unified-density-20261103 === */
+/* qr-quiz-unified-density */
 
 /* Single source of truth: existing density tokens. No change to page geometry, sidebar, theme or quiz logic. */
 body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
@@ -722,7 +722,7 @@ body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--density-text)!i
 }
 
 
-/* === 51 | qr-quiz-subject-theme-20261103 === */
+/* qr-quiz-subject-theme */
 
 /* Quiz-specific surfaces use the matching subject tile color; controls keep profile theme. */
 body:not(.auth-locked) #quiz .qr-top h1{color:var(--qr-primary)!important}
@@ -789,7 +789,7 @@ body:not(.auth-locked) #results .resultpanel{
 }
 
 
-/* === 52 | qr-unified-selection-theme-20261103 === */
+/* qr-unified-selection-theme */
 
 /* Profile controls own the button colors; subject category owns content accents. */
 body:not(.auth-locked) #selection .qr-quiz-content{
@@ -840,7 +840,7 @@ body:not(.auth-locked) #quiz .qr-quiz-content{
 }
 
 
-/* === 53 | qr-quiz-control-and-surface-unification-20261103 === */
+/* qr-quiz-control-and-surface-unification */
 
 /* Quiz surfaces and controls inherit the current Profile theme and density. */
 body:not(.auth-locked) #quiz .questioncard{
