@@ -803,6 +803,7 @@ body:not(.auth-locked) #quiz .quizactions #nextButton .qr-icon{width:19px;height
 body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inactive-opacity)!important;cursor:not-allowed}
 @media(max-width:960px){
  body:not(.auth-locked) .qr-side .qr-nav-brand{font-size:var(--density-text);gap:8px}
+ body:not(.auth-locked) .qr-side .qr-nav-brand span{display:none}
  body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:20px;height:20px}
 }
 @media(max-width:740px){
@@ -1027,7 +1028,9 @@ function submitAnswer(){
   answerBox.classList.add(correct?'answer-correct':'answer-wrong');
   let feedback=document.createElement('span');feedback.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');feedback.setAttribute('role','status');
   let symbol=document.createElement('span');symbol.className='feedback-symbol';symbol.textContent=correct?'✓':'✕';
-  let explanation=document.createElement('span');explanation.className='feedback-explanation';explanation.textContent=q.explanation;
+  let explanation=document.createElement('span');explanation.className='feedback-explanation';
+  const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Incorrect. ';
+  explanation.append(heading,document.createTextNode(q.explanation||''));
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
