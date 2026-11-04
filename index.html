@@ -17,7 +17,7 @@ button{cursor:pointer;touch-action:manipulation}
 /* Shared dashboard, forms, quiz navigation, and photo-crop structure.
    Visual colors and dimensions inherit existing Quiz Room theme variables. */
 html,body{width:100%;min-width:0;margin:0;overflow-x:hidden;background:white}
-body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-height:100dvh;padding:var(--qr-unified-padding)!important;margin:0}
+body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-height:100dvh;padding:0;margin:0}
 .qr-shell{display:grid;grid-template-columns:var(--qr-rail-width,180px) minmax(0,1fr);min-height:100dvh;width:100%}
 .qr-main{width:100%;max-width:none;min-width:0;margin:0 auto;padding:var(--density-space,18px)}
 .qr-top{display:flex;align-items:center;justify-content:space-between;gap:var(--density-space,18px);margin-bottom:var(--density-space,18px);min-width:0;min-height:46px}
@@ -196,11 +196,11 @@ body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 /* qr-sidebar-reference-and-density */
 
 /* Shared responsive rail and content dimensions. */
-:root{--qr-rail-width:220px;--qr-rail-compact:66px;--qr-panel-pad:16px;--qr-card-gap:18px;--qr-card-pad:16px;--qr-control-height:44px;--qr-type-scale:1}
+:root{--qr-rail-width:220px;--qr-rail-compact:66px;--qr-panel-pad:16px;--qr-card-gap:18px;--qr-control-height:44px;--qr-type-scale:1}
 body:not(.auth-locked) .qr-shell{grid-template-columns:var(--qr-rail-width) minmax(0,1fr)!important;gap:0!important}
 body:not(.auth-locked) .qr-main{max-width:none!important;width:100%!important;min-width:0!important;margin:0!important;border-radius:48px 0 0 0!important;box-sizing:border-box!important}
 body:not(.auth-locked) .qr-home-grid{gap:var(--qr-card-gap)!important}
-body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-card-pad)!important}
+body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-unified-padding)!important}
 
 body:not(.auth-locked) .qr-main .qr-top{margin-bottom:var(--qr-card-gap)!important}
 body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .resultbutton,body:not(.auth-locked) .qr-main .pill{min-height:var(--qr-control-height)!important;font-size:calc(15px * var(--qr-type-scale))!important}
@@ -226,7 +226,7 @@ body:not(.auth-locked) .qr-main .qr-card,body:not(.auth-locked) .qr-main .qr-her
 body:not(.auth-locked) .qr-main .questioncard,body:not(.auth-locked) .qr-main .questionbox,
 body:not(.auth-locked) .qr-main .resultpanel,body:not(.auth-locked) .qr-main .resultcard,
 body:not(.auth-locked) .qr-main .modal-content,body:not(.auth-locked) .qr-main .modalbox{
-padding:var(--density-pad)!important;border-radius:var(--density-radius)!important;
+padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius)!important;
 }
 body:not(.auth-locked) .qr-main .qr-home-grid,body:not(.auth-locked) .qr-main .tilegrid,
 body:not(.auth-locked) .qr-main .answers,body:not(.auth-locked) .qr-main .options{gap:var(--density-space)!important}
@@ -246,7 +246,7 @@ min-height:var(--density-control)!important;font-size:var(--density-text)!import
 }
 body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
 body:not(.auth-locked) .qr-main select,body:not(.auth-locked) .qr-main textarea{
-font-size:var(--density-text)!important;padding:10px var(--density-inner)!important;
+font-size:var(--density-text)!important;padding:var(--qr-unified-padding)!important;
 border-radius:var(--density-radius)!important;
 background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
 }
@@ -254,13 +254,13 @@ body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"])
 body:not(.auth-locked) .qr-main select{min-height:var(--density-input)!important}
 body:not(.auth-locked) .qr-main .answer,body:not(.auth-locked) .qr-main .option,
 body:not(.auth-locked) .qr-main .optionbox{min-height:var(--density-choice)!important;
-padding:var(--density-inner)!important;border-radius:var(--density-radius)!important;
+padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius)!important;
 font-size:var(--density-text)!important}
 body:not(.auth-locked) .qr-main .qr-avatar,body:not(.auth-locked) .qr-main .letter,
 body:not(.auth-locked) .qr-main .number,body:not(.auth-locked) .qr-main .circle{border-radius:50%!important}
 
 @media(max-width:740px){body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
-body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
+body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-unified-padding)!important}}
 
 
 /* Notes inputs and saved entries use the shared rectangular shape and visible border. */
@@ -651,7 +651,7 @@ body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-background
 body:not(.auth-locked) #quiz .qr-top .qr-profile-btn{
  display:inline-flex;align-items:center;gap:10px;
  background:var(--qr-primary)!important;color:#FFFFFF!important;
- padding:8px var(--density-inner)!important;border-radius:var(--qr-button-radius)!important;
+ padding:var(--qr-unified-padding)!important;border-radius:var(--qr-button-radius)!important;
 }
 body:not(.auth-locked) #quiz .qr-top .qr-profile-btn .qr-icon{width:20px;height:20px}
 body:not(.auth-locked) #quiz .qr-card.qr-quiz-content{
