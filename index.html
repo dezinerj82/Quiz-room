@@ -147,9 +147,12 @@ border-radius:var(--qr-button-radius)!important;
 box-shadow:none!important;
 font-family:var(--qr-font)!important;
 }
+body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button):not(:disabled):hover:not(.answer):not(.tile):not(.exitpill){
+ background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important;
+}
 body:not(.auth-locked) .qr-profile-btn{background:var(--qr-primary)!important;color:var(--qr-background)!important;border:0!important;padding:10px 21px!important}
 body:not(.auth-locked) .qr-btn{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;border:0!important}
-body:not(.auth-locked) .qr-steps button{background:var(--qr-tertiary)!important;color:var(--qr-primary)!important;border:0!important}
+body:not(.auth-locked) .qr-steps button{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;border:0!important}
 body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+1){background:var(--qr-subject1)!important;color:var(--qr-on-subject1,var(--qr-primary))!important}
 body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+2){background:var(--qr-subject2)!important;color:var(--qr-on-subject2,var(--qr-primary))!important}
 body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+3){background:var(--qr-subject3)!important;color:var(--qr-on-subject3,var(--qr-primary))!important}
@@ -288,6 +291,7 @@ body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"])
 body:not(.auth-locked) .qr-main select,body:not(.auth-locked) .qr-main textarea{
 font-size:var(--density-text)!important;padding:10px var(--density-inner)!important;
 border-radius:var(--density-radius)!important;
+background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
 }
 body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
 body:not(.auth-locked) .qr-main select{min-height:var(--density-input)!important}
@@ -545,7 +549,7 @@ body:not(.auth-locked) #selection .qr-steps button:hover{
 }
 body:not(.auth-locked) #selection .level-grid .level-button,
 body:not(.auth-locked) #selection .chapter-items .version{
- background:var(--qr-secondary)!important;color:var(--qr-primary)!important;
+ background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important;
  border:0!important;box-shadow:none!important;
  border-radius:var(--density-radius)!important;
  font-family:inherit!important;font-size:var(--density-text)!important;
@@ -596,10 +600,13 @@ body:not(.auth-locked) #quiz .answer{
 
 body:not(.auth-locked) #quiz .answer.answer-correct{
  background:color-mix(in srgb,var(--qr-success) 25%,var(--qr-background))!important;
+ color:var(--qr-primary)!important;
 }
 body:not(.auth-locked) #quiz .answer.answer-wrong{
  background:color-mix(in srgb,var(--qr-error) 24%,var(--qr-background))!important;
+ color:var(--qr-primary)!important;
 }
+body:not(.auth-locked) #quiz .answer:hover:not(:disabled){background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important}
 body:not(.auth-locked) #quiz .answer:focus-visible{
  outline:3px solid var(--qr-tertiary)!important;
  outline-offset:2px!important;
@@ -893,7 +900,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
  }
 }
 @media(prefers-reduced-motion:reduce){
- body:not(.auth-locked) .qr-side.qr-nav-ready::before{transition:none}
+ body:not(.auth-locked) .qr-side::before{transition:none}
 }
 </style></head><body class="auth-locked">
 <main id="home" class="screen"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Dashboard</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div><div class="qr-grid"><div class="qr-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2>Progress</h2><select id="qrSubject" class="qr-input" style="max-width:160px" onchange="qrRender()"></select></div><div id="qrProgress" class="qr-muted">Complete a quiz to see your progress.</div></div><div class="qr-card"><h2>Personal Bests</h2><div id="qrBests" class="qr-list"></div></div></div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><p>Write anything that's on your mind. Only you can see these notes in your Google Drive.</p><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote()">Save note</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Score History</h2><p class="qr-muted">Results saved in this browser for the signed-in account.</p><div id="qrScoresList" class="qr-list"></div></div></div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header>
