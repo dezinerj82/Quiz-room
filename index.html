@@ -510,13 +510,15 @@ body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-moz-co
 
 
 
-/* Left navigation: a single sliding highlight, following the existing theme and density. */
+/* Sidebar navigation: static active state and shared responsive spacing. */
 body:not(.auth-locked) .qr-side{
  position:sticky!important;
  overflow:visible!important;
  isolation:isolate;
- padding:calc(var(--density-space) + 24px) var(--density-inner) 20px 16px!important;
- gap:calc(var(--density-space) * 1.45)!important;
+ display:flex!important;
+ flex-direction:column!important;
+ padding:calc(var(--density-space) + 36px) var(--density-inner) 20px 16px!important;
+ row-gap:var(--density-space)!important;
  width:var(--qr-rail-width)!important;
  background:var(--qr-primary)!important;
  border:1px solid var(--qr-primary)!important;
@@ -526,25 +528,6 @@ body:not(.auth-locked) .qr-side{
 
 
 
-body:not(.auth-locked) .qr-side::before{
- content:"";
- position:absolute;
- z-index:0;
- left:16px;
- right:var(--density-inner);
- top:0;
- height:var(--density-control);
- border-radius:var(--qr-button-radius);
- background:var(--qr-tertiary);
- transition:none;
- transform:translate3d(0,var(--qr-nav-y,0px),0);
- pointer-events:none;
- opacity:0;
-}
-body:not(.auth-locked) .qr-side.qr-nav-ready::before{
- opacity:1;
- transition:transform 250ms ease-in-out;
-}
 body:not(.auth-locked) .qr-side button,
 body:not(.auth-locked) .qr-side button:not(.active),
 body:not(.auth-locked) .qr-side button.active{
@@ -572,7 +555,7 @@ body:not(.auth-locked) .qr-side button.active{
  
  transition:none!important;
 }
-body:not(.auth-locked) .qr-side button.active{background:transparent!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) .qr-side button.active{background:var(--qr-tertiary)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .qr-side button.active::before,
 body:not(.auth-locked) .qr-side button.active::after{content:none!important;display:none!important}
 body:not(.auth-locked) .qr-side button:not(.active):hover{
@@ -586,10 +569,9 @@ body:not(.auth-locked) .qr-side button:focus-visible{
 @media(max-width:740px){
  body:not(.auth-locked) .qr-side{
   width:var(--qr-rail-width)!important;
-  padding:calc(var(--density-space) + 24px) 7px 16px!important;
-  gap:calc(var(--density-space) * 1.45)!important;
+  padding:calc(var(--density-space) + 36px) 7px 16px!important;
+  row-gap:var(--density-space)!important;
  }
- body:not(.auth-locked) .qr-side::before{left:7px;right:7px}
  body:not(.auth-locked) .qr-side button,
  body:not(.auth-locked) .qr-side button:not(.active),
  body:not(.auth-locked) .qr-side button.active{
@@ -598,16 +580,13 @@ body:not(.auth-locked) .qr-side button:focus-visible{
   font-size:var(--density-small)!important;
  }
 }
-@media(prefers-reduced-motion:reduce){
- body:not(.auth-locked) .qr-side::before{transition:none}
-}
 
 
 /* Quiz presentation — single responsive design based on the approved reference. */
 body:not(.auth-locked) .qr-side .qr-nav-brand{
  display:flex;align-items:center;gap:var(--density-inner);padding:0 4px;
  font-size:clamp(15px,1.35vw,22px);font-weight:800;color:var(--qr-background);
- margin-bottom:var(--density-space);white-space:nowrap;
+ margin-bottom:calc(var(--density-space) * .6);white-space:nowrap;
 }
 body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
 body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:27px;height:27px}
@@ -902,29 +881,7 @@ function pickStep(i){if(answered||orderChosen.includes(i))return;orderChosen.pus
 function undoStep(){if(answered)return;orderChosen.pop();paintSteps()}
 function paintSteps(){let q=questions[index];$('answers').innerHTML='<div class="sequence"><div class="sequencepicked" ondragover="event.preventDefault()" ondrop="dropStep(event)">'+(orderChosen.map((i,k)=>'<span class="picked">'+(k+1)+'. '+escapeHtml(q.shuffled[i])+'</span>').join('')||'<span class="faint">Drag or tap the steps below in order.</span>')+'</div><div class="stepgrid">'+q.shuffled.map((v,i)=>'<button draggable="true" ondragstart="event.dataTransfer.setData(&quot;text/plain&quot;,&quot;'+i+'&quot;)" class="answer step" '+(orderChosen.includes(i)?'disabled':'')+' onclick="pickStep('+i+')">'+escapeHtml(v)+'</button>').join('')+'</div><button class="undo" onclick="undoStep()">Undo last step</button></div>'}
 function getInput(){let q=questions[index];if(q.type==='text')return $('typedAnswer').value;if(q.type==='tf')return selected===0;if(q.type==='order')return orderChosen.map(i=>q.shuffled[i]);if(q.type==='match')return q.pairs.map((p,i)=>$('match'+i).value);return selected}
-function qrSlideSidebar(id,previousIndex){
- const nav=$(id)?.querySelector('.qr-side');if(!nav)return;
- const buttons=Array.from(nav.querySelectorAll('button')),active=buttons.find(button=>button.classList.contains('active'));
- if(!active){nav.classList.remove('qr-nav-ready');return}
- const target=active.offsetTop;
- const initialized=nav.dataset.qrNavInitialized==='true';
- const from=initialized&&previousIndex>=0&&buttons[previousIndex]?buttons[previousIndex].offsetTop:target;
- nav.classList.remove('qr-nav-ready');
- nav.style.setProperty('--qr-nav-y',from+'px');
- void nav.offsetHeight;
- nav.classList.add('qr-nav-ready');
- nav.dataset.qrNavInitialized='true';
- if(initialized&&from!==target){
-  requestAnimationFrame(()=>{if(!$(id)?.classList.contains('hidden'))nav.style.setProperty('--qr-nav-y',active.offsetTop+'px')});
- }
-}
-function qrRefreshSidebarHighlight(){
- const nav=document.querySelector('.screen:not(.hidden) .qr-side');
- const active=nav?.querySelector('button.active');
- if(nav&&active)nav.style.setProperty('--qr-nav-y',active.offsetTop+'px');
-}
-window.addEventListener('resize',qrRefreshSidebarHighlight);
-function show(id){const previousNav=document.querySelector('.screen:not(.hidden) .qr-side');const previousIndex=previousNav?Array.from(previousNav.querySelectorAll('button')).findIndex(button=>button.classList.contains('active')):-1;if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('.qr-side button').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0);qrSlideSidebar(id,previousIndex)}
+function show(id){if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('.qr-side button').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0)}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');show('selection')}
 const schoolLevels=['PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
