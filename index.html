@@ -704,6 +704,15 @@ body:not(.auth-locked) .chapter-placeholder{
 
 /* Quiz question frame with controls outside the border. */
 
+body:not(.auth-locked) #quiz #timer{
+ height:var(--density-control)!important;min-height:var(--density-control)!important;
+ max-height:var(--density-control)!important;box-sizing:border-box!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ gap:5px!important;padding:3px var(--density-inner)!important;
+ background:var(--qr-navigation)!important;color:var(--qr-primary)!important;
+ border:0!important;border-radius:var(--qr-button-radius)!important;
+ margin:0!important;
+}
 body:not(.auth-locked) #quiz .topbar{
  width:100%!important;
  display:flex!important;align-items:center!important;justify-content:flex-end!important;
