@@ -380,8 +380,8 @@ body:not(.auth-locked) #results .resultpanel{
 
 /* Profile controls own the button colors; subject category owns content accents. */
 body:not(.auth-locked) #selection .qr-quiz-content{
- border:0!important;
- background:transparent!important;
+ border:1px solid var(--qr-boundary)!important;
+ background:var(--qr-background)!important;
 }
 body:not(.auth-locked) #selection .qr-subject-title{
  color:var(--qr-primary)!important;
@@ -535,17 +535,22 @@ body:not(.auth-locked) .qr-side::before{
  height:var(--density-control);
  border-radius:var(--qr-button-radius);
  background:color-mix(in srgb,var(--qr-active-nav-color,var(--qr-subject1)) 45%,var(--qr-background));
- transition:transform 250ms ease-in-out,background-color 250ms ease-in-out;
+ transition:none;
  transform:translate3d(0,var(--qr-nav-y,0px),0);
  pointer-events:none;
  opacity:0;
 }
 body:not(.auth-locked) .qr-side.qr-nav-ready::before{
  opacity:1;
+ transition:transform 250ms ease-in-out,background-color 250ms ease-in-out;
 }
 body:not(.auth-locked) .qr-side button,
 body:not(.auth-locked) .qr-side button:not(.active),
 body:not(.auth-locked) .qr-side button.active{
+ display:grid!important;
+ grid-template-columns:20px minmax(0,1fr)!important;
+ align-items:center!important;
+ column-gap:clamp(7px,1vw,12px)!important;
  position:relative!important;
  z-index:1!important;
  flex:0 0 var(--density-control)!important;
@@ -603,14 +608,12 @@ body:not(.auth-locked) .qr-side .qr-nav-brand{
 }
 body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
 body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:27px;height:27px}
-body:not(.auth-locked) .qr-side button{display:grid!important;grid-template-columns:20px minmax(0,1fr);align-items:center;column-gap:clamp(7px,1vw,12px)!important;white-space:nowrap}
+body:not(.auth-locked) .qr-side button{white-space:nowrap}
 body:not(.auth-locked) .qr-side button .qr-nav-label{overflow:hidden;text-overflow:ellipsis}
 body:not(.auth-locked) .qr-side{padding-top:var(--density-pad)!important;background:var(--qr-background)!important}
 body:not(.auth-locked) .qr-side::before{background:color-mix(in srgb,var(--qr-active-nav-color,var(--qr-subject1)) 45%,var(--qr-background))}
 body:not(.auth-locked) #quiz .qr-shell{background:var(--qr-background)!important}
-body:not(.auth-locked) #quiz .qr-side{
- 
-}
+
 body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-background)!important}
 body:not(.auth-locked) #quiz .qr-top h1{
  font-size:clamp(25px,3.1vw,44px)!important;font-weight:800!important;color:var(--qr-primary)!important;
