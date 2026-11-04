@@ -100,10 +100,10 @@ body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-v
 #quizStart #subjects.tilegrid .tile:nth-child(7n+5){background:var(--qr-cat5);color:var(--qr-primary)}
 #quizStart #subjects.tilegrid .tile:nth-child(7n+6){background:var(--qr-cat6);color:var(--qr-primary)}
 #quizStart #subjects.tilegrid .tile:nth-child(7n+7){background:var(--qr-cat7);color:var(--qr-primary)}
-.qr-theme-colors{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
-.qr-theme-color{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #e6e9f0;border-radius:12px;padding:8px 10px}
-.qr-theme-color label{font-size:13px;margin:0}
-.qr-theme-color input{width:38px;height:32px;border:0;background:transparent;cursor:pointer}
+
+
+
+
 html[data-qr-density="compact"]{--qr-content-width:980px;--qr-space:.78}
 html[data-qr-density="comfortable"]{--qr-content-width:1160px;--qr-space:1}
 html[data-qr-density="wide"]{--qr-content-width:1520px;--qr-space:1.12}
@@ -198,7 +198,6 @@ body:not(.auth-locked) .bookmark-popup,
 body:not(.auth-locked) .modal-content,
 body:not(.auth-locked) .modalbox{border-radius:var(--qr-panel-radius)!important;box-shadow:none!important}
 body:not(.auth-locked) .qr-list-item,
-body:not(.auth-locked) .qr-theme-color,
 body:not(.auth-locked) .qr-input,
 body:not(.auth-locked) select,
 body:not(.auth-locked) textarea,
@@ -280,7 +279,7 @@ padding:var(--density-pad)!important;border-radius:var(--density-radius)!importa
 }
 body:not(.auth-locked) .qr-main .qr-grid,body:not(.auth-locked) .qr-main .tilegrid,
 body:not(.auth-locked) .qr-main .answers,body:not(.auth-locked) .qr-main .options,
-body:not(.auth-locked) .qr-main .qr-theme-colors{gap:var(--density-space)!important}
+body:not(.auth-locked) .qr-main 
 body:not(.auth-locked) .qr-main .qr-hero,body:not(.auth-locked) .qr-main .qr-top,
 body:not(.auth-locked) .qr-main .qr-card:not(:last-child){margin-bottom:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card h2{font-size:var(--density-heading)!important}
@@ -308,8 +307,7 @@ body:not(.auth-locked) .qr-main .optionbox{min-height:var(--density-choice)!impo
 padding:var(--density-inner)!important;border-radius:var(--density-radius)!important;
 font-size:var(--density-text)!important}
 body:not(.auth-locked) .qr-main .qr-list-item,body:not(.auth-locked) .qr-main .qr-note-item,
-body:not(.auth-locked) .qr-main .qr-theme-color{padding:var(--density-inner)!important;
-border-radius:var(--density-radius)!important}
+body:not(.auth-locked) .qr-main 
 body:not(.auth-locked) .qr-main .qr-avatar,body:not(.auth-locked) .qr-main .letter,
 body:not(.auth-locked) .qr-main .number,body:not(.auth-locked) .qr-main .circle{border-radius:50%!important}
 body:not(.auth-locked) .qr-main button,body:not(.auth-locked) .qr-main .qr-card,
@@ -799,8 +797,6 @@ body:not(.auth-locked) #quiz .qr-question-frame .helper{
 
 /* Profile sections use the existing theme, density and pill controls. */
 body:not(.auth-locked) #profilePage .qr-profile-section,
-body:not(.auth-locked) #profilePage .qr-theme-colors,
-body:not(.auth-locked) #profilePage .qr-theme-color,
 body:not(.auth-locked) #profilePage .qr-photo-input-row,
 body:not(.auth-locked) #profilePage .qr-profile-summary{
  border:0!important;outline:0!important;box-shadow:none!important;
@@ -823,9 +819,9 @@ body:not(.auth-locked) #profilePage .qr-photo-input-row{display:flex;flex-wrap:w
 body:not(.auth-locked) #profilePage #qrPhoto{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
 body:not(.auth-locked) #profilePage .qr-file-button{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:var(--density-control)!important;font-size:var(--density-text)!important;padding:8px var(--density-inner)!important;border-radius:999px!important;background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) #profilePage .qr-file-button:focus-within{outline:2px solid var(--qr-focus)!important}
-body:not(.auth-locked) #profilePage .qr-theme-colors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:var(--density-space)}
-body:not(.auth-locked) #profilePage .qr-theme-color{padding:var(--density-inner)!important;display:flex;align-items:center;justify-content:space-between;gap:12px;background:color-mix(in srgb,var(--qr-secondary) 12%,white)!important;border-radius:var(--density-radius)!important}
-body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]{width:40px;height:40px;flex:0 0 40px;padding:0;border:0!important;background:transparent;border-radius:50%!important;overflow:hidden;cursor:pointer}
+body:not(.auth-locked) #profilePage 
+body:not(.auth-locked) #profilePage 
+
 body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-webkit-color-swatch-wrapper{padding:0}
 body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-webkit-color-swatch{border:0;border-radius:50%}
 body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-moz-color-swatch{border:0;border-radius:50%}
@@ -923,7 +919,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
   </div>
   <div class="qr-profile-actions">
    <button type="button" class="qr-btn" onclick="qrProfileSection('edit')">Edit profile</button>
-   <button type="button" class="qr-btn" onclick="qrProfileSection('theme')">Theme</button>
+   
    <button type="button" class="qr-btn" onclick="qrLogout()">Log out</button>
   </div>
  </section>
@@ -944,13 +940,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
   <div class="qr-profile-actions"><button class="qr-btn" onclick="qrSaveProfile()">Save profile</button><button type="button" class="qr-btn" onclick="qrProfileSection('view')">Cancel</button></div>
   <p id="qrProfileStatus" role="status" class="qr-muted"></p>
  </section>
- <section id="qrProfileTheme" class="qr-profile-section hidden">
-  <h2>Theme</h2>
-  <label class="qr-profile-label" for="qrDensity">Display density</label>
-  <select id="qrDensity" class="qr-input" onchange="qrThemeSetDensity(this.value)"><option value="compact">Compact</option><option value="comfortable">Comfortable</option><option value="wide">Wide</option></select>
-  <div id="qrThemeColors" class="qr-theme-colors"></div>
-  <div class="qr-profile-actions"><button class="qr-btn" type="button" onclick="qrThemeReset()">Reset theme</button><button class="qr-btn" type="button" onclick="qrProfileSection('view')">Cancel</button></div>
- </section>
+
 </div></div></div></section><div id="qrCropModal" class="qr-crop-modal hidden" role="dialog" aria-modal="true" aria-labelledby="qrCropTitle"><div class="qr-crop-box"><h2 id="qrCropTitle">Crop photo</h2><p class="qr-muted">Move the photo to center your face.</p><canvas id="qrCropCanvas" width="320" height="320" aria-label="Square photo preview"></canvas><label for="qrCropZoom">Zoom</label><input id="qrCropZoom" type="range" min="1" max="3" step="0.01" value="1" oninput="qrCropDraw()" style="width:100%"><div><button class="qr-btn" onclick="qrCropCancel()">Cancel</button><button class="qr-btn" onclick="qrCropApply()">Use photo</button></div></div></div><section id="selection" class="screen selectionscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><h2 class="qr-subject-title" id="subjectTitle"></h2><nav id="qrQuizSteps" class="qr-steps" aria-label="Quiz navigation"></nav><div class="versionlist" id="versions"></div></div></div></div></section>
 <section id="quiz" class="screen quizscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1 id="qrActiveQuizHeading">English</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><div class="topbar"><div class="timer flip-timer" id="timer" role="timer" aria-label="Time remaining"><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="h1">0</span><span class="flip-digit" data-clock="h2">1</span></div><span class="flip-label">HR</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="m1">3</span><span class="flip-digit" data-clock="m2">0</span></div><span class="flip-label">MIN</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="s1">0</span><span class="flip-digit" data-clock="s2">0</span></div><span class="flip-label">SEC</span></div></div><div class="bookmarktools"><button id="bookmarkListButton" class="bookmark-list-button hidden" onclick="toggleBookmarkList()" aria-label="Bookmarked questions">▤</button><label class="bookmarklabel"><input type="checkbox" id="bookmarkCheck" onchange="toggleBookmark(this.checked)">Bookmark</label><div id="bookmarkList" class="bookmark-list hidden"></div></div></div><div class="qr-question-frame"><div class="questionmeta"><div class="questioncount questioncount-above" id="questioncount">Question 1 out of 30</div></div><div class="questioncard"><div class="questionheading"><div class="number" id="number">1</div><h2 class="questiontitle" id="questionTitle"></h2><div id="questionTranslation" class="question-translation hidden" lang="en"></div></div><p class="prompt" id="prompt"></p><div class="answers" id="answers"></div><div id="answerFeedback" class="answer-feedback hidden" role="status"></div></div><p class="helper">Select your answer, then press Next.</p></div><div class="quizactions"><button class="pill exitpill" onclick="exitQuiz()">Exit</button><button class="pill hidden" id="resumeButton" onclick="resumeQuiz()">Resume</button><button class="pill" id="nextButton" onclick="advance()" disabled>Next ❯</button></div></div></div></div></section>
 
@@ -1151,18 +1141,17 @@ function qrRenderNotes(){$('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>
 const qrThemeDefaults={primary:'#223A5E',secondary:'#79C8D6',navigation:'#F1CCB7',background:'#79C8D6',focus:'#FEDC8B',success:'#62CFA5',warning:'#E97A8D',cat1:'#50ADE1',cat2:'#B16BD6',cat3:'#FF9E8B',cat4:'#DF74A8',cat5:'#FB8B89',cat6:'#FEDC8B',cat7:'#79C8D6'};
 const qrThemeNames={primary:'Primary',secondary:'Secondary',navigation:'Navigation',background:'Background',focus:'Active / Focus',success:'Success',warning:'Warning / Danger',cat1:'Category 1',cat2:'Category 2',cat3:'Category 3',cat4:'Category 4',cat5:'Category 5',cat6:'Category 6',cat7:'Category 7'};
 let qrTheme={...qrThemeDefaults},qrDensity='comfortable';
-function qrThemeApply(){for(const [key,val] of Object.entries(qrTheme))document.documentElement.style.setProperty('--qr-'+key,val);document.documentElement.dataset.qrDensity=qrDensity;const density=document.getElementById('qrDensity');if(density)density.value=qrDensity;const holder=document.getElementById('qrThemeColors');if(holder){holder.innerHTML=Object.keys(qrThemeDefaults).map(key=>'<div class="qr-theme-color"><label for="qrColor_'+key+'">'+qrThemeNames[key]+'</label><input type="color" id="qrColor_'+key+'" value="'+qrTheme[key]+'" data-qr-color="'+key+'" aria-label="'+qrThemeNames[key]+'"></div>').join('');holder.querySelectorAll('[data-qr-color]').forEach(input=>input.addEventListener('input',()=>qrThemeSetColor(input.dataset.qrColor,input.value)))}}
-function qrThemeSave(){try{localStorage.setItem('quiz_room_theme_v1',JSON.stringify({colors:qrTheme,density:qrDensity}))}catch(e){console.warn('Theme preference not saved',e)}}
-function qrThemeSetColor(key,value){if(!(key in qrThemeDefaults)||!/^#[0-9a-f]{6}$/i.test(value))return;qrTheme[key]=value;document.documentElement.style.setProperty('--qr-'+key,value);qrSyncSubjectAppearance();qrThemeSave()}
-function qrThemeSetDensity(value){if(!['compact','comfortable','wide'].includes(value))return;qrDensity=value;document.documentElement.dataset.qrDensity=value;qrThemeSave();requestAnimationFrame(qrRefreshSidebarHighlight)}
-function qrThemeReset(){qrTheme={...qrThemeDefaults};qrDensity='comfortable';qrThemeSave();qrThemeApply();requestAnimationFrame(qrRefreshSidebarHighlight)}
+function qrThemeApply(){
+ for(const [key,val] of Object.entries(qrTheme))document.documentElement.style.setProperty('--qr-'+key,val);
+ document.documentElement.dataset.qrDensity=qrDensity;
+}
 (function(){try{const saved=JSON.parse(localStorage.getItem('quiz_room_theme_v1')||'null');if(saved){for(const [key,value] of Object.entries(saved.colors||{})){if(key in qrThemeDefaults&&/^#[0-9a-f]{6}$/i.test(value))qrTheme[key]=value}if(['compact','comfortable','wide'].includes(saved.density))qrDensity=saved.density}}catch(e){console.warn('Theme preference could not load',e)}qrThemeApply()})();
 
 function qrProfileSection(which='view'){
- const sections={view:'qrProfileView',edit:'qrProfileEdit',theme:'qrProfileTheme'};
+ const sections={view:'qrProfileView',edit:'qrProfileEdit'};
  for(const [key,id] of Object.entries(sections))$(id).classList.toggle('hidden',key!==which);
  if(which==='view')qrRenderProfile();
- if(which==='theme')qrThemeApply();
+
 }
 function qrRenderProfile(){
  $('qrDisplayName').value=qrProfile.name||'';
