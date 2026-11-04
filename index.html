@@ -44,8 +44,6 @@ button{cursor:pointer;touch-action:manipulation}
 html,body{width:100%;min-width:0;margin:0;overflow-x:hidden;background:white}
 body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-height:100dvh;padding:0;margin:0}
 .qr-shell{display:grid;grid-template-columns:var(--qr-rail-width,180px) minmax(0,1fr);min-height:100dvh;width:100%}
-.qr-side{position:sticky;top:0;align-self:start;height:100dvh;display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-nav-gap,13px);padding:24px 0 16px 7px;z-index:30}
-.qr-side button{display:flex;align-items:center;justify-content:flex-start;min-height:var(--qr-nav-height,54px);width:100%;border:0;font-weight:700;cursor:pointer}
 .qr-main{width:100%;max-width:none;min-width:0;margin:0 auto;padding:var(--density-space,18px)}
 .qr-top{display:flex;align-items:center;justify-content:space-between;gap:var(--density-space,18px);margin-bottom:var(--density-space,18px);min-width:0;min-height:46px}
 .qr-top h1{font-size:clamp(26px,4vw,38px);font-weight:700;margin:0;color:var(--qr-primary)}
@@ -92,9 +90,6 @@ body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-he
 :root{--qr-font:Nunito,"Google Sans",Roboto,"Segoe UI",sans-serif;--qr-primary:#223A5E;--qr-secondary:#79C8D6;--qr-navigation:#F1CCB7;--qr-background:#79C8D6;--qr-focus:#FEDC8B;--qr-success:#62CFA5;--qr-warning:#E97A8D;--qr-cat1:#50ADE1;--qr-cat2:#B16BD6;--qr-cat3:#FF9E8B;--qr-cat4:#DF74A8;--qr-cat5:#FB8B89;--qr-cat6:#FEDC8B;--qr-cat7:#79C8D6;--qr-content-width:1160px;--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
-body:not(.auth-locked) .qr-side{border-color:#223A5E1c}
-
-body:not(.auth-locked) .qr-side button:hover,body:not(.auth-locked) .qr-side button:focus-visible{background:var(--qr-focus)}
 body:not(.auth-locked) .qr-top h1,body:not(.auth-locked) .qr-card h2{color:var(--qr-primary)}
 
 body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-visible,body:not(.auth-locked) select:focus-visible{outline:3px solid var(--qr-focus);outline-offset:2px}
@@ -121,9 +116,6 @@ body:not(.auth-locked) .qr-card{padding:calc(clamp(18px,2.5vw,30px)*var(--qr-spa
 
 /* Joined active tab: navigation fades into the main panel, without shadows. */
 body:not(.auth-locked) .qr-shell{background:var(--qr-navigation)}
-body:not(.auth-locked) .qr-side{border:0!important;background:var(--qr-navigation)!important;}
-body:not(.auth-locked) .qr-side button{border:0!important;background:linear-gradient(90deg,var(--qr-navigation) 0%,color-mix(in srgb,var(--qr-navigation) 50%,transparent) 75%,transparent 100%)!important;color:var(--qr-primary)!important;transition:background .18s ease}
-body:not(.auth-locked) .qr-side button:not(.active):hover{background:linear-gradient(90deg,var(--qr-focus),color-mix(in srgb,var(--qr-focus) 20%,transparent))!important}
 
 
 
@@ -134,8 +126,6 @@ body:not(.auth-locked) .qr-card{border-radius:20px;}
 body:not(.auth-locked) .qr-top,body:not(.auth-locked) .qr-grid,body:not(.auth-locked) .qr-card{max-width:100%}
 @media(max-width:740px){
 body:not(.auth-locked) .qr-shell{grid-template-columns:68px minmax(0,1fr)!important}
-body:not(.auth-locked) .qr-side{width:68px!important;overflow-y:auto!important}
-body:not(.auth-locked) .qr-side button{min-height:50px!important;height:50px!important;border-radius:14px 0 0 14px!important}
 
 }
 
@@ -144,8 +134,6 @@ body:not(.auth-locked) .qr-side button{min-height:50px!important;height:50px!imp
 
 /* Current design: no elevation, no legacy shadows. */
 html,body,body:not(.auth-locked) .qr-shell,body:not(.auth-locked) .qr-main,body:not(.auth-locked) .qr-side,body:not(.auth-locked) .qr-side button,body:not(.auth-locked) .qr-card,body:not(.auth-locked) .qr-hero,body:not(.auth-locked) .qr-top,body:not(.auth-locked) button,body:not(.auth-locked) input,body:not(.auth-locked) select,body:not(.auth-locked) textarea,body:not(.auth-locked) .questioncard,body:not(.auth-locked) .answer,body:not(.auth-locked) .resultpanel{box-shadow:none!important;text-shadow:none!important;filter:none!important}
-body:not(.auth-locked) .qr-side button.active::before{box-shadow:0 9px 0 var(--qr-background)!important}
-body:not(.auth-locked) .qr-side button.active::after{box-shadow:0 -9px 0 var(--qr-background)!important}
 body:not(.auth-locked) .qr-main{overflow:hidden}
 body:not(.auth-locked) .qr-grid{min-width:0;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
 body:not(.auth-locked) .qr-grid>*{min-width:0}
@@ -169,11 +157,6 @@ body:not(.auth-locked) .qr-steps button{
 border-radius:var(--qr-button-radius)!important;
 box-shadow:none!important;
 font-family:var(--qr-font)!important;
-}
-body:not(.auth-locked) .qr-side button{
-display:flex!important;align-items:center;
-font-family:var(--qr-font)!important;
-box-shadow:none!important;
 }
 body:not(.auth-locked) .qr-profile-btn{background:var(--qr-focus)!important;color:var(--qr-primary)!important;border:0!important;padding:10px 21px!important}
 body:not(.auth-locked) .qr-btn{background:var(--qr-secondary)!important;color:var(--qr-primary)!important;border:0!important}
@@ -248,16 +231,6 @@ body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 
 /* qr-quiz-sidebar-lock */
 #quiz:not(.hidden) .qr-side{pointer-events:none!important}#quiz:not(.hidden) .qr-side button{cursor:not-allowed!important;opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button.active{opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button:disabled{background:inherit;color:var(--qr-primary)!important}
-
-/* qr-seamless-active-tab */
-
-/* Curved tab joins made from background-color geometry, not shadows. */
-body:not(.auth-locked) .qr-main{border-top-left-radius:0!important}
-body:not(.auth-locked) .qr-side button.active{isolation:isolate}
-body:not(.auth-locked) .qr-side button.active::before{border-radius:0!important;
-}
-body:not(.auth-locked) .qr-side button.active::after{border-radius:0!important;
-}
 @media(max-width:740px){
 }
 
@@ -270,11 +243,6 @@ html[data-qr-density="compact"]{--qr-panel-pad:20px;--qr-card-gap:12px;--qr-card
 html[data-qr-density="comfortable"]{--qr-panel-pad:30px;--qr-card-gap:18px;--qr-card-pad:28px;--qr-control-height:48px;--qr-type-scale:1}
 html[data-qr-density="wide"]{--qr-panel-pad:44px;--qr-card-gap:26px;--qr-card-pad:40px;--qr-control-height:58px;--qr-type-scale:1.1}
 body:not(.auth-locked) .qr-shell{grid-template-columns:var(--qr-rail-width) minmax(0,1fr)!important;gap:0!important}
-body:not(.auth-locked) .qr-side{width:var(--qr-rail-width)!important;box-sizing:border-box!important;padding:clamp(22px,4vw,56px) 0 20px 16px!important;align-items:stretch!important;overflow:visible!important}
-body:not(.auth-locked) .qr-side button{width:calc(100% - 16px)!important;max-width:none!important;border-radius:999px!important;text-align:left!important;justify-content:flex-start!important;font-weight:700!important;position:relative!important;z-index:1}
-body:not(.auth-locked) .qr-side button:not(.active){border-radius:999px!important;}
-body:not(.auth-locked) .qr-side button.active{border-radius:999px 0 0 999px!important;background:var(--qr-background)!important;z-index:5!important}
-body:not(.auth-locked) .qr-side button.active::before,body:not(.auth-locked) .qr-side button.active::after{content:""!important;position:absolute!important;right:0!important;width:38px!important;height:38px!important;pointer-events:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;z-index:6!important}
 body:not(.auth-locked) .qr-main{max-width:none!important;width:100%!important;min-width:0!important;margin:0!important;border-radius:48px 0 0 0!important;box-sizing:border-box!important}
 body:not(.auth-locked) .qr-grid{gap:var(--qr-card-gap)!important}
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-card-pad)!important}
@@ -286,11 +254,6 @@ body:not(.auth-locked) #quizStart #subjects.tilegrid .tile{min-height:var(--qr-c
 body:not(.auth-locked) .qr-main .qr-card p{font-size:calc(15px * var(--qr-type-scale))}
 @media(max-width:740px){
 :root{--qr-rail-width:108px;}
-body:not(.auth-locked) .qr-side{padding:24px 0 16px 7px!important;overflow:visible!important}
-body:not(.auth-locked) .qr-side button{width:calc(100% - 7px)!important;padding:0 11px!important;font-size:13px!important}
-body:not(.auth-locked) .qr-side button.active{width:calc(100% + 1px)!important}
-body:not(.auth-locked) .qr-side button.active::before{width:22px!important;height:22px!important;background:radial-gradient(circle at 0 0,transparent 22px,var(--qr-background) 22.5px)!important}
-body:not(.auth-locked) .qr-side button.active::after{width:22px!important;height:22px!important;background:radial-gradient(circle at 0 100%,transparent 22px,var(--qr-background) 22.5px)!important}
 body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 }
 
@@ -299,55 +262,8 @@ body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 
 /* Longer straight shoulder before a smooth concave join. No elevation shadows. */
 :root{--qr-tab-height:54px;--qr-tab-gap:13px;--qr-tab-curve:26px;--qr-tab-shoulder:24px}
-body:not(.auth-locked) .qr-side button{flex-basis:var(--qr-tab-height)!important}
-body:not(.auth-locked) .qr-side button.active::before,
-body:not(.auth-locked) .qr-side button.active::after{
-background-color:transparent!important;
-}
-body:not(.auth-locked) .qr-side button.active::before{
-background:radial-gradient(circle at calc(100% - var(--qr-tab-shoulder) - var(--qr-tab-curve)) 0,transparent var(--qr-tab-curve),var(--qr-background) calc(var(--qr-tab-curve) + .5px))!important;
-}
-body:not(.auth-locked) .qr-side button.active::after{
-background:radial-gradient(circle at calc(100% - var(--qr-tab-shoulder) - var(--qr-tab-curve)) 100%,transparent var(--qr-tab-curve),var(--qr-background) calc(var(--qr-tab-curve) + .5px))!important;
-}
 @media(max-width:740px){:root{--qr-tab-height:46px;--qr-tab-gap:10px;--qr-tab-curve:20px;--qr-tab-shoulder:14px}}
-
-
-/* qr-nav-gradient-direction */
-
-/* Unselected navigation: stronger at the right edge, softer toward the left. */
-body:not(.auth-locked) .qr-side button:not(.active){
-background:linear-gradient(90deg,
-color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background)) 0%,
-color-mix(in srgb,var(--qr-navigation) 75%,var(--qr-background)) 56%,
-var(--qr-navigation) 100%)!important;
-}
-
-
-/* qr-active-tab-curve-repair */
-
-/* Solid, seamless concave joins: no rectangular gradient artifacts. */
-body:not(.auth-locked) .qr-side button.active::before,
-body:not(.auth-locked) .qr-side button.active::after{
-content:""!important;position:absolute!important;right:0!important;
-width:34px!important;height:34px!important;z-index:6!important;
-border:0!important;border-radius:0!important;box-shadow:none!important;
-background:var(--qr-background)!important;pointer-events:none!important;
-}
-body:not(.auth-locked) .qr-side button.active::before{
-top:-34px!important;
--webkit-mask:radial-gradient(circle at 0 0,transparent 33.5px,#000 34px)!important;
-mask:radial-gradient(circle at 0 0,transparent 33.5px,#000 34px)!important;
-}
-body:not(.auth-locked) .qr-side button.active::after{
-bottom:-34px!important;
--webkit-mask:radial-gradient(circle at 0 100%,transparent 33.5px,#000 34px)!important;
-mask:radial-gradient(circle at 0 100%,transparent 33.5px,#000 34px)!important;
-}
 @media(max-width:740px){
-body:not(.auth-locked) .qr-side button.active::before,body:not(.auth-locked) .qr-side button.active::after{width:26px!important;height:26px!important}
-body:not(.auth-locked) .qr-side button.active::before{top:-26px!important;-webkit-mask:radial-gradient(circle at 0 0,transparent 25.5px,#000 26px)!important;mask:radial-gradient(circle at 0 0,transparent 25.5px,#000 26px)!important}
-body:not(.auth-locked) .qr-side button.active::after{bottom:-26px!important;-webkit-mask:radial-gradient(circle at 0 100%,transparent 25.5px,#000 26px)!important;mask:radial-gradient(circle at 0 100%,transparent 25.5px,#000 26px)!important}
 }
 
 
@@ -423,17 +339,6 @@ html[data-qr-density="compact"]{
 html[data-qr-density="wide"]{
 --qr-nav-height:64px;--qr-nav-gap:17px;--qr-nav-font:17px;--qr-nav-pad:22px;
 }
-body:not(.auth-locked) .qr-side{
-gap:var(--qr-nav-gap)!important;
-}
-body:not(.auth-locked) .qr-side button{
-height:var(--qr-nav-height)!important;
-min-height:var(--qr-nav-height)!important;
-flex:0 0 var(--qr-nav-height)!important;
-font-size:var(--qr-nav-font)!important;
-padding:0 var(--qr-nav-pad)!important;
-line-height:1.2!important;
-}
 @media(max-width:740px){
 }
 
@@ -453,15 +358,7 @@ max-width:none!important;
 /* Center content inside the unchanged right panel; no seam bridge. */
 body:not(.auth-locked) .qr-main > *{box-sizing:border-box!important;width:calc(100% - 48px)!important;max-width:1240px!important;margin-left:auto!important;margin-right:auto!important}
 @media(max-width:740px){body:not(.auth-locked) .qr-main > *{width:calc(100% - 24px)!important}}
-
-
-/* qr-sidebar-lower-and-join */
-
-/* Shift all four menu buttons down 30px, preserve their preset spacing. */
-body:not(.auth-locked) .qr-side{padding-top:calc(clamp(22px,4vw,56px) + 45px)!important}
-@media(max-width:740px){body:not(.auth-locked) .qr-side{padding-top:69px!important}}
-/* Only the selected tab extends into the seam; main panel remains stationary. */
-body:not(.auth-locked) .qr-side button.active{width:calc(100% + 5.7px)!important}
+@media(max-width:740px){}
 
 
 /* qr-main-content-top-spacing */
@@ -1002,6 +899,87 @@ body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-webkit
 body:not(.auth-locked) #profilePage .qr-theme-color input[type="color"]::-moz-color-swatch{border:0;border-radius:50%}
 @media(max-width:740px){body:not(.auth-locked) #profilePage .qr-profile-actions{justify-content:flex-end}}
 
+
+
+/* Left navigation: a single sliding highlight, following the existing theme and density. */
+body:not(.auth-locked) .qr-side{
+ position:sticky!important;
+ overflow:visible!important;
+ isolation:isolate;
+ padding:calc(clamp(22px,4vw,56px) + 45px) var(--density-inner) 20px 16px!important;
+ gap:var(--density-space)!important;
+ width:var(--qr-rail-width)!important;
+ background:var(--qr-navigation)!important;
+ border:0!important;
+ align-items:stretch!important;
+}
+body:not(.auth-locked) .qr-side::before{
+ content:"";
+ position:absolute;
+ z-index:0;
+ left:16px;
+ right:var(--density-inner);
+ top:0;
+ height:var(--density-control);
+ border-radius:var(--qr-button-radius);
+ background:var(--qr-focus);
+ transform:translate3d(0,var(--qr-nav-y,0px),0);
+ pointer-events:none;
+ opacity:0;
+}
+body:not(.auth-locked) .qr-side.qr-nav-ready::before{
+ opacity:1;
+ transition:transform 250ms ease-in-out;
+}
+body:not(.auth-locked) .qr-side button,
+body:not(.auth-locked) .qr-side button:not(.active),
+body:not(.auth-locked) .qr-side button.active{
+ position:relative!important;
+ z-index:1!important;
+ flex:0 0 var(--density-control)!important;
+ height:var(--density-control)!important;
+ min-height:var(--density-control)!important;
+ width:100%!important;
+ max-width:none!important;
+ padding:0 var(--density-inner)!important;
+ border:0!important;
+ border-radius:var(--qr-button-radius)!important;
+ background:transparent!important;
+ color:var(--qr-primary)!important;
+ font-family:var(--qr-font)!important;
+ font-size:var(--density-text)!important;
+ font-weight:700!important;
+ text-align:left!important;
+ justify-content:flex-start!important;
+ box-shadow:none!important;
+ transition:none!important;
+}
+body:not(.auth-locked) .qr-side button.active::before,
+body:not(.auth-locked) .qr-side button.active::after{content:none!important;display:none!important}
+body:not(.auth-locked) .qr-side button:not(.active):hover{
+ background:color-mix(in srgb,var(--qr-focus) 20%,transparent)!important;
+}
+body:not(.auth-locked) .qr-side button:focus-visible{
+ outline:3px solid var(--qr-focus)!important;
+ outline-offset:2px!important;
+}
+@media(max-width:740px){
+ body:not(.auth-locked) .qr-side{
+  width:68px!important;
+  padding:69px 7px 16px!important;
+  gap:var(--density-space)!important;
+ }
+ body:not(.auth-locked) .qr-side::before{left:7px;right:7px}
+ body:not(.auth-locked) .qr-side button,
+ body:not(.auth-locked) .qr-side button:not(.active),
+ body:not(.auth-locked) .qr-side button.active{
+  padding:0 4px!important;
+  font-size:var(--density-small)!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body:not(.auth-locked) .qr-side.qr-nav-ready::before{transition:none}
+}
 </style></head><body class="auth-locked">
 <main id="home" class="screen"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Dashboard</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div><div class="qr-grid"><div class="qr-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2>Progress</h2><select id="qrSubject" class="qr-input" style="max-width:160px" onchange="qrRender()"></select></div><div id="qrProgress" class="qr-muted">Complete a quiz to see your progress.</div></div><div class="qr-card"><h2>Personal Bests</h2><div id="qrBests" class="qr-list"></div></div></div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><p>Write anything that's on your mind. Only you can see these notes in your Google Drive.</p><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote()">Save note</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Score History</h2><p class="qr-muted">Results saved in this browser for the signed-in account.</p><div id="qrScoresList" class="qr-list"></div></div></div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header>
 <div class="qr-card qr-profile-surface">
@@ -1062,7 +1040,30 @@ function pickStep(i){if(answered||orderChosen.includes(i))return;orderChosen.pus
 function undoStep(){if(answered)return;orderChosen.pop();paintSteps()}
 function paintSteps(){let q=questions[index];$('answers').innerHTML='<div class="sequence"><div class="sequencepicked" ondragover="event.preventDefault()" ondrop="dropStep(event)">'+(orderChosen.map((i,k)=>'<span class="picked">'+(k+1)+'. '+escapeHtml(q.shuffled[i])+'</span>').join('')||'<span class="faint">Drag or tap the steps below in order.</span>')+'</div><div class="stepgrid">'+q.shuffled.map((v,i)=>'<button draggable="true" ondragstart="event.dataTransfer.setData(&quot;text/plain&quot;,&quot;'+i+'&quot;)" class="answer step" '+(orderChosen.includes(i)?'disabled':'')+' onclick="pickStep('+i+')">'+escapeHtml(v)+'</button>').join('')+'</div><button class="undo" onclick="undoStep()">Undo last step</button></div>'}
 function getInput(){let q=questions[index];if(q.type==='text')return $('typedAnswer').value;if(q.type==='tf')return selected===0;if(q.type==='order')return orderChosen.map(i=>q.shuffled[i]);if(q.type==='match')return q.pairs.map((p,i)=>$('match'+i).value);return selected}
-function show(id){if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('.qr-side button').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0)}
+function qrSlideSidebar(id,previousIndex){
+ const nav=$(id)?.querySelector('.qr-side');if(!nav)return;
+ const buttons=Array.from(nav.querySelectorAll('button')),active=buttons.find(button=>button.classList.contains('active'));
+ if(!active){nav.classList.remove('qr-nav-ready');return}
+ const from=previousIndex>=0&&buttons[previousIndex]?buttons[previousIndex].offsetTop:active.offsetTop;
+ nav.classList.remove('qr-nav-ready');
+ nav.style.setProperty('--qr-nav-y',from+'px');
+ if(previousIndex<0||from===active.offsetTop){
+  nav.style.setProperty('--qr-nav-y',active.offsetTop+'px');
+  nav.classList.add('qr-nav-ready');
+ }else{
+  void nav.offsetHeight;
+  requestAnimationFrame(()=>{if($(id)?.classList.contains('hidden'))return;
+   nav.classList.add('qr-nav-ready');
+   nav.style.setProperty('--qr-nav-y',active.offsetTop+'px');
+  });
+ }
+}
+window.addEventListener('resize',()=>{
+ const nav=document.querySelector('.screen:not(.hidden) .qr-side');
+ const active=nav?.querySelector('button.active');
+ if(nav&&active)nav.style.setProperty('--qr-nav-y',active.offsetTop+'px');
+});
+function show(id){const previousNav=document.querySelector('.screen:not(.hidden) .qr-side');const previousIndex=previousNav?Array.from(previousNav.querySelectorAll('button')).findIndex(button=>button.classList.contains('active')):-1;if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('.qr-side button').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0);qrSlideSidebar(id,previousIndex)}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');show('selection')}
 const schoolLevels=['PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
