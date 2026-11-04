@@ -8,7 +8,7 @@ button{cursor:pointer;touch-action:manipulation}
 .screen{min-height:100dvh;width:100%}
 .tile,.version,.pill,.level-button{border:0;font-weight:700}
 .versionlist{display:grid;gap:var(--density-space,18px)}
-#results .resultpanel{width:min(620px,100%);margin:0 auto;text-align:center}
+#results .resultpanel{margin:0 auto;text-align:center}
 .time-warning{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;background:color-mix(in srgb,var(--qr-primary) 50%,transparent)}
 .time-warning-card{width:min(420px,100%);padding:var(--density-pad,28px);border-radius:var(--density-radius);background:var(--qr-background);text-align:center}
 @media(max-width:650px){}
@@ -241,8 +241,7 @@ body:not(.auth-locked) .qr-main .modal-content,body:not(.auth-locked) .qr-main .
 padding:var(--density-pad)!important;border-radius:var(--density-radius)!important;
 }
 body:not(.auth-locked) .qr-main .qr-grid,body:not(.auth-locked) .qr-main .tilegrid,
-body:not(.auth-locked) .qr-main .answers,body:not(.auth-locked) .qr-main .options,
-body:not(.auth-locked) .qr-main 
+body:not(.auth-locked) .qr-main .answers,body:not(.auth-locked) .qr-main .options{gap:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-hero,body:not(.auth-locked) .qr-main .qr-top,
 body:not(.auth-locked) .qr-main .qr-card:not(:last-child){margin-bottom:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card h2{font-size:var(--density-heading)!important}
@@ -305,7 +304,7 @@ body:not(.auth-locked) .qr-shell > .qr-main{
  min-width:0!important;text-align:left!important;
 }
 body:not(.auth-locked) #selection .qr-subject-title{
- margin:0!important;line-height:1.25!important;text-align:left!important;
+ margin:0!important;text-align:left!important;
 }
 body:not(.auth-locked) #selection .qr-steps{
  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
@@ -332,7 +331,7 @@ body:not(.auth-locked) #results .resultscore{margin:0!important}
 @media(max-width:760px){body:not(.auth-locked) :is(#quizStart,
 #selection,
 #results) .qr-quiz-content{
- padding:20px!important;gap:20px!important;
+ padding:var(--density-pad)!important;gap:var(--density-space)!important;
  }
  body:not(.auth-locked) #selection .versionlist{grid-template-columns:minmax(0,1fr)!important}
 }body:not(.auth-locked) :is(#quizStart,
@@ -346,7 +345,7 @@ body:not(.auth-locked) #selection .qr-steps{
  gap:var(--density-space)!important;
 }body:not(.auth-locked) #selection .qr-subject-title{
  font-size:var(--density-heading)!important;line-height:1.4!important;
-}.bookmark-list-button),
+}
 body:not(.auth-locked) #selection :is(.version,
 .qr-steps button),
 body:not(.auth-locked) #results .resultbutton{
@@ -362,19 +361,9 @@ body:not(.auth-locked) #results .resultpanel{
 body:not(.auth-locked) #results .resultpanel h2{font-size:var(--density-heading)!important}
 body:not(.auth-locked) #results .resultlabel,
 body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--density-text)!important}
-@media(max-width:760px){body:not(.auth-locked) :is(#quizStart,
-#selection,
-#results) .qr-quiz-content{padding:var(--density-pad)!important;gap:var(--density-space)!important}
-}.flip-colon){
- color:var(--qr-primary)!important;
-}.questioncount,
-.prompt){
- color:var(--qr-primary)!important;
-}.bookmark-list-button),
+
 body:not(.auth-locked) #results .resultbutton{
  border-radius:999px!important;box-shadow:none!important;
-}#bookmarkListButton){
- accent-color:var(--qr-tertiary)!important;
 }
 
 
