@@ -1268,6 +1268,26 @@ body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:focus-visible
  body:not(.auth-locked) #quiz #timer .flip-digit{width:12px!important;font-size:15px!important}
 }
 
+
+/* === 43 | qr-inactive-overlay-theme === */
+/* Inactive controls use the existing theme colors with a translucent surface,
+   not a separate inactive color group. Keep answers visible after submission. */
+body:not(.auth-locked) button:disabled:not(.answer):not(.letter),
+body:not(.auth-locked) input:disabled:not([type="checkbox"]):not([type="radio"]),
+body:not(.auth-locked) input[readonly]:not([type="checkbox"]):not([type="radio"]),
+body:not(.auth-locked) select:disabled,
+body:not(.auth-locked) textarea:disabled,
+body:not(.auth-locked) textarea[readonly]{
+  background:color-mix(in srgb,var(--qr-background) 12%,white)!important;
+  color:color-mix(in srgb,var(--qr-primary) 68%,white)!important;
+  border-color:color-mix(in srgb,var(--qr-primary) 10%,white)!important;
+  box-shadow:none!important;
+  cursor:not-allowed!important;
+}
+body:not(.auth-locked) button:disabled:not(.answer):not(.letter){
+  opacity:.7!important;
+  transform:none!important;
+}
 </style><style id="qr-profile-separated-views">
 /* Profile sections use the existing theme, density and pill controls. */
 body:not(.auth-locked) #profilePage .qr-profile-section,
