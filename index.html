@@ -267,14 +267,19 @@ body:not(.auth-locked) .qr-main .answer,body:not(.auth-locked) .qr-main .option,
 body:not(.auth-locked) .qr-main .optionbox{min-height:var(--density-choice)!important;
 padding:var(--density-inner)!important;border-radius:var(--density-radius)!important;
 font-size:var(--density-text)!important}
-body:not(.auth-locked) .qr-main .qr-list-item,body:not(.auth-locked) .qr-main .qr-note-item,
-body:not(.auth-locked) .qr-main 
 body:not(.auth-locked) .qr-main .qr-avatar,body:not(.auth-locked) .qr-main .letter,
 body:not(.auth-locked) .qr-main .number,body:not(.auth-locked) .qr-main .circle{border-radius:50%!important}
 
 @media(max-width:740px){body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
 
+
+/* Notes inputs and saved entries use the shared rectangular shape and visible border. */
+body:not(.auth-locked) #notesPage #qrNoteText,
+body:not(.auth-locked) #notesPage #qrNotesList .qr-list-item{
+ border:1px solid var(--qr-boundary)!important;
+ border-radius:var(--qr-inner-radius)!important;
+}
 
 /* qr-content-frame */
 
