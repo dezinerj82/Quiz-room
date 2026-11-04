@@ -258,15 +258,6 @@ body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 }
 
 
-/* qr-smoother-tab-curves */
-
-/* Longer straight shoulder before a smooth concave join. No elevation shadows. */
-:root{--qr-tab-height:54px;--qr-tab-gap:13px;--qr-tab-curve:26px;--qr-tab-shoulder:24px}
-@media(max-width:740px){:root{--qr-tab-height:46px;--qr-tab-gap:10px;--qr-tab-curve:20px;--qr-tab-shoulder:14px}}
-@media(max-width:740px){
-}
-
-
 /* qr-unified-density-presets */
 
 /* Unified component density. The navigation rail, joined tab and fluid frame never resize. */
@@ -324,23 +315,6 @@ body:not(.auth-locked) .qr-main button,body:not(.auth-locked) .qr-main .qr-card,
 body:not(.auth-locked) .qr-main .answer{box-shadow:none!important;text-shadow:none!important}
 @media(max-width:740px){body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
-
-
-/* qr-sidebar-density-and-offset */
-
-/* Navigation density applies to every dashboard screen, including active quizzes.
-   Shift the existing sidebar position another 10px down, keeping gaps preset-based. */
-:root,html[data-qr-density="comfortable"]{
---qr-nav-height:54px;--qr-nav-gap:13px;--qr-nav-font:15px;--qr-nav-pad:18px;
-}
-html[data-qr-density="compact"]{
---qr-nav-height:44px;--qr-nav-gap:10px;--qr-nav-font:13px;--qr-nav-pad:14px;
-}
-html[data-qr-density="wide"]{
---qr-nav-height:64px;--qr-nav-gap:17px;--qr-nav-font:17px;--qr-nav-pad:22px;
-}
-@media(max-width:740px){
-}
 
 
 /* qr-main-panel-extend-left-10px */
@@ -1058,11 +1032,12 @@ function qrSlideSidebar(id,previousIndex){
   });
  }
 }
-window.addEventListener('resize',()=>{
+function qrRefreshSidebarHighlight(){
  const nav=document.querySelector('.screen:not(.hidden) .qr-side');
  const active=nav?.querySelector('button.active');
  if(nav&&active)nav.style.setProperty('--qr-nav-y',active.offsetTop+'px');
-});
+}
+window.addEventListener('resize',qrRefreshSidebarHighlight);
 function show(id){const previousNav=document.querySelector('.screen:not(.hidden) .qr-side');const previousIndex=previousNav?Array.from(previousNav.querySelectorAll('button')).findIndex(button=>button.classList.contains('active')):-1;if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));$(id).classList.remove('hidden');document.querySelectorAll('.qr-side button').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0);qrSlideSidebar(id,previousIndex)}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');show('selection')}
@@ -1221,8 +1196,8 @@ let qrTheme={...qrThemeDefaults},qrDensity='comfortable';
 function qrThemeApply(){for(const [key,val] of Object.entries(qrTheme))document.documentElement.style.setProperty('--qr-'+key,val);document.documentElement.dataset.qrDensity=qrDensity;const density=document.getElementById('qrDensity');if(density)density.value=qrDensity;const holder=document.getElementById('qrThemeColors');if(holder){holder.innerHTML=Object.keys(qrThemeDefaults).map(key=>'<div class="qr-theme-color"><label for="qrColor_'+key+'">'+qrThemeNames[key]+'</label><input type="color" id="qrColor_'+key+'" value="'+qrTheme[key]+'" data-qr-color="'+key+'" aria-label="'+qrThemeNames[key]+'"></div>').join('');holder.querySelectorAll('[data-qr-color]').forEach(input=>input.addEventListener('input',()=>qrThemeSetColor(input.dataset.qrColor,input.value)))}}
 function qrThemeSave(){try{localStorage.setItem('quiz_room_theme_v1',JSON.stringify({colors:qrTheme,density:qrDensity}))}catch(e){console.warn('Theme preference not saved',e)}}
 function qrThemeSetColor(key,value){if(!(key in qrThemeDefaults)||!/^#[0-9a-f]{6}$/i.test(value))return;qrTheme[key]=value;document.documentElement.style.setProperty('--qr-'+key,value);qrSyncSubjectAppearance();qrThemeSave()}
-function qrThemeSetDensity(value){if(!['compact','comfortable','wide'].includes(value))return;qrDensity=value;document.documentElement.dataset.qrDensity=value;qrThemeSave()}
-function qrThemeReset(){qrTheme={...qrThemeDefaults};qrDensity='comfortable';qrThemeSave();qrThemeApply()}
+function qrThemeSetDensity(value){if(!['compact','comfortable','wide'].includes(value))return;qrDensity=value;document.documentElement.dataset.qrDensity=value;qrThemeSave();requestAnimationFrame(qrRefreshSidebarHighlight)}
+function qrThemeReset(){qrTheme={...qrThemeDefaults};qrDensity='comfortable';qrThemeSave();qrThemeApply();requestAnimationFrame(qrRefreshSidebarHighlight)}
 (function(){try{const saved=JSON.parse(localStorage.getItem('quiz_room_theme_v1')||'null');if(saved){for(const [key,value] of Object.entries(saved.colors||{})){if(key in qrThemeDefaults&&/^#[0-9a-f]{6}$/i.test(value))qrTheme[key]=value}if(['compact','comfortable','wide'].includes(saved.density))qrDensity=saved.density}}catch(e){console.warn('Theme preference could not load',e)}qrThemeApply()})();
 
 function qrProfileSection(which='view'){
