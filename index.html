@@ -94,10 +94,7 @@ body:not(.auth-locked) .qr-shell{grid-template-columns:var(--qr-rail-width) minm
 }
 
 
-/* qr-shadowless-current-design */
-
-/* Current design: no elevation, no legacy shadows. */
-html,body,body:not(.auth-locked) .qr-shell,body:not(.auth-locked) .qr-main,body:not(.auth-locked) .qr-side,body:not(.auth-locked) .qr-side button,body:not(.auth-locked) .qr-card,body:not(.auth-locked) .qr-hero,body:not(.auth-locked) .qr-top,body:not(.auth-locked) button,body:not(.auth-locked) input,body:not(.auth-locked) select,body:not(.auth-locked) textarea,body:not(.auth-locked) .questioncard,body:not(.auth-locked) .answer,body:not(.auth-locked) .resultpanel{filter:none!important}
+/* Responsive content sizing. */
 body:not(.auth-locked) .qr-main{overflow:hidden}
 body:not(.auth-locked) .qr-grid{min-width:0;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
 body:not(.auth-locked) .qr-grid>*{min-width:0}
@@ -272,8 +269,7 @@ body:not(.auth-locked) .qr-main .qr-list-item,body:not(.auth-locked) .qr-main .q
 body:not(.auth-locked) .qr-main 
 body:not(.auth-locked) .qr-main .qr-avatar,body:not(.auth-locked) .qr-main .letter,
 body:not(.auth-locked) .qr-main .number,body:not(.auth-locked) .qr-main .circle{border-radius:50%!important}
-body:not(.auth-locked) .qr-main button,body:not(.auth-locked) .qr-main .qr-card,
-body:not(.auth-locked) .qr-main .answer{}
+
 @media(max-width:740px){body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
 
@@ -371,9 +367,7 @@ body:not(.auth-locked) #results .resultpanel{
  border:1px solid var(--quiz-subject-color,var(--qr-subject1))!important;
  background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 6%,white)!important;
 }
-@media(max-width:760px){
 
-}
 
 
 /* qr-unified-selection-theme */
