@@ -26,7 +26,8 @@ body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-he
 .qr-card{width:100%;min-width:0;max-width:100%;box-sizing:border-box;background:var(--qr-background);padding:var(--density-pad,28px);margin-bottom:var(--density-space,18px);border:1px solid var(--qr-boundary)!important}
 .qr-hero{min-height:130px;display:flex;align-items:center;justify-content:space-between;gap:var(--density-space,18px)}
 .qr-hero h2{font-size:clamp(22px,3vw,30px);margin:0 0 10px}
-.qr-avatar{width:82px;height:82px;object-fit:cover;border-radius:50%}
+.qr-avatar-outline{display:grid;place-items:center;flex:0 0 auto;width:92px;height:92px;border:5px solid var(--qr-primary);border-radius:50%;background:var(--qr-background);overflow:hidden}
+.qr-avatar{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .qr-home-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:var(--density-space);width:100%}
 .qr-btn{border:0;border-radius:var(--qr-button-radius,999px);padding:12px 18px;font-weight:700;cursor:pointer;margin:4px}
 .qr-list{display:grid;gap:10px}
@@ -55,7 +56,7 @@ body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-he
 .qr-photo-tools img{object-fit:cover;border-radius:50%;border:1px solid color-mix(in srgb,var(--qr-primary) 10%,white)}
 @media(max-width:740px){
  .qr-home-grid{grid-template-columns:1fr}
- .qr-avatar{width:64px;height:64px}
+ .qr-avatar-outline{width:74px;height:74px}
  #quizStart #subjects.tilegrid{grid-template-columns:repeat(auto-fit,minmax(105px,1fr))}
  #selection .chapter-items{grid-template-columns:minmax(0,1fr)}
 }
@@ -65,7 +66,8 @@ body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-he
 :root{--qr-font:Nunito,"Google Sans",Roboto,"Segoe UI",sans-serif;--qr-primary:#5B5F97;--qr-secondary:#B8B8D1;--qr-tertiary:#FFC145;--qr-background:#FFFFFB;--qr-boundary:color-mix(in srgb,var(--qr-primary) 34%,var(--qr-background));--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,var(--qr-tertiary) 55%,#B87525);--qr-error:color-mix(in srgb,var(--qr-tertiary) 25%,#BC3750);--qr-on-secondary:#181823;--qr-on-tertiary:#181823;--qr-content-width:1160px;--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
-body:not(.auth-locked) .qr-top h1,body:not(.auth-locked) .qr-card h2{color:var(--qr-primary)}
+body:not(.auth-locked) .qr-top h1{color:var(--qr-background)}
+body:not(.auth-locked) .qr-card h2{color:var(--qr-primary)}
 
 body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-visible,body:not(.auth-locked) select:focus-visible{outline:3px solid var(--qr-tertiary);outline-offset:2px}
 html[data-qr-density="compact"]{--qr-content-width:980px;--qr-space:.78}
@@ -79,12 +81,12 @@ body:not(.auth-locked) .qr-card{padding:calc(clamp(18px,2.5vw,30px)*var(--qr-spa
 /* qr-integrated-tab-layout */
 
 /* Navigation and content share the same background. */
-body:not(.auth-locked) .qr-shell{background:var(--qr-background)}
+body:not(.auth-locked) .qr-shell{background:var(--qr-primary)}
 
 
 
 
-body:not(.auth-locked) .qr-main{min-height:100dvh;background:var(--qr-background)!important;}
+body:not(.auth-locked) .qr-main{min-height:100dvh;background:var(--qr-primary)!important;}
 body:not(.auth-locked) .qr-top{background:transparent!important}
 body:not(.auth-locked) .qr-card{border-radius:20px;}
 body:not(.auth-locked) .qr-top,body:not(.auth-locked) .qr-home-grid,body:not(.auth-locked) .qr-card{max-width:100%}
@@ -291,7 +293,7 @@ body:not(.auth-locked) .qr-shell > .qr-main{
  min-width:0!important;
  max-width:none!important;
  padding:calc(var(--density-space) + 24px) var(--density-space) var(--density-space)!important;
- border:1px solid var(--qr-boundary)!important;
+ border:1px solid var(--qr-background)!important;
 }body:not(.auth-locked) :is(#quizStart,
 #selection,
 #results) .qr-quiz-content{
@@ -508,17 +510,17 @@ body:not(.auth-locked) .qr-side{
  position:sticky!important;
  overflow:visible!important;
  isolation:isolate;
- padding:calc(clamp(22px,4vw,56px) + 45px) var(--density-inner) 20px 16px!important;
+ padding:calc(var(--density-space) + 24px) var(--density-inner) 20px 16px!important;
  gap:calc(var(--density-space) * 1.45)!important;
  width:var(--qr-rail-width)!important;
- background:var(--qr-background)!important;
- border:1px solid var(--qr-boundary)!important;
+ background:var(--qr-primary)!important;
+ border:1px solid var(--qr-background)!important;
  align-items:stretch!important;
 }
-body:not(.auth-locked) .qr-side button:nth-of-type(1){--qr-nav-color:var(--qr-subject1)}
-body:not(.auth-locked) .qr-side button:nth-of-type(2){--qr-nav-color:var(--qr-subject2)}
-body:not(.auth-locked) .qr-side button:nth-of-type(3){--qr-nav-color:var(--qr-subject3)}
-body:not(.auth-locked) .qr-side button:nth-of-type(4){--qr-nav-color:var(--qr-subject4)}
+
+
+
+
 body:not(.auth-locked) .qr-side::before{
  content:"";
  position:absolute;
@@ -528,7 +530,7 @@ body:not(.auth-locked) .qr-side::before{
  top:0;
  height:var(--density-control);
  border-radius:var(--qr-button-radius);
- background:color-mix(in srgb,var(--qr-active-nav-color,var(--qr-subject1)) 45%,var(--qr-background));
+ background:var(--qr-tertiary);
  transition:none;
  transform:translate3d(0,var(--qr-nav-y,0px),0);
  pointer-events:none;
@@ -536,7 +538,7 @@ body:not(.auth-locked) .qr-side::before{
 }
 body:not(.auth-locked) .qr-side.qr-nav-ready::before{
  opacity:1;
- transition:transform 250ms ease-in-out,background-color 250ms ease-in-out;
+ transition:transform 250ms ease-in-out;
 }
 body:not(.auth-locked) .qr-side button,
 body:not(.auth-locked) .qr-side button:not(.active),
@@ -556,7 +558,7 @@ body:not(.auth-locked) .qr-side button.active{
  border:0!important;
  border-radius:var(--qr-button-radius)!important;
  background:transparent!important;
- color:var(--qr-primary)!important;
+ color:var(--qr-background)!important;
  font-family:var(--qr-font)!important;
  font-size:var(--density-text)!important;
  font-weight:700!important;
@@ -565,10 +567,12 @@ body:not(.auth-locked) .qr-side button.active{
  
  transition:none!important;
 }
+body:not(.auth-locked) .qr-side button.active{color:var(--qr-primary)!important}
 body:not(.auth-locked) .qr-side button.active::before,
 body:not(.auth-locked) .qr-side button.active::after{content:none!important;display:none!important}
 body:not(.auth-locked) .qr-side button:not(.active):hover{
- background:color-mix(in srgb,var(--qr-tertiary) 20%,transparent)!important;
+ background:var(--qr-tertiary)!important;
+ color:var(--qr-primary)!important;
 }
 body:not(.auth-locked) .qr-side button:focus-visible{
  outline:3px solid var(--qr-tertiary)!important;
@@ -577,7 +581,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
 @media(max-width:740px){
  body:not(.auth-locked) .qr-side{
   width:var(--qr-rail-width)!important;
-  padding:69px 7px 16px!important;
+  padding:calc(var(--density-space) + 24px) 7px 16px!important;
   gap:calc(var(--density-space) * 1.45)!important;
  }
  body:not(.auth-locked) .qr-side::before{left:7px;right:7px}
@@ -597,20 +601,20 @@ body:not(.auth-locked) .qr-side button:focus-visible{
 /* Quiz presentation — single responsive design based on the approved reference. */
 body:not(.auth-locked) .qr-side .qr-nav-brand{
  display:flex;align-items:center;gap:var(--density-inner);padding:0 4px;
- font-size:clamp(15px,1.35vw,22px);font-weight:800;color:var(--qr-primary);
+ font-size:clamp(15px,1.35vw,22px);font-weight:800;color:var(--qr-background);
  margin-bottom:var(--density-space);white-space:nowrap;
 }
 body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
 body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:27px;height:27px}
 body:not(.auth-locked) .qr-side button{white-space:nowrap}
 body:not(.auth-locked) .qr-side button .qr-nav-label{overflow:hidden;text-overflow:ellipsis}
-body:not(.auth-locked) .qr-side{padding-top:var(--density-pad)!important;background:var(--qr-background)!important}
-body:not(.auth-locked) .qr-side::before{background:color-mix(in srgb,var(--qr-active-nav-color,var(--qr-subject1)) 45%,var(--qr-background))}
-body:not(.auth-locked) #quiz .qr-shell{background:var(--qr-background)!important}
 
-body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-background)!important}
+
+body:not(.auth-locked) #quiz .qr-shell{background:var(--qr-primary)!important}
+
+body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-primary)!important}
 body:not(.auth-locked) #quiz .qr-top h1{
- font-size:clamp(25px,3.1vw,44px)!important;font-weight:800!important;color:var(--qr-primary)!important;
+ font-size:clamp(25px,3.1vw,44px)!important;font-weight:800!important;color:var(--qr-background)!important;
 }
 body:not(.auth-locked) #quiz .qr-top .qr-profile-btn{
  display:inline-flex;align-items:center;gap:10px;
@@ -795,7 +799,7 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
  body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:20px;height:20px}
 }
 @media(max-width:740px){
- body:not(.auth-locked) .qr-side{padding-top:var(--density-pad)!important}
+ 
  body:not(.auth-locked) .qr-side .qr-nav-brand{padding:0 4px;justify-content:center}
  body:not(.auth-locked) .qr-side .qr-nav-brand span{display:none}
  body:not(.auth-locked) .qr-side button .qr-icon{display:none}
@@ -838,7 +842,7 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
 @media(max-width:900px){body:not(.auth-locked) #home .qr-home-grid{grid-template-columns:minmax(0,1fr)}}
 </style></head><body class="auth-locked">
 <main id="home" class="screen"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Dashboard</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-grid qr-home-grid">
-<div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div>
+<div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><div class="qr-avatar-outline" aria-label="Profile picture"><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div></div>
 <div class="qr-card qr-best-card"><div class="qr-best-heading"><h2>Best score</h2><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select></div><div id="qrBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div></div>
 </div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><p>Write anything that's on your mind. Only you can see these notes in your Google Drive.</p><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote()">Save note</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Score History</h2><p class="qr-muted">Results saved in this browser for the signed-in account.</p><div id="qrScoresList" class="qr-list"></div></div></div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header>
 <div class="qr-card qr-profile-surface">
@@ -901,7 +905,6 @@ function qrSlideSidebar(id,previousIndex){
  const initialized=nav.dataset.qrNavInitialized==='true';
  const from=initialized&&previousIndex>=0&&buttons[previousIndex]?buttons[previousIndex].offsetTop:target;
  nav.classList.remove('qr-nav-ready');
- nav.style.setProperty('--qr-active-nav-color',getComputedStyle(active).getPropertyValue('--qr-nav-color').trim()||'var(--qr-subject1)');
  nav.style.setProperty('--qr-nav-y',from+'px');
  void nav.offsetHeight;
  nav.classList.add('qr-nav-ready');
