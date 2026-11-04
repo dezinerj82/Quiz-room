@@ -362,13 +362,7 @@ body:not(.auth-locked) #selection .version{
  width:100%!important;min-width:0!important;
  line-height:1.35!important;white-space:normal!important;
 }
-body:not(.auth-locked) #quiz .topbar{
- width:100%!important;max-width:none!important;margin:0!important;
-}
-body:not(.auth-locked) #quiz .quizactions{
- display:flex!important;align-items:center!important;
- flex-wrap:wrap!important;gap:10px!important;
-}
+
 body:not(.auth-locked) #quiz .questionmeta{
  width:100%!important;max-width:none!important;
  display:flex!important;align-items:center!important;justify-content:space-between!important;
@@ -403,7 +397,7 @@ body:not(.auth-locked) #quiz .answer{
  display:flex!important;align-items:center!important;
  text-align:left!important;line-height:1.45!important;
 }
-body:not(.auth-locked) #quiz .answer .letter{flex-shrink:0!important}
+
 body:not(.auth-locked) #quiz .answer-feedback{
  line-height:1.6!important;text-align:left!important;
 }
@@ -423,7 +417,7 @@ body:not(.auth-locked) #results .resultscore{margin:0!important}
  body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
  padding:20px!important;gap:20px!important;
  }
- body:not(.auth-locked) #quiz .quizactions{margin-left:0!important}
+
  body:not(.auth-locked) #quiz .answers{grid-template-columns:minmax(0,1fr)!important}
  body:not(.auth-locked) #quiz .questioncard{padding:20px!important}
  body:not(.auth-locked) #selection .versionlist{grid-template-columns:minmax(0,1fr)!important}
@@ -496,31 +490,20 @@ body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--density-text)!i
 
 /* Quiz-specific surfaces use the matching subject tile color; controls keep profile theme. */
 body:not(.auth-locked) #quiz .qr-top h1{color:var(--qr-primary)!important}
-body:not(.auth-locked) #quiz .topbar{
- display:flex!important;flex-wrap:wrap!important;align-items:center!important;
- justify-content:flex-end!important;gap:var(--density-space)!important;
-}
-body:not(.auth-locked) #quiz #timer{
- order:1!important;
-}
+
 body:not(.auth-locked) #quiz #timer .flip-digit{
  border-color:transparent!important;box-shadow:none!important;
 }
 body:not(.auth-locked) #quiz #timer :is(.flip-label,.flip-colon){
  color:var(--qr-primary)!important;
 }
-body:not(.auth-locked) #quiz .quizactions{
- order:2!important;margin-left:0!important;justify-content:flex-end!important;
-}
+
 body:not(.auth-locked) #quiz .number{
  background:var(--quiz-subject-color,var(--qr-cat1))!important;
  color:var(--qr-primary)!important;
  border-radius:50%!important;
 }
-body:not(.auth-locked) #quiz .answer :is(.letter,.optionletter){
- background:var(--quiz-subject-color,var(--qr-cat1))!important;
- color:var(--qr-primary)!important;border-radius:50%!important;
-}
+
 body:not(.auth-locked) #quiz :is(.questiontitle,.questioncount,.prompt){
  color:var(--qr-primary)!important;
 }
@@ -554,8 +537,7 @@ body:not(.auth-locked) #results .resultpanel{
  background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-cat1)) 6%,white)!important;
 }
 @media(max-width:760px){
- body:not(.auth-locked) #quiz .topbar{justify-content:flex-end!important}
- body:not(.auth-locked) #quiz #timer{margin-left:auto!important}
+
 }
 
 
@@ -629,11 +611,7 @@ body:not(.auth-locked) #quiz .answer{
  color:var(--qr-primary)!important;
  border-radius:var(--density-radius)!important;
 }
-body:not(.auth-locked) #quiz .answer .letter{
- background:var(--quiz-subject-color,var(--qr-cat1))!important;
- color:var(--qr-primary)!important;
- border-radius:50%!important;
-}
+
 body:not(.auth-locked) #quiz .answer.correct{
  background:color-mix(in srgb,var(--qr-success) 25%,var(--qr-background))!important;
 }
@@ -646,22 +624,7 @@ body:not(.auth-locked) #quiz .answer:focus-visible{
  outline-offset:2px!important;
 }
 /* Timer matches the shared navigation control height in every density preset. */
-body:not(.auth-locked) #quiz #timer{
- height:var(--density-control)!important;
- min-height:var(--density-control)!important;
- max-height:var(--density-control)!important;
- box-sizing:border-box!important;
- background:var(--qr-navigation)!important;
- border:0!important;
- border-radius:999px!important;
- padding:3px var(--density-inner)!important;
- display:flex!important;
- align-items:center!important;
- justify-content:center!important;
- gap:5px!important;
- margin-left:auto!important;
- color:var(--qr-primary)!important;
-}
+
 body:not(.auth-locked) #quiz #timer .flip-unit{
  display:flex!important;
  flex-direction:column!important;
@@ -722,9 +685,7 @@ body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:focus-visible
  outline:3px solid var(--qr-focus)!important;outline-offset:3px!important;
 }
 @media(max-width:740px){
- body:not(.auth-locked) #quiz #timer{
-  padding-inline:10px!important;gap:3px!important;
- }
+
  body:not(.auth-locked) #quiz #timer .flip-digit{width:12px!important;font-size:15px!important}
 }
 
@@ -741,14 +702,31 @@ body:not(.auth-locked) .chapter-placeholder{
  opacity:var(--qr-inactive-opacity)!important;
 }
 
-/* Quiz question frame: navigation controls and bookmark stay outside. */
-body:not(.auth-locked) #quiz .qr-quiz-bookmark-outside{
- display:flex!important;
- justify-content:flex-end!important;
- align-items:center!important;
+/* Quiz question frame with controls outside the border. */
+
+body:not(.auth-locked) #quiz .topbar{
  width:100%!important;
- min-height:24px;
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ flex-wrap:wrap!important;gap:var(--density-space)!important;margin:0!important;
 }
+body:not(.auth-locked) #quiz .topbar .bookmarktools{
+ display:flex;align-items:center;gap:var(--density-space);position:relative;
+}
+body:not(.auth-locked) #quiz .quizactions{
+ width:100%;display:flex!important;justify-content:flex-end!important;align-items:center!important;
+ flex-wrap:wrap!important;gap:var(--density-space)!important;margin:0!important;
+}
+body:not(.auth-locked) #quiz .answer-feedback .inline-feedback{
+ display:inline-flex;align-items:flex-start;gap:var(--density-inner);
+ font-size:var(--density-text);line-height:1.5;
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol{
+ flex:0 0 auto;font-weight:800;
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-correct{color:var(--qr-success)}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-wrong{color:var(--qr-warning)}
+
+
 body:not(.auth-locked) #quiz .qr-question-frame{
  width:100%!important;
  min-width:0!important;
@@ -965,7 +943,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
   <div class="qr-profile-actions"><button class="qr-btn" type="button" onclick="qrThemeReset()">Reset theme</button><button class="qr-btn" type="button" onclick="qrProfileSection('view')">Cancel</button></div>
  </section>
 </div></div></div></section><div id="qrCropModal" class="qr-crop-modal hidden" role="dialog" aria-modal="true" aria-labelledby="qrCropTitle"><div class="qr-crop-box"><h2 id="qrCropTitle">Crop photo</h2><p class="qr-muted">Move the photo to center your face.</p><canvas id="qrCropCanvas" width="320" height="320" aria-label="Square photo preview"></canvas><label for="qrCropZoom">Zoom</label><input id="qrCropZoom" type="range" min="1" max="3" step="0.01" value="1" oninput="qrCropDraw()" style="width:100%"><div><button class="qr-btn" onclick="qrCropCancel()">Cancel</button><button class="qr-btn" onclick="qrCropApply()">Use photo</button></div></div></div><section id="selection" class="screen selectionscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><h2 class="qr-subject-title" id="subjectTitle"></h2><nav id="qrQuizSteps" class="qr-steps" aria-label="Quiz navigation"></nav><div class="versionlist" id="versions"></div></div></div></div></section>
-<section id="quiz" class="screen quizscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1 id="qrActiveQuizHeading">English</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><div class="topbar"><div class="timer flip-timer" id="timer" role="timer" aria-label="Time remaining"><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="h1">0</span><span class="flip-digit" data-clock="h2">1</span></div><span class="flip-label">HR</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="m1">3</span><span class="flip-digit" data-clock="m2">0</span></div><span class="flip-label">MIN</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="s1">0</span><span class="flip-digit" data-clock="s2">0</span></div><span class="flip-label">SEC</span></div></div><div class="quizactions"><button class="pill exitpill" onclick="exitQuiz()">Exit</button><button class="pill hidden" id="resumeButton" onclick="resumeQuiz()">Resume</button><button class="pill" id="nextButton" onclick="advance()" disabled>Next ❯</button></div></div><div class="qr-quiz-bookmark-outside"><div class="bookmarktools"><button id="bookmarkListButton" class="bookmark-list-button hidden" onclick="toggleBookmarkList()" aria-label="Bookmarked questions">▤</button><label class="bookmarklabel"><input type="checkbox" id="bookmarkCheck" onchange="toggleBookmark(this.checked)">Bookmark</label><div id="bookmarkList" class="bookmark-list hidden"></div></div></div><div class="qr-question-frame"><div class="questionmeta"><div class="questioncount questioncount-above" id="questioncount">Question 1 out of 30</div></div><div class="questioncard"><div class="questionheading"><div class="number" id="number">1</div><h2 class="questiontitle" id="questionTitle"></h2><div id="questionTranslation" class="question-translation hidden" lang="en"></div></div><p class="prompt" id="prompt"></p><div class="answers" id="answers"></div><div id="answerFeedback" class="answer-feedback hidden" role="status"></div></div><p class="helper">Select your answer, then press Next.</p></div></div></div></div></section>
+<section id="quiz" class="screen quizscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1 id="qrActiveQuizHeading">English</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><div class="topbar"><div class="timer flip-timer" id="timer" role="timer" aria-label="Time remaining"><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="h1">0</span><span class="flip-digit" data-clock="h2">1</span></div><span class="flip-label">HR</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="m1">3</span><span class="flip-digit" data-clock="m2">0</span></div><span class="flip-label">MIN</span></div><span class="flip-colon">:</span><div class="flip-unit"><div class="flip-digits"><span class="flip-digit" data-clock="s1">0</span><span class="flip-digit" data-clock="s2">0</span></div><span class="flip-label">SEC</span></div></div><div class="bookmarktools"><button id="bookmarkListButton" class="bookmark-list-button hidden" onclick="toggleBookmarkList()" aria-label="Bookmarked questions">▤</button><label class="bookmarklabel"><input type="checkbox" id="bookmarkCheck" onchange="toggleBookmark(this.checked)">Bookmark</label><div id="bookmarkList" class="bookmark-list hidden"></div></div></div><div class="qr-question-frame"><div class="questionmeta"><div class="questioncount questioncount-above" id="questioncount">Question 1 out of 30</div></div><div class="questioncard"><div class="questionheading"><div class="number" id="number">1</div><h2 class="questiontitle" id="questionTitle"></h2><div id="questionTranslation" class="question-translation hidden" lang="en"></div></div><p class="prompt" id="prompt"></p><div class="answers" id="answers"></div><div id="answerFeedback" class="answer-feedback hidden" role="status"></div></div><p class="helper">Select your answer, then press Next.</p></div><div class="quizactions"><button class="pill exitpill" onclick="exitQuiz()">Exit</button><button class="pill hidden" id="resumeButton" onclick="resumeQuiz()">Resume</button><button class="pill" id="nextButton" onclick="advance()" disabled>Next ❯</button></div></div></div></div></section>
 
 <section id="results" class="screen resultscreen hidden"><div class="qr-shell qr-quiz-shell"><nav class="qr-side" aria-label="Main menu"><button onclick="qrOpen('home')" title="Home">Home</button><button onclick="qrOpen('quizStart')" title="Quiz">Quiz</button><button onclick="qrOpen('scoresPage')" title="Scores">Scores</button><button onclick="qrOpen('notesPage')" title="Notes">Notes</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-quiz-content"><div class="resultpanel"><h2>Quiz Complete!</h2><div class="resultlabel">Your Score</div><div class="resultscore"><span id="score">0</span><span class="slash"> / </span><span id="total">5</span></div><button class="resultbutton" onclick="restart()">⟳ &nbsp; Try Again</button><button class="resultbutton" onclick="qrOpen('quizStart')">Choose Subject</button><p id="driveSaveStatus" role="status" aria-live="polite" style="font-size:15px;text-align:center;margin:14px 0 0"></p></div></div></div></div></section><div id="timeWarning" class="time-warning hidden" role="alertdialog" aria-modal="true" aria-labelledby="timeWarningTitle"><div class="time-warning-card"><h2 id="timeWarningTitle">Only 5 minutes left!</h2><p>Hurry! Finish your remaining questions before time runs out.</p><button class="resultbutton" onclick="dismissTimeWarning()">Continue Quiz</button></div></div>
 <script src="js/exercises.js"></script>
@@ -1066,7 +1044,7 @@ function startExercise(topic){
 }
 function start(v){clearInterval(timerHandle);timerHandle=null;quizEnded=false;quizDeadline=0;scoreAttemptRecorded=false;latestScoreKey='';timeWarningShown=false;dismissTimeWarning();version=v;index=0;resumeIndex=0;bookmarkView=false;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');score=0;wrongQuestions=[];questions=activeExerciseTopic?exerciseBank[subject][activeExerciseTopic].map(q=>({q:q[0],options:q[1],correct:q[2],explanation:q[3],type:'mc',translation:q[4]})):sample[subject].map((q,i)=>decorate({q:q[0],options:q[1],correct:q[2],explanation:q[3],type:'mc'},i));time=activeExerciseTopic?questions.length*60:questions.length*180;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
 function updateClock(){const t=Math.max(0,time),h=Math.floor(t/3600),m=Math.floor((t%3600)/60),s=t%60;const digits=String(h).padStart(2,'0').slice(-2)+String(m).padStart(2,'0')+String(s).padStart(2,'0');const keys=['h1','h2','m1','m2','s1','s2'];keys.forEach((key,i)=>{const el=document.querySelector('[data-clock="'+key+'"]');if(el&&el.textContent!==digits[i])el.textContent=digits[i]});$('timer').setAttribute('aria-label','Time remaining '+h+' hours '+m+' minutes '+s+' seconds')}
-function render(){selected=-1;answered=false;orderChosen=[];$('nextButton').disabled=!bookmarks.has(index);updateBookmarkUI();let q=questions[index];$('questionTranslation').textContent='';$('questionTranslation').classList.add('hidden');$('number').textContent=index+1;$('questionTitle').textContent=q.q;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(answerSnapshots[index]){showAnswerTranslations(q);a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('.helper').textContent=bookmarkView?'Press Resume to return to your next unanswered question.':'Answer submitted. Press Next to continue.';updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span class="letter">'+('ABCD'[i])+'</span><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){a.innerHTML=['True','False'].map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span class="letter">'+('AB'[i])+'</span><span>'+v+'</span></button>').join('')}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' out of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='text'?'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
+function render(){selected=-1;answered=false;orderChosen=[];$('nextButton').disabled=!bookmarks.has(index);updateBookmarkUI();let q=questions[index];$('questionTranslation').textContent='';$('questionTranslation').classList.add('hidden');$('number').textContent=index+1;$('questionTitle').textContent=q.q;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(answerSnapshots[index]){showAnswerTranslations(q);a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('.helper').textContent=bookmarkView?'Press Resume to return to your next unanswered question.':'Answer submitted. Press Next to continue.';updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){a.innerHTML=['True','False'].map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+v+'</span></button>').join('')}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' out of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='text'?'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
 function selectAnswer(i){if(answered)return;selected=i;[...$('answers').querySelectorAll('.answer')].forEach((b,j)=>b.classList.toggle('selected',j===i));submitAnswer()}
 function checkMatches(){if(!answered&&questions[index].pairs.every((p,i)=>$('match'+i).value))submitAnswer()}
 function showAnswerTranslations(q){
