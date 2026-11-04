@@ -125,7 +125,7 @@ body:not(.auth-locked) .qr-top{background:transparent!important}
 body:not(.auth-locked) .qr-card{border-radius:20px;}
 body:not(.auth-locked) .qr-top,body:not(.auth-locked) .qr-grid,body:not(.auth-locked) .qr-card{max-width:100%}
 @media(max-width:740px){
-body:not(.auth-locked) .qr-shell{grid-template-columns:68px minmax(0,1fr)!important}
+body:not(.auth-locked) .qr-shell{grid-template-columns:var(--qr-rail-width) minmax(0,1fr)!important}
 
 }
 
@@ -237,8 +237,8 @@ body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 
 /* qr-sidebar-reference-and-density */
 
-/* Reference layout: broad capsule tabs, active tab joined into the main panel. */
-:root{--qr-rail-width:clamp(150px,17vw,230px);--qr-panel-pad:30px;--qr-card-gap:18px;--qr-card-pad:28px;--qr-control-height:48px;--qr-type-scale:1}
+/* Shared responsive rail and content dimensions. */
+:root{--qr-rail-width:clamp(136px,13vw,190px);--qr-panel-pad:30px;--qr-card-gap:18px;--qr-card-pad:28px;--qr-control-height:48px;--qr-type-scale:1}
 html[data-qr-density="compact"]{--qr-panel-pad:20px;--qr-card-gap:12px;--qr-card-pad:18px;--qr-control-height:38px;--qr-type-scale:.92}
 html[data-qr-density="comfortable"]{--qr-panel-pad:30px;--qr-card-gap:18px;--qr-card-pad:28px;--qr-control-height:48px;--qr-type-scale:1}
 html[data-qr-density="wide"]{--qr-panel-pad:44px;--qr-card-gap:26px;--qr-card-pad:40px;--qr-control-height:58px;--qr-type-scale:1.1}
@@ -252,15 +252,16 @@ body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .resultb
 body:not(.auth-locked) #quizStart #subjects.tilegrid{gap:var(--qr-card-gap)!important}
 body:not(.auth-locked) #quizStart #subjects.tilegrid .tile{min-height:var(--qr-control-height)!important;font-size:calc(16px * var(--qr-type-scale))!important}
 body:not(.auth-locked) .qr-main .qr-card p{font-size:calc(15px * var(--qr-type-scale))}
+@media(max-width:1100px){:root{--qr-rail-width:clamp(116px,14vw,144px)}}
 @media(max-width:740px){
-:root{--qr-rail-width:108px;}
+:root{--qr-rail-width:clamp(76px,22vw,96px)}
 body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 }
 
 
 /* qr-unified-density-presets */
 
-/* Unified component density. The navigation rail, joined tab and fluid frame never resize. */
+/* Existing density tokens define component sizes across desktop and mobile. */
 :root,html[data-qr-density="comfortable"]{
 --density-space:18px;--density-pad:28px;--density-inner:18px;--density-control:44px;--density-input:44px;--density-choice:64px;--density-text:15px;--density-small:13px;--density-heading:23px;--density-radius:24px;
 }
@@ -317,53 +318,23 @@ body:not(.auth-locked) .qr-main .answer{box-shadow:none!important;text-shadow:no
 body:not(.auth-locked) .qr-main .qr-card{padding:var(--density-pad)!important}}
 
 
-/* qr-main-panel-extend-left-10px */
-
-/* Expand only the right panel 10px left; preserve its original rounded corner and sidebar. */
-body:not(.auth-locked) .qr-shell > .qr-main{
-margin-left:5px!important;
-width:calc(100% - 5px)!important;
-max-width:none!important;
-}
-
-
 /* qr-content-frame */
 
 /* Center content inside the unchanged right panel; no seam bridge. */
-body:not(.auth-locked) .qr-main > *{box-sizing:border-box!important;width:calc(100% - 48px)!important;max-width:1240px!important;margin-left:auto!important;margin-right:auto!important}
-@media(max-width:740px){body:not(.auth-locked) .qr-main > *{width:calc(100% - 24px)!important}}
+body:not(.auth-locked) .qr-main > *{box-sizing:border-box!important;width:calc(100% - (2 * var(--density-space)))!important;max-width:1240px!important;margin-left:auto!important;margin-right:auto!important}
+@media(max-width:740px){body:not(.auth-locked) .qr-main > *{width:calc(100% - var(--density-space))!important}}
 @media(max-width:740px){}
 
 
 /* qr-main-content-top-spacing */
 
-/* Lower right-panel content 24px without moving the panel or sidebar. */
+/* Shared right panel sizing and spacing for every screen. */
 body:not(.auth-locked) .qr-shell > .qr-main{
-padding-top:calc(var(--density-space) + 24px)!important;
-}
-
-
-/* qr-dashboard-layout-parity */
-
-/* Keep the dashboard frame consistent on Scores and every Quiz screen. */
-body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr-shell{
-  grid-template-columns:var(--qr-rail-width) minmax(0,1fr)!important;
-  width:100%!important;min-height:100dvh!important;gap:0!important;
-}
-body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr-shell > .qr-main{
-  width:100%!important;min-width:0!important;max-width:none!important;
-  margin:0!important;box-sizing:border-box!important;
-  border-radius:48px 0 0 0!important;
-  padding:calc(var(--density-space) + 24px) var(--density-space) var(--density-space)!important;
-}
-body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr-main > *{
-  box-sizing:border-box!important;width:calc(100% - 48px)!important;
-  max-width:1240px!important;margin-left:auto!important;margin-right:auto!important;
-}
-@media(max-width:740px){
- body:not(.auth-locked) :is(#scoresPage,#quizStart,#selection,#quiz,#results) .qr-main > *{
-  width:calc(100% - 24px)!important;
- }
+ margin:0!important;
+ width:100%!important;
+ min-width:0!important;
+ max-width:none!important;
+ padding:calc(var(--density-space) + 24px) var(--density-space) var(--density-space)!important;
 }
 
 
@@ -939,7 +910,7 @@ body:not(.auth-locked) .qr-side button:focus-visible{
 }
 @media(max-width:740px){
  body:not(.auth-locked) .qr-side{
-  width:68px!important;
+  width:var(--qr-rail-width)!important;
   padding:69px 7px 16px!important;
   gap:var(--density-space)!important;
  }
