@@ -8,35 +8,10 @@ button{cursor:pointer;touch-action:manipulation}
 .screen{min-height:100dvh;width:100%}
 .tile,.version,.pill,.level-button{border:0;font-weight:700}
 .versionlist{display:grid;gap:var(--density-space,18px)}
-
-
-#quiz .qr-quiz-content{display:flex;flex-direction:column;gap:var(--density-space,18px)}
-#quiz .topbar{display:flex;align-items:center;justify-content:flex-end;gap:var(--density-space,18px)}
-#quiz .quizactions{display:flex;align-items:center;gap:var(--density-space,18px)}
-#quiz .questionmeta{display:flex;align-items:center;justify-content:space-between;gap:var(--density-space,18px)}
-#quiz .questioncard{display:flex;flex-direction:column;gap:var(--density-space,18px);}
-#quiz .questionheading{display:flex;align-items:flex-start;gap:var(--density-space,18px);min-width:0}
-#quiz .questionheading .number{flex:0 0 auto;display:grid;place-items:center}
-#quiz .questiontitle{margin:0;min-width:0}
-#quiz .answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--density-space,18px)}
-#quiz .answers .answer{display:flex;align-items:center;gap:var(--density-inner,12px);text-align:left;min-width:0;border:0;padding:var(--density-inner,12px);cursor:pointer}
-#quiz .answers .answer .letter{display:grid;place-items:center;flex:0 0 auto}
-#quiz .helper{text-align:center;margin:0;color:var(--qr-primary)}
-#quiz .bookmarktools{display:flex;align-items:center;gap:10px;position:relative}
-#quiz .bookmarklabel{display:flex;align-items:center;gap:6px;cursor:pointer}
-#quiz .bookmark-list{position:absolute;right:0;top:calc(100% + 8px);z-index:8;display:grid;gap:4px;max-height:300px;overflow:auto;background:var(--qr-background);padding:8px;border-radius:var(--density-radius)}
-#quiz .bookmark-list button{width:100%;text-align:left}
-#quiz .question-translation{font-size:var(--density-small,13px);line-height:1.4}
-#quiz .typebox{width:100%;min-height:var(--density-control,44px);padding:var(--density-inner,12px);border:1px solid var(--qr-secondary);border-radius:var(--density-radius)}
-#quiz .matching{display:grid;gap:var(--density-space,18px)}
-#quiz .matchrow{display:grid;grid-template-columns:1fr 1fr;gap:var(--density-inner,12px);align-items:center}
-#quiz .matchrow select{min-width:0;width:100%;padding:var(--density-inner,12px)}
-#quiz .stepgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--density-space,18px)}
-#quiz .sequencepicked{display:flex;flex-wrap:wrap;gap:8px;min-height:var(--density-control,44px)}
 #results .resultpanel{width:min(620px,100%);margin:0 auto;text-align:center}
 .time-warning{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;background:color-mix(in srgb,var(--qr-primary) 50%,transparent)}
 .time-warning-card{width:min(420px,100%);padding:var(--density-pad,28px);border-radius:var(--density-radius);background:var(--qr-background);text-align:center}
-@media(max-width:650px){#quiz .answers{grid-template-columns:1fr}#quiz .matchrow,#quiz .stepgrid{grid-template-columns:1fr}}
+@media(max-width:650px){}
 
 
 /* Shared dashboard, forms, quiz navigation, and photo-crop structure.
@@ -67,8 +42,8 @@ body:not(.auth-locked)>:is(main,section).screen{width:100%;max-width:none;min-he
 #selection .qr-steps button{border:0;padding:8px 12px;cursor:pointer}
 #selection .level-grid{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:var(--density-space,18px);width:100%}
 #selection .versionlist{width:100%;max-width:100%}
-#selection .chapter-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:var(--density-space,18px)}
-:is(#selection,#quiz,#results) .qr-quiz-content{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;overflow-wrap:anywhere}
+#selection .chapter-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:var(--density-space,18px)}:is(#selection,
+#results) .qr-quiz-content{box-sizing:border-box;width:100%;max-width:100%;min-width:0;margin:0;overflow-wrap:anywhere}
 #results .resultpanel{max-width:680px;width:100%;margin:0 auto}
 .qr-crop-modal{position:fixed;inset:0;z-index:9999;background:color-mix(in srgb,var(--qr-primary) 55%,transparent);display:flex;align-items:center;justify-content:center;padding:16px}
 .qr-crop-modal.hidden{display:none!important}
@@ -218,10 +193,6 @@ body:not(.auth-locked) .circle,
 body:not(.auth-locked) .round,
 body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 @media(max-width:740px){:root{--qr-panel-radius:22px;--qr-inner-radius:18px;--qr-small-radius:13px}}
-
-
-/* qr-quiz-sidebar-lock */
-#quiz:not(.hidden) .qr-side{pointer-events:none!important}#quiz:not(.hidden) .qr-side button{cursor:not-allowed!important;opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button.active{opacity:var(--qr-inactive-opacity)!important}#quiz:not(.hidden) .qr-side button:disabled{background:inherit;color:var(--qr-primary)!important}
 @media(max-width:740px){
 }
 
@@ -326,13 +297,9 @@ body:not(.auth-locked) .qr-shell > .qr-main{
  min-width:0!important;
  max-width:none!important;
  padding:calc(var(--density-space) + 24px) var(--density-space) var(--density-space)!important;
-}
-
-
-/* qr-quiz-content-polish */
-
-/* Layout-only polish. Quiz logic, colors, sidebar and dashboard geometry stay unchanged. */
-body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
+}body:not(.auth-locked) :is(#quizStart,
+#selection,
+#results) .qr-quiz-content{
  display:flex!important;flex-direction:column!important;
  align-items:stretch!important;
  min-width:0!important;text-align:left!important;
@@ -353,48 +320,6 @@ body:not(.auth-locked) #selection .version{
  width:100%!important;min-width:0!important;
  line-height:1.35!important;white-space:normal!important;
 }
-
-body:not(.auth-locked) #quiz .questionmeta{
- width:100%!important;max-width:none!important;
- display:flex!important;align-items:center!important;justify-content:space-between!important;
- flex-wrap:wrap!important;gap:12px 20px!important;margin:0!important;
-}
-body:not(.auth-locked) #quiz .questioncount{padding:0!important;text-align:left!important}
-body:not(.auth-locked) #quiz .questioncard{
- width:100%!important;max-width:none!important;
- margin:0!important;
- display:flex!important;flex-direction:column!important;min-width:0!important;
-}
-body:not(.auth-locked) #quiz .questionheading{
- display:flex!important;align-items:flex-start!important;gap:16px!important;
- min-width:0!important;
-}
-body:not(.auth-locked) #quiz .questiontitle{
- flex:1!important;min-width:0!important;margin:0!important;
- font-size:clamp(20px,2.2vw,29px)!important;line-height:1.45!important;
- text-align:left!important;overflow-wrap:anywhere!important;
-}
-body:not(.auth-locked) #quiz .prompt{
- margin:0!important;line-height:1.6!important;text-align:left!important;
- overflow-wrap:anywhere!important;
-}
-body:not(.auth-locked) #quiz .answers{
- width:100%!important;max-width:none!important;
- display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
- gap:clamp(12px,1.6vw,20px)!important;
-}
-body:not(.auth-locked) #quiz .answer{
- width:100%!important;min-width:0!important;
- display:flex!important;align-items:center!important;
- text-align:left!important;line-height:1.45!important;
-}
-
-body:not(.auth-locked) #quiz .answer-feedback{
- line-height:1.6!important;text-align:left!important;
-}
-body:not(.auth-locked) #quiz .helper{
- margin:0!important;text-align:center!important;line-height:1.5!important;
-}
 body:not(.auth-locked) #results .resultpanel{
  width:min(100%,660px)!important;max-width:660px!important;
  margin:0 auto!important;box-sizing:border-box!important;
@@ -404,60 +329,26 @@ body:not(.auth-locked) #results .resultpanel{
 body:not(.auth-locked) #results .resultpanel > *{max-width:100%!important}
 body:not(.auth-locked) #results .resultpanel h2,
 body:not(.auth-locked) #results .resultscore{margin:0!important}
-@media(max-width:760px){
- body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
+@media(max-width:760px){body:not(.auth-locked) :is(#quizStart,
+#selection,
+#results) .qr-quiz-content{
  padding:20px!important;gap:20px!important;
  }
-
- body:not(.auth-locked) #quiz .answers{grid-template-columns:minmax(0,1fr)!important}
- body:not(.auth-locked) #quiz .questioncard{padding:20px!important}
  body:not(.auth-locked) #selection .versionlist{grid-template-columns:minmax(0,1fr)!important}
-}
-
-
-/* qr-quiz-unified-density */
-
-/* Single source of truth: existing density tokens. No change to page geometry, sidebar, theme or quiz logic. */
-body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content{
+}body:not(.auth-locked) :is(#quizStart,
+#selection,
+#results) .qr-quiz-content{
  padding:var(--density-pad)!important;
  gap:var(--density-space)!important;
  font-size:var(--density-text)!important;
-}
-body:not(.auth-locked) #quiz .questioncard{
- gap:var(--density-space)!important;
-}
-body:not(.auth-locked) #quiz .topbar,
-body:not(.auth-locked) #quiz .questionmeta,
-body:not(.auth-locked) #quiz .questionheading,
-body:not(.auth-locked) #quiz .answers,
-body:not(.auth-locked) #quiz .quizactions,
-body:not(.auth-locked) #selection .versionlist,
+}body:not(.auth-locked) #selection .versionlist,
 body:not(.auth-locked) #selection .qr-steps{
  gap:var(--density-space)!important;
-}
-body:not(.auth-locked) #quiz .questiontitle,
-body:not(.auth-locked) #selection .qr-subject-title{
+}body:not(.auth-locked) #selection .qr-subject-title{
  font-size:var(--density-heading)!important;line-height:1.4!important;
-}
-body:not(.auth-locked) #quiz .prompt,
-body:not(.auth-locked) #quiz .questioncount,
-body:not(.auth-locked) #quiz .helper,
-body:not(.auth-locked) #quiz .bookmarklabel,
-body:not(.auth-locked) #quiz .answer-feedback{
- font-size:var(--density-text)!important;line-height:1.5!important;
-}
-body:not(.auth-locked) #quiz .answer{
- min-height:var(--density-choice)!important;
- padding:var(--density-inner)!important;
- gap:var(--density-inner)!important;
- font-size:var(--density-text)!important;
-}
-body:not(.auth-locked) #quiz .number{
- width:var(--density-control)!important;height:var(--density-control)!important;
- font-size:var(--density-heading)!important;flex-shrink:0!important;
-}
-body:not(.auth-locked) #quiz :is(.pill,.bookmark-list-button),
-body:not(.auth-locked) #selection :is(.version,.qr-steps button),
+}.bookmark-list-button),
+body:not(.auth-locked) #selection :is(.version,
+.qr-steps button),
 body:not(.auth-locked) #results .resultbutton{
  min-height:var(--density-control)!important;
  padding:8px var(--density-inner)!important;
@@ -471,49 +362,18 @@ body:not(.auth-locked) #results .resultpanel{
 body:not(.auth-locked) #results .resultpanel h2{font-size:var(--density-heading)!important}
 body:not(.auth-locked) #results .resultlabel,
 body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--density-text)!important}
-@media(max-width:760px){
- body:not(.auth-locked) :is(#quizStart,#selection,#quiz,#results) .qr-quiz-content,
- body:not(.auth-locked) #quiz .questioncard{padding:var(--density-pad)!important;gap:var(--density-space)!important}
-}
-
-
-/* qr-quiz-subject-theme */
-
-/* Quiz-specific surfaces use the matching subject tile color; controls keep profile theme. */
-body:not(.auth-locked) #quiz .qr-top h1{color:var(--qr-primary)!important}
-
-body:not(.auth-locked) #quiz #timer .flip-digit{
- border-color:transparent!important;box-shadow:none!important;
-}
-body:not(.auth-locked) #quiz #timer :is(.flip-label,.flip-colon){
+@media(max-width:760px){body:not(.auth-locked) :is(#quizStart,
+#selection,
+#results) .qr-quiz-content{padding:var(--density-pad)!important;gap:var(--density-space)!important}
+}.flip-colon){
  color:var(--qr-primary)!important;
-}
-
-body:not(.auth-locked) #quiz .number{
- background:var(--quiz-subject-color,var(--qr-subject1))!important;
+}.questioncount,
+.prompt){
  color:var(--qr-primary)!important;
- border-radius:50%!important;
-}
-
-body:not(.auth-locked) #quiz :is(.questiontitle,.questioncount,.prompt){
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz :is(.pill,.bookmark-list-button),
+}.bookmark-list-button),
 body:not(.auth-locked) #results .resultbutton{
  border-radius:999px!important;box-shadow:none!important;
-}
-body:not(.auth-locked) #quiz .exitpill{
- background:var(--qr-error)!important;color:var(--qr-on-error,#181823)!important;
-}
-body:not(.auth-locked) #quiz #nextButton,
-body:not(.auth-locked) #quiz #resumeButton{
- background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important;
-}
-body:not(.auth-locked) #quiz #nextButton:disabled{
- background:color-mix(in srgb,var(--qr-primary) 20%,white)!important;
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz :is(.bookmarklabel input,#bookmarkListButton){
+}#bookmarkListButton){
  accent-color:var(--qr-tertiary)!important;
 }
 
@@ -573,108 +433,7 @@ body:not(.auth-locked) #selection .chapter-items .version{
  width:100%!important;max-width:none!important;min-width:0!important;
  padding:var(--density-inner)!important;min-height:var(--density-choice)!important;
 }
-body:not(.auth-locked) #quiz .qr-quiz-content{
- border:0!important;box-shadow:none!important;
-}
-
-
-/* qr-quiz-control-and-surface-unification */
-
-/* Quiz surfaces and controls inherit the current Profile theme and density. */
-body:not(.auth-locked) #quiz .questioncard{
- background:transparent!important;
- border:0!important;
- outline:0!important;
- box-shadow:none!important;
- border-radius:var(--density-radius)!important;
- padding:var(--density-pad)!important;
-}
-body:not(.auth-locked) #quiz .answer{
- background:var(--qr-secondary)!important;
- border:0!important;
- outline:0!important;
- box-shadow:none!important;
- color:var(--qr-on-secondary)!important;
- border-radius:var(--density-radius)!important;
-}
-
-body:not(.auth-locked) #quiz .answer.answer-correct{
- background:color-mix(in srgb,var(--qr-success) 25%,var(--qr-background))!important;
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz .answer.answer-wrong{
- background:color-mix(in srgb,var(--qr-error) 24%,var(--qr-background))!important;
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz .answer:hover:not(:disabled){background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important}
-body:not(.auth-locked) #quiz .answer:focus-visible{
- outline:3px solid var(--qr-tertiary)!important;
- outline-offset:2px!important;
-}
-/* Timer matches the shared navigation control height in every density preset. */
-
-body:not(.auth-locked) #quiz #timer .flip-unit{
- display:flex!important;
- flex-direction:column!important;
- align-items:center!important;
- justify-content:center!important;
- gap:0!important;
-}
-body:not(.auth-locked) #quiz #timer .flip-digits{gap:1px!important}
-body:not(.auth-locked) #quiz #timer .flip-digit{
- width:clamp(12px,1.3vw,17px)!important;
- height:calc(var(--density-control) * .49)!important;
- font-size:clamp(15px,1.6vw,20px)!important;
- line-height:1!important;
- background:transparent!important;
- color:var(--qr-primary)!important;
- border:0!important;
- border-radius:0!important;
- font-weight:800!important;
-}
-body:not(.auth-locked) #quiz #timer .flip-digit::after{display:none!important;content:none!important}
-body:not(.auth-locked) #quiz #timer .flip-label{
- font-size:9px!important;
- letter-spacing:0!important;
- line-height:1!important;
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz #timer .flip-colon{
- font-size:16px!important;
- font-weight:800!important;
- line-height:1!important;
- align-self:center!important;
- color:var(--qr-primary)!important;
-}
-body:not(.auth-locked) #quiz .bookmarklabel{color:var(--qr-primary)!important}
-body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]{
- appearance:none!important;-webkit-appearance:none!important;
- width:20px!important;height:20px!important;min-width:20px!important;
- padding:0!important;margin:0!important;
- border:2px solid var(--qr-primary)!important;
- outline:0!important;
- border-radius:50%!important;
- background:transparent!important;
- display:inline-grid!important;place-items:center!important;
- cursor:pointer!important;flex-shrink:0!important;
-}
-body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:checked{
- background:var(--qr-tertiary)!important;
- border-color:var(--qr-tertiary)!important;
-}
-body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:checked::after{
- content:""!important;
- width:8px!important;height:5px!important;
- border-left:2px solid var(--qr-primary)!important;
- border-bottom:2px solid var(--qr-primary)!important;
- transform:translateY(-1px) rotate(-45deg)!important;
-}
-body:not(.auth-locked) #quiz .bookmarklabel input[type="checkbox"]:focus-visible{
- outline:3px solid var(--qr-tertiary)!important;outline-offset:3px!important;
-}
 @media(max-width:740px){
-
- body:not(.auth-locked) #quiz #timer .flip-digit{width:12px!important;font-size:15px!important}
 }
 
 /* Single inactive-opacity setting for disabled and read-only controls. */
@@ -688,65 +447,6 @@ body:not(.auth-locked) textarea[readonly],
 body:not(.auth-locked) [aria-disabled="true"],
 body:not(.auth-locked) .chapter-placeholder{
  opacity:var(--qr-inactive-opacity)!important;
-}
-
-/* Quiz question frame with controls outside the border. */
-
-body:not(.auth-locked) #quiz #timer{
- height:var(--density-control)!important;min-height:var(--density-control)!important;
- max-height:var(--density-control)!important;box-sizing:border-box!important;
- display:flex!important;align-items:center!important;justify-content:center!important;
- gap:5px!important;padding:3px var(--density-inner)!important;
- background:var(--qr-background)!important;color:var(--qr-primary)!important;
- border:0!important;border-radius:var(--qr-button-radius)!important;
- margin:0!important;
-}
-body:not(.auth-locked) #quiz .topbar{
- width:100%!important;
- display:flex!important;align-items:center!important;justify-content:flex-end!important;
- flex-wrap:wrap!important;gap:var(--density-space)!important;margin:0!important;
-}
-body:not(.auth-locked) #quiz .topbar .bookmarktools{
- display:flex;align-items:center;gap:var(--density-space);position:relative;
-}
-body:not(.auth-locked) #quiz .quizactions{
- width:100%;display:flex!important;justify-content:flex-end!important;align-items:center!important;
- flex-wrap:wrap!important;gap:var(--density-space)!important;margin:0!important;
-}
-body:not(.auth-locked) #quiz .answer-feedback .inline-feedback{
- display:inline-flex;align-items:flex-start;gap:var(--density-inner);
- font-size:var(--density-text);line-height:1.5;
-}
-body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol{
- flex:0 0 auto;font-weight:800;
-}
-body:not(.auth-locked) #quiz .answer-feedback .feedback-correct{color:var(--qr-success)}
-body:not(.auth-locked) #quiz .answer-feedback .feedback-wrong{color:var(--qr-error)}
-
-
-body:not(.auth-locked) #quiz .qr-question-frame{
- width:100%!important;
- min-width:0!important;
- box-sizing:border-box!important;
- border:1px solid color-mix(in srgb,var(--qr-primary) 10%,white)!important;
- border-radius:var(--density-radius)!important;
- background:transparent!important;
- padding:var(--density-pad)!important;
- display:flex!important;
- flex-direction:column!important;
- gap:var(--density-space)!important;
- box-shadow:none!important;
-}
-body:not(.auth-locked) #quiz .qr-question-frame .questionmeta,
-body:not(.auth-locked) #quiz .qr-question-frame .questioncard{
- width:100%!important;
- max-width:none!important;
-}
-body:not(.auth-locked) #quiz .qr-question-frame .questioncard{
- padding:0!important;
-}
-body:not(.auth-locked) #quiz .qr-question-frame .helper{
- margin:0!important;
 }
 
 
@@ -901,6 +601,234 @@ body:not(.auth-locked) .qr-side button:focus-visible{
 }
 @media(prefers-reduced-motion:reduce){
  body:not(.auth-locked) .qr-side::before{transition:none}
+}
+
+
+/* Quiz presentation — single responsive design based on the approved reference. */
+body:not(.auth-locked) .qr-side .qr-nav-brand{
+ display:flex;align-items:center;gap:var(--density-inner);padding:0 4px;
+ font-size:clamp(15px,1.35vw,22px);font-weight:800;color:var(--qr-primary);
+ margin-bottom:calc(var(--density-space) * 2);white-space:nowrap;
+}
+body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
+body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:27px;height:27px}
+body:not(.auth-locked) .qr-side button{gap:var(--density-inner);white-space:nowrap}
+body:not(.auth-locked) .qr-side button .qr-nav-label{overflow:hidden;text-overflow:ellipsis}
+body:not(.auth-locked) .qr-side{padding-top:var(--density-pad)!important;background:var(--qr-background)!important}
+body:not(.auth-locked) .qr-side::before{background:color-mix(in srgb,var(--qr-active-nav-color,var(--qr-subject1)) 45%,var(--qr-background))}
+body:not(.auth-locked) #quiz .qr-shell{background:var(--qr-background)!important}
+body:not(.auth-locked) #quiz .qr-side{
+ box-shadow:3px 0 20px color-mix(in srgb,var(--qr-primary) 7%,transparent)!important;
+}
+body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-background)!important}
+body:not(.auth-locked) #quiz .qr-top h1{
+ font-size:clamp(25px,3.1vw,44px)!important;font-weight:800!important;color:var(--qr-primary)!important;
+}
+body:not(.auth-locked) #quiz .qr-top .qr-profile-btn{
+ display:inline-flex;align-items:center;gap:10px;
+ background:var(--qr-secondary)!important;color:var(--qr-primary)!important;
+ padding:8px var(--density-inner)!important;border-radius:var(--qr-button-radius)!important;
+}
+body:not(.auth-locked) #quiz .qr-top .qr-profile-btn .qr-icon{width:20px;height:20px}
+body:not(.auth-locked) #quiz .qr-card.qr-quiz-content{
+ display:flex!important;flex-direction:column!important;
+ padding:var(--density-pad)!important;gap:var(--density-space)!important;
+ background:var(--qr-background)!important;min-width:0!important;
+ border:1px solid color-mix(in srgb,var(--qr-primary) 9%,transparent)!important;
+ border-radius:var(--density-radius)!important;
+ box-shadow:0 8px 26px color-mix(in srgb,var(--qr-primary) 8%,transparent)!important;
+}
+body:not(.auth-locked) #quiz .qr-quiz-head{
+ display:flex;align-items:center;justify-content:space-between;gap:var(--density-space);min-width:0;
+}
+body:not(.auth-locked) #quiz .qr-subject-pill{
+ display:inline-flex;align-items:center;justify-content:center;gap:12px;
+ padding:8px var(--density-inner);min-height:var(--density-control);
+ border-radius:var(--qr-button-radius);font-size:var(--density-text);font-weight:800;
+ color:var(--quiz-on-subject,var(--qr-primary));
+ background:var(--quiz-subject-color,var(--qr-subject1));white-space:nowrap;
+}
+body:not(.auth-locked) #quiz .qr-subject-pill .qr-icon{width:22px;height:22px;flex:0 0 auto}
+body:not(.auth-locked) #quiz .qr-quiz-tools{display:flex;align-items:center;gap:var(--density-space);min-width:0}
+body:not(.auth-locked) #quiz #timer{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:2px!important;padding:5px var(--density-inner)!important;
+ height:var(--density-control)!important;min-height:var(--density-control)!important;max-height:none!important;
+ background:var(--qr-secondary)!important;color:var(--qr-primary)!important;
+ border:0!important;border-radius:var(--qr-button-radius)!important;margin:0!important;white-space:nowrap;
+}
+body:not(.auth-locked) #quiz #timer .qr-icon{width:19px;height:19px;margin-right:7px;flex:0 0 auto}
+body:not(.auth-locked) #quiz #timer .flip-unit,
+body:not(.auth-locked) #quiz #timer .flip-digits{
+ display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:1px!important;
+}
+body:not(.auth-locked) #quiz #timer .flip-digit,
+body:not(.auth-locked) #quiz #timer .flip-colon{
+ display:inline!important;width:auto!important;height:auto!important;
+ padding:0!important;margin:0!important;background:transparent!important;
+ border:0!important;box-shadow:none!important;color:var(--qr-primary)!important;
+ font-size:var(--density-text)!important;font-weight:800!important;line-height:1.2!important;
+}
+body:not(.auth-locked) #quiz #timer .flip-digit::after{content:none!important;display:none!important}
+body:not(.auth-locked) #quiz .bookmarktools{display:flex;align-items:center;gap:8px;position:relative}
+body:not(.auth-locked) #quiz .bookmarklabel{
+ display:flex;align-items:center;justify-content:center;position:relative;
+ width:var(--density-control);height:var(--density-control);
+ border-radius:var(--qr-button-radius);background:var(--qr-secondary);color:var(--qr-primary);cursor:pointer;
+}
+body:not(.auth-locked) #quiz .bookmarklabel input{
+ position:absolute!important;inset:0!important;opacity:0!important;
+ width:100%!important;height:100%!important;margin:0!important;cursor:pointer!important;
+}
+body:not(.auth-locked) #quiz .bookmarklabel .qr-icon{width:21px;height:21px;pointer-events:none}
+body:not(.auth-locked) #quiz .bookmarklabel:has(input:checked){background:var(--qr-tertiary)}
+body:not(.auth-locked) #quiz .bookmarklabel:has(input:checked) .qr-icon{fill:color-mix(in srgb,var(--qr-tertiary) 65%,transparent)}
+body:not(.auth-locked) #quiz .bookmarklabel:has(input:focus-visible){outline:3px solid var(--qr-tertiary);outline-offset:2px}
+body:not(.auth-locked) #quiz .bookmark-list-button{background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quiz .bookmark-list{
+ position:absolute;right:0;top:calc(100% + 8px);z-index:20;min-width:175px;
+ display:grid;gap:6px;padding:var(--density-inner);max-height:300px;overflow:auto;
+ border-radius:var(--density-radius);background:var(--qr-background);
+ box-shadow:0 5px 18px color-mix(in srgb,var(--qr-primary) 12%,transparent);
+}
+body:not(.auth-locked) #quiz .qr-quiz-progress{
+ display:grid;grid-template-columns:max-content minmax(0,1fr) max-content;
+ align-items:center;gap:var(--density-space);color:var(--qr-primary);
+ font-size:var(--density-text);font-weight:700;
+}
+body:not(.auth-locked) #quiz .qr-progress-track{
+ display:block;width:100%;height:12px;overflow:hidden;border-radius:var(--qr-button-radius);
+ background:var(--qr-secondary);
+}
+body:not(.auth-locked) #quiz .qr-progress-track span{
+ display:block;height:100%;width:0;border-radius:inherit;background:var(--qr-tertiary);
+ transition:width 180ms ease-out;
+}
+body:not(.auth-locked) #quiz #qrProgressPct{text-align:right;font-weight:800}
+body:not(.auth-locked) #quiz .qr-question-frame{
+ display:block!important;width:100%!important;max-width:none!important;min-width:0!important;
+ padding:var(--density-pad)!important;background:var(--qr-background)!important;
+ border:1px solid color-mix(in srgb,var(--qr-primary) 11%,transparent)!important;
+ border-radius:var(--density-radius)!important;
+ box-shadow:0 5px 18px color-mix(in srgb,var(--qr-primary) 6%,transparent)!important;
+}
+body:not(.auth-locked) #quiz .questioncard{
+ display:flex!important;flex-direction:column!important;gap:var(--density-space)!important;
+ width:100%!important;min-width:0!important;max-width:none!important;
+ padding:0!important;margin:0!important;background:transparent!important;
+ border:0!important;box-shadow:none!important;
+}
+body:not(.auth-locked) #quiz .questionheading{display:flex!important;flex-direction:column!important;gap:8px!important}
+body:not(.auth-locked) #quiz #number{
+ position:absolute!important;width:1px!important;height:1px!important;
+ overflow:hidden!important;clip-path:inset(50%)!important;
+}
+body:not(.auth-locked) #quiz .questiontitle{
+ margin:0!important;font-size:clamp(19px,2.2vw,29px)!important;
+ line-height:1.35!important;font-weight:800!important;color:var(--qr-primary)!important;
+}
+body:not(.auth-locked) #quiz .prompt:empty{display:none}
+body:not(.auth-locked) #quiz .answers{
+ display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:var(--density-space)!important;
+}
+body:not(.auth-locked) #quiz .answer{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ width:100%!important;min-width:0!important;min-height:var(--density-control)!important;
+ padding:var(--density-inner)!important;
+ border:1px solid transparent!important;border-radius:var(--qr-button-radius)!important;
+ background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
+ font-size:var(--density-text)!important;font-weight:700!important;
+ line-height:1.45!important;text-align:left!important;box-shadow:none!important;
+}
+body:not(.auth-locked) #quiz .answer:hover:not(:disabled),
+body:not(.auth-locked) #quiz .answer:focus-visible{
+ background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important;
+ outline:2px solid var(--qr-primary)!important;outline-offset:2px!important;
+}
+body:not(.auth-locked) #quiz .answer.answer-correct{
+ opacity:1!important;
+ background:color-mix(in srgb,var(--qr-success) 18%,var(--qr-background))!important;
+ border-color:var(--qr-success)!important;color:var(--qr-primary)!important;
+}
+body:not(.auth-locked) #quiz .answer.answer-wrong{
+ opacity:1!important;
+ background:color-mix(in srgb,var(--qr-error) 18%,var(--qr-background))!important;
+ border-color:var(--qr-error)!important;color:var(--qr-primary)!important;
+}
+body:not(.auth-locked) #quiz .answer.answer-correct::after,
+body:not(.auth-locked) #quiz .answer.answer-wrong::after{
+ margin-left:auto;flex:0 0 auto;display:grid;place-items:center;
+ width:27px;height:27px;border-radius:50%;font-size:18px;font-weight:800;color:var(--qr-background);
+}
+body:not(.auth-locked) #quiz .answer.answer-correct::after{content:"✓";background:var(--qr-success)}
+body:not(.auth-locked) #quiz .answer.answer-wrong::after{content:"✕";background:var(--qr-error)}
+body:not(.auth-locked) #quiz .answer-feedback{
+ display:grid;gap:var(--density-space);font-size:var(--density-text);text-align:left;
+}
+body:not(.auth-locked) #quiz .answer-feedback .inline-feedback{
+ display:flex;align-items:center;gap:var(--density-inner);
+ padding:var(--density-inner);border-radius:var(--density-radius);line-height:1.5;font-weight:700;
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol{
+ display:grid;place-items:center;flex:0 0 auto;width:27px;height:27px;
+ border-radius:50%;font-size:18px;font-weight:800;color:var(--qr-background);
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-correct{
+ color:var(--qr-primary);background:color-mix(in srgb,var(--qr-success) 16%,var(--qr-background));
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-wrong{
+ color:var(--qr-primary);background:color-mix(in srgb,var(--qr-error) 16%,var(--qr-background));
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-correct .feedback-symbol{background:var(--qr-success)}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-wrong .feedback-symbol{background:var(--qr-error)}
+body:not(.auth-locked) #quiz .helper{margin:0!important;text-align:center!important;font-size:var(--density-small)!important;color:var(--qr-primary)}
+body:not(.auth-locked) #quiz .quizactions{
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ flex-wrap:wrap!important;gap:var(--density-space)!important;margin:0!important;width:100%!important;
+}
+body:not(.auth-locked) #quiz .quizactions .pill{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:10px!important;min-height:var(--density-control)!important;
+ border:0!important;border-radius:var(--qr-button-radius)!important;
+ padding:8px calc(var(--density-inner) * 1.4)!important;
+ font-size:var(--density-text)!important;font-weight:800!important;
+ box-shadow:none!important;
+}
+body:not(.auth-locked) #quiz .quizactions .exitpill{background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quiz .quizactions #nextButton,
+body:not(.auth-locked) #quiz .quizactions #resumeButton{
+ background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important;
+}
+body:not(.auth-locked) #quiz .quizactions #nextButton .qr-icon{width:19px;height:19px}
+body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inactive-opacity)!important;cursor:not-allowed}
+@media(max-width:960px){
+ body:not(.auth-locked) .qr-side .qr-nav-brand{font-size:var(--density-text);gap:8px}
+ body:not(.auth-locked) .qr-side .qr-nav-brand .qr-icon{width:20px;height:20px}
+}
+@media(max-width:740px){
+ body:not(.auth-locked) .qr-side{padding-top:var(--density-pad)!important}
+ body:not(.auth-locked) .qr-side .qr-nav-brand{padding:0 4px;justify-content:center}
+ body:not(.auth-locked) .qr-side .qr-nav-brand span{display:none}
+ body:not(.auth-locked) .qr-side button .qr-icon{display:none}
+ body:not(.auth-locked) #quiz .qr-card.qr-quiz-content{padding:var(--density-inner)!important}
+ body:not(.auth-locked) #quiz .qr-question-frame{padding:var(--density-inner)!important}
+ body:not(.auth-locked) #quiz .qr-quiz-head{align-items:flex-start;flex-wrap:wrap}
+ body:not(.auth-locked) #quiz .qr-quiz-tools{margin-left:auto}
+ body:not(.auth-locked) #quiz .qr-quiz-progress{grid-template-columns:1fr max-content}
+ body:not(.auth-locked) #quiz .qr-quiz-progress .questioncount{grid-column:1/-1}
+ body:not(.auth-locked) #quiz #timer .qr-icon{display:none}
+ body:not(.auth-locked) #quiz .qr-top .qr-profile-btn .qr-icon{display:none}
+ body:not(.auth-locked) #quiz .quizactions .pill{padding:8px var(--density-inner)!important}
+}
+@media(max-width:440px){
+ body:not(.auth-locked) #quiz .qr-subject-pill{padding:6px 10px}
+ body:not(.auth-locked) #quiz .qr-quiz-tools{gap:8px}
+ body:not(.auth-locked) #quiz #timer{padding:4px 8px!important}
+ body:not(.auth-locked) #quiz #timer .flip-digit,
+ body:not(.auth-locked) #quiz #timer .flip-colon{font-size:var(--density-small)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body:not(.auth-locked) #quiz .qr-progress-track span{transition:none}
 }
 </style></head><body class="auth-locked">
 <main id="home" class="screen"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Dashboard</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div><div class="qr-grid"><div class="qr-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h2>Progress</h2><select id="qrSubject" class="qr-input" style="max-width:160px" onchange="qrRender()"></select></div><div id="qrProgress" class="qr-muted">Complete a quiz to see your progress.</div></div><div class="qr-card"><h2>Personal Bests</h2><div id="qrBests" class="qr-list"></div></div></div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><p>Write anything that's on your mind. Only you can see these notes in your Google Drive.</p><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote()">Save note</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header><div class="qr-card"><h2>Score History</h2><p class="qr-muted">Results saved in this browser for the signed-in account.</p><div id="qrScoresList" class="qr-list"></div></div></div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button></header>
