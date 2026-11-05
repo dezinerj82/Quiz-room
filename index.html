@@ -1111,7 +1111,8 @@ function recordScoreAttempt(remark=''){
  try{localStorage.setItem(SCORE_STORAGE_KEY,JSON.stringify(history))}catch(e){console.warn('Score history could not be saved',e)}
  if(window.quizRoomSaveGoogleScore)window.quizRoomSaveGoogleScore(latestScoreKey);else $('driveSaveStatus').textContent='Google Drive unavailable. Score retained locally.';
 }
-$('subjects').innerHTML=names.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=names.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
+const availableSubjects=names.filter(n=>schoolLevels.some(level=>availableCategories(level,n).length>0));
+$('subjects').innerHTML=availableSubjects.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=availableSubjects.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
 
 // Dashboard: independent navigation, existing quiz logic is unchanged.
 let qrProfile={name:'',photo:''};
