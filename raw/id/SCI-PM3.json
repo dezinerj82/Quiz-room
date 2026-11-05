@@ -502,7 +502,7 @@
       "questions": [
         {
           "id": "SCI-PM3-EXM-001-01",
-          "question": "Which tool measures the volume of a liquid?"
+          "question": "What instrument measures the volume of a liquid?"
         },
         {
           "id": "SCI-PM3-EXM-001-02",
@@ -510,7 +510,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-03",
-          "question": "A prediction in an investigation is…"
+          "question": "A prediction describes what you expect to happen before testing."
         },
         {
           "id": "SCI-PM3-EXM-001-04",
@@ -518,7 +518,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-05",
-          "question": "Which teeth are mainly used to cut food?"
+          "question": "What are the front teeth used for cutting food called?"
         },
         {
           "id": "SCI-PM3-EXM-001-06",
@@ -526,11 +526,11 @@
         },
         {
           "id": "SCI-PM3-EXM-001-07",
-          "question": "What is the correct order of the first three digestive organs food passes through?"
+          "question": "Food travels from the stomach to the mouth through the oesophagus."
         },
         {
           "id": "SCI-PM3-EXM-001-08",
-          "question": "Where are most nutrients absorbed into the blood?"
+          "question": "Put these digestive organs in the order food passes through them."
         },
         {
           "id": "SCI-PM3-EXM-001-09",
@@ -538,7 +538,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-10",
-          "question": "Which animal is an omnivore?"
+          "question": "What do we call an animal that eats both plants and animals?"
         },
         {
           "id": "SCI-PM3-EXM-001-11",
@@ -546,11 +546,11 @@
         },
         {
           "id": "SCI-PM3-EXM-001-12",
-          "question": "Which animal's teeth are best suited for grinding plants?"
+          "question": "Match each animal to its eating habit."
         },
         {
           "id": "SCI-PM3-EXM-001-13",
-          "question": "Which plant can reproduce using a stem cutting?"
+          "question": "Ferns commonly reproduce using seeds."
         },
         {
           "id": "SCI-PM3-EXM-001-14",
@@ -558,11 +558,11 @@
         },
         {
           "id": "SCI-PM3-EXM-001-15",
-          "question": "Which part of a flowering plant can develop into a fruit after fertilisation?"
+          "question": "Put these stages of a flowering plant's life cycle in order."
         },
         {
           "id": "SCI-PM3-EXM-001-16",
-          "question": "A square has sides of 4 cm. What is its area?"
+          "question": "A square has sides of 4 cm. What is its area in cm²? Type the number."
         },
         {
           "id": "SCI-PM3-EXM-001-17",
@@ -570,7 +570,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-18",
-          "question": "A measuring cylinder reads 35 mL. After a stone is fully submerged it reads 47 mL. What is the stone's volume?"
+          "question": "A stone raises water from 35 mL to 47 mL. What is its volume in cm³? Type the number."
         },
         {
           "id": "SCI-PM3-EXM-001-19",
@@ -578,7 +578,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-20",
-          "question": "A wooden block floats on water. What can you conclude?"
+          "question": "An object less dense than water usually floats in water."
         },
         {
           "id": "SCI-PM3-EXM-001-21",
@@ -586,7 +586,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-22",
-          "question": "Why does oil form a layer above water?"
+          "question": "Match each object to what it usually does in water."
         },
         {
           "id": "SCI-PM3-EXM-001-23",
@@ -594,11 +594,11 @@
         },
         {
           "id": "SCI-PM3-EXM-001-24",
-          "question": "What colour does blue litmus paper turn in an acid?"
+          "question": "Blue litmus paper turns red in an acidic solution."
         },
         {
           "id": "SCI-PM3-EXM-001-25",
-          "question": "What happens to red litmus paper in an alkaline solution?"
+          "question": "Match each solution to its usual property."
         },
         {
           "id": "SCI-PM3-EXM-001-26",
@@ -606,7 +606,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-27",
-          "question": "Which is the correct order of these planets moving away from the Sun?"
+          "question": "Arrange these planets from closest to farthest from the Sun."
         },
         {
           "id": "SCI-PM3-EXM-001-28",
@@ -614,7 +614,7 @@
         },
         {
           "id": "SCI-PM3-EXM-001-29",
-          "question": "What is the main purpose of a fixed pulley?"
+          "question": "A fixed pulley makes a load completely weightless."
         },
         {
           "id": "SCI-PM3-EXM-001-30",
