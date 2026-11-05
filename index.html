@@ -1033,7 +1033,7 @@ async function start(v){
   if(!answer)throw Error("Question answer missing: "+item.id);
   const q={...item,...answer};
   if(q.type==="order")q.steps=q.order.map(j=>item.options[j]);
-  if(q.type==="match")q.pairs=item.left.map((left,j)=>[left,item.options[q.matches[j]]]);
+  if(q.type==="match")q.pairs=item.options.map((left,j)=>[left,answer.optionExplanations[q.matches[j]].option]);
   return q;
  });time=activeExerciseTopic?questions.length*60:questions.length*180;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
 function updateClock(){const t=Math.max(0,time),h=Math.floor(t/3600),m=Math.floor((t%3600)/60),s=t%60;const digits=String(h).padStart(2,'0').slice(-2)+String(m).padStart(2,'0')+String(s).padStart(2,'0');const keys=['h1','h2','m1','m2','s1','s2'];keys.forEach((key,i)=>{const el=document.querySelector('[data-clock="'+key+'"]');if(el&&el.textContent!==digits[i])el.textContent=digits[i]});$('timer').setAttribute('aria-label','Time remaining '+h+' hours '+m+' minutes '+s+' seconds')}
