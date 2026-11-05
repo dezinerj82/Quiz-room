@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style id="qr-auth-first-paint">body.auth-locked>main,body.auth-locked>section{display:none!important}body.auth-locked{background:#fff!important}</style><meta name="theme-color" content="#ffffff"><title>Quiz time</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet"><script>document.fonts.load('800 48px Nunito').then(()=>document.documentElement.classList.add('qr-font-ready')).catch(()=>document.documentElement.classList.add('qr-font-ready'));</script><style id="quiz-room-consolidated-styles">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style id="qr-auth-first-paint">body.auth-locked>main,body.auth-locked>section{display:none!important}body.auth-locked{background:#FFFFFB!important}</style><meta name="theme-color" content="#FFFFFB"><title>Quiz time</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet"><script>document.fonts.load('800 48px Nunito').then(()=>document.documentElement.classList.add('qr-font-ready')).catch(()=>document.documentElement.classList.add('qr-font-ready'));</script><style id="quiz-room-consolidated-styles">
 /* Current Quiz Room structural foundation. Visual treatments come from the shared theme. */
 *{box-sizing:border-box}
 html,body{min-height:100%;font-family:var(--qr-font);color:var(--qr-primary)}
@@ -130,18 +130,18 @@ font-family:var(--qr-font)!important;
 body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button):not(:disabled):hover:not(.answer):not(.tile):not(.exitpill):not(.qr-profile-btn){
  background:var(--qr-tertiary)!important;color:var(--qr-on-tertiary)!important;
 }
-body:not(.auth-locked) .qr-profile-btn{background:var(--qr-primary)!important;color:#FFFFFF!important;border:0!important;padding:var(--qr-unified-padding)!important}
+body:not(.auth-locked) .qr-profile-btn{background:var(--qr-primary)!important;color:#FFFFFB!important;border:0!important;padding:var(--qr-unified-padding)!important}
 body:not(.auth-locked) .qr-btn{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;border:0!important}
 body:not(.auth-locked) .qr-steps button{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;border:0!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+1){background:var(--qr-subject1)!important;color:var(--qr-on-subject1,var(--qr-primary))!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+2){background:var(--qr-subject2)!important;color:var(--qr-on-subject2,var(--qr-primary))!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+3){background:var(--qr-subject3)!important;color:var(--qr-on-subject3,var(--qr-primary))!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+4){background:var(--qr-subject4)!important;color:var(--qr-on-subject4,var(--qr-primary))!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+5){background:var(--qr-subject5)!important;color:var(--qr-on-subject5,var(--qr-primary))!important}
-body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+6){background:var(--qr-subject6)!important;color:var(--qr-on-subject6,var(--qr-primary))!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+1){background:var(--qr-subject1)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+2){background:var(--qr-subject2)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+3){background:var(--qr-subject3)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+4){background:var(--qr-subject4)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+5){background:var(--qr-subject5)!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) #quizStart #subjects .tile:nth-child(6n+6){background:var(--qr-subject6)!important;color:var(--qr-primary)!important}
 
-body:not(.auth-locked) .level-button{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important}
-body:not(.auth-locked) .version{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important}
+body:not(.auth-locked) .level-button{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--qr-primary)!important}
+body:not(.auth-locked) .version{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .pill,body:not(.auth-locked) .resultbutton{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
 body:not(.auth-locked) .exitpill{background:var(--qr-warning)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:color-mix(in srgb,var(--qr-primary) 13%,white)!important}
@@ -377,7 +377,7 @@ body:not(.auth-locked) #selection .qr-steps button:hover{
 }
 body:not(.auth-locked) #selection .level-grid .level-button,
 body:not(.auth-locked) #selection .chapter-items .version{
- background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important;
+ background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--qr-primary)!important;
  border:0!important;
  border-radius:var(--density-radius)!important;
  font-family:inherit!important;font-size:var(--qr-font-body)!important;
@@ -596,12 +596,12 @@ body:not(.auth-locked) .qr-side button.qr-sidebar-toggle{display:none!important}
   height:var(--density-control)!important;min-height:var(--density-control)!important;
   padding:0!important;border:1px solid var(--qr-primary)!important;
   border-radius:50%!important;grid-template-columns:none!important;
-  background:#FFFFFF!important;color:var(--qr-primary)!important;
+  background:#FFFFFB!important;color:var(--qr-primary)!important;
   font-family:var(--qr-font);font-size:var(--qr-font-heading)!important;font-weight:800!important;
   line-height:1!important;text-align:center!important;cursor:pointer;
  }
  body:not(.auth-locked) .qr-side button.qr-sidebar-toggle:hover{
-  background:#FFFFFF!important;color:var(--qr-primary)!important;
+  background:#FFFFFB!important;color:var(--qr-primary)!important;
  }
  body:not(.auth-locked) .qr-shell.qr-sidebar-expanded .qr-side{
   width:220px!important;min-width:220px!important;
@@ -630,7 +630,7 @@ body:not(.auth-locked) .qr-side button.qr-sidebar-toggle{display:none!important}
 /* Quiz presentation — single responsive design based on the approved reference. */
 body:not(.auth-locked) .qr-side .qr-nav-brand{
  display:flex;align-items:center;gap:var(--density-inner);padding:0 4px;
- font-size:var(--qr-font-body);font-weight:800;color:#FFFFFF;
+ font-size:var(--qr-font-body);font-weight:800;color:#FFFFFB;
  margin-bottom:calc(var(--density-space) * .6);white-space:nowrap;
 }
 body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
@@ -644,7 +644,7 @@ body:not(.auth-locked) #quiz .qr-shell{background:var(--qr-primary)!important}
 body:not(.auth-locked) #quiz .qr-main{min-width:0;background:var(--qr-background)!important}
 body:not(.auth-locked) #quiz .qr-top .qr-profile-btn{
  display:inline-flex;align-items:center;gap:10px;
- background:var(--qr-primary)!important;color:#FFFFFF!important;
+ background:var(--qr-primary)!important;color:#FFFFFB!important;
  padding:var(--qr-unified-padding)!important;border-radius:var(--qr-button-radius)!important;
 }
 body:not(.auth-locked) #quiz .qr-top .qr-profile-btn .qr-icon{width:20px;height:20px}
@@ -661,7 +661,7 @@ body:not(.auth-locked) #quiz .qr-quiz-head{
 body:not(.auth-locked) #quiz .qr-subject-pill{
  display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:var(--qr-unified-padding)!important;min-height:var(--density-control);
  border-radius:var(--qr-button-radius);font-size:var(--qr-font-body);font-weight:800;
- color:var(--quiz-on-subject,var(--qr-primary));
+ color:var(--qr-primary);
  background:var(--quiz-subject-color,var(--qr-subject1));white-space:nowrap;
 }
 body:not(.auth-locked) #quiz .qr-subject-pill .qr-icon{width:22px;height:22px;flex:0 0 auto}
@@ -986,27 +986,6 @@ function renderChapterList(){
 function selectLevel(level){if(!schoolLevels.includes(level)||!availableCategories(level,subject).length)return;selectedLevel=level;selectedCategory=null;renderChapterList()}
 function selectCategory(category){activeExerciseTopic=null;if(!selectedLevel||!availableCategories(selectedLevel,subject).includes(category))return;selectedCategory=category;renderChapterList()}
 function selectionBack(){if(selectedCategory)selectedCategory=null;else if(selectedLevel)selectedLevel=null;else{home();return}renderChapterList()}
-function qrRelativeLuminance(rgb){
- const part=x=>{x/=255;return x<=.04045?x/12.92:Math.pow((x+.055)/1.055,2.4)};
- return .2126*part(rgb[0])+.7152*part(rgb[1])+.0722*part(rgb[2]);
-}
-function qrHexRGB(hex){return [1,3,5].map(i=>parseInt(hex.slice(i,i+2),16))}
-function qrContrastText(bg){
- const l=qrRelativeLuminance(qrHexRGB(bg));
- const primary='#5B5F97',lp=qrRelativeLuminance(qrHexRGB(primary));
- const ratio=(Math.max(l,lp)+.05)/(Math.min(l,lp)+.05);
- return ratio>=4.5?primary:'#181823';
-}
-function qrApplySubjectTileContrast(){
- const root=document.documentElement,styles=getComputedStyle(root);
- for(let i=1;i<=6;i++){
-  const hex=styles.getPropertyValue('--qr-subject'+i).trim();
-  if(/^#[a-f0-9]{6}$/i.test(hex))root.style.setProperty('--qr-on-subject'+i,qrContrastText(hex));
- }
- root.style.setProperty('--qr-on-secondary',qrContrastText(styles.getPropertyValue('--qr-secondary').trim()));
- root.style.setProperty('--qr-on-tertiary',qrContrastText(styles.getPropertyValue('--qr-tertiary').trim()));
- // Derived semantic colors may be color-mix(), so text remains the high-contrast ink.
-}
 function qrSyncSubjectAppearance(){
  const heading=document.getElementById('qrActiveQuizHeading');
  if(heading)heading.textContent='Quiz';const label=document.getElementById('qrQuizSubjectLabel');if(label)label.textContent=(subject||'Quiz')+' Quiz';
@@ -1015,7 +994,7 @@ function qrSyncSubjectAppearance(){
  const colorIndex=idx<0?1:idx%6+1;
  ['quiz','selection','results'].forEach(id=>{
   const el=document.getElementById(id);
-  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject'+colorIndex+')');el.style.setProperty('--quiz-on-subject','var(--qr-on-subject'+colorIndex+')')}
+  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject'+colorIndex+')');}
  });
 }
 function choose(s){activeExerciseTopic=null;subject=s;qrSyncSubjectAppearance();selectedLevel=null;selectedCategory=null;clearInterval(timerHandle);$('subjectTitle').textContent=s;renderChapterList();show('selection')}
@@ -1127,7 +1106,7 @@ function recordScoreAttempt(remark=''){
  try{localStorage.setItem(SCORE_STORAGE_KEY,JSON.stringify(history))}catch(e){console.warn('Score history could not be saved',e)}
  if(window.quizRoomSaveGoogleScore)window.quizRoomSaveGoogleScore(latestScoreKey);else $('driveSaveStatus').textContent='Google Drive unavailable. Score retained locally.';
 }
-$('subjects').innerHTML=names.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');qrApplySubjectTileContrast();let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=names.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
+$('subjects').innerHTML=names.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=names.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
 
 // Dashboard: independent navigation, existing quiz logic is unchanged.
 let qrProfile={name:'',photo:''};
