@@ -1117,7 +1117,7 @@ $('subjects').innerHTML=availableSubjects.map(n=>'<button class="tile" onclick="
 // Dashboard: independent navigation, existing quiz logic is unchanged.
 let qrProfile={name:'',photo:''};
 const qrAccount=()=>window.quizRoomGoogleEmail?.()||'';
-function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='notesPage')qrRenderNotes();if(page==='profilePage')qrProfileSection('view')}
+function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='revisionPage')qrRenderRevision();if(page==='notesPage')qrRenderNotes();if(page==='profilePage')qrProfileSection('view')}
 function qrEntries(){return Object.values(loadScoreHistory()).filter(e=>e.name===qrAccount()&&Array.isArray(e.attempts))}
 function qrBestScoreRecords(){
  return qrEntries().flatMap(entry=>(entry.attempts||[]).flatMap(attempt=>{
@@ -1159,6 +1159,72 @@ function qrRender(){
  if(qrProfile.photo)avatar.src=qrProfile.photo;
  qrRenderBestScores();
 }
+
+function qrRevisionQuestion(id){
+ for(const topics of Object.values(typeof exerciseBank==='undefined'?{}:exerciseBank))
+  for(const rows of Object.values(topics))
+   for(const question of rows)if(question.id===id)return question;
+ return null;
+}
+function qrRevisionRecords(){
+ const attempts=qrEntries().flatMap(entry=>(entry.attempts||[]).map((attempt,i)=>({entry,attempt,i})))
+  .filter(({attempt})=>attempt.remark!=='time out'&&Array.isArray(attempt.incorrect)&&Array.isArray(attempt.correct)&&Array.isArray(attempt.unanswered)&&attempt.unanswered.length===0)
+  .sort((a,b)=>String(a.attempt.time).localeCompare(String(b.attempt.time))||a.i-b.i);
+ const state=new Map();
+ for(const {entry,attempt} of attempts){
+  for(const id of attempt.incorrect){
+   if(typeof id!=='string')continue;
+   if(!state.has(id))state.set(id,{id,subject:entry.subject,correctAfter:0});
+  }
+  for(const id of attempt.correct){
+   const record=state.get(id);
+   if(record)record.correctAfter++;
+  }
+ }
+ return [...state.values()].filter(record=>record.correctAfter<3&&qrRevisionQuestion(record.id));
+}
+function qrRenderRevision(){
+ const subject=$('qrRevisionSubject'),list=$('qrRevisionList');
+ const records=qrRevisionRecords();
+ const subjects=[...new Set(records.map(record=>record.subject))].sort();
+ const previous=subject.value;
+ subject.replaceChildren(new Option('Select Subject',''),...subjects.map(name=>new Option(name,name)));
+ if(subjects.includes(previous))subject.value=previous;
+ subject.hidden=!subjects.length;
+ const selected=subject.value;
+ list.replaceChildren();
+ if(!selected)return;
+ for(const record of records.filter(record=>record.subject===selected)){
+  const question=qrRevisionQuestion(record.id);
+  const item=document.createElement('div');item.className='qr-list-item';
+  const title=document.createElement('strong');title.textContent=record.id;
+  const body=document.createElement('p');body.textContent=question.q;
+  item.append(title,body);list.appendChild(item);
+ }
+}
+function qrInitRevision(){
+ const existing=$('scoresPage'),page=existing.cloneNode(true);
+ page.id='revisionPage';
+ page.querySelector('.qr-top h1').textContent='Revision';
+ const card=page.querySelector('.qr-card');
+ card.replaceChildren();
+ const heading=document.createElement('h2');heading.textContent='Revision';
+ const subtitle=document.createElement('p');subtitle.className='qr-muted';subtitle.textContent='Revise your questions';
+ const subject=document.createElement('select');subject.id='qrRevisionSubject';subject.className='qr-input';subject.setAttribute('aria-label','Select Subject');subject.onchange=qrRenderRevision;
+ const list=document.createElement('div');list.id='qrRevisionList';list.className='qr-list';
+ card.append(heading,subtitle,subject,list);
+ existing.after(page);
+ const reference=document.querySelector('#scoresPage .qr-side button[title="Notes"]');
+ const symbol=reference?.querySelector('svg');
+ document.querySelectorAll('.qr-side button[title="Scores"]').forEach(scores=>{
+  const button=scores.cloneNode(true);
+  button.title='Revision';button.setAttribute('onclick',"qrOpen('revisionPage')");
+  button.querySelector('.qr-nav-label').textContent='Revision';
+  if(symbol)button.querySelector('svg')?.replaceWith(symbol.cloneNode(true));
+  scores.after(button);
+ });
+}
+qrInitRevision();
 function qrRenderScores(){$('qrScoresList').innerHTML=qrEntries().flatMap(e=>e.attempts.map(a=>({e,a}))).sort((x,y)=>String(y.a.time).localeCompare(String(x.a.time))).map(({e,a})=>'<div class="qr-list-item"><strong>'+escapeHtml(e.subject)+' · '+Math.round(100*a.score/a.total)+'%</strong><div class="qr-muted">'+escapeHtml(e.chapter)+' · '+escapeHtml(a.time||'')+(a.remark?' · '+escapeHtml(a.remark):'')+'</div></div>').join('')||'<p>No scores yet.</p>'}
 let qrNotes=[];
 function qrRenderNotes(){$('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>'<div class="qr-list-item"><div class="qr-muted">'+escapeHtml(n.date)+'</div><p style="white-space:pre-wrap">'+escapeHtml(n.text)+'</p><button class="qr-btn" onclick="qrDeleteNote('+JSON.stringify(n.id).replace(/"/g,'&quot;')+')">Delete</button></div>').join('')||'<p class="qr-muted">No notes yet.</p>'}
