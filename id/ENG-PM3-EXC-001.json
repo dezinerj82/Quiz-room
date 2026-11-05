@@ -1,0 +1,19 @@
+{
+  "subject": "English",
+  "level": "PM3",
+  "category": "Exercise",
+  "topic": "Vocabulary 1",
+  "version": "001",
+  "questionIds": [
+    "ENG-PM3-EXC-001-01",
+    "ENG-PM3-EXC-001-02",
+    "ENG-PM3-EXC-001-03",
+    "ENG-PM3-EXC-001-04",
+    "ENG-PM3-EXC-001-05",
+    "ENG-PM3-EXC-001-06",
+    "ENG-PM3-EXC-001-07",
+    "ENG-PM3-EXC-001-08",
+    "ENG-PM3-EXC-001-09",
+    "ENG-PM3-EXC-001-10"
+  ]
+}
