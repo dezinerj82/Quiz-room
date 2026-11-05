@@ -1,0 +1,105 @@
+{
+  "subject": "Malay",
+  "level": "PM3",
+  "subjectCode": "MAL",
+  "groups": [
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 1,
+      "title": "Vocabulary 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "MAL-PM3-EXC-001-01",
+          "question": "Lawan kata besar?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-02",
+          "question": "Lawan kata panas?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-03",
+          "question": "Maksud lapar?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-04",
+          "question": "Lawan kata bersih?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-05",
+          "question": "Maksud cepat?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-06",
+          "question": "Tempat membeli ubat?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-07",
+          "question": "Maksud gembira?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-08",
+          "question": "Lawan kata tinggi?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-09",
+          "question": "Maksud menolong?"
+        },
+        {
+          "id": "MAL-PM3-EXC-001-10",
+          "question": "Haiwan yang menghasilkan susu untuk diminum?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 2,
+      "title": "Grammar 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "MAL-PM3-EXC-002-01",
+          "question": "Ayat yang betul?"
+        },
+        {
+          "id": "MAL-PM3-EXC-002-02",
+          "question": "Kata ganti nama diri pertama?"
+        },
+        {
+          "id": "MAL-PM3-EXC-002-03",
+          "question": "Kata kerja: Adik berlari di taman."
+        },
+        {
+          "id": "MAL-PM3-EXC-002-04",
+          "question": "Se___ pisang."
+        },
+        {
+          "id": "MAL-PM3-EXC-002-05",
+          "question": "Saya suka epal ___ oren."
+        },
+        {
+          "id": "MAL-PM3-EXC-002-06",
+          "question": "Kata adjektif: Bunga itu cantik."
+        },
+        {
+          "id": "MAL-PM3-EXC-002-07",
+          "question": "Bola itu di ___ meja."
+        },
+        {
+          "id": "MAL-PM3-EXC-002-08",
+          "question": "Ayat tanya yang betul?"
+        },
+        {
+          "id": "MAL-PM3-EXC-002-09",
+          "question": "Kata nama khas?"
+        },
+        {
+          "id": "MAL-PM3-EXC-002-10",
+          "question": "Kata perintah sopan?"
+        }
+      ]
+    }
+  ]
+}
