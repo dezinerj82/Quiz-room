@@ -71,17 +71,17 @@ body:not(.auth-locked) .qr-main .qr-hero > div:first-child > .qr-btn{margin:0}
 
 /* qr-theme */
 
-:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#5B5F97;--qr-secondary:#B8B8D1;--qr-tertiary:#FFC145;--qr-background:#FFFFFB;--qr-boundary:color-mix(in srgb,var(--qr-primary) 34%,var(--qr-background));--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,var(--qr-tertiary) 55%,#B87525);--qr-error:color-mix(in srgb,var(--qr-tertiary) 25%,#BC3750);--qr-on-secondary:#181823;--qr-on-tertiary:#181823;--qr-content-width:1160px;--qr-space:1}
+:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#5B5F97;--qr-secondary:#B8B8D1;--qr-tertiary:#FFC145;--qr-background:#FFFFFB;--qr-boundary:color-mix(in srgb,var(--qr-primary) 34%,var(--qr-background));--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,var(--qr-tertiary) 55%,#B87525);--qr-error:color-mix(in srgb,var(--qr-tertiary) 25%,#BC3750);--qr-on-secondary:#181823;--qr-on-tertiary:#181823;--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
 body:not(.auth-locked) .qr-top h1{color:var(--qr-primary)}
 body:not(.auth-locked) .qr-card h2{color:var(--qr-primary)}
 
 body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-visible,body:not(.auth-locked) select:focus-visible{outline:3px solid var(--qr-tertiary);outline-offset:2px}
-:root{--qr-content-width:1160px;--qr-space:1}
-body:not(.auth-locked) .qr-card{padding:var(--qr-unified-padding)!important}
+
+
 #quizStart #subjects.tilegrid .tile{min-height:calc(60px*var(--qr-space))}
-@media(max-width:740px){body:not(.auth-locked) .qr-card{padding:var(--qr-unified-padding)!important}}
+
 
 
 /* qr-integrated-tab-layout */
@@ -204,11 +204,11 @@ body:not(.auth-locked) input[type="radio"]{border-radius:50%!important}
 /* qr-sidebar-reference-and-density */
 
 /* Shared responsive rail and content dimensions. */
-:root{--qr-rail-width:220px;--qr-rail-compact:66px;--qr-panel-pad:16px;--qr-card-gap:18px;--qr-control-height:44px}
+:root{--qr-rail-width:220px;--qr-rail-compact:66px;--qr-card-gap:18px;--qr-control-height:44px}
 body:not(.auth-locked) .qr-shell{grid-template-columns:var(--qr-rail-width) minmax(0,1fr)!important;gap:0!important}
 body:not(.auth-locked) .qr-main{max-width:none!important;width:100%!important;min-width:0!important;margin:0!important;border-radius:48px 0 0 0!important;box-sizing:border-box!important}
 body:not(.auth-locked) .qr-home-grid{gap:var(--qr-card-gap)!important}
-body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-unified-padding)!important}
+
 
 body:not(.auth-locked) .qr-main .qr-top{margin-bottom:var(--qr-card-gap)!important}
 body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .resultbutton,body:not(.auth-locked) .qr-main .pill{min-height:var(--qr-control-height)!important;font-size:var(--qr-font-body)!important}
@@ -224,10 +224,10 @@ body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
 
 /* Single shared sizing and internal padding; retired density presets removed. */
 :root{
- --density-space:18px;--density-pad:16px;--density-inner:16px;
+ --density-space:18px;--density-inner:16px;
  --density-control:44px;--density-input:44px;--density-choice:64px;
  --qr-font-small:13px;--qr-font-body:15px;--qr-font-heading:22px;--qr-font-title:32px;--qr-font-login:64px;
- --density-text:var(--qr-font-body);--density-small:var(--qr-font-small);--density-heading:var(--qr-font-heading);--density-radius:24px;
+ --density-text:var(--qr-font-body);--density-radius:24px;
  --qr-unified-padding:9px 16px;
 }
 body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
@@ -268,8 +268,7 @@ font-size:var(--qr-font-body)!important}
 body:not(.auth-locked) .qr-main .qr-avatar,body:not(.auth-locked) .qr-main .letter,
 body:not(.auth-locked) .qr-main .number,body:not(.auth-locked) .qr-main .circle{border-radius:50%!important}
 
-@media(max-width:740px){body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
-body:not(.auth-locked) .qr-main .qr-card{padding:var(--qr-unified-padding)!important}}
+
 
 
 /* Notes inputs and saved entries use the shared rectangular shape and visible border. */
@@ -304,9 +303,7 @@ body:not(.auth-locked) .qr-shell > .qr-main{
  align-items:stretch!important;
  min-width:0!important;text-align:left!important;
 }
-body:not(.auth-locked) #selection .qr-subject-title{
- margin:0!important;text-align:left!important;
-}
+body:not(.auth-locked) #selection .qr-subject-title{margin:0!important;text-align:left!important;font-size:var(--qr-font-heading)!important;line-height:1.4!important;color:var(--qr-primary)!important;}
 body:not(.auth-locked) #selection .qr-steps{
  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
  gap:var(--density-space)!important;margin:0!important;
@@ -325,7 +322,7 @@ body:not(.auth-locked) #results .resultpanel{
  margin:0!important;box-sizing:border-box!important;
  display:flex!important;flex-direction:column!important;align-items:center!important;
  text-align:center!important;
-}
+padding:var(--qr-unified-padding)!important;gap:var(--density-space)!important;border-radius:var(--density-radius)!important;border:1px solid var(--quiz-subject-color,var(--qr-subject1))!important;background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 6%,white)!important;}
 body:not(.auth-locked) #results .resultpanel > *{max-width:100%!important}
 body:not(.auth-locked) #results .resultpanel h2,
 body:not(.auth-locked) #results .resultscore{margin:0!important}
@@ -339,11 +336,6 @@ body:not(.auth-locked) #results .resultscore{margin:0!important}
 #results) .qr-quiz-content{padding:var(--qr-unified-padding)!important;
  gap:var(--density-space)!important;
  font-size:var(--qr-font-body)!important;
-}body:not(.auth-locked) #selection .versionlist,
-body:not(.auth-locked) #selection .qr-steps{
- gap:var(--density-space)!important;
-}body:not(.auth-locked) #selection .qr-subject-title{
- font-size:var(--qr-font-heading)!important;line-height:1.4!important;
 }
 body:not(.auth-locked) #selection :is(.version,
 .qr-steps button),
@@ -353,9 +345,7 @@ body:not(.auth-locked) #results .resultbutton{
  border:0!important;border-radius:var(--qr-button-radius)!important;
 }
 body:not(.auth-locked) #selection .version{min-height:var(--density-choice)!important}
-body:not(.auth-locked) #results .resultpanel{padding:var(--qr-unified-padding)!important;gap:var(--density-space)!important;
- border-radius:var(--density-radius)!important;
-}
+
 body:not(.auth-locked) #results .resultpanel h2{font-size:var(--qr-font-heading)!important}
 body:not(.auth-locked) #results .resultlabel,
 body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--qr-font-body)!important}
@@ -363,10 +353,7 @@ body:not(.auth-locked) #results #driveSaveStatus{font-size:var(--qr-font-body)!i
 
 
 
-body:not(.auth-locked) #results .resultpanel{
- border:1px solid var(--quiz-subject-color,var(--qr-subject1))!important;
- background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 6%,white)!important;
-}
+
 
 
 
@@ -377,9 +364,7 @@ body:not(.auth-locked) #selection .qr-quiz-content{
  border:1px solid var(--qr-boundary)!important;
  background:var(--qr-background)!important;
 }
-body:not(.auth-locked) #selection .qr-subject-title{
- color:var(--qr-primary)!important;
-}
+
 body:not(.auth-locked) #selection .qr-steps button{
  background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 30%,var(--qr-background))!important;color:var(--qr-primary)!important;
  border:0!important;border-radius:999px!important;
@@ -853,8 +838,6 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
 
 @media(max-width:740px){
  
- body:not(.auth-locked) #quiz .qr-card.qr-quiz-content{padding:var(--qr-unified-padding)!important}
- body:not(.auth-locked) #quiz .qr-question-frame{padding:var(--qr-unified-padding)!important}
  body:not(.auth-locked) #quiz .qr-quiz-head{align-items:flex-start;flex-wrap:wrap}
  body:not(.auth-locked) #quiz .qr-quiz-tools{margin-left:auto}
  body:not(.auth-locked) #quiz .qr-quiz-progress{grid-template-columns:1fr max-content}
