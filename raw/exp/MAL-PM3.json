@@ -23,7 +23,16 @@
           "option": "Jauh",
           "explanation": "Far"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What is the opposite of 'big'?",
+        "options": [
+          "Small",
+          "Tall",
+          "Fast",
+          "Far"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-02": {
       "type": "mc",
@@ -46,7 +55,16 @@
           "option": "Sejuk",
           "explanation": "Cold"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What is the opposite of 'hot'?",
+        "options": [
+          "Warm",
+          "Spicy",
+          "Bright",
+          "Cold"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-03": {
       "type": "mc",
@@ -69,7 +87,16 @@
           "option": "Hendak tidur",
           "explanation": "Want to sleep"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What does 'hungry' mean?",
+        "options": [
+          "Want to bathe",
+          "Want to play",
+          "Want to eat",
+          "Want to sleep"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-04": {
       "type": "mc",
@@ -92,7 +119,16 @@
           "option": "Cantik",
           "explanation": "Beautiful"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What is the opposite of 'clean'?",
+        "options": [
+          "White",
+          "Dirty",
+          "Tidy",
+          "Beautiful"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-05": {
       "type": "mc",
@@ -115,7 +151,16 @@
           "option": "Senget",
           "explanation": "Slanted"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What does 'fast' mean?",
+        "options": [
+          "Fast",
+          "Slow",
+          "Weak",
+          "Slanted"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-06": {
       "type": "mc",
@@ -138,7 +183,16 @@
           "option": "Farmasi",
           "explanation": "Pharmacy"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Where can you buy medicine?",
+        "options": [
+          "Library",
+          "Field",
+          "Workshop",
+          "Pharmacy"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-07": {
       "type": "mc",
@@ -161,7 +215,16 @@
           "option": "Takut",
           "explanation": "Afraid"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What does 'happy' mean?",
+        "options": [
+          "Angry",
+          "Sad",
+          "Happy",
+          "Afraid"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-08": {
       "type": "mc",
@@ -184,7 +247,16 @@
           "option": "Besar",
           "explanation": "Big"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What is the opposite of 'tall'?",
+        "options": [
+          "Wide",
+          "Short / low",
+          "Long",
+          "Big"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-09": {
       "type": "mc",
@@ -207,7 +279,16 @@
           "option": "Menyembunyikan",
           "explanation": "Hide"
         }
-      ]
+      ],
+      "translation": {
+        "question": "What does 'helping' mean?",
+        "options": [
+          "Help",
+          "Disturb",
+          "Push / reject",
+          "Hide"
+        ]
+      }
     },
     "MAL-PM3-EXC-001-10": {
       "type": "mc",
@@ -230,7 +311,16 @@
           "option": "Lembu",
           "explanation": "Cow"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which animal produces milk for drinking?",
+        "options": [
+          "Chicken",
+          "Fish",
+          "Snake",
+          "Cow"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-01": {
       "type": "mc",
@@ -253,7 +343,16 @@
           "option": "Ali sedang buku membaca.",
           "explanation": "Incorrect word order: Ali is book reading."
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which sentence is correct?",
+        "options": [
+          "Ali is reading a book.",
+          "Ali was reading a book yesterday (incorrect grammar).",
+          "Incorrect word order: Ali reading is book.",
+          "Incorrect word order: Ali is book reading."
+        ]
+      }
     },
     "MAL-PM3-EXC-002-02": {
       "type": "mc",
@@ -276,7 +375,16 @@
           "option": "Saya",
           "explanation": "I"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which is a first-person pronoun?",
+        "options": [
+          "He / she",
+          "They",
+          "He / she (respectful)",
+          "I"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-03": {
       "type": "mc",
@@ -299,7 +407,16 @@
           "option": "Adik",
           "explanation": "Younger sibling"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Identify the verb: Younger sibling runs in the park.",
+        "options": [
+          "Park",
+          "At / in",
+          "Running",
+          "Younger sibling"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-04": {
       "type": "mc",
@@ -322,7 +439,16 @@
           "option": "Helai",
           "explanation": "Classifier for thin sheets"
         }
-      ]
+      ],
+      "translation": {
+        "question": "A ___ of bananas.",
+        "options": [
+          "Classifier for long objects",
+          "A hand / bunch (bananas)",
+          "Classifier for animals",
+          "Classifier for thin sheets"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-05": {
       "type": "mc",
@@ -345,7 +471,16 @@
           "option": "Supaya",
           "explanation": "So that"
         }
-      ]
+      ],
+      "translation": {
+        "question": "I like apples ___ oranges.",
+        "options": [
+          "And",
+          "Because",
+          "But",
+          "So that"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-06": {
       "type": "mc",
@@ -368,7 +503,16 @@
           "option": "Cantik",
           "explanation": "Beautiful"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Identify the adjective: That flower is beautiful.",
+        "options": [
+          "Flower",
+          "That",
+          "At / in",
+          "Beautiful"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-07": {
       "type": "mc",
@@ -391,7 +535,16 @@
           "option": "Cantik",
           "explanation": "Beautiful"
         }
-      ]
+      ],
+      "translation": {
+        "question": "The ball is ___ the table.",
+        "options": [
+          "Run",
+          "Red",
+          "Under",
+          "Beautiful"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-08": {
       "type": "mc",
@@ -414,7 +567,16 @@
           "option": "Siapa nama kamu!",
           "explanation": "What is your name!"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which question sentence is correct?",
+        "options": [
+          "What is your name,",
+          "What is your name?",
+          "What is your name.",
+          "What is your name!"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-09": {
       "type": "mc",
@@ -437,7 +599,16 @@
           "option": "Kucing",
           "explanation": "Cat"
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which is a proper noun?",
+        "options": [
+          "Kuala Lumpur",
+          "City",
+          "School",
+          "Cat"
+        ]
+      }
     },
     "MAL-PM3-EXC-002-10": {
       "type": "mc",
@@ -460,7 +631,16 @@
           "option": "Sila duduk.",
           "explanation": "Please sit."
         }
-      ]
+      ],
+      "translation": {
+        "question": "Which is a polite command?",
+        "options": [
+          "Sat yesterday.",
+          "Currently sitting.",
+          "Has sat.",
+          "Please sit."
+        ]
+      }
     }
   }
 }
