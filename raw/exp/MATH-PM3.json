@@ -1,0 +1,1846 @@
+{
+  "subject": "Math",
+  "level": "PM3",
+  "answers": {
+    "MATH-PM3-EXC-001-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 12.",
+      "optionExplanations": [
+        {
+          "option": "12",
+          "explanation": "The calculation gives 12."
+        },
+        {
+          "option": "16",
+          "explanation": "Not the correct option. The calculation gives 12."
+        },
+        {
+          "option": "9",
+          "explanation": "Not the correct option. The calculation gives 12."
+        },
+        {
+          "option": "15",
+          "explanation": "Not the correct option. The calculation gives 12."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 4.",
+      "optionExplanations": [
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 4."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 4."
+        },
+        {
+          "option": "3",
+          "explanation": "Not the correct option. The calculation gives 4."
+        },
+        {
+          "option": "4",
+          "explanation": "The calculation gives 4."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives 30.",
+      "optionExplanations": [
+        {
+          "option": "25",
+          "explanation": "Not the correct option. The calculation gives 30."
+        },
+        {
+          "option": "35",
+          "explanation": "Not the correct option. The calculation gives 30."
+        },
+        {
+          "option": "30",
+          "explanation": "The calculation gives 30."
+        },
+        {
+          "option": "36",
+          "explanation": "Not the correct option. The calculation gives 30."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 6.",
+      "optionExplanations": [
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "6",
+          "explanation": "The calculation gives 6."
+        },
+        {
+          "option": "7",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. The calculation gives 6."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 56.",
+      "optionExplanations": [
+        {
+          "option": "56",
+          "explanation": "The calculation gives 56."
+        },
+        {
+          "option": "64",
+          "explanation": "Not the correct option. The calculation gives 56."
+        },
+        {
+          "option": "49",
+          "explanation": "Not the correct option. The calculation gives 56."
+        },
+        {
+          "option": "63",
+          "explanation": "Not the correct option. The calculation gives 56."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 3.",
+      "optionExplanations": [
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "2",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "3",
+          "explanation": "The calculation gives 3."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives 40.",
+      "optionExplanations": [
+        {
+          "option": "36",
+          "explanation": "Not the correct option. The calculation gives 40."
+        },
+        {
+          "option": "44",
+          "explanation": "Not the correct option. The calculation gives 40."
+        },
+        {
+          "option": "40",
+          "explanation": "The calculation gives 40."
+        },
+        {
+          "option": "50",
+          "explanation": "Not the correct option. The calculation gives 40."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 5.",
+      "optionExplanations": [
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 5."
+        },
+        {
+          "option": "5",
+          "explanation": "The calculation gives 5."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 5."
+        },
+        {
+          "option": "7",
+          "explanation": "Not the correct option. The calculation gives 5."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 72.",
+      "optionExplanations": [
+        {
+          "option": "72",
+          "explanation": "The calculation gives 72."
+        },
+        {
+          "option": "84",
+          "explanation": "Not the correct option. The calculation gives 72."
+        },
+        {
+          "option": "66",
+          "explanation": "Not the correct option. The calculation gives 72."
+        },
+        {
+          "option": "78",
+          "explanation": "Not the correct option. The calculation gives 72."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-001-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 7.",
+      "optionExplanations": [
+        {
+          "option": "8",
+          "explanation": "Not the correct option. The calculation gives 7."
+        },
+        {
+          "option": "9",
+          "explanation": "Not the correct option. The calculation gives 7."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 7."
+        },
+        {
+          "option": "7",
+          "explanation": "The calculation gives 7."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "18 ÷ 2 × 1 = 9.",
+      "optionExplanations": [
+        {
+          "option": "9",
+          "explanation": "18 ÷ 2 × 1 = 9."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. 18 ÷ 2 × 1 = 9."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. 18 ÷ 2 × 1 = 9."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. 18 ÷ 2 × 1 = 9."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "28 ÷ 4 × 1 = 7.",
+      "optionExplanations": [
+        {
+          "option": "6",
+          "explanation": "Not the correct option. 28 ÷ 4 × 1 = 7."
+        },
+        {
+          "option": "14",
+          "explanation": "Not the correct option. 28 ÷ 4 × 1 = 7."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. 28 ÷ 4 × 1 = 7."
+        },
+        {
+          "option": "7",
+          "explanation": "28 ÷ 4 × 1 = 7."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives 0.7.",
+      "optionExplanations": [
+        {
+          "option": "0.8",
+          "explanation": "Not the correct option. The calculation gives 0.7."
+        },
+        {
+          "option": "0.34",
+          "explanation": "Not the correct option. The calculation gives 0.7."
+        },
+        {
+          "option": "0.7",
+          "explanation": "The calculation gives 0.7."
+        },
+        {
+          "option": "0.6",
+          "explanation": "Not the correct option. The calculation gives 0.7."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 0.4.",
+      "optionExplanations": [
+        {
+          "option": "0.3",
+          "explanation": "Not the correct option. The calculation gives 0.4."
+        },
+        {
+          "option": "0.4",
+          "explanation": "The calculation gives 0.4."
+        },
+        {
+          "option": "0.6",
+          "explanation": "Not the correct option. The calculation gives 0.4."
+        },
+        {
+          "option": "0.5",
+          "explanation": "Not the correct option. The calculation gives 0.4."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Half of 36 is 18.",
+      "optionExplanations": [
+        {
+          "option": "18",
+          "explanation": "Half of 36 is 18."
+        },
+        {
+          "option": "16",
+          "explanation": "Not the correct option. Half of 36 is 18."
+        },
+        {
+          "option": "20",
+          "explanation": "Not the correct option. Half of 36 is 18."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. Half of 36 is 18."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "One quarter of 40 is 10.",
+      "optionExplanations": [
+        {
+          "option": "5",
+          "explanation": "Not the correct option. One quarter of 40 is 10."
+        },
+        {
+          "option": "15",
+          "explanation": "Not the correct option. One quarter of 40 is 10."
+        },
+        {
+          "option": "20",
+          "explanation": "Not the correct option. One quarter of 40 is 10."
+        },
+        {
+          "option": "10",
+          "explanation": "One quarter of 40 is 10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "3/10 equals 0.3.",
+      "optionExplanations": [
+        {
+          "option": "3",
+          "explanation": "Not the correct option. 3/10 equals 0.3."
+        },
+        {
+          "option": "0.13",
+          "explanation": "Not the correct option. 3/10 equals 0.3."
+        },
+        {
+          "option": "0.3",
+          "explanation": "3/10 equals 0.3."
+        },
+        {
+          "option": "0.03",
+          "explanation": "Not the correct option. 3/10 equals 0.3."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "20 ÷ 4 × 3 = 15.",
+      "optionExplanations": [
+        {
+          "option": "10",
+          "explanation": "Not the correct option. 20 ÷ 4 × 3 = 15."
+        },
+        {
+          "option": "15",
+          "explanation": "20 ÷ 4 × 3 = 15."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. 20 ÷ 4 × 3 = 15."
+        },
+        {
+          "option": "16",
+          "explanation": "Not the correct option. 20 ÷ 4 × 3 = 15."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 0.75.",
+      "optionExplanations": [
+        {
+          "option": "0.75",
+          "explanation": "The calculation gives 0.75."
+        },
+        {
+          "option": "0.3",
+          "explanation": "Not the correct option. The calculation gives 0.75."
+        },
+        {
+          "option": "0.7",
+          "explanation": "Not the correct option. The calculation gives 0.75."
+        },
+        {
+          "option": "0.55",
+          "explanation": "Not the correct option. The calculation gives 0.75."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-002-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "1/10 equals 10%.",
+      "optionExplanations": [
+        {
+          "option": "1%",
+          "explanation": "Not the correct option. 1/10 equals 10%."
+        },
+        {
+          "option": "20%",
+          "explanation": "Not the correct option. 1/10 equals 10%."
+        },
+        {
+          "option": "100%",
+          "explanation": "Not the correct option. 1/10 equals 10%."
+        },
+        {
+          "option": "10%",
+          "explanation": "1/10 equals 10%."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives RM7.",
+      "optionExplanations": [
+        {
+          "option": "RM7",
+          "explanation": "The calculation gives RM7."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. The calculation gives RM7."
+        },
+        {
+          "option": "RM9",
+          "explanation": "Not the correct option. The calculation gives RM7."
+        },
+        {
+          "option": "RM6",
+          "explanation": "Not the correct option. The calculation gives RM7."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "RM17 − RM7 = RM10.",
+      "optionExplanations": [
+        {
+          "option": "RM5",
+          "explanation": "Not the correct option. RM17 − RM7 = RM10."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. RM17 − RM7 = RM10."
+        },
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. RM17 − RM7 = RM10."
+        },
+        {
+          "option": "RM10",
+          "explanation": "RM17 − RM7 = RM10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives RM13.",
+      "optionExplanations": [
+        {
+          "option": "RM15",
+          "explanation": "Not the correct option. The calculation gives RM13."
+        },
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. The calculation gives RM13."
+        },
+        {
+          "option": "RM13",
+          "explanation": "The calculation gives RM13."
+        },
+        {
+          "option": "RM14",
+          "explanation": "Not the correct option. The calculation gives RM13."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "RM21 − RM11 = RM10.",
+      "optionExplanations": [
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. RM21 − RM11 = RM10."
+        },
+        {
+          "option": "RM10",
+          "explanation": "RM21 − RM11 = RM10."
+        },
+        {
+          "option": "RM5",
+          "explanation": "Not the correct option. RM21 − RM11 = RM10."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. RM21 − RM11 = RM10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives RM16.",
+      "optionExplanations": [
+        {
+          "option": "RM16",
+          "explanation": "The calculation gives RM16."
+        },
+        {
+          "option": "RM17",
+          "explanation": "Not the correct option. The calculation gives RM16."
+        },
+        {
+          "option": "RM18",
+          "explanation": "Not the correct option. The calculation gives RM16."
+        },
+        {
+          "option": "RM15",
+          "explanation": "Not the correct option. The calculation gives RM16."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "RM25 − RM15 = RM10.",
+      "optionExplanations": [
+        {
+          "option": "RM5",
+          "explanation": "Not the correct option. RM25 − RM15 = RM10."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. RM25 − RM15 = RM10."
+        },
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. RM25 − RM15 = RM10."
+        },
+        {
+          "option": "RM10",
+          "explanation": "RM25 − RM15 = RM10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives RM19.",
+      "optionExplanations": [
+        {
+          "option": "RM21",
+          "explanation": "Not the correct option. The calculation gives RM19."
+        },
+        {
+          "option": "RM18",
+          "explanation": "Not the correct option. The calculation gives RM19."
+        },
+        {
+          "option": "RM19",
+          "explanation": "The calculation gives RM19."
+        },
+        {
+          "option": "RM20",
+          "explanation": "Not the correct option. The calculation gives RM19."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "RM29 − RM19 = RM10.",
+      "optionExplanations": [
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. RM29 − RM19 = RM10."
+        },
+        {
+          "option": "RM10",
+          "explanation": "RM29 − RM19 = RM10."
+        },
+        {
+          "option": "RM5",
+          "explanation": "Not the correct option. RM29 − RM19 = RM10."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. RM29 − RM19 = RM10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives RM25.",
+      "optionExplanations": [
+        {
+          "option": "RM25",
+          "explanation": "The calculation gives RM25."
+        },
+        {
+          "option": "RM26",
+          "explanation": "Not the correct option. The calculation gives RM25."
+        },
+        {
+          "option": "RM27",
+          "explanation": "Not the correct option. The calculation gives RM25."
+        },
+        {
+          "option": "RM24",
+          "explanation": "Not the correct option. The calculation gives RM25."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-003-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "RM33 − RM23 = RM10.",
+      "optionExplanations": [
+        {
+          "option": "RM5",
+          "explanation": "Not the correct option. RM33 − RM23 = RM10."
+        },
+        {
+          "option": "RM8",
+          "explanation": "Not the correct option. RM33 − RM23 = RM10."
+        },
+        {
+          "option": "RM12",
+          "explanation": "Not the correct option. RM33 − RM23 = RM10."
+        },
+        {
+          "option": "RM10",
+          "explanation": "RM33 − RM23 = RM10."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "2 × 60 = 120 minutes.",
+      "optionExplanations": [
+        {
+          "option": "120",
+          "explanation": "2 × 60 = 120 minutes."
+        },
+        {
+          "option": "60",
+          "explanation": "Not the correct option. 2 × 60 = 120 minutes."
+        },
+        {
+          "option": "90",
+          "explanation": "Not the correct option. 2 × 60 = 120 minutes."
+        },
+        {
+          "option": "200",
+          "explanation": "Not the correct option. 2 × 60 = 120 minutes."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "3:45 matches the description.",
+      "optionExplanations": [
+        {
+          "option": "3:30",
+          "explanation": "Not the correct option. 3:45 matches the description."
+        },
+        {
+          "option": "4:15",
+          "explanation": "Not the correct option. 3:45 matches the description."
+        },
+        {
+          "option": "2:45",
+          "explanation": "Not the correct option. 3:45 matches the description."
+        },
+        {
+          "option": "3:45",
+          "explanation": "3:45 matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "1 minute has 60 seconds.",
+      "optionExplanations": [
+        {
+          "option": "100",
+          "explanation": "Not the correct option. 1 minute has 60 seconds."
+        },
+        {
+          "option": "120",
+          "explanation": "Not the correct option. 1 minute has 60 seconds."
+        },
+        {
+          "option": "60",
+          "explanation": "1 minute has 60 seconds."
+        },
+        {
+          "option": "30",
+          "explanation": "Not the correct option. 1 minute has 60 seconds."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "8:20 matches the description.",
+      "optionExplanations": [
+        {
+          "option": "9:20",
+          "explanation": "Not the correct option. 8:20 matches the description."
+        },
+        {
+          "option": "8:20",
+          "explanation": "8:20 matches the description."
+        },
+        {
+          "option": "7:40",
+          "explanation": "Not the correct option. 8:20 matches the description."
+        },
+        {
+          "option": "8:00",
+          "explanation": "Not the correct option. 8:20 matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Half of 60 minutes is 30 minutes.",
+      "optionExplanations": [
+        {
+          "option": "30",
+          "explanation": "Half of 60 minutes is 30 minutes."
+        },
+        {
+          "option": "15",
+          "explanation": "Not the correct option. Half of 60 minutes is 30 minutes."
+        },
+        {
+          "option": "45",
+          "explanation": "Not the correct option. Half of 60 minutes is 30 minutes."
+        },
+        {
+          "option": "60",
+          "explanation": "Not the correct option. Half of 60 minutes is 30 minutes."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "9:45 matches the description.",
+      "optionExplanations": [
+        {
+          "option": "9:15",
+          "explanation": "Not the correct option. 9:45 matches the description."
+        },
+        {
+          "option": "10:15",
+          "explanation": "Not the correct option. 9:45 matches the description."
+        },
+        {
+          "option": "8:45",
+          "explanation": "Not the correct option. 9:45 matches the description."
+        },
+        {
+          "option": "9:45",
+          "explanation": "9:45 matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "2 × 24 = 48 hours.",
+      "optionExplanations": [
+        {
+          "option": "36",
+          "explanation": "Not the correct option. 2 × 24 = 48 hours."
+        },
+        {
+          "option": "72",
+          "explanation": "Not the correct option. 2 × 24 = 48 hours."
+        },
+        {
+          "option": "48",
+          "explanation": "2 × 24 = 48 hours."
+        },
+        {
+          "option": "24",
+          "explanation": "Not the correct option. 2 × 24 = 48 hours."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "2:15 matches the description.",
+      "optionExplanations": [
+        {
+          "option": "2:30",
+          "explanation": "Not the correct option. 2:15 matches the description."
+        },
+        {
+          "option": "2:15",
+          "explanation": "2:15 matches the description."
+        },
+        {
+          "option": "2:00",
+          "explanation": "Not the correct option. 2:15 matches the description."
+        },
+        {
+          "option": "1:45",
+          "explanation": "Not the correct option. 2:15 matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "3 × 60 = 180 minutes.",
+      "optionExplanations": [
+        {
+          "option": "180",
+          "explanation": "3 × 60 = 180 minutes."
+        },
+        {
+          "option": "120",
+          "explanation": "Not the correct option. 3 × 60 = 180 minutes."
+        },
+        {
+          "option": "150",
+          "explanation": "Not the correct option. 3 × 60 = 180 minutes."
+        },
+        {
+          "option": "300",
+          "explanation": "Not the correct option. 3 × 60 = 180 minutes."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-004-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "5:50 matches the description.",
+      "optionExplanations": [
+        {
+          "option": "5:40",
+          "explanation": "Not the correct option. 5:50 matches the description."
+        },
+        {
+          "option": "6:30",
+          "explanation": "Not the correct option. 5:50 matches the description."
+        },
+        {
+          "option": "6:00",
+          "explanation": "Not the correct option. 5:50 matches the description."
+        },
+        {
+          "option": "5:50",
+          "explanation": "5:50 matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The conversion gives 100.",
+      "optionExplanations": [
+        {
+          "option": "100",
+          "explanation": "The conversion gives 100."
+        },
+        {
+          "option": "10",
+          "explanation": "Not the correct option. The conversion gives 100."
+        },
+        {
+          "option": "1000",
+          "explanation": "Not the correct option. The conversion gives 100."
+        },
+        {
+          "option": "50",
+          "explanation": "Not the correct option. The conversion gives 100."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The conversion gives 1000.",
+      "optionExplanations": [
+        {
+          "option": "100",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        },
+        {
+          "option": "10",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        },
+        {
+          "option": "500",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        },
+        {
+          "option": "1000",
+          "explanation": "The conversion gives 1000."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The conversion gives 1000.",
+      "optionExplanations": [
+        {
+          "option": "10",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        },
+        {
+          "option": "500",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        },
+        {
+          "option": "1000",
+          "explanation": "The conversion gives 1000."
+        },
+        {
+          "option": "100",
+          "explanation": "Not the correct option. The conversion gives 1000."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "550 mL matches the description.",
+      "optionExplanations": [
+        {
+          "option": "500 mL",
+          "explanation": "Not the correct option. 550 mL matches the description."
+        },
+        {
+          "option": "550 mL",
+          "explanation": "550 mL matches the description."
+        },
+        {
+          "option": "450 mL",
+          "explanation": "Not the correct option. 550 mL matches the description."
+        },
+        {
+          "option": "650 mL",
+          "explanation": "Not the correct option. 550 mL matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The conversion gives 200.",
+      "optionExplanations": [
+        {
+          "option": "200",
+          "explanation": "The conversion gives 200."
+        },
+        {
+          "option": "20",
+          "explanation": "Not the correct option. The conversion gives 200."
+        },
+        {
+          "option": "100",
+          "explanation": "Not the correct option. The conversion gives 200."
+        },
+        {
+          "option": "2000",
+          "explanation": "Not the correct option. The conversion gives 200."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "750 g matches the description.",
+      "optionExplanations": [
+        {
+          "option": "700 g",
+          "explanation": "Not the correct option. 750 g matches the description."
+        },
+        {
+          "option": "850 g",
+          "explanation": "Not the correct option. 750 g matches the description."
+        },
+        {
+          "option": "650 g",
+          "explanation": "Not the correct option. 750 g matches the description."
+        },
+        {
+          "option": "750 g",
+          "explanation": "750 g matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "1 kg matches the description.",
+      "optionExplanations": [
+        {
+          "option": "250 g",
+          "explanation": "Not the correct option. 1 kg matches the description."
+        },
+        {
+          "option": "750 g",
+          "explanation": "Not the correct option. 1 kg matches the description."
+        },
+        {
+          "option": "1 kg",
+          "explanation": "1 kg matches the description."
+        },
+        {
+          "option": "500 g",
+          "explanation": "Not the correct option. 1 kg matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The conversion gives 3000.",
+      "optionExplanations": [
+        {
+          "option": "1300",
+          "explanation": "Not the correct option. The conversion gives 3000."
+        },
+        {
+          "option": "3000",
+          "explanation": "The conversion gives 3000."
+        },
+        {
+          "option": "300",
+          "explanation": "Not the correct option. The conversion gives 3000."
+        },
+        {
+          "option": "30",
+          "explanation": "Not the correct option. The conversion gives 3000."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "55 cm matches the description.",
+      "optionExplanations": [
+        {
+          "option": "55 cm",
+          "explanation": "55 cm matches the description."
+        },
+        {
+          "option": "65 cm",
+          "explanation": "Not the correct option. 55 cm matches the description."
+        },
+        {
+          "option": "45 cm",
+          "explanation": "Not the correct option. 55 cm matches the description."
+        },
+        {
+          "option": "50 cm",
+          "explanation": "Not the correct option. 55 cm matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-005-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "400 mL matches the description.",
+      "optionExplanations": [
+        {
+          "option": "300 mL",
+          "explanation": "Not the correct option. 400 mL matches the description."
+        },
+        {
+          "option": "500 mL",
+          "explanation": "Not the correct option. 400 mL matches the description."
+        },
+        {
+          "option": "600 mL",
+          "explanation": "Not the correct option. 400 mL matches the description."
+        },
+        {
+          "option": "400 mL",
+          "explanation": "400 mL matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Triangle matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Triangle",
+          "explanation": "Triangle matches the description."
+        },
+        {
+          "option": "Square",
+          "explanation": "Not the correct option. Triangle matches the description."
+        },
+        {
+          "option": "Circle",
+          "explanation": "Not the correct option. Triangle matches the description."
+        },
+        {
+          "option": "Rectangle",
+          "explanation": "Not the correct option. Triangle matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Cube matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Sphere",
+          "explanation": "Not the correct option. Cube matches the description."
+        },
+        {
+          "option": "Cone",
+          "explanation": "Not the correct option. Cube matches the description."
+        },
+        {
+          "option": "Cylinder",
+          "explanation": "Not the correct option. Cube matches the description."
+        },
+        {
+          "option": "Cube",
+          "explanation": "Cube matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Sphere matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Cuboid",
+          "explanation": "Not the correct option. Sphere matches the description."
+        },
+        {
+          "option": "Pyramid",
+          "explanation": "Not the correct option. Sphere matches the description."
+        },
+        {
+          "option": "Sphere",
+          "explanation": "Sphere matches the description."
+        },
+        {
+          "option": "Cube",
+          "explanation": "Not the correct option. Sphere matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Square matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Oval",
+          "explanation": "Not the correct option. Square matches the description."
+        },
+        {
+          "option": "Square",
+          "explanation": "Square matches the description."
+        },
+        {
+          "option": "Rectangle",
+          "explanation": "Not the correct option. Square matches the description."
+        },
+        {
+          "option": "Triangle",
+          "explanation": "Not the correct option. Square matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Cone matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Cone",
+          "explanation": "Cone matches the description."
+        },
+        {
+          "option": "Cylinder",
+          "explanation": "Not the correct option. Cone matches the description."
+        },
+        {
+          "option": "Sphere",
+          "explanation": "Not the correct option. Cone matches the description."
+        },
+        {
+          "option": "Cube",
+          "explanation": "Not the correct option. Cone matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Circle matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Square",
+          "explanation": "Not the correct option. Circle matches the description."
+        },
+        {
+          "option": "Triangle",
+          "explanation": "Not the correct option. Circle matches the description."
+        },
+        {
+          "option": "Pentagon",
+          "explanation": "Not the correct option. Circle matches the description."
+        },
+        {
+          "option": "Circle",
+          "explanation": "Circle matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Cylinder matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Sphere",
+          "explanation": "Not the correct option. Cylinder matches the description."
+        },
+        {
+          "option": "Pyramid",
+          "explanation": "Not the correct option. Cylinder matches the description."
+        },
+        {
+          "option": "Cylinder",
+          "explanation": "Cylinder matches the description."
+        },
+        {
+          "option": "Cone",
+          "explanation": "Not the correct option. Cylinder matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 4.",
+      "optionExplanations": [
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 4."
+        },
+        {
+          "option": "4",
+          "explanation": "The calculation gives 4."
+        },
+        {
+          "option": "3",
+          "explanation": "Not the correct option. The calculation gives 4."
+        },
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 4."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 6.",
+      "optionExplanations": [
+        {
+          "option": "6",
+          "explanation": "The calculation gives 6."
+        },
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. The calculation gives 6."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-006-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Sphere matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Cube",
+          "explanation": "Not the correct option. Sphere matches the description."
+        },
+        {
+          "option": "Cone",
+          "explanation": "Not the correct option. Sphere matches the description."
+        },
+        {
+          "option": "Cylinder",
+          "explanation": "Not the correct option. Sphere matches the description."
+        },
+        {
+          "option": "Sphere",
+          "explanation": "Sphere matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The x-coordinate increases to give (3,2).",
+      "optionExplanations": [
+        {
+          "option": "(3,2)",
+          "explanation": "The x-coordinate increases to give (3,2)."
+        },
+        {
+          "option": "(2,3)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,2)."
+        },
+        {
+          "option": "(1,2)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,2)."
+        },
+        {
+          "option": "(2,1)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,2)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The x-coordinate decreases to give (2,3).",
+      "optionExplanations": [
+        {
+          "option": "(4,3)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,3)."
+        },
+        {
+          "option": "(3,4)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,3)."
+        },
+        {
+          "option": "(3,2)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,3)."
+        },
+        {
+          "option": "(2,3)",
+          "explanation": "The x-coordinate decreases to give (2,3)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The y-coordinate increases to give (4,6).",
+      "optionExplanations": [
+        {
+          "option": "(4,2)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,6)."
+        },
+        {
+          "option": "(4,4)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,6)."
+        },
+        {
+          "option": "(4,6)",
+          "explanation": "The y-coordinate increases to give (4,6)."
+        },
+        {
+          "option": "(6,4)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,6)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The y-coordinate decreases to give (5,4).",
+      "optionExplanations": [
+        {
+          "option": "(6,5)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,4)."
+        },
+        {
+          "option": "(5,4)",
+          "explanation": "The y-coordinate decreases to give (5,4)."
+        },
+        {
+          "option": "(5,6)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,4)."
+        },
+        {
+          "option": "(4,5)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,4)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The x-coordinate increases to give (3,6).",
+      "optionExplanations": [
+        {
+          "option": "(3,6)",
+          "explanation": "The x-coordinate increases to give (3,6)."
+        },
+        {
+          "option": "(2,7)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,6)."
+        },
+        {
+          "option": "(1,6)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,6)."
+        },
+        {
+          "option": "(2,5)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,6)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The x-coordinate decreases to give (2,2).",
+      "optionExplanations": [
+        {
+          "option": "(4,2)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,2)."
+        },
+        {
+          "option": "(3,3)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,2)."
+        },
+        {
+          "option": "(3,1)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,2)."
+        },
+        {
+          "option": "(2,2)",
+          "explanation": "The x-coordinate decreases to give (2,2)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The y-coordinate increases to give (4,5).",
+      "optionExplanations": [
+        {
+          "option": "(4,1)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,5)."
+        },
+        {
+          "option": "(3,4)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,5)."
+        },
+        {
+          "option": "(4,5)",
+          "explanation": "The y-coordinate increases to give (4,5)."
+        },
+        {
+          "option": "(6,3)",
+          "explanation": "Not the correct option. The y-coordinate increases to give (4,5)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The y-coordinate decreases to give (5,3).",
+      "optionExplanations": [
+        {
+          "option": "(6,4)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,3)."
+        },
+        {
+          "option": "(5,3)",
+          "explanation": "The y-coordinate decreases to give (5,3)."
+        },
+        {
+          "option": "(5,5)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,3)."
+        },
+        {
+          "option": "(4,4)",
+          "explanation": "Not the correct option. The y-coordinate decreases to give (5,3)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The x-coordinate increases to give (3,5).",
+      "optionExplanations": [
+        {
+          "option": "(3,5)",
+          "explanation": "The x-coordinate increases to give (3,5)."
+        },
+        {
+          "option": "(2,6)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,5)."
+        },
+        {
+          "option": "(1,5)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,5)."
+        },
+        {
+          "option": "(2,4)",
+          "explanation": "Not the correct option. The x-coordinate increases to give (3,5)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-007-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The x-coordinate decreases to give (2,6).",
+      "optionExplanations": [
+        {
+          "option": "(4,6)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,6)."
+        },
+        {
+          "option": "(3,7)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,6)."
+        },
+        {
+          "option": "(3,5)",
+          "explanation": "Not the correct option. The x-coordinate decreases to give (2,6)."
+        },
+        {
+          "option": "(2,6)",
+          "explanation": "The x-coordinate decreases to give (2,6)."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 13.",
+      "optionExplanations": [
+        {
+          "option": "13",
+          "explanation": "The calculation gives 13."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. The calculation gives 13."
+        },
+        {
+          "option": "14",
+          "explanation": "Not the correct option. The calculation gives 13."
+        },
+        {
+          "option": "10",
+          "explanation": "Not the correct option. The calculation gives 13."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 3.",
+      "optionExplanations": [
+        {
+          "option": "2",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "13",
+          "explanation": "Not the correct option. The calculation gives 3."
+        },
+        {
+          "option": "3",
+          "explanation": "The calculation gives 3."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Cats matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Rabbits",
+          "explanation": "Not the correct option. Cats matches the description."
+        },
+        {
+          "option": "All equal",
+          "explanation": "Not the correct option. Cats matches the description."
+        },
+        {
+          "option": "Cats",
+          "explanation": "Cats matches the description."
+        },
+        {
+          "option": "Dogs",
+          "explanation": "Not the correct option. Cats matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 21.",
+      "optionExplanations": [
+        {
+          "option": "22",
+          "explanation": "Not the correct option. The calculation gives 21."
+        },
+        {
+          "option": "21",
+          "explanation": "The calculation gives 21."
+        },
+        {
+          "option": "19",
+          "explanation": "Not the correct option. The calculation gives 21."
+        },
+        {
+          "option": "20",
+          "explanation": "Not the correct option. The calculation gives 21."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The calculation gives 8.",
+      "optionExplanations": [
+        {
+          "option": "8",
+          "explanation": "The calculation gives 8."
+        },
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 8."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 8."
+        },
+        {
+          "option": "10",
+          "explanation": "Not the correct option. The calculation gives 8."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 2.",
+      "optionExplanations": [
+        {
+          "option": "3",
+          "explanation": "Not the correct option. The calculation gives 2."
+        },
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 2."
+        },
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 2."
+        },
+        {
+          "option": "2",
+          "explanation": "The calculation gives 2."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "The calculation gives 5.",
+      "optionExplanations": [
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 5."
+        },
+        {
+          "option": "7",
+          "explanation": "Not the correct option. The calculation gives 5."
+        },
+        {
+          "option": "5",
+          "explanation": "The calculation gives 5."
+        },
+        {
+          "option": "4",
+          "explanation": "Not the correct option. The calculation gives 5."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The calculation gives 7.",
+      "optionExplanations": [
+        {
+          "option": "17",
+          "explanation": "Not the correct option. The calculation gives 7."
+        },
+        {
+          "option": "7",
+          "explanation": "The calculation gives 7."
+        },
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 7."
+        },
+        {
+          "option": "6",
+          "explanation": "Not the correct option. The calculation gives 7."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Bar chart matches the description.",
+      "optionExplanations": [
+        {
+          "option": "Bar chart",
+          "explanation": "Bar chart matches the description."
+        },
+        {
+          "option": "Pie chart",
+          "explanation": "Not the correct option. Bar chart matches the description."
+        },
+        {
+          "option": "Map",
+          "explanation": "Not the correct option. Bar chart matches the description."
+        },
+        {
+          "option": "Clock",
+          "explanation": "Not the correct option. Bar chart matches the description."
+        }
+      ]
+    },
+    "MATH-PM3-EXC-008-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The calculation gives 6.",
+      "optionExplanations": [
+        {
+          "option": "5",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "7",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. The calculation gives 6."
+        },
+        {
+          "option": "6",
+          "explanation": "The calculation gives 6."
+        }
+      ]
+    }
+  }
+}
