@@ -110,11 +110,11 @@
       "questions": [
         {
           "id": "KOR-PM3-EXM-001-01",
-          "question": "Which vowel represents the sound 'a' as in 아?"
+          "question": "Choose the Korean vowel used in 아 (a)."
         },
         {
           "id": "KOR-PM3-EXM-001-02",
-          "question": "Which vowel represents 'o' as in 오?"
+          "question": "The Korean vowel ㅜ is pronounced 'u' as in 우."
         },
         {
           "id": "KOR-PM3-EXM-001-03",
@@ -122,7 +122,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-04",
-          "question": "Which syllable is made from ㅁ + ㅏ?"
+          "question": "Combine ㅁ and ㅏ. Choose the completed Korean syllable."
         },
         {
           "id": "KOR-PM3-EXM-001-05",
@@ -130,19 +130,19 @@
         },
         {
           "id": "KOR-PM3-EXM-001-06",
-          "question": "Which word means 'mother'?"
+          "question": "Choose the Korean word for 'mother'."
         },
         {
           "id": "KOR-PM3-EXM-001-07",
-          "question": "Which word means 'father'?"
+          "question": "아빠 means 'grandmother'."
         },
         {
           "id": "KOR-PM3-EXM-001-08",
-          "question": "Which word means 'grandmother'?"
+          "question": "Match each family word to its meaning."
         },
         {
           "id": "KOR-PM3-EXM-001-09",
-          "question": "우리 ___은 네 명이에요."
+          "question": "Complete the Korean sentence: 우리 ___은 네 명이에요. (There are four people in my family.)"
         },
         {
           "id": "KOR-PM3-EXM-001-10",
@@ -150,7 +150,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-11",
-          "question": "Which sentence means 'My name is Mina'?"
+          "question": "Arrange these words to say 'My name is Mina.'"
         },
         {
           "id": "KOR-PM3-EXM-001-12",
@@ -158,7 +158,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-13",
-          "question": "Which word means 'inside'?"
+          "question": "The Korean location word 안 means 'inside'."
         },
         {
           "id": "KOR-PM3-EXM-001-14",
@@ -166,15 +166,15 @@
         },
         {
           "id": "KOR-PM3-EXM-001-15",
-          "question": "Which word means 'next to/beside'?"
+          "question": "Match each location word to its meaning."
         },
         {
           "id": "KOR-PM3-EXM-001-16",
-          "question": "책이 책상 ___에 있어요."
+          "question": "Arrange these words to say 'The book is on the desk.'"
         },
         {
           "id": "KOR-PM3-EXM-001-17",
-          "question": "Which question asks 'Where is the bag?'"
+          "question": "어디에 있어요? asks where something is."
         },
         {
           "id": "KOR-PM3-EXM-001-18",
@@ -182,7 +182,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-19",
-          "question": "Which word means 'school'?"
+          "question": "Choose the Korean word for 'school'."
         },
         {
           "id": "KOR-PM3-EXM-001-20",
@@ -190,7 +190,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-21",
-          "question": "Which word means 'library'?"
+          "question": "Match each place to its English meaning."
         },
         {
           "id": "KOR-PM3-EXM-001-22",
@@ -202,7 +202,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-24",
-          "question": "Which word means 'to eat'?"
+          "question": "먹다 means 'to sleep'."
         },
         {
           "id": "KOR-PM3-EXM-001-25",
@@ -210,11 +210,11 @@
         },
         {
           "id": "KOR-PM3-EXM-001-26",
-          "question": "저는 물을 ___."
+          "question": "Arrange these words to say 'I drink water.'"
         },
         {
           "id": "KOR-PM3-EXM-001-27",
-          "question": "Which word means 'three' in native Korean counting?"
+          "question": "Choose the native Korean number for three."
         },
         {
           "id": "KOR-PM3-EXM-001-28",
@@ -222,7 +222,7 @@
         },
         {
           "id": "KOR-PM3-EXM-001-29",
-          "question": "How do you say 'two apples' using the native Korean counter?"
+          "question": "In 사과 두 개, the counter 개 is used for objects."
         },
         {
           "id": "KOR-PM3-EXM-001-30",
