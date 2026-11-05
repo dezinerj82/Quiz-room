@@ -1,0 +1,466 @@
+{
+  "subject": "Malay",
+  "level": "PM3",
+  "answers": {
+    "MAL-PM3-EXC-001-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Kecil ialah lawan kata yang diminta.",
+      "optionExplanations": [
+        {
+          "option": "Kecil",
+          "explanation": "Small"
+        },
+        {
+          "option": "Tinggi",
+          "explanation": "Tall"
+        },
+        {
+          "option": "Cepat",
+          "explanation": "Fast"
+        },
+        {
+          "option": "Jauh",
+          "explanation": "Far"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Sejuk ialah lawan kata yang diminta.",
+      "optionExplanations": [
+        {
+          "option": "Hangat",
+          "explanation": "Warm"
+        },
+        {
+          "option": "Pedas",
+          "explanation": "Spicy"
+        },
+        {
+          "option": "Terang",
+          "explanation": "Bright"
+        },
+        {
+          "option": "Sejuk",
+          "explanation": "Cold"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Hendak makan sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Hendak mandi",
+          "explanation": "Want to bathe"
+        },
+        {
+          "option": "Hendak bermain",
+          "explanation": "Want to play"
+        },
+        {
+          "option": "Hendak makan",
+          "explanation": "Want to eat"
+        },
+        {
+          "option": "Hendak tidur",
+          "explanation": "Want to sleep"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Kotor ialah lawan kata yang diminta.",
+      "optionExplanations": [
+        {
+          "option": "Putih",
+          "explanation": "White"
+        },
+        {
+          "option": "Kotor",
+          "explanation": "Dirty"
+        },
+        {
+          "option": "Kemas",
+          "explanation": "Tidy"
+        },
+        {
+          "option": "Cantik",
+          "explanation": "Beautiful"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Laju sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Laju",
+          "explanation": "Fast"
+        },
+        {
+          "option": "Lambat",
+          "explanation": "Slow"
+        },
+        {
+          "option": "Lemah",
+          "explanation": "Weak"
+        },
+        {
+          "option": "Senget",
+          "explanation": "Slanted"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Farmasi sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Perpustakaan",
+          "explanation": "Library"
+        },
+        {
+          "option": "Padang",
+          "explanation": "Field"
+        },
+        {
+          "option": "Bengkel",
+          "explanation": "Workshop"
+        },
+        {
+          "option": "Farmasi",
+          "explanation": "Pharmacy"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Senang hati sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Marah",
+          "explanation": "Angry"
+        },
+        {
+          "option": "Sedih",
+          "explanation": "Sad"
+        },
+        {
+          "option": "Senang hati",
+          "explanation": "Happy"
+        },
+        {
+          "option": "Takut",
+          "explanation": "Afraid"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Rendah ialah lawan kata yang diminta.",
+      "optionExplanations": [
+        {
+          "option": "Lebar",
+          "explanation": "Wide"
+        },
+        {
+          "option": "Rendah",
+          "explanation": "Short / low"
+        },
+        {
+          "option": "Panjang",
+          "explanation": "Long"
+        },
+        {
+          "option": "Besar",
+          "explanation": "Big"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Membantu sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Membantu",
+          "explanation": "Help"
+        },
+        {
+          "option": "Mengganggu",
+          "explanation": "Disturb"
+        },
+        {
+          "option": "Menolak",
+          "explanation": "Push / reject"
+        },
+        {
+          "option": "Menyembunyikan",
+          "explanation": "Hide"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-001-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Lembu sesuai dengan maksud soalan.",
+      "optionExplanations": [
+        {
+          "option": "Ayam",
+          "explanation": "Chicken"
+        },
+        {
+          "option": "Ikan",
+          "explanation": "Fish"
+        },
+        {
+          "option": "Ular",
+          "explanation": "Snake"
+        },
+        {
+          "option": "Lembu",
+          "explanation": "Cow"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Susunan subjek dan kata kerja dalam ayat ini betul.",
+      "optionExplanations": [
+        {
+          "option": "Ali sedang membaca buku.",
+          "explanation": "Ali is reading a book."
+        },
+        {
+          "option": "Ali sedang baca buku semalam.",
+          "explanation": "Ali was reading a book yesterday (incorrect grammar)."
+        },
+        {
+          "option": "Ali membaca sedang buku.",
+          "explanation": "Incorrect word order: Ali reading is book."
+        },
+        {
+          "option": "Ali sedang buku membaca.",
+          "explanation": "Incorrect word order: Ali is book reading."
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Saya merujuk kepada diri sendiri.",
+      "optionExplanations": [
+        {
+          "option": "Dia",
+          "explanation": "He / she"
+        },
+        {
+          "option": "Mereka",
+          "explanation": "They"
+        },
+        {
+          "option": "Beliau",
+          "explanation": "He / she (respectful)"
+        },
+        {
+          "option": "Saya",
+          "explanation": "I"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Berlari ialah perbuatan yang dilakukan oleh adik.",
+      "optionExplanations": [
+        {
+          "option": "Taman",
+          "explanation": "Park"
+        },
+        {
+          "option": "Di",
+          "explanation": "At / in"
+        },
+        {
+          "option": "Berlari",
+          "explanation": "Running"
+        },
+        {
+          "option": "Adik",
+          "explanation": "Younger sibling"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Sesikat pisang ialah penjodoh bilangan yang sesuai.",
+      "optionExplanations": [
+        {
+          "option": "Batang",
+          "explanation": "Classifier for long objects"
+        },
+        {
+          "option": "Sikat",
+          "explanation": "A hand / bunch (bananas)"
+        },
+        {
+          "option": "Ekor",
+          "explanation": "Classifier for animals"
+        },
+        {
+          "option": "Helai",
+          "explanation": "Classifier for thin sheets"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Dan menggabungkan dua perkara.",
+      "optionExplanations": [
+        {
+          "option": "Dan",
+          "explanation": "And"
+        },
+        {
+          "option": "Kerana",
+          "explanation": "Because"
+        },
+        {
+          "option": "Tetapi",
+          "explanation": "But"
+        },
+        {
+          "option": "Supaya",
+          "explanation": "So that"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Cantik menerangkan sifat bunga.",
+      "optionExplanations": [
+        {
+          "option": "Bunga",
+          "explanation": "Flower"
+        },
+        {
+          "option": "Itu",
+          "explanation": "That"
+        },
+        {
+          "option": "Di",
+          "explanation": "At / in"
+        },
+        {
+          "option": "Cantik",
+          "explanation": "Beautiful"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Di bawah menunjukkan kedudukan bola.",
+      "optionExplanations": [
+        {
+          "option": "Lari",
+          "explanation": "Run"
+        },
+        {
+          "option": "Merah",
+          "explanation": "Red"
+        },
+        {
+          "option": "Bawah",
+          "explanation": "Under"
+        },
+        {
+          "option": "Cantik",
+          "explanation": "Beautiful"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Ayat tanya ini menggunakan kata tanya dan tanda soal.",
+      "optionExplanations": [
+        {
+          "option": "Siapa nama kamu,",
+          "explanation": "What is your name,"
+        },
+        {
+          "option": "Siapa nama kamu?",
+          "explanation": "What is your name?"
+        },
+        {
+          "option": "Siapa nama kamu.",
+          "explanation": "What is your name."
+        },
+        {
+          "option": "Siapa nama kamu!",
+          "explanation": "What is your name!"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Kuala Lumpur ialah nama khas tempat.",
+      "optionExplanations": [
+        {
+          "option": "Kuala Lumpur",
+          "explanation": "Kuala Lumpur"
+        },
+        {
+          "option": "Bandar",
+          "explanation": "City"
+        },
+        {
+          "option": "Sekolah",
+          "explanation": "School"
+        },
+        {
+          "option": "Kucing",
+          "explanation": "Cat"
+        }
+      ]
+    },
+    "MAL-PM3-EXC-002-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Sila digunakan untuk memberikan arahan dengan sopan.",
+      "optionExplanations": [
+        {
+          "option": "Duduk semalam.",
+          "explanation": "Sat yesterday."
+        },
+        {
+          "option": "Sedang duduk.",
+          "explanation": "Currently sitting."
+        },
+        {
+          "option": "Telah duduk.",
+          "explanation": "Has sat."
+        },
+        {
+          "option": "Sila duduk.",
+          "explanation": "Please sit."
+        }
+      ]
+    }
+  }
+}
