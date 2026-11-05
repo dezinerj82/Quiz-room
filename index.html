@@ -1074,9 +1074,8 @@ function finish(remark=''){
  time=Math.max(0,time);updateClock();dismissTimeWarning();
  $('score').textContent=score;
  $('total').textContent=questions.length;
- // A normal completion must display the results even if Drive saving fails.
- // Timeouts retain the previously requested return to quiz selection.
- if(remark==='time out')show('selection');else show('results');
+ // All completed and timed-out quizzes show the score before returning to selection.
+ show('results');
  $('driveSaveStatus').textContent='Saving score to Google Drive…';
  try{recordScoreAttempt(remark)}
  catch(error){
