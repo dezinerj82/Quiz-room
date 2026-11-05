@@ -1,0 +1,626 @@
+{
+  "subject": "Science",
+  "level": "PM3",
+  "subjectCode": "SCI",
+  "groups": [
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 1,
+      "title": "Scientific Skills 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-001-01",
+          "question": "Which sense organ helps us see?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-02",
+          "question": "Which tool measures temperature?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-03",
+          "question": "Which tool measures length?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-04",
+          "question": "What do we call sorting objects into groups?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-05",
+          "question": "What do we call using our senses to gather information?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-06",
+          "question": "In a fair test, what stays the same?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-07",
+          "question": "What is an expected result based on evidence called?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-08",
+          "question": "Which format helps organise results clearly?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-09",
+          "question": "Which tool measures mass?"
+        },
+        {
+          "id": "SCI-PM3-EXC-001-10",
+          "question": "What is an explanation based on observations called?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 2,
+      "title": "Science Room Rules 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-002-01",
+          "question": "What should you do before using science equipment?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-02",
+          "question": "What should you do if glass breaks?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-03",
+          "question": "How should you carry scissors safely?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-04",
+          "question": "What should you do after an experiment?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-05",
+          "question": "Where should bags be kept in the science room?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-06",
+          "question": "What should you do with an unknown chemical?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-07",
+          "question": "What should you do if something spills?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-08",
+          "question": "Why handle equipment carefully?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-09",
+          "question": "What should you do when your teacher says stop?"
+        },
+        {
+          "id": "SCI-PM3-EXC-002-10",
+          "question": "During an experiment, what is safe?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 3,
+      "title": "Humans — Teeth, Digestion and Food 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-003-01",
+          "question": "Which teeth cut food?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-02",
+          "question": "Which teeth grind food?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-03",
+          "question": "Where does digestion begin?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-04",
+          "question": "Which organ churns food?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-05",
+          "question": "Where are most nutrients absorbed?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-06",
+          "question": "Which tube carries food to the stomach?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-07",
+          "question": "Which nutrient helps the body grow and repair itself?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-08",
+          "question": "Which food is a good source of calcium?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-09",
+          "question": "Which habit helps prevent tooth decay?"
+        },
+        {
+          "id": "SCI-PM3-EXC-003-10",
+          "question": "Which teeth tear food?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 4,
+      "title": "Animals — Classification, Feeding Habits and Dentition 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-004-01",
+          "question": "What does a herbivore mainly eat?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-02",
+          "question": "What does a carnivore mainly eat?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-03",
+          "question": "What does an omnivore eat?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-04",
+          "question": "Which is a herbivore?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-05",
+          "question": "Which is a carnivore?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-06",
+          "question": "Which is an omnivore?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-07",
+          "question": "What do sharp canine teeth help animals do?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-08",
+          "question": "What do flat molars help animals do?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-09",
+          "question": "Which animal has a beak?"
+        },
+        {
+          "id": "SCI-PM3-EXC-004-10",
+          "question": "What does classification mean?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 5,
+      "title": "Plants — Reproduction 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-005-01",
+          "question": "Which plant part often contains seeds?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-02",
+          "question": "Which flower part produces pollen?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-03",
+          "question": "What is pollination?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-04",
+          "question": "What does germination mean?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-05",
+          "question": "Which of these do seeds need to germinate?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-06",
+          "question": "Which plant can grow from stem cuttings?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-07",
+          "question": "Which plant grows from a tuber?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-08",
+          "question": "What helps spread dandelion seeds?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-09",
+          "question": "What do flowers help plants do?"
+        },
+        {
+          "id": "SCI-PM3-EXC-005-10",
+          "question": "Which becomes a seed after fertilisation?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 6,
+      "title": "Measurement — Area and Volume 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-006-01",
+          "question": "Which unit measures the area of a desk?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-02",
+          "question": "Area of rectangle 4 cm by 3 cm?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-03",
+          "question": "Area of square with side 5 cm?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-04",
+          "question": "Which tool measures liquid volume?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-05",
+          "question": "Which unit measures liquid volume?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-06",
+          "question": "Millilitres in 1 litre?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-07",
+          "question": "Where should your eyes be when reading a measuring cylinder?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-08",
+          "question": "Area of 6 cm by 2 cm rectangle?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-09",
+          "question": "250 mL + 150 mL?"
+        },
+        {
+          "id": "SCI-PM3-EXC-006-10",
+          "question": "Area of square with side 3 cm?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 7,
+      "title": "Density 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-007-01",
+          "question": "Which usually floats?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-02",
+          "question": "Which usually sinks?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-03",
+          "question": "An object floats when its average density is..."
+        },
+        {
+          "id": "SCI-PM3-EXC-007-04",
+          "question": "What happens to an object denser than water?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-05",
+          "question": "What does density mean?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-06",
+          "question": "Two objects have equal volumes. Which is denser?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-07",
+          "question": "Why does oil float above water?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-08",
+          "question": "Does ice float or sink in water?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-09",
+          "question": "How can clay be shaped to float?"
+        },
+        {
+          "id": "SCI-PM3-EXC-007-10",
+          "question": "Which is generally denser than water?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 8,
+      "title": "Acids and Alkalis 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-008-01",
+          "question": "Which is acidic?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-02",
+          "question": "Which is alkaline?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-03",
+          "question": "Indicator for acids/alkalis?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-04",
+          "question": "Blue litmus in acid turns?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-05",
+          "question": "Red litmus in alkali turns?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-06",
+          "question": "What is the pH of a neutral solution?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-07",
+          "question": "Which household liquid is usually acidic?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-08",
+          "question": "Which substance is approximately neutral when pure?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-09",
+          "question": "Which pH is acidic?"
+        },
+        {
+          "id": "SCI-PM3-EXC-008-10",
+          "question": "Why never taste unknown liquids?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 9,
+      "title": "The Solar System 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-009-01",
+          "question": "Which star is at the centre of the Solar System?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-02",
+          "question": "Which planet is closest to the Sun?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-03",
+          "question": "Which planet is famous for its rings?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-04",
+          "question": "Which planet do we live on?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-05",
+          "question": "Which is the largest planet?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-06",
+          "question": "What does Earth orbit?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-07",
+          "question": "What causes day and night?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-08",
+          "question": "Which natural satellite orbits Earth?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-09",
+          "question": "Which planet is called the Red Planet?"
+        },
+        {
+          "id": "SCI-PM3-EXC-009-10",
+          "question": "Which are the first four planets from the Sun?"
+        }
+      ]
+    },
+    {
+      "type": "Exercise",
+      "code": "EXC",
+      "number": 10,
+      "title": "Pulleys 1",
+      "source": "js/exercises.js",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXC-010-01",
+          "question": "What is a pulley?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-02",
+          "question": "What does a fixed pulley mainly change?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-03",
+          "question": "Which may use a pulley?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-04",
+          "question": "What runs over a pulley's wheel?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-05",
+          "question": "What can a movable pulley reduce?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-06",
+          "question": "What is the object being lifted called?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-07",
+          "question": "What is the pulling force called?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-08",
+          "question": "What do pulleys help lift at construction sites?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-09",
+          "question": "What should you inspect before using a pulley?"
+        },
+        {
+          "id": "SCI-PM3-EXC-010-10",
+          "question": "What can increase a pulley's mechanical advantage?"
+        }
+      ]
+    },
+    {
+      "type": "Exam",
+      "code": "EXM",
+      "number": 1,
+      "title": "Exam Revision 1",
+      "source": "index.html (sample)",
+      "questions": [
+        {
+          "id": "SCI-PM3-EXM-001-01",
+          "question": "Which tool measures the volume of a liquid?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-02",
+          "question": "What should you do before starting a science investigation?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-03",
+          "question": "A prediction in an investigation is…"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-04",
+          "question": "Which action is safe in the science room?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-05",
+          "question": "Which teeth are mainly used to cut food?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-06",
+          "question": "Which teeth mainly grind food?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-07",
+          "question": "What is the correct order of the first three digestive organs food passes through?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-08",
+          "question": "Where are most nutrients absorbed into the blood?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-09",
+          "question": "Which animal is a herbivore?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-10",
+          "question": "Which animal is an omnivore?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-11",
+          "question": "Why do carnivores often have sharp canine teeth?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-12",
+          "question": "Which animal's teeth are best suited for grinding plants?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-13",
+          "question": "Which plant can reproduce using a stem cutting?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-14",
+          "question": "Which plant commonly reproduces using spores?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-15",
+          "question": "Which part of a flowering plant can develop into a fruit after fertilisation?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-16",
+          "question": "A square has sides of 4 cm. What is its area?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-17",
+          "question": "A rectangle is 6 cm long and 3 cm wide. What is its area?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-18",
+          "question": "A measuring cylinder reads 35 mL. After a stone is fully submerged it reads 47 mL. What is the stone's volume?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-19",
+          "question": "Which unit is suitable for the volume of water in a cup?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-20",
+          "question": "A wooden block floats on water. What can you conclude?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-21",
+          "question": "Which object is most likely to sink in plain water?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-22",
+          "question": "Why does oil form a layer above water?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-23",
+          "question": "Which substance is usually acidic?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-24",
+          "question": "What colour does blue litmus paper turn in an acid?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-25",
+          "question": "What happens to red litmus paper in an alkaline solution?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-26",
+          "question": "Which planet is closest to the Sun?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-27",
+          "question": "Which is the correct order of these planets moving away from the Sun?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-28",
+          "question": "Why does the Sun appear much larger than other stars in the sky?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-29",
+          "question": "What is the main purpose of a fixed pulley?"
+        },
+        {
+          "id": "SCI-PM3-EXM-001-30",
+          "question": "A flag is raised using a rope over a wheel. Which simple machine is being used?"
+        }
+      ]
+    }
+  ]
+}
