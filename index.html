@@ -865,6 +865,7 @@ body:not(.auth-locked) #home #qrBestLevel{width:auto;min-width:96px;max-width:mi
 body:not(.auth-locked) #home #qrBestLevel[hidden]{display:none!important}
 body:not(.auth-locked) #home .qr-best-list{display:grid;gap:var(--density-space)}
 body:not(.auth-locked) #home .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
+body:not(.auth-locked) #home .qr-best-subject .qr-best-heading{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr) max-content}
 body:not(.auth-locked) #home .qr-best-subject h3{margin:0;color:var(--qr-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
 body:not(.auth-locked) #home .qr-best-percentage{color:var(--qr-primary);font-size:var(--qr-font-heading);font-weight:800}
 body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:rgb(from var(--qr-secondary) r g b / var(--qr-inactive-opacity));overflow:hidden}
@@ -1140,9 +1141,9 @@ function qrRenderBestScores(){
   best.set(r.subject,Math.max(best.get(r.subject)??0,r.percentage));
  }
  list.innerHTML=[...best].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,score])=>
-  '<div class="qr-best-subject"><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3><span class="qr-best-percentage">'+score+'%</span></div>'+
-  '<div class="qr-best-score" aria-label="'+escapeHtml(subject)+' best score '+score+' percent">'+
-  '<div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div></div></div>'
+  '<div class="qr-best-subject"><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3>'+
+  '<div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div>'+
+  '<span class="qr-best-percentage">'+score+'%</span></div></div>'
  ).join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
 }
 function qrRender(){
