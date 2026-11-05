@@ -71,7 +71,7 @@ body:not(.auth-locked) .qr-main .qr-hero > div:first-child > .qr-btn{margin:0}
 
 /* qr-theme */
 
-:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#5B5F97;--qr-secondary:#B8B8D1;--qr-tertiary:#FFC145;--qr-background:#FFFFFB;--qr-boundary:color-mix(in srgb,var(--qr-primary) 34%,var(--qr-background));--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,var(--qr-tertiary) 55%,#B87525);--qr-error:color-mix(in srgb,var(--qr-tertiary) 25%,#BC3750);--qr-on-secondary:#181823;--qr-on-tertiary:#181823;--qr-space:1}
+:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#5B5F97;--qr-secondary:#B8B8D1;--qr-tertiary:#FFC145;--qr-background:#FFFFFB;--qr-boundary:color-mix(in srgb,var(--qr-primary) 34%,var(--qr-background));--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,var(--qr-tertiary) 55%,#B87525);--qr-error:color-mix(in srgb,var(--qr-tertiary) 25%,#BC3750);--qr-on-secondary:var(--qr-primary);--qr-on-tertiary:var(--qr-primary);--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
 body:not(.auth-locked) .qr-top h1{color:var(--qr-primary)}
@@ -144,7 +144,7 @@ body:not(.auth-locked) .level-button{background:var(--quiz-subject-color,var(--q
 body:not(.auth-locked) .version{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--quiz-on-subject,var(--qr-primary))!important}
 body:not(.auth-locked) .pill,body:not(.auth-locked) .resultbutton{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
 body:not(.auth-locked) .exitpill{background:var(--qr-warning)!important;color:var(--qr-primary)!important}
-body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:color-mix(in srgb,var(--qr-primary) 13%,white)!important;color:color-mix(in srgb,var(--qr-primary) 55%,white)!important}
+body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:color-mix(in srgb,var(--qr-primary) 13%,white)!important}
 body:not(.auth-locked) .answer{border-radius:20px!important;background:color-mix(in srgb,var(--qr-secondary) 12%,white)!important;color:var(--qr-primary)!important;border-color:color-mix(in srgb,var(--qr-secondary) 40%,white)!important}
 body:not(.auth-locked) .answer .letter,body:not(.auth-locked) .number{background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
 body:not(.auth-locked) .answer.answer-correct{background:color-mix(in srgb,var(--qr-success) 23%,white)!important;border-color:var(--qr-success)!important}
@@ -471,7 +471,7 @@ body:not(.auth-locked) #profilePage .qr-profile-actions{display:flex;flex-wrap:w
 body:not(.auth-locked) #profilePage .qr-profile-label{font-size:var(--qr-font-body);color:var(--qr-primary)}
 body:not(.auth-locked) #profilePage :is(.qr-input,.qr-photo-input-row){background:color-mix(in srgb,var(--qr-secondary) 9%,white)!important;border:0!important;outline:0!important;border-radius:var(--density-radius)!important}
 body:not(.auth-locked) #profilePage .qr-input:focus-visible{outline:2px solid var(--qr-tertiary)!important}
-body:not(.auth-locked) #profilePage #qrEmail{background:color-mix(in srgb,var(--qr-primary) 13%,white)!important;color:color-mix(in srgb,var(--qr-primary) 55%,white)!important;opacity:var(--qr-inactive-opacity);cursor:default;pointer-events:none}
+body:not(.auth-locked) #profilePage #qrEmail{background:color-mix(in srgb,var(--qr-primary) 13%,white)!important;opacity:var(--qr-inactive-opacity);cursor:default;pointer-events:none}
 body:not(.auth-locked) #profilePage .qr-photo-input-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--density-space);padding:var(--qr-unified-padding)!important}
 body:not(.auth-locked) #profilePage #qrPhoto{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
 body:not(.auth-locked) #profilePage .qr-file-button{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:var(--density-control)!important;font-size:var(--qr-font-body)!important;padding:var(--qr-unified-padding)!important;border-radius:999px!important;background:var(--qr-secondary)!important;color:var(--qr-primary)!important}
@@ -630,7 +630,7 @@ body:not(.auth-locked) .qr-side button.qr-sidebar-toggle{display:none!important}
 /* Quiz presentation — single responsive design based on the approved reference. */
 body:not(.auth-locked) .qr-side .qr-nav-brand{
  display:flex;align-items:center;gap:var(--density-inner);padding:0 4px;
- font-size:var(--qr-font-body);font-weight:800;color:var(--qr-background);
+ font-size:var(--qr-font-body);font-weight:800;color:#FFFFFF;
  margin-bottom:calc(var(--density-space) * .6);white-space:nowrap;
 }
 body:not(.auth-locked) .qr-side .qr-icon{width:20px;height:20px;flex:0 0 auto}
@@ -867,7 +867,7 @@ body:not(.auth-locked) #home .qr-best-list{display:grid;gap:var(--density-space)
 body:not(.auth-locked) #home .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
 body:not(.auth-locked) #home .qr-best-subject h3{margin:0;color:var(--qr-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
 body:not(.auth-locked) #home .qr-best-score{position:relative;padding-top:calc(var(--density-text) + 5px)}
-body:not(.auth-locked) #home .qr-best-percentage{position:absolute;top:0;left:0;width:100%;text-align:center;color:var(--qr-success);font-size:var(--qr-font-small);font-weight:800}
+body:not(.auth-locked) #home .qr-best-percentage{position:absolute;top:0;left:0;width:100%;text-align:center;color:var(--qr-primary);font-size:var(--qr-font-small);font-weight:800}
 body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:var(--qr-secondary);overflow:hidden}
 body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-success);border-radius:inherit}
 
