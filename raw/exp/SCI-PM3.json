@@ -1,0 +1,2963 @@
+{
+  "subject": "Science",
+  "level": "PM3",
+  "answers": {
+    "SCI-PM3-EXC-001-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Eyes detect light so we can see.",
+      "optionExplanations": [
+        {
+          "option": "Eyes",
+          "explanation": "Eyes detect light so we can see."
+        },
+        {
+          "option": "Ears",
+          "explanation": "Not the correct option. Eyes detect light so we can see."
+        },
+        {
+          "option": "Nose",
+          "explanation": "Not the correct option. Eyes detect light so we can see."
+        },
+        {
+          "option": "Tongue",
+          "explanation": "Not the correct option. Eyes detect light so we can see."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "A thermometer shows how hot or cold something is.",
+      "optionExplanations": [
+        {
+          "option": "Ruler",
+          "explanation": "Not the correct option. A thermometer shows how hot or cold something is."
+        },
+        {
+          "option": "Balance",
+          "explanation": "Not the correct option. A thermometer shows how hot or cold something is."
+        },
+        {
+          "option": "Clock",
+          "explanation": "Not the correct option. A thermometer shows how hot or cold something is."
+        },
+        {
+          "option": "Thermometer",
+          "explanation": "A thermometer shows how hot or cold something is."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "A ruler measures distance or length.",
+      "optionExplanations": [
+        {
+          "option": "Balance",
+          "explanation": "Not the correct option. A ruler measures distance or length."
+        },
+        {
+          "option": "Clock",
+          "explanation": "Not the correct option. A ruler measures distance or length."
+        },
+        {
+          "option": "Ruler",
+          "explanation": "A ruler measures distance or length."
+        },
+        {
+          "option": "Beaker",
+          "explanation": "Not the correct option. A ruler measures distance or length."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Classifying means grouping things by shared features.",
+      "optionExplanations": [
+        {
+          "option": "Inferring",
+          "explanation": "Not the correct option. Classifying means grouping things by shared features."
+        },
+        {
+          "option": "Classifying",
+          "explanation": "Classifying means grouping things by shared features."
+        },
+        {
+          "option": "Predicting",
+          "explanation": "Not the correct option. Classifying means grouping things by shared features."
+        },
+        {
+          "option": "Measuring",
+          "explanation": "Not the correct option. Classifying means grouping things by shared features."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Observing uses our senses to gather information.",
+      "optionExplanations": [
+        {
+          "option": "Observing",
+          "explanation": "Observing uses our senses to gather information."
+        },
+        {
+          "option": "Guessing",
+          "explanation": "Not the correct option. Observing uses our senses to gather information."
+        },
+        {
+          "option": "Drawing",
+          "explanation": "Not the correct option. Observing uses our senses to gather information."
+        },
+        {
+          "option": "Counting",
+          "explanation": "Not the correct option. Observing uses our senses to gather information."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Controlled variables are kept the same for a fair comparison.",
+      "optionExplanations": [
+        {
+          "option": "Results",
+          "explanation": "Not the correct option. Controlled variables are kept the same for a fair comparison."
+        },
+        {
+          "option": "Conclusions",
+          "explanation": "Not the correct option. Controlled variables are kept the same for a fair comparison."
+        },
+        {
+          "option": "Predictions",
+          "explanation": "Not the correct option. Controlled variables are kept the same for a fair comparison."
+        },
+        {
+          "option": "Controlled variables",
+          "explanation": "Controlled variables are kept the same for a fair comparison."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "A prediction is what we expect based on evidence.",
+      "optionExplanations": [
+        {
+          "option": "Safety rule",
+          "explanation": "Not the correct option. A prediction is what we expect based on evidence."
+        },
+        {
+          "option": "Drawing",
+          "explanation": "Not the correct option. A prediction is what we expect based on evidence."
+        },
+        {
+          "option": "Prediction",
+          "explanation": "A prediction is what we expect based on evidence."
+        },
+        {
+          "option": "Measurement",
+          "explanation": "Not the correct option. A prediction is what we expect based on evidence."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "A table organises results into rows and columns.",
+      "optionExplanations": [
+        {
+          "option": "No records",
+          "explanation": "Not the correct option. A table organises results into rows and columns."
+        },
+        {
+          "option": "Table",
+          "explanation": "A table organises results into rows and columns."
+        },
+        {
+          "option": "Secret notes",
+          "explanation": "Not the correct option. A table organises results into rows and columns."
+        },
+        {
+          "option": "Changed data",
+          "explanation": "Not the correct option. A table organises results into rows and columns."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A balance measures mass.",
+      "optionExplanations": [
+        {
+          "option": "Balance",
+          "explanation": "A balance measures mass."
+        },
+        {
+          "option": "Ruler",
+          "explanation": "Not the correct option. A balance measures mass."
+        },
+        {
+          "option": "Stopwatch",
+          "explanation": "Not the correct option. A balance measures mass."
+        },
+        {
+          "option": "Thermometer",
+          "explanation": "Not the correct option. A balance measures mass."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-001-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "An inference explains what observations may mean.",
+      "optionExplanations": [
+        {
+          "option": "Random guess",
+          "explanation": "Not the correct option. An inference explains what observations may mean."
+        },
+        {
+          "option": "Unit",
+          "explanation": "Not the correct option. An inference explains what observations may mean."
+        },
+        {
+          "option": "Equipment",
+          "explanation": "Not the correct option. An inference explains what observations may mean."
+        },
+        {
+          "option": "Inference",
+          "explanation": "An inference explains what observations may mean."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Listen to the teacher before handling equipment.",
+      "optionExplanations": [
+        {
+          "option": "Follow teacher instructions",
+          "explanation": "Listen to the teacher before handling equipment."
+        },
+        {
+          "option": "Run around",
+          "explanation": "Not the correct option. Listen to the teacher before handling equipment."
+        },
+        {
+          "option": "Taste materials",
+          "explanation": "Not the correct option. Listen to the teacher before handling equipment."
+        },
+        {
+          "option": "Mix chemicals",
+          "explanation": "Not the correct option. Listen to the teacher before handling equipment."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Report broken glass; do not pick it up yourself.",
+      "optionExplanations": [
+        {
+          "option": "Pick up barehanded",
+          "explanation": "Not the correct option. Report broken glass; do not pick it up yourself."
+        },
+        {
+          "option": "Hide it",
+          "explanation": "Not the correct option. Report broken glass; do not pick it up yourself."
+        },
+        {
+          "option": "Kick it",
+          "explanation": "Not the correct option. Report broken glass; do not pick it up yourself."
+        },
+        {
+          "option": "Tell teacher",
+          "explanation": "Report broken glass; do not pick it up yourself."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Point the blades downward to avoid injury.",
+      "optionExplanations": [
+        {
+          "option": "While running",
+          "explanation": "Not the correct option. Point the blades downward to avoid injury."
+        },
+        {
+          "option": "Point at friend",
+          "explanation": "Not the correct option. Point the blades downward to avoid injury."
+        },
+        {
+          "option": "Points downward",
+          "explanation": "Point the blades downward to avoid injury."
+        },
+        {
+          "option": "Blades open",
+          "explanation": "Not the correct option. Point the blades downward to avoid injury."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Clean the workspace and wash your hands afterward.",
+      "optionExplanations": [
+        {
+          "option": "Eat immediately",
+          "explanation": "Not the correct option. Clean the workspace and wash your hands afterward."
+        },
+        {
+          "option": "Clean up and wash hands",
+          "explanation": "Clean the workspace and wash your hands afterward."
+        },
+        {
+          "option": "Leave spills",
+          "explanation": "Not the correct option. Clean the workspace and wash your hands afterward."
+        },
+        {
+          "option": "Keep materials",
+          "explanation": "Not the correct option. Clean the workspace and wash your hands afterward."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Keep walkways clear to prevent trips.",
+      "optionExplanations": [
+        {
+          "option": "Away from walkways",
+          "explanation": "Keep walkways clear to prevent trips."
+        },
+        {
+          "option": "In doorway",
+          "explanation": "Not the correct option. Keep walkways clear to prevent trips."
+        },
+        {
+          "option": "On lab table",
+          "explanation": "Not the correct option. Keep walkways clear to prevent trips."
+        },
+        {
+          "option": "Near flames",
+          "explanation": "Not the correct option. Keep walkways clear to prevent trips."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Unknown chemicals may be harmful, so ask first.",
+      "optionExplanations": [
+        {
+          "option": "Taste it",
+          "explanation": "Not the correct option. Unknown chemicals may be harmful, so ask first."
+        },
+        {
+          "option": "Mix it",
+          "explanation": "Not the correct option. Unknown chemicals may be harmful, so ask first."
+        },
+        {
+          "option": "Sniff closely",
+          "explanation": "Not the correct option. Unknown chemicals may be harmful, so ask first."
+        },
+        {
+          "option": "Do not touch without permission",
+          "explanation": "Unknown chemicals may be harmful, so ask first."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Tell the teacher so the spill can be handled safely.",
+      "optionExplanations": [
+        {
+          "option": "Spread it",
+          "explanation": "Not the correct option. Tell the teacher so the spill can be handled safely."
+        },
+        {
+          "option": "Taste it",
+          "explanation": "Not the correct option. Tell the teacher so the spill can be handled safely."
+        },
+        {
+          "option": "Tell teacher",
+          "explanation": "Tell the teacher so the spill can be handled safely."
+        },
+        {
+          "option": "Ignore it",
+          "explanation": "Not the correct option. Tell the teacher so the spill can be handled safely."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Careful handling helps prevent injuries and damage.",
+      "optionExplanations": [
+        {
+          "option": "Surprise friends",
+          "explanation": "Not the correct option. Careful handling helps prevent injuries and damage."
+        },
+        {
+          "option": "Prevent accidents",
+          "explanation": "Careful handling helps prevent injuries and damage."
+        },
+        {
+          "option": "Make noise",
+          "explanation": "Not the correct option. Careful handling helps prevent injuries and damage."
+        },
+        {
+          "option": "Work without rules",
+          "explanation": "Not the correct option. Careful handling helps prevent injuries and damage."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Stop immediately and listen for instructions.",
+      "optionExplanations": [
+        {
+          "option": "Stop and listen",
+          "explanation": "Stop immediately and listen for instructions."
+        },
+        {
+          "option": "Keep working",
+          "explanation": "Not the correct option. Stop immediately and listen for instructions."
+        },
+        {
+          "option": "Run",
+          "explanation": "Not the correct option. Stop immediately and listen for instructions."
+        },
+        {
+          "option": "Hide",
+          "explanation": "Not the correct option. Stop immediately and listen for instructions."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-002-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Protective equipment reduces the risk of injury.",
+      "optionExplanations": [
+        {
+          "option": "Play with tools",
+          "explanation": "Not the correct option. Protective equipment reduces the risk of injury."
+        },
+        {
+          "option": "Eat snacks",
+          "explanation": "Not the correct option. Protective equipment reduces the risk of injury."
+        },
+        {
+          "option": "Push classmates",
+          "explanation": "Not the correct option. Protective equipment reduces the risk of injury."
+        },
+        {
+          "option": "Wear required protection",
+          "explanation": "Protective equipment reduces the risk of injury."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Incisors have sharp edges for biting and cutting.",
+      "optionExplanations": [
+        {
+          "option": "Incisors",
+          "explanation": "Incisors have sharp edges for biting and cutting."
+        },
+        {
+          "option": "Molars",
+          "explanation": "Not the correct option. Incisors have sharp edges for biting and cutting."
+        },
+        {
+          "option": "Premolars",
+          "explanation": "Not the correct option. Incisors have sharp edges for biting and cutting."
+        },
+        {
+          "option": "Wisdom teeth",
+          "explanation": "Not the correct option. Incisors have sharp edges for biting and cutting."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Molars have broad surfaces for grinding food.",
+      "optionExplanations": [
+        {
+          "option": "Incisors",
+          "explanation": "Not the correct option. Molars have broad surfaces for grinding food."
+        },
+        {
+          "option": "Canines",
+          "explanation": "Not the correct option. Molars have broad surfaces for grinding food."
+        },
+        {
+          "option": "Baby teeth",
+          "explanation": "Not the correct option. Molars have broad surfaces for grinding food."
+        },
+        {
+          "option": "Molars",
+          "explanation": "Molars have broad surfaces for grinding food."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Chewing and saliva begin digestion in the mouth.",
+      "optionExplanations": [
+        {
+          "option": "Rectum",
+          "explanation": "Not the correct option. Chewing and saliva begin digestion in the mouth."
+        },
+        {
+          "option": "Liver",
+          "explanation": "Not the correct option. Chewing and saliva begin digestion in the mouth."
+        },
+        {
+          "option": "Mouth",
+          "explanation": "Chewing and saliva begin digestion in the mouth."
+        },
+        {
+          "option": "Large intestine",
+          "explanation": "Not the correct option. Chewing and saliva begin digestion in the mouth."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The stomach mixes and churns food.",
+      "optionExplanations": [
+        {
+          "option": "Kidneys",
+          "explanation": "Not the correct option. The stomach mixes and churns food."
+        },
+        {
+          "option": "Stomach",
+          "explanation": "The stomach mixes and churns food."
+        },
+        {
+          "option": "Heart",
+          "explanation": "Not the correct option. The stomach mixes and churns food."
+        },
+        {
+          "option": "Lungs",
+          "explanation": "Not the correct option. The stomach mixes and churns food."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Most nutrients pass into the blood through the small intestine.",
+      "optionExplanations": [
+        {
+          "option": "Small intestine",
+          "explanation": "Most nutrients pass into the blood through the small intestine."
+        },
+        {
+          "option": "Oesophagus",
+          "explanation": "Not the correct option. Most nutrients pass into the blood through the small intestine."
+        },
+        {
+          "option": "Large intestine",
+          "explanation": "Not the correct option. Most nutrients pass into the blood through the small intestine."
+        },
+        {
+          "option": "Mouth",
+          "explanation": "Not the correct option. Most nutrients pass into the blood through the small intestine."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The oesophagus moves swallowed food to the stomach.",
+      "optionExplanations": [
+        {
+          "option": "Trachea",
+          "explanation": "Not the correct option. The oesophagus moves swallowed food to the stomach."
+        },
+        {
+          "option": "Artery",
+          "explanation": "Not the correct option. The oesophagus moves swallowed food to the stomach."
+        },
+        {
+          "option": "Ureter",
+          "explanation": "Not the correct option. The oesophagus moves swallowed food to the stomach."
+        },
+        {
+          "option": "Oesophagus",
+          "explanation": "The oesophagus moves swallowed food to the stomach."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Protein helps the body grow and repair tissues.",
+      "optionExplanations": [
+        {
+          "option": "Fibre",
+          "explanation": "Not the correct option. Protein helps the body grow and repair tissues."
+        },
+        {
+          "option": "Water",
+          "explanation": "Not the correct option. Protein helps the body grow and repair tissues."
+        },
+        {
+          "option": "Protein",
+          "explanation": "Protein helps the body grow and repair tissues."
+        },
+        {
+          "option": "Salt",
+          "explanation": "Not the correct option. Protein helps the body grow and repair tissues."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Milk contains calcium needed for strong bones and teeth.",
+      "optionExplanations": [
+        {
+          "option": "Rice",
+          "explanation": "Not the correct option. Milk contains calcium needed for strong bones and teeth."
+        },
+        {
+          "option": "Milk",
+          "explanation": "Milk contains calcium needed for strong bones and teeth."
+        },
+        {
+          "option": "Sugar",
+          "explanation": "Not the correct option. Milk contains calcium needed for strong bones and teeth."
+        },
+        {
+          "option": "Oil",
+          "explanation": "Not the correct option. Milk contains calcium needed for strong bones and teeth."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Brushing with fluoride toothpaste helps reduce the risk of tooth decay.",
+      "optionExplanations": [
+        {
+          "option": "Brush with fluoride toothpaste",
+          "explanation": "Brushing with fluoride toothpaste helps reduce the risk of tooth decay."
+        },
+        {
+          "option": "Eat sweets before bed",
+          "explanation": "Not the correct option. Brushing with fluoride toothpaste helps reduce the risk of tooth decay."
+        },
+        {
+          "option": "Skip brushing",
+          "explanation": "Not the correct option. Brushing with fluoride toothpaste helps reduce the risk of tooth decay."
+        },
+        {
+          "option": "Share brushes",
+          "explanation": "Not the correct option. Brushing with fluoride toothpaste helps reduce the risk of tooth decay."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-003-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Canines have pointed tips for tearing food.",
+      "optionExplanations": [
+        {
+          "option": "Incisors",
+          "explanation": "Not the correct option. Canines have pointed tips for tearing food."
+        },
+        {
+          "option": "Molars",
+          "explanation": "Not the correct option. Canines have pointed tips for tearing food."
+        },
+        {
+          "option": "Premolars",
+          "explanation": "Not the correct option. Canines have pointed tips for tearing food."
+        },
+        {
+          "option": "Canines",
+          "explanation": "Canines have pointed tips for tearing food."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Herbivores eat plants.",
+      "optionExplanations": [
+        {
+          "option": "Plants",
+          "explanation": "Herbivores eat plants."
+        },
+        {
+          "option": "Meat",
+          "explanation": "Not the correct option. Herbivores eat plants."
+        },
+        {
+          "option": "Fish",
+          "explanation": "Not the correct option. Herbivores eat plants."
+        },
+        {
+          "option": "Insects",
+          "explanation": "Not the correct option. Herbivores eat plants."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Carnivores eat other animals.",
+      "optionExplanations": [
+        {
+          "option": "Grass",
+          "explanation": "Not the correct option. Carnivores eat other animals."
+        },
+        {
+          "option": "Leaves",
+          "explanation": "Not the correct option. Carnivores eat other animals."
+        },
+        {
+          "option": "Fruit",
+          "explanation": "Not the correct option. Carnivores eat other animals."
+        },
+        {
+          "option": "Animals",
+          "explanation": "Carnivores eat other animals."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Omnivores eat both plants and animals.",
+      "optionExplanations": [
+        {
+          "option": "Only animals",
+          "explanation": "Not the correct option. Omnivores eat both plants and animals."
+        },
+        {
+          "option": "Only water",
+          "explanation": "Not the correct option. Omnivores eat both plants and animals."
+        },
+        {
+          "option": "Plants and animals",
+          "explanation": "Omnivores eat both plants and animals."
+        },
+        {
+          "option": "Only plants",
+          "explanation": "Not the correct option. Omnivores eat both plants and animals."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Cows mainly eat grass and other plants.",
+      "optionExplanations": [
+        {
+          "option": "Shark",
+          "explanation": "Not the correct option. Cows mainly eat grass and other plants."
+        },
+        {
+          "option": "Cow",
+          "explanation": "Cows mainly eat grass and other plants."
+        },
+        {
+          "option": "Tiger",
+          "explanation": "Not the correct option. Cows mainly eat grass and other plants."
+        },
+        {
+          "option": "Eagle",
+          "explanation": "Not the correct option. Cows mainly eat grass and other plants."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Lions hunt and eat other animals.",
+      "optionExplanations": [
+        {
+          "option": "Lion",
+          "explanation": "Lions hunt and eat other animals."
+        },
+        {
+          "option": "Rabbit",
+          "explanation": "Not the correct option. Lions hunt and eat other animals."
+        },
+        {
+          "option": "Goat",
+          "explanation": "Not the correct option. Lions hunt and eat other animals."
+        },
+        {
+          "option": "Deer",
+          "explanation": "Not the correct option. Lions hunt and eat other animals."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Bears can eat both plants and animals.",
+      "optionExplanations": [
+        {
+          "option": "Sheep",
+          "explanation": "Not the correct option. Bears can eat both plants and animals."
+        },
+        {
+          "option": "Cow",
+          "explanation": "Not the correct option. Bears can eat both plants and animals."
+        },
+        {
+          "option": "Horse",
+          "explanation": "Not the correct option. Bears can eat both plants and animals."
+        },
+        {
+          "option": "Bear",
+          "explanation": "Bears can eat both plants and animals."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Sharp canines help tear meat.",
+      "optionExplanations": [
+        {
+          "option": "Filtering",
+          "explanation": "Not the correct option. Sharp canines help tear meat."
+        },
+        {
+          "option": "Drinking",
+          "explanation": "Not the correct option. Sharp canines help tear meat."
+        },
+        {
+          "option": "Tearing",
+          "explanation": "Sharp canines help tear meat."
+        },
+        {
+          "option": "Grinding",
+          "explanation": "Not the correct option. Sharp canines help tear meat."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Broad, flat molars grind food.",
+      "optionExplanations": [
+        {
+          "option": "Swimming",
+          "explanation": "Not the correct option. Broad, flat molars grind food."
+        },
+        {
+          "option": "Grinding",
+          "explanation": "Broad, flat molars grind food."
+        },
+        {
+          "option": "Flying",
+          "explanation": "Not the correct option. Broad, flat molars grind food."
+        },
+        {
+          "option": "Hearing",
+          "explanation": "Not the correct option. Broad, flat molars grind food."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Chickens use beaks to pick up food.",
+      "optionExplanations": [
+        {
+          "option": "Chicken",
+          "explanation": "Chickens use beaks to pick up food."
+        },
+        {
+          "option": "Cat",
+          "explanation": "Not the correct option. Chickens use beaks to pick up food."
+        },
+        {
+          "option": "Horse",
+          "explanation": "Not the correct option. Chickens use beaks to pick up food."
+        },
+        {
+          "option": "Dog",
+          "explanation": "Not the correct option. Chickens use beaks to pick up food."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-004-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Classification groups animals by shared features.",
+      "optionExplanations": [
+        {
+          "option": "Counting legs only",
+          "explanation": "Not the correct option. Classification groups animals by shared features."
+        },
+        {
+          "option": "Naming pets",
+          "explanation": "Not the correct option. Classification groups animals by shared features."
+        },
+        {
+          "option": "Measuring height",
+          "explanation": "Not the correct option. Classification groups animals by shared features."
+        },
+        {
+          "option": "Grouping by characteristics",
+          "explanation": "Classification groups animals by shared features."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Fruits often protect and contain seeds.",
+      "optionExplanations": [
+        {
+          "option": "Fruit",
+          "explanation": "Fruits often protect and contain seeds."
+        },
+        {
+          "option": "Root",
+          "explanation": "Not the correct option. Fruits often protect and contain seeds."
+        },
+        {
+          "option": "Stem",
+          "explanation": "Not the correct option. Fruits often protect and contain seeds."
+        },
+        {
+          "option": "Leaf",
+          "explanation": "Not the correct option. Fruits often protect and contain seeds."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Anthers produce pollen.",
+      "optionExplanations": [
+        {
+          "option": "Stigma",
+          "explanation": "Not the correct option. Anthers produce pollen."
+        },
+        {
+          "option": "Ovary",
+          "explanation": "Not the correct option. Anthers produce pollen."
+        },
+        {
+          "option": "Sepal",
+          "explanation": "Not the correct option. Anthers produce pollen."
+        },
+        {
+          "option": "Anther",
+          "explanation": "Anthers produce pollen."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Pollination moves pollen to a flower's stigma.",
+      "optionExplanations": [
+        {
+          "option": "Water absorption",
+          "explanation": "Not the correct option. Pollination moves pollen to a flower's stigma."
+        },
+        {
+          "option": "Leaf fall",
+          "explanation": "Not the correct option. Pollination moves pollen to a flower's stigma."
+        },
+        {
+          "option": "Transfer of pollen to stigma",
+          "explanation": "Pollination moves pollen to a flower's stigma."
+        },
+        {
+          "option": "Root growth",
+          "explanation": "Not the correct option. Pollination moves pollen to a flower's stigma."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Germination is when a seed starts growing.",
+      "optionExplanations": [
+        {
+          "option": "Soil drying",
+          "explanation": "Not the correct option. Germination is when a seed starts growing."
+        },
+        {
+          "option": "Start of seed growth",
+          "explanation": "Germination is when a seed starts growing."
+        },
+        {
+          "option": "Fruit changing colour",
+          "explanation": "Not the correct option. Germination is when a seed starts growing."
+        },
+        {
+          "option": "Pollen falling",
+          "explanation": "Not the correct option. Germination is when a seed starts growing."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Water helps activate growth inside the seed.",
+      "optionExplanations": [
+        {
+          "option": "Water",
+          "explanation": "Water helps activate growth inside the seed."
+        },
+        {
+          "option": "Paint",
+          "explanation": "Not the correct option. Water helps activate growth inside the seed."
+        },
+        {
+          "option": "Sand only",
+          "explanation": "Not the correct option. Water helps activate growth inside the seed."
+        },
+        {
+          "option": "Sunlight always",
+          "explanation": "Not the correct option. Water helps activate growth inside the seed."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Roses can grow from pieces of stem.",
+      "optionExplanations": [
+        {
+          "option": "Rice",
+          "explanation": "Not the correct option. Roses can grow from pieces of stem."
+        },
+        {
+          "option": "Corn",
+          "explanation": "Not the correct option. Roses can grow from pieces of stem."
+        },
+        {
+          "option": "Mango seed",
+          "explanation": "Not the correct option. Roses can grow from pieces of stem."
+        },
+        {
+          "option": "Rose",
+          "explanation": "Roses can grow from pieces of stem."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Potatoes grow from underground stem tubers.",
+      "optionExplanations": [
+        {
+          "option": "Sunflower",
+          "explanation": "Not the correct option. Potatoes grow from underground stem tubers."
+        },
+        {
+          "option": "Papaya",
+          "explanation": "Not the correct option. Potatoes grow from underground stem tubers."
+        },
+        {
+          "option": "Potato",
+          "explanation": "Potatoes grow from underground stem tubers."
+        },
+        {
+          "option": "Coconut",
+          "explanation": "Not the correct option. Potatoes grow from underground stem tubers."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Dandelion seeds are carried by the wind.",
+      "optionExplanations": [
+        {
+          "option": "Rocks",
+          "explanation": "Not the correct option. Dandelion seeds are carried by the wind."
+        },
+        {
+          "option": "Wind",
+          "explanation": "Dandelion seeds are carried by the wind."
+        },
+        {
+          "option": "Magnets",
+          "explanation": "Not the correct option. Dandelion seeds are carried by the wind."
+        },
+        {
+          "option": "Fire",
+          "explanation": "Not the correct option. Dandelion seeds are carried by the wind."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Flowers help many plants reproduce.",
+      "optionExplanations": [
+        {
+          "option": "Reproduction",
+          "explanation": "Flowers help many plants reproduce."
+        },
+        {
+          "option": "Replacing roots",
+          "explanation": "Not the correct option. Flowers help many plants reproduce."
+        },
+        {
+          "option": "Making soil",
+          "explanation": "Not the correct option. Flowers help many plants reproduce."
+        },
+        {
+          "option": "Drinking water",
+          "explanation": "Not the correct option. Flowers help many plants reproduce."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-005-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "A fertilised ovule develops into a seed.",
+      "optionExplanations": [
+        {
+          "option": "Petal",
+          "explanation": "Not the correct option. A fertilised ovule develops into a seed."
+        },
+        {
+          "option": "Stem",
+          "explanation": "Not the correct option. A fertilised ovule develops into a seed."
+        },
+        {
+          "option": "Leaf",
+          "explanation": "Not the correct option. A fertilised ovule develops into a seed."
+        },
+        {
+          "option": "Ovule",
+          "explanation": "A fertilised ovule develops into a seed."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Square centimetres measure small surface areas.",
+      "optionExplanations": [
+        {
+          "option": "cm²",
+          "explanation": "Square centimetres measure small surface areas."
+        },
+        {
+          "option": "cm",
+          "explanation": "Not the correct option. Square centimetres measure small surface areas."
+        },
+        {
+          "option": "L",
+          "explanation": "Not the correct option. Square centimetres measure small surface areas."
+        },
+        {
+          "option": "g",
+          "explanation": "Not the correct option. Square centimetres measure small surface areas."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "4 × 3 = 12 square centimetres.",
+      "optionExplanations": [
+        {
+          "option": "7 cm²",
+          "explanation": "Not the correct option. 4 × 3 = 12 square centimetres."
+        },
+        {
+          "option": "14 cm²",
+          "explanation": "Not the correct option. 4 × 3 = 12 square centimetres."
+        },
+        {
+          "option": "24 cm²",
+          "explanation": "Not the correct option. 4 × 3 = 12 square centimetres."
+        },
+        {
+          "option": "12 cm²",
+          "explanation": "4 × 3 = 12 square centimetres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "5 × 5 = 25 square centimetres.",
+      "optionExplanations": [
+        {
+          "option": "20 cm²",
+          "explanation": "Not the correct option. 5 × 5 = 25 square centimetres."
+        },
+        {
+          "option": "15 cm²",
+          "explanation": "Not the correct option. 5 × 5 = 25 square centimetres."
+        },
+        {
+          "option": "25 cm²",
+          "explanation": "5 × 5 = 25 square centimetres."
+        },
+        {
+          "option": "10 cm²",
+          "explanation": "Not the correct option. 5 × 5 = 25 square centimetres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "A measuring cylinder measures liquid volume.",
+      "optionExplanations": [
+        {
+          "option": "Thermometer",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Measuring cylinder",
+          "explanation": "A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Ruler",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Balance",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Millilitres measure small amounts of liquid.",
+      "optionExplanations": [
+        {
+          "option": "Millilitre",
+          "explanation": "Millilitres measure small amounts of liquid."
+        },
+        {
+          "option": "Gram",
+          "explanation": "Not the correct option. Millilitres measure small amounts of liquid."
+        },
+        {
+          "option": "Centimetre",
+          "explanation": "Not the correct option. Millilitres measure small amounts of liquid."
+        },
+        {
+          "option": "Square metre",
+          "explanation": "Not the correct option. Millilitres measure small amounts of liquid."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "1 litre equals 1,000 millilitres.",
+      "optionExplanations": [
+        {
+          "option": "100",
+          "explanation": "Not the correct option. 1 litre equals 1,000 millilitres."
+        },
+        {
+          "option": "10",
+          "explanation": "Not the correct option. 1 litre equals 1,000 millilitres."
+        },
+        {
+          "option": "10000",
+          "explanation": "Not the correct option. 1 litre equals 1,000 millilitres."
+        },
+        {
+          "option": "1000",
+          "explanation": "1 litre equals 1,000 millilitres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Read the liquid level at eye height to avoid errors.",
+      "optionExplanations": [
+        {
+          "option": "Below table",
+          "explanation": "Not the correct option. Read the liquid level at eye height to avoid errors."
+        },
+        {
+          "option": "Behind it",
+          "explanation": "Not the correct option. Read the liquid level at eye height to avoid errors."
+        },
+        {
+          "option": "At liquid level",
+          "explanation": "Read the liquid level at eye height to avoid errors."
+        },
+        {
+          "option": "Above it",
+          "explanation": "Not the correct option. Read the liquid level at eye height to avoid errors."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "6 × 2 = 12 square centimetres.",
+      "optionExplanations": [
+        {
+          "option": "24 cm²",
+          "explanation": "Not the correct option. 6 × 2 = 12 square centimetres."
+        },
+        {
+          "option": "12 cm²",
+          "explanation": "6 × 2 = 12 square centimetres."
+        },
+        {
+          "option": "8 cm²",
+          "explanation": "Not the correct option. 6 × 2 = 12 square centimetres."
+        },
+        {
+          "option": "16 cm²",
+          "explanation": "Not the correct option. 6 × 2 = 12 square centimetres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "250 + 150 = 400 millilitres.",
+      "optionExplanations": [
+        {
+          "option": "400 mL",
+          "explanation": "250 + 150 = 400 millilitres."
+        },
+        {
+          "option": "100 mL",
+          "explanation": "Not the correct option. 250 + 150 = 400 millilitres."
+        },
+        {
+          "option": "350 mL",
+          "explanation": "Not the correct option. 250 + 150 = 400 millilitres."
+        },
+        {
+          "option": "500 mL",
+          "explanation": "Not the correct option. 250 + 150 = 400 millilitres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-006-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "3 × 3 = 9 square centimetres.",
+      "optionExplanations": [
+        {
+          "option": "6 cm²",
+          "explanation": "Not the correct option. 3 × 3 = 9 square centimetres."
+        },
+        {
+          "option": "12 cm²",
+          "explanation": "Not the correct option. 3 × 3 = 9 square centimetres."
+        },
+        {
+          "option": "3 cm²",
+          "explanation": "Not the correct option. 3 × 3 = 9 square centimetres."
+        },
+        {
+          "option": "9 cm²",
+          "explanation": "3 × 3 = 9 square centimetres."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Cork is usually less dense than water.",
+      "optionExplanations": [
+        {
+          "option": "Cork",
+          "explanation": "Cork is usually less dense than water."
+        },
+        {
+          "option": "Iron nail",
+          "explanation": "Not the correct option. Cork is usually less dense than water."
+        },
+        {
+          "option": "Steel spoon",
+          "explanation": "Not the correct option. Cork is usually less dense than water."
+        },
+        {
+          "option": "Stone",
+          "explanation": "Not the correct option. Cork is usually less dense than water."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "A stone is usually denser than water.",
+      "optionExplanations": [
+        {
+          "option": "Dry leaf",
+          "explanation": "Not the correct option. A stone is usually denser than water."
+        },
+        {
+          "option": "Cork",
+          "explanation": "Not the correct option. A stone is usually denser than water."
+        },
+        {
+          "option": "Empty sealed bottle",
+          "explanation": "Not the correct option. A stone is usually denser than water."
+        },
+        {
+          "option": "Stone",
+          "explanation": "A stone is usually denser than water."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Objects less dense than water generally float.",
+      "optionExplanations": [
+        {
+          "option": "Zero always",
+          "explanation": "Not the correct option. Objects less dense than water generally float."
+        },
+        {
+          "option": "Unrelated to water",
+          "explanation": "Not the correct option. Objects less dense than water generally float."
+        },
+        {
+          "option": "Less than water",
+          "explanation": "Objects less dense than water generally float."
+        },
+        {
+          "option": "More than water",
+          "explanation": "Not the correct option. Objects less dense than water generally float."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "An object denser than water sinks when released.",
+      "optionExplanations": [
+        {
+          "option": "Always dissolves",
+          "explanation": "Not the correct option. An object denser than water sinks when released."
+        },
+        {
+          "option": "Sinks",
+          "explanation": "An object denser than water sinks when released."
+        },
+        {
+          "option": "Rises",
+          "explanation": "Not the correct option. An object denser than water sinks when released."
+        },
+        {
+          "option": "Evaporates",
+          "explanation": "Not the correct option. An object denser than water sinks when released."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Density compares mass with volume.",
+      "optionExplanations": [
+        {
+          "option": "Mass per volume",
+          "explanation": "Density compares mass with volume."
+        },
+        {
+          "option": "Volume per time",
+          "explanation": "Not the correct option. Density compares mass with volume."
+        },
+        {
+          "option": "Length per mass",
+          "explanation": "Not the correct option. Density compares mass with volume."
+        },
+        {
+          "option": "Temperature per area",
+          "explanation": "Not the correct option. Density compares mass with volume."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "For equal volumes, the heavier sample is denser.",
+      "optionExplanations": [
+        {
+          "option": "Lighter sample",
+          "explanation": "Not the correct option. For equal volumes, the heavier sample is denser."
+        },
+        {
+          "option": "Always equal",
+          "explanation": "Not the correct option. For equal volumes, the heavier sample is denser."
+        },
+        {
+          "option": "Neither",
+          "explanation": "Not the correct option. For equal volumes, the heavier sample is denser."
+        },
+        {
+          "option": "Heavier sample",
+          "explanation": "For equal volumes, the heavier sample is denser."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Oil stays above water because it is less dense.",
+      "optionExplanations": [
+        {
+          "option": "Oil has no mass",
+          "explanation": "Not the correct option. Oil stays above water because it is less dense."
+        },
+        {
+          "option": "Water is solid",
+          "explanation": "Not the correct option. Oil stays above water because it is less dense."
+        },
+        {
+          "option": "Oil is less dense",
+          "explanation": "Oil stays above water because it is less dense."
+        },
+        {
+          "option": "Oil is always hotter",
+          "explanation": "Not the correct option. Oil stays above water because it is less dense."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Ice is less dense than liquid water, so it floats.",
+      "optionExplanations": [
+        {
+          "option": "Turns to metal",
+          "explanation": "Not the correct option. Ice is less dense than liquid water, so it floats."
+        },
+        {
+          "option": "Floats",
+          "explanation": "Ice is less dense than liquid water, so it floats."
+        },
+        {
+          "option": "Sinks",
+          "explanation": "Not the correct option. Ice is less dense than liquid water, so it floats."
+        },
+        {
+          "option": "Turns to stone",
+          "explanation": "Not the correct option. Ice is less dense than liquid water, so it floats."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A hollow boat shape displaces enough water to float.",
+      "optionExplanations": [
+        {
+          "option": "Hollow boat",
+          "explanation": "A hollow boat shape displaces enough water to float."
+        },
+        {
+          "option": "Small solid ball",
+          "explanation": "Not the correct option. A hollow boat shape displaces enough water to float."
+        },
+        {
+          "option": "Flat solid lump",
+          "explanation": "Not the correct option. A hollow boat shape displaces enough water to float."
+        },
+        {
+          "option": "Tight solid cube",
+          "explanation": "Not the correct option. A hollow boat shape displaces enough water to float."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-007-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Glass is usually denser than water.",
+      "optionExplanations": [
+        {
+          "option": "Cork",
+          "explanation": "Not the correct option. Glass is usually denser than water."
+        },
+        {
+          "option": "Foam",
+          "explanation": "Not the correct option. Glass is usually denser than water."
+        },
+        {
+          "option": "Dry wood",
+          "explanation": "Not the correct option. Glass is usually denser than water."
+        },
+        {
+          "option": "Glass",
+          "explanation": "Glass is usually denser than water."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Lemon juice contains citric acid.",
+      "optionExplanations": [
+        {
+          "option": "Lemon juice",
+          "explanation": "Lemon juice contains citric acid."
+        },
+        {
+          "option": "Soap solution",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        },
+        {
+          "option": "Baking soda solution",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        },
+        {
+          "option": "Toothpaste",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Soap solution is usually alkaline.",
+      "optionExplanations": [
+        {
+          "option": "Vinegar",
+          "explanation": "Not the correct option. Soap solution is usually alkaline."
+        },
+        {
+          "option": "Lemon juice",
+          "explanation": "Not the correct option. Soap solution is usually alkaline."
+        },
+        {
+          "option": "Orange juice",
+          "explanation": "Not the correct option. Soap solution is usually alkaline."
+        },
+        {
+          "option": "Soap solution",
+          "explanation": "Soap solution is usually alkaline."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Litmus paper changes colour in acids and alkalis.",
+      "optionExplanations": [
+        {
+          "option": "Thermometer",
+          "explanation": "Not the correct option. Litmus paper changes colour in acids and alkalis."
+        },
+        {
+          "option": "Clock",
+          "explanation": "Not the correct option. Litmus paper changes colour in acids and alkalis."
+        },
+        {
+          "option": "Litmus paper",
+          "explanation": "Litmus paper changes colour in acids and alkalis."
+        },
+        {
+          "option": "Ruler",
+          "explanation": "Not the correct option. Litmus paper changes colour in acids and alkalis."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Acids turn blue litmus paper red.",
+      "optionExplanations": [
+        {
+          "option": "Clear",
+          "explanation": "Not the correct option. Acids turn blue litmus paper red."
+        },
+        {
+          "option": "Red",
+          "explanation": "Acids turn blue litmus paper red."
+        },
+        {
+          "option": "Blue",
+          "explanation": "Not the correct option. Acids turn blue litmus paper red."
+        },
+        {
+          "option": "Black",
+          "explanation": "Not the correct option. Acids turn blue litmus paper red."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Alkalis turn red litmus paper blue.",
+      "optionExplanations": [
+        {
+          "option": "Blue",
+          "explanation": "Alkalis turn red litmus paper blue."
+        },
+        {
+          "option": "Red",
+          "explanation": "Not the correct option. Alkalis turn red litmus paper blue."
+        },
+        {
+          "option": "White",
+          "explanation": "Not the correct option. Alkalis turn red litmus paper blue."
+        },
+        {
+          "option": "Clear",
+          "explanation": "Not the correct option. Alkalis turn red litmus paper blue."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "A neutral solution has a pH of 7.",
+      "optionExplanations": [
+        {
+          "option": "1",
+          "explanation": "Not the correct option. A neutral solution has a pH of 7."
+        },
+        {
+          "option": "3",
+          "explanation": "Not the correct option. A neutral solution has a pH of 7."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. A neutral solution has a pH of 7."
+        },
+        {
+          "option": "7",
+          "explanation": "A neutral solution has a pH of 7."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Vinegar contains acetic acid.",
+      "optionExplanations": [
+        {
+          "option": "Baking soda solution",
+          "explanation": "Not the correct option. Vinegar contains acetic acid."
+        },
+        {
+          "option": "Bleach",
+          "explanation": "Not the correct option. Vinegar contains acetic acid."
+        },
+        {
+          "option": "Vinegar",
+          "explanation": "Vinegar contains acetic acid."
+        },
+        {
+          "option": "Soap solution",
+          "explanation": "Not the correct option. Vinegar contains acetic acid."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Pure water has a pH near 7.",
+      "optionExplanations": [
+        {
+          "option": "Soap",
+          "explanation": "Not the correct option. Pure water has a pH near 7."
+        },
+        {
+          "option": "Water",
+          "explanation": "Pure water has a pH near 7."
+        },
+        {
+          "option": "Lemon juice",
+          "explanation": "Not the correct option. Pure water has a pH near 7."
+        },
+        {
+          "option": "Vinegar",
+          "explanation": "Not the correct option. Pure water has a pH near 7."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A pH below 7 is acidic.",
+      "optionExplanations": [
+        {
+          "option": "3",
+          "explanation": "A pH below 7 is acidic."
+        },
+        {
+          "option": "7",
+          "explanation": "Not the correct option. A pH below 7 is acidic."
+        },
+        {
+          "option": "9",
+          "explanation": "Not the correct option. A pH below 7 is acidic."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. A pH below 7 is acidic."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-008-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Unknown liquids may be harmful or poisonous.",
+      "optionExplanations": [
+        {
+          "option": "Always sweet",
+          "explanation": "Not the correct option. Unknown liquids may be harmful or poisonous."
+        },
+        {
+          "option": "Always water",
+          "explanation": "Not the correct option. Unknown liquids may be harmful or poisonous."
+        },
+        {
+          "option": "Cannot react",
+          "explanation": "Not the correct option. Unknown liquids may be harmful or poisonous."
+        },
+        {
+          "option": "May be harmful",
+          "explanation": "Unknown liquids may be harmful or poisonous."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The Sun is the star at the centre of our Solar System.",
+      "optionExplanations": [
+        {
+          "option": "Sun",
+          "explanation": "The Sun is the star at the centre of our Solar System."
+        },
+        {
+          "option": "Moon",
+          "explanation": "Not the correct option. The Sun is the star at the centre of our Solar System."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Not the correct option. The Sun is the star at the centre of our Solar System."
+        },
+        {
+          "option": "Jupiter",
+          "explanation": "Not the correct option. The Sun is the star at the centre of our Solar System."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Mercury is the nearest planet to the Sun.",
+      "optionExplanations": [
+        {
+          "option": "Venus",
+          "explanation": "Not the correct option. Mercury is the nearest planet to the Sun."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Not the correct option. Mercury is the nearest planet to the Sun."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. Mercury is the nearest planet to the Sun."
+        },
+        {
+          "option": "Mercury",
+          "explanation": "Mercury is the nearest planet to the Sun."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Saturn has a prominent system of rings.",
+      "optionExplanations": [
+        {
+          "option": "Mercury",
+          "explanation": "Not the correct option. Saturn has a prominent system of rings."
+        },
+        {
+          "option": "Venus",
+          "explanation": "Not the correct option. Saturn has a prominent system of rings."
+        },
+        {
+          "option": "Saturn",
+          "explanation": "Saturn has a prominent system of rings."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. Saturn has a prominent system of rings."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Earth is the planet we live on.",
+      "optionExplanations": [
+        {
+          "option": "Venus",
+          "explanation": "Not the correct option. Earth is the planet we live on."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Earth is the planet we live on."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. Earth is the planet we live on."
+        },
+        {
+          "option": "Neptune",
+          "explanation": "Not the correct option. Earth is the planet we live on."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Jupiter is the largest planet in our Solar System.",
+      "optionExplanations": [
+        {
+          "option": "Jupiter",
+          "explanation": "Jupiter is the largest planet in our Solar System."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Not the correct option. Jupiter is the largest planet in our Solar System."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. Jupiter is the largest planet in our Solar System."
+        },
+        {
+          "option": "Mercury",
+          "explanation": "Not the correct option. Jupiter is the largest planet in our Solar System."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "Earth travels around the Sun.",
+      "optionExplanations": [
+        {
+          "option": "Moon",
+          "explanation": "Not the correct option. Earth travels around the Sun."
+        },
+        {
+          "option": "Jupiter",
+          "explanation": "Not the correct option. Earth travels around the Sun."
+        },
+        {
+          "option": "Polaris",
+          "explanation": "Not the correct option. Earth travels around the Sun."
+        },
+        {
+          "option": "Sun",
+          "explanation": "Earth travels around the Sun."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Earth's rotation makes day and night.",
+      "optionExplanations": [
+        {
+          "option": "Clouds",
+          "explanation": "Not the correct option. Earth's rotation makes day and night."
+        },
+        {
+          "option": "Seasons",
+          "explanation": "Not the correct option. Earth's rotation makes day and night."
+        },
+        {
+          "option": "Earth's rotation",
+          "explanation": "Earth's rotation makes day and night."
+        },
+        {
+          "option": "Moon phases",
+          "explanation": "Not the correct option. Earth's rotation makes day and night."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "The Moon is Earth's natural satellite.",
+      "optionExplanations": [
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. The Moon is Earth's natural satellite."
+        },
+        {
+          "option": "Moon",
+          "explanation": "The Moon is Earth's natural satellite."
+        },
+        {
+          "option": "Sun",
+          "explanation": "Not the correct option. The Moon is Earth's natural satellite."
+        },
+        {
+          "option": "Venus",
+          "explanation": "Not the correct option. The Moon is Earth's natural satellite."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Mars is nicknamed the Red Planet.",
+      "optionExplanations": [
+        {
+          "option": "Mars",
+          "explanation": "Mars is nicknamed the Red Planet."
+        },
+        {
+          "option": "Neptune",
+          "explanation": "Not the correct option. Mars is nicknamed the Red Planet."
+        },
+        {
+          "option": "Uranus",
+          "explanation": "Not the correct option. Mars is nicknamed the Red Planet."
+        },
+        {
+          "option": "Saturn",
+          "explanation": "Not the correct option. Mars is nicknamed the Red Planet."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-009-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The order is Mercury, Venus, Earth, then Mars.",
+      "optionExplanations": [
+        {
+          "option": "Venus, Mercury, Mars, Earth",
+          "explanation": "Not the correct option. The order is Mercury, Venus, Earth, then Mars."
+        },
+        {
+          "option": "Earth, Venus, Mars, Mercury",
+          "explanation": "Not the correct option. The order is Mercury, Venus, Earth, then Mars."
+        },
+        {
+          "option": "Mars, Earth, Venus, Mercury",
+          "explanation": "Not the correct option. The order is Mercury, Venus, Earth, then Mars."
+        },
+        {
+          "option": "Mercury, Venus, Earth, Mars",
+          "explanation": "The order is Mercury, Venus, Earth, then Mars."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A pulley has a grooved wheel that guides a rope.",
+      "optionExplanations": [
+        {
+          "option": "Grooved wheel for rope",
+          "explanation": "A pulley has a grooved wheel that guides a rope."
+        },
+        {
+          "option": "Battery",
+          "explanation": "Not the correct option. A pulley has a grooved wheel that guides a rope."
+        },
+        {
+          "option": "Cylinder for measuring",
+          "explanation": "Not the correct option. A pulley has a grooved wheel that guides a rope."
+        },
+        {
+          "option": "Magnet",
+          "explanation": "Not the correct option. A pulley has a grooved wheel that guides a rope."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-02": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "A fixed pulley changes the direction of a pull.",
+      "optionExplanations": [
+        {
+          "option": "Object mass",
+          "explanation": "Not the correct option. A fixed pulley changes the direction of a pull."
+        },
+        {
+          "option": "Rope colour",
+          "explanation": "Not the correct option. A fixed pulley changes the direction of a pull."
+        },
+        {
+          "option": "Gravity",
+          "explanation": "Not the correct option. A fixed pulley changes the direction of a pull."
+        },
+        {
+          "option": "Direction of force",
+          "explanation": "A fixed pulley changes the direction of a pull."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-03": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Flagpoles use pulleys to raise flags.",
+      "optionExplanations": [
+        {
+          "option": "Pencil case",
+          "explanation": "Not the correct option. Flagpoles use pulleys to raise flags."
+        },
+        {
+          "option": "Book cover",
+          "explanation": "Not the correct option. Flagpoles use pulleys to raise flags."
+        },
+        {
+          "option": "Flagpole",
+          "explanation": "Flagpoles use pulleys to raise flags."
+        },
+        {
+          "option": "Dinner plate",
+          "explanation": "Not the correct option. Flagpoles use pulleys to raise flags."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-04": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "A rope runs along the groove of the wheel.",
+      "optionExplanations": [
+        {
+          "option": "Water",
+          "explanation": "Not the correct option. A rope runs along the groove of the wheel."
+        },
+        {
+          "option": "Rope",
+          "explanation": "A rope runs along the groove of the wheel."
+        },
+        {
+          "option": "Sand",
+          "explanation": "Not the correct option. A rope runs along the groove of the wheel."
+        },
+        {
+          "option": "Paper",
+          "explanation": "Not the correct option. A rope runs along the groove of the wheel."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A movable pulley can reduce the effort needed.",
+      "optionExplanations": [
+        {
+          "option": "Effort needed",
+          "explanation": "A movable pulley can reduce the effort needed."
+        },
+        {
+          "option": "Gravity",
+          "explanation": "Not the correct option. A movable pulley can reduce the effort needed."
+        },
+        {
+          "option": "Day length",
+          "explanation": "Not the correct option. A movable pulley can reduce the effort needed."
+        },
+        {
+          "option": "Load volume",
+          "explanation": "Not the correct option. A movable pulley can reduce the effort needed."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-06": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "The load is the object being lifted.",
+      "optionExplanations": [
+        {
+          "option": "Pivot",
+          "explanation": "Not the correct option. The load is the object being lifted."
+        },
+        {
+          "option": "Lens",
+          "explanation": "Not the correct option. The load is the object being lifted."
+        },
+        {
+          "option": "Indicator",
+          "explanation": "Not the correct option. The load is the object being lifted."
+        },
+        {
+          "option": "Load",
+          "explanation": "The load is the object being lifted."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-07": {
+      "type": "mc",
+      "correct": 2,
+      "explanation": "Effort is the force applied to lift a load.",
+      "optionExplanations": [
+        {
+          "option": "Temperature",
+          "explanation": "Not the correct option. Effort is the force applied to lift a load."
+        },
+        {
+          "option": "Area",
+          "explanation": "Not the correct option. Effort is the force applied to lift a load."
+        },
+        {
+          "option": "Effort",
+          "explanation": "Effort is the force applied to lift a load."
+        },
+        {
+          "option": "Density",
+          "explanation": "Not the correct option. Effort is the force applied to lift a load."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-08": {
+      "type": "mc",
+      "correct": 1,
+      "explanation": "Pulleys help lift heavy building materials.",
+      "optionExplanations": [
+        {
+          "option": "Make food",
+          "explanation": "Not the correct option. Pulleys help lift heavy building materials."
+        },
+        {
+          "option": "Lift materials",
+          "explanation": "Pulleys help lift heavy building materials."
+        },
+        {
+          "option": "Measure pH",
+          "explanation": "Not the correct option. Pulleys help lift heavy building materials."
+        },
+        {
+          "option": "Grow seeds",
+          "explanation": "Not the correct option. Pulleys help lift heavy building materials."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Check the rope and wheel for damage.",
+      "optionExplanations": [
+        {
+          "option": "Rope and wheel",
+          "explanation": "Check the rope and wheel for damage."
+        },
+        {
+          "option": "Paint colour",
+          "explanation": "Not the correct option. Check the rope and wheel for damage."
+        },
+        {
+          "option": "Clock",
+          "explanation": "Not the correct option. Check the rope and wheel for damage."
+        },
+        {
+          "option": "Label only",
+          "explanation": "Not the correct option. Check the rope and wheel for damage."
+        }
+      ]
+    },
+    "SCI-PM3-EXC-010-10": {
+      "type": "mc",
+      "correct": 3,
+      "explanation": "More supporting rope sections can reduce the effort required.",
+      "optionExplanations": [
+        {
+          "option": "Broken wheel",
+          "explanation": "Not the correct option. More supporting rope sections can reduce the effort required."
+        },
+        {
+          "option": "Loose knot",
+          "explanation": "Not the correct option. More supporting rope sections can reduce the effort required."
+        },
+        {
+          "option": "Single fixed pulley",
+          "explanation": "Not the correct option. More supporting rope sections can reduce the effort required."
+        },
+        {
+          "option": "More supporting rope sections",
+          "explanation": "More supporting rope sections can reduce the effort required."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-01": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A measuring cylinder measures liquid volume.",
+      "optionExplanations": [
+        {
+          "option": "Measuring cylinder",
+          "explanation": "A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Thermometer",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Ruler",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        },
+        {
+          "option": "Balance",
+          "explanation": "Not the correct option. A measuring cylinder measures liquid volume."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-02": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Read and follow instructions before using equipment.",
+      "optionExplanations": [
+        {
+          "option": "Read instructions carefully",
+          "explanation": "Read and follow instructions before using equipment."
+        },
+        {
+          "option": "Taste the materials",
+          "explanation": "Not the correct option. Read and follow instructions before using equipment."
+        },
+        {
+          "option": "Run around the room",
+          "explanation": "Not the correct option. Read and follow instructions before using equipment."
+        },
+        {
+          "option": "Mix all chemicals",
+          "explanation": "Not the correct option. Read and follow instructions before using equipment."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-03": {
+      "type": "tf",
+      "explanation": "A prediction is made before an investigation.",
+      "expected": true,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "A prediction is made before an investigation."
+        },
+        {
+          "option": "False",
+          "explanation": "Not correct. A prediction is made before an investigation."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-04": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Report broken glass and let the teacher handle it.",
+      "optionExplanations": [
+        {
+          "option": "Tell the teacher about broken glass",
+          "explanation": "Report broken glass and let the teacher handle it."
+        },
+        {
+          "option": "Touch unknown liquids",
+          "explanation": "Not the correct option. Report broken glass and let the teacher handle it."
+        },
+        {
+          "option": "Smell chemicals closely",
+          "explanation": "Not the correct option. Report broken glass and let the teacher handle it."
+        },
+        {
+          "option": "Eat during an experiment",
+          "explanation": "Not the correct option. Report broken glass and let the teacher handle it."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-05": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Incisors cut and bite food.",
+      "optionExplanations": [
+        {
+          "option": "Incisors",
+          "explanation": "Incisors cut and bite food."
+        },
+        {
+          "option": "Canines",
+          "explanation": "Not the correct option. Incisors cut and bite food."
+        },
+        {
+          "option": "Molars",
+          "explanation": "Not the correct option. Incisors cut and bite food."
+        },
+        {
+          "option": "Premolars",
+          "explanation": "Not the correct option. Incisors cut and bite food."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-06": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Molars have broad surfaces that crush and grind food.",
+      "optionExplanations": [
+        {
+          "option": "Molars",
+          "explanation": "Molars have broad surfaces that crush and grind food."
+        },
+        {
+          "option": "Incisors",
+          "explanation": "Not the correct option. Molars have broad surfaces that crush and grind food."
+        },
+        {
+          "option": "Canines",
+          "explanation": "Not the correct option. Molars have broad surfaces that crush and grind food."
+        },
+        {
+          "option": "Milk teeth",
+          "explanation": "Not the correct option. Molars have broad surfaces that crush and grind food."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-07": {
+      "type": "tf",
+      "explanation": "Food travels from the mouth through the oesophagus to the stomach.",
+      "expected": false,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "Not correct. Food travels from the mouth through the oesophagus to the stomach."
+        },
+        {
+          "option": "False",
+          "explanation": "Food travels from the mouth through the oesophagus to the stomach."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-08": {
+      "type": "order",
+      "explanation": "Food travels through the mouth, oesophagus, stomach, then small intestine.",
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        {
+          "option": "Mouth",
+          "explanation": "Step 1. Food travels through the mouth, oesophagus, stomach, then small intestine."
+        },
+        {
+          "option": "Oesophagus",
+          "explanation": "Step 2. Food travels through the mouth, oesophagus, stomach, then small intestine."
+        },
+        {
+          "option": "Stomach",
+          "explanation": "Step 3. Food travels through the mouth, oesophagus, stomach, then small intestine."
+        },
+        {
+          "option": "Small intestine",
+          "explanation": "Step 4. Food travels through the mouth, oesophagus, stomach, then small intestine."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-09": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Cows eat plants, so they are herbivores.",
+      "optionExplanations": [
+        {
+          "option": "Cow",
+          "explanation": "Cows eat plants, so they are herbivores."
+        },
+        {
+          "option": "Tiger",
+          "explanation": "Not the correct option. Cows eat plants, so they are herbivores."
+        },
+        {
+          "option": "Eagle",
+          "explanation": "Not the correct option. Cows eat plants, so they are herbivores."
+        },
+        {
+          "option": "Shark",
+          "explanation": "Not the correct option. Cows eat plants, so they are herbivores."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-10": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "An omnivore eats both plants and animals.",
+      "optionExplanations": [
+        {
+          "option": "Omnivore",
+          "explanation": "An omnivore eats both plants and animals."
+        },
+        {
+          "option": "Herbivore",
+          "explanation": "Not the correct option. An omnivore eats both plants and animals."
+        },
+        {
+          "option": "Carnivore",
+          "explanation": "Not the correct option. An omnivore eats both plants and animals."
+        },
+        {
+          "option": "Producer",
+          "explanation": "Not the correct option. An omnivore eats both plants and animals."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-11": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Sharp canines help carnivores grip and tear flesh.",
+      "optionExplanations": [
+        {
+          "option": "To tear meat",
+          "explanation": "Sharp canines help carnivores grip and tear flesh."
+        },
+        {
+          "option": "To grind grass",
+          "explanation": "Not the correct option. Sharp canines help carnivores grip and tear flesh."
+        },
+        {
+          "option": "To suck nectar",
+          "explanation": "Not the correct option. Sharp canines help carnivores grip and tear flesh."
+        },
+        {
+          "option": "To crush seeds only",
+          "explanation": "Not the correct option. Sharp canines help carnivores grip and tear flesh."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-12": {
+      "type": "match",
+      "explanation": "Cows eat plants, tigers eat animals, and chickens eat both.",
+      "matches": [
+        0,
+        1,
+        2
+      ],
+      "optionExplanations": [
+        {
+          "option": "Herbivore",
+          "explanation": "Matches Cow. Cows eat plants, tigers eat animals, and chickens eat both."
+        },
+        {
+          "option": "Carnivore",
+          "explanation": "Matches Tiger. Cows eat plants, tigers eat animals, and chickens eat both."
+        },
+        {
+          "option": "Omnivore",
+          "explanation": "Matches Chicken. Cows eat plants, tigers eat animals, and chickens eat both."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-13": {
+      "type": "tf",
+      "explanation": "Ferns commonly reproduce using spores.",
+      "expected": false,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "Not correct. Ferns commonly reproduce using spores."
+        },
+        {
+          "option": "False",
+          "explanation": "Ferns commonly reproduce using spores."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-14": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Ferns reproduce by spores rather than seeds.",
+      "optionExplanations": [
+        {
+          "option": "Fern",
+          "explanation": "Ferns reproduce by spores rather than seeds."
+        },
+        {
+          "option": "Mango tree",
+          "explanation": "Not the correct option. Ferns reproduce by spores rather than seeds."
+        },
+        {
+          "option": "Sunflower",
+          "explanation": "Not the correct option. Ferns reproduce by spores rather than seeds."
+        },
+        {
+          "option": "Papaya tree",
+          "explanation": "Not the correct option. Ferns reproduce by spores rather than seeds."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-15": {
+      "type": "order",
+      "explanation": "A seed grows into a seedling, then a mature plant that produces fruit and seeds.",
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        {
+          "option": "Seed",
+          "explanation": "Step 1. A seed grows into a seedling, then a mature plant that produces fruit and seeds."
+        },
+        {
+          "option": "Seedling",
+          "explanation": "Step 2. A seed grows into a seedling, then a mature plant that produces fruit and seeds."
+        },
+        {
+          "option": "Mature flowering plant",
+          "explanation": "Step 3. A seed grows into a seedling, then a mature plant that produces fruit and seeds."
+        },
+        {
+          "option": "Fruit with seeds",
+          "explanation": "Step 4. A seed grows into a seedling, then a mature plant that produces fruit and seeds."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-16": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "4 × 4 = 16 cm².",
+      "optionExplanations": [
+        {
+          "option": "16",
+          "explanation": "4 × 4 = 16 cm²."
+        },
+        {
+          "option": "8",
+          "explanation": "Not the correct option. 4 × 4 = 16 cm²."
+        },
+        {
+          "option": "12",
+          "explanation": "Not the correct option. 4 × 4 = 16 cm²."
+        },
+        {
+          "option": "20",
+          "explanation": "Not the correct option. 4 × 4 = 16 cm²."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-17": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Area = length × width = 6 × 3 = 18 cm².",
+      "optionExplanations": [
+        {
+          "option": "18 cm²",
+          "explanation": "Area = length × width = 6 × 3 = 18 cm²."
+        },
+        {
+          "option": "9 cm²",
+          "explanation": "Not the correct option. Area = length × width = 6 × 3 = 18 cm²."
+        },
+        {
+          "option": "18 cm",
+          "explanation": "Not the correct option. Area = length × width = 6 × 3 = 18 cm²."
+        },
+        {
+          "option": "36 cm²",
+          "explanation": "Not the correct option. Area = length × width = 6 × 3 = 18 cm²."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-18": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "47 − 35 = 12 cm³.",
+      "optionExplanations": [
+        {
+          "option": "12",
+          "explanation": "47 − 35 = 12 cm³."
+        },
+        {
+          "option": "47",
+          "explanation": "Not the correct option. 47 − 35 = 12 cm³."
+        },
+        {
+          "option": "35",
+          "explanation": "Not the correct option. 47 − 35 = 12 cm³."
+        },
+        {
+          "option": "82",
+          "explanation": "Not the correct option. 47 − 35 = 12 cm³."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-19": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Liquid volume can be measured in millilitres (mL).",
+      "optionExplanations": [
+        {
+          "option": "Millilitres",
+          "explanation": "Liquid volume can be measured in millilitres (mL)."
+        },
+        {
+          "option": "Centimetres",
+          "explanation": "Not the correct option. Liquid volume can be measured in millilitres (mL)."
+        },
+        {
+          "option": "Grams",
+          "explanation": "Not the correct option. Liquid volume can be measured in millilitres (mL)."
+        },
+        {
+          "option": "Degrees Celsius",
+          "explanation": "Not the correct option. Liquid volume can be measured in millilitres (mL)."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-20": {
+      "type": "tf",
+      "explanation": "Objects less dense than water float.",
+      "expected": true,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "Objects less dense than water float."
+        },
+        {
+          "option": "False",
+          "explanation": "Not correct. Objects less dense than water float."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-21": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A steel nail is denser than water and sinks.",
+      "optionExplanations": [
+        {
+          "option": "Steel nail",
+          "explanation": "A steel nail is denser than water and sinks."
+        },
+        {
+          "option": "Cork",
+          "explanation": "Not the correct option. A steel nail is denser than water and sinks."
+        },
+        {
+          "option": "Dry leaf",
+          "explanation": "Not the correct option. A steel nail is denser than water and sinks."
+        },
+        {
+          "option": "Empty sealed plastic bottle",
+          "explanation": "Not the correct option. A steel nail is denser than water and sinks."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-22": {
+      "type": "match",
+      "explanation": "Cork floats, steel sinks, and oil floats as a separate layer.",
+      "matches": [
+        0,
+        1,
+        2
+      ],
+      "optionExplanations": [
+        {
+          "option": "Floats",
+          "explanation": "Matches Cork. Cork floats, steel sinks, and oil floats as a separate layer."
+        },
+        {
+          "option": "Sinks",
+          "explanation": "Matches Steel nail. Cork floats, steel sinks, and oil floats as a separate layer."
+        },
+        {
+          "option": "Forms a top layer",
+          "explanation": "Matches Cooking oil. Cork floats, steel sinks, and oil floats as a separate layer."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-23": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Lemon juice contains citric acid.",
+      "optionExplanations": [
+        {
+          "option": "Lemon juice",
+          "explanation": "Lemon juice contains citric acid."
+        },
+        {
+          "option": "Soap solution",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        },
+        {
+          "option": "Baking soda solution",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        },
+        {
+          "option": "Toothpaste",
+          "explanation": "Not the correct option. Lemon juice contains citric acid."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-24": {
+      "type": "tf",
+      "explanation": "Acids turn blue litmus red.",
+      "expected": true,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "Acids turn blue litmus red."
+        },
+        {
+          "option": "False",
+          "explanation": "Not correct. Acids turn blue litmus red."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-25": {
+      "type": "match",
+      "explanation": "Lemon juice is acidic, soap solution is alkaline, and pure water is neutral.",
+      "matches": [
+        0,
+        1,
+        2
+      ],
+      "optionExplanations": [
+        {
+          "option": "Acidic",
+          "explanation": "Matches Lemon juice. Lemon juice is acidic, soap solution is alkaline, and pure water is neutral."
+        },
+        {
+          "option": "Alkaline",
+          "explanation": "Matches Soap solution. Lemon juice is acidic, soap solution is alkaline, and pure water is neutral."
+        },
+        {
+          "option": "Neutral",
+          "explanation": "Matches Pure water. Lemon juice is acidic, soap solution is alkaline, and pure water is neutral."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-26": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "Mercury is the closest planet to the Sun.",
+      "optionExplanations": [
+        {
+          "option": "Mercury",
+          "explanation": "Mercury is the closest planet to the Sun."
+        },
+        {
+          "option": "Venus",
+          "explanation": "Not the correct option. Mercury is the closest planet to the Sun."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Not the correct option. Mercury is the closest planet to the Sun."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Not the correct option. Mercury is the closest planet to the Sun."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-27": {
+      "type": "order",
+      "explanation": "The first four planets are Mercury, Venus, Earth and Mars.",
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        {
+          "option": "Mercury",
+          "explanation": "Step 1. The first four planets are Mercury, Venus, Earth and Mars."
+        },
+        {
+          "option": "Venus",
+          "explanation": "Step 2. The first four planets are Mercury, Venus, Earth and Mars."
+        },
+        {
+          "option": "Earth",
+          "explanation": "Step 3. The first four planets are Mercury, Venus, Earth and Mars."
+        },
+        {
+          "option": "Mars",
+          "explanation": "Step 4. The first four planets are Mercury, Venus, Earth and Mars."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-28": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "The Sun is our nearest star, so it appears much larger.",
+      "optionExplanations": [
+        {
+          "option": "It is much closer to Earth",
+          "explanation": "The Sun is our nearest star, so it appears much larger."
+        },
+        {
+          "option": "It is the only star",
+          "explanation": "Not the correct option. The Sun is our nearest star, so it appears much larger."
+        },
+        {
+          "option": "Other stars are planets",
+          "explanation": "Not the correct option. The Sun is our nearest star, so it appears much larger."
+        },
+        {
+          "option": "It has no light",
+          "explanation": "Not the correct option. The Sun is our nearest star, so it appears much larger."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-29": {
+      "type": "tf",
+      "explanation": "A fixed pulley changes the direction of the pulling force; it does not remove weight.",
+      "expected": false,
+      "optionExplanations": [
+        {
+          "option": "True",
+          "explanation": "Not correct. A fixed pulley changes the direction of the pulling force; it does not remove weight."
+        },
+        {
+          "option": "False",
+          "explanation": "A fixed pulley changes the direction of the pulling force; it does not remove weight."
+        }
+      ]
+    },
+    "SCI-PM3-EXM-001-30": {
+      "type": "mc",
+      "correct": 0,
+      "explanation": "A flagpole commonly uses a pulley to raise and lower the flag.",
+      "optionExplanations": [
+        {
+          "option": "Pulley",
+          "explanation": "A flagpole commonly uses a pulley to raise and lower the flag."
+        },
+        {
+          "option": "Wedge",
+          "explanation": "Not the correct option. A flagpole commonly uses a pulley to raise and lower the flag."
+        },
+        {
+          "option": "Screw",
+          "explanation": "Not the correct option. A flagpole commonly uses a pulley to raise and lower the flag."
+        },
+        {
+          "option": "Inclined plane",
+          "explanation": "Not the correct option. A flagpole commonly uses a pulley to raise and lower the flag."
+        }
+      ]
+    }
+  }
+}
