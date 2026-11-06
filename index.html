@@ -1091,7 +1091,8 @@ function restart(){start(version)}
 const SCORE_STORAGE_KEY='quiz_room_scores_unique_ids_v1';
 let scoreAttemptRecorded=false,latestScoreKey='';
 function cleanScorePart(value){return String(value||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'').slice(0,28)||'unknown'}
-function loadScoreHistory(){try{const data=JSON.parse(localStorage.getItem(SCORE_STORAGE_KEY)||'{}');return data&&typeof data==='object'&&!Array.isArray(data)?data:{}}catch(e){return {}}}
+let qrScoreHistory={};
+function loadScoreHistory(){return qrScoreHistory;}
 function scoreDateParts(date){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kuala_Lumpur',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));return {day:p.year+p.month+p.day,time:p.year+'-'+p.month+'-'+p.day+' '+p.hour+':'+p.minute+':'+p.second+' MYT'}}
 function recordScoreAttempt(remark=''){ 
  if(scoreAttemptRecorded||!questions.length)return;
@@ -1106,10 +1107,10 @@ function recordScoreAttempt(remark=''){
  const unanswered=questions.filter(q=>!Object.hasOwn(questionOutcomes,q.id)).map(q=>q.id);
  const correct=questions.filter(q=>questionOutcomes[q.id]?.correct).map(q=>q.id);
  const responses=questions.filter(q=>Object.hasOwn(questionOutcomes,q.id)).map(q=>({questionId:q.id,selected:questionOutcomes[q.id].choice,correct:questionOutcomes[q.id].correct}));
- history[filename]={name,subject,chapter,level:selectedLevel||'',attempts:[...attempts,{time:now.time,score,total:questions.length,correct,incorrect,unanswered,responses,version:chapter,level:selectedLevel||'',...(remark?{remark}:{})}]};
+ history[filename]={name,subject,chapter,level:selectedLevel||'',attempts:[...attempts,{attemptId:crypto.randomUUID(),time:now.time,score,total:questions.length,correct,incorrect,unanswered,responses,version:chapter,level:selectedLevel||'',...(remark?{remark}:{})}]};
  latestScoreKey=filename;
- try{localStorage.setItem(SCORE_STORAGE_KEY,JSON.stringify(history))}catch(e){console.warn('Score history could not be saved',e)}
- if(window.quizRoomSaveGoogleScore)window.quizRoomSaveGoogleScore(latestScoreKey);else $('driveSaveStatus').textContent='Google Drive unavailable. Score retained locally.';
+ qrScoreHistory=history;
+ if(window.quizRoomSaveGoogleScore)window.quizRoomSaveGoogleScore(latestScoreKey);else $('driveSaveStatus').textContent='Google Drive unavailable. Score could not be saved.';
 }
 const availableSubjects=names.filter(n=>schoolLevels.some(level=>availableCategories(level,n).length>0));
 $('subjects').innerHTML=availableSubjects.map(n=>'<button class="tile" onclick="choose(\''+n+'\')">'+n+'</button>').join('');let initial=new URLSearchParams(location.search).get('subject');if(initial){let match=availableSubjects.find(n=>n.toLowerCase()===initial.toLowerCase());if(match)choose(match)}
@@ -1259,8 +1260,15 @@ function qrCropCancel(){qrCropImage=null;$('qrCropModal').classList.add('hidden'
 function qrCropApply(){qrCropDraw();qrCroppedPhoto=$('qrCropCanvas').toDataURL('image/jpeg',0.82);qrCropImage=null;$('qrCropModal').classList.add('hidden');$('qrCropModal').style.display='none';$('qrPhotoPreview').src=qrCroppedPhoto;$('qrPhotoPreview').hidden=false;$('qrProfileStatus').textContent='Photo cropped. Select Save profile to keep it.';$('qrPhoto').value=''}
 (function(){const canvas=$('qrCropCanvas');canvas.addEventListener('pointerdown',e=>{if(!qrCropImage)return;qrCropPointer={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointermove',e=>{if(!qrCropPointer)return;const factor=canvas.width/canvas.getBoundingClientRect().width;qrCropX+=(e.clientX-qrCropPointer.x)*factor;qrCropY+=(e.clientY-qrCropPointer.y)*factor;qrCropPointer={x:e.clientX,y:e.clientY};qrCropDraw()});const end=()=>qrCropPointer=null;canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end)})();
 async function qrSaveProfile(){const status=$('qrProfileStatus');status.textContent='Saving…';const next={...qrProfile,name:$('qrDisplayName').value.trim()};if(qrCroppedPhoto)next.photo=qrCroppedPhoto;try{await window.qrDriveWrite('Profile','profile.json',JSON.stringify(next));qrProfile=next;qrCroppedPhoto=null;status.textContent='Profile saved.';qrRender();qrProfileSection('view')}catch(e){status.textContent='Could not save: '+e.message}}
-function qrLogout(){window.qrGoogleLogout?.();qrProfile={name:'',photo:''};qrNotes=[];show('home')}
-async function qrLoadAccount(){qrProfile={name:'',photo:''};qrNotes=[];try{const [p,n]=await Promise.all([window.qrDriveRead('Profile','profile.json'),window.qrDriveRead('Notes','notes.json')]);if(p)qrProfile=JSON.parse(p);if(n)qrNotes=JSON.parse(n)}catch(e){console.warn('Dashboard data could not load',e)}qrRender()}
+function qrLogout(){window.qrGoogleLogout?.();qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};show('home')}
+async function qrLoadAccount(){
+ qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};
+ const [p,n,scores]=await Promise.all([window.qrDriveRead('Profile','profile.json'),window.qrDriveRead('Notes','notes.json'),window.qrLoadScores()]);
+ if(p)qrProfile=JSON.parse(p);
+ if(n)qrNotes=JSON.parse(n);
+ qrScoreHistory=scores;
+ qrRender();
+}
 
 </script>
 <div id="googleGate" role="region" aria-label="Google account login"><h1>Quiz time</h1><p>Choose your Google account to continue.</p><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div></div>
@@ -1279,15 +1287,42 @@ function render(){accounts.replaceChildren();for(const a of saved()){const b=doc
 function setBusy(v){busy=v;accounts.querySelectorAll("button").forEach(b=>b.disabled=v);other.disabled=v;if(v){say("Connecting to Google…");other.innerHTML='<span class="spinner"></span>Connecting'}else{render()}}
 async function googleReady(){if(window.google?.accounts?.oauth2)return;await new Promise((resolve,reject)=>{const e=document.createElement("script");e.src="https://accounts.google.com/gsi/client";e.async=true;e.onload=resolve;e.onerror=()=>reject(Error("Google sign-in could not load."));document.head.append(e)})}
 async function login(email=""){if(busy)return;setBusy(true);pending=email.toLowerCase();try{await googleReady();if(!client)client=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,callback:handleToken,error_callback:()=>{setBusy(false);say("Google sign-in was cancelled or blocked.")}});client.requestAccessToken({prompt:email?"":"select_account",...(email?{hint:email}:{})})}catch(e){setBusy(false);say(e.message)}}
-async function handleToken(response){try{if(!response.access_token)throw Error("Google authentication was not completed.");const scopes=(response.scope||"").split(/\s+/);if(!SCOPES.split(" ").every(x=>scopes.includes(x)))throw Error("Google Drive permission is required.");const u=await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{headers:{Authorization:"Bearer "+response.access_token},cache:"no-store"});if(!u.ok)throw Error("Could not verify Google account.");const info=await u.json();if(!info.email||info.email_verified===false)throw Error("Google email was not verified.");if(pending&&pending!==info.email.toLowerCase())throw Error("Different Google account selected. Please choose the matching account.");token=response.access_token;expires=Date.now()+Math.max(0,(Number(response.expires_in)||3600)-60)*1000;activeEmail=info.email.toLowerCase();const arr=saved().filter(x=>x.email!==activeEmail);arr.unshift({email:activeEmail,name:info.name||activeEmail});localStorage.setItem(STORE,JSON.stringify(arr.slice(0,12)));gate.classList.add("hidden");document.body.classList.remove("auth-locked");setBusy(false);window.qrLoadAccount?.()}catch(e){token="";activeEmail="";setBusy(false);say(e.message)}}
+async function handleToken(response){try{if(!response.access_token)throw Error("Google authentication was not completed.");const scopes=(response.scope||"").split(/\s+/);if(!SCOPES.split(" ").every(x=>scopes.includes(x)))throw Error("Google Drive permission is required.");const u=await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{headers:{Authorization:"Bearer "+response.access_token},cache:"no-store"});if(!u.ok)throw Error("Could not verify Google account.");const info=await u.json();if(!info.email||info.email_verified===false)throw Error("Google email was not verified.");if(pending&&pending!==info.email.toLowerCase())throw Error("Different Google account selected. Please choose the matching account.");token=response.access_token;expires=Date.now()+Math.max(0,(Number(response.expires_in)||3600)-60)*1000;activeEmail=info.email.toLowerCase();const arr=saved().filter(x=>x.email!==activeEmail);arr.unshift({email:activeEmail,name:info.name||activeEmail});localStorage.setItem(STORE,JSON.stringify(arr.slice(0,12)));await window.qrLoadAccount?.();gate.classList.add("hidden");document.body.classList.remove("auth-locked");setBusy(false)}catch(e){token="";activeEmail="";setBusy(false);say(e.message)}}
 async function api(url,options={}){if(!token||Date.now()>=expires)throw Error("Google Drive session expired. Return to the login page to reconnect.");const r=await fetch(url,{...options,headers:{...(options.headers||{}),Authorization:"Bearer "+token}});if(!r.ok)throw Error("Google Drive save failed ("+r.status+").");return r.json()}
 async function folder(){return qrFolder('Scores')}
+async function readScoreFile(id){
+ const r=await fetch('https://www.googleapis.com/drive/v3/files/'+encodeURIComponent(id)+'?alt=media',{headers:{Authorization:'Bearer '+token},cache:'no-store'});
+ if(!r.ok)throw Error('Google Drive score read failed ('+r.status+').');
+ return r.json();
+}
+async function loadScoresFromDrive(){
+ const parent=await folder(),history={};let pageToken='';
+ do{
+  const url=new URL('https://www.googleapis.com/drive/v3/files');
+  url.searchParams.set('q',"'"+parent+"' in parents and trashed = false and mimeType = 'application/json'");
+  url.searchParams.set('fields','nextPageToken,files(id,name,mimeType)');
+  url.searchParams.set('pageSize','1000');
+  if(pageToken)url.searchParams.set('pageToken',pageToken);
+  const listing=await api(url);
+  for(const file of listing.files||[]){
+   if(!file.name.endsWith('.json'))continue;
+   if(Object.hasOwn(history,file.name))throw Error('Duplicate score filenames found.');
+   const data=await readScoreFile(file.id);
+   if(!data||!Array.isArray(data.attempts))throw Error('Invalid score history file: '+file.name);
+   if(String(data.name||'').toLowerCase()!==activeEmail)continue;
+   history[file.name]=data;
+  }
+  pageToken=listing.nextPageToken||'';
+ }while(pageToken);
+ return history;
+}
+window.qrLoadScores=loadScoresFromDrive;
 function report(entry){const lines=["Name: "+entry.name,"Subject: "+entry.subject,"Level: "+(entry.level||entry.attempts[0]?.level||"Unknown"),"Chapter: "+entry.chapter,""];entry.attempts.forEach((a,i)=>{lines.push("Attempt "+(i+1),"Completed: "+a.time,"Quiz version: "+a.version,"Score: "+Math.round(a.score/a.total*100)+"% ("+a.score+" out of "+a.total+")","Incorrect questions: "+(a.incorrect.length?a.incorrect.join(", "):"None"));if(a.unanswered.length)lines.push("Unanswered questions: "+a.unanswered.join(", "));if(a.remark)lines.push("Remark: "+a.remark);lines.push("")});return lines.join("\n")}
 async function saveScore(scoreKey){
  const indicator=document.getElementById('driveSaveStatus');
  if(!activeEmail){indicator.textContent='Sign in to save your score.';return}
  try{
-  const entry=loadScoreHistory()[scoreKey];if(!entry)throw Error('Score history unavailable in this browser.');
+  const entry=loadScoreHistory()[scoreKey];if(!entry)throw Error('Score history unavailable.');
   const id=await folder();
   const date=(new Date()).toISOString().slice(0,10).replace(/-/g,"");
   const number=String(entry.chapter||"quiz").replace(/[^a-z0-9]+/gi,"").toLowerCase().slice(0,45);
@@ -1299,21 +1334,25 @@ async function saveScore(scoreKey){
   const existing=matches.files?.[0];
   let merged={schemaVersion:1,name:entry.name,subject:entry.subject,level:entry.level||'',chapter:entry.chapter,attempts:[]};
   if(existing){
-   const response=await fetch("https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(existing.id)+"?alt=media",{headers:{Authorization:"Bearer "+token},cache:"no-store"});
-   if(!response.ok)throw Error('Could not read existing score history.');
-   merged=JSON.parse(await response.text());
+   merged=await readScoreFile(existing.id);
    if(!Array.isArray(merged.attempts))throw Error('Invalid score history.');
   }
   const latest=entry.attempts.at(-1);
   if(!latest)throw Error('No score attempt to save.');
-  merged.attempts.push(latest);
+  if(!merged.attempts.some(a=>latest.attemptId?a.attemptId===latest.attemptId:JSON.stringify(a)===JSON.stringify(latest)))merged.attempts.push(latest);
   const boundary="quiz_room_score_json";
   const metadata=existing?{}:{name:filename,parents:[id],mimeType:"application/json"};
   const crlf="\r\n";
   const body=["--"+boundary,"Content-Type: application/json; charset=UTF-8","",JSON.stringify(metadata),"--"+boundary,"Content-Type: application/json; charset=UTF-8","",JSON.stringify(merged),"--"+boundary+"--",""].join(crlf);
-  await api("https://www.googleapis.com/upload/drive/v3/files"+(existing?"/"+encodeURIComponent(existing.id):"")+"?uploadType=multipart",{method:existing?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body});
+  const saved=await api("https://www.googleapis.com/upload/drive/v3/files"+(existing?"/"+encodeURIComponent(existing.id):"")+"?uploadType=multipart",{method:existing?"PATCH":"POST",headers:{"Content-Type":"multipart/related; boundary="+boundary},body});
+  const verified=await readScoreFile(saved.id||existing?.id);
+  if(!Array.isArray(verified.attempts)||!verified.attempts.some(a=>a.attemptId===latest.attemptId))throw Error('Saved score could not be verified.');
+  qrScoreHistory=await loadScoresFromDrive();
+  qrRender();
+  if(!$('scoresPage').classList.contains('hidden'))qrRenderScores();
+  if(!$('revisionPage').classList.contains('hidden'))qrRenderRevision();
   indicator.textContent='Score saved to Google Drive.';
- }catch(e){console.error('Quiz Room score sync:',e);indicator.textContent='Google Drive save failed. Score retained locally: '+e.message}
+ }catch(e){console.error('Quiz Room score sync:',e);indicator.textContent='Google Drive save failed. Score not confirmed: '+e.message}
 }
 // Keep one Drive root per Google account. Share pending folder requests to prevent duplicate creation.
 const qrFolderRequests=new Map();
