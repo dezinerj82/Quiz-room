@@ -893,19 +893,17 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
   </div>
  </section>
  <section id="qrProfileEdit" class="qr-profile-section hidden">
-  <h2>Edit profile</h2>
-  <label class="qr-profile-label" for="qrDisplayName">Display name</label>
-  <input id="qrDisplayName" class="qr-input" maxlength="60" placeholder="Display name">
-  <label class="qr-profile-label" for="qrEmail">Google email (read only)</label>
+  <label class="qr-profile-label" for="qrDisplayName">Nickname</label>
+  <input id="qrDisplayName" class="qr-input" maxlength="60" placeholder="Nickname">
+  <label class="qr-profile-label" for="qrEmail">Email address</label>
   <input id="qrEmail" class="qr-input" readonly aria-readonly="true">
-  <label class="qr-profile-label" for="qrPhoto">Photo</label>
+  <label class="qr-profile-label" for="qrPhoto">Upload photo</label>
   <div class="qr-photo-input-row">
    <label for="qrPhoto" class="qr-btn qr-file-button">Choose file</label>
    <span id="qrPhotoFilename" class="qr-muted">No file chosen</span>
    <input id="qrPhoto" type="file" accept="image/png,image/jpeg,image/webp" onchange="qrChoosePhoto(this)">
   </div>
-  <div class="qr-photo-tools"><button type="button" class="qr-btn" id="qrCropOpen" onclick="qrReopenCrop()" disabled>Crop photo (1:1)</button><img id="qrPhotoPreview" alt="Cropped square photo preview" hidden width="88" height="88"></div>
-  <p class="qr-muted">Crop to a square before saving. Photos are saved in your Google Drive after you save your profile.</p>
+  <div class="qr-photo-tools"><button type="button" class="qr-btn" id="qrCropOpen" onclick="qrReopenCrop()" disabled>Crop photo</button><img id="qrPhotoPreview" alt="Cropped square photo preview" hidden width="88" height="88"></div>
   <div class="qr-profile-actions"><button class="qr-btn" onclick="qrSaveProfile()">Save profile</button><button type="button" class="qr-btn" onclick="qrProfileSection('view')">Cancel</button></div>
   <p id="qrProfileStatus" role="status" class="qr-muted"></p>
  </section>
@@ -1237,6 +1235,7 @@ function qrRenderNotes(){$('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>
 function qrProfileSection(which='view'){
  const sections={view:'qrProfileView',edit:'qrProfileEdit'};
  for(const [key,id] of Object.entries(sections))$(id).classList.toggle('hidden',key!==which);
+ $('profilePage').querySelector('.qr-top h1').textContent=which==='edit'?'Edit Profile':'Profile';
  if(which==='view')qrRenderProfile();
 
 }
