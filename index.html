@@ -263,14 +263,14 @@ background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
 }
 body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
 /* Shared dropdown arrow inset and spacing (native selects and the Scores Revise toggle). */
-:root{--qr-dropdown-arrow-inset:16px;--qr-dropdown-arrow-space:38px}
+:root{--qr-dropdown-arrow-inset:16px;--qr-dropdown-arrow-space:38px;--qr-dropdown-arrow-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%235B5F97' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 body:not(.auth-locked) .qr-main select{
  box-sizing:border-box;max-width:100%;min-height:var(--density-input)!important;
  padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important;border:0!important;
  border-radius:var(--qr-button-radius)!important;
  background-color:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
  appearance:none;-webkit-appearance:none;
- background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%235B5F97' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;
+ background-image:var(--qr-dropdown-arrow-image)!important;
  background-repeat:no-repeat!important;
  background-position:right var(--qr-dropdown-arrow-inset) center!important;
  background-size:12px 12px!important;
@@ -281,11 +281,11 @@ body:not(.auth-locked) #qrScoresReviseButton{
 }
 body:not(.auth-locked) #qrScoresReviseButton::after{
  content:"";position:absolute;right:var(--qr-dropdown-arrow-inset);top:50%;
- width:7px;height:7px;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
- transform:translateY(-70%) rotate(45deg);pointer-events:none;
+ width:12px;height:12px;background:var(--qr-dropdown-arrow-image) center/12px 12px no-repeat;
+ transform:translateY(-50%);pointer-events:none;
 }
 body:not(.auth-locked) #qrScoresReviseButton[aria-expanded="true"]::after{
- transform:translateY(-30%) rotate(225deg);
+ transform:translateY(-50%) rotate(180deg);
 }
 body:not(.auth-locked) .qr-main .answer,body:not(.auth-locked) .qr-main .option,
 body:not(.auth-locked) .qr-main .optionbox{min-height:var(--density-choice)!important;
