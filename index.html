@@ -882,6 +882,9 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
  body:not(.auth-locked) #quiz .qr-progress-track span{transition:none}
 }
 
+/* Keep Score History's frame and heading when Revision is expanded. */
+body:not(.auth-locked) #qrScoreHistoryCard.qr-history-collapsed > :not(h2){display:none!important}
+
 /* Dashboard best scores: one card aligned beside greeting; values come from saved attempts. */
 body:not(.auth-locked) #home .qr-home-grid{grid-template-columns:minmax(0,1fr);align-items:stretch}
 body:not(.auth-locked) #home .qr-home-grid>.qr-card{height:100%;margin-bottom:0!important}
@@ -1232,7 +1235,7 @@ function qrRevisionRecords(subject){
 let qrScoresRevisionOpen=false;
 function qrSyncRevisionCards(){
  const panel=$('qrScoresRevision'),history=$('qrScoreHistoryCard'),button=$('qrScoresReviseButton');
- history.classList.toggle('hidden',qrScoresRevisionOpen);
+ history.classList.toggle('qr-history-collapsed',qrScoresRevisionOpen);
  panel.classList.toggle('hidden',!qrScoresRevisionOpen);
  $(qrScoresRevisionOpen?'qrRevisionToggleSlot':'qrScoreHistoryToggleSlot').append(button);
  button.textContent='Revise';
