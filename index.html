@@ -1265,7 +1265,7 @@ function qrRenderScores(){
  }
  if(!revisions.length)qrScoresRevisionOpen=false;
  $('qrScoresRevision').classList.toggle('hidden',!qrScoresRevisionOpen);
- toggle.textContent=qrScoresRevisionOpen?'Revise ▴':'Revise ▾';
+ toggle.textContent='Revise';
  toggle.setAttribute('aria-expanded',String(qrScoresRevisionOpen));
 }
 let qrNotes=[];
