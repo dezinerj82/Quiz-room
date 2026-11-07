@@ -262,12 +262,30 @@ border-radius:var(--density-radius)!important;
 background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
 }
 body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
+/* Shared dropdown arrow inset and spacing (native selects and the Scores Revise toggle). */
+:root{--qr-dropdown-arrow-inset:16px;--qr-dropdown-arrow-space:38px}
 body:not(.auth-locked) .qr-main select{
  box-sizing:border-box;max-width:100%;min-height:var(--density-input)!important;
- padding:var(--qr-unified-padding)!important;border:0!important;
+ padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important;border:0!important;
  border-radius:var(--qr-button-radius)!important;
- background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
+ background-color:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;
+ appearance:none;-webkit-appearance:none;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%235B5F97' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;
+ background-repeat:no-repeat!important;
+ background-position:right var(--qr-dropdown-arrow-inset) center!important;
+ background-size:12px 12px!important;
  font:inherit;font-size:var(--qr-font-body)!important;
+}
+body:not(.auth-locked) #qrScoresReviseButton{
+ position:relative;padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important;
+}
+body:not(.auth-locked) #qrScoresReviseButton::after{
+ content:"";position:absolute;right:var(--qr-dropdown-arrow-inset);top:50%;
+ width:7px;height:7px;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;
+ transform:translateY(-70%) rotate(45deg);pointer-events:none;
+}
+body:not(.auth-locked) #qrScoresReviseButton[aria-expanded="true"]::after{
+ transform:translateY(-30%) rotate(225deg);
 }
 body:not(.auth-locked) .qr-main .answer,body:not(.auth-locked) .qr-main .option,
 body:not(.auth-locked) .qr-main .optionbox{min-height:var(--density-choice)!important;
@@ -890,7 +908,7 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
 <select id="qrScoreSubject" class="qr-input" aria-label="Select Subject" onchange="qrRenderScores()" hidden></select>
 <div class="qr-top">
 <h2>List of Scores</h2>
-<button type="button" id="qrScoresReviseButton" class="qr-btn" onclick="qrToggleScoreRevision()" aria-expanded="false" aria-controls="qrScoresRevision" hidden>Revise ▾</button>
+<button type="button" id="qrScoresReviseButton" class="qr-btn" onclick="qrToggleScoreRevision()" aria-expanded="false" aria-controls="qrScoresRevision" hidden>Revise</button>
 </div>
 <div id="qrScoresList" class="qr-list"></div>
 <div id="qrScoresRevision" class="hidden">
@@ -1216,7 +1234,7 @@ function qrToggleScoreRevision(force){
  if(button.hidden)return;
  qrScoresRevisionOpen=typeof force==='boolean'?force:!qrScoresRevisionOpen;
  panel.classList.toggle('hidden',!qrScoresRevisionOpen);
- button.textContent=qrScoresRevisionOpen?'Revise ▴':'Revise ▾';
+ button.textContent='Revise';
  button.setAttribute('aria-expanded',String(qrScoresRevisionOpen));
 }
 function qrRenderScores(){
