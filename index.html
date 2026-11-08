@@ -73,7 +73,7 @@ body:not(.auth-locked) .qr-main .qr-hero > div:first-child > .qr-btn{margin:0}
 
 /* qr-theme */
 
-:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#1A4474;--qr-secondary:#7ECFE0;--qr-background:#FFFFFB;--qr-boundary:#F0EAD6;--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,#F0EAD6 55%,#B87525);--qr-error:color-mix(in srgb,#F0EAD6 25%,#BC3750);--qr-on-secondary:#1A4474;--qr-focus:#FFDA8A;--qr-navigation:#F0EAD6;--qr-subject-secondary-opacity:45%;--qr-on-background:#1A4474;--qr-text-primary:#1A4474;--qr-on-primary:#FFFFFF;--qr-on-navigation:#1A4474;--qr-on-focus:#1A4474;--qr-text-success:color-mix(in srgb,var(--qr-success) 55%,black);--qr-text-warning:color-mix(in srgb,var(--qr-warning) 55%,black);--qr-text-error:color-mix(in srgb,var(--qr-error) 55%,black);--qr-on-subject:#19252E;--qr-space:1}
+:root{--qr-font:Nunito,Roboto,"Segoe UI",sans-serif;--qr-primary:#1A4474;--qr-secondary:#7ECFE0;--qr-background:#FFFFFB;--qr-boundary:#F0EAD6;--qr-subject1:#F9DE9D;--qr-subject2:#97BCB7;--qr-subject3:#ECDDCB;--qr-subject4:#BCC8D0;--qr-subject5:#DEBECB;--qr-subject6:#FFC9A0;--qr-success:color-mix(in srgb,var(--qr-subject2) 40%,#167348);--qr-warning:color-mix(in srgb,#F0EAD6 55%,#B87525);--qr-error:color-mix(in srgb,#F0EAD6 25%,#BC3750);--qr-on-secondary:#1A4474;--qr-focus:#FFDA8A;--qr-progress-active:var(--qr-focus);--qr-navigation:#F0EAD6;--qr-subject-secondary-opacity:45%;--qr-on-background:#1A4474;--qr-text-primary:#1A4474;--qr-on-primary:#FFFFFF;--qr-on-navigation:#1A4474;--qr-on-focus:#1A4474;--qr-text-success:color-mix(in srgb,var(--qr-success) 55%,black);--qr-text-warning:color-mix(in srgb,var(--qr-warning) 55%,black);--qr-text-error:color-mix(in srgb,var(--qr-error) 55%,black);--qr-on-subject:#19252E;--qr-space:1}
 body{font-family:var(--qr-font)}
 body:not(.auth-locked)>section.screen{background:var(--qr-background)!important}
 body:not(.auth-locked) .qr-top h1{color:var(--qr-text-primary)}
@@ -768,7 +768,7 @@ body:not(.auth-locked) #quiz .qr-progress-track{
  background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));
 }
 body:not(.auth-locked) #quiz .qr-progress-track span{
- display:block;height:100%;width:0;border-radius:inherit;background:var(--qr-navigation);
+ display:block;height:100%;width:0;border-radius:inherit;background:var(--qr-progress-active);
  transition:width 180ms ease-out;
 }
 body:not(.auth-locked) #quiz #qrProgressPct{text-align:right;font-weight:800}
@@ -902,7 +902,7 @@ body:not(.auth-locked) #home .qr-best-subject .qr-best-heading{display:grid;grid
 body:not(.auth-locked) #home .qr-best-subject h3{margin:0;color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
 body:not(.auth-locked) #home .qr-best-percentage{color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800}
 body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
-body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-navigation);border-radius:inherit}
+body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
