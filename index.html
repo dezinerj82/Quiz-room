@@ -991,12 +991,13 @@ function show(id){qrCloseSidebars();if(id!=='quiz')dismissTimeWarning();document
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');activeExerciseTopic=null;renderChapterList();show('selection')}
 const schoolLevels=['PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
-const quizCategories=['Exercise','Quiz','Exam'];
+const quizCategories=['Quiz','Exam'];
+const quizQuestionCounts={Quiz:10,Exam:30};
 let selectedLevel=null,selectedCategory=null;
 function availableEntries(level,s,category){
  const entries=[];
  // Each category is shown only when it contains real playable questions.
- if(level==='PM3'&&category==='Exercise'&&typeof exerciseBank!=='undefined'&&exerciseBank[s]){for(const [topic,rows] of Object.entries(exerciseBank[s])){if(rows.length===10)entries.push({title:topic+' (10 questions)',action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
+ if(level==='PM3'&&category==='Quiz'&&typeof exerciseBank!=='undefined'&&exerciseBank[s]){for(const [topic,rows] of Object.entries(exerciseBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:topic+' (10 questions)',action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
  return entries;
 }
 function availableCategories(level,s){return quizCategories.filter(category=>availableEntries(level,s,category).length>0)}
@@ -1141,7 +1142,7 @@ function recordScoreAttempt(remark=''){
  scoreAttemptRecorded=true;
  const name=qrAccount();
  if(!name){$('driveSaveStatus').textContent='Google account unavailable. Sign in again to save your score.';return;}
- const chapter=activeExerciseTopic?'Exercise '+activeExerciseTopic:'Exam Revision '+version;
+ const chapter=activeExerciseTopic?'Quiz '+activeExerciseTopic:'Exam Revision '+version;
  const now=scoreDateParts(new Date());
  const filename=cleanScorePart(name)+'_'+cleanScorePart(subject)+'_'+cleanScorePart(chapter)+'_'+now.day+'.json';
  const history=loadScoreHistory(),attempts=Array.isArray(history[filename]?.attempts)?history[filename].attempts:[];
