@@ -393,7 +393,7 @@ body:not(.auth-locked) #selection .qr-quiz-content{
 }
 
 body:not(.auth-locked) #selection .qr-steps button{
- background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) var(--qr-subject-secondary-opacity),var(--qr-background))!important;color:var(--qr-text-primary)!important;
+ background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) var(--qr-subject-secondary-opacity),var(--qr-background))!important;color:var(--qr-on-subject)!important;
  border:0!important;border-radius:999px!important;
  min-height:var(--density-control)!important;padding:var(--qr-unified-padding)!important;
  font-family:inherit!important;
@@ -561,8 +561,8 @@ body:not(.auth-locked) .qr-side button.active{background:var(--qr-focus)!importa
 body:not(.auth-locked) .qr-side button.active::before,
 body:not(.auth-locked) .qr-side button.active::after{content:none!important;display:none!important}
 body:not(.auth-locked) .qr-side button:not(.active):hover{
- background:var(--qr-tertiary)!important;
- color:var(--qr-text-primary)!important;
+ background:var(--qr-focus)!important;
+ color:var(--qr-on-focus)!important;
 }
 body:not(.auth-locked) .qr-side button:focus-visible{
  outline:3px solid var(--qr-focus)!important;
@@ -858,7 +858,7 @@ body:not(.auth-locked) #quiz .quizactions .pill{
 body:not(.auth-locked) #quiz .quizactions .exitpill{background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important}
 body:not(.auth-locked) #quiz .quizactions #nextButton,
 body:not(.auth-locked) #quiz .quizactions #resumeButton{
- background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;
+ background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;
 }
 body:not(.auth-locked) #quiz .quizactions #nextButton .qr-icon{width:19px;height:19px}
 body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inactive-opacity)!important;cursor:not-allowed}
