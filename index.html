@@ -41,7 +41,7 @@ body:not(.auth-locked) .qr-main .qr-hero > div:first-child > .qr-btn{margin:0}
 .qr-home-grid{display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch;gap:var(--density-space);width:100%}
 .qr-btn{border:0;border-radius:var(--qr-button-radius,999px);padding:var(--qr-unified-padding)!important;font-weight:700;cursor:pointer;margin:4px}
 .qr-list{display:grid;gap:var(--density-space)}
-.qr-list-item{padding:var(--qr-unified-padding)!important;background:color-mix(in srgb,var(--qr-secondary) 9%,#FFFFFB)}
+.qr-list-item{padding:var(--qr-unified-padding)!important;background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))}
 .qr-muted{color:var(--qr-text-primary);font-size:var(--qr-font-small)}
 
 .qr-input{box-sizing:border-box;width:100%;border:1px solid var(--qr-boundary);border-radius:var(--density-radius,24px);padding:var(--qr-unified-padding)!important;font:inherit}
@@ -146,11 +146,11 @@ body:not(.auth-locked) .level-button{background:var(--quiz-subject-color,var(--q
 body:not(.auth-locked) .version{background:var(--quiz-subject-color,var(--qr-subject1))!important;color:var(--qr-on-subject)!important}
 body:not(.auth-locked) .pill,body:not(.auth-locked) .resultbutton{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
 body:not(.auth-locked) .exitpill{background:var(--qr-warning)!important;color:var(--qr-text-warning)!important}
-body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:color-mix(in srgb,var(--qr-primary) 13%,#FFFFFB)!important}
-body:not(.auth-locked) .answer{border-radius:20px!important;background:color-mix(in srgb,var(--qr-secondary) 12%,#FFFFFB)!important;color:var(--qr-text-primary)!important;border-color:color-mix(in srgb,var(--qr-secondary) 40%,#FFFFFB)!important}
+body:not(.auth-locked) button:disabled,body:not(.auth-locked) .qr-main button:disabled:not(.answer){background:var(--qr-inactive-background)!important}
+body:not(.auth-locked) .answer{border-radius:20px!important;background:color-mix(in srgb,var(--qr-success) 12%,var(--qr-background))!important;color:var(--qr-text-primary)!important;border-color:var(--qr-success)!important}
 body:not(.auth-locked) .answer .letter,body:not(.auth-locked) .number{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
-body:not(.auth-locked) .answer.answer-correct{background:color-mix(in srgb,var(--qr-success) 23%,#FFFFFB)!important;border-color:var(--qr-success)!important}
-body:not(.auth-locked) .answer.answer-wrong,body:not(.auth-locked) .answer.answer-wrong{background:color-mix(in srgb,var(--qr-warning) 18%,#FFFFFB)!important;border-color:var(--qr-warning)!important}
+body:not(.auth-locked) .answer.answer-correct{background:color-mix(in srgb,var(--qr-success) 23%,var(--qr-background))!important;border-color:var(--qr-success)!important}
+body:not(.auth-locked) .answer.answer-wrong{background:color-mix(in srgb,var(--qr-error) 18%,var(--qr-background))!important;border-color:var(--qr-error)!important}
 body:not(.auth-locked) .qr-side button:focus-visible,body:not(.auth-locked) button:focus-visible{outline:3px solid var(--qr-focus)!important;outline-offset:2px}
 
 
@@ -430,7 +430,7 @@ body:not(.auth-locked) #selection .chapter-items .version{
 
 
 /* Single inactive-opacity setting for disabled and read-only controls. */
-:root{--qr-inactive-opacity:.45}
+:root{--qr-inactive-opacity:.45;--qr-inactive-background:color-mix(in srgb,var(--qr-primary) 13%,var(--qr-background))}
 body:not(.auth-locked) button:disabled,
 body:not(.auth-locked) input:disabled,
 body:not(.auth-locked) input[readonly],
@@ -496,9 +496,9 @@ body:not(.auth-locked) #profilePage .qr-profile-details strong{font-size:var(--q
 
 body:not(.auth-locked) .qr-profile-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:var(--density-space);margin-top:0}
 body:not(.auth-locked) #profilePage .qr-profile-label{font-size:var(--qr-font-body);color:var(--qr-text-primary)}
-body:not(.auth-locked) #profilePage :is(.qr-input,.qr-photo-input-row){background:color-mix(in srgb,var(--qr-secondary) 9%,#FFFFFB)!important;border:0!important;outline:0!important;border-radius:var(--density-radius)!important}
+body:not(.auth-locked) #profilePage :is(.qr-input,.qr-photo-input-row){background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))!important;border:0!important;outline:0!important;border-radius:var(--density-radius)!important}
 body:not(.auth-locked) #profilePage .qr-input:focus-visible{outline:2px solid var(--qr-focus)!important}
-body:not(.auth-locked) #profilePage #qrEmail{background:color-mix(in srgb,var(--qr-primary) 13%,#FFFFFB)!important;opacity:var(--qr-inactive-opacity);cursor:default;pointer-events:none}
+body:not(.auth-locked) #profilePage #qrEmail{background:var(--qr-inactive-background)!important;opacity:var(--qr-inactive-opacity);cursor:default;pointer-events:none}
 body:not(.auth-locked) #profilePage .qr-photo-input-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--density-space);padding:var(--qr-unified-padding)!important}
 body:not(.auth-locked) #profilePage #qrPhoto{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
 body:not(.auth-locked) #profilePage .qr-file-button{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:var(--density-control)!important;font-size:var(--qr-font-body)!important;padding:var(--qr-unified-padding)!important;border-radius:999px!important;background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
@@ -798,8 +798,8 @@ body:not(.auth-locked) #quiz .answers{
 body:not(.auth-locked) #quiz .answer{
  display:flex!important;align-items:center!important;justify-content:flex-start!important;
  width:100%!important;min-width:0!important;min-height:var(--density-control)!important;padding:var(--qr-unified-padding)!important;
- border:1px solid transparent!important;border-radius:var(--qr-button-radius)!important;
- background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) var(--qr-subject-secondary-opacity),var(--qr-background))!important;color:var(--qr-on-subject)!important;
+ border:1px solid var(--qr-success)!important;border-radius:var(--qr-button-radius)!important;
+ background:color-mix(in srgb,var(--qr-success) 12%,var(--qr-background))!important;color:var(--qr-text-primary)!important;
  font-size:var(--qr-font-body)!important;font-weight:700!important;
  line-height:1.45!important;text-align:left!important;
 }
