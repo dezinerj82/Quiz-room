@@ -135,3 +135,97 @@ const exerciseBank={
     ]
   }
 };
+
+/* Formula Entry: PM3 Math, Multiply, ten equations on one page. */
+const formulaBank={Math:{Multiply:[
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-01",
+    "type": "formula",
+    "a": 2,
+    "b": 4,
+    "blank": "result",
+    "expected": 8,
+    "q": "2 × 4 = □"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-02",
+    "type": "formula",
+    "a": 3,
+    "b": 4,
+    "blank": "b",
+    "expected": 4,
+    "q": "3 × □ = 12"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-03",
+    "type": "formula",
+    "a": 7,
+    "b": 6,
+    "blank": "result",
+    "expected": 42,
+    "q": "7 × 6 = □"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-04",
+    "type": "formula",
+    "a": 5,
+    "b": 8,
+    "blank": "a",
+    "expected": 5,
+    "q": "□ × 8 = 40"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-05",
+    "type": "formula",
+    "a": 9,
+    "b": 3,
+    "blank": "result",
+    "expected": 27,
+    "q": "9 × 3 = □"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-06",
+    "type": "formula",
+    "a": 4,
+    "b": 7,
+    "blank": "b",
+    "expected": 7,
+    "q": "4 × □ = 28"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-07",
+    "type": "formula",
+    "a": 8,
+    "b": 2,
+    "blank": "result",
+    "expected": 16,
+    "q": "8 × 2 = □"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-08",
+    "type": "formula",
+    "a": 6,
+    "b": 7,
+    "blank": "a",
+    "expected": 6,
+    "q": "□ × 7 = 42"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-09",
+    "type": "formula",
+    "a": 6,
+    "b": 9,
+    "blank": "result",
+    "expected": 54,
+    "q": "6 × 9 = □"
+  },
+  {
+    "id": "MATH-PM3-QUIZ-MUL-001-10",
+    "type": "formula",
+    "a": 5,
+    "b": 7,
+    "blank": "b",
+    "expected": 7,
+    "q": "5 × □ = 35"
+  }
+]}};
