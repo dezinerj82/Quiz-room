@@ -1117,7 +1117,7 @@ function qrGradeFormula(){
  $('answers').querySelectorAll('.formula-row').forEach((row,i)=>{
   const q=questions[i],input=row.querySelector('input'),value=input.value.trim();
   if(value==='')return;
-  const choice=Number(value),correct=/^\\d+$/.test(value)&&choice===q.expected;
+  const choice=Number(value),correct=/^[0-9]+$/.test(value)&&choice===q.expected;
   questionOutcomes[q.id]={correct,choice:value};
   if(correct)score++;else wrongQuestions.push({id:q.id,question:q.q});
   input.readOnly=true;
