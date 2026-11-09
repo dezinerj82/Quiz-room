@@ -1,0 +1,19 @@
+{
+  "subject": "Math",
+  "level": "PM3",
+  "category": "Quiz",
+  "title": "Multiply",
+  "form": "Formula Entry",
+  "questionIds": [
+    "MATH-PM3-QUIZ-MUL-001-01",
+    "MATH-PM3-QUIZ-MUL-001-02",
+    "MATH-PM3-QUIZ-MUL-001-03",
+    "MATH-PM3-QUIZ-MUL-001-04",
+    "MATH-PM3-QUIZ-MUL-001-05",
+    "MATH-PM3-QUIZ-MUL-001-06",
+    "MATH-PM3-QUIZ-MUL-001-07",
+    "MATH-PM3-QUIZ-MUL-001-08",
+    "MATH-PM3-QUIZ-MUL-001-09",
+    "MATH-PM3-QUIZ-MUL-001-10"
+  ]
+}
