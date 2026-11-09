@@ -889,6 +889,7 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
 body:not(.auth-locked) #quiz .formula-answers{gap:var(--density-space)!important}
 body:not(.auth-locked) #quiz .formula-row{display:flex;align-items:center;gap:var(--density-inner);min-width:0;font-size:var(--qr-font-body);font-weight:700}
 body:not(.auth-locked) #quiz .formula-row input{box-sizing:border-box;width:72px!important;max-width:25vw;min-height:var(--density-control);padding:var(--qr-unified-padding)!important;text-align:center;background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 15%,var(--qr-background))!important;color:var(--qr-text-primary)!important;border:1px solid var(--quiz-subject-color,var(--qr-subject1))!important;border-radius:var(--qr-button-radius)!important}
+body:not(.auth-locked) #quiz .formula-row input[readonly]{opacity:1!important;cursor:default}
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{margin-left:auto}
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-correct{background:var(--qr-success)}
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-wrong{background:var(--qr-error)}
