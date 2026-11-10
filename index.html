@@ -231,7 +231,7 @@ body:not(.auth-locked) .qr-main{border-radius:28px 0 0 0!important}
  --density-control:44px;--density-input:44px;--density-choice:64px;
  --qr-font-small:13px;--qr-font-body:15px;--qr-font-heading:22px;--qr-font-title:32px;--qr-font-login:64px;
  --density-text:var(--qr-font-body);--density-radius:24px;
- --qr-unified-padding:9px 16px;
+ --qr-unified-padding:var(--qr-control-padding);
 }
 body:not(.auth-locked) .qr-main{padding:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-card,body:not(.auth-locked) .qr-main .qr-hero,
@@ -918,7 +918,7 @@ body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density
 body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
 /* Shared equal-sided control padding; panel/card interiors retain their existing spacing. */
-:root{--qr-control-padding:var(--qr-unified-padding);--qr-card-padding:20px}
+:root{--qr-control-padding:9px 16px;--qr-card-padding:20px}
 body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
 body:not(.auth-locked) #selection .qr-steps button,
 body:not(.auth-locked) #quiz .formula-row input,
@@ -985,16 +985,33 @@ body:not(.auth-locked) :is(button,.qr-file-button).qr-processing,
 body:not(.auth-locked) :is(button,.qr-file-button).qr-processing::before,
 #googleGate button.qr-processing::before{
  content:"";position:absolute;inset:-3px;border-radius:inherit;padding:3px;
- background:conic-gradient(from 0deg,transparent 0 65%,var(--qr-primary) 80%,var(--qr-focus) 96%,transparent);
+ background:conic-gradient(from var(--qr-outline-angle),transparent 0 65%,var(--qr-primary) 78%,var(--qr-focus) 92%,transparent);
  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
  -webkit-mask-composite:xor;mask-composite:exclude;
  pointer-events:none;animation:qrButtonOrbit 1s linear infinite;
 }
-@keyframes qrButtonOrbit{to{transform:rotate(360deg)}}
+@property --qr-outline-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes qrButtonOrbit{to{--qr-outline-angle:360deg}}
 @media(prefers-reduced-motion:reduce){
  body:not(.auth-locked) .qr-main :is(button,.qr-file-button),
  #googleGate button{transition:none!important}
 }
+
+/* Same soft-press reaction on the left navigation; its padding remains independent. */
+body:not(.auth-locked) .qr-side button:not(:disabled){
+ transition:transform .17s ease,box-shadow .17s ease
+}
+body:not(.auth-locked) .qr-side button:not(:disabled):active{
+ transform:scale(.93);box-shadow:inset 0 0 0 2px var(--qr-focus)!important
+}
+/* Keep the busy outline visible even when processing disables the button. */
+body:not(.auth-locked) button.qr-processing:disabled,
+#googleGate button.qr-processing:disabled{opacity:1!important}
+@media(prefers-reduced-motion:reduce){
+ body:not(.auth-locked) .qr-side button{transition:none!important}
+ body:not(.auth-locked) button.qr-processing::before,#googleGate button.qr-processing::before{animation:none}
+}
+
 /* Past notes: created date and actions on top, content left aligned. */
 body:not(.auth-locked) #notesPage .qr-note-top{
  display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;
@@ -1122,7 +1139,7 @@ function qrDropQuestion(q){
  if(parts.length!==2)throw Error('Drag-and-drop question requires one blank: '+q.id);
  const label=q._dropSelection||'Drop here';
  const chosen=!!q._dropSelection;
- const blank='<span id="qrDropZone" class="qr-drop-zone'+(chosen?' qr-drop-filled':'')+'" role="button" tabindex="'+(chosen?'-1':'0')+'" aria-label="Drop answer here" aria-disabled="'+chosen+'" ondragover="qrDropAllow(event)" ondrop="qrDropHandle(event)" onclick="qrDropChosen()" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();qrDropChosen()}">'+escapeHtml(label)+'</span>';
+ const blank='<span id="qrDropZone" class="qr-drop-zone'+(chosen?' qr-drop-filled '+(questionOutcomes[q.id]?.correct?'answer-correct':'answer-wrong'):'')+'" role="button" tabindex="'+(chosen?'-1':'0')+'" aria-label="Drop answer here" aria-disabled="'+chosen+'" ondragover="qrDropAllow(event)" ondrop="qrDropHandle(event)" onclick="qrDropChosen()" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();qrDropChosen()}">'+escapeHtml(label)+'</span>';
  return escapeHtml(parts[0])+blank+escapeHtml(parts[1]);
 }
 function qrDropPaint(q){
@@ -1192,6 +1209,7 @@ function qrDropPointerStart(event,i){
   button.removeEventListener('pointercancel',cancel);
   if(dragged){
    qrDropIgnoreClick=true;
+   setTimeout(()=>{qrDropIgnoreClick=false},0);
    if(dropped)qrDropPlace(choice);
   }
  };
