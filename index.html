@@ -918,14 +918,14 @@ body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density
 body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
 /* Shared equal-sided control padding; panel/card interiors retain their existing spacing. */
-:root{--qr-control-padding:12px}
+:root{--qr-control-padding:var(--qr-unified-padding);--qr-card-padding:20px}
 body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
 body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle),
 body:not(.auth-locked) #selection .qr-steps button,
 body:not(.auth-locked) #quiz .formula-row input,
 #googleGate button{padding:var(--qr-control-padding)!important}
 /* Dropdown arrows need separate trailing clearance for long subject names. */
-body:not(.auth-locked) .qr-main select{padding:12px var(--qr-dropdown-arrow-space) 12px 12px!important}
+body:not(.auth-locked) .qr-main select{padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important}
 body:not(.auth-locked) #home .qr-best-percentage{text-align:right}
 /* One row for Score History's subject label and selection control. */
 body:not(.auth-locked) #scoresPage .qr-score-filter{
@@ -946,6 +946,68 @@ body:not(.auth-locked) #scoresPage .qr-score-percent{text-align:right;white-spac
  body:not(.auth-locked) #scoresPage .qr-score-row{grid-template-columns:minmax(80px,1fr) minmax(100px,1.6fr) 56px;row-gap:4px}
  body:not(.auth-locked) #scoresPage .qr-score-date{grid-column:1/3;grid-row:2}
  body:not(.auth-locked) #scoresPage .qr-score-percent{grid-column:3;grid-row:1/3}
+}
+
+/* Shared controls: 9px vertical / 16px horizontal everywhere except left navigation. */
+body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
+body:not(.auth-locked) #selection .qr-steps button,
+body:not(.auth-locked) #quiz .formula-row input,
+body:not(.auth-locked) .time-warning-card button,
+body:not(.auth-locked) .qr-crop-modal button,
+#googleGate button{padding:var(--qr-control-padding)!important}
+/* Card frames share 20px padding; nested question content stays single-padded. */
+body:not(.auth-locked) .qr-main .qr-card,
+body:not(.auth-locked) #quiz .qr-question-frame,
+body:not(.auth-locked) .time-warning-card,
+body:not(.auth-locked) .qr-crop-box{padding:var(--qr-card-padding)!important}
+/* All clickable controls except sidebar get Soft Press + Outline. */
+body:not(.auth-locked) .qr-main :is(button,.qr-file-button):not(:disabled),
+body:not(.auth-locked) .time-warning-card button:not(:disabled),
+body:not(.auth-locked) .qr-crop-modal button:not(:disabled),
+#googleGate button:not(:disabled){
+ transition:transform .17s ease,box-shadow .17s ease,background-color .17s ease;
+ transform-origin:center;
+}
+body:not(.auth-locked) .qr-main :is(button,.qr-file-button):not(:disabled):active,
+body:not(.auth-locked) .time-warning-card button:not(:disabled):active,
+body:not(.auth-locked) .qr-crop-modal button:not(:disabled):active,
+#googleGate button:not(:disabled):active{
+ transform:scale(.93);box-shadow:inset 0 0 0 2px var(--qr-primary)!important;
+}
+/* Animated line on a button while its asynchronous operation is pending. */
+body:not(.auth-locked) :is(button,.qr-file-button).qr-processing,
+#googleGate button.qr-processing{
+ position:relative;isolation:isolate;
+ box-shadow:inset 0 0 0 2px var(--qr-primary)!important;
+ opacity:1!important;cursor:wait;
+}
+body:not(.auth-locked) :is(button,.qr-file-button).qr-processing::before,
+#googleGate button.qr-processing::before{
+ content:"";position:absolute;inset:-3px;border-radius:inherit;padding:3px;
+ background:conic-gradient(from 0deg,transparent 0 65%,var(--qr-primary) 80%,var(--qr-focus) 96%,transparent);
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;
+ pointer-events:none;animation:qrButtonOrbit 1s linear infinite;
+}
+@keyframes qrButtonOrbit{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){
+ body:not(.auth-locked) .qr-main :is(button,.qr-file-button),
+ #googleGate button{transition:none!important}
+}
+/* Past notes: created date and actions on top, content left aligned. */
+body:not(.auth-locked) #notesPage .qr-note-top{
+ display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;
+ gap:var(--density-space);margin-bottom:2pt;
+}
+body:not(.auth-locked) #notesPage .qr-note-actions{display:flex;align-items:center;gap:8px}
+body:not(.auth-locked) #notesPage .qr-note-actions .qr-btn{margin:0}
+body:not(.auth-locked) #notesPage .qr-note-body{text-align:left;min-width:0}
+body:not(.auth-locked) #notesPage .qr-note-paragraph{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 2pt!important}
+body:not(.auth-locked) #notesPage #qrNoteText,
+body:not(.auth-locked) #notesPage .qr-note-edit{line-height:calc(1.4em + 2pt)}
+body:not(.auth-locked) #notesPage .qr-note-edit{
+ box-sizing:border-box;width:100%;min-height:90px;resize:vertical;
+ background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))!important;
 }
 
 </style><script>
@@ -969,7 +1031,7 @@ body:not(.auth-locked) #scoresPage .qr-score-percent{text-align:right;white-spac
 <main id="home" class="screen"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Dashboard</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-grid qr-home-grid">
 <div class="qr-card qr-hero"><div><h2 id="qrGreeting">Welcome back</h2><p>Ready for your next quiz?</p><button class="qr-btn" onclick="qrOpen('quizStart')">Start Quiz</button></div><div class="qr-avatar-outline" aria-label="Profile picture"><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden></div></div>
 <div class="qr-card qr-best-card"><div class="qr-best-heading"><h2>Best score</h2><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select></div><div id="qrBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div></div>
-</div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote()">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div id="qrScoreHistoryCard" class="qr-card">
+</div></div></div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a subject</h2><div class="tilegrid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div id="qrScoreHistoryCard" class="qr-card">
 <div class="qr-top"><h2>Score History</h2></div>
 <div class="qr-score-filter"><label class="qr-profile-label" for="qrScoreSubject">Select Subject</label><select id="qrScoreSubject" class="qr-input" aria-label="Select Subject" onchange="qrRenderScores()" hidden></select></div>
 <div class="qr-top">
@@ -1003,7 +1065,7 @@ body:not(.auth-locked) #scoresPage .qr-score-percent{text-align:right;white-spac
    <input id="qrPhoto" type="file" accept="image/png,image/jpeg,image/webp" onchange="qrChoosePhoto(this)">
   </div>
   <div class="qr-photo-tools"><button type="button" class="qr-btn" id="qrCropOpen" onclick="qrReopenCrop()" disabled>Crop photo</button><img id="qrPhotoPreview" alt="Cropped square photo preview" hidden width="88" height="88"></div>
-  <div class="qr-profile-actions"><button class="qr-btn" onclick="qrSaveProfile()">Save profile</button><button type="button" class="qr-btn" onclick="qrProfileSection('view')">Cancel</button></div>
+  <div class="qr-profile-actions"><button class="qr-btn" onclick="qrSaveProfile(this)">Save profile</button><button type="button" class="qr-btn" onclick="qrProfileSection('view')">Cancel</button></div>
   <p id="qrProfileStatus" role="status" class="qr-muted"></p>
  </section>
 
@@ -1361,7 +1423,61 @@ function qrRenderScores(){
 
 }
 let qrNotes=[];
-function qrRenderNotes(){$('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>'<div class="qr-list-item"><div class="qr-muted">'+escapeHtml(n.date)+'</div><p style="white-space:pre-wrap">'+escapeHtml(n.text)+'</p><button class="qr-btn" onclick="qrDeleteNote('+JSON.stringify(n.id).replace(/"/g,'&quot;')+')">Delete</button></div>').join('')||'<p class="qr-muted">No notes yet.</p>'}
+let qrEditingNote=null,qrNotesBusy=false;
+function qrNoteDate(value){
+ const m=String(value||'').match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+ if(!m)return String(value||'');
+ const hour=Number(m[4]);
+ return Number(m[1])+'/'+Number(m[2])+'/'+Number(m[3])+', '+(hour%12||12)+':'+m[5]+' '+(hour<12?'AM':'PM');
+}
+function qrNoteParagraphs(text){
+ return String(text).split(/\r?\n/).map(line=>'<p class="qr-note-paragraph">'+(line?escapeHtml(line):'&nbsp;')+'</p>').join('');
+}
+function qrRenderNotes(){
+ $('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
+  const id=JSON.stringify(n.id).replace(/"/g,'&quot;'),editing=qrEditingNote===n.id;
+  return '<div class="qr-list-item qr-past-note" data-note-id="'+escapeHtml(n.id)+'">'+
+   '<div class="qr-note-top"><time class="qr-muted" title="Created date">'+escapeHtml(qrNoteDate(n.date))+'</time>'+
+   '<div class="qr-note-actions">'+
+   (editing?'<button type="button" class="qr-btn" onclick="qrSaveEditedNote('+id+',this)">Save</button>':
+   '<button type="button" class="qr-btn" onclick="qrEditNote('+id+')">Edit</button>')+
+   '<button type="button" class="qr-btn" onclick="qrDeleteNote('+id+',this)">Delete</button></div></div>'+
+   (editing?'<textarea class="qr-input qr-note-edit" aria-label="Edit note">'+escapeHtml(n.text)+'</textarea>':
+   '<div class="qr-note-body">'+qrNoteParagraphs(n.text)+'</div>')+
+   '</div>';
+ }).join('')||'<p class="qr-muted">No notes yet.</p>';
+ if(qrEditingNote!==null){
+  const note=$('qrNotesList').querySelector('.qr-note-edit');
+  if(note)note.focus();
+ }
+}
+function qrEditNote(id){
+ if(qrNotesBusy)return;
+ qrEditingNote=id;
+ qrRenderNotes();
+}
+function qrButtonProcessing(button,active){
+ if(!button)return;
+ button.classList.toggle('qr-processing',active);
+ button.disabled=active;
+ if(active)button.setAttribute('aria-busy','true');
+ else button.removeAttribute('aria-busy');
+}
+async function qrSaveEditedNote(id,button){
+ if(qrNotesBusy)return;
+ const editor=button?.closest('.qr-past-note')?.querySelector('.qr-note-edit');
+ const text=editor?.value.trim();
+ if(!text)return;
+ const index=qrNotes.findIndex(n=>n.id===id);
+ if(index<0)return;
+ qrNotesBusy=true;qrButtonProcessing(button,true);
+ const next=qrNotes.map((n,i)=>i===index?{...n,text}:n);
+ try{
+  await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));
+  qrNotes=next;qrEditingNote=null;qrRenderNotes();
+ }catch(e){alert('Could not save: '+e.message)}
+ finally{qrNotesBusy=false;qrButtonProcessing(button,false)}
+}
 
 // Quiz Room theme: local browser preferences, no personal data in source control.
 // Fixed website colors. Per-profile color customization is reserved for future work.
@@ -1383,8 +1499,28 @@ function qrRenderProfile(){
  image.hidden=!qrProfile.photo;
  if(qrProfile.photo)image.src=qrProfile.photo;
 }
-async function qrSaveNote(){const text=$('qrNoteText').value.trim();if(!text)return;$('qrNoteStatus').textContent='Saving…';const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text}];try{await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));qrNotes=next;$('qrNoteText').value='';$('qrNoteStatus').textContent='Saved to Google Drive.';qrRenderNotes()}catch(e){$('qrNoteStatus').textContent='Could not save: '+e.message}}
-async function qrDeleteNote(id){const next=qrNotes.filter(n=>n.id!==id);try{await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));qrNotes=next;qrRenderNotes()}catch(e){alert('Could not delete note: '+e.message)}}
+async function qrSaveNote(button){
+ if(qrNotesBusy)return;
+ const text=$('qrNoteText').value.trim();
+ if(!text)return;
+ qrNotesBusy=true;qrButtonProcessing(button,true);
+ const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text}];
+ try{
+  await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));
+  qrNotes=next;$('qrNoteText').value='';$('qrNoteStatus').textContent='';qrRenderNotes();
+ }catch(e){$('qrNoteStatus').textContent='Could not save: '+e.message}
+ finally{qrNotesBusy=false;qrButtonProcessing(button,false)}
+}
+async function qrDeleteNote(id,button){
+ if(qrNotesBusy)return;
+ qrNotesBusy=true;qrButtonProcessing(button,true);
+ const next=qrNotes.filter(n=>n.id!==id);
+ try{
+  await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));
+  qrNotes=next;if(qrEditingNote===id)qrEditingNote=null;qrRenderNotes();
+ }catch(e){alert('Could not delete note: '+e.message)}
+ finally{qrNotesBusy=false;qrButtonProcessing(button,false)}
+}
 let qrCropImage=null,qrCropSource=null,qrCroppedPhoto=null,qrCropX=0,qrCropY=0,qrCropPointer=null;
 function qrChoosePhoto(input){const file=input.files?.[0];if(!file)return;$('qrPhotoFilename').textContent=file.name;if(!file.type.startsWith('image/')){$('qrProfileStatus').textContent='Choose an image file.';input.value='';return}const url=URL.createObjectURL(file),img=new Image();img.onload=()=>{URL.revokeObjectURL(url);qrCropImage=img;qrCropSource=img;qrCroppedPhoto=null;$('qrCropOpen').disabled=false;qrCropX=0;qrCropY=0;$('qrCropZoom').value='1';qrCropShow()};img.onerror=()=>{URL.revokeObjectURL(url);$('qrProfileStatus').textContent='Could not open that photo.';input.value=''};img.src=url}
 function qrCropShow(){const modal=$('qrCropModal');modal.classList.remove('hidden');modal.style.display='flex';qrCropDraw()}
@@ -1393,9 +1529,10 @@ function qrCropDraw(){if(!qrCropImage)return;const c=$('qrCropCanvas'),ctx=c.get
 function qrCropCancel(){qrCropImage=null;$('qrCropModal').classList.add('hidden');$('qrCropModal').style.display='none';$('qrPhoto').value=''}
 function qrCropApply(){qrCropDraw();qrCroppedPhoto=$('qrCropCanvas').toDataURL('image/jpeg',0.82);qrCropImage=null;$('qrCropModal').classList.add('hidden');$('qrCropModal').style.display='none';$('qrPhotoPreview').src=qrCroppedPhoto;$('qrPhotoPreview').hidden=false;$('qrProfileStatus').textContent='Photo cropped. Select Save profile to keep it.';$('qrPhoto').value=''}
 (function(){const canvas=$('qrCropCanvas');canvas.addEventListener('pointerdown',e=>{if(!qrCropImage)return;qrCropPointer={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointermove',e=>{if(!qrCropPointer)return;const factor=canvas.width/canvas.getBoundingClientRect().width;qrCropX+=(e.clientX-qrCropPointer.x)*factor;qrCropY+=(e.clientY-qrCropPointer.y)*factor;qrCropPointer={x:e.clientX,y:e.clientY};qrCropDraw()});const end=()=>qrCropPointer=null;canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end)})();
-async function qrSaveProfile(){const status=$('qrProfileStatus');status.textContent='Saving…';const next={...qrProfile,name:$('qrDisplayName').value.trim()};if(qrCroppedPhoto)next.photo=qrCroppedPhoto;try{await window.qrDriveWrite('Profile','profile.json',JSON.stringify(next));qrProfile=next;qrCroppedPhoto=null;status.textContent='Profile saved.';qrRender();qrProfileSection('view')}catch(e){status.textContent='Could not save: '+e.message}}
-function qrLogout(){window.qrGoogleLogout?.();qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};show('home')}
+async function qrSaveProfile(button){const status=$('qrProfileStatus');qrButtonProcessing(button,true);status.textContent='';const next={...qrProfile,name:$('qrDisplayName').value.trim()};if(qrCroppedPhoto)next.photo=qrCroppedPhoto;try{await window.qrDriveWrite('Profile','profile.json',JSON.stringify(next));qrProfile=next;qrCroppedPhoto=null;status.textContent='Profile saved.';qrRender();qrProfileSection('view')}catch(e){status.textContent='Could not save: '+e.message}finally{qrButtonProcessing(button,false)}}
+function qrLogout(){window.qrGoogleLogout?.();qrEditingNote=null;qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};show('home')}
 async function qrLoadAccount(){
+ qrEditingNote=null;
  qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};
  const [p,n,scores]=await Promise.all([window.qrDriveRead('Profile','profile.json'),window.qrDriveRead('Notes','notes.json'),window.qrLoadScores()]);
  if(p)qrProfile=JSON.parse(p);
