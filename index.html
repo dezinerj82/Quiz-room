@@ -796,6 +796,20 @@ body:not(.auth-locked) #quiz .answer{
  font-size:var(--qr-font-body)!important;font-weight:700!important;
  line-height:1.45!important;text-align:left!important;
 }
+/* Text answers share the same subject palette, pill shape and focus treatment as quiz choices. */
+body:not(.auth-locked) #quiz #typedAnswer{
+ box-sizing:border-box;width:100%;min-width:0;min-height:var(--density-control);
+ border:1px solid var(--quiz-subject-color,var(--qr-subject1))!important;
+ border-radius:var(--qr-button-radius)!important;
+ background:color-mix(in srgb,var(--quiz-subject-color,var(--qr-subject1)) 15%,var(--qr-background))!important;
+ color:var(--qr-text-primary)!important;
+ font:inherit;font-size:var(--qr-font-body)!important;
+ padding:var(--qr-unified-padding)!important;
+}
+body:not(.auth-locked) #quiz #typedAnswer::placeholder{color:var(--qr-text-primary);opacity:.65}
+body:not(.auth-locked) #quiz #typedAnswer:focus-visible{
+ outline:2px solid var(--qr-focus)!important;outline-offset:2px!important;
+}
 body:not(.auth-locked) #quiz .answer:hover:not(:disabled),
 body:not(.auth-locked) #quiz .answer:focus-visible{
  background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;
