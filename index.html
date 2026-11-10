@@ -1015,7 +1015,7 @@ function availableEntries(level,s,category){
  const entries=[];
  // Each category is shown only when it contains real playable questions.
  if(level==='PM3'&&category==='Quiz'&&typeof exerciseBank!=='undefined'&&exerciseBank[s]){for(const [topic,rows] of Object.entries(exerciseBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:(topic==='Vocabulary 1'?'Word Meanings':topic)+' ('+rows.length+' questions)',action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
- if(level==='PM3'&&category==='Quiz'&&typeof formulaBank!=='undefined'&&formulaBank[s]){for(const [topic,rows] of Object.entries(formulaBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:'Multiplication Practice ('+rows.length+' questions)',action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
+ if(level==='PM3'&&category==='Quiz'&&typeof formulaBank!=='undefined'&&formulaBank[s]){for(const [topic,rows] of Object.entries(formulaBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:(topic==='Multiply'?'Multiplication Practice':topic==='Multiply 2'?'Multiplication Practice 2':topic==='Divide 1'?'Division Practice 1':topic==='Divide 2'?'Division Practice 2':topic)+' ('+rows.length+' questions)',action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
  return entries;
 }
 function availableCategories(level,s){return quizCategories.filter(category=>availableEntries(level,s,category).length>0)}
@@ -1024,7 +1024,7 @@ function renderChapterList(){
  const container=$('versions');
  if(activeExerciseTopic){
   $('qrQuizSteps').classList.add('hidden');
-  container.innerHTML='<div class="chapter-items"><button class="version" type="button" aria-current="true">'+escapeHtml(activeQuizForm==='formula-entry'?'Multiplication Practice':activeExerciseTopic==='Vocabulary 1'?'Word Meanings':activeExerciseTopic)+' ('+((activeQuizForm==='formula-entry'?formulaBank[subject]?.[activeExerciseTopic]:exerciseBank[subject]?.[activeExerciseTopic])?.length||0)+' questions)'+'</button></div>';
+  container.innerHTML='<div class="chapter-items"><button class="version" type="button" aria-current="true">'+escapeHtml(activeQuizForm==='formula-entry'?(activeExerciseTopic==='Multiply'?'Multiplication Practice':activeExerciseTopic==='Multiply 2'?'Multiplication Practice 2':activeExerciseTopic==='Divide 1'?'Division Practice 1':activeExerciseTopic==='Divide 2'?'Division Practice 2':activeExerciseTopic):activeExerciseTopic==='Vocabulary 1'?'Word Meanings':activeExerciseTopic)+' ('+((activeQuizForm==='formula-entry'?formulaBank[subject]?.[activeExerciseTopic]:exerciseBank[subject]?.[activeExerciseTopic])?.length||0)+' questions)'+'</button></div>';
   return;
  }
  $('qrQuizSteps').classList.remove('hidden');
@@ -1127,7 +1127,7 @@ function qrRenderFormula(){
  $('nextButton').disabled=true;
  $('answers').innerHTML=questions.map((q,i)=>{
   const input='<input id="formula'+i+'" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" aria-label="Blank for equation '+(i+1)+'" onblur="qrCheckFormula('+i+')" onkeydown="if(event.key===\'Enter\'){event.preventDefault();qrCheckFormula('+i+',true)}">';
-  return '<label class="formula-row"><span>'+(q.blank==='a'?input:q.a)+'</span><span>×</span><span>'+(q.blank==='b'?input:q.b)+'</span><span>=</span><span>'+(q.blank==='result'?input:q.a*q.b)+'</span><span class="feedback-symbol hidden" aria-live="polite"></span></label>';
+  return '<label class="formula-row"><span>'+(q.blank==='a'?input:q.a)+'</span><span>'+(q.operation==='divide'?'÷':'×')+'</span><span>'+(q.blank==='b'?input:q.b)+'</span><span>=</span><span>'+(q.blank==='result'?input:q.operation==='divide'?q.a/q.b:q.a*q.b)+'</span><span class="feedback-symbol hidden" aria-live="polite"></span></label>';
  }).join('');
  qrFormulaProgress();updateClock();
 }
