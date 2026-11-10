@@ -1011,6 +1011,33 @@ body:not(.auth-locked) #notesPage .qr-note-edit{
  background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))!important;
 }
 
+/* Inline answer target plus two draggable choices; reused by all subjects. */
+body:not(.auth-locked) #quiz .qr-drop-zone{
+ display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;
+ min-width:100px;min-height:42px;padding:9px 16px;margin:0 4px;
+ font:inherit;color:var(--qr-text-primary);background:var(--qr-background);
+ border:2px dashed var(--quiz-subject-color,var(--qr-subject1));border-radius:var(--qr-button-radius);
+ cursor:pointer;white-space:nowrap;
+}
+body:not(.auth-locked) #quiz .qr-drop-zone:is(.qr-drop-ready,.qr-drop-hover){
+ border-style:solid;outline:2px solid var(--qr-focus);outline-offset:2px;
+}
+body:not(.auth-locked) #quiz .qr-drop-zone.qr-drop-filled{border-style:solid;cursor:default}
+body:not(.auth-locked) #quiz .qr-drop-zone.answer-correct{border-color:var(--qr-success);background:color-mix(in srgb,var(--qr-success) 18%,var(--qr-background))}
+body:not(.auth-locked) #quiz .qr-drop-zone.answer-wrong{border-color:var(--qr-error);background:color-mix(in srgb,var(--qr-error) 15%,var(--qr-background))}
+body:not(.auth-locked) #quiz .qr-drop-choices{display:flex;align-items:center;flex-wrap:wrap;gap:var(--density-space)}
+body:not(.auth-locked) #quiz .qr-drop-option{
+ width:auto!important;min-width:90px;min-height:44px!important;
+ touch-action:none;user-select:none;cursor:grab
+}
+body:not(.auth-locked) #quiz .qr-drop-option.selected{outline:2px solid var(--qr-focus);outline-offset:2px}
+body:not(.auth-locked) .qr-drop-ghost{
+ position:fixed;left:0;top:0;transform:translate(-50%,-50%);
+ z-index:10000;padding:9px 16px;background:var(--qr-focus);color:var(--qr-primary);
+ border:2px solid var(--qr-primary);border-radius:var(--qr-button-radius);
+ font:700 var(--qr-font-body) var(--qr-font);pointer-events:none;white-space:nowrap
+}
+
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1087,7 +1114,94 @@ function dropStep(event){event.preventDefault();const i=Number(event.dataTransfe
 function pickStep(i){if(answered||orderChosen.includes(i))return;orderChosen.push(i);paintSteps();if(orderChosen.length===questions[index].steps.length)submitAnswer()}
 function undoStep(){if(answered)return;orderChosen.pop();paintSteps()}
 function paintSteps(){let q=questions[index];$('answers').innerHTML='<div class="sequence"><div class="sequencepicked" ondragover="event.preventDefault()" ondrop="dropStep(event)">'+(orderChosen.map((i,k)=>'<span class="picked">'+(k+1)+'. '+escapeHtml(q.shuffled[i])+'</span>').join('')||'<span class="faint">Drag or tap the steps below in order.</span>')+'</div><div class="stepgrid">'+q.shuffled.map((v,i)=>'<button draggable="true" ondragstart="event.dataTransfer.setData(&quot;text/plain&quot;,&quot;'+i+'&quot;)" class="answer step" '+(orderChosen.includes(i)?'disabled':'')+' onclick="pickStep('+i+')">'+escapeHtml(v)+'</button>').join('')+'</div><button class="undo" onclick="undoStep()">Undo last step</button></div>'}
-function getInput(){let q=questions[index];if(q.type==='text')return $('typedAnswer').value;if(q.type==='tf')return selected===0;if(q.type==='order')return orderChosen.map(i=>q.shuffled[i]);if(q.type==='match')return q.pairs.map((p,i)=>$('match'+i).value);return selected}
+/* Shared drag-and-drop blank: mouse, touch, and keyboard/click fallback. */
+let qrDropChoice=-1,qrDropPointer=null,qrDropIgnoreClick=false;
+function qrDropQuestion(q){
+ const raw=String(q.q).replace(/^Fill in the blank(?: with the correct verb)?:\s*/i,'').replace(/\s*\(([^()]*\s[/]\s[^()]*)\)\s*$/,'').trim();
+ const parts=raw.split('____');
+ if(parts.length!==2)throw Error('Drag-and-drop question requires one blank: '+q.id);
+ const label=q._dropSelection||'Drop here';
+ const chosen=!!q._dropSelection;
+ const blank='<span id="qrDropZone" class="qr-drop-zone'+(chosen?' qr-drop-filled':'')+'" role="button" tabindex="'+(chosen?'-1':'0')+'" aria-label="Drop answer here" aria-disabled="'+chosen+'" ondragover="qrDropAllow(event)" ondrop="qrDropHandle(event)" onclick="qrDropChosen()" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();qrDropChosen()}">'+escapeHtml(label)+'</span>';
+ return escapeHtml(parts[0])+blank+escapeHtml(parts[1]);
+}
+function qrDropPaint(q){
+ if(!q._dropChoices)q._dropChoices=Math.random()<.5?[...q.options]:[...q.options].reverse();
+ qrDropChoice=-1;
+ $('questionTitle').innerHTML=qrDropQuestion(q);
+ $('answers').innerHTML='<div class="qr-drop-choices" role="group" aria-label="Choose an answer">'+
+  q._dropChoices.map((option,i)=>'<button type="button" class="answer qr-drop-option" draggable="true" ondragstart="qrDropStart(event,'+i+')" ondragend="qrDropCancel()" onpointerdown="qrDropPointerStart(event,'+i+')" onclick="qrDropPick('+i+')" aria-label="Drag '+escapeHtml(option)+' to the blank">'+escapeHtml(option)+'</button>').join('')+'</div>';
+}
+function qrDropPick(i){
+ if(answered||questions[index]?.type!=='drop')return;
+ if(qrDropIgnoreClick){qrDropIgnoreClick=false;return}
+ qrDropChoice=i;
+ $('answers').querySelectorAll('.qr-drop-option').forEach((el,k)=>el.classList.toggle('selected',i===k));
+ $('qrDropZone')?.classList.add('qr-drop-ready');
+}
+function qrDropChosen(){if(qrDropChoice>=0)qrDropPlace(qrDropChoice)}
+function qrDropPlace(i){
+ const q=questions[index];
+ if(answered||q?.type!=='drop'||!Number.isInteger(i)||i<0||i>=q._dropChoices.length)return;
+ q._dropSelection=q._dropChoices[i];
+ $('questionTitle').innerHTML=qrDropQuestion(q);
+ submitAnswer();
+}
+function qrDropStart(event,i){
+ if(answered)return;
+ qrDropChoice=i;
+ event.dataTransfer.setData('text/plain',String(i));
+ event.dataTransfer.effectAllowed='move';
+}
+function qrDropAllow(event){if(!answered)event.preventDefault()}
+function qrDropHandle(event){
+ event.preventDefault();
+ const i=Number(event.dataTransfer.getData('text/plain'));
+ if(event.dataTransfer.getData('text/plain')!==''&&Number.isInteger(i))qrDropPlace(i);
+ qrDropCancel();
+}
+function qrDropCancel(){
+ if(qrDropPointer?.ghost)qrDropPointer.ghost.remove();
+ qrDropPointer=null;
+}
+function qrDropPointerStart(event,i){
+ if(answered||event.pointerType==='mouse')return;
+ const button=event.currentTarget;
+ qrDropPointer={id:event.pointerId,i,startX:event.clientX,startY:event.clientY,ghost:null,source:button};
+ const move=ev=>{
+  if(!qrDropPointer||ev.pointerId!==qrDropPointer.id)return;
+  const d=Math.hypot(ev.clientX-qrDropPointer.startX,ev.clientY-qrDropPointer.startY);
+  if(d>9&&!qrDropPointer.ghost){
+   const ghost=button.cloneNode(true);
+   ghost.className='qr-drop-ghost';ghost.removeAttribute('draggable');
+   document.body.appendChild(ghost);qrDropPointer.ghost=ghost;
+  }
+  if(qrDropPointer.ghost){
+   qrDropPointer.ghost.style.left=ev.clientX+'px';qrDropPointer.ghost.style.top=ev.clientY+'px';
+   $('qrDropZone')?.classList.toggle('qr-drop-hover',!!document.elementFromPoint(ev.clientX,ev.clientY)?.closest('#qrDropZone'));
+  }
+ };
+ const end=ev=>{
+  if(!qrDropPointer||ev.pointerId!==qrDropPointer.id)return;
+  const dragged=!!qrDropPointer.ghost,choice=qrDropPointer.i;
+  $('qrDropZone')?.classList.remove('qr-drop-hover');
+  const dropped=dragged&&!!document.elementFromPoint(ev.clientX,ev.clientY)?.closest('#qrDropZone');
+  qrDropCancel();
+  button.removeEventListener('pointermove',move);
+  button.removeEventListener('pointerup',end);
+  button.removeEventListener('pointercancel',cancel);
+  if(dragged){
+   qrDropIgnoreClick=true;
+   if(dropped)qrDropPlace(choice);
+  }
+ };
+ const cancel=()=>{qrDropCancel();button.removeEventListener('pointermove',move);button.removeEventListener('pointerup',end);button.removeEventListener('pointercancel',cancel)};
+ button.addEventListener('pointermove',move);
+ button.addEventListener('pointerup',end);
+ button.addEventListener('pointercancel',cancel);
+ try{button.setPointerCapture(event.pointerId)}catch(e){}
+}
+function getInput(){let q=questions[index];if(q.type==='drop')return q._dropSelection||'';if(q.type==='text')return $('typedAnswer').value;if(q.type==='tf')return selected===0;if(q.type==='order')return orderChosen.map(i=>q.shuffled[i]);if(q.type==='match')return q.pairs.map((p,i)=>$('match'+i).value);return selected}
 function qrToggleSidebar(event){
  if(event)event.stopPropagation();
  const shell=event?.currentTarget?.closest('.qr-shell');
@@ -1247,7 +1361,7 @@ function qrGradeFormula(){
 }
 function render(){if(activeQuizForm==='formula-entry'){qrRenderFormula();return} $('quiz').querySelector('.bookmarktools').classList.remove('hidden');$('number').classList.remove('hidden');document.querySelector('#quiz .helper').classList.remove('hidden');$('nextButton').querySelector('span').textContent='Next';qrUpdateQuizProgress();selected=-1;answered=false;orderChosen=[];$('nextButton').disabled=!bookmarks.has(index);updateBookmarkUI();let q=questions[index];$('questionTranslation').textContent='';$('questionTranslation').classList.add('hidden');$('number').textContent=index+1;const textQuestion=q.type==='text'?q.q.replace(/^Fill in the blank:\s*/i,''):q.q;
  const textChoices=q.type==='text'?textQuestion.match(/\s*\(([^()]*\s[/]\s[^()]*)\)\s*$/):null;
- $('questionTitle').textContent=textChoices?textQuestion.slice(0,textChoices.index).trim():textQuestion;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(answerSnapshots[index]){showAnswerTranslations(q);a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('.helper').textContent=bookmarkView?'Press Resume to return to your next unanswered question.':'Answer submitted. Press Next to continue.';updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){a.innerHTML=['True','False'].map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+v+'</span></button>').join('')}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='text'?(textChoices?'Choose from: '+textChoices[1].trim()+'. ':'')+'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
+ $('questionTitle').textContent=textChoices?textQuestion.slice(0,textChoices.index).trim():textQuestion;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(q.type==='drop')$('questionTitle').innerHTML=qrDropQuestion(q);if(answerSnapshots[index]){showAnswerTranslations(q);a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('.helper').textContent=bookmarkView?'Press Resume to return to your next unanswered question.':'Answer submitted. Press Next to continue.';updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){a.innerHTML=['True','False'].map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+v+'</span></button>').join('')}else if(q.type==='drop'){qrDropPaint(q)}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='drop'?'Drag an answer into the empty box. You can also tap an answer, then tap the box.':q.type==='text'?(textChoices?'Choose from: '+textChoices[1].trim()+'. ':'')+'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
 function selectAnswer(i){if(answered)return;selected=i;[...$('answers').querySelectorAll('.answer')].forEach((b,j)=>b.classList.toggle('selected',j===i));submitAnswer()}
 function checkMatches(){if(!answered&&questions[index].pairs.every((p,i)=>$('match'+i).value))submitAnswer()}
 function showAnswerTranslations(q){
@@ -1269,18 +1383,19 @@ function submitAnswer(){
  if(answered){advance();return}
  if(!questions.length)return;
  let q=questions[index],v=getInput();
- if(q.type==='text'&&!normalize(v))return;
+ if((q.type==='text'||q.type==='drop')&&!normalize(v))return;
  if((q.type==='mc'||q.type==='tf')&&selected<0)return;
  if(q.type==='order'&&v.length!==q.steps.length)return;
  if(q.type==='match'&&v.some(x=>!x))return;
  answered=true;$('nextButton').disabled=false;
  showAnswerTranslations(q);
- let correct=q.type==='mc'?v===q.correct:q.type==='tf'?v===q.expected:q.type==='text'?normalize(v)===normalize(q.expected):q.type==='order'?v.every((x,i)=>x===q.steps[i]):v.every((x,i)=>x===q.pairs[i][1]);
+ let correct=q.type==='mc'?v===q.correct:q.type==='tf'?v===q.expected:(q.type==='text'||q.type==='drop')?normalize(v)===normalize(q.expected):q.type==='order'?v.every((x,i)=>x===q.steps[i]):v.every((x,i)=>x===q.pairs[i][1]);
  questionOutcomes[q.id]={correct,choice:v};
  if(correct)score++;else wrongQuestions.push({id:q.id,question:q.q});
  let answerBox;
  if(q.type==='mc'||q.type==='tf'){answerBox=$('answers').querySelectorAll('.answer')[selected]}
  else if(q.type==='text'){answerBox=$('typedAnswer');answerBox.readOnly=true}
+ else if(q.type==='drop'){answerBox=$('qrDropZone');answerBox.classList.add('qr-drop-filled');answerBox.setAttribute('aria-disabled','true');answerBox.tabIndex=-1}
  else if(q.type==='order'){answerBox=$('answers').querySelector('.sequencepicked')}
  else if(q.type==='match'){answerBox=$('answers').querySelector('.matching');$('answers').querySelectorAll('select').forEach(x=>x.disabled=true)}
  if(answerBox){
