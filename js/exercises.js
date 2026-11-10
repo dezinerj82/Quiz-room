@@ -308,21 +308,21 @@ Object.assign(exerciseBank.English,{
     },
     {
       "id": "ENG-PM3-QUIZ-VOC-002-08",
-      "q": "Complete with a place: I borrowed a book from the ____.",
+      "q": "Fill in the blank: I borrowed a book from the ____.",
       "type": "text",
       "expected": "library",
       "explanation": "A library is a place where people can borrow books."
     },
     {
       "id": "ENG-PM3-QUIZ-VOC-002-09",
-      "q": "Complete with a feeling: After running in the sun, I was very ____ and needed water.",
+      "q": "Fill in the blank: After running in the sun, I was very ____ and needed water.",
       "type": "text",
       "expected": "thirsty",
       "explanation": "Thirsty means needing or wanting a drink."
     },
     {
       "id": "ENG-PM3-QUIZ-VOC-002-10",
-      "q": "Complete with a job: A person who writes books is called an ____.",
+      "q": "Fill in the blank: A person who writes books is called an ____.",
       "type": "text",
       "expected": "author",
       "explanation": "An author writes books."
@@ -404,21 +404,21 @@ Object.assign(exerciseBank.English,{
     },
     {
       "id": "ENG-PM3-QUIZ-GRM-001-08",
-      "q": "Complete with the past tense of 'do': Yesterday, I ____ my homework before dinner.",
+      "q": "Fill in the blank: Yesterday, I ____ my homework before dinner.",
       "type": "text",
       "expected": "did",
       "explanation": "Did is the past tense of do."
     },
     {
       "id": "ENG-PM3-QUIZ-GRM-001-09",
-      "q": "Complete with 'a' or 'an': I saw ____ elephant at the zoo.",
+      "q": "Fill in the blank: I saw ____ elephant at the zoo.",
       "type": "text",
       "expected": "an",
       "explanation": "An is used before the vowel sound at the beginning of elephant."
     },
     {
       "id": "ENG-PM3-QUIZ-GRM-001-10",
-      "q": "Complete with the correct word: They ____ playing in the park now.",
+      "q": "Fill in the blank: They ____ playing in the park now.",
       "type": "text",
       "expected": "are",
       "explanation": "They are playing uses the correct present continuous form."
