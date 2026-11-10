@@ -432,6 +432,8 @@ body:not(.auth-locked) #selection .chapter-items .version{
 
 
 /* Single inactive-opacity setting for disabled and read-only controls. */
+body:not(.auth-locked) #selection .qr-main > .qr-card[inert]{opacity:var(--qr-inactive-opacity);pointer-events:none}
+
 :root{--qr-inactive-opacity:.45;--qr-inactive-background:color-mix(in srgb,var(--qr-primary) 13%,var(--qr-background))}
 body:not(.auth-locked) button:disabled,
 body:not(.auth-locked) input:disabled,
@@ -1016,7 +1018,11 @@ function qrCloseSidebars(){
 }
 window.addEventListener('resize',()=>{if(window.innerWidth>860)qrCloseSidebars()});
 document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))qrCloseSidebars()});
-function show(id){qrCloseSidebars();if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});window.scrollTo(0,0)}
+function show(id){qrCloseSidebars();if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
+ document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
+ const selectionCard=document.querySelector('#selection .qr-main > .qr-card');if(selectionCard)selectionCard.inert=locked;
+ document.querySelectorAll('#selection .qr-sidebar-toggle').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
+ window.scrollTo(0,0)}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');activeExerciseTopic=null;renderChapterList();show('selection')}
 const schoolLevels=['PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
