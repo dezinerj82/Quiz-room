@@ -1066,10 +1066,19 @@ function startExercise(topic){
  if(!standard&&!formula)return;
  activeExerciseTopic=topic;activeQuizForm=formula?'formula-entry':'question-answer';renderChapterList();start(1);
 }
+/* Shared question-order shuffle for every Quiz and Exam form. */
+function qrShuffleQuestions(items){
+ const shuffled=items.map(item=>({...item}));
+ for(let i=shuffled.length-1;i>0;i--){
+  const j=Math.floor(Math.random()*(i+1));
+  [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+ }
+ return shuffled;
+}
 async function start(v){
  clearInterval(timerHandle);timerHandle=null;quizEnded=false;quizDeadline=0;scoreAttemptRecorded=false;latestScoreKey='';timeWarningShown=false;dismissTimeWarning();version=v;index=0;resumeIndex=0;bookmarkView=false;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');score=0;wrongQuestions=[];questionOutcomes={};
  const items=activeExerciseTopic?((activeQuizForm==='formula-entry'?formulaBank[subject]?.[activeExerciseTopic]:exerciseBank[subject]?.[activeExerciseTopic])||[]):[];
- formulaChecked=false;questions=items.map(item=>({...item}));time=quizTimeLimits[selectedCategory]||0;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
+ formulaChecked=false;questions=qrShuffleQuestions(items);time=quizTimeLimits[selectedCategory]||0;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
 function updateClock(){const t=Math.max(0,time),h=Math.floor(t/3600),m=Math.floor((t%3600)/60),s=t%60;const digits=String(h).padStart(2,'0').slice(-2)+String(m).padStart(2,'0')+String(s).padStart(2,'0');const keys=['h1','h2','m1','m2','s1','s2'];keys.forEach((key,i)=>{const el=document.querySelector('[data-clock="'+key+'"]');if(el&&el.textContent!==digits[i])el.textContent=digits[i]});$('timer').setAttribute('aria-label','Time remaining '+h+' hours '+m+' minutes '+s+' seconds')}
 function qrUpdateQuizProgress(){const total=questions.length,pct=total?Math.round((index+1)*100/total):0;$('questioncount').textContent='Question '+(total?index+1:0)+' of '+total;$('qrProgressFill').style.width=pct+'%';$('qrProgressTrack').setAttribute('aria-valuenow',String(pct));$('qrProgressPct').textContent=pct+'%';}
 /* Formula Entry: each equation is checked when its field is left or Enter is pressed. */
