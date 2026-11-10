@@ -920,10 +920,11 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
 /* Shared equal-sided control padding; panel/card interiors retain their existing spacing. */
 :root{--qr-control-padding:var(--qr-unified-padding);--qr-card-padding:20px}
 body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
-body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle),
 body:not(.auth-locked) #selection .qr-steps button,
 body:not(.auth-locked) #quiz .formula-row input,
 #googleGate button{padding:var(--qr-control-padding)!important}
+/* Sidebar navigation keeps its previous separate control padding. */
+body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle){padding:12px!important}
 /* Dropdown arrows need separate trailing clearance for long subject names. */
 body:not(.auth-locked) .qr-main select{padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important}
 body:not(.auth-locked) #home .qr-best-percentage{text-align:right}
