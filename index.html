@@ -1549,15 +1549,23 @@ async function qrLoadAccount(){
 const CLIENT_ID="574290651847-gr406870mug7sfhv4oamvjg4jtvdc8l3.apps.googleusercontent.com";
 const SCOPES="https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
 const STORE="isaac_google_accounts_v1",MARKER="isaac-quiz-scores",FOLDER="Isaac Quiz Scores";
-let token="",expires=0,activeEmail="",client=null,pending="",busy=false;
+let token="",expires=0,activeEmail="",client=null,pending="",busy=false,loginButton=null;
 const gate=document.getElementById("googleGate"),accounts=document.getElementById("googleAccounts"),other=document.getElementById("otherGoogle"),status=document.getElementById("googleStatus");
 document.body.classList.add("auth-locked");
 const saved=()=>{try{return JSON.parse(localStorage.getItem(STORE)||"[]").filter(x=>typeof x.email==="string").slice(0,12)}catch{return []}};
 const say=x=>status.textContent=x;
-function render(){accounts.replaceChildren();for(const a of saved()){const b=document.createElement("button");b.type="button";b.textContent=a.name&&a.name!==a.email?a.name+" ("+a.email+")":a.email;b.addEventListener("click",()=>login(a.email));accounts.append(b)}other.textContent=saved().length?"Choose other account":"Login to start"}
-function setBusy(v){busy=v;accounts.querySelectorAll("button").forEach(b=>b.disabled=v);other.disabled=v;if(v){say("");other.innerHTML='<span class="spinner"></span>Connecting'}else{render()}}
+function render(){accounts.replaceChildren();for(const a of saved()){const b=document.createElement("button");b.type="button";b.textContent=a.name&&a.name!==a.email?a.name+" ("+a.email+")":a.email;b.addEventListener("click",()=>login(a.email,b));accounts.append(b)}other.textContent=saved().length?"Choose other account":"Login to start"}
+function setBusy(v,button=null){
+ busy=v;
+ if(v)loginButton=button||other;
+ accounts.querySelectorAll("button").forEach(b=>{b.disabled=v;b.classList.toggle('qr-processing',v&&b===loginButton);});
+ other.disabled=v;
+ other.classList.toggle('qr-processing',v&&other===loginButton);
+ if(v){say("");}
+ else{loginButton=null;render();}
+}
 async function googleReady(){if(window.google?.accounts?.oauth2)return;await new Promise((resolve,reject)=>{const e=document.createElement("script");e.src="https://accounts.google.com/gsi/client";e.async=true;e.onload=resolve;e.onerror=()=>reject(Error("Google sign-in could not load."));document.head.append(e)})}
-async function login(email=""){if(busy)return;setBusy(true);pending=email.toLowerCase();try{await googleReady();if(!client)client=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,callback:handleToken,error_callback:()=>{setBusy(false);say("Google sign-in was cancelled or blocked.")}});client.requestAccessToken({prompt:email?"":"select_account",...(email?{hint:email}:{})})}catch(e){setBusy(false);say(e.message)}}
+async function login(email="",button=null){if(busy)return;setBusy(true,button);pending=email.toLowerCase();try{await googleReady();if(!client)client=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,callback:handleToken,error_callback:()=>{setBusy(false);say("Google sign-in was cancelled or blocked.")}});client.requestAccessToken({prompt:email?"":"select_account",...(email?{hint:email}:{})})}catch(e){setBusy(false);say(e.message)}}
 async function handleToken(response){try{if(!response.access_token)throw Error("Google authentication was not completed.");const scopes=(response.scope||"").split(/\s+/);if(!SCOPES.split(" ").every(x=>scopes.includes(x)))throw Error("Google Drive permission is required.");const u=await fetch("https://www.googleapis.com/oauth2/v3/userinfo",{headers:{Authorization:"Bearer "+response.access_token},cache:"no-store"});if(!u.ok)throw Error("Could not verify Google account.");const info=await u.json();if(!info.email||info.email_verified===false)throw Error("Google email was not verified.");if(pending&&pending!==info.email.toLowerCase())throw Error("Different Google account selected. Please choose the matching account.");token=response.access_token;expires=Date.now()+Math.max(0,(Number(response.expires_in)||3600)-60)*1000;activeEmail=info.email.toLowerCase();const arr=saved().filter(x=>x.email!==activeEmail);arr.unshift({email:activeEmail,name:info.name||activeEmail});localStorage.setItem(STORE,JSON.stringify(arr.slice(0,12)));await window.qrLoadAccount?.();gate.classList.add("hidden");document.body.classList.remove("auth-locked");setBusy(false)}catch(e){token="";activeEmail="";setBusy(false);say(e.message)}}
 async function api(url,options={}){if(!token||Date.now()>=expires)throw Error("Google Drive session expired. Return to the login page to reconnect.");const r=await fetch(url,{...options,headers:{...(options.headers||{}),Authorization:"Bearer "+token}});if(!r.ok)throw Error("Google Drive save failed ("+r.status+").");return r.json()}
 async function folder(){return qrFolder('Scores')}
@@ -1661,7 +1669,7 @@ window.qrGoogleLogout=()=>{token="";expires=0;activeEmail="";gate.classList.remo
 window.quizRoomSaveGoogleScore=saveScore;
 window.quizRoomGoogleEmail=()=>activeEmail;
 window.qrLoadAccount=qrLoadAccount;
-other.addEventListener("click",()=>login(""));
+other.addEventListener("click",()=>login("",other));
 render();
 })();
 </script></body></html>
