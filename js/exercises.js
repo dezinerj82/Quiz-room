@@ -2379,3 +2379,68 @@ Object.assign(exerciseBank.English,{
     }
   ]
 });
+
+/* One shared drag-and-drop conversion for existing fill-in questions. */
+const qrDropDistractors = {
+  "ENG-PM3-QUIZ-VOC-002-08": "hospital",
+  "ENG-PM3-QUIZ-VOC-002-09": "hungry",
+  "ENG-PM3-QUIZ-VOC-002-10": "actor",
+  "ENG-PM3-QUIZ-GRM-001-08": "do",
+  "ENG-PM3-QUIZ-GRM-001-09": "a",
+  "ENG-PM3-QUIZ-GRM-001-10": "is",
+  "ENG-PM3-QUIZ-T01-001-02": "brushes",
+  "ENG-PM3-QUIZ-T01-001-05": "wake",
+  "ENG-PM3-QUIZ-T01-001-09": "midnight",
+  "ENG-PM3-QUIZ-T02-001-02": "is",
+  "ENG-PM3-QUIZ-T02-001-05": "sleep",
+  "ENG-PM3-QUIZ-T02-001-09": "is",
+  "ENG-PM3-QUIZ-T03-001-02": "10",
+  "ENG-PM3-QUIZ-T03-001-05": "last",
+  "ENG-PM3-QUIZ-T03-001-09": "July",
+  "ENG-PM3-QUIZ-T04-001-02": "is",
+  "ENG-PM3-QUIZ-T04-001-05": "above",
+  "ENG-PM3-QUIZ-T04-001-09": "sink",
+  "ENG-PM3-QUIZ-T05-001-02": "a",
+  "ENG-PM3-QUIZ-T05-001-05": "plate",
+  "ENG-PM3-QUIZ-T05-001-09": "loudly",
+  "ENG-PM3-QUIZ-T06-001-02": "cinema",
+  "ENG-PM3-QUIZ-T06-001-05": "shop",
+  "ENG-PM3-QUIZ-T06-001-09": "green",
+  "ENG-PM3-QUIZ-T07-001-02": "play",
+  "ENG-PM3-QUIZ-T07-001-05": "reads",
+  "ENG-PM3-QUIZ-T07-001-09": "was",
+  "ENG-PM3-QUIZ-T08-001-02": "saucepan",
+  "ENG-PM3-QUIZ-T08-001-05": "visits",
+  "ENG-PM3-QUIZ-T08-001-09": "photo",
+  "ENG-PM3-QUIZ-T09-001-02": "puppy",
+  "ENG-PM3-QUIZ-T09-001-05": "fins",
+  "ENG-PM3-QUIZ-T09-001-09": "plastic",
+  "MATH-PM3-QUIZ-U02-001-02": "535",
+  "MATH-PM3-QUIZ-U02-001-04": "8",
+  "MATH-PM3-QUIZ-U02-001-09": "32",
+  "MATH-PM3-QUIZ-U03-001-01": "8",
+  "MATH-PM3-QUIZ-U03-001-07": "20",
+  "MATH-PM3-QUIZ-U03-001-10": "0.7",
+  "MATH-PM3-QUIZ-U04-001-02": "37",
+  "MATH-PM3-QUIZ-U04-001-05": "5.75",
+  "MATH-PM3-QUIZ-U04-001-08": "50",
+  "MATH-PM3-QUIZ-U05-001-02": "125",
+  "MATH-PM3-QUIZ-U05-001-07": "35",
+  "MATH-PM3-QUIZ-U05-001-09": "12",
+  "MATH-PM3-QUIZ-U06-001-02": "200",
+  "MATH-PM3-QUIZ-U06-001-05": "900",
+  "MATH-PM3-QUIZ-U06-001-09": "2",
+  "MATH-PM3-QUIZ-U07-001-04": "3",
+  "MATH-PM3-QUIZ-U07-001-06": "6",
+  "MATH-PM3-QUIZ-U07-001-10": "5",
+  "MATH-PM3-QUIZ-U08-001-04": "D2",
+  "MATH-PM3-QUIZ-U08-001-06": "B1",
+  "MATH-PM3-QUIZ-U09-001-03": "12",
+  "MATH-PM3-QUIZ-U09-001-09": "4"
+};
+for(const subjectBank of Object.values(exerciseBank))for(const questions of Object.values(subjectBank))for(const question of questions){
+ if(question.type!=='text')continue;
+ const wrong=qrDropDistractors[question.id];
+ if(!wrong)throw Error('Missing drag-and-drop choice for '+question.id);
+ question.type='drop';question.options=[String(question.expected),wrong];
+}
