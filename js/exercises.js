@@ -1511,3 +1511,871 @@ Object.assign(exerciseBank,{Math:{
     }
   ]
 }});
+
+/* Nine general PM3 English practice quizzes. Original quizzes and question IDs remain intact. */
+Object.assign(exerciseBank.English,{
+  "Daily Routines": [
+    {
+      "type": "mc",
+      "q": "Which activity do people usually do before going to school?",
+      "options": [
+        "Go to bed",
+        "Eat breakfast",
+        "Have dinner",
+        "Watch the sunset"
+      ],
+      "correct": 1,
+      "explanation": "Breakfast is usually eaten in the morning, before school.",
+      "id": "ENG-PM3-QUIZ-T01-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank with the correct verb: I ____ my teeth every morning. (brush / brushes)",
+      "expected": "brush",
+      "explanation": "Use brush with I.",
+      "id": "ENG-PM3-QUIZ-T01-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'daily' means happening every day.",
+      "expected": true,
+      "explanation": "Daily means every day.",
+      "id": "ENG-PM3-QUIZ-T01-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence describes a habit?",
+      "options": [
+        "I am swimming now.",
+        "I played yesterday.",
+        "I walk to school every day.",
+        "I will travel tomorrow."
+      ],
+      "correct": 2,
+      "explanation": "The present simple describes a regular habit.",
+      "id": "ENG-PM3-QUIZ-T01-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: She ____ up at seven every morning. (wake / wakes)",
+      "expected": "wakes",
+      "explanation": "The verb takes -s with she.",
+      "id": "ENG-PM3-QUIZ-T01-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which phrase tells us how often something happens?",
+      "options": [
+        "Last night",
+        "Every Monday",
+        "Next year",
+        "At this moment"
+      ],
+      "correct": 1,
+      "explanation": "Every Monday describes a repeated routine.",
+      "id": "ENG-PM3-QUIZ-T01-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "In the sentence 'He goes to school by bus', 'goes' describes a regular action.",
+      "expected": true,
+      "explanation": "The present simple can describe routines.",
+      "id": "ENG-PM3-QUIZ-T01-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "My brother play football daily.",
+        "My brother plays football daily.",
+        "My brother playing football daily.",
+        "My brother played football daily tomorrow."
+      ],
+      "correct": 1,
+      "explanation": "He or my brother takes plays in the present simple.",
+      "id": "ENG-PM3-QUIZ-T01-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: We usually eat lunch at ____. (noon / midnight)",
+      "expected": "noon",
+      "explanation": "Noon is twelve o'clock in the middle of the day.",
+      "id": "ENG-PM3-QUIZ-T01-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The sentence 'I goes to school' uses the correct verb form.",
+      "expected": false,
+      "explanation": "With I, use go: I go to school.",
+      "id": "ENG-PM3-QUIZ-T01-001-10"
+    }
+  ],
+  "Actions Happening Now": [
+    {
+      "type": "mc",
+      "q": "Which sentence shows something happening right now?",
+      "options": [
+        "She reads every Sunday.",
+        "She is reading now.",
+        "She read yesterday.",
+        "She will read tomorrow."
+      ],
+      "correct": 1,
+      "explanation": "Is reading describes an action in progress.",
+      "id": "ENG-PM3-QUIZ-T02-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The children ____ playing outside now. (is / are)",
+      "expected": "are",
+      "explanation": "Use are with the plural subject children.",
+      "id": "ENG-PM3-QUIZ-T02-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "In 'He is running', the action is happening now.",
+      "expected": true,
+      "explanation": "Is running is in the present continuous.",
+      "id": "ENG-PM3-QUIZ-T02-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I am eating lunch.",
+        "I is eating lunch.",
+        "I are eating lunch.",
+        "I be eating lunch."
+      ],
+      "correct": 0,
+      "explanation": "Use am with I in the present continuous.",
+      "id": "ENG-PM3-QUIZ-T02-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The baby is ____. (sleep / sleeping)",
+      "expected": "sleeping",
+      "explanation": "The present continuous uses the -ing form.",
+      "id": "ENG-PM3-QUIZ-T02-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which word correctly completes 'She is ____ a picture'?",
+      "options": [
+        "draw",
+        "draws",
+        "drawing",
+        "drew"
+      ],
+      "correct": 2,
+      "explanation": "Is drawing is the present continuous form.",
+      "id": "ENG-PM3-QUIZ-T02-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "The sentence 'They are swim in the pool' is grammatically correct.",
+      "expected": false,
+      "explanation": "It should be They are swimming in the pool.",
+      "id": "ENG-PM3-QUIZ-T02-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence is about an action happening now?",
+      "options": [
+        "He washes the car every week.",
+        "He is washing the car.",
+        "He washed the car yesterday.",
+        "He will wash the car."
+      ],
+      "correct": 1,
+      "explanation": "Is washing describes an ongoing action.",
+      "id": "ENG-PM3-QUIZ-T02-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: I ____ doing my homework right now. (am / is)",
+      "expected": "am",
+      "explanation": "Use I am, not I is.",
+      "id": "ENG-PM3-QUIZ-T02-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "In 'We are dancing', the word 'are' is a helping verb.",
+      "expected": true,
+      "explanation": "Are helps form the present continuous tense.",
+      "id": "ENG-PM3-QUIZ-T02-001-10"
+    }
+  ],
+  "Months and Weather": [
+    {
+      "type": "mc",
+      "q": "Which month comes after April?",
+      "options": [
+        "March",
+        "May",
+        "June",
+        "July"
+      ],
+      "correct": 1,
+      "explanation": "May follows April.",
+      "id": "ENG-PM3-QUIZ-T03-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: There are ____ months in a year. (12 / 10)",
+      "expected": "12",
+      "explanation": "A year has twelve months.",
+      "id": "ENG-PM3-QUIZ-T03-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "December comes before November.",
+      "expected": false,
+      "explanation": "November comes before December.",
+      "id": "ENG-PM3-QUIZ-T03-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "What would you most likely use on a rainy day?",
+      "options": [
+        "An umbrella",
+        "Sunglasses",
+        "A fan",
+        "A swimsuit"
+      ],
+      "correct": 0,
+      "explanation": "An umbrella helps keep you dry in the rain.",
+      "id": "ENG-PM3-QUIZ-T03-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: January is the ____ month of the year. (first / last)",
+      "expected": "first",
+      "explanation": "January is month one.",
+      "id": "ENG-PM3-QUIZ-T03-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which word describes a very windy day?",
+      "options": [
+        "Breezy",
+        "Silent",
+        "Dry",
+        "Dark"
+      ],
+      "correct": 0,
+      "explanation": "Breezy means having a noticeable gentle wind.",
+      "id": "ENG-PM3-QUIZ-T03-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'cloudy' describes a sky with many clouds.",
+      "expected": true,
+      "explanation": "Cloudy means covered with or having many clouds.",
+      "id": "ENG-PM3-QUIZ-T03-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence is grammatically correct?",
+      "options": [
+        "It raining today.",
+        "It is raining today.",
+        "It are raining today.",
+        "It rain today now."
+      ],
+      "correct": 1,
+      "explanation": "It is raining is the correct present continuous sentence.",
+      "id": "ENG-PM3-QUIZ-T03-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The month after August is ____. (September / July)",
+      "expected": "September",
+      "explanation": "September comes immediately after August.",
+      "id": "ENG-PM3-QUIZ-T03-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "February is always the longest month of the year.",
+      "expected": false,
+      "explanation": "February has fewer days than the other months.",
+      "id": "ENG-PM3-QUIZ-T03-001-10"
+    }
+  ],
+  "My Home": [
+    {
+      "type": "mc",
+      "q": "Where would you usually prepare a meal?",
+      "options": [
+        "Bathroom",
+        "Kitchen",
+        "Bedroom",
+        "Garage"
+      ],
+      "correct": 1,
+      "explanation": "Meals are commonly prepared in the kitchen.",
+      "id": "ENG-PM3-QUIZ-T04-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: There ____ two windows in this room. (is / are)",
+      "expected": "are",
+      "explanation": "Use are with the plural two windows.",
+      "id": "ENG-PM3-QUIZ-T04-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'furniture' includes chairs and tables.",
+      "expected": true,
+      "explanation": "Chairs and tables are furniture.",
+      "id": "ENG-PM3-QUIZ-T04-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence describes an object's position?",
+      "options": [
+        "The room is clean.",
+        "The bag is under the table.",
+        "The door is blue.",
+        "The chair is wooden."
+      ],
+      "correct": 1,
+      "explanation": "Under the table describes a position.",
+      "id": "ENG-PM3-QUIZ-T04-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The cat is ____ the box, not outside it. (inside / above)",
+      "expected": "inside",
+      "explanation": "Inside means within the box.",
+      "id": "ENG-PM3-QUIZ-T04-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which word means the opposite of 'upstairs'?",
+      "options": [
+        "Outside",
+        "Downstairs",
+        "Inside",
+        "Nearby"
+      ],
+      "correct": 1,
+      "explanation": "Downstairs refers to a lower floor.",
+      "id": "ENG-PM3-QUIZ-T04-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "In 'The lamp is beside the sofa', 'beside' tells us the lamp's position.",
+      "expected": true,
+      "explanation": "Beside means next to.",
+      "id": "ENG-PM3-QUIZ-T04-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Choose the grammatically correct sentence.",
+      "options": [
+        "There is three chairs.",
+        "There are three chairs.",
+        "There am three chairs.",
+        "There be three chairs."
+      ],
+      "correct": 1,
+      "explanation": "Use there are with plural chairs.",
+      "id": "ENG-PM3-QUIZ-T04-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: A person usually sleeps in a ____. (bed / sink)",
+      "expected": "bed",
+      "explanation": "A bed is used for sleeping.",
+      "id": "ENG-PM3-QUIZ-T04-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'behind' means the same as 'in front of'.",
+      "expected": false,
+      "explanation": "Behind refers to the back of something.",
+      "id": "ENG-PM3-QUIZ-T04-001-10"
+    }
+  ],
+  "Food and Meals": [
+    {
+      "type": "mc",
+      "q": "Which food is a fruit?",
+      "options": [
+        "Carrot",
+        "Apple",
+        "Rice",
+        "Bread"
+      ],
+      "correct": 1,
+      "explanation": "An apple is a fruit.",
+      "id": "ENG-PM3-QUIZ-T05-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: I would like ____ orange. (a / an)",
+      "expected": "an",
+      "explanation": "Orange begins with a vowel sound, so use an.",
+      "id": "ENG-PM3-QUIZ-T05-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "We use 'some' with plural nouns, as in 'some apples'.",
+      "expected": true,
+      "explanation": "Some can be used with plural countable nouns.",
+      "id": "ENG-PM3-QUIZ-T05-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence is grammatically correct?",
+      "options": [
+        "I have an banana.",
+        "I have a banana.",
+        "I has a banana.",
+        "I having a banana."
+      ],
+      "correct": 1,
+      "explanation": "Banana begins with a consonant sound, so use a.",
+      "id": "ENG-PM3-QUIZ-T05-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: She drinks a glass of ____. (water / plate)",
+      "expected": "water",
+      "explanation": "Water is a drink; a plate is not.",
+      "id": "ENG-PM3-QUIZ-T05-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which food is made mainly from milk?",
+      "options": [
+        "Cheese",
+        "Carrot",
+        "Rice",
+        "Apple"
+      ],
+      "correct": 0,
+      "explanation": "Cheese is made from milk.",
+      "id": "ENG-PM3-QUIZ-T05-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "The phrase 'two breads' is the usual way to count two slices of bread.",
+      "expected": false,
+      "explanation": "Say two slices of bread.",
+      "id": "ENG-PM3-QUIZ-T05-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "What is the plural of 'tomato'?",
+      "options": [
+        "Tomatos",
+        "Tomatoes",
+        "Tomato's",
+        "Tomatoies"
+      ],
+      "correct": 1,
+      "explanation": "Tomato becomes tomatoes in the plural.",
+      "id": "ENG-PM3-QUIZ-T05-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The soup is very ____. (hot / loudly)",
+      "expected": "hot",
+      "explanation": "Hot is an adjective describing the soup's temperature.",
+      "id": "ENG-PM3-QUIZ-T05-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "A recipe gives instructions for preparing food.",
+      "expected": true,
+      "explanation": "A recipe lists ingredients and steps for cooking.",
+      "id": "ENG-PM3-QUIZ-T05-001-10"
+    }
+  ],
+  "Around Town": [
+    {
+      "type": "mc",
+      "q": "Where can someone borrow books?",
+      "options": [
+        "Library",
+        "Hospital",
+        "Bank",
+        "Restaurant"
+      ],
+      "correct": 0,
+      "explanation": "Libraries lend books.",
+      "id": "ENG-PM3-QUIZ-T06-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: The doctor works at a ____. (hospital / cinema)",
+      "expected": "hospital",
+      "explanation": "Doctors commonly work in hospitals.",
+      "id": "ENG-PM3-QUIZ-T06-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "A pedestrian is a person who travels on foot.",
+      "expected": true,
+      "explanation": "A pedestrian walks.",
+      "id": "ENG-PM3-QUIZ-T06-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Which place is used to send letters and parcels?",
+      "options": [
+        "Post office",
+        "Swimming pool",
+        "Museum",
+        "Playground"
+      ],
+      "correct": 0,
+      "explanation": "A post office handles mail and parcels.",
+      "id": "ENG-PM3-QUIZ-T06-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: We wait for the bus at the bus ____. (stop / shop)",
+      "expected": "stop",
+      "explanation": "The place where buses pick up passengers is a bus stop.",
+      "id": "ENG-PM3-QUIZ-T06-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which instruction tells you to turn in a direction?",
+      "options": [
+        "Go left",
+        "Eat lunch",
+        "Read silently",
+        "Wake up"
+      ],
+      "correct": 0,
+      "explanation": "Go left tells you to change direction.",
+      "id": "ENG-PM3-QUIZ-T06-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "A zebra crossing is a marked place where pedestrians can cross the road.",
+      "expected": true,
+      "explanation": "Zebra crossings are marked for pedestrians.",
+      "id": "ENG-PM3-QUIZ-T06-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which is the correct sentence?",
+      "options": [
+        "The shop is next to the bank.",
+        "The shop next the bank.",
+        "The shop are next the bank.",
+        "The shop beside of bank."
+      ],
+      "correct": 0,
+      "explanation": "Next to is a correct phrase for position.",
+      "id": "ENG-PM3-QUIZ-T06-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: Stop when the traffic light is ____. (red / green)",
+      "expected": "red",
+      "explanation": "A red traffic light means stop.",
+      "id": "ENG-PM3-QUIZ-T06-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'opposite' can mean across from another place.",
+      "expected": true,
+      "explanation": "Opposite describes something on the other side.",
+      "id": "ENG-PM3-QUIZ-T06-001-10"
+    }
+  ],
+  "Yesterday and the Past": [
+    {
+      "type": "mc",
+      "q": "What is the past tense of 'eat'?",
+      "options": [
+        "Eated",
+        "Ate",
+        "Eating",
+        "Eats"
+      ],
+      "correct": 1,
+      "explanation": "Ate is the past tense of eat.",
+      "id": "ENG-PM3-QUIZ-T07-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: Yesterday, we ____ football. (played / play)",
+      "expected": "played",
+      "explanation": "Yesterday indicates a completed action in the past.",
+      "id": "ENG-PM3-QUIZ-T07-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'went' is the past tense of 'go'.",
+      "expected": true,
+      "explanation": "Went is the irregular past form of go.",
+      "id": "ENG-PM3-QUIZ-T07-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She visit her aunt yesterday.",
+        "She visited her aunt yesterday.",
+        "She visiting her aunt yesterday.",
+        "She visits her aunt yesterday tomorrow."
+      ],
+      "correct": 1,
+      "explanation": "Visited is the past-tense verb.",
+      "id": "ENG-PM3-QUIZ-T07-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: Last night, I ____ a storybook. (read / reads)",
+      "expected": "read",
+      "explanation": "The past tense of read is spelled read.",
+      "id": "ENG-PM3-QUIZ-T07-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which is the past tense of 'buy'?",
+      "options": [
+        "Buyed",
+        "Bought",
+        "Buying",
+        "Buys"
+      ],
+      "correct": 1,
+      "explanation": "Bought is the past tense of buy.",
+      "id": "ENG-PM3-QUIZ-T07-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "In the sentence 'He was happy yesterday', 'was' is in the past tense.",
+      "expected": true,
+      "explanation": "Was is a past-tense form of be.",
+      "id": "ENG-PM3-QUIZ-T07-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which word is the past tense of 'see'?",
+      "options": [
+        "Saw",
+        "Seen",
+        "Seeing",
+        "Sees"
+      ],
+      "correct": 0,
+      "explanation": "Saw is the simple past form of see.",
+      "id": "ENG-PM3-QUIZ-T07-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: They ____ at home yesterday. (were / was)",
+      "expected": "were",
+      "explanation": "Use were with they in the past.",
+      "id": "ENG-PM3-QUIZ-T07-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The sentence 'I goed to the park' uses the correct past tense.",
+      "expected": false,
+      "explanation": "The past tense is went, not goed.",
+      "id": "ENG-PM3-QUIZ-T07-001-10"
+    }
+  ],
+  "Trips and Holidays": [
+    {
+      "type": "mc",
+      "q": "Where do passengers wait to board a plane?",
+      "options": [
+        "Airport",
+        "Library",
+        "Hospital",
+        "Market"
+      ],
+      "correct": 0,
+      "explanation": "Passengers board planes at airports.",
+      "id": "ENG-PM3-QUIZ-T08-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: We packed our clothes in a ____. (suitcase / saucepan)",
+      "expected": "suitcase",
+      "explanation": "A suitcase is used to carry clothes for travel.",
+      "id": "ENG-PM3-QUIZ-T08-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "A passport is an official document used for international travel.",
+      "expected": true,
+      "explanation": "Passports identify travellers at international borders.",
+      "id": "ENG-PM3-QUIZ-T08-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "What is the past tense of 'travel' in British English?",
+      "options": [
+        "Travells",
+        "Travelled",
+        "Travelling",
+        "Travelses"
+      ],
+      "correct": 1,
+      "explanation": "Travelled is the past tense in British English.",
+      "id": "ENG-PM3-QUIZ-T08-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: Last weekend, my family ____ the museum. (visited / visits)",
+      "expected": "visited",
+      "explanation": "Last weekend calls for the past tense.",
+      "id": "ENG-PM3-QUIZ-T08-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which word means a place where tourists stay overnight?",
+      "options": [
+        "Hotel",
+        "Bus stop",
+        "Museum",
+        "Supermarket"
+      ],
+      "correct": 0,
+      "explanation": "Hotels provide accommodation.",
+      "id": "ENG-PM3-QUIZ-T08-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "A timetable may tell travellers when a train or bus leaves.",
+      "expected": true,
+      "explanation": "Timetables list scheduled departure times.",
+      "id": "ENG-PM3-QUIZ-T08-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which sentence is about a future holiday?",
+      "options": [
+        "We are at the beach now.",
+        "We visited the beach yesterday.",
+        "We will visit the beach next week.",
+        "We visited the beach last year."
+      ],
+      "correct": 2,
+      "explanation": "Will visit next week describes a future plan.",
+      "id": "ENG-PM3-QUIZ-T08-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: We took many ____ on our holiday. (photos / photo)",
+      "expected": "photos",
+      "explanation": "Many takes the plural photos.",
+      "id": "ENG-PM3-QUIZ-T08-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'departure' means arriving at a destination.",
+      "expected": false,
+      "explanation": "Departure means leaving; arrival means reaching a place.",
+      "id": "ENG-PM3-QUIZ-T08-001-10"
+    }
+  ],
+  "Nature and Animals": [
+    {
+      "type": "mc",
+      "q": "Which animal is a mammal?",
+      "options": [
+        "Frog",
+        "Butterfly",
+        "Dolphin",
+        "Lizard"
+      ],
+      "correct": 2,
+      "explanation": "Dolphins are mammals.",
+      "id": "ENG-PM3-QUIZ-T09-001-01"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: A young cat is called a ____. (kitten / puppy)",
+      "expected": "kitten",
+      "explanation": "A kitten is a young cat.",
+      "id": "ENG-PM3-QUIZ-T09-001-02"
+    },
+    {
+      "type": "tf",
+      "q": "A butterfly has six legs.",
+      "expected": true,
+      "explanation": "Butterflies are insects, and adult insects have six legs.",
+      "id": "ENG-PM3-QUIZ-T09-001-03"
+    },
+    {
+      "type": "mc",
+      "q": "Which part of a plant usually absorbs water from the soil?",
+      "options": [
+        "Flower",
+        "Leaf",
+        "Root",
+        "Fruit"
+      ],
+      "correct": 2,
+      "explanation": "Roots absorb water from the soil.",
+      "id": "ENG-PM3-QUIZ-T09-001-04"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: Birds use their ____ to fly. (wings / fins)",
+      "expected": "wings",
+      "explanation": "Birds fly using wings.",
+      "id": "ENG-PM3-QUIZ-T09-001-05"
+    },
+    {
+      "type": "mc",
+      "q": "Which habitat is home to many fish?",
+      "options": [
+        "Ocean",
+        "Desert",
+        "Mountain peak",
+        "Grassland"
+      ],
+      "correct": 0,
+      "explanation": "The ocean is an aquatic habitat.",
+      "id": "ENG-PM3-QUIZ-T09-001-06"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'nocturnal' describes animals that are active mainly at night.",
+      "expected": true,
+      "explanation": "Nocturnal animals are mainly active at night.",
+      "id": "ENG-PM3-QUIZ-T09-001-07"
+    },
+    {
+      "type": "mc",
+      "q": "Which word is an adjective in 'The tall tree gives shade'?",
+      "options": [
+        "Tree",
+        "Gives",
+        "Tall",
+        "Shade"
+      ],
+      "correct": 2,
+      "explanation": "Tall describes the noun tree.",
+      "id": "ENG-PM3-QUIZ-T09-001-08"
+    },
+    {
+      "type": "text",
+      "q": "Fill in the blank: A plant needs water and ____ to grow well. (light / plastic)",
+      "expected": "light",
+      "explanation": "Plants generally need light to grow.",
+      "id": "ENG-PM3-QUIZ-T09-001-09"
+    },
+    {
+      "type": "tf",
+      "q": "The word 'habitat' means an animal's natural home.",
+      "expected": true,
+      "explanation": "A habitat is the place an organism naturally lives.",
+      "id": "ENG-PM3-QUIZ-T09-001-10"
+    }
+  ]
+});
