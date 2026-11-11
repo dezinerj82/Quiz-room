@@ -2568,18 +2568,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "A science drawing should show what was observed and include useful labels."
 },
     {
-      "id": "SCI-PM3-QUIZ-U01-001-10",
-      "type": "mc",
-      "q": "After using a beaker, what should pupils do before storing it?",
-      "options": [
-        "Leave liquid inside",
-        "Put it away while dirty",
-        "Throw it into a bin",
-        "Clean and dry it"
-      ],
-      "correct": 3,
-      "explanation": "Used apparatus should be cleaned and dried before storage."
-    }
+  "id": "SCI-PM3-QUIZ-U01-001-10",
+  "type": "mc",
+  "q": "After using a beaker, what should pupils do before storing it?",
+  "options": [
+    "Store it without cleaning.",
+    "Leave it on the bench until tomorrow.",
+    "Rinse it and put it away while still wet.",
+    "Clean and dry it"
+  ],
+  "correct": 3,
+  "explanation": "Used apparatus should be cleaned and dried before storage."
+}
   ],
   "Science Room Rules": [
     {
@@ -2596,18 +2596,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "Pupils should follow the teacher's instructions before beginning an experiment."
 },
     {
-      "id": "SCI-PM3-QUIZ-U02-001-02",
-      "type": "mc",
-      "q": "What should a pupil do if a glass container breaks?",
-      "options": [
-        "Tell the teacher immediately",
-        "Pick up shards with bare hands",
-        "Hide the broken glass",
-        "Kick the pieces under a desk"
-      ],
-      "correct": 0,
-      "explanation": "The teacher should handle broken glass safely."
-    },
+  "id": "SCI-PM3-QUIZ-U02-001-02",
+  "type": "mc",
+  "q": "What should a pupil do if a glass container breaks?",
+  "options": [
+    "Tell the teacher immediately",
+    "Pick up the pieces without gloves.",
+    "Sweep up the glass without reporting it.",
+    "Continue working beside the broken glass."
+  ],
+  "correct": 0,
+  "explanation": "The teacher should handle broken glass safely."
+},
     {
   "id": "SCI-PM3-QUIZ-U02-001-03",
   "type": "mc",
@@ -2728,18 +2728,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "Incisors are the front teeth that bite and cut food."
 },
     {
-      "id": "SCI-PM3-QUIZ-U03A-001-02",
-      "type": "mc",
-      "q": "What is the main job of canine teeth?",
-      "options": [
-        "Filtering blood",
-        "Tearing food",
-        "Producing saliva",
-        "Measuring food"
-      ],
-      "correct": 1,
-      "explanation": "Canine teeth help tear food."
-    },
+  "id": "SCI-PM3-QUIZ-U03A-001-02",
+  "type": "mc",
+  "q": "What is the main job of canine teeth?",
+  "options": [
+    "Cutting food into pieces.",
+    "Tearing food",
+    "Grinding food into small pieces.",
+    "Holding food in place while chewing."
+  ],
+  "correct": 1,
+  "explanation": "Canine teeth help tear food."
+},
     {
   "id": "SCI-PM3-QUIZ-U03A-001-03",
   "type": "mc",
@@ -2780,18 +2780,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "The pulp is the soft tissue inside the tooth that contains nerves and blood vessels."
 },
     {
-      "id": "SCI-PM3-QUIZ-U03A-001-06",
-      "type": "mc",
-      "q": "What are the first teeth that children grow called?",
-      "options": [
-        "Permanent molars",
-        "Milk teeth",
-        "Artificial teeth",
-        "Adult wisdom teeth"
-      ],
-      "correct": 1,
-      "explanation": "Milk teeth are the first set of teeth."
-    },
+  "id": "SCI-PM3-QUIZ-U03A-001-06",
+  "type": "mc",
+  "q": "What are the first teeth that children grow called?",
+  "options": [
+    "Permanent teeth",
+    "Milk teeth",
+    "Adult molars",
+    "Artificial teeth"
+  ],
+  "correct": 1,
+  "explanation": "Milk teeth are the first set of teeth."
+},
     {
   "id": "SCI-PM3-QUIZ-U03A-001-07",
   "type": "mc",
@@ -2806,18 +2806,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "Milk teeth help with eating and speaking before permanent teeth grow."
 },
     {
-      "id": "SCI-PM3-QUIZ-U03A-001-08",
-      "type": "mc",
-      "q": "Which habit helps prevent tooth decay?",
-      "options": [
-        "Sleep with sugary sweets in the mouth",
-        "Avoid cleaning between teeth",
-        "Share a dirty toothbrush",
-        "Brush teeth regularly with fluoride toothpaste"
-      ],
-      "correct": 3,
-      "explanation": "Regular brushing removes plaque and protects teeth."
-    },
+  "id": "SCI-PM3-QUIZ-U03A-001-08",
+  "type": "mc",
+  "q": "Which habit helps prevent tooth decay?",
+  "options": [
+    "Brush only once a week.",
+    "Eat sweets just before bedtime.",
+    "Skip brushing when teeth look clean.",
+    "Brush teeth regularly with fluoride toothpaste"
+  ],
+  "correct": 3,
+  "explanation": "Regular brushing removes plaque and protects teeth."
+},
     {
   "id": "SCI-PM3-QUIZ-U03A-001-09",
   "type": "mc",
@@ -2832,18 +2832,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "Eating sugary foods often can increase the risk of tooth decay."
 },
     {
-      "id": "SCI-PM3-QUIZ-U03A-001-10",
-      "type": "mc",
-      "q": "Who should examine a painful or decaying tooth?",
-      "options": [
-        "Tailor",
-        "Dentist",
-        "Astronaut",
-        "Mechanic"
-      ],
-      "correct": 1,
-      "explanation": "Dentists examine and treat dental problems."
-    }
+  "id": "SCI-PM3-QUIZ-U03A-001-10",
+  "type": "mc",
+  "q": "Who should examine a painful or decaying tooth?",
+  "options": [
+    "Pharmacist",
+    "Dentist",
+    "Optician",
+    "Veterinarian"
+  ],
+  "correct": 1,
+  "explanation": "Dentists examine and treat dental problems."
+}
   ],
   "Food and Digestion": [
     {
@@ -2851,9 +2851,9 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "What does digestion do to the food we eat?",
   "options": [
-    "Changes all food into water.",
-    "Stores food inside the lungs.",
-    "Changes food into teeth.",
+    "Moves oxygen around the body.",
+    "Pumps blood to body organs.",
+    "Controls how quickly we breathe.",
     "Breaks food into smaller, simpler substances."
   ],
   "correct": 3,
@@ -2864,10 +2864,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why do we chew food before swallowing it?",
   "options": [
-    "To remove every nutrient from it.",
-    "To turn it into drinking water.",
+    "To remove all the nutrients.",
+    "To cool the food before eating.",
     "To break it into smaller pieces.",
-    "To make it stay in the mouth."
+    "To make the food sweeter."
   ],
   "correct": 2,
   "explanation": "Chewing breaks food into smaller pieces and helps make it easier to swallow."
@@ -2877,10 +2877,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why does the body need to digest food?",
   "options": [
-    "So food can remain in the stomach.",
+    "To make the heart beat.",
     "So nutrients can be absorbed and used.",
-    "So food can turn into air.",
-    "So nutrients can leave the body unused."
+    "To help the lungs take in air.",
+    "To keep bones in place."
   ],
   "correct": 1,
   "explanation": "Digestion makes nutrients available for the body to absorb."
@@ -2943,9 +2943,9 @@ Object.assign(exerciseBank, { Science: {
   "q": "What does the large intestine mainly absorb from food waste?",
   "options": [
     "Water",
-    "Air",
-    "Sunlight",
-    "Sound"
+    "Most digested nutrients",
+    "Oxygen",
+    "Saliva"
   ],
   "correct": 0,
   "explanation": "The large intestine absorbs water from material that has not been digested."
@@ -2955,9 +2955,9 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "What usually happens to food that the body cannot digest?",
   "options": [
-    "It stays in the stomach forever.",
-    "It changes into bones.",
-    "It travels into the lungs.",
+    "It passes into the blood without changes.",
+    "It returns to the mouth.",
+    "It remains in the stomach.",
     "It becomes waste that leaves the body."
   ],
   "correct": 3,
@@ -2968,10 +2968,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Which action helps the digestive system work well when eating?",
   "options": [
-    "Swallow large pieces without chewing.",
-    "Eat as quickly as possible.",
+    "Swallow large pieces of food.",
+    "Eat very quickly without chewing.",
     "Chew food properly before swallowing.",
-    "Skip chewing when eating solid food."
+    "Take large bites while talking."
   ],
   "correct": 2,
   "explanation": "Chewing food well helps start digestion and makes swallowing easier."
@@ -2992,18 +2992,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "A herbivore is an animal that eats plants."
 },
     {
-      "id": "SCI-PM3-QUIZ-U04-001-02",
-      "type": "mc",
-      "q": "What do we call an animal that eats other animals?",
-      "options": [
-        "Herbivore",
-        "Producer",
-        "Pollinator",
-        "Carnivore"
-      ],
-      "correct": 3,
-      "explanation": "Carnivores feed on other animals."
-    },
+  "id": "SCI-PM3-QUIZ-U04-001-02",
+  "type": "mc",
+  "q": "What do we call an animal that eats other animals?",
+  "options": [
+    "Herbivore",
+    "Plant eater",
+    "Producer",
+    "Carnivore"
+  ],
+  "correct": 3,
+  "explanation": "Carnivores feed on other animals."
+},
     {
   "id": "SCI-PM3-QUIZ-U04-001-03",
   "type": "mc",
@@ -3031,18 +3031,18 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Sharp canine teeth help meat-eating animals tear flesh."
     },
     {
-      "id": "SCI-PM3-QUIZ-U04-001-05",
-      "type": "mc",
-      "q": "Which teeth are especially useful for a cow grinding grass?",
-      "options": [
-        "Broad molars",
-        "Pointed canines only",
-        "Needle-like fangs",
-        "No teeth at all"
-      ],
-      "correct": 0,
-      "explanation": "Broad molars help herbivores grind plant material."
-    },
+  "id": "SCI-PM3-QUIZ-U04-001-05",
+  "type": "mc",
+  "q": "Which teeth are especially useful for a cow grinding grass?",
+  "options": [
+    "Broad molars",
+    "Sharp front teeth",
+    "Long pointed canines",
+    "Small biting incisors"
+  ],
+  "correct": 0,
+  "explanation": "Broad molars help herbivores grind plant material."
+},
     {
   "id": "SCI-PM3-QUIZ-U04-001-06",
   "type": "mc",
@@ -3050,7 +3050,7 @@ Object.assign(exerciseBank, { Science: {
   "options": [
     "Herbivore",
     "Carnivore",
-    "Plant only",
+    "Insect eater only",
     "Omnivore"
   ],
   "correct": 3,
@@ -3076,8 +3076,8 @@ Object.assign(exerciseBank, { Science: {
   "options": [
     "They live in different-sized groups.",
     "They eat different types of food.",
-    "They sleep at different times.",
-    "They have different fur colours."
+    "They have different fur colours.",
+    "They rest at different times."
   ],
   "correct": 1,
   "explanation": "An animal's teeth are suited to the food it eats."
@@ -3088,9 +3088,9 @@ Object.assign(exerciseBank, { Science: {
   "q": "Which food would be suitable for a rabbit?",
   "options": [
     "Fresh grass and leafy vegetables.",
-    "Raw fish and meat.",
-    "Only insects.",
-    "Only small bones."
+    "Small insects",
+    "Cooked meat",
+    "Raw fish"
   ],
   "correct": 0,
   "explanation": "Rabbits are herbivores that eat plants."
@@ -3115,10 +3115,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why do plants reproduce?",
   "options": [
-    "To stop their roots from growing.",
+    "To absorb more water.",
     "To grow more plants of the same kind.",
-    "To make all their leaves fall.",
-    "To use up all the soil."
+    "To store extra food.",
+    "To grow taller."
   ],
   "correct": 1,
   "explanation": "Reproduction allows new plants of the same kind to grow."
@@ -3129,9 +3129,9 @@ Object.assign(exerciseBank, { Science: {
   "q": "What can grow into a new plant when given the right conditions?",
   "options": [
     "A seed",
-    "A dry stone",
-    "A plastic bead",
-    "A piece of metal"
+    "An empty seed shell",
+    "A dry pebble",
+    "A piece of plastic"
   ],
   "correct": 0,
   "explanation": "Seeds can germinate and grow into new plants when conditions are suitable."
@@ -3193,9 +3193,9 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why might a gardener plant a rose stem cutting?",
   "options": [
-    "To make the stem turn into a seed.",
-    "To stop all roses from growing.",
-    "To make the rose roots disappear.",
+    "To make the flowers change colour.",
+    "To make the stem dry out.",
+    "To make the original rose stop growing.",
     "To grow a new rose plant."
   ],
   "correct": 3,
@@ -3206,10 +3206,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why is it useful for plants to make new plants?",
   "options": [
-    "So plants never need water.",
-    "So all plants have the same colour.",
+    "To make the roots longer.",
+    "To make the flowers brighter.",
     "So the same kind of plant can continue growing.",
-    "So leaves never fall off."
+    "To make the leaves wider."
   ],
   "correct": 2,
   "explanation": "Reproduction helps plants continue from one generation to the next."
@@ -3338,9 +3338,9 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Which sentence correctly compares length and area?",
   "options": [
-    "Length tells how heavy; area tells how hot.",
-    "Length and area both measure time.",
-    "Area tells how loud; length tells how bright.",
+    "Length and area both measure distance.",
+    "Area tells how far; length tells surface covered.",
+    "Length and area both measure weight.",
     "Length tells how far; area tells how much surface."
   ],
   "correct": 3,
@@ -3364,10 +3364,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Why must we use equal-sized squares when comparing areas?",
   "options": [
-    "So every shape becomes a square.",
+    "Because all leaves are the same shape.",
     "So the measurements are fair.",
-    "So the paper becomes heavier.",
-    "So the numbers on the ruler change."
+    "Because using larger squares is always more accurate.",
+    "Because only square leaves can be measured."
   ],
   "correct": 1,
   "explanation": "Using the same size of square makes area comparisons fair."
@@ -3380,8 +3380,8 @@ Object.assign(exerciseBank, { Science: {
   "q": "What does the volume of a box tell us?",
   "options": [
     "How heavy the box is.",
-    "How bright the box looks.",
-    "How rough the box feels.",
+    "How long one edge of the box is.",
+    "How much of the table the box covers.",
     "How much space the box takes up."
   ],
   "correct": 3,
@@ -3576,27 +3576,27 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "An egg sinks in plain water but floats after enough salt is mixed in. Why?",
   "options": [
-    "The egg becomes smaller.",
-    "The egg changes into a different material.",
-    "The water becomes solid.",
+    "The egg becomes lighter.",
+    "The salt changes the egg's shape.",
+    "Salt makes the egg smaller.",
     "Salt makes the water denser."
   ],
   "correct": 3,
   "explanation": "Adding enough salt increases the water's density and may help the egg float."
 },
     {
-      "id": "SCI-PM3-QUIZ-U07-001-07",
-      "type": "mc",
-      "q": "Oil commonly forms a layer above water. What does that suggest?",
-      "options": [
-        "Oil has no volume",
-        "Water is always solid",
-        "Oil is less dense than water",
-        "Oil turns into air"
-      ],
-      "correct": 2,
-      "explanation": "Oil typically floats above water because of its lower density."
-    },
+  "id": "SCI-PM3-QUIZ-U07-001-07",
+  "type": "mc",
+  "q": "Oil commonly forms a layer above water. What does that suggest?",
+  "options": [
+    "Oil is denser than water.",
+    "Oil and water have exactly the same density.",
+    "Oil is less dense than water",
+    "Oil dissolves completely in water."
+  ],
+  "correct": 2,
+  "explanation": "Oil typically floats above water because of its lower density."
+},
     {
   "id": "SCI-PM3-QUIZ-U07-001-08",
   "type": "mc",
@@ -3611,26 +3611,26 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "For the same volume, the block with more mass is denser."
 },
     {
-      "id": "SCI-PM3-QUIZ-U07-001-09",
-      "type": "mc",
-      "q": "What would happen to a piece of plastic that is less dense than water?",
-      "options": [
-        "It would tend to float",
-        "It must sink to the bottom",
-        "It would change into metal",
-        "It must dissolve instantly"
-      ],
-      "correct": 0,
-      "explanation": "Objects less dense than water tend to float."
-    },
+  "id": "SCI-PM3-QUIZ-U07-001-09",
+  "type": "mc",
+  "q": "What would happen to a piece of plastic that is less dense than water?",
+  "options": [
+    "It would tend to float",
+    "It would sink to the bottom.",
+    "It would stay halfway down.",
+    "It would stay at the bottom after being pushed down."
+  ],
+  "correct": 0,
+  "explanation": "Objects less dense than water tend to float."
+},
     {
   "id": "SCI-PM3-QUIZ-U07-001-10",
   "type": "mc",
   "q": "Why is it often easier to float in seawater than in freshwater?",
   "options": [
-    "Seawater is always warmer.",
-    "The sea has no gravity.",
-    "Seawater is lighter than freshwater.",
+    "Freshwater is always deeper.",
+    "Salt removes the swimmer's weight.",
+    "Seawater contains fewer dissolved materials.",
     "Seawater contains salt, making it denser."
   ],
   "correct": 3,
@@ -3639,31 +3639,31 @@ Object.assign(exerciseBank, { Science: {
   ],
   "Acid and Alkali": [
     {
-      "id": "SCI-PM3-QUIZ-U08-001-01",
-      "type": "mc",
-      "q": "What happens to blue litmus paper in an acidic solution?",
-      "options": [
-        "It turns green",
-        "It turns red",
-        "It turns black",
-        "It remains blue and glows"
-      ],
-      "correct": 1,
-      "explanation": "Acids change blue litmus paper to red."
-    },
+  "id": "SCI-PM3-QUIZ-U08-001-01",
+  "type": "mc",
+  "q": "What happens to blue litmus paper in an acidic solution?",
+  "options": [
+    "It stays blue.",
+    "It turns red",
+    "It turns yellow.",
+    "It turns green."
+  ],
+  "correct": 1,
+  "explanation": "Acids change blue litmus paper to red."
+},
     {
-      "id": "SCI-PM3-QUIZ-U08-001-02",
-      "type": "mc",
-      "q": "What happens to red litmus paper in an alkaline solution?",
-      "options": [
-        "It turns blue",
-        "It turns yellow",
-        "It turns white",
-        "It becomes transparent"
-      ],
-      "correct": 0,
-      "explanation": "Alkalis change red litmus paper to blue."
-    },
+  "id": "SCI-PM3-QUIZ-U08-001-02",
+  "type": "mc",
+  "q": "What happens to red litmus paper in an alkaline solution?",
+  "options": [
+    "It turns blue",
+    "It stays red.",
+    "It turns yellow.",
+    "It turns green."
+  ],
+  "correct": 0,
+  "explanation": "Alkalis change red litmus paper to blue."
+},
     {
       "id": "SCI-PM3-QUIZ-U08-001-03",
       "type": "mc",
@@ -3695,10 +3695,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "What does it mean if a liquid is neutral?",
   "options": [
-    "It is always sweet.",
+    "It always changes red litmus to blue.",
     "It is neither acidic nor alkaline.",
-    "It is always hot.",
-    "It always turns blue litmus red."
+    "It always changes blue litmus to red.",
+    "It is always a strong acid."
   ],
   "correct": 1,
   "explanation": "A neutral liquid is neither acidic nor alkaline."
@@ -3743,18 +3743,18 @@ Object.assign(exerciseBank, { Science: {
   "explanation": "An alkali turns red litmus paper blue."
 },
     {
-      "id": "SCI-PM3-QUIZ-U08-001-09",
-      "type": "mc",
-      "q": "Which statement about neutral water and litmus is correct?",
-      "options": [
-        "It turns both colours black",
-        "It does not change red or blue litmus",
-        "It always turns blue litmus red",
-        "It always turns red litmus blue"
-      ],
-      "correct": 1,
-      "explanation": "Neutral water does not change either litmus colour."
-    },
+  "id": "SCI-PM3-QUIZ-U08-001-09",
+  "type": "mc",
+  "q": "Which statement about neutral water and litmus is correct?",
+  "options": [
+    "It turns red litmus blue.",
+    "It does not change red or blue litmus",
+    "It turns blue litmus red.",
+    "It turns both litmus papers red."
+  ],
+  "correct": 1,
+  "explanation": "Neutral water does not change either litmus colour."
+},
     {
   "id": "SCI-PM3-QUIZ-U08-001-10",
   "type": "mc",
@@ -3810,31 +3810,31 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Earth is the third planet outward from the Sun."
     },
     {
-      "id": "SCI-PM3-QUIZ-U09-001-04",
-      "type": "mc",
-      "q": "Which planet is the largest in our Solar System?",
-      "options": [
-        "Mercury",
-        "Mars",
-        "Venus",
-        "Jupiter"
-      ],
-      "correct": 3,
-      "explanation": "Jupiter is the largest planet."
-    },
+  "id": "SCI-PM3-QUIZ-U09-001-04",
+  "type": "mc",
+  "q": "Which planet is the largest in our Solar System?",
+  "options": [
+    "Saturn",
+    "Neptune",
+    "Uranus",
+    "Jupiter"
+  ],
+  "correct": 3,
+  "explanation": "Jupiter is the largest planet."
+},
     {
-      "id": "SCI-PM3-QUIZ-U09-001-05",
-      "type": "mc",
-      "q": "Which planet is famous for its prominent rings?",
-      "options": [
-        "Mercury",
-        "Mars",
-        "Saturn",
-        "Earth"
-      ],
-      "correct": 2,
-      "explanation": "Saturn has a striking ring system."
-    },
+  "id": "SCI-PM3-QUIZ-U09-001-05",
+  "type": "mc",
+  "q": "Which planet is famous for its prominent rings?",
+  "options": [
+    "Jupiter",
+    "Uranus",
+    "Saturn",
+    "Neptune"
+  ],
+  "correct": 2,
+  "explanation": "Saturn has a striking ring system."
+},
     {
       "id": "SCI-PM3-QUIZ-U09-001-06",
       "type": "mc",
@@ -3907,9 +3907,9 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "What is a pulley?",
   "options": [
-    "A stick used to measure length.",
-    "A container for mixing liquids.",
-    "A tool used to cut paper.",
+    "A flat board used as a ramp.",
+    "A bar that moves around a fixed point.",
+    "A wheel used without any rope.",
     "A wheel with a groove for a rope."
   ],
   "correct": 3,
@@ -3920,10 +3920,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "How does a fixed pulley help someone lift a bucket?",
   "options": [
-    "It makes the bucket empty.",
-    "It removes the weight of the bucket.",
+    "It makes the bucket lighter.",
+    "It lets the bucket lift without any pulling.",
     "It lets the person pull the rope down to lift the bucket.",
-    "It makes the rope shorter every time."
+    "It removes the need for a rope."
   ],
   "correct": 2,
   "explanation": "A fixed pulley changes the direction of the pull."
@@ -3955,18 +3955,18 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Pulling down can raise the load."
     },
     {
-      "id": "SCI-PM3-QUIZ-U10-001-05",
-      "type": "mc",
-      "q": "Which part turns when a rope moves over a pulley?",
-      "options": [
-        "Wall",
-        "Load's colour",
-        "Handle of a spoon",
-        "Wheel"
-      ],
-      "correct": 3,
-      "explanation": "The grooved wheel rotates as the rope travels."
-    },
+  "id": "SCI-PM3-QUIZ-U10-001-05",
+  "type": "mc",
+  "q": "Which part turns when a rope moves over a pulley?",
+  "options": [
+    "The pole supporting the pulley.",
+    "The hook holding the load.",
+    "The ceiling above the pulley.",
+    "Wheel"
+  ],
+  "correct": 3,
+  "explanation": "The grooved wheel rotates as the rope travels."
+},
     {
   "id": "SCI-PM3-QUIZ-U10-001-06",
   "type": "mc",
@@ -3985,10 +3985,10 @@ Object.assign(exerciseBank, { Science: {
   "type": "mc",
   "q": "Where might you find a pulley used to lift a bucket of water?",
   "options": [
-    "Inside a schoolbag",
+    "Beside a classroom desk.",
     "At a well",
-    "Inside a pencil case",
-    "Under a dining plate"
+    "On a kitchen shelf.",
+    "Inside a schoolbag."
   ],
   "correct": 1,
   "explanation": "A pulley can be used to lift a bucket from a well."
@@ -3999,9 +3999,9 @@ Object.assign(exerciseBank, { Science: {
   "q": "Why might people use more than one pulley to lift something heavy?",
   "options": [
     "It can make the load easier to lift.",
-    "It makes the load disappear.",
-    "It turns the rope into metal.",
-    "It makes the load heavier."
+    "It makes a heavy load weightless.",
+    "It makes the rope unnecessary.",
+    "It keeps the load from ever lowering."
   ],
   "correct": 0,
   "explanation": "Using several pulleys can reduce the force needed to lift a load."
