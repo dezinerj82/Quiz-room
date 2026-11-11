@@ -1118,6 +1118,12 @@ body:not(.auth-locked) #selection .qr-main #qrQuizSteps button{
  height:auto!important;
 }
 
+/* Compact padding for the lower quiz-selection buttons; keep their normal font size. */
+body:not(.auth-locked) #selection .qr-main .level-grid .level-button,
+body:not(.auth-locked) #selection .qr-main .chapter-items .version{
+ padding:4px 10px!important;
+}
+
 /* Quiz completion follows the existing secondary palette and compact controls. */
 body:not(.auth-locked) #results .resultpanel{
  padding:var(--qr-card-padding)!important;
