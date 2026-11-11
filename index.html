@@ -82,7 +82,7 @@ body:not(.auth-locked) .qr-card h2{color:var(--qr-text-primary)}
 body:not(.auth-locked) button:focus-visible,body:not(.auth-locked) input:focus-visible,body:not(.auth-locked) select:focus-visible{outline:3px solid var(--qr-focus);outline-offset:2px}
 
 
-#quizStart #subjects.tilegrid .tile{min-height:calc(60px*var(--qr-space))}
+
 
 
 
@@ -214,9 +214,9 @@ body:not(.auth-locked) .qr-home-grid{gap:var(--qr-card-gap)!important}
 
 
 body:not(.auth-locked) .qr-main .qr-top{margin-bottom:var(--qr-card-gap)!important}
-body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .resultbutton,body:not(.auth-locked) .qr-main .pill{min-height:var(--qr-control-height)!important;font-size:var(--qr-font-body)!important}
+body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .resultbutton,body:not(.auth-locked) .qr-main .pill{font-size:var(--qr-font-body)!important}
 body:not(.auth-locked) #quizStart #subjects.tilegrid{gap:var(--qr-card-gap)!important}
-body:not(.auth-locked) #quizStart #subjects.tilegrid .tile{min-height:var(--qr-control-height)!important;font-size:var(--qr-font-body)!important}
+body:not(.auth-locked) #quizStart #subjects.tilegrid .tile{font-size:var(--qr-font-body)!important}
 body:not(.auth-locked) .qr-main .qr-card p{font-size:var(--qr-font-body)}
 
 @media(max-width:740px){
@@ -364,7 +364,7 @@ body:not(.auth-locked) .time-warning-card .resultbutton{
  font-size:var(--qr-font-body)!important;
  border:0!important;border-radius:var(--qr-button-radius)!important;
 }
-body:not(.auth-locked) #selection .version{min-height:var(--density-choice)!important}
+
 
 body:not(.auth-locked) #results .resultpanel h2{font-size:var(--qr-font-heading)!important}
 body:not(.auth-locked) #results .resultlabel,
@@ -418,7 +418,7 @@ body:not(.auth-locked) #selection .chapter-items{
  gap:var(--density-space)!important;
 }
 body:not(.auth-locked) #selection .chapter-items .version{
- width:100%!important;max-width:none!important;min-width:0!important;padding:var(--qr-unified-padding)!important;min-height:var(--density-choice)!important;
+ width:100%!important;max-width:none!important;min-width:0!important;padding:var(--qr-control-padding)!important;
 }
 
 
@@ -860,7 +860,7 @@ body:not(.auth-locked) #quiz .quizactions{
 }
 body:not(.auth-locked) #quiz .quizactions .pill{
  display:inline-flex!important;align-items:center!important;justify-content:center!important;
- gap:10px!important;min-height:var(--density-control)!important;
+ gap:10px!important;
  border:0!important;border-radius:var(--qr-button-radius)!important;padding:var(--qr-unified-padding)!important;
  font-size:var(--qr-font-body)!important;font-weight:800!important;
  
@@ -1028,6 +1028,19 @@ body:not(.auth-locked) #notesPage .qr-note-edit{
  background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))!important;
 }
 
+
+/* One content-sized control rule across Quiz Room. Navigation rail and cards keep their own sizing. */
+body:not(.auth-locked) .qr-main :is(button,.qr-file-button):not(.qr-sidebar-toggle):not(.bookmark-list-button),
+body:not(.auth-locked) .time-warning-card button,
+body:not(.auth-locked) .qr-crop-modal button,
+#googleGate button{
+ min-height:0!important;height:auto!important;
+ padding:var(--qr-control-padding)!important;
+}
+body:not(.auth-locked) #quiz :is(.qr-drop-zone,.qr-drop-ghost){
+ padding:var(--qr-control-padding)!important;
+}
+
 /* Inline answer target plus two draggable choices; reused by all subjects. */
 body:not(.auth-locked) #quiz .qr-drop-zone{
  display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;
@@ -1044,7 +1057,7 @@ body:not(.auth-locked) #quiz .qr-drop-zone.answer-correct{border-color:var(--qr-
 body:not(.auth-locked) #quiz .qr-drop-zone.answer-wrong{border-color:var(--qr-error);background:color-mix(in srgb,var(--qr-error) 15%,var(--qr-background))}
 body:not(.auth-locked) #quiz .qr-drop-choices{display:flex;align-items:center;flex-wrap:wrap;gap:var(--density-space)}
 body:not(.auth-locked) #quiz .qr-drop-option{
- width:auto!important;min-width:90px;min-height:44px!important;
+ width:auto!important;min-width:0;
  touch-action:none;user-select:none;cursor:grab
 }
 body:not(.auth-locked) #quiz .qr-drop-option.selected{outline:2px solid var(--qr-focus);outline-offset:2px}
