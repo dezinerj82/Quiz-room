@@ -2465,69 +2465,53 @@ Object.assign(exerciseBank, { Science: {
     },
     {
       "id": "SCI-PM3-QUIZ-U01-001-02",
-      "type": "mc",
-      "q": "A pupil groups leaves by their shapes. Which skill is used?",
-      "options": [
-        "Communicating",
-        "Predicting",
-        "Measuring",
-        "Classifying"
-      ],
-      "correct": 3,
-      "explanation": "Classifying means grouping things by shared characteristics."
+      "type": "tf",
+      "q": "Grouping leaves by their shapes is an example of classifying.",
+      "explanation": "Classifying means putting things into groups by features they share.",
+      "expected": true
     },
     {
       "id": "SCI-PM3-QUIZ-U01-001-03",
-      "type": "mc",
-      "q": "Which tool is best for timing a short running race?",
+      "type": "drop",
+      "q": "A ____ is used to measure the time taken to run a short race.",
+      "explanation": "A stopwatch measures how much time has passed.",
+      "expected": "stopwatch",
       "options": [
-        "Ruler",
-        "Measuring cylinder",
-        "Stopwatch",
-        "Hand lens"
-      ],
-      "correct": 2,
-      "explanation": "A stopwatch measures elapsed time."
+        "stopwatch",
+        "thermometer"
+      ]
     },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-04",
-  "type": "mc",
-  "q": "A plant's leaves are drooping, and the soil is very dry. What is a likely reason?",
-  "options": [
-    "The plant has too many flowers.",
-    "The plant has not received enough water.",
-    "The plant has been watered too often.",
-    "The plant has been moved to a bigger pot."
-  ],
-  "correct": 1,
-  "explanation": "Dry soil and drooping leaves suggest the plant may need water. Using clues to explain something is called making an inference."
-},
+      "id": "SCI-PM3-QUIZ-U01-001-04",
+      "type": "mc",
+      "q": "A plant's leaves are drooping, and the soil is very dry. What is a likely reason?",
+      "options": [
+        "The plant has too many flowers.",
+        "The plant has not received enough water.",
+        "The plant has been watered too often.",
+        "The plant has been moved to a bigger pot."
+      ],
+      "correct": 1,
+      "explanation": "Dry soil and drooping leaves suggest the plant may need water. Using clues to explain something is called making an inference."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-05",
-  "type": "mc",
-  "q": "A toy car is placed at the top of a slope. What will probably happen when it is released?",
-  "options": [
-    "It will roll down the slope.",
-    "It will roll up the slope.",
-    "It will stay at the top.",
-    "It will move sideways along the top."
-  ],
-  "correct": 0,
-  "explanation": "A toy car on a slope usually rolls downhill. Saying what might happen is a prediction."
-},
+      "id": "SCI-PM3-QUIZ-U01-001-05",
+      "type": "tf",
+      "q": "A prediction describes only what has already happened.",
+      "explanation": "A prediction tells us what we think may happen next.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-06",
-  "type": "mc",
-  "q": "A pupil draws a bar chart to share the results of an experiment. Which science skill is used?",
-  "options": [
-    "Smelling",
-    "Estimating",
-    "Separating",
-    "Communicating"
-  ],
-  "correct": 3,
-  "explanation": "Using a chart to share results is a way of communicating."
-},
+      "id": "SCI-PM3-QUIZ-U01-001-06",
+      "type": "drop",
+      "q": "A pupil uses a bar chart to ____ the results of an experiment.",
+      "explanation": "A bar chart helps share experiment results.",
+      "expected": "share",
+      "options": [
+        "share",
+        "hide"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U01-001-07",
       "type": "mc",
@@ -2542,349 +2526,285 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Align the object's end with the zero mark."
     },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-08",
-  "type": "mc",
-  "q": "When measuring a pencil with a ruler, why should you look straight at the numbers?",
-  "options": [
-    "To see the pencil's colour.",
-    "To read the correct measurement.",
-    "To make the pencil longer.",
-    "To check the ruler's material."
-  ],
-  "correct": 1,
-  "explanation": "Looking straight at the ruler helps prevent mistakes when reading measurements."
-},
+      "id": "SCI-PM3-QUIZ-U01-001-08",
+      "type": "tf",
+      "q": "Looking straight at a ruler's markings helps us read a measurement correctly.",
+      "explanation": "Reading the ruler at eye level helps prevent errors.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-09",
-  "type": "mc",
-  "q": "What should a good science drawing of a leaf include?",
-  "options": [
-    "A clear shape and labels.",
-    "A made-up shape and colours.",
-    "Only the name of the pupil.",
-    "A decoration around the drawing."
-  ],
-  "correct": 0,
-  "explanation": "A science drawing should show what was observed and include useful labels."
-},
+      "id": "SCI-PM3-QUIZ-U01-001-09",
+      "type": "drop",
+      "q": "A clear science drawing should include useful ____.",
+      "explanation": "Labels help explain the parts being observed.",
+      "expected": "labels",
+      "options": [
+        "labels",
+        "decorations"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U01-001-10",
-  "type": "mc",
-  "q": "After using a beaker, what should pupils do before storing it?",
-  "options": [
-    "Store it without cleaning.",
-    "Leave it on the bench until tomorrow.",
-    "Rinse it and put it away while still wet.",
-    "Clean and dry it"
-  ],
-  "correct": 3,
-  "explanation": "Used apparatus should be cleaned and dried before storage."
-}
+      "id": "SCI-PM3-QUIZ-U01-001-10",
+      "type": "mc",
+      "q": "After using a beaker, what should pupils do before storing it?",
+      "options": [
+        "Store it without cleaning.",
+        "Leave it on the bench until tomorrow.",
+        "Rinse it and put it away while still wet.",
+        "Clean and dry it"
+      ],
+      "correct": 3,
+      "explanation": "Used apparatus should be cleaned and dried before storage."
+    }
   ],
   "Science Room Rules": [
     {
-  "id": "SCI-PM3-QUIZ-U02-001-01",
-  "type": "mc",
-  "q": "Before starting a science activity, what should pupils do?",
-  "options": [
-    "Start mixing materials straight away.",
-    "Listen to the teacher's instructions",
-    "Choose tools before listening.",
-    "Begin while the teacher is speaking."
-  ],
-  "correct": 1,
-  "explanation": "Pupils should follow the teacher's instructions before beginning an experiment."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U02-001-02",
-  "type": "mc",
-  "q": "What should a pupil do if a glass container breaks?",
-  "options": [
-    "Tell the teacher immediately",
-    "Pick up the pieces without gloves.",
-    "Sweep up the glass without reporting it.",
-    "Continue working beside the broken glass."
-  ],
-  "correct": 0,
-  "explanation": "The teacher should handle broken glass safely."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U02-001-03",
-  "type": "mc",
-  "q": "How should a pupil carry a glass container in the science room?",
-  "options": [
-    "Quickly while running.",
-    "By swinging it beside the body.",
-    "With other objects piled on top.",
-    "Carefully, using both hands when needed."
-  ],
-  "correct": 3,
-  "explanation": "Glass apparatus must be carried carefully to avoid spills and breakages."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U02-001-04",
-  "type": "mc",
-  "q": "Why should pupils never taste substances in a science room?",
-  "options": [
-    "The labels may be missing.",
-    "The liquid may look like water.",
-    "They may be harmful",
-    "The container may be made of glass."
-  ],
-  "correct": 2,
-  "explanation": "A substance may be harmful even if it looks harmless, so it must never be tasted."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U02-001-05",
+      "id": "SCI-PM3-QUIZ-U02-001-01",
       "type": "mc",
-      "q": "What is the correct action after spilling a liquid during an experiment?",
+      "q": "Before starting a science activity, what should pupils do?",
       "options": [
-        "Walk away silently",
-        "Inform the teacher and follow instructions",
-        "Leave the spill for the next class",
-        "Touch it to find out what it is"
+        "Start mixing materials straight away.",
+        "Listen to the teacher's instructions",
+        "Choose tools before listening.",
+        "Begin while the teacher is speaking."
       ],
       "correct": 1,
-      "explanation": "Spills should be reported and cleaned using safe instructions."
+      "explanation": "Pupils should follow the teacher's instructions before beginning an experiment."
     },
     {
-  "id": "SCI-PM3-QUIZ-U02-001-06",
-  "type": "mc",
-  "q": "Which behaviour is appropriate during an experiment?",
-  "options": [
-    "Work calmly and carefully",
-    "Talk loudly and distract others.",
-    "Play with equipment while waiting.",
-    "Rush to finish before classmates."
-  ],
-  "correct": 0,
-  "explanation": "Working calmly and carefully helps prevent accidents."
-},
+      "id": "SCI-PM3-QUIZ-U02-001-02",
+      "type": "tf",
+      "q": "It is safe for pupils to pick up broken glass with bare hands.",
+      "explanation": "Broken glass may cause cuts. Tell the teacher.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U02-001-07",
-  "type": "mc",
-  "q": "If a pupil is unsure how to use an apparatus, what should they do?",
-  "options": [
-    "Copy how another pupil uses it without checking.",
-    "Use it first and ask questions later.",
-    "Guess which part to switch on.",
-    "Ask the teacher for help"
-  ],
-  "correct": 3,
-  "explanation": "Pupils should ask their teacher before using unfamiliar science equipment."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U02-001-08",
-      "type": "mc",
-      "q": "Where should unused science apparatus be kept?",
+      "id": "SCI-PM3-QUIZ-U02-001-03",
+      "type": "drop",
+      "q": "Glass containers should be carried ____ to avoid accidents.",
+      "explanation": "Careful handling helps prevent breakages.",
+      "expected": "carefully",
       "options": [
-        "On the floor near the door",
-        "At the edge of a desk",
-        "In its proper storage place",
-        "Inside a school bag"
+        "carefully",
+        "quickly"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U02-001-04",
+      "type": "mc",
+      "q": "Why should pupils never taste substances in a science room?",
+      "options": [
+        "The labels may be missing.",
+        "The liquid may look like water.",
+        "They may be harmful",
+        "The container may be made of glass."
       ],
       "correct": 2,
-      "explanation": "Apparatus belongs in designated storage areas."
+      "explanation": "A substance may be harmful even if it looks harmless, so it must never be tasted."
     },
     {
-  "id": "SCI-PM3-QUIZ-U02-001-09",
-  "type": "mc",
-  "q": "Which action helps keep a science room safe for others?",
-  "options": [
-    "Place bags beside the experiment.",
-    "Keep the work area tidy",
-    "Leave wet tools on the desk edge.",
-    "Keep used equipment scattered."
-  ],
-  "correct": 1,
-  "explanation": "Keeping the work area tidy helps prevent accidents."
-},
+      "id": "SCI-PM3-QUIZ-U02-001-05",
+      "type": "tf",
+      "q": "Pupils should tell the teacher when a liquid is spilled in the science room.",
+      "explanation": "Spills should be reported to the teacher.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U02-001-10",
-  "type": "mc",
-  "q": "What should pupils do after finishing an investigation?",
-  "options": [
-    "Clean the workplace and wash their hands",
-    "Leave apparatus on the workbench.",
-    "Put equipment away without cleaning it.",
-    "Leave spills for the next class."
-  ],
-  "correct": 0,
-  "explanation": "At the end of a science activity, clean and store equipment properly and wash your hands."
-}
+      "id": "SCI-PM3-QUIZ-U02-001-06",
+      "type": "drop",
+      "q": "During an experiment, pupils should work ____.",
+      "explanation": "Calm, careful work helps prevent accidents.",
+      "expected": "calmly",
+      "options": [
+        "calmly",
+        "roughly"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U02-001-07",
+      "type": "mc",
+      "q": "If a pupil is unsure how to use an apparatus, what should they do?",
+      "options": [
+        "Copy how another pupil uses it without checking.",
+        "Use it first and ask questions later.",
+        "Guess which part to switch on.",
+        "Ask the teacher for help"
+      ],
+      "correct": 3,
+      "explanation": "Pupils should ask their teacher before using unfamiliar science equipment."
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U02-001-08",
+      "type": "tf",
+      "q": "Unused science equipment should be returned to its proper place.",
+      "explanation": "Putting equipment away correctly keeps the room safe.",
+      "expected": true
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U02-001-09",
+      "type": "drop",
+      "q": "Keeping the science work area ____ helps prevent accidents.",
+      "explanation": "A tidy work area is safer.",
+      "expected": "tidy",
+      "options": [
+        "tidy",
+        "messy"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U02-001-10",
+      "type": "mc",
+      "q": "What should pupils do after finishing an investigation?",
+      "options": [
+        "Clean the workplace and wash their hands",
+        "Leave apparatus on the workbench.",
+        "Put equipment away without cleaning it.",
+        "Leave spills for the next class."
+      ],
+      "correct": 0,
+      "explanation": "At the end of a science activity, clean and store equipment properly and wash your hands."
+    }
   ],
   "Teeth and Dental Care": [
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-01",
-  "type": "mc",
-  "q": "Which type of tooth is mainly used to cut food?",
-  "options": [
-    "Molar",
-    "Canine",
-    "Incisor",
-    "Gum"
-  ],
-  "correct": 2,
-  "explanation": "Incisors are the front teeth that bite and cut food."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-01",
+      "type": "mc",
+      "q": "Which type of tooth is mainly used to cut food?",
+      "options": [
+        "Molar",
+        "Canine",
+        "Incisor",
+        "Gum"
+      ],
+      "correct": 2,
+      "explanation": "Incisors are the front teeth that bite and cut food."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-02",
-  "type": "mc",
-  "q": "What is the main job of canine teeth?",
-  "options": [
-    "Cutting food into pieces.",
-    "Tearing food",
-    "Grinding food into small pieces.",
-    "Mixing food with saliva."
-  ],
-  "correct": 1,
-  "explanation": "Canine teeth help tear food."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-02",
+      "type": "tf",
+      "q": "Canine teeth help us tear food.",
+      "explanation": "Canines are pointed teeth that tear food.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-03",
-  "type": "mc",
-  "q": "Which teeth have broad surfaces for grinding food?",
-  "options": [
-    "Molars",
-    "Incisors",
-    "Canines",
-    "Gums"
-  ],
-  "correct": 0,
-  "explanation": "Molars have wide surfaces that help grind food."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-03",
+      "type": "drop",
+      "q": "The broad back teeth used for grinding food are called ____.",
+      "explanation": "Molars are back teeth used for grinding.",
+      "expected": "molars",
+      "options": [
+        "molars",
+        "incisors"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-04",
-  "type": "mc",
-  "q": "What is the hard outermost layer of a tooth called?",
-  "options": [
-    "Pulp",
-    "Root",
-    "Gum",
-    "Enamel"
-  ],
-  "correct": 3,
-  "explanation": "Enamel is the hard outer covering of the tooth."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-04",
+      "type": "mc",
+      "q": "What is the hard outermost layer of a tooth called?",
+      "options": [
+        "Pulp",
+        "Root",
+        "Gum",
+        "Enamel"
+      ],
+      "correct": 3,
+      "explanation": "Enamel is the hard outer covering of the tooth."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-05",
-  "type": "mc",
-  "q": "Which part inside a tooth contains nerves?",
-  "options": [
-    "Enamel",
-    "Gum",
-    "Pulp",
-    "Crown"
-  ],
-  "correct": 2,
-  "explanation": "The pulp is the soft tissue inside the tooth that contains nerves and blood vessels."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-05",
+      "type": "tf",
+      "q": "The nerves inside a tooth are found in its enamel.",
+      "explanation": "Nerves are found in the pulp inside the tooth.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-06",
-  "type": "mc",
-  "q": "What are the first teeth that children grow called?",
-  "options": [
-    "Permanent teeth",
-    "Milk teeth",
-    "Adult molars",
-    "Artificial teeth"
-  ],
-  "correct": 1,
-  "explanation": "Milk teeth are the first set of teeth."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-06",
+      "type": "drop",
+      "q": "The first teeth children grow are called ____ teeth.",
+      "explanation": "Milk teeth grow before permanent teeth.",
+      "expected": "milk",
+      "options": [
+        "milk",
+        "permanent"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-07",
-  "type": "mc",
-  "q": "Why is it important to take care of milk teeth?",
-  "options": [
-    "They help children chew and speak clearly.",
-    "They can never be damaged.",
-    "They will stay forever.",
-    "They do not need brushing."
-  ],
-  "correct": 0,
-  "explanation": "Milk teeth help with eating and speaking before permanent teeth grow."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-07",
+      "type": "mc",
+      "q": "Why is it important to take care of milk teeth?",
+      "options": [
+        "They help children chew and speak clearly.",
+        "They can never be damaged.",
+        "They will stay forever.",
+        "They do not need brushing."
+      ],
+      "correct": 0,
+      "explanation": "Milk teeth help with eating and speaking before permanent teeth grow."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-08",
-  "type": "mc",
-  "q": "Which habit helps prevent tooth decay?",
-  "options": [
-    "Brush only once a week.",
-    "Eat sweets just before bedtime.",
-    "Skip brushing when teeth look clean.",
-    "Brush teeth regularly with fluoride toothpaste"
-  ],
-  "correct": 3,
-  "explanation": "Regular brushing removes plaque and protects teeth."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-08",
+      "type": "tf",
+      "q": "Brushing our teeth regularly helps prevent tooth decay.",
+      "explanation": "Regular brushing helps remove plaque.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-09",
-  "type": "mc",
-  "q": "Why should we avoid eating sugary snacks too often?",
-  "options": [
-    "Sugar makes teeth grow faster.",
-    "Sugar replaces missing teeth.",
-    "Too much sugar can cause tooth decay.",
-    "Sugar makes teeth harder."
-  ],
-  "correct": 2,
-  "explanation": "Eating sugary foods often can increase the risk of tooth decay."
-},
+      "id": "SCI-PM3-QUIZ-U03A-001-09",
+      "type": "drop",
+      "q": "Eating sugary snacks too often can lead to tooth ____.",
+      "explanation": "Frequent sugar intake can increase tooth decay.",
+      "expected": "decay",
+      "options": [
+        "decay",
+        "growth"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03A-001-10",
-  "type": "mc",
-  "q": "Who should examine a painful or decaying tooth?",
-  "options": [
-    "Pharmacist",
-    "Dentist",
-    "Optician",
-    "Veterinarian"
-  ],
-  "correct": 1,
-  "explanation": "Dentists examine and treat dental problems."
-}
+      "id": "SCI-PM3-QUIZ-U03A-001-10",
+      "type": "mc",
+      "q": "Who should examine a painful or decaying tooth?",
+      "options": [
+        "Pharmacist",
+        "Dentist",
+        "Optician",
+        "Veterinarian"
+      ],
+      "correct": 1,
+      "explanation": "Dentists examine and treat dental problems."
+    }
   ],
   "Food and Digestion": [
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-01",
-  "type": "mc",
-  "q": "What does digestion do to the food we eat?",
-  "options": [
-    "Moves oxygen around the body.",
-    "Pumps blood to body organs.",
-    "Controls how quickly we breathe.",
-    "Breaks food into smaller, simpler substances."
-  ],
-  "correct": 3,
-  "explanation": "Digestion breaks down food so the body can absorb and use nutrients."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-01",
+      "type": "mc",
+      "q": "What does digestion do to the food we eat?",
+      "options": [
+        "Moves oxygen around the body.",
+        "Pumps blood to body organs.",
+        "Controls how quickly we breathe.",
+        "Breaks food into smaller, simpler substances."
+      ],
+      "correct": 3,
+      "explanation": "Digestion breaks down food so the body can absorb and use nutrients."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-02",
-  "type": "mc",
-  "q": "Why do we chew food before swallowing it?",
-  "options": [
-    "To remove all the nutrients.",
-    "To cool the food before eating.",
-    "To break it into smaller pieces.",
-    "To make the food sweeter."
-  ],
-  "correct": 2,
-  "explanation": "Chewing breaks food into smaller pieces and helps make it easier to swallow."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-02",
+      "type": "tf",
+      "q": "Chewing food breaks it into smaller pieces before swallowing.",
+      "explanation": "Teeth break food into smaller pieces for swallowing.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-03",
-  "type": "mc",
-  "q": "Why does the body need to digest food?",
-  "options": [
-    "To make the heart beat.",
-    "So nutrients can be absorbed and used.",
-    "To help the lungs take in air.",
-    "To keep bones in place."
-  ],
-  "correct": 1,
-  "explanation": "Digestion makes nutrients available for the body to absorb."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-03",
+      "type": "drop",
+      "q": "Digestion helps our bodies absorb useful ____ from food.",
+      "explanation": "Digestion allows nutrients to be absorbed.",
+      "expected": "nutrients",
+      "options": [
+        "nutrients",
+        "shadows"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U03B-001-04",
       "type": "mc",
@@ -2899,30 +2819,22 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Digestion begins in the mouth."
     },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-05",
-  "type": "mc",
-  "q": "Which tube carries swallowed food from the mouth to the stomach?",
-  "options": [
-    "Windpipe",
-    "Small intestine",
-    "Large intestine",
-    "Oesophagus"
-  ],
-  "correct": 3,
-  "explanation": "The oesophagus is the food tube connecting the mouth and the stomach."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-05",
+      "type": "tf",
+      "q": "The windpipe carries swallowed food into the stomach.",
+      "explanation": "Food passes through the oesophagus, not the windpipe.",
+      "expected": false
+    },
     {
       "id": "SCI-PM3-QUIZ-U03B-001-06",
-      "type": "mc",
-      "q": "Which organ churns food and mixes it with digestive juices?",
+      "type": "drop",
+      "q": "The ____ mixes food with digestive juices.",
+      "explanation": "The stomach churns food with digestive juices.",
+      "expected": "stomach",
       "options": [
-        "Heart",
-        "Kidney",
-        "Stomach",
-        "Lung"
-      ],
-      "correct": 2,
-      "explanation": "The stomach churns food and mixes it with digestive juices."
+        "stomach",
+        "heart"
+      ]
     },
     {
       "id": "SCI-PM3-QUIZ-U03B-001-07",
@@ -2938,85 +2850,69 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Most nutrient absorption happens in the small intestine."
     },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-08",
-  "type": "mc",
-  "q": "What does the large intestine mainly absorb from food waste?",
-  "options": [
-    "Water",
-    "Most digested nutrients",
-    "Oxygen",
-    "Saliva"
-  ],
-  "correct": 0,
-  "explanation": "The large intestine absorbs water from material that has not been digested."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-08",
+      "type": "tf",
+      "q": "The large intestine absorbs water from undigested food.",
+      "explanation": "The large intestine absorbs water from food waste.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-09",
-  "type": "mc",
-  "q": "What usually happens to food that the body cannot digest?",
-  "options": [
-    "It passes into the blood without changes.",
-    "It returns to the mouth.",
-    "It remains in the stomach.",
-    "It becomes waste that leaves the body."
-  ],
-  "correct": 3,
-  "explanation": "Undigested material moves through the intestines and eventually leaves the body as faeces."
-},
+      "id": "SCI-PM3-QUIZ-U03B-001-09",
+      "type": "drop",
+      "q": "Undigested food leaves the body as ____.",
+      "explanation": "Undigested waste eventually leaves the body as faeces.",
+      "expected": "faeces",
+      "options": [
+        "faeces",
+        "saliva"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U03B-001-10",
-  "type": "mc",
-  "q": "Which action helps the digestive system work well when eating?",
-  "options": [
-    "Swallow large pieces of food.",
-    "Eat very quickly without chewing.",
-    "Chew food properly before swallowing.",
-    "Take large bites while talking."
-  ],
-  "correct": 2,
-  "explanation": "Chewing food well helps start digestion and makes swallowing easier."
-}
+      "id": "SCI-PM3-QUIZ-U03B-001-10",
+      "type": "mc",
+      "q": "Which action helps the digestive system work well when eating?",
+      "options": [
+        "Swallow large pieces of food.",
+        "Eat very quickly without chewing.",
+        "Chew food properly before swallowing.",
+        "Take large bites while talking."
+      ],
+      "correct": 2,
+      "explanation": "Chewing food well helps start digestion and makes swallowing easier."
+    }
   ],
   "Animal Eating Habits": [
     {
-  "id": "SCI-PM3-QUIZ-U04-001-01",
-  "type": "mc",
-  "q": "An animal that feeds mainly on plants is called a ...",
-  "options": [
-    "Herbivore",
-    "Carnivore",
-    "Omnivore",
-    "Insectivore"
-  ],
-  "correct": 0,
-  "explanation": "A herbivore is an animal that eats plants."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-01",
+      "type": "mc",
+      "q": "An animal that feeds mainly on plants is called a ...",
+      "options": [
+        "Herbivore",
+        "Carnivore",
+        "Omnivore",
+        "Insectivore"
+      ],
+      "correct": 0,
+      "explanation": "A herbivore is an animal that eats plants."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-02",
-  "type": "mc",
-  "q": "What do we call an animal that eats other animals?",
-  "options": [
-    "Herbivore",
-    "Plant eater",
-    "Producer",
-    "Carnivore"
-  ],
-  "correct": 3,
-  "explanation": "Carnivores feed on other animals."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-02",
+      "type": "tf",
+      "q": "A carnivore is an animal that eats other animals.",
+      "explanation": "Carnivores eat other animals.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-03",
-  "type": "mc",
-  "q": "Which animal is an omnivore?",
-  "options": [
-    "Cow",
-    "Goat",
-    "Chicken",
-    "Tiger"
-  ],
-  "correct": 2,
-  "explanation": "A chicken eats plant food such as seeds and animal food such as insects, so it is an omnivore."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-03",
+      "type": "drop",
+      "q": "A chicken eats seeds and insects, so it is an ____.",
+      "explanation": "An omnivore eats both plant and animal food.",
+      "expected": "omnivore",
+      "options": [
+        "omnivore",
+        "herbivore"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U04-001-04",
       "type": "mc",
@@ -3031,31 +2927,23 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Sharp canine teeth help meat-eating animals tear flesh."
     },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-05",
-  "type": "mc",
-  "q": "Which teeth are especially useful for a cow grinding grass?",
-  "options": [
-    "Broad molars",
-    "Sharp front teeth",
-    "Long pointed canines",
-    "Small biting incisors"
-  ],
-  "correct": 0,
-  "explanation": "Broad molars help herbivores grind plant material."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-05",
+      "type": "tf",
+      "q": "Cows use long, pointed fangs to grind grass.",
+      "explanation": "Cows use broad molars to grind grass.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-06",
-  "type": "mc",
-  "q": "A bird eats both seeds and insects. What kind of eater is it?",
-  "options": [
-    "Herbivore",
-    "Carnivore",
-    "Insect eater only",
-    "Omnivore"
-  ],
-  "correct": 3,
-  "explanation": "An omnivore eats food from both plants and animals."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-06",
+      "type": "drop",
+      "q": "A bird that eats seeds and insects eats food from plants and ____.",
+      "explanation": "Seeds are plant food, and insects are animals.",
+      "expected": "animals",
+      "options": [
+        "animals",
+        "stones"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U04-001-07",
       "type": "mc",
@@ -3070,84 +2958,68 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Giraffes are plant-eating herbivores."
     },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-08",
-  "type": "mc",
-  "q": "Why are the teeth of cows and tigers different?",
-  "options": [
-    "They live in different-sized groups.",
-    "They eat different types of food.",
-    "They have different fur colours.",
-    "They rest at different times."
-  ],
-  "correct": 1,
-  "explanation": "An animal's teeth are suited to the food it eats."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-08",
+      "type": "tf",
+      "q": "Different animals have teeth suited to the foods they eat.",
+      "explanation": "Teeth help animals eat their different foods.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-09",
-  "type": "mc",
-  "q": "Which food would be suitable for a rabbit?",
-  "options": [
-    "Fresh grass and leafy vegetables.",
-    "Small insects",
-    "Cooked meat",
-    "Raw fish"
-  ],
-  "correct": 0,
-  "explanation": "Rabbits are herbivores that eat plants."
-},
+      "id": "SCI-PM3-QUIZ-U04-001-09",
+      "type": "drop",
+      "q": "A rabbit mainly eats ____ such as grass and leaves.",
+      "explanation": "Rabbits eat plant food such as grass and leaves.",
+      "expected": "plants",
+      "options": [
+        "plants",
+        "meat"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U04-001-10",
-  "type": "mc",
-  "q": "How can we find out what a pet eats?",
-  "options": [
-    "Measure the length of its tail.",
-    "Count its spots.",
-    "Look only at its sleeping place.",
-    "Watch what food it chooses and eats."
-  ],
-  "correct": 3,
-  "explanation": "Observing what an animal eats helps us understand its eating habits."
-}
+      "id": "SCI-PM3-QUIZ-U04-001-10",
+      "type": "mc",
+      "q": "How can we find out what a pet eats?",
+      "options": [
+        "Measure the length of its tail.",
+        "Count its spots.",
+        "Look only at its sleeping place.",
+        "Watch what food it chooses and eats."
+      ],
+      "correct": 3,
+      "explanation": "Observing what an animal eats helps us understand its eating habits."
+    }
   ],
   "Plant Reproduction": [
     {
-  "id": "SCI-PM3-QUIZ-U05-001-01",
-  "type": "mc",
-  "q": "Why do plants reproduce?",
-  "options": [
-    "To absorb more water.",
-    "To grow more plants of the same kind.",
-    "To store extra food.",
-    "To grow taller."
-  ],
-  "correct": 1,
-  "explanation": "Reproduction allows new plants of the same kind to grow."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-01",
+      "type": "mc",
+      "q": "Why do plants reproduce?",
+      "options": [
+        "To absorb more water.",
+        "To grow more plants of the same kind.",
+        "To store extra food.",
+        "To grow taller."
+      ],
+      "correct": 1,
+      "explanation": "Reproduction allows new plants of the same kind to grow."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-02",
-  "type": "mc",
-  "q": "What can grow into a new plant when given the right conditions?",
-  "options": [
-    "A seed",
-    "An empty seed shell",
-    "A dry pebble",
-    "A piece of plastic"
-  ],
-  "correct": 0,
-  "explanation": "Seeds can germinate and grow into new plants when conditions are suitable."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-02",
+      "type": "tf",
+      "q": "A seed can grow into a new plant when conditions are suitable.",
+      "explanation": "Seeds can germinate and grow under suitable conditions.",
+      "expected": true
+    },
     {
       "id": "SCI-PM3-QUIZ-U05-001-03",
-      "type": "mc",
-      "q": "Which plant is commonly grown from stem cuttings?",
+      "type": "drop",
+      "q": "A ____ plant can grow from a stem cutting.",
+      "explanation": "Rose plants can grow from stem cuttings.",
+      "expected": "rose",
       "options": [
-        "Paddy rice",
-        "Maize",
-        "Coconut",
-        "Rose"
-      ],
-      "correct": 3,
-      "explanation": "Rose plants can reproduce using stem cuttings."
+        "rose",
+        "coconut"
+      ]
     },
     {
       "id": "SCI-PM3-QUIZ-U05-001-04",
@@ -3164,122 +3036,98 @@ Object.assign(exerciseBank, { Science: {
     },
     {
       "id": "SCI-PM3-QUIZ-U05-001-05",
-      "type": "mc",
-      "q": "Which plant is commonly reproduced using runners?",
-      "options": [
-        "Coconut palm",
-        "Strawberry",
-        "Pine tree",
-        "Hibiscus seed"
-      ],
-      "correct": 1,
-      "explanation": "Strawberry plants can form new plants along runners."
+      "type": "tf",
+      "q": "Strawberry plants can grow new plants along runners.",
+      "explanation": "Runners help strawberry plants reproduce.",
+      "expected": true
     },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-06",
-  "type": "mc",
-  "q": "Some plants grow small new plants along the edges of their leaves. Which plant does this?",
-  "options": [
-    "Bryophyllum (setawar)",
-    "Coconut palm",
-    "Mango tree",
-    "Paddy plant"
-  ],
-  "correct": 0,
-  "explanation": "Bryophyllum, also known as setawar, can grow new plantlets from its leaves."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-06",
+      "type": "drop",
+      "q": "The setawar plant can grow small new plants from its ____.",
+      "explanation": "Setawar produces little plantlets along its leaves.",
+      "expected": "leaves",
+      "options": [
+        "leaves",
+        "fruits"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-07",
-  "type": "mc",
-  "q": "Why might a gardener plant a rose stem cutting?",
-  "options": [
-    "To make the flowers change colour.",
-    "To make the stem dry out.",
-    "To make the original rose stop growing.",
-    "To grow a new rose plant."
-  ],
-  "correct": 3,
-  "explanation": "Some plants, such as roses, can grow new plants from stem cuttings."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-07",
+      "type": "mc",
+      "q": "Why might a gardener plant a rose stem cutting?",
+      "options": [
+        "To make the flowers change colour.",
+        "To make the stem dry out.",
+        "To make the original rose stop growing.",
+        "To grow a new rose plant."
+      ],
+      "correct": 3,
+      "explanation": "Some plants, such as roses, can grow new plants from stem cuttings."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-08",
-  "type": "mc",
-  "q": "Why is it useful for plants to make new plants?",
-  "options": [
-    "To make the roots longer.",
-    "To make the flowers brighter.",
-    "So the same kind of plant can continue growing.",
-    "To make the leaves wider."
-  ],
-  "correct": 2,
-  "explanation": "Reproduction helps plants continue from one generation to the next."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-08",
+      "type": "tf",
+      "q": "Plants never need to reproduce because they live forever.",
+      "explanation": "Plants reproduce so their kind can continue.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-09",
-  "type": "mc",
-  "q": "Which plant reproduces by spores instead of seeds?",
-  "options": [
-    "Mango tree",
-    "Fern",
-    "Bean plant",
-    "Papaya tree"
-  ],
-  "correct": 1,
-  "explanation": "Ferns reproduce using spores."
-},
+      "id": "SCI-PM3-QUIZ-U05-001-09",
+      "type": "drop",
+      "q": "Ferns reproduce using ____ rather than seeds.",
+      "explanation": "Ferns produce spores.",
+      "expected": "spores",
+      "options": [
+        "spores",
+        "flowers"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U05-001-10",
-  "type": "mc",
-  "q": "Which part of ginger can grow into a new plant?",
-  "options": [
-    "Its underground stem",
-    "Its flower petals",
-    "Its old leaves",
-    "Its dried fruit skin"
-  ],
-  "correct": 0,
-  "explanation": "Ginger can grow new plants from its underground stem, called a rhizome."
-}
+      "id": "SCI-PM3-QUIZ-U05-001-10",
+      "type": "mc",
+      "q": "Which part of ginger can grow into a new plant?",
+      "options": [
+        "Its underground stem",
+        "Its flower petals",
+        "Its old leaves",
+        "Its dried fruit skin"
+      ],
+      "correct": 0,
+      "explanation": "Ginger can grow new plants from its underground stem, called a rhizome."
+    }
   ],
   "Measuring Area": [
     {
-  "id": "SCI-PM3-QUIZ-U06A-001-01",
-  "type": "mc",
-  "q": "What do we measure when we find the area of a book cover?",
-  "options": [
-    "How thick the book is.",
-    "How much the book weighs.",
-    "The amount of surface it covers.",
-    "How many pages the book has."
-  ],
-  "correct": 2,
-  "explanation": "Area tells us how much flat surface something covers."
-},
+      "id": "SCI-PM3-QUIZ-U06A-001-01",
+      "type": "mc",
+      "q": "What do we measure when we find the area of a book cover?",
+      "options": [
+        "How thick the book is.",
+        "How much the book weighs.",
+        "The amount of surface it covers.",
+        "How many pages the book has."
+      ],
+      "correct": 2,
+      "explanation": "Area tells us how much flat surface something covers."
+    },
     {
       "id": "SCI-PM3-QUIZ-U06A-001-02",
-      "type": "mc",
-      "q": "Which unit is suitable for a schoolbook cover's area?",
-      "options": [
-        "Litres",
-        "Square centimetres",
-        "Kilograms",
-        "Seconds"
-      ],
-      "correct": 1,
-      "explanation": "Surface area can be measured in cm²."
+      "type": "tf",
+      "q": "Square centimetres can be used to measure a book cover's area.",
+      "explanation": "Area uses square units such as cm².",
+      "expected": true
     },
     {
       "id": "SCI-PM3-QUIZ-U06A-001-03",
-      "type": "mc",
-      "q": "A rectangle is 4 cm long and 3 cm wide. What is its area?",
+      "type": "drop",
+      "q": "A rectangle measuring 4 cm by 3 cm has an area of ____ cm².",
+      "explanation": "4 × 3 = 12 cm².",
+      "expected": "12",
       "options": [
-        "12 cm²",
-        "7 cm²",
-        "14 cm²",
-        "24 cm²"
-      ],
-      "correct": 0,
-      "explanation": "A rectangle's area is length multiplied by width: 4 × 3 = 12 cm²."
+        "12",
+        "7"
+      ]
     },
     {
       "id": "SCI-PM3-QUIZ-U06A-001-04",
@@ -3296,30 +3144,22 @@ Object.assign(exerciseBank, { Science: {
     },
     {
       "id": "SCI-PM3-QUIZ-U06A-001-05",
-      "type": "mc",
-      "q": "A grid contains 8 complete 1 cm² squares inside a shape. What is their total area?",
-      "options": [
-        "1 cm²",
-        "16 cm²",
-        "8 cm²",
-        "4 cm²"
-      ],
-      "correct": 2,
-      "explanation": "Eight full unit squares cover 8 cm²."
+      "type": "tf",
+      "q": "Eight complete 1 cm² squares cover an area of 8 cm².",
+      "explanation": "Eight unit squares cover 8 cm².",
+      "expected": true
     },
     {
-  "id": "SCI-PM3-QUIZ-U06A-001-06",
-  "type": "mc",
-  "q": "How can we estimate the area of a leaf using squared paper?",
-  "options": [
-    "Count only the leaf's veins.",
-    "Count the full squares and estimate the partly covered ones.",
-    "Measure how heavy the leaf is.",
-    "Count the number of colours on the leaf."
-  ],
-  "correct": 1,
-  "explanation": "Counting full and partial grid squares helps estimate the area of an uneven shape."
-},
+      "id": "SCI-PM3-QUIZ-U06A-001-06",
+      "type": "drop",
+      "q": "To estimate the area of a leaf, count the ____ on squared paper.",
+      "explanation": "Count whole and partly covered squares.",
+      "expected": "squares",
+      "options": [
+        "squares",
+        "lines"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U06A-001-07",
       "type": "mc",
@@ -3334,163 +3174,131 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Changing width from 2 to 4 doubles the rectangle's area from 12 to 24 cm²."
     },
     {
-  "id": "SCI-PM3-QUIZ-U06A-001-08",
-  "type": "mc",
-  "q": "Which sentence correctly compares length and area?",
-  "options": [
-    "Length and area both measure distance.",
-    "Area tells how far; length tells surface covered.",
-    "Length and area both measure weight.",
-    "Length tells how far; area tells how much surface."
-  ],
-  "correct": 3,
-  "explanation": "Length measures distance, while area measures the size of a surface."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U06A-001-09",
-      "type": "mc",
-      "q": "Which shape has an area of 9 cm²?",
-      "options": [
-        "A 2 cm by 3 cm rectangle",
-        "A 4 cm by 2 cm rectangle",
-        "A 3 cm by 3 cm square",
-        "A 5 cm by 1 cm rectangle"
-      ],
-      "correct": 2,
-      "explanation": "3 × 3 = 9 cm²."
+      "id": "SCI-PM3-QUIZ-U06A-001-08",
+      "type": "tf",
+      "q": "Area tells us how heavy an object is.",
+      "explanation": "Area measures a surface, not weight.",
+      "expected": false
     },
     {
-  "id": "SCI-PM3-QUIZ-U06A-001-10",
-  "type": "mc",
-  "q": "Why must we use equal-sized squares when comparing areas?",
-  "options": [
-    "Because all leaves are the same shape.",
-    "So the measurements are fair.",
-    "Because using larger squares is always more accurate.",
-    "Because only square leaves can be measured."
-  ],
-  "correct": 1,
-  "explanation": "Using the same size of square makes area comparisons fair."
-}
+      "id": "SCI-PM3-QUIZ-U06A-001-09",
+      "type": "drop",
+      "q": "A 3 cm by 3 cm square has an area of ____ cm².",
+      "explanation": "3 × 3 = 9 cm².",
+      "expected": "9",
+      "options": [
+        "9",
+        "6"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U06A-001-10",
+      "type": "mc",
+      "q": "Why must we use equal-sized squares when comparing areas?",
+      "options": [
+        "Because all leaves are the same shape.",
+        "So the measurements are fair.",
+        "Because using larger squares is always more accurate.",
+        "Because only square leaves can be measured."
+      ],
+      "correct": 1,
+      "explanation": "Using the same size of square makes area comparisons fair."
+    }
   ],
   "Measuring Volume": [
     {
-  "id": "SCI-PM3-QUIZ-U06B-001-01",
-  "type": "mc",
-  "q": "What does the volume of a box tell us?",
-  "options": [
-    "How heavy the box is.",
-    "How long one edge of the box is.",
-    "How much of the table the box covers.",
-    "How much space the box takes up."
-  ],
-  "correct": 3,
-  "explanation": "Volume measures the space an object occupies."
-},
+      "id": "SCI-PM3-QUIZ-U06B-001-01",
+      "type": "mc",
+      "q": "What does the volume of a box tell us?",
+      "options": [
+        "How heavy the box is.",
+        "How long one edge of the box is.",
+        "How much of the table the box covers.",
+        "How much space the box takes up."
+      ],
+      "correct": 3,
+      "explanation": "Volume measures the space an object occupies."
+    },
     {
       "id": "SCI-PM3-QUIZ-U06B-001-02",
-      "type": "mc",
-      "q": "Which unit is commonly used to measure a small amount of water?",
-      "options": [
-        "Centimetre",
-        "Gram",
-        "Millilitre",
-        "Minute"
-      ],
-      "correct": 2,
-      "explanation": "Small liquid volumes are measured in millilitres."
+      "type": "tf",
+      "q": "Millilitres can measure the volume of a small amount of water.",
+      "explanation": "Millilitres measure liquid volume.",
+      "expected": true
     },
     {
       "id": "SCI-PM3-QUIZ-U06B-001-03",
-      "type": "mc",
-      "q": "Which tool measures the volume of a liquid most accurately?",
+      "type": "drop",
+      "q": "We can measure liquid volume using a measuring ____.",
+      "explanation": "A measuring cylinder has volume markings.",
+      "expected": "cylinder",
       "options": [
-        "Ruler",
-        "Measuring cylinder",
-        "Thermometer",
-        "Stopwatch"
-      ],
-      "correct": 1,
-      "explanation": "A measuring cylinder has volume markings."
+        "cylinder",
+        "ruler"
+      ]
     },
     {
-  "id": "SCI-PM3-QUIZ-U06B-001-04",
-  "type": "mc",
-  "q": "How should you look at the water level in a measuring cylinder?",
-  "options": [
-    "At eye level.",
-    "From directly above.",
-    "From far below.",
-    "From the other side of the classroom."
-  ],
-  "correct": 0,
-  "explanation": "Read the water level at eye level to avoid a wrong measurement."
-},
+      "id": "SCI-PM3-QUIZ-U06B-001-04",
+      "type": "mc",
+      "q": "How should you look at the water level in a measuring cylinder?",
+      "options": [
+        "At eye level.",
+        "From directly above.",
+        "From far below.",
+        "From the other side of the classroom."
+      ],
+      "correct": 0,
+      "explanation": "Read the water level at eye level to avoid a wrong measurement."
+    },
     {
       "id": "SCI-PM3-QUIZ-U06B-001-05",
-      "type": "mc",
-      "q": "A rectangular box is 3 cm long, 2 cm wide and 4 cm high. What is its volume?",
-      "options": [
-        "9 cm³",
-        "12 cm³",
-        "18 cm³",
-        "24 cm³"
-      ],
-      "correct": 3,
-      "explanation": "Box volume is length × width × height: 3 × 2 × 4 = 24 cm³."
+      "type": "tf",
+      "q": "A box 3 cm long, 2 cm wide and 4 cm high has a volume of 9 cm³.",
+      "explanation": "Its volume is 3 × 2 × 4 = 24 cm³.",
+      "expected": false
     },
     {
       "id": "SCI-PM3-QUIZ-U06B-001-06",
-      "type": "mc",
-      "q": "What is the volume of a cube with 2 cm sides?",
+      "type": "drop",
+      "q": "A cube with sides of 2 cm has a volume of ____ cm³.",
+      "explanation": "2 × 2 × 2 = 8 cm³.",
+      "expected": "8",
       "options": [
-        "4 cm³",
-        "6 cm³",
-        "8 cm³",
-        "12 cm³"
-      ],
-      "correct": 2,
-      "explanation": "2 × 2 × 2 = 8 cm³."
+        "8",
+        "6"
+      ]
     },
     {
-  "id": "SCI-PM3-QUIZ-U06B-001-07",
-  "type": "mc",
-  "q": "A stone is placed in water. The water level rises from 40 mL to 55 mL. What is the stone's volume?",
-  "options": [
-    "40 mL",
-    "15 mL",
-    "55 mL",
-    "95 mL"
-  ],
-  "correct": 1,
-  "explanation": "55 mL − 40 mL = 15 mL. This is also 15 cm³."
-},
+      "id": "SCI-PM3-QUIZ-U06B-001-07",
+      "type": "mc",
+      "q": "A stone is placed in water. The water level rises from 40 mL to 55 mL. What is the stone's volume?",
+      "options": [
+        "40 mL",
+        "15 mL",
+        "55 mL",
+        "95 mL"
+      ],
+      "correct": 1,
+      "explanation": "55 mL − 40 mL = 15 mL. This is also 15 cm³."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U06B-001-08",
-  "type": "mc",
-  "q": "Why can we use water to measure the volume of a small stone?",
-  "options": [
-    "The rise in water level tells us the stone's volume.",
-    "The stone changes into water.",
-    "The water changes the stone's colour.",
-    "The stone becomes lighter in water."
-  ],
-  "correct": 0,
-  "explanation": "The increase in water level equals the volume of the stone placed in the water."
-},
+      "id": "SCI-PM3-QUIZ-U06B-001-08",
+      "type": "tf",
+      "q": "When a small stone is placed in water, the rise in water level can show its volume.",
+      "explanation": "Water displacement can show the stone's volume.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U06B-001-09",
-  "type": "mc",
-  "q": "Which two units can show the same small volume?",
-  "options": [
-    "1 mL and 1 litre",
-    "1 cm³ and 1 metre",
-    "1 mL and 1 kilogram",
-    "1 mL and 1 cm³"
-  ],
-  "correct": 3,
-  "explanation": "One millilitre is equal to one cubic centimetre."
-},
+      "id": "SCI-PM3-QUIZ-U06B-001-09",
+      "type": "drop",
+      "q": "One millilitre (1 mL) equals one cubic ____.",
+      "explanation": "One millilitre equals one cubic centimetre (1 cm³).",
+      "expected": "centimetre",
+      "options": [
+        "centimetre",
+        "metre"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U06B-001-10",
       "type": "mc",
@@ -3520,162 +3328,130 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Cork is typically less dense than water."
     },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-02",
-  "type": "mc",
-  "q": "Why might two blocks of the same size sink or float differently?",
-  "options": [
-    "They are different colours.",
-    "They have different names.",
-    "They were made on different days.",
-    "They may have different densities."
-  ],
-  "correct": 3,
-  "explanation": "Density depends on mass and volume. Objects of the same size may have different densities."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U07-001-03",
-      "type": "mc",
-      "q": "Why does a metal coin usually sink in water?",
-      "options": [
-        "It has a round shape",
-        "It is shiny",
-        "It is denser than water",
-        "It is colder than the water"
-      ],
-      "correct": 2,
-      "explanation": "Objects denser than water tend to sink."
+      "id": "SCI-PM3-QUIZ-U07-001-02",
+      "type": "tf",
+      "q": "Density depends on how much mass is in a certain volume.",
+      "explanation": "Density compares mass with volume.",
+      "expected": true
     },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-04",
-  "type": "mc",
-  "q": "A cork is pushed under water and then released. What will it do?",
-  "options": [
-    "Sink to the bottom.",
-    "Rise and float again.",
-    "Stay where it was released.",
-    "Dissolve into the water."
-  ],
-  "correct": 1,
-  "explanation": "Cork is less dense than water, so it rises and floats."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-03",
+      "type": "drop",
+      "q": "A metal coin usually sinks because it is ____ than water.",
+      "explanation": "Objects denser than water usually sink.",
+      "expected": "denser",
+      "options": [
+        "denser",
+        "less dense"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-05",
-  "type": "mc",
-  "q": "Which object is usually able to float even though it is large?",
-  "options": [
-    "A wooden raft",
-    "A solid iron ball",
-    "A stone block",
-    "A glass marble"
-  ],
-  "correct": 0,
-  "explanation": "A wooden raft usually floats because wood is less dense than water."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-04",
+      "type": "mc",
+      "q": "A cork is pushed under water and then released. What will it do?",
+      "options": [
+        "Sink to the bottom.",
+        "Rise and float again.",
+        "Stay where it was released.",
+        "Dissolve into the water."
+      ],
+      "correct": 1,
+      "explanation": "Cork is less dense than water, so it rises and floats."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-06",
-  "type": "mc",
-  "q": "An egg sinks in plain water but floats after enough salt is mixed in. Why?",
-  "options": [
-    "The egg becomes lighter.",
-    "The salt changes the egg's shape.",
-    "Salt makes the egg smaller.",
-    "Salt makes the water denser."
-  ],
-  "correct": 3,
-  "explanation": "Adding enough salt increases the water's density and may help the egg float."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-05",
+      "type": "tf",
+      "q": "A wooden raft can float on water.",
+      "explanation": "Wood is usually less dense than water.",
+      "expected": true
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-07",
-  "type": "mc",
-  "q": "Oil commonly forms a layer above water. What does that suggest?",
-  "options": [
-    "Oil is denser than water.",
-    "Oil and water have exactly the same density.",
-    "Oil is less dense than water",
-    "Oil dissolves completely in water."
-  ],
-  "correct": 2,
-  "explanation": "Oil typically floats above water because of its lower density."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-06",
+      "type": "drop",
+      "q": "Adding enough salt to water makes the water ____.",
+      "explanation": "Dissolved salt increases water's density.",
+      "expected": "denser",
+      "options": [
+        "denser",
+        "less dense"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-08",
-  "type": "mc",
-  "q": "Two blocks are the same size, but one is heavier. Which block is denser?",
-  "options": [
-    "The lighter one.",
-    "The heavier one.",
-    "The brighter-coloured one.",
-    "The smoother one."
-  ],
-  "correct": 1,
-  "explanation": "For the same volume, the block with more mass is denser."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-07",
+      "type": "mc",
+      "q": "Oil commonly forms a layer above water. What does that suggest?",
+      "options": [
+        "Oil is denser than water.",
+        "Oil and water have exactly the same density.",
+        "Oil is less dense than water",
+        "Oil dissolves completely in water."
+      ],
+      "correct": 2,
+      "explanation": "Oil typically floats above water because of its lower density."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-09",
-  "type": "mc",
-  "q": "What would happen to a piece of plastic that is less dense than water?",
-  "options": [
-    "It would tend to float",
-    "It would sink to the bottom.",
-    "It would stay halfway down.",
-    "It would stay at the bottom after being pushed down."
-  ],
-  "correct": 0,
-  "explanation": "Objects less dense than water tend to float."
-},
+      "id": "SCI-PM3-QUIZ-U07-001-08",
+      "type": "tf",
+      "q": "When two blocks are the same size, the lighter block is always denser.",
+      "explanation": "The heavier one has more mass in the same volume.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U07-001-10",
-  "type": "mc",
-  "q": "Why is it often easier to float in seawater than in freshwater?",
-  "options": [
-    "Freshwater is always deeper.",
-    "Salt removes the swimmer's weight.",
-    "Seawater contains fewer dissolved materials.",
-    "Seawater contains salt, making it denser."
-  ],
-  "correct": 3,
-  "explanation": "Dissolved salt makes seawater denser and helps objects float."
-}
+      "id": "SCI-PM3-QUIZ-U07-001-09",
+      "type": "drop",
+      "q": "A piece of plastic that is less dense than water will usually ____.",
+      "explanation": "An object less dense than water usually floats.",
+      "expected": "float",
+      "options": [
+        "float",
+        "sink"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U07-001-10",
+      "type": "mc",
+      "q": "Why is it often easier to float in seawater than in freshwater?",
+      "options": [
+        "Freshwater is always deeper.",
+        "Salt removes the swimmer's weight.",
+        "Seawater contains fewer dissolved materials.",
+        "Seawater contains salt, making it denser."
+      ],
+      "correct": 3,
+      "explanation": "Dissolved salt makes seawater denser and helps objects float."
+    }
   ],
   "Acid and Alkali": [
     {
-  "id": "SCI-PM3-QUIZ-U08-001-01",
-  "type": "mc",
-  "q": "What happens to blue litmus paper in an acidic solution?",
-  "options": [
-    "It stays blue.",
-    "It turns red",
-    "It turns yellow.",
-    "It turns green."
-  ],
-  "correct": 1,
-  "explanation": "Acids change blue litmus paper to red."
-},
+      "id": "SCI-PM3-QUIZ-U08-001-01",
+      "type": "mc",
+      "q": "What happens to blue litmus paper in an acidic solution?",
+      "options": [
+        "It stays blue.",
+        "It turns red",
+        "It turns yellow.",
+        "It turns green."
+      ],
+      "correct": 1,
+      "explanation": "Acids change blue litmus paper to red."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-02",
-  "type": "mc",
-  "q": "What happens to red litmus paper in an alkaline solution?",
-  "options": [
-    "It turns blue",
-    "It stays red.",
-    "It turns yellow.",
-    "It turns green."
-  ],
-  "correct": 0,
-  "explanation": "Alkalis change red litmus paper to blue."
-},
+      "id": "SCI-PM3-QUIZ-U08-001-02",
+      "type": "tf",
+      "q": "An alkaline liquid turns red litmus paper blue.",
+      "explanation": "Red litmus changes to blue in an alkali.",
+      "expected": true
+    },
     {
       "id": "SCI-PM3-QUIZ-U08-001-03",
-      "type": "mc",
-      "q": "Which household liquid is commonly acidic?",
+      "type": "drop",
+      "q": "Vinegar is an example of an ____ liquid.",
+      "explanation": "Vinegar contains an acid.",
+      "expected": "acidic",
       "options": [
-        "Soap solution",
-        "Baking soda solution",
-        "Plain tap water",
-        "Vinegar"
-      ],
-      "correct": 3,
-      "explanation": "Vinegar contains acetic acid."
+        "acidic",
+        "alkaline"
+      ]
     },
     {
       "id": "SCI-PM3-QUIZ-U08-001-04",
@@ -3691,83 +3467,67 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Many soap solutions are alkaline."
     },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-05",
-  "type": "mc",
-  "q": "What does it mean if a liquid is neutral?",
-  "options": [
-    "It always changes red litmus to blue.",
-    "It is neither acidic nor alkaline.",
-    "It always changes blue litmus to red.",
-    "It is always a strong acid."
-  ],
-  "correct": 1,
-  "explanation": "A neutral liquid is neither acidic nor alkaline."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U08-001-06",
-      "type": "mc",
-      "q": "Which substance is often used as a neutral comparison in a basic school test?",
-      "options": [
-        "Distilled water",
-        "Lemon juice",
-        "Vinegar",
-        "Dishwashing soap solution"
-      ],
-      "correct": 0,
-      "explanation": "Distilled water is generally neutral."
+      "id": "SCI-PM3-QUIZ-U08-001-05",
+      "type": "tf",
+      "q": "A neutral liquid is neither acidic nor alkaline.",
+      "explanation": "Neutral means neither acidic nor alkaline.",
+      "expected": true
     },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-07",
-  "type": "mc",
-  "q": "Why do we use indicator paper to test an unknown liquid instead of tasting it?",
-  "options": [
-    "The liquid might look clear.",
-    "Indicator paper always smells stronger.",
-    "Every unknown liquid tastes sour.",
-    "Tasting unknown liquids may be unsafe."
-  ],
-  "correct": 3,
-  "explanation": "Indicator paper can help test acidity without tasting potentially harmful liquids."
-},
+      "id": "SCI-PM3-QUIZ-U08-001-06",
+      "type": "drop",
+      "q": "Distilled water is generally ____.",
+      "explanation": "Pure distilled water is generally neutral.",
+      "expected": "neutral",
+      "options": [
+        "neutral",
+        "acidic"
+      ]
+    },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-08",
-  "type": "mc",
-  "q": "Red litmus paper turns blue in a liquid. What kind of liquid is it?",
-  "options": [
-    "Acidic",
-    "Neutral",
-    "Alkaline",
-    "Pure water"
-  ],
-  "correct": 2,
-  "explanation": "An alkali turns red litmus paper blue."
-},
+      "id": "SCI-PM3-QUIZ-U08-001-07",
+      "type": "mc",
+      "q": "Why do we use indicator paper to test an unknown liquid instead of tasting it?",
+      "options": [
+        "The liquid might look clear.",
+        "Indicator paper always smells stronger.",
+        "Every unknown liquid tastes sour.",
+        "Tasting unknown liquids may be unsafe."
+      ],
+      "correct": 3,
+      "explanation": "Indicator paper can help test acidity without tasting potentially harmful liquids."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-09",
-  "type": "mc",
-  "q": "Which statement about neutral water and litmus is correct?",
-  "options": [
-    "It turns red litmus blue.",
-    "It does not change red or blue litmus",
-    "It turns blue litmus red.",
-    "It turns both litmus papers red."
-  ],
-  "correct": 1,
-  "explanation": "Neutral water does not change either litmus colour."
-},
+      "id": "SCI-PM3-QUIZ-U08-001-08",
+      "type": "tf",
+      "q": "A liquid that turns red litmus paper blue is acidic.",
+      "explanation": "An alkali turns red litmus blue.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U08-001-10",
-  "type": "mc",
-  "q": "Which plant material can change colour in acids and alkalis?",
-  "options": [
-    "Purple cabbage juice",
-    "Cooking oil",
-    "Clear sugar water",
-    "Plain salt water"
-  ],
-  "correct": 0,
-  "explanation": "Purple cabbage juice contains natural colour pigments that react to acids and alkalis."
-}
+      "id": "SCI-PM3-QUIZ-U08-001-09",
+      "type": "drop",
+      "q": "Neutral water does not ____ the colour of red or blue litmus paper.",
+      "explanation": "Neutral water does not change either litmus colour.",
+      "expected": "change",
+      "options": [
+        "change",
+        "darken"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U08-001-10",
+      "type": "mc",
+      "q": "Which plant material can change colour in acids and alkalis?",
+      "options": [
+        "Purple cabbage juice",
+        "Cooking oil",
+        "Clear sugar water",
+        "Plain salt water"
+      ],
+      "correct": 0,
+      "explanation": "Purple cabbage juice contains natural colour pigments that react to acids and alkalis."
+    }
   ],
   "The Solar System": [
     {
@@ -3785,108 +3545,84 @@ Object.assign(exerciseBank, { Science: {
     },
     {
       "id": "SCI-PM3-QUIZ-U09-001-02",
-      "type": "mc",
-      "q": "Which planet is closest to the Sun?",
-      "options": [
-        "Venus",
-        "Mercury",
-        "Earth",
-        "Mars"
-      ],
-      "correct": 1,
-      "explanation": "Mercury is the innermost planet."
+      "type": "tf",
+      "q": "Mercury is the planet closest to the Sun.",
+      "explanation": "Mercury is nearest to the Sun.",
+      "expected": true
     },
     {
       "id": "SCI-PM3-QUIZ-U09-001-03",
-      "type": "mc",
-      "q": "Which planet is the third from the Sun?",
+      "type": "drop",
+      "q": "The third planet from the Sun is ____.",
+      "explanation": "Earth is third from the Sun.",
+      "expected": "Earth",
       "options": [
         "Earth",
-        "Mars",
-        "Venus",
-        "Jupiter"
-      ],
-      "correct": 0,
-      "explanation": "Earth is the third planet outward from the Sun."
+        "Mars"
+      ]
     },
     {
-  "id": "SCI-PM3-QUIZ-U09-001-04",
-  "type": "mc",
-  "q": "Which planet is the largest in our Solar System?",
-  "options": [
-    "Saturn",
-    "Neptune",
-    "Uranus",
-    "Jupiter"
-  ],
-  "correct": 3,
-  "explanation": "Jupiter is the largest planet."
-},
+      "id": "SCI-PM3-QUIZ-U09-001-04",
+      "type": "mc",
+      "q": "Which planet is the largest in our Solar System?",
+      "options": [
+        "Saturn",
+        "Neptune",
+        "Uranus",
+        "Jupiter"
+      ],
+      "correct": 3,
+      "explanation": "Jupiter is the largest planet."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U09-001-05",
-  "type": "mc",
-  "q": "Which planet is famous for its prominent rings?",
-  "options": [
-    "Jupiter",
-    "Uranus",
-    "Saturn",
-    "Neptune"
-  ],
-  "correct": 2,
-  "explanation": "Saturn has a striking ring system."
-},
+      "id": "SCI-PM3-QUIZ-U09-001-05",
+      "type": "tf",
+      "q": "Saturn is known for its large ring system.",
+      "explanation": "Saturn has prominent rings.",
+      "expected": true
+    },
     {
       "id": "SCI-PM3-QUIZ-U09-001-06",
-      "type": "mc",
-      "q": "Which planet is farthest from the Sun among the eight planets?",
+      "type": "drop",
+      "q": "The farthest of the eight planets from the Sun is ____.",
+      "explanation": "Neptune is the eighth planet.",
+      "expected": "Neptune",
       "options": [
-        "Uranus",
         "Neptune",
-        "Saturn",
-        "Jupiter"
-      ],
-      "correct": 1,
-      "explanation": "Neptune is the eighth planet."
+        "Uranus"
+      ]
     },
     {
-  "id": "SCI-PM3-QUIZ-U09-001-07",
-  "type": "mc",
-  "q": "What is the path a planet follows around the Sun called?",
-  "options": [
-    "An orbit",
-    "An axis",
-    "A ring",
-    "A shadow"
-  ],
-  "correct": 0,
-  "explanation": "A planet travels along an orbit around the Sun."
-},
+      "id": "SCI-PM3-QUIZ-U09-001-07",
+      "type": "mc",
+      "q": "What is the path a planet follows around the Sun called?",
+      "options": [
+        "An orbit",
+        "An axis",
+        "A ring",
+        "A shadow"
+      ],
+      "correct": 0,
+      "explanation": "A planet travels along an orbit around the Sun."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U09-001-08",
-  "type": "mc",
-  "q": "Which planet goes around the Sun in the shortest time?",
-  "options": [
-    "Earth",
-    "Jupiter",
-    "Neptune",
-    "Mercury"
-  ],
-  "correct": 3,
-  "explanation": "Mercury is closest to the Sun and takes the shortest time to complete an orbit."
-},
+      "id": "SCI-PM3-QUIZ-U09-001-08",
+      "type": "tf",
+      "q": "Neptune takes the shortest time to travel around the Sun.",
+      "explanation": "Mercury has the shortest orbit time.",
+      "expected": false
+    },
     {
-  "id": "SCI-PM3-QUIZ-U09-001-09",
-  "type": "mc",
-  "q": "Which planet is commonly called the Red Planet?",
-  "options": [
-    "Venus",
-    "Jupiter",
-    "Mars",
-    "Neptune"
-  ],
-  "correct": 2,
-  "explanation": "Mars is known as the Red Planet because iron-rich dust makes it look reddish."
-},
+      "id": "SCI-PM3-QUIZ-U09-001-09",
+      "type": "drop",
+      "q": "The planet known as the Red Planet is ____.",
+      "explanation": "Mars looks reddish because of iron-rich dust.",
+      "expected": "Mars",
+      "options": [
+        "Mars",
+        "Venus"
+      ]
+    },
     {
       "id": "SCI-PM3-QUIZ-U09-001-10",
       "type": "mc",
@@ -3903,43 +3639,35 @@ Object.assign(exerciseBank, { Science: {
   ],
   "Pulleys and Machines": [
     {
-  "id": "SCI-PM3-QUIZ-U10-001-01",
-  "type": "mc",
-  "q": "What is a pulley?",
-  "options": [
-    "A flat board used as a ramp.",
-    "A bar that moves around a fixed point.",
-    "A wheel used without any rope.",
-    "A wheel with a groove for a rope."
-  ],
-  "correct": 3,
-  "explanation": "A pulley has a grooved wheel that holds a rope."
-},
+      "id": "SCI-PM3-QUIZ-U10-001-01",
+      "type": "mc",
+      "q": "What is a pulley?",
+      "options": [
+        "A flat board used as a ramp.",
+        "A bar that moves around a fixed point.",
+        "A wheel used without any rope.",
+        "A wheel with a groove for a rope."
+      ],
+      "correct": 3,
+      "explanation": "A pulley has a grooved wheel that holds a rope."
+    },
     {
-  "id": "SCI-PM3-QUIZ-U10-001-02",
-  "type": "mc",
-  "q": "How does a fixed pulley help someone lift a bucket?",
-  "options": [
-    "It makes the bucket lighter.",
-    "It lets the bucket lift without any pulling.",
-    "It lets the person pull the rope down to lift the bucket.",
-    "It removes the need for a rope."
-  ],
-  "correct": 2,
-  "explanation": "A fixed pulley changes the direction of the pull."
-},
+      "id": "SCI-PM3-QUIZ-U10-001-02",
+      "type": "tf",
+      "q": "A fixed pulley can change the direction of a pulling force.",
+      "explanation": "A fixed pulley can let us pull down to lift something up.",
+      "expected": true
+    },
     {
       "id": "SCI-PM3-QUIZ-U10-001-03",
-      "type": "mc",
-      "q": "Which action uses a fixed pulley?",
+      "type": "drop",
+      "q": "A flagpole uses a ____ to raise and lower its flag.",
+      "explanation": "Flagpoles commonly use pulleys.",
+      "expected": "pulley",
       "options": [
-        "Writing with a pencil",
-        "Raising a flag on a flagpole",
-        "Drinking from a cup",
-        "Rubbing a balloon"
-      ],
-      "correct": 1,
-      "explanation": "Flagpoles often use fixed pulleys."
+        "pulley",
+        "ruler"
+      ]
     },
     {
       "id": "SCI-PM3-QUIZ-U10-001-04",
@@ -3955,82 +3683,66 @@ Object.assign(exerciseBank, { Science: {
       "explanation": "Pulling down can raise the load."
     },
     {
-  "id": "SCI-PM3-QUIZ-U10-001-05",
-  "type": "mc",
-  "q": "Which part turns when a rope moves over a pulley?",
-  "options": [
-    "The pole supporting the pulley.",
-    "The hook holding the load.",
-    "The ceiling above the pulley.",
-    "Wheel"
-  ],
-  "correct": 3,
-  "explanation": "The grooved wheel rotates as the rope travels."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U10-001-06",
-  "type": "mc",
-  "q": "What must be done before lifting a bucket with a pulley?",
-  "options": [
-    "Leave the rope loose.",
-    "Hold the bucket above a friend's head.",
-    "Tie the bucket securely to the rope.",
-    "Use a rope that is already broken."
-  ],
-  "correct": 2,
-  "explanation": "The load must be fastened securely before lifting."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U10-001-07",
-  "type": "mc",
-  "q": "Where might you find a pulley used to lift a bucket of water?",
-  "options": [
-    "Beside a classroom desk.",
-    "At a well",
-    "On a kitchen shelf.",
-    "Inside a schoolbag."
-  ],
-  "correct": 1,
-  "explanation": "A pulley can be used to lift a bucket from a well."
-},
-    {
-  "id": "SCI-PM3-QUIZ-U10-001-08",
-  "type": "mc",
-  "q": "Why might people use more than one pulley to lift something heavy?",
-  "options": [
-    "It can make the load easier to lift.",
-    "It makes a heavy load weightless.",
-    "It makes the rope unnecessary.",
-    "It keeps the load from ever lowering."
-  ],
-  "correct": 0,
-  "explanation": "Using several pulleys can reduce the force needed to lift a load."
-},
-    {
-      "id": "SCI-PM3-QUIZ-U10-001-09",
-      "type": "mc",
-      "q": "Which is an everyday application of a pulley system?",
-      "options": [
-        "A fork cutting bread",
-        "A thermometer checking temperature",
-        "A mirror reflecting light",
-        "A crane lifting construction materials"
-      ],
-      "correct": 3,
-      "explanation": "Cranes use pulley systems to lift heavy loads."
+      "id": "SCI-PM3-QUIZ-U10-001-05",
+      "type": "tf",
+      "q": "The wheel of a pulley turns when the rope moves over it.",
+      "explanation": "The grooved wheel turns with the rope.",
+      "expected": true
     },
     {
-  "id": "SCI-PM3-QUIZ-U10-001-10",
-  "type": "mc",
-  "q": "What should you check before using a model pulley?",
-  "options": [
-    "The rope is loose.",
-    "The support is unstable.",
-    "The rope and support are secure.",
-    "The load hangs above other pupils."
-  ],
-  "correct": 2,
-  "explanation": "Always check that the pulley, support and rope are secure before using it."
-}
+      "id": "SCI-PM3-QUIZ-U10-001-06",
+      "type": "drop",
+      "q": "A bucket must be tied ____ to the rope before lifting it.",
+      "explanation": "A load must be fastened securely before it is lifted.",
+      "expected": "securely",
+      "options": [
+        "securely",
+        "loosely"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U10-001-07",
+      "type": "mc",
+      "q": "Where might you find a pulley used to lift a bucket of water?",
+      "options": [
+        "Beside a classroom desk.",
+        "At a well",
+        "On a kitchen shelf.",
+        "Inside a schoolbag."
+      ],
+      "correct": 1,
+      "explanation": "A pulley can be used to lift a bucket from a well."
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U10-001-08",
+      "type": "tf",
+      "q": "Using several pulleys always makes a heavy load even heavier.",
+      "explanation": "Multiple pulleys can reduce the force needed to lift a heavy load.",
+      "expected": false
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U10-001-09",
+      "type": "drop",
+      "q": "A ____ may use pulleys to lift construction materials.",
+      "explanation": "Cranes use pulleys to lift heavy loads.",
+      "expected": "crane",
+      "options": [
+        "crane",
+        "thermometer"
+      ]
+    },
+    {
+      "id": "SCI-PM3-QUIZ-U10-001-10",
+      "type": "mc",
+      "q": "What should you check before using a model pulley?",
+      "options": [
+        "The rope is loose.",
+        "The support is unstable.",
+        "The rope and support are secure.",
+        "The load hangs above other pupils."
+      ],
+      "correct": 2,
+      "explanation": "Always check that the pulley, support and rope are secure before using it."
+    }
   ]
 } });
