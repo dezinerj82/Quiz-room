@@ -1140,11 +1140,14 @@ body:not(.auth-locked) #results #driveSaveStatus:not(:empty){
  margin:0!important;color:var(--qr-text-error);font-size:var(--qr-font-body)
 }
 
-/* Shared flat-pill sizing: padding follows each button's own font size.
-   Keep existing grid/full-width layouts and exclude the left sidebar. */
+/* Shared font-scaled flat-pill shape for all page action buttons.
+   Page scopes deliberately exclude the left navigation rail, whose layout
+   and control padding remain separate. 1em follows each control's font size. */
 :root{--qr-flat-pill-padding:.333em .833em}
-body:not(.auth-locked) .qr-main button:not(.bookmark-list-button),
-body:not(.auth-locked) .qr-main .qr-file-button,
+body:not(.auth-locked) :is(#home,#quizStart,#selection,#scoresPage,#notesPage,#profilePage) .qr-main button,
+body:not(.auth-locked) :is(#home,#quizStart,#selection,#scoresPage,#notesPage,#profilePage) .qr-main .qr-file-button,
+body:not(.auth-locked) #quiz .qr-drop-zone,
+body:not(.auth-locked) .qr-drop-ghost,
 body:not(.auth-locked) .time-warning-card button,
 body:not(.auth-locked) .qr-crop-modal button,
 #googleGate button{
@@ -1153,33 +1156,41 @@ body:not(.auth-locked) .qr-crop-modal button,
  min-height:0!important;
  height:auto!important;
 }
-/* Quiz selection and answer styles previously had independent sizing. */
-body:not(.auth-locked) #selection .qr-main #qrQuizSteps button,
-body:not(.auth-locked) #selection .qr-main .level-grid .level-button,
-body:not(.auth-locked) #selection .qr-main .chapter-items .version,
-body:not(.auth-locked) #quiz button.answer,
-body:not(.auth-locked) #quiz .quizactions .pill,
-body:not(.auth-locked) #quiz > .qr-quiz-outside-bottom .pill,
-body:not(.auth-locked) #results .qr-result-actions .resultbutton{
+/* Existing full-width question answers and grid-based quiz choices
+   retain their layout widths; their vertical shape follows font size. */
+body:not(.auth-locked) #selection #quiz button.answer,
+body:not(.auth-locked) #selection #quiz .qr-drop-option,
+body:not(.auth-locked) #selection .level-grid .level-button,
+body:not(.auth-locked) #selection .chapter-items .version,
+body:not(.auth-locked) #selection #qrQuizSteps button,
+body:not(.auth-locked) #selection #quiz .quizactions .pill,
+body:not(.auth-locked) #selection #quiz > .qr-quiz-outside-bottom .pill,
+body:not(.auth-locked) #selection #results .qr-result-actions .resultbutton{
  padding:var(--qr-flat-pill-padding)!important;
  border-radius:var(--qr-button-radius)!important;
  min-height:0!important;
  height:auto!important;
 }
-/* Compact breadcrumb uses the same proportions at its smaller font size. */
-body:not(.auth-locked) #selection .qr-main #qrQuizSteps button{
+/* Breadcrumb type remains smaller but shares precisely the same proportions. */
+body:not(.auth-locked) #selection #qrQuizSteps button{
  font-size:12px!important;
  font-weight:400!important;
  line-height:1.3!important;
 }
-/* Inline drag/drop answer target and floating choice follow the same scale. */
-body:not(.auth-locked) #quiz .qr-drop-zone,
-body:not(.auth-locked) #quiz .qr-drop-ghost{
- padding:var(--qr-flat-pill-padding)!important;
+/* Dropdowns are button-like controls. Preserve space for their existing arrows. */
+body:not(.auth-locked) :is(#home,#quizStart,#selection,#scoresPage,#notesPage,#profilePage) .qr-main select{
+ padding:.333em calc(.833em + 1.6em) .333em .833em!important;
  border-radius:var(--qr-button-radius)!important;
  min-height:0!important;
+ height:auto!important;
 }
-
+/* The round bookmark icon is an intentional icon-only control, not a text pill. */
+body:not(.auth-locked) #selection #quiz .bookmark-list-button{
+ width:var(--density-control)!important;
+ height:var(--density-control)!important;
+ min-height:var(--density-control)!important;
+ padding:0!important;
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
