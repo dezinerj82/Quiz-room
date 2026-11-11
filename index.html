@@ -1108,6 +1108,16 @@ body:not(.auth-locked) #selection.qr-compact-active-quiz .chapter-items{
  margin:0!important;
 }
 
+/* Quiz breadcrumb navigation stays compact; level/category/quiz choices retain shared sizing. */
+body:not(.auth-locked) #selection .qr-main #qrQuizSteps button{
+ font-size:12px!important;
+ font-weight:400!important;
+ line-height:1.3!important;
+ padding:4px 10px!important;
+ min-height:0!important;
+ height:auto!important;
+}
+
 /* Quiz completion follows the existing secondary palette and compact controls. */
 body:not(.auth-locked) #results .resultpanel{
  padding:var(--qr-card-padding)!important;
