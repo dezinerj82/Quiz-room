@@ -16,18 +16,18 @@ const exerciseBank={
         "explanation": "Late is the opposite of early."
       },
       {
-        "id": "ENG-PM3-EXC-001-02",
-        "q": "Which word means very large?",
-        "options": [
-          "Tiny",
-          "Narrow",
-          "Brief",
-          "Huge"
-        ],
-        "type": "mc",
-        "correct": 3,
-        "explanation": "Huge means very large."
-      },
+  "id": "ENG-PM3-EXC-001-02",
+  "q": "Which word means to make something better?",
+  "options": [
+    "Borrow",
+    "Forget",
+    "Damage",
+    "Improve"
+  ],
+  "type": "mc",
+  "correct": 3,
+  "explanation": "Improve means to make something better."
+},
       {
         "id": "ENG-PM3-EXC-001-03",
         "q": "What do we call a doctor for animals?",
@@ -369,18 +369,18 @@ Object.assign(exerciseBank.English,{
       "explanation": "She goes uses the correct verb form for a singular subject in the present simple."
     },
     {
-      "id": "ENG-PM3-QUIZ-GRM-001-04",
-      "q": "Which sentence has the correct punctuation?",
-      "type": "mc",
-      "options": [
-        "Where are you going.",
-        "Where are you going?",
-        "Where are you going!",
-        "where are you going?"
-      ],
-      "correct": 1,
-      "explanation": "A direct question begins with a capital letter and ends with a question mark."
-    },
+  "id": "ENG-PM3-QUIZ-GRM-001-04",
+  "q": "Which sentence has the correct punctuation?",
+  "type": "mc",
+  "options": [
+    "Where are you going.",
+    "Where are you going?",
+    "Where are you going!",
+    "Where you are going?"
+  ],
+  "correct": 1,
+  "explanation": "A direct question uses a capital letter, natural question word order and a question mark."
+},
     {
       "id": "ENG-PM3-QUIZ-GRM-001-05",
       "q": "In 'The cats are sleeping,' the word 'cats' is plural.",
@@ -458,15 +458,15 @@ Object.assign(formulaBank.Math,{
       "q": "□ × 9 = 36"
     },
     {
-      "id": "MATH-PM3-QUIZ-MUL-002-04",
-      "type": "formula",
-      "operation": "multiply",
-      "a": 7,
-      "b": 8,
-      "blank": "result",
-      "expected": 56,
-      "q": "7 × 8 = □"
-    },
+  "id": "MATH-PM3-QUIZ-MUL-002-04",
+  "type": "formula",
+  "operation": "multiply",
+  "a": 7,
+  "b": 9,
+  "blank": "result",
+  "expected": 63,
+  "q": "7 × 9 = □"
+},
     {
       "id": "MATH-PM3-QUIZ-MUL-002-05",
       "type": "formula",
@@ -1113,18 +1113,18 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U05-001-09"
     },
     {
-      "type": "mc",
-      "q": "What time is 45 minutes after 4:20 p.m.?",
-      "options": [
-        "4:55 p.m.",
-        "5:00 p.m.",
-        "5:05 p.m.",
-        "5:15 p.m."
-      ],
-      "correct": 2,
-      "explanation": "20 minutes to 4:40, then 25 minutes to 5:05 p.m.",
-      "id": "MATH-PM3-QUIZ-U05-001-10"
-    }
+  "type": "mc",
+  "q": "What time is 45 minutes after 4:20 p.m.?",
+  "options": [
+    "4:55 p.m.",
+    "5:00 p.m.",
+    "5:05 p.m.",
+    "5:15 p.m."
+  ],
+  "correct": 2,
+  "explanation": "From 4:20 p.m. to 5:00 p.m. is 40 minutes, then another 5 minutes reaches 5:05 p.m.",
+  "id": "MATH-PM3-QUIZ-U05-001-10"
+}
   ],
   "Unit 6 - Measurement": [
     {
@@ -1430,25 +1430,25 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U09-001-02"
     },
     {
-      "type": "text",
-      "q": "Fill in the blank: A survey has 4 apple votes, 7 banana votes and 2 orange votes. The total number of votes is ____.",
-      "expected": "13",
-      "explanation": "4 + 7 + 2 = 13.",
-      "id": "MATH-PM3-QUIZ-U09-001-03"
-    },
+  "type": "text",
+  "q": "A class votes for a class pet: 5 pupils choose fish, 6 choose rabbits and 4 choose hamsters. How many votes are there?",
+  "expected": "15",
+  "explanation": "5 + 6 + 4 = 15 votes.",
+  "id": "MATH-PM3-QUIZ-U09-001-03"
+},
     {
-      "type": "mc",
-      "q": "In a survey, 7 pupils chose bananas and 2 chose oranges. How many more chose bananas?",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "9"
-      ],
-      "correct": 2,
-      "explanation": "7 − 2 = 5.",
-      "id": "MATH-PM3-QUIZ-U09-001-04"
-    },
+  "type": "mc",
+  "q": "A class counts 11 red pencils and 6 blue pencils. How many more red pencils are there?",
+  "options": [
+    "4",
+    "6",
+    "5",
+    "17"
+  ],
+  "correct": 2,
+  "explanation": "11 − 6 = 5 more red pencils.",
+  "id": "MATH-PM3-QUIZ-U09-001-04"
+},
     {
       "type": "mc",
       "q": "A class recorded: bicycles 6, trains 3, cars 8 and walking 5. How many pupils were counted?",
@@ -1583,18 +1583,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T01-001-07"
     },
     {
-      "type": "mc",
-      "q": "Choose the correct sentence.",
-      "options": [
-        "My brother play football daily.",
-        "My brother plays football daily.",
-        "My brother playing football daily.",
-        "My brother played football daily tomorrow."
-      ],
-      "correct": 1,
-      "explanation": "He or my brother takes plays in the present simple.",
-      "id": "ENG-PM3-QUIZ-T01-001-08"
-    },
+  "type": "mc",
+  "q": "Which sentence correctly describes something your brother does every day?",
+  "options": [
+    "My brother play football daily.",
+    "My brother plays football daily.",
+    "My brother playing football daily.",
+    "My brother played football daily tomorrow."
+  ],
+  "correct": 1,
+  "explanation": "He or my brother takes plays in the present simple.",
+  "id": "ENG-PM3-QUIZ-T01-001-08"
+},
     {
       "type": "text",
       "q": "Fill in the blank: We usually eat lunch at ____. (noon / midnight)",
@@ -1639,18 +1639,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T02-001-03"
     },
     {
-      "type": "mc",
-      "q": "Choose the correct sentence.",
-      "options": [
-        "I am eating lunch.",
-        "I is eating lunch.",
-        "I are eating lunch.",
-        "I be eating lunch."
-      ],
-      "correct": 0,
-      "explanation": "Use am with I in the present continuous.",
-      "id": "ENG-PM3-QUIZ-T02-001-04"
-    },
+  "type": "mc",
+  "q": "Which sentence correctly uses 'am' to describe an action happening now?",
+  "options": [
+    "I am eating lunch.",
+    "I is eating lunch.",
+    "I are eating lunch.",
+    "I be eating lunch."
+  ],
+  "correct": 0,
+  "explanation": "Use am with I in the present continuous.",
+  "id": "ENG-PM3-QUIZ-T02-001-04"
+},
     {
       "type": "text",
       "q": "Fill in the blank: The baby is ____. (sleep / sleeping)",
@@ -1679,18 +1679,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T02-001-07"
     },
     {
-      "type": "mc",
-      "q": "Which sentence is about an action happening now?",
-      "options": [
-        "He washes the car every week.",
-        "He is washing the car.",
-        "He washed the car yesterday.",
-        "He will wash the car."
-      ],
-      "correct": 1,
-      "explanation": "Is washing describes an ongoing action.",
-      "id": "ENG-PM3-QUIZ-T02-001-08"
-    },
+  "type": "mc",
+  "q": "Which question correctly asks what someone is doing right now?",
+  "options": [
+    "What you are doing?",
+    "What are you doing?",
+    "What did you do yesterday?",
+    "What do you usually do?"
+  ],
+  "correct": 1,
+  "explanation": "'What are you doing?' correctly asks about an action happening now.",
+  "id": "ENG-PM3-QUIZ-T02-001-08"
+},
     {
       "type": "text",
       "q": "Fill in the blank: I ____ doing my homework right now. (am / is)",
@@ -1755,18 +1755,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T03-001-05"
     },
     {
-      "type": "mc",
-      "q": "Which word describes a very windy day?",
-      "options": [
-        "Breezy",
-        "Silent",
-        "Dry",
-        "Dark"
-      ],
-      "correct": 0,
-      "explanation": "Breezy means having a noticeable gentle wind.",
-      "id": "ENG-PM3-QUIZ-T03-001-06"
-    },
+  "type": "mc",
+  "q": "Which word describes a day with a gentle wind?",
+  "options": [
+    "Breezy",
+    "Silent",
+    "Dry",
+    "Dark"
+  ],
+  "correct": 0,
+  "explanation": "Breezy means that a gentle wind is blowing.",
+  "id": "ENG-PM3-QUIZ-T03-001-06"
+},
     {
       "type": "tf",
       "q": "The word 'cloudy' describes a sky with many clouds.",
@@ -1775,18 +1775,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T03-001-07"
     },
     {
-      "type": "mc",
-      "q": "Which sentence is grammatically correct?",
-      "options": [
-        "It raining today.",
-        "It is raining today.",
-        "It are raining today.",
-        "It rain today now."
-      ],
-      "correct": 1,
-      "explanation": "It is raining is the correct present continuous sentence.",
-      "id": "ENG-PM3-QUIZ-T03-001-08"
-    },
+  "type": "mc",
+  "q": "Which sentence correctly describes rainy weather today?",
+  "options": [
+    "It raining today.",
+    "It is raining today.",
+    "It are raining today.",
+    "It rain today now."
+  ],
+  "correct": 1,
+  "explanation": "It is raining is the correct present continuous sentence.",
+  "id": "ENG-PM3-QUIZ-T03-001-08"
+},
     {
       "type": "text",
       "q": "Fill in the blank: The month after August is ____. (September / July)",
@@ -1927,18 +1927,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T05-001-03"
     },
     {
-      "type": "mc",
-      "q": "Which sentence is grammatically correct?",
-      "options": [
-        "I have an banana.",
-        "I have a banana.",
-        "I has a banana.",
-        "I having a banana."
-      ],
-      "correct": 1,
-      "explanation": "Banana begins with a consonant sound, so use a.",
-      "id": "ENG-PM3-QUIZ-T05-001-04"
-    },
+  "type": "mc",
+  "q": "Which sentence correctly uses 'a' before a food name?",
+  "options": [
+    "I have an banana.",
+    "I have a banana.",
+    "I has a banana.",
+    "I having a banana."
+  ],
+  "correct": 1,
+  "explanation": "Banana begins with a consonant sound, so use a.",
+  "id": "ENG-PM3-QUIZ-T05-001-04"
+},
     {
       "type": "text",
       "q": "Fill in the blank: She drinks a glass of ____. (water / plate)",
@@ -2112,25 +2112,25 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T07-001-02"
     },
     {
-      "type": "tf",
-      "q": "The word 'went' is the past tense of 'go'.",
-      "expected": true,
-      "explanation": "Went is the irregular past form of go.",
-      "id": "ENG-PM3-QUIZ-T07-001-03"
-    },
+  "type": "tf",
+  "q": "The word 'built' is the past tense of 'build'.",
+  "expected": true,
+  "explanation": "Built is the irregular past tense of build.",
+  "id": "ENG-PM3-QUIZ-T07-001-03"
+},
     {
-      "type": "mc",
-      "q": "Choose the correct sentence.",
-      "options": [
-        "She visit her aunt yesterday.",
-        "She visited her aunt yesterday.",
-        "She visiting her aunt yesterday.",
-        "She visits her aunt yesterday tomorrow."
-      ],
-      "correct": 1,
-      "explanation": "Visited is the past-tense verb.",
-      "id": "ENG-PM3-QUIZ-T07-001-04"
-    },
+  "type": "mc",
+  "q": "Which sentence correctly tells us about a visit that happened yesterday?",
+  "options": [
+    "She visit her aunt yesterday.",
+    "She visited her aunt yesterday.",
+    "She visiting her aunt yesterday.",
+    "She visits her aunt yesterday tomorrow."
+  ],
+  "correct": 1,
+  "explanation": "Visited is the past-tense verb.",
+  "id": "ENG-PM3-QUIZ-T07-001-04"
+},
     {
       "type": "text",
       "q": "Fill in the blank: Last night, I ____ a storybook. (read / reads)",
@@ -2215,18 +2215,18 @@ Object.assign(exerciseBank.English,{
       "id": "ENG-PM3-QUIZ-T08-001-03"
     },
     {
-      "type": "mc",
-      "q": "What is the past tense of 'travel' in British English?",
-      "options": [
-        "Travells",
-        "Travelled",
-        "Travelling",
-        "Travelses"
-      ],
-      "correct": 1,
-      "explanation": "Travelled is the past tense in British English.",
-      "id": "ENG-PM3-QUIZ-T08-001-04"
-    },
+  "type": "mc",
+  "q": "What is the past tense of 'travel' in British English?",
+  "options": [
+    "Travels",
+    "Travelled",
+    "Travelling",
+    "Travel"
+  ],
+  "correct": 1,
+  "explanation": "'Travelled' is the usual British English past-tense spelling.",
+  "id": "ENG-PM3-QUIZ-T08-001-04"
+},
     {
       "type": "text",
       "q": "Fill in the blank: Last weekend, my family ____ the museum. (visited / visits)",
