@@ -1095,6 +1095,19 @@ body:not(.auth-locked) .qr-drop-ghost{
  font:700 var(--qr-font-body) var(--qr-font);pointer-events:none;white-space:nowrap
 }
 
+/* Keep the selected quiz button visible without the tall subject card during play/results. */
+body:not(.auth-locked) #selection.qr-compact-active-quiz .qr-main > .qr-card{
+ padding:0!important;border:0!important;background:transparent!important;
+ box-shadow:none!important;gap:0!important;
+}
+body:not(.auth-locked) #selection.qr-compact-active-quiz .qr-subject-title{
+ display:none!important;
+}
+body:not(.auth-locked) #selection.qr-compact-active-quiz .versionlist,
+body:not(.auth-locked) #selection.qr-compact-active-quiz .chapter-items{
+ margin:0!important;
+}
+
 /* Quiz completion follows the existing secondary palette and compact controls. */
 body:not(.auth-locked) #results .resultpanel{
  padding:var(--qr-card-padding)!important;
@@ -1312,6 +1325,7 @@ document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))q
 function show(id){qrCloseSidebars();if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
  document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  const selectionCard=document.querySelector('#selection .qr-main > .qr-card');if(selectionCard)selectionCard.inert=locked;
+ $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
  document.querySelectorAll('#selection .qr-sidebar-toggle').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  window.scrollTo(0,0)}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
