@@ -3771,7 +3771,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "사과 means apple.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-01"
       },
       {
@@ -3785,7 +3785,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "고양이 means cat.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-02"
       },
       {
@@ -3803,7 +3803,7 @@ Object.assign(exerciseBank, {
             "Book"
           ]
         },
-        "explanation": "컵 means cup.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-03"
       },
       {
@@ -3825,7 +3825,7 @@ Object.assign(exerciseBank, {
             "Bag"
           ]
         },
-        "explanation": "파란색 means blue.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-04"
       },
       {
@@ -3839,7 +3839,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "책상 means desk, which is furniture.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-05"
       },
       {
@@ -3857,7 +3857,7 @@ Object.assign(exerciseBank, {
             "Umbrella"
           ]
         },
-        "explanation": "연필 means pencil.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-06"
       },
       {
@@ -3879,7 +3879,7 @@ Object.assign(exerciseBank, {
             "Banana"
           ]
         },
-        "explanation": "엄마 means mother.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-07"
       },
       {
@@ -3893,7 +3893,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "하나 is the Korean word for one.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-08"
       },
       {
@@ -3911,7 +3911,7 @@ Object.assign(exerciseBank, {
             "Swimsuit"
           ]
         },
-        "explanation": "외투 means coat.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-09"
       },
       {
@@ -3933,7 +3933,7 @@ Object.assign(exerciseBank, {
             "To be small"
           ]
         },
-        "explanation": "병원 means hospital.",
+        "explanation": "",
         "id": "KOR-PM2-QUIZ-VOC-001-10"
       }
     ],
@@ -4102,7 +4102,7 @@ Object.assign(exerciseBank, {
       },
       {
         "type": "mc",
-        "q": "“친구가 와요.”와 같은 뜻의 알맞은 문장은 무엇인가요?",
+        "q": "친구가 오는 것을 바르게 나타낸 문장은 무엇인가요?",
         "options": [
           "친구가 와요.",
           "친구를 와요.",
@@ -4145,7 +4145,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "Kucing means cat.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-01"
       },
       {
@@ -4159,7 +4159,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Pisang means banana.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-02"
       },
       {
@@ -4177,7 +4177,7 @@ Object.assign(exerciseBank, {
             "Shoes"
           ]
         },
-        "explanation": "Cawan means cup.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-03"
       },
       {
@@ -4199,7 +4199,7 @@ Object.assign(exerciseBank, {
             "Park"
           ]
         },
-        "explanation": "Kuning means yellow.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-04"
       },
       {
@@ -4213,7 +4213,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Ayam means chicken, which is an animal.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-05"
       },
       {
@@ -4231,7 +4231,7 @@ Object.assign(exerciseBank, {
             "Spoon"
           ]
         },
-        "explanation": "Pensel means pencil.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-06"
       },
       {
@@ -4253,7 +4253,7 @@ Object.assign(exerciseBank, {
             "Basket"
           ]
         },
-        "explanation": "Hidung means nose.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-07"
       },
       {
@@ -4267,7 +4267,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Satu means one.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-08"
       },
       {
@@ -4285,7 +4285,7 @@ Object.assign(exerciseBank, {
             "Bicycle"
           ]
         },
-        "explanation": "Katil means bed.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-09"
       },
       {
@@ -4307,7 +4307,7 @@ Object.assign(exerciseBank, {
             "Beach"
           ]
         },
-        "explanation": "Sekolah means school.",
+        "explanation": "",
         "id": "MAL-PM1-QUIZ-VOC-001-10"
       }
     ],
