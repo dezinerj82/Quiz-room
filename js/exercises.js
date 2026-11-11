@@ -3746,3 +3746,756 @@ Object.assign(exerciseBank, { Science: {
     }
   ]
 } });
+
+
+/* PM2 Korean and PM1 Malay revision quizzes. English is revealed after answering. */
+Object.assign(exerciseBank, {
+  "Korean": {
+    "Word Meanings": [
+      {
+        "type": "mc",
+        "q": "다음 중 과일은 무엇인가요?",
+        "options": [
+          "사과",
+          "책",
+          "의자",
+          "문"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which of these is a fruit?",
+          "options": [
+            "Apple",
+            "Book",
+            "Chair",
+            "Door"
+          ]
+        },
+        "explanation": "사과 means apple.",
+        "id": "KOR-PM2-QUIZ-VOC-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "고양이는 동물이에요.",
+        "expected": true,
+        "translation": {
+          "question": "A cat is an animal.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "고양이 means cat.",
+        "id": "KOR-PM2-QUIZ-VOC-001-02"
+      },
+      {
+        "type": "drop",
+        "q": "물을 마실 때 ____을 사용해요.",
+        "expected": "컵",
+        "options": [
+          "컵",
+          "책"
+        ],
+        "translation": {
+          "question": "We use a ____ to drink water.",
+          "options": [
+            "Cup",
+            "Book"
+          ]
+        },
+        "explanation": "컵 means cup.",
+        "id": "KOR-PM2-QUIZ-VOC-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "다음 중 색깔을 나타내는 말은 무엇인가요?",
+        "options": [
+          "학교",
+          "파란색",
+          "연필",
+          "가방"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word names a colour?",
+          "options": [
+            "School",
+            "Blue",
+            "Pencil",
+            "Bag"
+          ]
+        },
+        "explanation": "파란색 means blue.",
+        "id": "KOR-PM2-QUIZ-VOC-001-04"
+      },
+      {
+        "type": "tf",
+        "q": "책상은 먹는 음식이에요.",
+        "expected": false,
+        "translation": {
+          "question": "A desk is something we eat.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "책상 means desk, which is furniture.",
+        "id": "KOR-PM2-QUIZ-VOC-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "글씨를 쓸 때 ____을 사용해요.",
+        "expected": "연필",
+        "options": [
+          "연필",
+          "우산"
+        ],
+        "translation": {
+          "question": "We use a ____ to write.",
+          "options": [
+            "Pencil",
+            "Umbrella"
+          ]
+        },
+        "explanation": "연필 means pencil.",
+        "id": "KOR-PM2-QUIZ-VOC-001-06"
+      },
+      {
+        "type": "mc",
+        "q": "다음 중 가족을 나타내는 말은 무엇인가요?",
+        "options": [
+          "친구",
+          "엄마",
+          "버스",
+          "바나나"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means a family member?",
+          "options": [
+            "Friend",
+            "Mother",
+            "Bus",
+            "Banana"
+          ]
+        },
+        "explanation": "엄마 means mother.",
+        "id": "KOR-PM2-QUIZ-VOC-001-07"
+      },
+      {
+        "type": "tf",
+        "q": "하나는 숫자 1을 뜻해요.",
+        "expected": true,
+        "translation": {
+          "question": "하나 means the number one.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "하나 is the Korean word for one.",
+        "id": "KOR-PM2-QUIZ-VOC-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "추울 때 ____을 입어요.",
+        "expected": "외투",
+        "options": [
+          "외투",
+          "수영복"
+        ],
+        "translation": {
+          "question": "We wear a ____ when it is cold.",
+          "options": [
+            "Coat",
+            "Swimsuit"
+          ]
+        },
+        "explanation": "외투 means coat.",
+        "id": "KOR-PM2-QUIZ-VOC-001-09"
+      },
+      {
+        "type": "mc",
+        "q": "다음 중 장소를 나타내는 말은 무엇인가요?",
+        "options": [
+          "달리다",
+          "맛있다",
+          "병원",
+          "작다"
+        ],
+        "correct": 2,
+        "translation": {
+          "question": "Which word names a place?",
+          "options": [
+            "To run",
+            "To be tasty",
+            "Hospital",
+            "To be small"
+          ]
+        },
+        "explanation": "병원 means hospital.",
+        "id": "KOR-PM2-QUIZ-VOC-001-10"
+      }
+    ],
+    "Grammar Practice": [
+      {
+        "type": "mc",
+        "q": "알맞은 문장을 고르세요.",
+        "options": [
+          "저는 학생이에요.",
+          "저는 학생예요.",
+          "저는 학생에요.",
+          "저는 학생가요."
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the correct sentence.",
+          "options": [
+            "I am a student.",
+            "Incorrect ending for student.",
+            "Incorrect ending for student.",
+            "Incorrect ending for student."
+          ]
+        },
+        "explanation": "학생 ends in a consonant, so 학생이에요 is correct.",
+        "id": "KOR-PM2-QUIZ-GRM-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "“저는”은 자기 자신을 말할 때 쓸 수 있어요.",
+        "expected": true,
+        "translation": {
+          "question": "저는 can be used when talking about yourself.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "저는 is a polite way to say 'I' as a topic.",
+        "id": "KOR-PM2-QUIZ-GRM-001-02"
+      },
+      {
+        "type": "drop",
+        "q": "저는 학교____ 가요.",
+        "expected": "에",
+        "options": [
+          "에",
+          "를"
+        ],
+        "translation": {
+          "question": "I go ____ school.",
+          "options": [
+            "To (destination)",
+            "Object marker"
+          ]
+        },
+        "explanation": "학교에 가요 means going to school.",
+        "id": "KOR-PM2-QUIZ-GRM-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "“이것은 ____.”에 알맞은 말을 고르세요.",
+        "options": [
+          "책이에요",
+          "책예요",
+          "책을요",
+          "책가요"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the correct ending: 'This is a book.'",
+          "options": [
+            "It is a book.",
+            "Incorrect ending",
+            "Incorrect ending",
+            "Incorrect ending"
+          ]
+        },
+        "explanation": "책이에요 is correct because 책 ends in a consonant.",
+        "id": "KOR-PM2-QUIZ-GRM-001-04"
+      },
+      {
+        "type": "tf",
+        "q": "“사과가 있어요.”는 사과가 없다는 뜻이에요.",
+        "expected": false,
+        "translation": {
+          "question": "사과가 있어요 means there are no apples.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "있어요 means that something is present.",
+        "id": "KOR-PM2-QUIZ-GRM-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "가방____ 있어요.",
+        "expected": "이",
+        "options": [
+          "이",
+          "가"
+        ],
+        "translation": {
+          "question": "There is a bag. Choose the correct particle.",
+          "options": [
+            "Subject particle after a consonant",
+            "Subject particle after a vowel"
+          ]
+        },
+        "explanation": "가방 ends in a consonant, so 가방이 있어요 is correct.",
+        "id": "KOR-PM2-QUIZ-GRM-001-06"
+      },
+      {
+        "type": "mc",
+        "q": "물어보는 문장은 무엇인가요?",
+        "options": [
+          "이것은 책이에요.",
+          "어디에 가요?",
+          "저는 밥을 먹어요.",
+          "날씨가 좋아요."
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which sentence asks a question?",
+          "options": [
+            "This is a book.",
+            "Where are you going?",
+            "I eat a meal.",
+            "The weather is nice."
+          ]
+        },
+        "explanation": "어디에 가요? asks where someone is going.",
+        "id": "KOR-PM2-QUIZ-GRM-001-07"
+      },
+      {
+        "type": "tf",
+        "q": "“학교에 가요.”는 학교로 간다는 뜻이에요.",
+        "expected": true,
+        "translation": {
+          "question": "학교에 가요 means going to school.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "에 shows the destination in this sentence.",
+        "id": "KOR-PM2-QUIZ-GRM-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "저____ 학생이에요.",
+        "expected": "는",
+        "options": [
+          "는",
+          "를"
+        ],
+        "translation": {
+          "question": "I am a student. Choose the correct particle.",
+          "options": [
+            "Topic particle",
+            "Object particle"
+          ]
+        },
+        "explanation": "저는 학생이에요 is the correct introduction.",
+        "id": "KOR-PM2-QUIZ-GRM-001-09"
+      },
+      {
+        "type": "mc",
+        "q": "“친구가 와요.”와 같은 뜻의 알맞은 문장은 무엇인가요?",
+        "options": [
+          "친구가 와요.",
+          "친구를 와요.",
+          "친구에 와요.",
+          "친구는가 와요."
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which sentence correctly says 'A friend comes'?",
+          "options": [
+            "A friend comes.",
+            "Incorrect object marker",
+            "Incorrect destination marker",
+            "Incorrect particle combination"
+          ]
+        },
+        "explanation": "친구 takes 가 as its subject particle.",
+        "id": "KOR-PM2-QUIZ-GRM-001-10"
+      }
+    ]
+  },
+  "Malay": {
+    "Word Meanings": [
+      {
+        "type": "mc",
+        "q": "Yang manakah nama haiwan?",
+        "options": [
+          "Meja",
+          "Kucing",
+          "Buku",
+          "Pintu"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word names an animal?",
+          "options": [
+            "Table",
+            "Cat",
+            "Book",
+            "Door"
+          ]
+        },
+        "explanation": "Kucing means cat.",
+        "id": "MAL-PM1-QUIZ-VOC-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "Pisang ialah sejenis buah.",
+        "expected": true,
+        "translation": {
+          "question": "A banana is a type of fruit.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Pisang means banana.",
+        "id": "MAL-PM1-QUIZ-VOC-001-02"
+      },
+      {
+        "type": "drop",
+        "q": "Saya minum air menggunakan ____.",
+        "expected": "cawan",
+        "options": [
+          "cawan",
+          "kasut"
+        ],
+        "translation": {
+          "question": "I drink water using a ____.",
+          "options": [
+            "Cup",
+            "Shoes"
+          ]
+        },
+        "explanation": "Cawan means cup.",
+        "id": "MAL-PM1-QUIZ-VOC-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah warna?",
+        "options": [
+          "Kuning",
+          "Sekolah",
+          "Kereta",
+          "Taman"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word names a colour?",
+          "options": [
+            "Yellow",
+            "School",
+            "Car",
+            "Park"
+          ]
+        },
+        "explanation": "Kuning means yellow.",
+        "id": "MAL-PM1-QUIZ-VOC-001-04"
+      },
+      {
+        "type": "tf",
+        "q": "Ayam ialah sejenis tumbuhan.",
+        "expected": false,
+        "translation": {
+          "question": "A chicken is a type of plant.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Ayam means chicken, which is an animal.",
+        "id": "MAL-PM1-QUIZ-VOC-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "Saya menulis dengan ____.",
+        "expected": "pensel",
+        "options": [
+          "pensel",
+          "sudu"
+        ],
+        "translation": {
+          "question": "I write with a ____.",
+          "options": [
+            "Pencil",
+            "Spoon"
+          ]
+        },
+        "explanation": "Pensel means pencil.",
+        "id": "MAL-PM1-QUIZ-VOC-001-06"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah anggota badan?",
+        "options": [
+          "Hidung",
+          "Bantal",
+          "Pinggan",
+          "Bakul"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word names a body part?",
+          "options": [
+            "Nose",
+            "Pillow",
+            "Plate",
+            "Basket"
+          ]
+        },
+        "explanation": "Hidung means nose.",
+        "id": "MAL-PM1-QUIZ-VOC-001-07"
+      },
+      {
+        "type": "tf",
+        "q": "Satu ialah nombor 1.",
+        "expected": true,
+        "translation": {
+          "question": "Satu is the number one.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Satu means one.",
+        "id": "MAL-PM1-QUIZ-VOC-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Saya tidur di atas ____.",
+        "expected": "katil",
+        "options": [
+          "katil",
+          "basikal"
+        ],
+        "translation": {
+          "question": "I sleep on a ____.",
+          "options": [
+            "Bed",
+            "Bicycle"
+          ]
+        },
+        "explanation": "Katil means bed.",
+        "id": "MAL-PM1-QUIZ-VOC-001-09"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah tempat untuk belajar?",
+        "options": [
+          "Pasar",
+          "Sekolah",
+          "Dapur",
+          "Pantai"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which place is used for learning?",
+          "options": [
+            "Market",
+            "School",
+            "Kitchen",
+            "Beach"
+          ]
+        },
+        "explanation": "Sekolah means school.",
+        "id": "MAL-PM1-QUIZ-VOC-001-10"
+      }
+    ],
+    "Grammar Practice": [
+      {
+        "type": "mc",
+        "q": "Pilih ayat yang betul.",
+        "options": [
+          "Saya makan nasi.",
+          "Saya nasi sedang makan.",
+          "Saya makan sedang nasi.",
+          "Makan sedang saya nasi."
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the correctly ordered sentence.",
+          "options": [
+            "I eat rice.",
+            "Incorrect word order",
+            "Incorrect word order",
+            "Incorrect word order"
+          ]
+        },
+        "explanation": "Saya makan nasi follows the usual subject–verb–object order.",
+        "id": "MAL-PM1-QUIZ-GRM-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "Perkataan “saya” digunakan untuk diri sendiri.",
+        "expected": true,
+        "translation": {
+          "question": "The word saya refers to yourself.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Saya means 'I' or 'me'.",
+        "id": "MAL-PM1-QUIZ-GRM-001-02"
+      },
+      {
+        "type": "drop",
+        "q": "Ali ____ buku.",
+        "expected": "membaca",
+        "options": [
+          "membaca",
+          "minum"
+        ],
+        "translation": {
+          "question": "Ali ____ a book.",
+          "options": [
+            "Reads",
+            "Drinks"
+          ]
+        },
+        "explanation": "Membaca means to read.",
+        "id": "MAL-PM1-QUIZ-GRM-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Pilih kata ganti nama diri untuk ramai orang.",
+        "options": [
+          "Dia",
+          "Saya",
+          "Mereka",
+          "Awak"
+        ],
+        "correct": 2,
+        "translation": {
+          "question": "Choose the pronoun for several people.",
+          "options": [
+            "He or she",
+            "I",
+            "They",
+            "You"
+          ]
+        },
+        "explanation": "Mereka means they.",
+        "id": "MAL-PM1-QUIZ-GRM-001-04"
+      },
+      {
+        "type": "tf",
+        "q": "Ayat tanya biasanya diakhiri tanda soal (?).",
+        "expected": true,
+        "translation": {
+          "question": "A question usually ends with a question mark (?).",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Ayat tanya is a question sentence.",
+        "id": "MAL-PM1-QUIZ-GRM-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "Baju itu ____.",
+        "expected": "merah",
+        "options": [
+          "merah",
+          "membaca"
+        ],
+        "translation": {
+          "question": "That shirt is ____.",
+          "options": [
+            "Red",
+            "Reading"
+          ]
+        },
+        "explanation": "Merah describes the colour of the shirt.",
+        "id": "MAL-PM1-QUIZ-GRM-001-06"
+      },
+      {
+        "type": "mc",
+        "q": "Pilih perkataan yang sesuai. “Bola itu ____.”",
+        "options": [
+          "bulat",
+          "berlari",
+          "membaca",
+          "tidur"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the suitable word: 'The ball is ____.'",
+          "options": [
+            "Round",
+            "Running",
+            "Reading",
+            "Sleeping"
+          ]
+        },
+        "explanation": "Bulat describes a round shape.",
+        "id": "MAL-PM1-QUIZ-GRM-001-07"
+      },
+      {
+        "type": "tf",
+        "q": "Perkataan “cantik” ialah kata kerja.",
+        "expected": false,
+        "translation": {
+          "question": "The word cantik is a verb.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Cantik means beautiful and is an adjective.",
+        "id": "MAL-PM1-QUIZ-GRM-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Ibu memasak ____ dapur.",
+        "expected": "di",
+        "options": [
+          "di",
+          "ke"
+        ],
+        "translation": {
+          "question": "Mother cooks ____ the kitchen.",
+          "options": [
+            "In",
+            "To"
+          ]
+        },
+        "explanation": "Di shows where the cooking takes place.",
+        "id": "MAL-PM1-QUIZ-GRM-001-09"
+      },
+      {
+        "type": "mc",
+        "q": "Pilih ayat tanya.",
+        "options": [
+          "Adik sedang tidur.",
+          "Di manakah beg saya?",
+          "Saya suka susu.",
+          "Kereta itu biru."
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the question sentence.",
+          "options": [
+            "My younger sibling is sleeping.",
+            "Where is my bag?",
+            "I like milk.",
+            "That car is blue."
+          ]
+        },
+        "explanation": "Di manakah beg saya? asks where the bag is.",
+        "id": "MAL-PM1-QUIZ-GRM-001-10"
+      }
+    ]
+  }
+});
