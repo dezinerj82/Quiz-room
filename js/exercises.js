@@ -736,7 +736,7 @@ Object.assign(formulaBank.Math,{
 
 /* PM3 Mathematics Units 2–9: Unit 2–3 general Year 3 practice, Unit 4–9 aligned with Part 2 textbook topics. */
 Object.assign(exerciseBank,{Math:{
-  "Unit 2 - Basic Operations": [
+  "Basic Operations": [
     {
       "type": "mc",
       "q": "What is 347 + 258?",
@@ -838,7 +838,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U02-001-10"
     }
   ],
-  "Unit 3 - Fractions, Decimals and Percentages": [
+  "Fractions, Decimals and Percentages": [
     {
       "type": "text",
       "q": "Fill in the blank: Half of 18 is ____.",
@@ -934,7 +934,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U03-001-10"
     }
   ],
-  "Unit 4 - Money": [
+  "Money": [
     {
       "type": "mc",
       "q": "A notebook costs RM12 and a pencil case costs RM8. How much do they cost altogether?",
@@ -1030,7 +1030,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U04-001-10"
     }
   ],
-  "Unit 5 - Time": [
+  "Time": [
     {
       "type": "mc",
       "q": "How many minutes are in one hour?",
@@ -1126,7 +1126,7 @@ Object.assign(exerciseBank,{Math:{
   "id": "MATH-PM3-QUIZ-U05-001-10"
 }
   ],
-  "Unit 6 - Measurement": [
+  "Measurement": [
     {
       "type": "mc",
       "q": "How many centimetres are in 1 metre?",
@@ -1222,7 +1222,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U06-001-10"
     }
   ],
-  "Unit 7 - Shapes": [
+  "Shapes": [
     {
       "type": "tf",
       "q": "All four sides of a square have equal lengths.",
@@ -1318,7 +1318,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U07-001-10"
     }
   ],
-  "Unit 8 - Location": [
+  "Location": [
     {
       "type": "tf",
       "q": "On a grid with letters marking columns and numbers marking rows, C2 means column C and row 2.",
@@ -1408,7 +1408,7 @@ Object.assign(exerciseBank,{Math:{
       "id": "MATH-PM3-QUIZ-U08-001-10"
     }
   ],
-  "Unit 9 - Data Management": [
+  "Data Management": [
     {
       "type": "tf",
       "q": "Four tally marks represent a frequency of four.",
