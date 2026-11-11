@@ -2735,7 +2735,7 @@ Object.assign(exerciseBank, { Science: {
     "Cutting food into pieces.",
     "Tearing food",
     "Grinding food into small pieces.",
-    "Holding food in place while chewing."
+    "Mixing food with saliva."
   ],
   "correct": 1,
   "explanation": "Canine teeth help tear food."
@@ -2981,7 +2981,7 @@ Object.assign(exerciseBank, { Science: {
     {
   "id": "SCI-PM3-QUIZ-U04-001-01",
   "type": "mc",
-  "q": "An animal that eats plants is called a ...",
+  "q": "An animal that feeds mainly on plants is called a ...",
   "options": [
     "Herbivore",
     "Carnivore",
