@@ -3751,7 +3751,7 @@ Object.assign(exerciseBank, { Science: {
 /* PM2 Korean and PM1 Malay revision quizzes. English is revealed after answering. */
 Object.assign(exerciseBank, {
   "Korean": {
-    "Word Meanings": [
+    "어휘": [
       {
         "type": "mc",
         "q": "다음 중 과일은 무엇인가요?",
@@ -3937,7 +3937,7 @@ Object.assign(exerciseBank, {
         "id": "KOR-PM2-QUIZ-VOC-001-10"
       }
     ],
-    "Grammar Practice": [
+    "문법": [
       {
         "type": "mc",
         "q": "알맞은 문장을 고르세요.",
@@ -4125,7 +4125,7 @@ Object.assign(exerciseBank, {
     ]
   },
   "Malay": {
-    "Word Meanings": [
+    "Kosa Kata": [
       {
         "type": "mc",
         "q": "Yang manakah nama haiwan?",
@@ -4311,7 +4311,7 @@ Object.assign(exerciseBank, {
         "id": "MAL-PM1-QUIZ-VOC-001-10"
       }
     ],
-    "Grammar Practice": [
+    "Tatabahasa": [
       {
         "type": "mc",
         "q": "Pilih ayat yang betul.",
