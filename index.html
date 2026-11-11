@@ -1137,9 +1137,9 @@ function qrDropQuestion(q){
  const raw=String(q.q).replace(/^Fill in the blank(?: with the correct verb)?:\s*/i,'').replace(/\s*\(([^()]*\s[/]\s[^()]*)\)\s*$/,'').trim();
  const parts=raw.split('____');
  if(parts.length!==2)throw Error('Drag-and-drop question requires one blank: '+q.id);
- const label=q._dropSelection||'Drop here';
+ const label=q._dropSelection||'';
  const chosen=!!q._dropSelection;
- const blank='<span id="qrDropZone" class="qr-drop-zone'+(chosen?' qr-drop-filled '+(questionOutcomes[q.id]?.correct?'answer-correct':'answer-wrong'):'')+'" role="button" tabindex="'+(chosen?'-1':'0')+'" aria-label="Drop answer here" aria-disabled="'+chosen+'" ondragover="qrDropAllow(event)" ondrop="qrDropHandle(event)" onclick="qrDropChosen()" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();qrDropChosen()}">'+escapeHtml(label)+'</span>';
+ const blank='<span id="qrDropZone" class="qr-drop-zone'+(chosen?' qr-drop-filled '+(questionOutcomes[q.id]?(questionOutcomes[q.id].correct?'answer-correct':'answer-wrong'):''):'')+'" role="button" tabindex="'+(chosen?'-1':'0')+'" aria-label="Drop answer here" aria-disabled="'+chosen+'" ondragover="qrDropAllow(event)" ondrop="qrDropHandle(event)" onclick="qrDropChosen()" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();qrDropChosen()}">'+escapeHtml(label)+'</span>';
  return escapeHtml(parts[0])+blank+escapeHtml(parts[1]);
 }
 function qrDropPaint(q){
