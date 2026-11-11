@@ -1108,6 +1108,38 @@ body:not(.auth-locked) #selection.qr-compact-active-quiz .chapter-items{
  margin:0!important;
 }
 
+/* Quiz completion follows the existing secondary palette and compact controls. */
+body:not(.auth-locked) #results .resultpanel{
+ padding:var(--qr-card-padding)!important;
+ gap:var(--density-space)!important;
+}
+body:not(.auth-locked) #results .qr-result-bar{
+ width:56px;height:4px;border-radius:var(--qr-button-radius);
+ background:var(--qr-secondary);flex:0 0 auto;
+}
+body:not(.auth-locked) #results .resultpanel h2{margin:0!important}
+body:not(.auth-locked) #results .qr-result-summary{
+ margin:0!important;font-size:var(--qr-font-body)!important;
+ font-weight:400!important;color:var(--qr-text-primary);line-height:1.4;text-align:center;
+}
+body:not(.auth-locked) #results .qr-result-summary strong,
+body:not(.auth-locked) #results .qr-result-fraction{
+ font-size:inherit;font-weight:400!important;
+}
+body:not(.auth-locked) #results .qr-result-actions{
+ display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px
+}
+body:not(.auth-locked) #results .qr-result-actions .resultbutton{
+ margin:0!important;padding:var(--qr-control-padding)!important;min-height:0!important;
+}
+body:not(.auth-locked) #results .qr-result-actions .resultbutton:nth-child(2){
+ background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;
+}
+body:not(.auth-locked) #results #driveSaveStatus:empty{display:none!important}
+body:not(.auth-locked) #results #driveSaveStatus:not(:empty){
+ margin:0!important;color:var(--qr-text-error);font-size:var(--qr-font-body)
+}
+
 /* Shared flat-pill sizing: padding follows each button's own font size.
    Keep existing grid/full-width layouts and exclude the left sidebar. */
 :root{--qr-flat-pill-padding:.333em .833em}
@@ -1146,38 +1178,6 @@ body:not(.auth-locked) #quiz .qr-drop-ghost{
  padding:var(--qr-flat-pill-padding)!important;
  border-radius:var(--qr-button-radius)!important;
  min-height:0!important;
-}
-
-/* Quiz completion follows the existing secondary palette and compact controls. */
-body:not(.auth-locked) #results .resultpanel{
- padding:var(--qr-card-padding)!important;
- gap:var(--density-space)!important;
-}
-body:not(.auth-locked) #results .qr-result-bar{
- width:56px;height:4px;border-radius:var(--qr-button-radius);
- background:var(--qr-secondary);flex:0 0 auto;
-}
-body:not(.auth-locked) #results .resultpanel h2{margin:0!important}
-body:not(.auth-locked) #results .qr-result-summary{
- margin:0!important;font-size:var(--qr-font-body)!important;
- font-weight:400!important;color:var(--qr-text-primary);line-height:1.4;text-align:center;
-}
-body:not(.auth-locked) #results .qr-result-summary strong,
-body:not(.auth-locked) #results .qr-result-fraction{
- font-size:inherit;font-weight:400!important;
-}
-body:not(.auth-locked) #results .qr-result-actions{
- display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px
-}
-body:not(.auth-locked) #results .qr-result-actions .resultbutton{
- margin:0!important;padding:var(--qr-control-padding)!important;min-height:0!important;
-}
-body:not(.auth-locked) #results .qr-result-actions .resultbutton:nth-child(2){
- background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;
-}
-body:not(.auth-locked) #results #driveSaveStatus:empty{display:none!important}
-body:not(.auth-locked) #results #driveSaveStatus:not(:empty){
- margin:0!important;color:var(--qr-text-error);font-size:var(--qr-font-body)
 }
 
 </style><script>
