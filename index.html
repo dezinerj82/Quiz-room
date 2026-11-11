@@ -1108,20 +1108,44 @@ body:not(.auth-locked) #selection.qr-compact-active-quiz .chapter-items{
  margin:0!important;
 }
 
-/* Quiz breadcrumb navigation stays compact; level/category/quiz choices retain shared sizing. */
+/* Shared flat-pill sizing: padding follows each button's own font size.
+   Keep existing grid/full-width layouts and exclude the left sidebar. */
+:root{--qr-flat-pill-padding:.333em .833em}
+body:not(.auth-locked) .qr-main button:not(.bookmark-list-button),
+body:not(.auth-locked) .qr-main .qr-file-button,
+body:not(.auth-locked) .time-warning-card button,
+body:not(.auth-locked) .qr-crop-modal button,
+#googleGate button{
+ padding:var(--qr-flat-pill-padding)!important;
+ border-radius:var(--qr-button-radius)!important;
+ min-height:0!important;
+ height:auto!important;
+}
+/* Quiz selection and answer styles previously had independent sizing. */
+body:not(.auth-locked) #selection .qr-main #qrQuizSteps button,
+body:not(.auth-locked) #selection .qr-main .level-grid .level-button,
+body:not(.auth-locked) #selection .qr-main .chapter-items .version,
+body:not(.auth-locked) #quiz button.answer,
+body:not(.auth-locked) #quiz .quizactions .pill,
+body:not(.auth-locked) #quiz > .qr-quiz-outside-bottom .pill,
+body:not(.auth-locked) #results .qr-result-actions .resultbutton{
+ padding:var(--qr-flat-pill-padding)!important;
+ border-radius:var(--qr-button-radius)!important;
+ min-height:0!important;
+ height:auto!important;
+}
+/* Compact breadcrumb uses the same proportions at its smaller font size. */
 body:not(.auth-locked) #selection .qr-main #qrQuizSteps button{
  font-size:12px!important;
  font-weight:400!important;
  line-height:1.3!important;
- padding:4px 10px!important;
- min-height:0!important;
- height:auto!important;
 }
-
-/* Compact padding for the lower quiz-selection buttons; keep their normal font size. */
-body:not(.auth-locked) #selection .qr-main .level-grid .level-button,
-body:not(.auth-locked) #selection .qr-main .chapter-items .version{
- padding:4px 10px!important;
+/* Inline drag/drop answer target and floating choice follow the same scale. */
+body:not(.auth-locked) #quiz .qr-drop-zone,
+body:not(.auth-locked) #quiz .qr-drop-ghost{
+ padding:var(--qr-flat-pill-padding)!important;
+ border-radius:var(--qr-button-radius)!important;
+ min-height:0!important;
 }
 
 /* Quiz completion follows the existing secondary palette and compact controls. */
