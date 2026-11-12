@@ -5434,3 +5434,938 @@ Object.assign(exerciseBank.Malay, {
     }
   ]
 });
+
+
+/* PM3 Malay grammar practice sets, original questions and bilingual feedback. */
+Object.assign(exerciseBank.Malay, {
+  "Kata Nama": [
+    {
+      "type": "mc",
+      "q": "Yang manakah kata nama bagi manusia?",
+      "options": [
+        "Doktor",
+        "Berjalan",
+        "Bersih",
+        "Cepat"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which word is a noun for a person?",
+        "options": [
+          "Doctor",
+          "Walking",
+          "Clean",
+          "Fast"
+        ]
+      },
+      "explanation": "Doktor names a person who gives medical treatment.",
+      "id": "MAL-PM3-QUIZ-GRM-002-01"
+    },
+    {
+      "type": "tf",
+      "q": "Perkataan “rumah” ialah kata nama.",
+      "expected": true,
+      "translation": {
+        "question": "The word rumah is a noun.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Rumah names a building where people live.",
+      "id": "MAL-PM3-QUIZ-GRM-002-02"
+    },
+    {
+      "type": "drop",
+      "q": "Perkataan “____” ialah nama seekor haiwan.",
+      "expected": "arnab",
+      "options": [
+        "arnab",
+        "berlari"
+      ],
+      "translation": {
+        "question": "The word ____ is the name of an animal.",
+        "options": [
+          "Rabbit",
+          "Running"
+        ]
+      },
+      "explanation": "Arnab is a noun because it names an animal.",
+      "id": "MAL-PM3-QUIZ-GRM-002-03"
+    },
+    {
+      "type": "mc",
+      "q": "Yang manakah kata nama khas?",
+      "options": [
+        "Malaysia",
+        "negara",
+        "bandar",
+        "sungai"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which is a proper noun?",
+        "options": [
+          "Malaysia",
+          "Country",
+          "City",
+          "River"
+        ]
+      },
+      "explanation": "Malaysia is a specific country's name, so it begins with a capital letter.",
+      "id": "MAL-PM3-QUIZ-GRM-002-04"
+    },
+    {
+      "type": "tf",
+      "q": "Kata nama boleh digunakan untuk menamakan tempat.",
+      "expected": true,
+      "translation": {
+        "question": "A noun can be used to name a place.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Kata nama includes names of people, animals, places and things.",
+      "id": "MAL-PM3-QUIZ-GRM-002-05"
+    },
+    {
+      "type": "drop",
+      "q": "“____” ialah kata nama bagi tempat menyimpan buku.",
+      "expected": "rak",
+      "options": [
+        "rak",
+        "tinggi"
+      ],
+      "translation": {
+        "question": "____ is a noun for something that holds books.",
+        "options": [
+          "Shelf",
+          "Tall"
+        ]
+      },
+      "explanation": "Rak is the name of an object used for keeping books.",
+      "id": "MAL-PM3-QUIZ-GRM-002-06"
+    },
+    {
+      "type": "mc",
+      "q": "Dalam ayat “Mira memegang belon”, yang manakah kata nama bagi benda?",
+      "options": [
+        "belon",
+        "memegang",
+        "Mira memegang",
+        "pegang"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "In 'Mira holds a balloon', which word is a noun for an object?",
+        "options": [
+          "Balloon",
+          "Holds",
+          "Mira holds",
+          "Hold"
+        ]
+      },
+      "explanation": "Belon names an object that Mira is holding.",
+      "id": "MAL-PM3-QUIZ-GRM-002-07"
+    },
+    {
+      "type": "tf",
+      "q": "Perkataan “menari” ialah kata nama bagi benda.",
+      "expected": false,
+      "translation": {
+        "question": "The word menari is a noun for an object.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Menari describes an action, so it is a verb.",
+      "id": "MAL-PM3-QUIZ-GRM-002-08"
+    },
+    {
+      "type": "drop",
+      "q": "Nama hari “____” mesti bermula dengan huruf besar.",
+      "expected": "Isnin",
+      "options": [
+        "Isnin",
+        "isnin"
+      ],
+      "translation": {
+        "question": "The day name ____ must begin with a capital letter.",
+        "options": [
+          "Monday (capitalised)",
+          "Monday (lowercase)"
+        ]
+      },
+      "explanation": "Names of days are proper nouns and begin with capital letters.",
+      "id": "MAL-PM3-QUIZ-GRM-002-09"
+    },
+    {
+      "type": "mc",
+      "q": "Yang manakah nama sebuah sungai yang khusus?",
+      "options": [
+        "Sungai Pahang",
+        "sungai",
+        "air",
+        "tebing"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which is the name of a specific river?",
+        "options": [
+          "Pahang River",
+          "River",
+          "Water",
+          "Riverbank"
+        ]
+      },
+      "explanation": "Sungai Pahang is a particular river, so its name uses capital letters.",
+      "id": "MAL-PM3-QUIZ-GRM-002-10"
+    }
+  ],
+  "Kata Kerja": [
+    {
+      "type": "mc",
+      "q": "Dalam ayat “Sara menyiram bunga”, perkataan manakah menunjukkan perbuatan?",
+      "options": [
+        "menyiram",
+        "Sara",
+        "bunga",
+        "dalam"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "In 'Sara waters flowers', which word shows an action?",
+        "options": [
+          "Waters",
+          "Sara",
+          "Flowers",
+          "In"
+        ]
+      },
+      "explanation": "Menyiram is the action of pouring water onto plants.",
+      "id": "MAL-PM3-QUIZ-GRM-003-01"
+    },
+    {
+      "type": "tf",
+      "q": "Perkataan “menyanyi” menunjukkan suatu perbuatan.",
+      "expected": true,
+      "translation": {
+        "question": "The word menyanyi shows an action.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Menyanyi is the action of singing.",
+      "id": "MAL-PM3-QUIZ-GRM-003-02"
+    },
+    {
+      "type": "drop",
+      "q": "Amir ____ bola ke arah rakannya.",
+      "expected": "menendang",
+      "options": [
+        "menendang",
+        "melukis"
+      ],
+      "translation": {
+        "question": "Amir ____ the ball towards his friend.",
+        "options": [
+          "Kicks",
+          "Draws"
+        ]
+      },
+      "explanation": "Menendang describes using a foot to kick a ball.",
+      "id": "MAL-PM3-QUIZ-GRM-003-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah kata kerja yang sesuai untuk ayat “Nina ____ pintu”?",
+      "options": [
+        "menutup",
+        "merah",
+        "bulat",
+        "cantik"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which verb fits 'Nina ____ the door'?",
+        "options": [
+          "Closes",
+          "Red",
+          "Round",
+          "Beautiful"
+        ]
+      },
+      "explanation": "Menutup is the action of closing something.",
+      "id": "MAL-PM3-QUIZ-GRM-003-04"
+    },
+    {
+      "type": "tf",
+      "q": "“Tidur” boleh digunakan sebagai kata kerja.",
+      "expected": true,
+      "translation": {
+        "question": "Tidur can be used as a verb.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Tidur describes the action or state of sleeping.",
+      "id": "MAL-PM3-QUIZ-GRM-003-05"
+    },
+    {
+      "type": "drop",
+      "q": "Abang ____ gigi sebelum tidur.",
+      "expected": "menggosok",
+      "options": [
+        "menggosok",
+        "memotong"
+      ],
+      "translation": {
+        "question": "Older brother ____ his teeth before sleeping.",
+        "options": [
+          "Brushes",
+          "Cuts"
+        ]
+      },
+      "explanation": "Menggosok gigi means brushing teeth.",
+      "id": "MAL-PM3-QUIZ-GRM-003-06"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah yang dilakukan oleh seseorang yang “berenang”?",
+      "options": [
+        "Bergerak di dalam air",
+        "Berjalan di jalan raya",
+        "Menulis pada kertas",
+        "Duduk di atas kerusi"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "What does a person who berenang do?",
+        "options": [
+          "Moves through water",
+          "Walks on a road",
+          "Writes on paper",
+          "Sits on a chair"
+        ]
+      },
+      "explanation": "Berenang refers to moving through water by swimming.",
+      "id": "MAL-PM3-QUIZ-GRM-003-07"
+    },
+    {
+      "type": "tf",
+      "q": "“Besar” ialah kata kerja yang menunjukkan perbuatan.",
+      "expected": false,
+      "translation": {
+        "question": "Besar is an action verb.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Besar describes size; it does not name an action.",
+      "id": "MAL-PM3-QUIZ-GRM-003-08"
+    },
+    {
+      "type": "drop",
+      "q": "Ibu ____ pakaian yang sudah kotor.",
+      "expected": "membasuh",
+      "options": [
+        "membasuh",
+        "membaca"
+      ],
+      "translation": {
+        "question": "Mother ____ the dirty clothes.",
+        "options": [
+          "Washes",
+          "Reads"
+        ]
+      },
+      "explanation": "Membasuh means cleaning clothes with water.",
+      "id": "MAL-PM3-QUIZ-GRM-003-09"
+    },
+    {
+      "type": "mc",
+      "q": "Ayat manakah mempunyai kata kerja “melompat”?",
+      "options": [
+        "Kelinci melompat tinggi.",
+        "Kelinci berbulu putih.",
+        "Kelinci sangat kecil.",
+        "Kelinci di tepi pagar."
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which sentence contains the verb melompat?",
+        "options": [
+          "The rabbit jumps high.",
+          "The rabbit has white fur.",
+          "The rabbit is very small.",
+          "The rabbit is by the fence."
+        ]
+      },
+      "explanation": "Melompat is a verb because it describes jumping.",
+      "id": "MAL-PM3-QUIZ-GRM-003-10"
+    }
+  ],
+  "Kata Adjektif": [
+    {
+      "type": "mc",
+      "q": "Perkataan manakah sesuai untuk menerangkan saiz gajah?",
+      "options": [
+        "besar",
+        "makan",
+        "berjalan",
+        "kebun"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which word describes an elephant's size?",
+        "options": [
+          "Big",
+          "Eat",
+          "Walk",
+          "Garden"
+        ]
+      },
+      "explanation": "Besar is an adjective that tells us about size.",
+      "id": "MAL-PM3-QUIZ-GRM-004-01"
+    },
+    {
+      "type": "tf",
+      "q": "“Lembut” boleh digunakan untuk menerangkan bantal.",
+      "expected": true,
+      "translation": {
+        "question": "Lembut can describe a pillow.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Lembut describes something that feels soft.",
+      "id": "MAL-PM3-QUIZ-GRM-004-02"
+    },
+    {
+      "type": "drop",
+      "q": "Air batu terasa ____ apabila disentuh.",
+      "expected": "sejuk",
+      "options": [
+        "sejuk",
+        "panas"
+      ],
+      "translation": {
+        "question": "Ice feels ____ when touched.",
+        "options": [
+          "Cold",
+          "Hot"
+        ]
+      },
+      "explanation": "Sejuk describes a low temperature.",
+      "id": "MAL-PM3-QUIZ-GRM-004-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah kata adjektif bagi bunyi loceng yang kuat?",
+      "options": [
+        "nyaring",
+        "perlahan",
+        "pahit",
+        "kasar"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which adjective can describe the loud ringing of a bell?",
+        "options": [
+          "Loud and clear",
+          "Slow",
+          "Bitter",
+          "Rough"
+        ]
+      },
+      "explanation": "Nyaring describes a clear, high-pitched ringing sound.",
+      "id": "MAL-PM3-QUIZ-GRM-004-04"
+    },
+    {
+      "type": "tf",
+      "q": "Kata adjektif boleh menerangkan bentuk sesuatu benda.",
+      "expected": true,
+      "translation": {
+        "question": "Adjectives can describe an object's shape.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Words such as lonjong describe shape.",
+      "id": "MAL-PM3-QUIZ-GRM-004-05"
+    },
+    {
+      "type": "drop",
+      "q": "Langit pada waktu malam kelihatan ____.",
+      "expected": "gelap",
+      "options": [
+        "gelap",
+        "terang"
+      ],
+      "translation": {
+        "question": "The sky at night looks ____.",
+        "options": [
+          "Dark",
+          "Bright"
+        ]
+      },
+      "explanation": "Gelap describes a place with very little light.",
+      "id": "MAL-PM3-QUIZ-GRM-004-06"
+    },
+    {
+      "type": "mc",
+      "q": "Yang manakah kata adjektif bagi rasa gula?",
+      "options": [
+        "manis",
+        "masam",
+        "masin",
+        "pedas"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which adjective describes the taste of sugar?",
+        "options": [
+          "Sweet",
+          "Sour",
+          "Salty",
+          "Spicy"
+        ]
+      },
+      "explanation": "Manis describes the sweet taste of sugar.",
+      "id": "MAL-PM3-QUIZ-GRM-004-07"
+    },
+    {
+      "type": "tf",
+      "q": "“Laju” ialah kata nama bagi haiwan.",
+      "expected": false,
+      "translation": {
+        "question": "Laju is a noun for an animal.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Laju describes fast movement, so it is an adjective.",
+      "id": "MAL-PM3-QUIZ-GRM-004-08"
+    },
+    {
+      "type": "drop",
+      "q": "Bulu arnab itu sangat ____.",
+      "expected": "halus",
+      "options": [
+        "halus",
+        "keras"
+      ],
+      "translation": {
+        "question": "The rabbit's fur is very ____.",
+        "options": [
+          "Fine and soft",
+          "Hard"
+        ]
+      },
+      "explanation": "Halus is used to describe fine, soft fur.",
+      "id": "MAL-PM3-QUIZ-GRM-004-09"
+    },
+    {
+      "type": "mc",
+      "q": "Perkataan manakah sesuai untuk menerangkan jalan yang tidak rata?",
+      "options": [
+        "berlubang",
+        "ceria",
+        "manis",
+        "sunyi"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which word describes a road with holes?",
+        "options": [
+          "Full of holes",
+          "Cheerful",
+          "Sweet",
+          "Quiet"
+        ]
+      },
+      "explanation": "Berlubang describes a surface that has holes.",
+      "id": "MAL-PM3-QUIZ-GRM-004-10"
+    }
+  ],
+  "Kata Ganti Nama": [
+    {
+      "type": "mc",
+      "q": "Pilih kata ganti nama untuk bercakap dengan seorang kawan.",
+      "options": [
+        "kamu",
+        "mereka",
+        "dia",
+        "kami"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Choose the pronoun for speaking to one friend.",
+        "options": [
+          "You",
+          "They",
+          "He or she",
+          "We (excluding you)"
+        ]
+      },
+      "explanation": "Kamu refers to the person being spoken to.",
+      "id": "MAL-PM3-QUIZ-GRM-005-01"
+    },
+    {
+      "type": "tf",
+      "q": "“Dia” boleh digunakan untuk merujuk kepada seorang lelaki atau perempuan.",
+      "expected": true,
+      "translation": {
+        "question": "Dia can refer to a man or a woman.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Dia is a third-person singular pronoun.",
+      "id": "MAL-PM3-QUIZ-GRM-005-02"
+    },
+    {
+      "type": "drop",
+      "q": "“____ suka membaca,” kata Lina tentang dirinya.",
+      "expected": "Saya",
+      "options": [
+        "Saya",
+        "Dia"
+      ],
+      "translation": {
+        "question": "'____ like reading,' Lina says about herself.",
+        "options": [
+          "I",
+          "He or she"
+        ]
+      },
+      "explanation": "Saya is used when a person talks about themselves.",
+      "id": "MAL-PM3-QUIZ-GRM-005-03"
+    },
+    {
+      "type": "mc",
+      "q": "Dalam ayat “Farid sedang makan. ____ lapar”, kata ganti nama yang sesuai ialah?",
+      "options": [
+        "Dia",
+        "Kita",
+        "Mereka",
+        "Awak"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "In 'Farid is eating. ____ is hungry', which pronoun fits?",
+        "options": [
+          "He",
+          "We (including you)",
+          "They",
+          "You"
+        ]
+      },
+      "explanation": "Dia refers back to Farid, one person.",
+      "id": "MAL-PM3-QUIZ-GRM-005-04"
+    },
+    {
+      "type": "tf",
+      "q": "“Mereka” digunakan untuk merujuk kepada lebih daripada seorang.",
+      "expected": true,
+      "translation": {
+        "question": "Mereka refers to more than one person.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Mereka is used for a group of people.",
+      "id": "MAL-PM3-QUIZ-GRM-005-05"
+    },
+    {
+      "type": "drop",
+      "q": "Ali dan Bakar sedang bermain. ____ gembira.",
+      "expected": "Mereka",
+      "options": [
+        "Mereka",
+        "Saya"
+      ],
+      "translation": {
+        "question": "Ali and Bakar are playing. ____ are happy.",
+        "options": [
+          "They",
+          "I"
+        ]
+      },
+      "explanation": "Mereka refers to Ali and Bakar together.",
+      "id": "MAL-PM3-QUIZ-GRM-005-06"
+    },
+    {
+      "type": "mc",
+      "q": "Manakah kata ganti nama yang merujuk kepada orang yang bercakap?",
+      "options": [
+        "aku",
+        "dia",
+        "kamu",
+        "mereka"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which pronoun refers to the speaker?",
+        "options": [
+          "I",
+          "He or she",
+          "You",
+          "They"
+        ]
+      },
+      "explanation": "Aku is a first-person pronoun, usually used informally.",
+      "id": "MAL-PM3-QUIZ-GRM-005-07"
+    },
+    {
+      "type": "tf",
+      "q": "“Awak” ialah kata ganti nama untuk orang yang sedang diajak bercakap.",
+      "expected": true,
+      "translation": {
+        "question": "Awak is a pronoun for the person being spoken to.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Awak is used to address another person.",
+      "id": "MAL-PM3-QUIZ-GRM-005-08"
+    },
+    {
+      "type": "drop",
+      "q": "“____ hendak ke taman?” tanya Aina kepada kawannya.",
+      "expected": "Awak",
+      "options": [
+        "Awak",
+        "Dia"
+      ],
+      "translation": {
+        "question": "'____ want to go to the park?' Aina asks her friend.",
+        "options": [
+          "You",
+          "He or she"
+        ]
+      },
+      "explanation": "Awak is suitable when asking a friend directly.",
+      "id": "MAL-PM3-QUIZ-GRM-005-09"
+    },
+    {
+      "type": "mc",
+      "q": "Ali dan saya pergi bersama, tetapi kamu tidak ikut. Kata ganti nama yang sesuai bagi kami ialah?",
+      "options": [
+        "Kami",
+        "Kita",
+        "Mereka",
+        "Dia"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Ali and I go together, but you do not join us. Which pronoun fits?",
+        "options": [
+          "We (excluding you)",
+          "We (including you)",
+          "They",
+          "He or she"
+        ]
+      },
+      "explanation": "Kami refers to the speaker and others but not the person listening.",
+      "id": "MAL-PM3-QUIZ-GRM-005-10"
+    }
+  ],
+  "Ayat Mudah": [
+    {
+      "type": "mc",
+      "q": "Ayat manakah bermula dengan huruf besar dan berakhir dengan noktah?",
+      "options": [
+        "Rina bermain bola.",
+        "rina bermain bola.",
+        "Rina bermain bola",
+        "rina bermain bola"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which sentence starts with a capital letter and ends with a full stop?",
+        "options": [
+          "Rina plays ball.",
+          "rina plays ball.",
+          "Rina plays ball (no full stop)",
+          "rina plays ball (no full stop)"
+        ]
+      },
+      "explanation": "A complete statement begins with a capital letter and ends with a full stop.",
+      "id": "MAL-PM3-QUIZ-GRM-006-01"
+    },
+    {
+      "type": "tf",
+      "q": "Ayat “Buku itu baharu.” ialah ayat penyata.",
+      "expected": true,
+      "translation": {
+        "question": "'That book is new.' is a statement.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Ayat penyata tells us something rather than asking a question.",
+      "id": "MAL-PM3-QUIZ-GRM-006-02"
+    },
+    {
+      "type": "drop",
+      "q": "“Di manakah ____ saya?” ialah ayat tanya yang lengkap.",
+      "expected": "kasut",
+      "options": [
+        "kasut",
+        "merah"
+      ],
+      "translation": {
+        "question": "'Where are my ____?' completes the question.",
+        "options": [
+          "Shoes",
+          "Red"
+        ]
+      },
+      "explanation": "Kasut is a noun that completes the question about where an item is.",
+      "id": "MAL-PM3-QUIZ-GRM-006-03"
+    },
+    {
+      "type": "mc",
+      "q": "Pilih ayat yang sesuai untuk meminta seseorang duduk.",
+      "options": [
+        "Sila duduk.",
+        "Siapa duduk?",
+        "Saya duduk.",
+        "Dia sedang duduk."
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which sentence politely asks someone to sit?",
+        "options": [
+          "Please sit.",
+          "Who is sitting?",
+          "I sit.",
+          "He or she is sitting."
+        ]
+      },
+      "explanation": "Sila duduk is a polite instruction or request.",
+      "id": "MAL-PM3-QUIZ-GRM-006-04"
+    },
+    {
+      "type": "tf",
+      "q": "Ayat tanya boleh dimulakan dengan perkataan “mengapa”.",
+      "expected": true,
+      "translation": {
+        "question": "A question can start with mengapa (why).",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Mengapa is used to ask for a reason.",
+      "id": "MAL-PM3-QUIZ-GRM-006-05"
+    },
+    {
+      "type": "drop",
+      "q": "“____ kamu menangis?” ialah soalan tentang sebab.",
+      "expected": "Mengapa",
+      "options": [
+        "Mengapa",
+        "Di mana"
+      ],
+      "translation": {
+        "question": "'____ are you crying?' asks for a reason.",
+        "options": [
+          "Why",
+          "Where"
+        ]
+      },
+      "explanation": "Mengapa asks about the reason for something.",
+      "id": "MAL-PM3-QUIZ-GRM-006-06"
+    },
+    {
+      "type": "mc",
+      "q": "Ayat manakah menunjukkan rasa terkejut?",
+      "options": [
+        "Wah, besarnya hadiah itu!",
+        "Saya minum teh.",
+        "Dia membawa buku.",
+        "Bas itu berwarna biru."
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which sentence shows surprise?",
+        "options": [
+          "Wow, that present is big!",
+          "I drink tea.",
+          "He or she carries a book.",
+          "The bus is blue."
+        ]
+      },
+      "explanation": "Wah and an exclamation mark can show surprise.",
+      "id": "MAL-PM3-QUIZ-GRM-006-07"
+    },
+    {
+      "type": "tf",
+      "q": "Ayat “Tolong tutup pintu.” ialah ayat tanya.",
+      "expected": false,
+      "translation": {
+        "question": "'Please close the door.' is a question.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "The sentence is a polite request, not a question.",
+      "id": "MAL-PM3-QUIZ-GRM-006-08"
+    },
+    {
+      "type": "drop",
+      "q": "“Saya pergi ke sekolah ____ bas.”",
+      "expected": "menaiki",
+      "options": [
+        "menaiki",
+        "makan"
+      ],
+      "translation": {
+        "question": "'I go to school by ____ a bus.'",
+        "options": [
+          "Riding",
+          "Eating"
+        ]
+      },
+      "explanation": "Menaiki is used when travelling in a vehicle.",
+      "id": "MAL-PM3-QUIZ-GRM-006-09"
+    },
+    {
+      "type": "mc",
+      "q": "Ayat manakah mempunyai susunan kata yang betul?",
+      "options": [
+        "Adik minum susu.",
+        "Susu adik sedang minum.",
+        "Minum susu adik sedang.",
+        "Adik susu minum sedang."
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which sentence has the correct word order?",
+        "options": [
+          "Younger sibling drinks milk.",
+          "Incorrect word order",
+          "Incorrect word order",
+          "Incorrect word order"
+        ]
+      },
+      "explanation": "Adik minum susu follows a simple subject–verb–object order.",
+      "id": "MAL-PM3-QUIZ-GRM-006-10"
+    }
+  ]
+});
