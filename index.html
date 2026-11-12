@@ -1210,18 +1210,16 @@ body:not(.auth-locked) #quiz .qr-vocab-gloss{
  max-width:100%;
  padding:.15em .65em;
 }
-body:not(.auth-locked) #quiz :is(.qr-vocab-hover,.qr-vocab-gloss):hover{
- background:color-mix(in srgb,var(--qr-focus) 60%,transparent);
-}
 body:not(.auth-locked) #quiz :is(.qr-vocab-hover,.qr-vocab-gloss)[data-en]:hover::after{
  content:attr(data-en);
- position:absolute;
- top:calc(100% + 5px);left:0;
- z-index:10;
+ position:fixed;
+ left:var(--qr-vocab-tip-x,0px);
+ top:var(--qr-vocab-tip-y,0px);
+ z-index:1000;
  width:max-content;max-width:min(360px,75vw);
  padding:var(--qr-flat-pill-padding);
  border-radius:var(--qr-button-radius);
- background:color-mix(in srgb,var(--qr-focus) 60%,var(--qr-background));
+ background:color-mix(in srgb,var(--qr-focus) 30%,transparent);
  color:var(--qr-on-focus);
  font:700 var(--qr-font-body) var(--qr-font);
  line-height:1.4;
@@ -1577,6 +1575,18 @@ function render(){if(activeQuizForm==='formula-entry'){qrRenderFormula();return}
  $('questionTitle').textContent=textChoices?textQuestion.slice(0,textChoices.index).trim():textQuestion;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(q.type==='drop')$('questionTitle').innerHTML=qrDropQuestion(q);if(answerSnapshots[index]){a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;showAnswerTranslations(q);$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('.helper').textContent=bookmarkView?'Press Resume to return to your next unanswered question.':'Answer submitted. Press Next to continue.';updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){const labels=subject==='Korean'?['맞아요','틀려요']:subject==='Malay'?['Betul','Salah']:['True','False'];a.innerHTML=labels.map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+v+'</span></button>').join('')}else if(q.type==='drop'){qrDropPaint(q)}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='drop'?'Drag an answer into the empty box. You can also tap an answer, then tap the box.':q.type==='text'?(textChoices?'Choose from: '+textChoices[1].trim()+'. ':'')+'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
 function selectAnswer(i){if(answered)return;selected=i;[...$('answers').querySelectorAll('.answer')].forEach((b,j)=>b.classList.toggle('selected',j===i));submitAnswer()}
 function checkMatches(){if(!answered&&questions[index].pairs.every((p,i)=>$('match'+i).value))submitAnswer()}
+/* Position Malay vocabulary English tooltips beside the pointer, not beneath the choice. */
+function qrPositionVocabGloss(event){
+ const target=event.target.closest?.('#quiz .qr-vocab-hover[data-en],#quiz .qr-vocab-gloss[data-en]');
+ if(!target||!answered||subject!=='Malay'||selectedLevel!=='PM1'||activeExerciseTopic!=='Kosa Kata')return;
+ const maxWidth=Math.min(360,window.innerWidth*.75);
+ const x=Math.max(8,Math.min(event.clientX+14,window.innerWidth-maxWidth-12));
+ const y=Math.max(8,Math.min(event.clientY+16,window.innerHeight-100));
+ target.style.setProperty('--qr-vocab-tip-x',x+'px');
+ target.style.setProperty('--qr-vocab-tip-y',y+'px');
+}
+$('quiz').addEventListener('pointerover',qrPositionVocabGloss);
+$('quiz').addEventListener('pointermove',qrPositionVocabGloss);
 function showAnswerTranslations(q){
  const isMalayVocab=subject==='Malay'&&selectedLevel==='PM1'&&activeExerciseTopic==='Kosa Kata';
  if(isMalayVocab){
