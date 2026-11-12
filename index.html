@@ -1694,7 +1694,7 @@ function submitAnswer(){
   let symbol=document.createElement('span');symbol.className='feedback-symbol';symbol.textContent=correct?'✓':'✕';
   let explanation=document.createElement('span');explanation.className='feedback-explanation';
   const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Incorrect. ';
-  explanation.append(heading,document.createTextNode(q.explanation||''));
+  explanation.append(heading,document.createTextNode((correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||''));
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
