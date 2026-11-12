@@ -4493,7 +4493,7 @@ Object.assign(exerciseBank, {
             "That car is blue."
           ]
         },
-        "explanation": "Di manakah beg saya? asks where the bag is.",
+        "explanation": "Di manakah means where. The question mark shows this is a question.",
         "id": "MAL-PM1-QUIZ-GRM-001-10"
       }
     ]
