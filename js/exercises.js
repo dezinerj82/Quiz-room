@@ -5458,7 +5458,7 @@ Object.assign(exerciseBank.Malay, {
           "Fast"
         ]
       },
-      "explanation": "Doktor names a person.",
+      "explanation": "A doctor helps people when they are sick.",
       "id": "MAL-PM3-QUIZ-GRM-002-01"
     },
     {
@@ -5472,7 +5472,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Rumah is the name of a place to live.",
+      "explanation": "A house is a place where people live.",
       "id": "MAL-PM3-QUIZ-GRM-002-02"
     },
     {
@@ -5490,7 +5490,7 @@ Object.assign(exerciseBank.Malay, {
           "Running"
         ]
       },
-      "explanation": "Arnab names an animal.",
+      "explanation": "A rabbit is an animal. Running is an action.",
       "id": "MAL-PM3-QUIZ-GRM-002-03"
     },
     {
@@ -5512,7 +5512,7 @@ Object.assign(exerciseBank.Malay, {
           "River"
         ]
       },
-      "explanation": "Malaysia is a special name, so it starts with a capital letter.",
+      "explanation": "Malaysia is the name of one country, so it begins with a capital letter.",
       "id": "MAL-PM3-QUIZ-GRM-002-04"
     },
     {
@@ -5526,7 +5526,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Nouns name people, places, animals and things.",
+      "explanation": "A school is a place, and nouns can name places.",
       "id": "MAL-PM3-QUIZ-GRM-002-05"
     },
     {
@@ -5544,7 +5544,7 @@ Object.assign(exerciseBank.Malay, {
           "Tall"
         ]
       },
-      "explanation": "Rak is the name of a thing that holds books.",
+      "explanation": "A shelf holds books. 'Tall' only describes its height.",
       "id": "MAL-PM3-QUIZ-GRM-002-06"
     },
     {
@@ -5566,7 +5566,7 @@ Object.assign(exerciseBank.Malay, {
           "Hold"
         ]
       },
-      "explanation": "Belon is the name of an object.",
+      "explanation": "A balloon is the thing Mira is holding.",
       "id": "MAL-PM3-QUIZ-GRM-002-07"
     },
     {
@@ -5580,7 +5580,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Menari is something we do, not the name of a thing.",
+      "explanation": "Dancing is an action, not the name of a thing.",
       "id": "MAL-PM3-QUIZ-GRM-002-08"
     },
     {
@@ -5598,7 +5598,7 @@ Object.assign(exerciseBank.Malay, {
           "Monday (lowercase)"
         ]
       },
-      "explanation": "Days like Isnin begin with capital letters.",
+      "explanation": "Day names like Isnin begin with a capital letter.",
       "id": "MAL-PM3-QUIZ-GRM-002-09"
     },
     {
@@ -5620,7 +5620,7 @@ Object.assign(exerciseBank.Malay, {
           "Riverbank"
         ]
       },
-      "explanation": "Sungai Pahang is the name of one river.",
+      "explanation": "Sungai Pahang is one particular river, not just any river.",
       "id": "MAL-PM3-QUIZ-GRM-002-10"
     }
   ],
