@@ -5443,186 +5443,206 @@ Object.assign(exerciseBank.Malay, {
       "type": "mc",
       "q": "Yang manakah kata nama bagi manusia?",
       "options": [
-        "Doktor",
-        "Berjalan",
-        "Bersih",
-        "Cepat"
+            "Doktor",
+            "Berjalan",
+            "Bersih",
+            "Cepat"
       ],
       "correct": 0,
       "translation": {
-        "question": "Which word is a noun for a person?",
-        "options": [
-          "Doctor",
-          "Walking",
-          "Clean",
-          "Fast"
-        ]
+            "question": "Which word is a noun for a person?",
+            "options": [
+                  "Doctor",
+                  "Walking",
+                  "Clean",
+                  "Fast"
+            ]
       },
       "explanation": "A doctor helps people when they are sick.",
-      "id": "MAL-PM3-QUIZ-GRM-002-01"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-01",
+      "explanationCorrect": "A doctor is someone who helps sick people.",
+      "explanationIncorrect": "The question asks for a person. A doctor is a person; the other choices aren't."
+},
     {
       "type": "tf",
       "q": "Perkataan “rumah” ialah kata nama.",
       "expected": true,
       "translation": {
-        "question": "The word rumah is a noun.",
-        "options": [
-          "True",
-          "False"
-        ]
+            "question": "The word rumah is a noun.",
+            "options": [
+                  "True",
+                  "False"
+            ]
       },
       "explanation": "A house is a place where people live.",
-      "id": "MAL-PM3-QUIZ-GRM-002-02"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-02",
+      "explanationCorrect": "Rumah names a place where people live.",
+      "explanationIncorrect": "Rumah is a house, so it is a noun, not an action."
+},
     {
       "type": "drop",
       "q": "Perkataan “____” ialah nama seekor haiwan.",
       "expected": "arnab",
       "options": [
-        "arnab",
-        "berlari"
+            "arnab",
+            "berlari"
       ],
       "translation": {
-        "question": "The word ____ is the name of an animal.",
-        "options": [
-          "Rabbit",
-          "Running"
-        ]
+            "question": "The word ____ is the name of an animal.",
+            "options": [
+                  "Rabbit",
+                  "Running"
+            ]
       },
       "explanation": "A rabbit is an animal. Running is an action.",
-      "id": "MAL-PM3-QUIZ-GRM-002-03"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-03",
+      "explanationCorrect": "A rabbit is an animal.",
+      "explanationIncorrect": "Berlari means running. That's an action, not an animal."
+},
     {
       "type": "mc",
       "q": "Yang manakah kata nama khas?",
       "options": [
-        "Malaysia",
-        "negara",
-        "bandar",
-        "sungai"
+            "Malaysia",
+            "negara",
+            "bandar",
+            "sungai"
       ],
       "correct": 0,
       "translation": {
-        "question": "Which is a proper noun?",
-        "options": [
-          "Malaysia",
-          "Country",
-          "City",
-          "River"
-        ]
+            "question": "Which is a proper noun?",
+            "options": [
+                  "Malaysia",
+                  "Country",
+                  "City",
+                  "River"
+            ]
       },
       "explanation": "Malaysia is the name of one country, so it begins with a capital letter.",
-      "id": "MAL-PM3-QUIZ-GRM-002-04"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-04",
+      "explanationCorrect": "Malaysia is the name of one country.",
+      "explanationIncorrect": "A country has its own name. Malaysia is a name, while negara just means country."
+},
     {
       "type": "tf",
       "q": "Kata nama boleh digunakan untuk menamakan tempat.",
       "expected": true,
       "translation": {
-        "question": "A noun can be used to name a place.",
-        "options": [
-          "True",
-          "False"
-        ]
+            "question": "A noun can be used to name a place.",
+            "options": [
+                  "True",
+                  "False"
+            ]
       },
       "explanation": "A school is a place, and nouns can name places.",
-      "id": "MAL-PM3-QUIZ-GRM-002-05"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-05",
+      "explanationCorrect": "Places have names too, such as school or park.",
+      "explanationIncorrect": "A noun can name a place as well as a person or thing."
+},
     {
       "type": "drop",
       "q": "“____” ialah kata nama bagi tempat menyimpan buku.",
       "expected": "rak",
       "options": [
-        "rak",
-        "tinggi"
+            "rak",
+            "tinggi"
       ],
       "translation": {
-        "question": "____ is a noun for something that holds books.",
-        "options": [
-          "Shelf",
-          "Tall"
-        ]
+            "question": "____ is a noun for something that holds books.",
+            "options": [
+                  "Shelf",
+                  "Tall"
+            ]
       },
       "explanation": "A shelf holds books. 'Tall' only describes its height.",
-      "id": "MAL-PM3-QUIZ-GRM-002-06"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-06",
+      "explanationCorrect": "A shelf is something we use to keep books.",
+      "explanationIncorrect": "Tinggi means tall. It describes something; it doesn't name it."
+},
     {
       "type": "mc",
       "q": "Dalam ayat “Mira memegang belon”, yang manakah kata nama bagi benda?",
       "options": [
-        "belon",
-        "memegang",
-        "Mira memegang",
-        "pegang"
+            "belon",
+            "memegang",
+            "Mira memegang",
+            "pegang"
       ],
       "correct": 0,
       "translation": {
-        "question": "In 'Mira holds a balloon', which word is a noun for an object?",
-        "options": [
-          "Balloon",
-          "Holds",
-          "Mira holds",
-          "Hold"
-        ]
+            "question": "In 'Mira holds a balloon', which word is a noun for an object?",
+            "options": [
+                  "Balloon",
+                  "Holds",
+                  "Mira holds",
+                  "Hold"
+            ]
       },
       "explanation": "A balloon is the thing Mira is holding.",
-      "id": "MAL-PM3-QUIZ-GRM-002-07"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-07",
+      "explanationCorrect": "A balloon is the thing Mira is holding.",
+      "explanationIncorrect": "The question asks for a thing. Belon is the balloon, while memegang means holding."
+},
     {
       "type": "tf",
       "q": "Dalam ayat “Adik menari”, perkataan “menari” ialah kata nama.",
       "expected": false,
       "translation": {
-        "question": "In 'Younger sibling dances', menari is a noun.",
-        "options": [
-          "True",
-          "False"
-        ]
+            "question": "In 'Younger sibling dances', menari is a noun.",
+            "options": [
+                  "True",
+                  "False"
+            ]
       },
       "explanation": "Dancing is an action, not the name of a thing.",
-      "id": "MAL-PM3-QUIZ-GRM-002-08"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-08",
+      "explanationCorrect": "Menari means dancing. Dancing is an action.",
+      "explanationIncorrect": "Menari means dancing, so it is an action, not a noun."
+},
     {
       "type": "drop",
       "q": "Nama hari “____” mesti bermula dengan huruf besar.",
       "expected": "Isnin",
       "options": [
-        "Isnin",
-        "isnin"
+            "Isnin",
+            "isnin"
       ],
       "translation": {
-        "question": "The day name ____ must begin with a capital letter.",
-        "options": [
-          "Monday (capitalised)",
-          "Monday (lowercase)"
-        ]
+            "question": "The day name ____ must begin with a capital letter.",
+            "options": [
+                  "Monday (capitalised)",
+                  "Monday (lowercase)"
+            ]
       },
       "explanation": "Day names like Isnin begin with a capital letter.",
-      "id": "MAL-PM3-QUIZ-GRM-002-09"
-    },
+      "id": "MAL-PM3-QUIZ-GRM-002-09",
+      "explanationCorrect": "Isnin is Monday, so its first letter must be a capital.",
+      "explanationIncorrect": "Day names begin with capital letters. Write Isnin, not isnin."
+},
     {
       "type": "mc",
       "q": "Yang manakah nama sebuah sungai yang khusus?",
       "options": [
-        "Sungai Pahang",
-        "sungai",
-        "air",
-        "tebing"
+            "Sungai Pahang",
+            "sungai",
+            "air",
+            "tebing"
       ],
       "correct": 0,
       "translation": {
-        "question": "Which is the name of a specific river?",
-        "options": [
-          "Pahang River",
-          "River",
-          "Water",
-          "Riverbank"
-        ]
+            "question": "Which is the name of a specific river?",
+            "options": [
+                  "Pahang River",
+                  "River",
+                  "Water",
+                  "Riverbank"
+            ]
       },
       "explanation": "Sungai Pahang is one particular river, not just any river.",
-      "id": "MAL-PM3-QUIZ-GRM-002-10"
-    }
+      "id": "MAL-PM3-QUIZ-GRM-002-10",
+      "explanationCorrect": "Sungai Pahang is the name of one particular river.",
+      "explanationIncorrect": "Sungai only means river. Sungai Pahang tells us exactly which river."
+}
   ],
   "Kata Kerja": [
     {
