@@ -4065,7 +4065,7 @@ Object.assign(exerciseBank, {
             "The weather is nice."
           ]
         },
-        "explanation": "어디에 가요? asks where someone is going.",
+        "explanation": "어디에 가요? is a question about someone's destination.",
         "id": "KOR-PM2-QUIZ-GRM-001-07"
       },
       {
@@ -4746,7 +4746,7 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "mc",
-      "q": "Apakah makanan yang biasanya dimakan pada waktu pagi?",
+      "q": "Apakah nama waktu makan pada waktu pagi?",
       "options": [
         "Sarapan",
         "Makan malam",
@@ -4755,7 +4755,7 @@ Object.assign(exerciseBank.Malay, {
       ],
       "correct": 0,
       "translation": {
-        "question": "What is a meal usually eaten in the morning?",
+        "question": "What is the morning meal called?",
         "options": [
           "Breakfast",
           "Dinner",
@@ -5022,20 +5022,20 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "drop",
-      "q": "Lebah mengumpul madu daripada ____.",
-      "expected": "bunga",
+      "q": "Lebah mengumpul ____ daripada bunga.",
+      "expected": "nektar",
       "options": [
-        "bunga",
-        "batu"
+        "nektar",
+        "madu"
       ],
       "translation": {
-        "question": "Bees collect nectar from ____.",
+        "question": "Bees collect ____ from flowers.",
         "options": [
-          "Flowers",
-          "Rocks"
+          "Nectar",
+          "Honey"
         ]
       },
-      "explanation": "Bees visit flowers to collect nectar.",
+      "explanation": "Bees collect nectar from flowers and use it to make honey.",
       "id": "MAL-PM3-QUIZ-VOC-004-09"
     },
     {
@@ -6161,7 +6161,7 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "mc",
-      "q": "Ali dan saya pergi bersama, tetapi kamu tidak ikut. Kata ganti nama yang sesuai bagi kami ialah?",
+      "q": "Ali dan saya pergi bersama, tetapi kamu tidak ikut. Perkataan manakah menggantikan “Ali dan saya”?",
       "options": [
         "Kami",
         "Kita",
@@ -6170,7 +6170,7 @@ Object.assign(exerciseBank.Malay, {
       ],
       "correct": 0,
       "translation": {
-        "question": "Ali and I go together, but you do not join us. Which pronoun fits?",
+        "question": "Ali and I go together, but you do not join us. Which pronoun replaces 'Ali and I'?",
         "options": [
           "We (excluding you)",
           "We (including you)",
