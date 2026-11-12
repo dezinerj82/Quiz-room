@@ -4145,7 +4145,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "",
+        "explanation": "Cats are animals that people often keep as pets.",
         "id": "MAL-PM1-QUIZ-VOC-001-01"
       },
       {
@@ -4159,7 +4159,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "Bananas grow on plants and are eaten as fruit.",
         "id": "MAL-PM1-QUIZ-VOC-001-02"
       },
       {
@@ -4177,7 +4177,7 @@ Object.assign(exerciseBank, {
             "Shoes"
           ]
         },
-        "explanation": "",
+        "explanation": "A cup can hold water, milk or other drinks.",
         "id": "MAL-PM1-QUIZ-VOC-001-03"
       },
       {
@@ -4199,7 +4199,7 @@ Object.assign(exerciseBank, {
             "Park"
           ]
         },
-        "explanation": "",
+        "explanation": "Yellow is a colour, just like red and blue.",
         "id": "MAL-PM1-QUIZ-VOC-001-04"
       },
       {
@@ -4213,7 +4213,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "Chickens are birds, so they are animals rather than plants.",
         "id": "MAL-PM1-QUIZ-VOC-001-05"
       },
       {
@@ -4231,7 +4231,7 @@ Object.assign(exerciseBank, {
             "Spoon"
           ]
         },
-        "explanation": "",
+        "explanation": "A pencil can be used for writing or drawing on paper.",
         "id": "MAL-PM1-QUIZ-VOC-001-06"
       },
       {
@@ -4253,7 +4253,7 @@ Object.assign(exerciseBank, {
             "Basket"
           ]
         },
-        "explanation": "",
+        "explanation": "The nose helps us smell and breathe.",
         "id": "MAL-PM1-QUIZ-VOC-001-07"
       },
       {
@@ -4267,7 +4267,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "When counting, one comes before two.",
         "id": "MAL-PM1-QUIZ-VOC-001-08"
       },
       {
@@ -4285,7 +4285,7 @@ Object.assign(exerciseBank, {
             "Bicycle"
           ]
         },
-        "explanation": "",
+        "explanation": "A bed is a piece of furniture used for sleeping.",
         "id": "MAL-PM1-QUIZ-VOC-001-09"
       },
       {
@@ -4307,7 +4307,7 @@ Object.assign(exerciseBank, {
             "Beach"
           ]
         },
-        "explanation": "",
+        "explanation": "Children attend lessons and learn new things at school.",
         "id": "MAL-PM1-QUIZ-VOC-001-10"
       }
     ],
