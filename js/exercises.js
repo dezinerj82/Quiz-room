@@ -3771,7 +3771,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "",
+        "explanation": "Apples grow on trees and can be eaten as a snack.",
         "id": "KOR-PM2-QUIZ-VOC-001-01"
       },
       {
@@ -3785,7 +3785,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "Cats are animals that can be kept as pets.",
         "id": "KOR-PM2-QUIZ-VOC-001-02"
       },
       {
@@ -3803,7 +3803,7 @@ Object.assign(exerciseBank, {
             "Book"
           ]
         },
-        "explanation": "",
+        "explanation": "A cup is used to hold a drink.",
         "id": "KOR-PM2-QUIZ-VOC-001-03"
       },
       {
@@ -3825,7 +3825,7 @@ Object.assign(exerciseBank, {
             "Bag"
           ]
         },
-        "explanation": "",
+        "explanation": "Blue is one of the colours we see around us.",
         "id": "KOR-PM2-QUIZ-VOC-001-04"
       },
       {
@@ -3839,7 +3839,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "A desk is furniture used for work or study.",
         "id": "KOR-PM2-QUIZ-VOC-001-05"
       },
       {
@@ -3857,7 +3857,7 @@ Object.assign(exerciseBank, {
             "Umbrella"
           ]
         },
-        "explanation": "",
+        "explanation": "A pencil makes marks on paper when we write.",
         "id": "KOR-PM2-QUIZ-VOC-001-06"
       },
       {
@@ -3879,7 +3879,7 @@ Object.assign(exerciseBank, {
             "Banana"
           ]
         },
-        "explanation": "",
+        "explanation": "A mother is a member of the family.",
         "id": "KOR-PM2-QUIZ-VOC-001-07"
       },
       {
@@ -3893,7 +3893,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "",
+        "explanation": "The number one comes before two when counting.",
         "id": "KOR-PM2-QUIZ-VOC-001-08"
       },
       {
@@ -3911,7 +3911,7 @@ Object.assign(exerciseBank, {
             "Swimsuit"
           ]
         },
-        "explanation": "",
+        "explanation": "A coat helps keep us warm in cold weather.",
         "id": "KOR-PM2-QUIZ-VOC-001-09"
       },
       {
@@ -3933,7 +3933,7 @@ Object.assign(exerciseBank, {
             "To be small"
           ]
         },
-        "explanation": "",
+        "explanation": "A hospital is a place where people receive medical care.",
         "id": "KOR-PM2-QUIZ-VOC-001-10"
       }
     ],
