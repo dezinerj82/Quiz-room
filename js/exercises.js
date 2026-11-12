@@ -4636,16 +4636,16 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "tf",
-      "q": "Sepupu ialah anak kepada guru kita.",
+      "q": "Sepupu ialah anak kepada datuk atau nenek kita.",
       "expected": false,
       "translation": {
-        "question": "A cousin is the child of our teacher.",
+        "question": "A cousin is the child of our grandfather or grandmother.",
         "options": [
           "True",
           "False"
         ]
       },
-      "explanation": "A sepupu is the child of our aunt or uncle.",
+      "explanation": "A sepupu is the child of an aunt or uncle, not directly the child of a grandparent.",
       "id": "MAL-PM3-QUIZ-VOC-002-08"
     },
     {
@@ -5571,16 +5571,16 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "tf",
-      "q": "Perkataan “menari” ialah kata nama bagi benda.",
+      "q": "Dalam ayat “Adik menari”, perkataan “menari” ialah kata nama.",
       "expected": false,
       "translation": {
-        "question": "The word menari is a noun for an object.",
+        "question": "In 'Younger sibling dances', menari is a noun.",
         "options": [
           "True",
           "False"
         ]
       },
-      "explanation": "Menari describes an action, so it is a verb.",
+      "explanation": "Menari is a verb because it describes the action of dancing.",
       "id": "MAL-PM3-QUIZ-GRM-002-08"
     },
     {
@@ -5943,16 +5943,16 @@ Object.assign(exerciseBank.Malay, {
     },
     {
       "type": "tf",
-      "q": "“Laju” ialah kata nama bagi haiwan.",
+      "q": "Dalam ayat “Kereta itu laju”, perkataan “laju” ialah kata kerja.",
       "expected": false,
       "translation": {
-        "question": "Laju is a noun for an animal.",
+        "question": "In 'The car is fast', laju is a verb.",
         "options": [
           "True",
           "False"
         ]
       },
-      "explanation": "Laju describes fast movement, so it is an adjective.",
+      "explanation": "Laju describes the speed of the car, so it is an adjective, not a verb.",
       "id": "MAL-PM3-QUIZ-GRM-004-08"
     },
     {
