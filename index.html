@@ -1451,7 +1451,7 @@ function renderChapterList(){
  $('qrQuizSteps').innerHTML='<button type="button" onclick="qrOpen(\'quizStart\')">Levels</button> <span>›</span> <button type="button" onclick="subject=\'\';selectedCategory=null;renderChapterList()">'+escapeHtml(selectedLevel)+'</button>'+(subject?' <span>›</span> <button type="button" onclick="selectedCategory=null;renderChapterList()">'+escapeHtml(subject)+'</button>':'');
  if(!subject){
   $('subjectTitle').textContent='Subjects';
-  container.innerHTML='<div class="level-grid" role="group" aria-label="Choose subject">'+available.map(name=>'<button class="level-button" onclick="choose(\''+name+'\')">'+escapeHtml(name)+'</button>').join('')+'</div>';
+  container.innerHTML='<div class="level-grid" role="group" aria-label="Choose subject">'+available.map(name=>{const color=names.indexOf(name)%6+1;return '<button class="level-button" style="--quiz-subject-color:var(--qr-subject'+color+');--qr-on-subject:var(--qr-on-subject'+color+',var(--qr-on-background))" onclick="choose(\''+name+'\')">'+escapeHtml(name)+'</button>'}).join('')+'</div>';
   return;
  }
  $('subjectTitle').textContent=subject;
@@ -1487,13 +1487,13 @@ function selectionBack(){
 function qrSyncSubjectAppearance(){
  const heading=document.getElementById('qrActiveQuizHeading');
  if(heading)heading.textContent='Quiz';
- const names=Array.from(document.querySelectorAll('#subjects .tile')).map(b=>b.textContent.trim());
+ const names=['English','Korean','Malay','Math','Science','PJPK'];
  const idx=names.indexOf(subject);
  const colorIndex=idx<0?1:idx%6+1;
- const subjectInk=getComputedStyle(document.documentElement).getPropertyValue('--qr-on-subject'+colorIndex).trim();
+ const subjectInk='var(--qr-on-subject'+colorIndex+',var(--qr-on-background))';
  ['quiz','selection','results'].forEach(id=>{
   const el=document.getElementById(id);
-  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject'+colorIndex+')');if(subjectInk)el.style.setProperty('--qr-on-subject',subjectInk);}
+  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject'+colorIndex+')');el.style.setProperty('--qr-on-subject',subjectInk);}
  });
 }
 function choose(s){if(!selectedLevel||!availableCategories(selectedLevel,s).length)return;activeExerciseTopic=null;activeQuizForm='question-answer';subject=s;selectedCategory=null;qrSyncSubjectAppearance();clearInterval(timerHandle);$('subjectTitle').textContent=s;renderChapterList();show('selection')}
