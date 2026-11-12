@@ -4499,3 +4499,938 @@ Object.assign(exerciseBank, {
     ]
   }
 });
+
+
+/* PM3 Malay new vocabulary practice sets, original questions and bilingual feedback. */
+Object.assign(exerciseBank.Malay, {
+  "Keluarga dan Rakan": [
+    {
+      "type": "mc",
+      "q": "Siapakah ibu kepada ayah kita?",
+      "options": [
+        "Nenek",
+        "Kakak",
+        "Mak cik",
+        "Adik"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Who is our father's mother?",
+        "options": [
+          "Grandmother",
+          "Older sister",
+          "Aunt",
+          "Younger sibling"
+        ]
+      },
+      "explanation": "Nenek is the mother of one of our parents.",
+      "id": "MAL-PM3-QUIZ-VOC-002-01"
+    },
+    {
+      "type": "tf",
+      "q": "Abang ialah saudara lelaki yang lebih tua.",
+      "expected": true,
+      "translation": {
+        "question": "Abang is an older brother.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "We use abang for an older male sibling.",
+      "id": "MAL-PM3-QUIZ-VOC-002-02"
+    },
+    {
+      "type": "drop",
+      "q": "Saya bermain dengan ____ di taman.",
+      "expected": "kawan",
+      "options": [
+        "kawan",
+        "nenek"
+      ],
+      "translation": {
+        "question": "I play with my ____ at the park.",
+        "options": [
+          "Friend",
+          "Grandmother"
+        ]
+      },
+      "explanation": "Kawan is a friend we can play with.",
+      "id": "MAL-PM3-QUIZ-VOC-002-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah panggilan untuk saudara perempuan yang lebih muda?",
+      "options": [
+        "Kakak",
+        "Adik perempuan",
+        "Ibu",
+        "Nenek"
+      ],
+      "correct": 1,
+      "translation": {
+        "question": "What do we call a younger sister?",
+        "options": [
+          "Older sister",
+          "Younger sister",
+          "Mother",
+          "Grandmother"
+        ]
+      },
+      "explanation": "Adik perempuan refers to a female sibling who is younger.",
+      "id": "MAL-PM3-QUIZ-VOC-002-04"
+    },
+    {
+      "type": "tf",
+      "q": "Datuk ialah bapa kepada ibu atau ayah kita.",
+      "expected": true,
+      "translation": {
+        "question": "Datuk is the father of our mother or father.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Datuk is the grandfather in our family.",
+      "id": "MAL-PM3-QUIZ-VOC-002-05"
+    },
+    {
+      "type": "drop",
+      "q": "Bapa saya juga dipanggil ____.",
+      "expected": "ayah",
+      "options": [
+        "ayah",
+        "cucu"
+      ],
+      "translation": {
+        "question": "My father is also called ____.",
+        "options": [
+          "Dad",
+          "Grandchild"
+        ]
+      },
+      "explanation": "Ayah is another word for father.",
+      "id": "MAL-PM3-QUIZ-VOC-002-06"
+    },
+    {
+      "type": "mc",
+      "q": "Siapakah anak kepada anak kita?",
+      "options": [
+        "Cucu",
+        "Sepupu",
+        "Pak cik",
+        "Kakak"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Who is our child's child?",
+        "options": [
+          "Grandchild",
+          "Cousin",
+          "Uncle",
+          "Older sister"
+        ]
+      },
+      "explanation": "Cucu is a grandchild.",
+      "id": "MAL-PM3-QUIZ-VOC-002-07"
+    },
+    {
+      "type": "tf",
+      "q": "Sepupu ialah anak kepada guru kita.",
+      "expected": false,
+      "translation": {
+        "question": "A cousin is the child of our teacher.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "A sepupu is the child of our aunt or uncle.",
+      "id": "MAL-PM3-QUIZ-VOC-002-08"
+    },
+    {
+      "type": "drop",
+      "q": "Kakak saya ialah saudara ____ yang lebih tua.",
+      "expected": "perempuan",
+      "options": [
+        "perempuan",
+        "lelaki"
+      ],
+      "translation": {
+        "question": "My older sister is an older ____ sibling.",
+        "options": [
+          "Female",
+          "Male"
+        ]
+      },
+      "explanation": "Kakak is a word for an older female sibling.",
+      "id": "MAL-PM3-QUIZ-VOC-002-09"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah panggilan untuk anak kepada pak cik kita?",
+      "options": [
+        "Cucu",
+        "Sepupu",
+        "Nenek",
+        "Ibu"
+      ],
+      "correct": 1,
+      "translation": {
+        "question": "What do we call our uncle's child?",
+        "options": [
+          "Grandchild",
+          "Cousin",
+          "Grandmother",
+          "Mother"
+        ]
+      },
+      "explanation": "An uncle's child is our sepupu.",
+      "id": "MAL-PM3-QUIZ-VOC-002-10"
+    }
+  ],
+  "Makanan dan Minuman": [
+    {
+      "type": "mc",
+      "q": "Yang manakah makanan yang dibuat daripada susu?",
+      "options": [
+        "Keju",
+        "Roti",
+        "Nasi",
+        "Mi"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which food is made from milk?",
+        "options": [
+          "Cheese",
+          "Bread",
+          "Rice",
+          "Noodles"
+        ]
+      },
+      "explanation": "Keju is made by processing milk.",
+      "id": "MAL-PM3-QUIZ-VOC-003-01"
+    },
+    {
+      "type": "tf",
+      "q": "Air kosong ialah minuman tanpa gula tambahan.",
+      "expected": true,
+      "translation": {
+        "question": "Plain water is a drink without added sugar.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Air kosong is plain drinking water.",
+      "id": "MAL-PM3-QUIZ-VOC-003-02"
+    },
+    {
+      "type": "drop",
+      "q": "Saya makan sup menggunakan ____.",
+      "expected": "sudu",
+      "options": [
+        "sudu",
+        "garpu"
+      ],
+      "translation": {
+        "question": "I eat soup using a ____.",
+        "options": [
+          "Spoon",
+          "Fork"
+        ]
+      },
+      "explanation": "A sudu can hold liquid food such as soup.",
+      "id": "MAL-PM3-QUIZ-VOC-003-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah makanan yang biasanya dimakan pada waktu pagi?",
+      "options": [
+        "Sarapan",
+        "Makan malam",
+        "Minum petang",
+        "Makan tengah hari"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "What is a meal usually eaten in the morning?",
+        "options": [
+          "Breakfast",
+          "Dinner",
+          "Afternoon tea",
+          "Lunch"
+        ]
+      },
+      "explanation": "Sarapan is the first meal of the day.",
+      "id": "MAL-PM3-QUIZ-VOC-003-04"
+    },
+    {
+      "type": "tf",
+      "q": "Garam biasanya memberi rasa manis kepada makanan.",
+      "expected": false,
+      "translation": {
+        "question": "Salt usually gives food a sweet taste.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Garam makes food taste salty, not sweet.",
+      "id": "MAL-PM3-QUIZ-VOC-003-05"
+    },
+    {
+      "type": "drop",
+      "q": "Jus oren dibuat daripada buah ____.",
+      "expected": "oren",
+      "options": [
+        "oren",
+        "epal"
+      ],
+      "translation": {
+        "question": "Orange juice is made from ____ fruit.",
+        "options": [
+          "Orange",
+          "Apple"
+        ]
+      },
+      "explanation": "Jus oren is a drink made from oranges.",
+      "id": "MAL-PM3-QUIZ-VOC-003-06"
+    },
+    {
+      "type": "mc",
+      "q": "Yang manakah digunakan untuk memotong makanan?",
+      "options": [
+        "Pisau",
+        "Mangkuk",
+        "Cawan",
+        "Pinggan"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which item is used to cut food?",
+        "options": [
+          "Knife",
+          "Bowl",
+          "Cup",
+          "Plate"
+        ]
+      },
+      "explanation": "A pisau has a blade used for cutting.",
+      "id": "MAL-PM3-QUIZ-VOC-003-07"
+    },
+    {
+      "type": "tf",
+      "q": "Sayur-sayuran boleh dimasak sebelum dimakan.",
+      "expected": true,
+      "translation": {
+        "question": "Vegetables can be cooked before eating.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Many vegetables can be boiled, steamed or fried.",
+      "id": "MAL-PM3-QUIZ-VOC-003-08"
+    },
+    {
+      "type": "drop",
+      "q": "Saya menuang air ke dalam ____.",
+      "expected": "gelas",
+      "options": [
+        "gelas",
+        "pinggan"
+      ],
+      "translation": {
+        "question": "I pour water into a ____.",
+        "options": [
+          "Glass",
+          "Plate"
+        ]
+      },
+      "explanation": "A gelas is a drinking glass.",
+      "id": "MAL-PM3-QUIZ-VOC-003-09"
+    },
+    {
+      "type": "mc",
+      "q": "Yang manakah rasa buah limau?",
+      "options": [
+        "Masam",
+        "Masin",
+        "Pedas",
+        "Pahit"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "What taste does a lime usually have?",
+        "options": [
+          "Sour",
+          "Salty",
+          "Spicy",
+          "Bitter"
+        ]
+      },
+      "explanation": "Limau often tastes sour because it contains natural acids.",
+      "id": "MAL-PM3-QUIZ-VOC-003-10"
+    }
+  ],
+  "Haiwan dan Tumbuhan": [
+    {
+      "type": "mc",
+      "q": "Haiwan manakah boleh terbang dengan sayap?",
+      "options": [
+        "Burung merpati",
+        "Ikan emas",
+        "Kura-kura",
+        "Kambing"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which animal can fly using wings?",
+        "options": [
+          "Pigeon",
+          "Goldfish",
+          "Tortoise",
+          "Goat"
+        ]
+      },
+      "explanation": "Burung merpati uses wings to fly.",
+      "id": "MAL-PM3-QUIZ-VOC-004-01"
+    },
+    {
+      "type": "tf",
+      "q": "Ikan hidup di dalam air.",
+      "expected": true,
+      "translation": {
+        "question": "Fish live in water.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Fish use gills to breathe in water.",
+      "id": "MAL-PM3-QUIZ-VOC-004-02"
+    },
+    {
+      "type": "drop",
+      "q": "Pokok menyerap air melalui ____.",
+      "expected": "akar",
+      "options": [
+        "akar",
+        "bunga"
+      ],
+      "translation": {
+        "question": "A plant absorbs water through its ____.",
+        "options": [
+          "Roots",
+          "Flower"
+        ]
+      },
+      "explanation": "Akar are roots that take in water from soil.",
+      "id": "MAL-PM3-QUIZ-VOC-004-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah bahagian tumbuhan yang biasanya berwarna hijau?",
+      "options": [
+        "Daun",
+        "Akar",
+        "Biji benih",
+        "Batang kayu"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which plant part is usually green?",
+        "options": [
+          "Leaf",
+          "Root",
+          "Seed",
+          "Woody stem"
+        ]
+      },
+      "explanation": "Daun usually contains green pigment for making food.",
+      "id": "MAL-PM3-QUIZ-VOC-004-04"
+    },
+    {
+      "type": "tf",
+      "q": "Rama-rama mempunyai enam kaki.",
+      "expected": true,
+      "translation": {
+        "question": "A butterfly has six legs.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "A butterfly is an insect, and insects have six legs.",
+      "id": "MAL-PM3-QUIZ-VOC-004-05"
+    },
+    {
+      "type": "drop",
+      "q": "Anak ayam keluar daripada ____.",
+      "expected": "telur",
+      "options": [
+        "telur",
+        "sarang"
+      ],
+      "translation": {
+        "question": "A chick hatches from an ____.",
+        "options": [
+          "Egg",
+          "Nest"
+        ]
+      },
+      "explanation": "An egg protects the chick as it develops.",
+      "id": "MAL-PM3-QUIZ-VOC-004-06"
+    },
+    {
+      "type": "mc",
+      "q": "Haiwan manakah mempunyai belalai?",
+      "options": [
+        "Gajah",
+        "Harimau",
+        "Arnab",
+        "Kuda"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which animal has a trunk?",
+        "options": [
+          "Elephant",
+          "Tiger",
+          "Rabbit",
+          "Horse"
+        ]
+      },
+      "explanation": "A gajah uses its long trunk to smell and pick things up.",
+      "id": "MAL-PM3-QUIZ-VOC-004-07"
+    },
+    {
+      "type": "tf",
+      "q": "Bunga ialah bahagian tumbuhan yang berada di bawah tanah.",
+      "expected": false,
+      "translation": {
+        "question": "A flower is a plant part found underground.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Bunga usually grows above ground; roots are below.",
+      "id": "MAL-PM3-QUIZ-VOC-004-08"
+    },
+    {
+      "type": "drop",
+      "q": "Lebah mengumpul madu daripada ____.",
+      "expected": "bunga",
+      "options": [
+        "bunga",
+        "batu"
+      ],
+      "translation": {
+        "question": "Bees collect nectar from ____.",
+        "options": [
+          "Flowers",
+          "Rocks"
+        ]
+      },
+      "explanation": "Bees visit flowers to collect nectar.",
+      "id": "MAL-PM3-QUIZ-VOC-004-09"
+    },
+    {
+      "type": "mc",
+      "q": "Haiwan manakah biasanya bergerak dengan melompat?",
+      "options": [
+        "Katak",
+        "Ular",
+        "Siput",
+        "Ikan"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which animal usually moves by hopping?",
+        "options": [
+          "Frog",
+          "Snake",
+          "Snail",
+          "Fish"
+        ]
+      },
+      "explanation": "Katak has strong hind legs for jumping.",
+      "id": "MAL-PM3-QUIZ-VOC-004-10"
+    }
+  ],
+  "Tempat dan Perjalanan": [
+    {
+      "type": "mc",
+      "q": "Di manakah kita membeli ubat daripada ahli farmasi?",
+      "options": [
+        "Farmasi",
+        "Perpustakaan",
+        "Pejabat pos",
+        "Stesen bas"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Where do we buy medicine from a pharmacist?",
+        "options": [
+          "Pharmacy",
+          "Library",
+          "Post office",
+          "Bus station"
+        ]
+      },
+      "explanation": "A farmasi is a shop where pharmacists provide medicine.",
+      "id": "MAL-PM3-QUIZ-VOC-005-01"
+    },
+    {
+      "type": "tf",
+      "q": "Perpustakaan ialah tempat untuk membaca dan meminjam buku.",
+      "expected": true,
+      "translation": {
+        "question": "A library is a place to read and borrow books.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "A perpustakaan keeps books for readers.",
+      "id": "MAL-PM3-QUIZ-VOC-005-02"
+    },
+    {
+      "type": "drop",
+      "q": "Saya menaiki ____ untuk terbang ke negara lain.",
+      "expected": "kapal terbang",
+      "options": [
+        "kapal terbang",
+        "bas"
+      ],
+      "translation": {
+        "question": "I take an ____ to fly to another country.",
+        "options": [
+          "Aeroplane",
+          "Bus"
+        ]
+      },
+      "explanation": "A kapal terbang is an aircraft.",
+      "id": "MAL-PM3-QUIZ-VOC-005-03"
+    },
+    {
+      "type": "mc",
+      "q": "Di manakah orang menunggu kereta api?",
+      "options": [
+        "Stesen kereta api",
+        "Balai bomba",
+        "Klinik",
+        "Kedai buku"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Where do people wait for trains?",
+        "options": [
+          "Train station",
+          "Fire station",
+          "Clinic",
+          "Bookshop"
+        ]
+      },
+      "explanation": "A train station is where people board trains.",
+      "id": "MAL-PM3-QUIZ-VOC-005-04"
+    },
+    {
+      "type": "tf",
+      "q": "Lampu isyarat membantu mengawal lalu lintas.",
+      "expected": true,
+      "translation": {
+        "question": "Traffic lights help control traffic.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Lampu isyarat tells road users when to stop or go.",
+      "id": "MAL-PM3-QUIZ-VOC-005-05"
+    },
+    {
+      "type": "drop",
+      "q": "Kita melintas jalan di lintasan ____.",
+      "expected": "belang",
+      "options": [
+        "belang",
+        "bas"
+      ],
+      "translation": {
+        "question": "We cross the road at a ____ crossing.",
+        "options": [
+          "Zebra",
+          "Bus"
+        ]
+      },
+      "explanation": "A lintasan belang is a marked pedestrian crossing.",
+      "id": "MAL-PM3-QUIZ-VOC-005-06"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah kenderaan yang bergerak di atas landasan?",
+      "options": [
+        "Kereta api",
+        "Motosikal",
+        "Basikal",
+        "Bot"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which vehicle travels on tracks?",
+        "options": [
+          "Train",
+          "Motorcycle",
+          "Bicycle",
+          "Boat"
+        ]
+      },
+      "explanation": "A kereta api moves along railway tracks.",
+      "id": "MAL-PM3-QUIZ-VOC-005-07"
+    },
+    {
+      "type": "tf",
+      "q": "Pelabuhan ialah tempat kapal berlabuh.",
+      "expected": true,
+      "translation": {
+        "question": "A harbour is a place where ships dock.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Ships can stop at a pelabuhan.",
+      "id": "MAL-PM3-QUIZ-VOC-005-08"
+    },
+    {
+      "type": "drop",
+      "q": "Saya menghantar surat di ____.",
+      "expected": "pejabat pos",
+      "options": [
+        "pejabat pos",
+        "hospital"
+      ],
+      "translation": {
+        "question": "I send a letter at the ____.",
+        "options": [
+          "Post office",
+          "Hospital"
+        ]
+      },
+      "explanation": "A pejabat pos handles letters and parcels.",
+      "id": "MAL-PM3-QUIZ-VOC-005-09"
+    },
+    {
+      "type": "mc",
+      "q": "Di manakah kita boleh melihat banyak haiwan liar yang dijaga?",
+      "options": [
+        "Zoo",
+        "Pasar raya",
+        "Bank",
+        "Stadium"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Where can we see many wild animals being cared for?",
+        "options": [
+          "Zoo",
+          "Supermarket",
+          "Bank",
+          "Stadium"
+        ]
+      },
+      "explanation": "A zoo houses and cares for different animals.",
+      "id": "MAL-PM3-QUIZ-VOC-005-10"
+    }
+  ],
+  "Barang dan Pakaian": [
+    {
+      "type": "mc",
+      "q": "Apakah yang dipakai pada kaki sebelum kasut?",
+      "options": [
+        "Stoking",
+        "Sarung tangan",
+        "Topi",
+        "Tali pinggang"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "What do we wear on our feet before shoes?",
+        "options": [
+          "Socks",
+          "Gloves",
+          "Hat",
+          "Belt"
+        ]
+      },
+      "explanation": "Stoking are worn between our feet and shoes.",
+      "id": "MAL-PM3-QUIZ-VOC-006-01"
+    },
+    {
+      "type": "tf",
+      "q": "Payung boleh melindungi kita daripada hujan.",
+      "expected": true,
+      "translation": {
+        "question": "An umbrella can protect us from rain.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "A payung helps keep rain off our bodies.",
+      "id": "MAL-PM3-QUIZ-VOC-006-02"
+    },
+    {
+      "type": "drop",
+      "q": "Saya menyikat rambut dengan ____.",
+      "expected": "sikat",
+      "options": [
+        "sikat",
+        "berus gigi"
+      ],
+      "translation": {
+        "question": "I comb my hair with a ____.",
+        "options": [
+          "Comb",
+          "Toothbrush"
+        ]
+      },
+      "explanation": "A sikat is used to tidy hair.",
+      "id": "MAL-PM3-QUIZ-VOC-006-03"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah alat untuk melihat masa?",
+      "options": [
+        "Jam tangan",
+        "Cermin",
+        "Kunci",
+        "Beg"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which item is used to tell the time?",
+        "options": [
+          "Watch",
+          "Mirror",
+          "Key",
+          "Bag"
+        ]
+      },
+      "explanation": "Jam tangan shows the time on our wrist.",
+      "id": "MAL-PM3-QUIZ-VOC-006-04"
+    },
+    {
+      "type": "tf",
+      "q": "Sarung tangan biasanya dipakai pada kepala.",
+      "expected": false,
+      "translation": {
+        "question": "Gloves are usually worn on the head.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "Sarung tangan are worn on the hands.",
+      "id": "MAL-PM3-QUIZ-VOC-006-05"
+    },
+    {
+      "type": "drop",
+      "q": "Saya mengelap badan dengan ____ selepas mandi.",
+      "expected": "tuala",
+      "options": [
+        "tuala",
+        "selimut"
+      ],
+      "translation": {
+        "question": "I dry my body with a ____ after bathing.",
+        "options": [
+          "Towel",
+          "Blanket"
+        ]
+      },
+      "explanation": "A tuala absorbs water from our skin.",
+      "id": "MAL-PM3-QUIZ-VOC-006-06"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah barang yang digunakan untuk membuka kunci pintu?",
+      "options": [
+        "Anak kunci",
+        "Pembaris",
+        "Pemadam",
+        "Penyepit"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which item unlocks a door?",
+        "options": [
+          "Key",
+          "Ruler",
+          "Eraser",
+          "Tongs"
+        ]
+      },
+      "explanation": "An anak kunci fits a lock to open it.",
+      "id": "MAL-PM3-QUIZ-VOC-006-07"
+    },
+    {
+      "type": "tf",
+      "q": "Bantal digunakan untuk menyokong kepala ketika tidur.",
+      "expected": true,
+      "translation": {
+        "question": "A pillow supports the head when sleeping.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      "explanation": "A bantal makes it more comfortable to rest our head.",
+      "id": "MAL-PM3-QUIZ-VOC-006-08"
+    },
+    {
+      "type": "drop",
+      "q": "Saya memakai ____ untuk melindungi kepala daripada panas matahari.",
+      "expected": "topi",
+      "options": [
+        "topi",
+        "stoking"
+      ],
+      "translation": {
+        "question": "I wear a ____ to protect my head from the sun.",
+        "options": [
+          "Hat",
+          "Socks"
+        ]
+      },
+      "explanation": "A topi shades the head from sunlight.",
+      "id": "MAL-PM3-QUIZ-VOC-006-09"
+    },
+    {
+      "type": "mc",
+      "q": "Apakah alat untuk membersihkan lantai dengan menyapu?",
+      "options": [
+        "Penyapu",
+        "Penyepit",
+        "Penapis",
+        "Pembuka botol"
+      ],
+      "correct": 0,
+      "translation": {
+        "question": "Which tool sweeps the floor?",
+        "options": [
+          "Broom",
+          "Tongs",
+          "Strainer",
+          "Bottle opener"
+        ]
+      },
+      "explanation": "A penyapu sweeps dust and dirt from the floor.",
+      "id": "MAL-PM3-QUIZ-VOC-006-10"
+    }
+  ]
+});
