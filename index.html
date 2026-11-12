@@ -1428,10 +1428,32 @@ const quizCategories=['Quiz','Exam'];
 const quizQuestionCounts={Quiz:10,Exam:30};
 const quizTimeLimits={Quiz:30*60,Exam:90*60};
 let selectedLevel=null,selectedCategory=null;
+/* Display-only bilingual titles. Keep stored quiz keys and score filenames unchanged. */
+const qrLanguageQuizTitles={
+ Malay:{
+  'Kosa Kata':'Kosa Kata (Vocabulary)',
+  'Tatabahasa':'Tatabahasa (Grammar)',
+  'Keluarga dan Rakan':'Keluarga dan Rakan (Family and Friends)',
+  'Makanan dan Minuman':'Makanan dan Minuman (Food and Drinks)',
+  'Haiwan dan Tumbuhan':'Haiwan dan Tumbuhan (Animals and Plants)',
+  'Tempat dan Perjalanan':'Tempat dan Perjalanan (Places and Travel)',
+  'Barang dan Pakaian':'Barang dan Pakaian (Items and Clothing)',
+  'Kata Nama':'Kata Nama (Nouns)',
+  'Kata Kerja':'Kata Kerja (Verbs)',
+  'Kata Adjektif':'Kata Adjektif (Adjectives)',
+  'Kata Ganti Nama':'Kata Ganti Nama (Pronouns)',
+  'Ayat Mudah':'Ayat Mudah (Simple Sentences)'
+ },
+ Korean:{
+  '어휘':'어휘 (Vocabulary)',
+  '문법':'문법 (Grammar)'
+ }
+};
+function qrDisplayQuizTopic(s,topic){return qrLanguageQuizTitles[s]?.[topic]||topic}
 function availableEntries(level,s,category){
  const entries=[];
  // Each category is shown only when it contains real playable questions.
- if((level==='PM3'&&['English','Math','Science','Korean','Malay'].includes(s))&&category==='Quiz'&&typeof exerciseBank!=='undefined'&&exerciseBank[s]){for(const [topic,rows] of Object.entries(exerciseBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:(topic==='Vocabulary 1'?'Word Meanings':topic),action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
+ if((level==='PM3'&&['English','Math','Science','Korean','Malay'].includes(s))&&category==='Quiz'&&typeof exerciseBank!=='undefined'&&exerciseBank[s]){for(const [topic,rows] of Object.entries(exerciseBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:qrDisplayQuizTopic(s,topic==='Vocabulary 1'?'Word Meanings':topic),action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
  if(level==='PM3'&&category==='Quiz'&&typeof formulaBank!=='undefined'&&formulaBank[s]){for(const [topic,rows] of Object.entries(formulaBank[s])){if(rows.length===quizQuestionCounts.Quiz)entries.push({title:(topic==='Multiply'?'Multiplication Practice':topic==='Multiply 2'?'Multiplication Practice 2':topic==='Divide 1'?'Division Practice 1':topic==='Divide 2'?'Division Practice 2':topic),action:'startExercise('+JSON.stringify(topic).replace(/\"/g,'&quot;')+')'});}}
  return entries;
 }
@@ -1441,7 +1463,7 @@ function renderChapterList(){
  const container=$('versions');
  if(activeExerciseTopic){
   $('qrQuizSteps').classList.add('hidden');
-  container.innerHTML='<div class="chapter-items"><button class="version" type="button" aria-current="true">'+escapeHtml(activeQuizForm==='formula-entry'?(activeExerciseTopic==='Multiply'?'Multiplication Practice':activeExerciseTopic==='Multiply 2'?'Multiplication Practice 2':activeExerciseTopic==='Divide 1'?'Division Practice 1':activeExerciseTopic==='Divide 2'?'Division Practice 2':activeExerciseTopic):activeExerciseTopic==='Vocabulary 1'?'Word Meanings':activeExerciseTopic)+'</button></div>';
+  container.innerHTML='<div class="chapter-items"><button class="version" type="button" aria-current="true">'+escapeHtml(activeQuizForm==='formula-entry'?(activeExerciseTopic==='Multiply'?'Multiplication Practice':activeExerciseTopic==='Multiply 2'?'Multiplication Practice 2':activeExerciseTopic==='Divide 1'?'Division Practice 1':activeExerciseTopic==='Divide 2'?'Division Practice 2':activeExerciseTopic):qrDisplayQuizTopic(subject,activeExerciseTopic==='Vocabulary 1'?'Word Meanings':activeExerciseTopic))+'</button></div>';
   return;
  }
  $('qrQuizSteps').classList.remove('hidden');
