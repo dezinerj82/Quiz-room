@@ -3771,7 +3771,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "An apple is a fruit you can eat.",
+        "explanation": "Apples are fruits we can eat.",
         "id": "KOR-PM2-QUIZ-VOC-001-01"
       },
       {
@@ -3785,7 +3785,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "A cat is an animal, not a plant.",
+        "explanation": "Cats are animals, just like dogs.",
         "id": "KOR-PM2-QUIZ-VOC-001-02"
       },
       {
@@ -3803,7 +3803,7 @@ Object.assign(exerciseBank, {
             "Book"
           ]
         },
-        "explanation": "We drink from a cup.",
+        "explanation": "A cup holds water so we can drink it.",
         "id": "KOR-PM2-QUIZ-VOC-001-03"
       },
       {
@@ -3825,7 +3825,7 @@ Object.assign(exerciseBank, {
             "Bag"
           ]
         },
-        "explanation": "Blue is a colour.",
+        "explanation": "Blue describes a colour, not a thing.",
         "id": "KOR-PM2-QUIZ-VOC-001-04"
       },
       {
@@ -3839,7 +3839,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "We use a desk for work, not for eating.",
+        "explanation": "A desk is furniture we use for studying.",
         "id": "KOR-PM2-QUIZ-VOC-001-05"
       },
       {
@@ -3857,7 +3857,7 @@ Object.assign(exerciseBank, {
             "Umbrella"
           ]
         },
-        "explanation": "We write with a pencil.",
+        "explanation": "A pencil helps us write on paper.",
         "id": "KOR-PM2-QUIZ-VOC-001-06"
       },
       {
@@ -3893,7 +3893,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Hana means one when counting.",
+        "explanation": "We say hana when we count one thing.",
         "id": "KOR-PM2-QUIZ-VOC-001-08"
       },
       {
@@ -3911,7 +3911,7 @@ Object.assign(exerciseBank, {
             "Swimsuit"
           ]
         },
-        "explanation": "A coat keeps us warm.",
+        "explanation": "A coat helps keep us warm when it's cold.",
         "id": "KOR-PM2-QUIZ-VOC-001-09"
       },
       {
@@ -3933,7 +3933,7 @@ Object.assign(exerciseBank, {
             "To be small"
           ]
         },
-        "explanation": "A hospital is a place where people get help when sick.",
+        "explanation": "People visit a hospital when they need medical care.",
         "id": "KOR-PM2-QUIZ-VOC-001-10"
       }
     ],
@@ -3957,7 +3957,7 @@ Object.assign(exerciseBank, {
             "Incorrect ending for student."
           ]
         },
-        "explanation": "Use 이에요 after 학생 to say 'is a student'.",
+        "explanation": "학생 ends with a consonant, so we use 이에요.",
         "id": "KOR-PM2-QUIZ-GRM-001-01"
       },
       {
@@ -3971,7 +3971,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "저는 is used when talking about yourself.",
+        "explanation": "Use 저는 when speaking politely about yourself.",
         "id": "KOR-PM2-QUIZ-GRM-001-02"
       },
       {
@@ -4011,7 +4011,7 @@ Object.assign(exerciseBank, {
             "Incorrect ending"
           ]
         },
-        "explanation": "Use 이에요 after 책 to say 'is a book'.",
+        "explanation": "책 ends with a consonant, so we use 이에요.",
         "id": "KOR-PM2-QUIZ-GRM-001-04"
       },
       {
@@ -4025,7 +4025,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "있어요 means something is there.",
+        "explanation": "있어요 means something is there, not missing.",
         "id": "KOR-PM2-QUIZ-GRM-001-05"
       },
       {
@@ -4043,7 +4043,7 @@ Object.assign(exerciseBank, {
             "Subject particle after a vowel"
           ]
         },
-        "explanation": "가방 ends in a consonant, so we use 이.",
+        "explanation": "가방 ends with a consonant, so we use 이.",
         "id": "KOR-PM2-QUIZ-GRM-001-06"
       },
       {
@@ -4065,7 +4065,7 @@ Object.assign(exerciseBank, {
             "The weather is nice."
           ]
         },
-        "explanation": "The question asks where someone is going.",
+        "explanation": "The question mark shows that someone is asking something.",
         "id": "KOR-PM2-QUIZ-GRM-001-07"
       },
       {
@@ -4079,7 +4079,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "에 shows that school is the destination.",
+        "explanation": "에 tells us that school is where the person is going.",
         "id": "KOR-PM2-QUIZ-GRM-001-08"
       },
       {
@@ -4097,7 +4097,7 @@ Object.assign(exerciseBank, {
             "Object particle"
           ]
         },
-        "explanation": "저는 means 'I' when introducing yourself.",
+        "explanation": "저는 is the right way to begin 'I am a student'.",
         "id": "KOR-PM2-QUIZ-GRM-001-09"
       },
       {
@@ -4119,7 +4119,7 @@ Object.assign(exerciseBank, {
             "Incorrect particle combination"
           ]
         },
-        "explanation": "Use 가 with 친구 to say a friend is coming.",
+        "explanation": "친구 ends with a vowel, so we use 가.",
         "id": "KOR-PM2-QUIZ-GRM-001-10"
       }
     ]
@@ -4145,7 +4145,7 @@ Object.assign(exerciseBank, {
             "Door"
           ]
         },
-        "explanation": "A cat is an animal.",
+        "explanation": "Cats are animals, just like dogs.",
         "id": "MAL-PM1-QUIZ-VOC-001-01"
       },
       {
@@ -4159,7 +4159,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "A banana is a fruit.",
+        "explanation": "Bananas grow on plants and can be eaten.",
         "id": "MAL-PM1-QUIZ-VOC-001-02"
       },
       {
@@ -4177,7 +4177,7 @@ Object.assign(exerciseBank, {
             "Shoes"
           ]
         },
-        "explanation": "We use a cup to drink.",
+        "explanation": "We drink water from a cup.",
         "id": "MAL-PM1-QUIZ-VOC-001-03"
       },
       {
@@ -4199,7 +4199,7 @@ Object.assign(exerciseBank, {
             "Park"
           ]
         },
-        "explanation": "Yellow is a colour.",
+        "explanation": "Yellow is a colour, not a place.",
         "id": "MAL-PM1-QUIZ-VOC-001-04"
       },
       {
@@ -4213,7 +4213,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "A chicken is an animal, not a plant.",
+        "explanation": "Chickens are animals, not plants.",
         "id": "MAL-PM1-QUIZ-VOC-001-05"
       },
       {
@@ -4231,7 +4231,7 @@ Object.assign(exerciseBank, {
             "Spoon"
           ]
         },
-        "explanation": "We write with a pencil.",
+        "explanation": "A pencil is made for writing and drawing.",
         "id": "MAL-PM1-QUIZ-VOC-001-06"
       },
       {
@@ -4253,7 +4253,7 @@ Object.assign(exerciseBank, {
             "Basket"
           ]
         },
-        "explanation": "We use our nose to smell.",
+        "explanation": "Your nose helps you smell things.",
         "id": "MAL-PM1-QUIZ-VOC-001-07"
       },
       {
@@ -4267,7 +4267,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Satu means one.",
+        "explanation": "One is the first number we count.",
         "id": "MAL-PM1-QUIZ-VOC-001-08"
       },
       {
@@ -4285,7 +4285,7 @@ Object.assign(exerciseBank, {
             "Bicycle"
           ]
         },
-        "explanation": "We sleep on a bed.",
+        "explanation": "A bed is where we sleep.",
         "id": "MAL-PM1-QUIZ-VOC-001-09"
       },
       {
@@ -4307,7 +4307,7 @@ Object.assign(exerciseBank, {
             "Beach"
           ]
         },
-        "explanation": "We go to school to learn.",
+        "explanation": "Children go to school to learn.",
         "id": "MAL-PM1-QUIZ-VOC-001-10"
       }
     ],
@@ -4331,7 +4331,7 @@ Object.assign(exerciseBank, {
             "Incorrect word order"
           ]
         },
-        "explanation": "Saya makan nasi is in the right word order.",
+        "explanation": "Saya comes first because it tells us who is eating.",
         "id": "MAL-PM1-QUIZ-GRM-001-01"
       },
       {
@@ -4345,7 +4345,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Saya is what you call yourself.",
+        "explanation": "Saya is used when you talk about yourself.",
         "id": "MAL-PM1-QUIZ-GRM-001-02"
       },
       {
@@ -4363,7 +4363,7 @@ Object.assign(exerciseBank, {
             "Drinks"
           ]
         },
-        "explanation": "Ali can read a book.",
+        "explanation": "We read a book, so membaca fits here.",
         "id": "MAL-PM1-QUIZ-GRM-001-03"
       },
       {
@@ -4385,7 +4385,7 @@ Object.assign(exerciseBank, {
             "You"
           ]
         },
-        "explanation": "Mereka means more than one person.",
+        "explanation": "Mereka is used for more than one person.",
         "id": "MAL-PM1-QUIZ-GRM-001-04"
       },
       {
@@ -4399,7 +4399,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Questions end with a question mark.",
+        "explanation": "A question usually ends with a question mark.",
         "id": "MAL-PM1-QUIZ-GRM-001-05"
       },
       {
@@ -4417,7 +4417,7 @@ Object.assign(exerciseBank, {
             "Reading"
           ]
         },
-        "explanation": "Merah tells us the shirt's colour.",
+        "explanation": "Merah describes the colour of the shirt.",
         "id": "MAL-PM1-QUIZ-GRM-001-06"
       },
       {
@@ -4453,7 +4453,7 @@ Object.assign(exerciseBank, {
             "False"
           ]
         },
-        "explanation": "Cantik describes how something looks.",
+        "explanation": "Cantik describes something; it isn't an action.",
         "id": "MAL-PM1-QUIZ-GRM-001-08"
       },
       {
@@ -4471,7 +4471,7 @@ Object.assign(exerciseBank, {
             "To"
           ]
         },
-        "explanation": "Di tells us where Mum cooks.",
+        "explanation": "Di tells us where Mum is cooking.",
         "id": "MAL-PM1-QUIZ-GRM-001-09"
       },
       {
@@ -4493,7 +4493,7 @@ Object.assign(exerciseBank, {
             "That car is blue."
           ]
         },
-        "explanation": "A question asks something and ends with ?.",
+        "explanation": "The question mark tells us someone is asking something.",
         "id": "MAL-PM1-QUIZ-GRM-001-10"
       }
     ]
@@ -4537,7 +4537,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Abang means an older brother.",
+      "explanation": "Abang is a brother who is older than you.",
       "id": "MAL-PM3-QUIZ-VOC-002-02"
     },
     {
@@ -4555,7 +4555,7 @@ Object.assign(exerciseBank.Malay, {
           "Grandmother"
         ]
       },
-      "explanation": "A kawan is someone you can play with.",
+      "explanation": "A friend is someone you can play with.",
       "id": "MAL-PM3-QUIZ-VOC-002-03"
     },
     {
@@ -4577,7 +4577,7 @@ Object.assign(exerciseBank.Malay, {
           "Grandmother"
         ]
       },
-      "explanation": "Adik perempuan means a younger sister.",
+      "explanation": "Adik perempuan is a sister younger than you.",
       "id": "MAL-PM3-QUIZ-VOC-002-04"
     },
     {
@@ -4645,7 +4645,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "A cousin is your aunt's or uncle's child.",
+      "explanation": "Your cousin is your aunt's or uncle's child.",
       "id": "MAL-PM3-QUIZ-VOC-002-08"
     },
     {
@@ -4663,7 +4663,7 @@ Object.assign(exerciseBank.Malay, {
           "Male"
         ]
       },
-      "explanation": "Kakak means an older sister.",
+      "explanation": "Kakak is a sister who is older than you.",
       "id": "MAL-PM3-QUIZ-VOC-002-09"
     },
     {
@@ -4709,7 +4709,7 @@ Object.assign(exerciseBank.Malay, {
           "Noodles"
         ]
       },
-      "explanation": "Cheese is made from milk.",
+      "explanation": "Milk is used to make cheese.",
       "id": "MAL-PM3-QUIZ-VOC-003-01"
     },
     {
@@ -4741,7 +4741,7 @@ Object.assign(exerciseBank.Malay, {
           "Fork"
         ]
       },
-      "explanation": "A spoon is good for eating soup.",
+      "explanation": "A spoon can hold soup without spilling it.",
       "id": "MAL-PM3-QUIZ-VOC-003-03"
     },
     {
@@ -4763,7 +4763,7 @@ Object.assign(exerciseBank.Malay, {
           "Lunch"
         ]
       },
-      "explanation": "Breakfast is the meal we eat in the morning.",
+      "explanation": "We usually eat breakfast in the morning.",
       "id": "MAL-PM3-QUIZ-VOC-003-04"
     },
     {
@@ -4795,7 +4795,7 @@ Object.assign(exerciseBank.Malay, {
           "Apple"
         ]
       },
-      "explanation": "Orange juice comes from oranges.",
+      "explanation": "Orange juice is made from oranges.",
       "id": "MAL-PM3-QUIZ-VOC-003-06"
     },
     {
@@ -4817,7 +4817,7 @@ Object.assign(exerciseBank.Malay, {
           "Plate"
         ]
       },
-      "explanation": "A knife is used for cutting.",
+      "explanation": "A knife has a blade for cutting food.",
       "id": "MAL-PM3-QUIZ-VOC-003-07"
     },
     {
@@ -4831,7 +4831,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "We can cook vegetables before eating them.",
+      "explanation": "Some vegetables are cooked before we eat them.",
       "id": "MAL-PM3-QUIZ-VOC-003-08"
     },
     {
@@ -4849,7 +4849,7 @@ Object.assign(exerciseBank.Malay, {
           "Plate"
         ]
       },
-      "explanation": "A glass can hold water.",
+      "explanation": "A glass is made to hold a drink.",
       "id": "MAL-PM3-QUIZ-VOC-003-09"
     },
     {
@@ -4871,7 +4871,7 @@ Object.assign(exerciseBank.Malay, {
           "Bitter"
         ]
       },
-      "explanation": "Limes usually taste sour.",
+      "explanation": "Limes have a sour taste.",
       "id": "MAL-PM3-QUIZ-VOC-003-10"
     }
   ],
@@ -4895,7 +4895,7 @@ Object.assign(exerciseBank.Malay, {
           "Goat"
         ]
       },
-      "explanation": "A pigeon uses its wings to fly.",
+      "explanation": "Pigeons fly using their wings.",
       "id": "MAL-PM3-QUIZ-VOC-004-01"
     },
     {
@@ -4909,7 +4909,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Fish live in water and breathe through gills.",
+      "explanation": "Fish live and breathe in water.",
       "id": "MAL-PM3-QUIZ-VOC-004-02"
     },
     {
@@ -4949,7 +4949,7 @@ Object.assign(exerciseBank.Malay, {
           "Woody stem"
         ]
       },
-      "explanation": "Leaves are usually green.",
+      "explanation": "Leaves are usually green because of their colour pigment.",
       "id": "MAL-PM3-QUIZ-VOC-004-04"
     },
     {
@@ -4963,7 +4963,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Butterflies have six legs because they are insects.",
+      "explanation": "A butterfly is an insect, so it has six legs.",
       "id": "MAL-PM3-QUIZ-VOC-004-05"
     },
     {
@@ -4981,7 +4981,7 @@ Object.assign(exerciseBank.Malay, {
           "Nest"
         ]
       },
-      "explanation": "Chicks hatch from eggs.",
+      "explanation": "Baby chickens hatch from eggs.",
       "id": "MAL-PM3-QUIZ-VOC-004-06"
     },
     {
@@ -5003,7 +5003,7 @@ Object.assign(exerciseBank.Malay, {
           "Horse"
         ]
       },
-      "explanation": "Elephants use their trunks to pick things up.",
+      "explanation": "Elephants use their trunks to lift things.",
       "id": "MAL-PM3-QUIZ-VOC-004-07"
     },
     {
@@ -5017,7 +5017,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Flowers grow above the soil; roots grow below.",
+      "explanation": "Flowers usually grow above the ground, not below it.",
       "id": "MAL-PM3-QUIZ-VOC-004-08"
     },
     {
@@ -5035,7 +5035,7 @@ Object.assign(exerciseBank.Malay, {
           "Honey"
         ]
       },
-      "explanation": "Bees collect nectar and turn it into honey.",
+      "explanation": "Bees collect nectar from flowers to make honey.",
       "id": "MAL-PM3-QUIZ-VOC-004-09"
     },
     {
@@ -5057,7 +5057,7 @@ Object.assign(exerciseBank.Malay, {
           "Fish"
         ]
       },
-      "explanation": "Frogs use strong back legs to jump.",
+      "explanation": "Frogs have strong legs that help them jump.",
       "id": "MAL-PM3-QUIZ-VOC-004-10"
     }
   ],
@@ -5081,7 +5081,7 @@ Object.assign(exerciseBank.Malay, {
           "Bus station"
         ]
       },
-      "explanation": "A pharmacy is where we get medicine.",
+      "explanation": "A pharmacist gives out medicine at a pharmacy.",
       "id": "MAL-PM3-QUIZ-VOC-005-01"
     },
     {
@@ -5095,7 +5095,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "We can read and borrow books at a library.",
+      "explanation": "A library lets us read and borrow books.",
       "id": "MAL-PM3-QUIZ-VOC-005-02"
     },
     {
@@ -5113,7 +5113,7 @@ Object.assign(exerciseBank.Malay, {
           "Bus"
         ]
       },
-      "explanation": "An aeroplane flies through the sky.",
+      "explanation": "We travel through the sky in an aeroplane.",
       "id": "MAL-PM3-QUIZ-VOC-005-03"
     },
     {
@@ -5135,7 +5135,7 @@ Object.assign(exerciseBank.Malay, {
           "Bookshop"
         ]
       },
-      "explanation": "People wait for trains at train stations.",
+      "explanation": "People board trains at train stations.",
       "id": "MAL-PM3-QUIZ-VOC-005-04"
     },
     {
@@ -5149,7 +5149,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Traffic lights tell us when to stop or go.",
+      "explanation": "Traffic lights help drivers know when to stop.",
       "id": "MAL-PM3-QUIZ-VOC-005-05"
     },
     {
@@ -5167,7 +5167,7 @@ Object.assign(exerciseBank.Malay, {
           "Bus"
         ]
       },
-      "explanation": "A zebra crossing helps people cross the road.",
+      "explanation": "A zebra crossing helps us cross the road safely.",
       "id": "MAL-PM3-QUIZ-VOC-005-06"
     },
     {
@@ -5189,7 +5189,7 @@ Object.assign(exerciseBank.Malay, {
           "Boat"
         ]
       },
-      "explanation": "Trains travel on tracks.",
+      "explanation": "Trains travel along railway tracks.",
       "id": "MAL-PM3-QUIZ-VOC-005-07"
     },
     {
@@ -5203,7 +5203,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Ships stop at a harbour.",
+      "explanation": "Ships can dock at a harbour.",
       "id": "MAL-PM3-QUIZ-VOC-005-08"
     },
     {
@@ -5221,7 +5221,7 @@ Object.assign(exerciseBank.Malay, {
           "Hospital"
         ]
       },
-      "explanation": "A post office is where we send letters.",
+      "explanation": "We send letters from a post office.",
       "id": "MAL-PM3-QUIZ-VOC-005-09"
     },
     {
@@ -5243,7 +5243,7 @@ Object.assign(exerciseBank.Malay, {
           "Stadium"
         ]
       },
-      "explanation": "A zoo is a place where animals are cared for.",
+      "explanation": "Many different animals are cared for at a zoo.",
       "id": "MAL-PM3-QUIZ-VOC-005-10"
     }
   ],
@@ -5267,7 +5267,7 @@ Object.assign(exerciseBank.Malay, {
           "Belt"
         ]
       },
-      "explanation": "We wear socks inside shoes.",
+      "explanation": "Socks cover our feet inside our shoes.",
       "id": "MAL-PM3-QUIZ-VOC-006-01"
     },
     {
@@ -5281,7 +5281,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "An umbrella helps keep the rain off.",
+      "explanation": "An umbrella keeps rain from falling on us.",
       "id": "MAL-PM3-QUIZ-VOC-006-02"
     },
     {
@@ -5299,7 +5299,7 @@ Object.assign(exerciseBank.Malay, {
           "Toothbrush"
         ]
       },
-      "explanation": "A comb helps tidy our hair.",
+      "explanation": "A comb helps us untangle and tidy our hair.",
       "id": "MAL-PM3-QUIZ-VOC-006-03"
     },
     {
@@ -5321,7 +5321,7 @@ Object.assign(exerciseBank.Malay, {
           "Bag"
         ]
       },
-      "explanation": "A watch tells us the time.",
+      "explanation": "A watch shows us the time.",
       "id": "MAL-PM3-QUIZ-VOC-006-04"
     },
     {
@@ -5335,7 +5335,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Gloves go on our hands, not our heads.",
+      "explanation": "Gloves go on hands, not heads.",
       "id": "MAL-PM3-QUIZ-VOC-006-05"
     },
     {
@@ -5353,7 +5353,7 @@ Object.assign(exerciseBank.Malay, {
           "Blanket"
         ]
       },
-      "explanation": "A towel helps dry our skin.",
+      "explanation": "A towel helps dry our body after a bath.",
       "id": "MAL-PM3-QUIZ-VOC-006-06"
     },
     {
@@ -5375,7 +5375,7 @@ Object.assign(exerciseBank.Malay, {
           "Tongs"
         ]
       },
-      "explanation": "A key opens a lock.",
+      "explanation": "A key fits into a lock to open it.",
       "id": "MAL-PM3-QUIZ-VOC-006-07"
     },
     {
@@ -5389,7 +5389,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "A pillow supports our head in bed.",
+      "explanation": "A pillow supports our head while we sleep.",
       "id": "MAL-PM3-QUIZ-VOC-006-08"
     },
     {
@@ -5407,7 +5407,7 @@ Object.assign(exerciseBank.Malay, {
           "Socks"
         ]
       },
-      "explanation": "A hat shades our head from the sun.",
+      "explanation": "A hat can protect our head from the sun.",
       "id": "MAL-PM3-QUIZ-VOC-006-09"
     },
     {
@@ -5429,7 +5429,7 @@ Object.assign(exerciseBank.Malay, {
           "Bottle opener"
         ]
       },
-      "explanation": "A broom sweeps dirt from the floor.",
+      "explanation": "A broom helps sweep dust off the floor.",
       "id": "MAL-PM3-QUIZ-VOC-006-10"
     }
   ]
@@ -5644,7 +5644,7 @@ Object.assign(exerciseBank.Malay, {
           "In"
         ]
       },
-      "explanation": "Menyiram is the action of watering.",
+      "explanation": "Menyiram is what we do when we water flowers.",
       "id": "MAL-PM3-QUIZ-GRM-003-01"
     },
     {
@@ -5658,7 +5658,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Menyanyi is something we do with our voice.",
+      "explanation": "Menyanyi is the action of singing.",
       "id": "MAL-PM3-QUIZ-GRM-003-02"
     },
     {
@@ -5676,7 +5676,7 @@ Object.assign(exerciseBank.Malay, {
           "Draws"
         ]
       },
-      "explanation": "Menendang means kicking with a foot.",
+      "explanation": "We kick a ball with our feet.",
       "id": "MAL-PM3-QUIZ-GRM-003-03"
     },
     {
@@ -5698,7 +5698,7 @@ Object.assign(exerciseBank.Malay, {
           "Beautiful"
         ]
       },
-      "explanation": "Menutup means closing something.",
+      "explanation": "Menutup is what we do when we close a door.",
       "id": "MAL-PM3-QUIZ-GRM-003-04"
     },
     {
@@ -5712,7 +5712,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Tidur is the action of sleeping.",
+      "explanation": "Sleeping is something we do, so tidur is a verb.",
       "id": "MAL-PM3-QUIZ-GRM-003-05"
     },
     {
@@ -5730,7 +5730,7 @@ Object.assign(exerciseBank.Malay, {
           "Cuts"
         ]
       },
-      "explanation": "Menggosok gigi means brushing teeth.",
+      "explanation": "We use a toothbrush when we brush our teeth.",
       "id": "MAL-PM3-QUIZ-GRM-003-06"
     },
     {
@@ -5752,7 +5752,7 @@ Object.assign(exerciseBank.Malay, {
           "Sits on a chair"
         ]
       },
-      "explanation": "Berenang means moving through water.",
+      "explanation": "Berenang means moving through water by swimming.",
       "id": "MAL-PM3-QUIZ-GRM-003-07"
     },
     {
@@ -5766,7 +5766,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Besar tells us the size, not an action.",
+      "explanation": "Besar tells us the size, not what someone does.",
       "id": "MAL-PM3-QUIZ-GRM-003-08"
     },
     {
@@ -5784,7 +5784,7 @@ Object.assign(exerciseBank.Malay, {
           "Reads"
         ]
       },
-      "explanation": "Membasuh means washing something.",
+      "explanation": "We wash dirty clothes to make them clean.",
       "id": "MAL-PM3-QUIZ-GRM-003-09"
     },
     {
@@ -5806,7 +5806,7 @@ Object.assign(exerciseBank.Malay, {
           "The rabbit is by the fence."
         ]
       },
-      "explanation": "Melompat is the action of jumping.",
+      "explanation": "Melompat shows the action of jumping.",
       "id": "MAL-PM3-QUIZ-GRM-003-10"
     }
   ],
@@ -5830,7 +5830,7 @@ Object.assign(exerciseBank.Malay, {
           "Garden"
         ]
       },
-      "explanation": "Besar tells us something is big.",
+      "explanation": "Besar tells us how big something is.",
       "id": "MAL-PM3-QUIZ-GRM-004-01"
     },
     {
@@ -5844,7 +5844,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Lembut tells us something feels soft.",
+      "explanation": "Lembut tells us how soft something feels.",
       "id": "MAL-PM3-QUIZ-GRM-004-02"
     },
     {
@@ -5884,7 +5884,7 @@ Object.assign(exerciseBank.Malay, {
           "Rough"
         ]
       },
-      "explanation": "Nyaring describes a high, clear sound.",
+      "explanation": "Nyaring describes a clear, high ringing sound.",
       "id": "MAL-PM3-QUIZ-GRM-004-04"
     },
     {
@@ -5898,7 +5898,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Words like lonjong tell us about shape.",
+      "explanation": "Adjectives can tell us what shape something has.",
       "id": "MAL-PM3-QUIZ-GRM-004-05"
     },
     {
@@ -5916,7 +5916,7 @@ Object.assign(exerciseBank.Malay, {
           "Bright"
         ]
       },
-      "explanation": "At night the sky is usually dark.",
+      "explanation": "The sky looks dark when there is little light.",
       "id": "MAL-PM3-QUIZ-GRM-004-06"
     },
     {
@@ -5938,7 +5938,7 @@ Object.assign(exerciseBank.Malay, {
           "Spicy"
         ]
       },
-      "explanation": "Sugar tastes sweet.",
+      "explanation": "Sugar tastes sweet, so manis fits.",
       "id": "MAL-PM3-QUIZ-GRM-004-07"
     },
     {
@@ -5952,7 +5952,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Laju tells us how fast the car goes.",
+      "explanation": "Laju tells us how fast the car is.",
       "id": "MAL-PM3-QUIZ-GRM-004-08"
     },
     {
@@ -5970,7 +5970,7 @@ Object.assign(exerciseBank.Malay, {
           "Hard"
         ]
       },
-      "explanation": "Halus means the fur feels fine and soft.",
+      "explanation": "Halus describes fur that feels fine and soft.",
       "id": "MAL-PM3-QUIZ-GRM-004-09"
     },
     {
@@ -5992,7 +5992,7 @@ Object.assign(exerciseBank.Malay, {
           "Quiet"
         ]
       },
-      "explanation": "Berlubang means the road has holes.",
+      "explanation": "Berlubang tells us that the road has holes.",
       "id": "MAL-PM3-QUIZ-GRM-004-10"
     }
   ],
@@ -6016,7 +6016,7 @@ Object.assign(exerciseBank.Malay, {
           "We (excluding you)"
         ]
       },
-      "explanation": "Kamu means the person you're talking to.",
+      "explanation": "Use kamu when speaking to another person.",
       "id": "MAL-PM3-QUIZ-GRM-005-01"
     },
     {
@@ -6030,7 +6030,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Dia means one person, boy or girl.",
+      "explanation": "Dia can mean either he or she.",
       "id": "MAL-PM3-QUIZ-GRM-005-02"
     },
     {
@@ -6048,7 +6048,7 @@ Object.assign(exerciseBank.Malay, {
           "He or she"
         ]
       },
-      "explanation": "Saya means 'I' when talking about yourself.",
+      "explanation": "Lina says saya because she is talking about herself.",
       "id": "MAL-PM3-QUIZ-GRM-005-03"
     },
     {
@@ -6070,7 +6070,7 @@ Object.assign(exerciseBank.Malay, {
           "You"
         ]
       },
-      "explanation": "Dia can stand for Farid.",
+      "explanation": "Use dia when talking about one person, like Farid.",
       "id": "MAL-PM3-QUIZ-GRM-005-04"
     },
     {
@@ -6084,7 +6084,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Mereka means a group of people.",
+      "explanation": "Mereka means a group, not just one person.",
       "id": "MAL-PM3-QUIZ-GRM-005-05"
     },
     {
@@ -6102,7 +6102,7 @@ Object.assign(exerciseBank.Malay, {
           "I"
         ]
       },
-      "explanation": "Mereka means both Ali and Bakar.",
+      "explanation": "Ali and Bakar are two people, so we use mereka.",
       "id": "MAL-PM3-QUIZ-GRM-005-06"
     },
     {
@@ -6124,7 +6124,7 @@ Object.assign(exerciseBank.Malay, {
           "They"
         ]
       },
-      "explanation": "Aku is a casual way to say 'I'.",
+      "explanation": "Aku means 'I' when speaking casually.",
       "id": "MAL-PM3-QUIZ-GRM-005-07"
     },
     {
@@ -6138,7 +6138,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Awak means the person you are talking to.",
+      "explanation": "Awak is used when speaking directly to someone.",
       "id": "MAL-PM3-QUIZ-GRM-005-08"
     },
     {
@@ -6156,7 +6156,7 @@ Object.assign(exerciseBank.Malay, {
           "He or she"
         ]
       },
-      "explanation": "Awak fits when talking to your friend.",
+      "explanation": "Aina is speaking to her friend, so awak fits.",
       "id": "MAL-PM3-QUIZ-GRM-005-09"
     },
     {
@@ -6178,7 +6178,7 @@ Object.assign(exerciseBank.Malay, {
           "He or she"
         ]
       },
-      "explanation": "Kami means 'we', but not the person you're talking to.",
+      "explanation": "Kami means 'we', but does not include the person listening.",
       "id": "MAL-PM3-QUIZ-GRM-005-10"
     }
   ],
@@ -6202,7 +6202,7 @@ Object.assign(exerciseBank.Malay, {
           "rina plays ball (no full stop)"
         ]
       },
-      "explanation": "Start with a capital letter and finish with a full stop.",
+      "explanation": "The first letter is capital, and the sentence ends with a full stop.",
       "id": "MAL-PM3-QUIZ-GRM-006-01"
     },
     {
@@ -6216,7 +6216,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "This sentence tells us something, so it is a statement.",
+      "explanation": "This sentence tells us something instead of asking a question.",
       "id": "MAL-PM3-QUIZ-GRM-006-02"
     },
     {
@@ -6234,7 +6234,7 @@ Object.assign(exerciseBank.Malay, {
           "Red"
         ]
       },
-      "explanation": "Kasut means shoes. Merah means red. We are asking where our shoes are.",
+      "explanation": "Kasut means shoes. Merah means red. The question is about shoes.",
       "id": "MAL-PM3-QUIZ-GRM-006-03"
     },
     {
@@ -6256,7 +6256,7 @@ Object.assign(exerciseBank.Malay, {
           "He or she is sitting."
         ]
       },
-      "explanation": "Sila duduk is a polite way to ask someone to sit.",
+      "explanation": "Sila makes the request to sit polite.",
       "id": "MAL-PM3-QUIZ-GRM-006-04"
     },
     {
@@ -6270,7 +6270,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "Mengapa starts a question asking why.",
+      "explanation": "Mengapa is used when we want to know why.",
       "id": "MAL-PM3-QUIZ-GRM-006-05"
     },
     {
@@ -6288,7 +6288,7 @@ Object.assign(exerciseBank.Malay, {
           "Where"
         ]
       },
-      "explanation": "Mengapa asks for a reason.",
+      "explanation": "We use mengapa when asking for a reason.",
       "id": "MAL-PM3-QUIZ-GRM-006-06"
     },
     {
@@ -6310,7 +6310,7 @@ Object.assign(exerciseBank.Malay, {
           "The bus is blue."
         ]
       },
-      "explanation": "Wah! shows someone is surprised.",
+      "explanation": "Wah! is a way to show surprise.",
       "id": "MAL-PM3-QUIZ-GRM-006-07"
     },
     {
@@ -6324,7 +6324,7 @@ Object.assign(exerciseBank.Malay, {
           "False"
         ]
       },
-      "explanation": "That sentence asks someone to close a door; it isn't a question.",
+      "explanation": "This sentence asks someone to do something; it isn't a question.",
       "id": "MAL-PM3-QUIZ-GRM-006-08"
     },
     {
@@ -6342,7 +6342,7 @@ Object.assign(exerciseBank.Malay, {
           "Eating"
         ]
       },
-      "explanation": "Menaiki means travelling on a bus or other vehicle.",
+      "explanation": "Menaiki fits because we travel to school on a bus.",
       "id": "MAL-PM3-QUIZ-GRM-006-09"
     },
     {
@@ -6364,7 +6364,7 @@ Object.assign(exerciseBank.Malay, {
           "Incorrect word order"
         ]
       },
-      "explanation": "Adik minum susu puts the words in the right order.",
+      "explanation": "The words tell us who is drinking and what they drink.",
       "id": "MAL-PM3-QUIZ-GRM-006-10"
     }
   ]
