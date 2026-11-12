@@ -1566,6 +1566,20 @@ function qrCheckFormula(i,moveNext=false){
  symbol.textContent=correct?'✓':'✕';
  symbol.classList.add(correct?'formula-correct':'formula-wrong');
  symbol.setAttribute('aria-label',correct?'Correct':'Incorrect');
+ const detail=(correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||'';
+ symbol.title=detail;
+ const panel=$('answerFeedback');panel.replaceChildren();
+ const message=document.createElement('span');
+ message.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');
+ message.setAttribute('role','status');
+ const statusIcon=document.createElement('span');
+ statusIcon.className='feedback-symbol';statusIcon.textContent=correct?'✓':'✕';
+ const statusText=document.createElement('span');
+ statusText.className='feedback-explanation';
+ const statusHeading=document.createElement('strong');
+ statusHeading.textContent=correct?'Correct! ':'Incorrect. ';
+ statusText.append(statusHeading,document.createTextNode(detail));
+ message.append(statusIcon,statusText);panel.appendChild(message);panel.classList.remove('hidden');
  qrFormulaProgress();
  if(moveNext){
   const next=$('formula'+(i+1));
