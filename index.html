@@ -1449,7 +1449,7 @@ const qrLanguageQuizTitles={
   '문법':'문법 (Grammar)'
  }
 };
-function qrDisplayQuizTopic(s,topic){return qrLanguageQuizTitles[s]?.[topic]||topic}
+function qrDisplayQuizTopic(s,topic){return s==='English'&&topic==='Word Meanings 2'?'Vocabulary':qrLanguageQuizTitles[s]?.[topic]||topic}
 function availableEntries(level,s,category){
  const entries=[];
  // Each category is shown only when it contains real playable questions.
@@ -1707,8 +1707,11 @@ function submitAnswer(){
   let feedback=document.createElement('span');feedback.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');feedback.setAttribute('role','status');
   let symbol=document.createElement('span');symbol.className='feedback-symbol';symbol.textContent=correct?'✓':'✕';
   let explanation=document.createElement('span');explanation.className='feedback-explanation';
-  const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Incorrect. ';
-  explanation.append(heading,document.createTextNode((correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||''));
+  const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Wrong! ';
+  const answerText=q.type==='mc'?q.options[q.correct]:q.type==='tf'?(q.expected?'True':'False'):q.expected;
+  const answerLabel=document.createElement('strong');answerLabel.textContent=String(answerText)+'.';
+  const message=(correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||'';
+  explanation.append(heading,document.createTextNode('The answer is '),answerLabel,document.createTextNode(message?' '+message:''));
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
