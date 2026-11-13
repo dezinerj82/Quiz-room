@@ -1709,7 +1709,7 @@ function submitAnswer(){
   let explanation=document.createElement('span');explanation.className='feedback-explanation';
   const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Wrong! ';
   const answerText=q.type==='mc'?q.options[q.correct]:q.type==='tf'?(q.expected?'True':'False'):q.expected;
-  const answerLabel=document.createElement('strong');answerLabel.textContent=String(answerText)+'.';
+  const answerLabel=document.createElement('strong');answerLabel.textContent=String(answerText)+(/[.!?]$/.test(String(answerText))?'':'.');
   const message=(correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||'';
   explanation.append(heading,document.createTextNode('The answer is '),answerLabel,document.createTextNode(message?' '+message:''));
   feedback.append(symbol,explanation);
