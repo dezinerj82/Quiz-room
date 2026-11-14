@@ -238,7 +238,7 @@ const exerciseBank={
         ]
       }
     ]
-  }
+  },
   "Malay": {
     "Kosa Kata": [
       {
