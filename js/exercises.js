@@ -1,5 +1,6 @@
 /* Eight PM3 revision quizzes. Original question IDs are kept for score history. */
 const exerciseBank={
+  
   "English": {
     "Word Meanings 2": [
       {
@@ -13,7 +14,7 @@ const exerciseBank={
           "Strong"
         ],
         "correct": 0,
-        "explanationCorrect": "A fragile thing breaks easily, like a thin glass.",
+        "explanationCorrect": "Fragile means easy to break.",
         "explanationIncorrect": "Fragile describes something that can break easily."
       },
       {
@@ -27,8 +28,8 @@ const exerciseBank={
           "Tiny"
         ],
         "correct": 1,
-        "explanationCorrect": "Enormous means much bigger than usual.",
-        "explanationIncorrect": "Enormous means very big, not tiny or narrow."
+        "explanationCorrect": "Enormous means extremely big.",
+        "explanationIncorrect": "Enormous describes something very big, not small."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-03",
@@ -41,8 +42,8 @@ const exerciseBank={
           "To copy"
         ],
         "correct": 1,
-        "explanationCorrect": "Protecting something means keeping it from harm.",
-        "explanationIncorrect": "When we protect something, we keep it safe."
+        "explanationCorrect": "To protect means to keep something safe.",
+        "explanationIncorrect": "To protect something is to keep it from harm."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-04",
@@ -55,40 +56,40 @@ const exerciseBank={
           "Secret"
         ],
         "correct": 0,
-        "explanationCorrect": "Ordinary describes something normal or everyday.",
-        "explanationIncorrect": "Ordinary means common, not rare or secret."
+        "explanationCorrect": "Ordinary means normal or not special.",
+        "explanationIncorrect": "Ordinary describes something common or usual."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-05",
         "q": "The word 'ancient' means very old.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "Ancient things come from a very long time ago.",
-        "explanationIncorrect": "Ancient means very old, so the statement is true."
+        "explanationCorrect": "Ancient means very old.",
+        "explanationIncorrect": "Ancient describes something from long ago."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-06",
         "q": "The word 'generous' means unwilling to share.",
         "type": "tf",
         "expected": false,
-        "explanationCorrect": "Someone generous is happy to share.",
-        "explanationIncorrect": "Generous means willing to share, not refusing to share."
+        "explanationCorrect": "Generous means willing to share.",
+        "explanationIncorrect": "Generous means happy to give or share, not unwilling."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-07",
         "q": "A journey is a trip from one place to another.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "A journey takes us from one place to another.",
-        "explanationIncorrect": "A journey is a trip, so the statement is true."
+        "explanationCorrect": "A journey is a trip from one place to another.",
+        "explanationIncorrect": "A journey means travelling from one place to another."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-08",
         "q": "Fill in the blank: I borrowed a book from the ____.",
         "type": "drop",
         "expected": "library",
-        "explanationCorrect": "A library lends books for people to read.",
-        "explanationIncorrect": "We borrow books from a library.",
+        "explanationCorrect": "A library is a place to read or borrow books.",
+        "explanationIncorrect": "A library is where people can borrow books.",
         "options": [
           "library",
           "hospital"
@@ -99,8 +100,8 @@ const exerciseBank={
         "q": "Fill in the blank: After running in the sun, I was very ____ and needed water.",
         "type": "drop",
         "expected": "thirsty",
-        "explanationCorrect": "Running in the heat can make us want water.",
-        "explanationIncorrect": "Thirsty means needing a drink.",
+        "explanationCorrect": "Thirsty means needing a drink.",
+        "explanationIncorrect": "Thirsty means wanting something to drink, not food.",
         "options": [
           "thirsty",
           "hungry"
@@ -112,7 +113,7 @@ const exerciseBank={
         "type": "drop",
         "expected": "author",
         "explanationCorrect": "An author is someone who writes books.",
-        "explanationIncorrect": "The person who writes a book is its author.",
+        "explanationIncorrect": "An author writes books; an actor performs in plays or films.",
         "options": [
           "author",
           "actor"
@@ -131,8 +132,8 @@ const exerciseBank={
           "Goes"
         ],
         "correct": 2,
-        "explanationCorrect": "We say went when an action happened in the past.",
-        "explanationIncorrect": "Go changes to went when we talk about the past."
+        "explanationCorrect": "Went is the past tense of go.",
+        "explanationIncorrect": "We use went for the past, not goed."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-02",
@@ -145,8 +146,8 @@ const exerciseBank={
           "Children"
         ],
         "correct": 3,
-        "explanationCorrect": "Children means more than one child.",
-        "explanationIncorrect": "For more than one child, we say children, not childs."
+        "explanationCorrect": "Children is the plural of child.",
+        "explanationIncorrect": "We say children for more than one child, not childs."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-03",
@@ -159,8 +160,8 @@ const exerciseBank={
           "gone"
         ],
         "correct": 1,
-        "explanationCorrect": "With she, we say goes for something she does every day.",
-        "explanationIncorrect": "With she, the verb is goes, not go."
+        "explanationCorrect": "We use goes with she for everyday actions.",
+        "explanationIncorrect": "With she, we say goes, not go."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-04",
@@ -173,7 +174,7 @@ const exerciseBank={
           "Where you are going?"
         ],
         "correct": 1,
-        "explanationCorrect": "A question ends with a question mark.",
+        "explanationCorrect": "A question ends with a question mark (?).",
         "explanationIncorrect": "A question needs a question mark, not a full stop."
       },
       {
@@ -181,7 +182,7 @@ const exerciseBank={
         "q": "In 'The cats are sleeping,' the word 'cats' is plural.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "Cats means more than one cat.",
+        "explanationCorrect": "Cats is plural because it means more than one cat.",
         "explanationIncorrect": "The s in cats shows there is more than one."
       },
       {
@@ -190,7 +191,7 @@ const exerciseBank={
         "type": "tf",
         "expected": false,
         "explanationCorrect": "We say he plays, not he play.",
-        "explanationIncorrect": "He needs plays when we talk about his usual activities."
+        "explanationIncorrect": "With he, add s to play: he plays."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-07",
@@ -198,15 +199,15 @@ const exerciseBank={
         "type": "tf",
         "expected": true,
         "explanationCorrect": "Quickly tells us how she ran.",
-        "explanationIncorrect": "Quickly describes the action, so it is an adverb."
+        "explanationIncorrect": "Quickly describes how an action happens."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-08",
         "q": "Fill in the blank: Yesterday, I ____ my homework before dinner.",
         "type": "drop",
         "expected": "did",
-        "explanationCorrect": "Yesterday tells us the action happened in the past.",
-        "explanationIncorrect": "Did is the past form of do.",
+        "explanationCorrect": "Did is the past tense of do.",
+        "explanationIncorrect": "We use did for something done yesterday.",
         "options": [
           "did",
           "do"
@@ -217,8 +218,8 @@ const exerciseBank={
         "q": "Fill in the blank: I saw ____ elephant at the zoo.",
         "type": "drop",
         "expected": "an",
-        "explanationCorrect": "Elephant begins with a vowel sound.",
-        "explanationIncorrect": "We say an elephant because elephant starts with a vowel sound.",
+        "explanationCorrect": "We use an before the vowel sound in elephant.",
+        "explanationIncorrect": "Elephant starts with a vowel sound, so we say an elephant.",
         "options": [
           "an",
           "a"
@@ -229,15 +230,15 @@ const exerciseBank={
         "q": "Fill in the blank: They ____ playing in the park now.",
         "type": "drop",
         "expected": "are",
-        "explanationCorrect": "They needs are before a verb ending in -ing.",
-        "explanationIncorrect": "We say they are playing, not they is playing.",
+        "explanationCorrect": "We say they are playing, not they is playing.",
+        "explanationIncorrect": "Use are with they: they are playing.",
         "options": [
           "are",
           "is"
         ]
       }
     ]
-  },
+  }
   "Malay": {
     "Kosa Kata": [
       {
