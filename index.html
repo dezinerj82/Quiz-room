@@ -827,11 +827,16 @@ body:not(.auth-locked) #quiz .answer.answer-wrong{
  background:color-mix(in srgb,var(--qr-error) 18%,var(--qr-background))!important;
  border-color:var(--qr-error)!important;color:var(--qr-text-error)!important;
 }
-/* Softer green when showing the right answer after an incorrect selection. */
+/* Gentle third-level correct reveal, separate from a fully correct selection. */
+body:not(.auth-locked) #quiz{
+ --qr-reveal-fill:color-mix(in srgb,var(--qr-success) 5%,var(--qr-background));
+ --qr-reveal-border:color-mix(in srgb,var(--qr-success) 30%,var(--qr-background));
+ --qr-reveal-marker:color-mix(in srgb,var(--qr-success) 35%,var(--qr-background));
+}
 body:not(.auth-locked) #quiz .answer.answer-correct.answer-revealed{
  opacity:1!important;
- background:color-mix(in srgb,var(--qr-success) 9%,var(--qr-background))!important;
- border-color:color-mix(in srgb,var(--qr-success) 60%,var(--qr-background))!important;
+ background:var(--qr-reveal-fill)!important;
+ border-color:var(--qr-reveal-border)!important;
  color:var(--qr-text-success)!important;
 }
 body:not(.auth-locked) #quiz .answer.answer-correct::after,
@@ -840,6 +845,10 @@ body:not(.auth-locked) #quiz .answer.answer-wrong::after{
  width:27px;height:27px;border-radius:50%;font-size:17px;line-height:1;font-weight:800;color:var(--qr-background);
 }
 body:not(.auth-locked) #quiz .answer.answer-correct::after{content:"✓";background:var(--qr-success)}
+body:not(.auth-locked) #quiz .answer.answer-correct.answer-revealed::after{
+ background:var(--qr-reveal-marker)!important;
+ color:var(--qr-on-background)!important;
+}
 body:not(.auth-locked) #quiz .answer.answer-wrong::after{content:"✕";background:var(--qr-error)}
 body:not(.auth-locked) #quiz .answer-feedback{
  display:grid;gap:var(--density-space);font-size:var(--qr-font-body);text-align:left;
@@ -851,14 +860,15 @@ body:not(.auth-locked) #quiz .answer-feedback .feedback-explanation strong{font-
 body:not(.auth-locked) #quiz .answer-feedback .feedback-reference{font-weight:700;color:inherit}
 body:not(.auth-locked) #quiz .answer-feedback .foundation-term{
  display:inline-flex;align-items:center;gap:4px;position:relative;vertical-align:baseline;
- padding:1px 7px;border:1px solid #6BA4C0;border-radius:999px;
- background:#DCEFF9;color:#245273;font:inherit;font-weight:600;line-height:1.35;
- cursor:help;
+ padding:1px 7px;border:0;border-radius:999px;
+ background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));
+ color:var(--qr-text-primary);font:inherit;font-weight:600;line-height:1.35;
+ cursor:help;box-shadow:none;
 }
 body:not(.auth-locked) #quiz .answer-feedback .foundation-term .foundation-info{font-size:.85em;line-height:1}
-body:not(.auth-locked) #quiz .answer-feedback .foundation-term:hover,
-body:not(.auth-locked) #quiz .answer-feedback .foundation-term:focus-visible{
- outline:2px solid #6BA4C0;outline-offset:2px;
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term:is(:hover,:focus-visible){
+ background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;
+ outline:none!important;outline-offset:0!important;box-shadow:none!important;
 }
 /* The glossary tip follows the cursor in a fixed viewport layer. */
 body:not(.auth-locked) .qr-foundation-tooltip{
