@@ -1104,7 +1104,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-01",
-        "explanation": "Kucing means cat. A cat is an animal that has fur, whiskers and four legs."
+        "explanation": "Kucing means cat. A cat is an animal with fur, whiskers and four legs."
       },
       {
         "type": "tf",
@@ -1118,7 +1118,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-02",
-        "explanation": "Pisang means banana. A banana is a fruit that grows on a plant."
+        "explanation": "Pisang means banana. A banana is a fruit that grows in bunches on a banana plant."
       },
       {
         "type": "drop",
@@ -1136,7 +1136,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-03",
-        "explanation": "Cawan means cup. We use a cup to hold water or other drinks."
+        "explanation": "Cawan means cup. A cup is used to hold water or another drink."
       },
       {
         "type": "mc",
@@ -1172,7 +1172,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-05",
-        "explanation": "Ayam means chicken. A chicken is a bird, which is a type of animal."
+        "explanation": "Ayam means chicken. A chicken is a bird, and birds are animals."
       },
       {
         "type": "drop",
@@ -1190,7 +1190,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-06",
-        "explanation": "Pensel means pencil. A pencil is used for writing and drawing on paper."
+        "explanation": "Pensel means pencil. A pencil is a tool for writing and drawing on paper."
       },
       {
         "type": "mc",
@@ -1212,7 +1212,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-07",
-        "explanation": "Hidung means nose. Your nose is a body part that helps you smell."
+        "explanation": "Hidung means nose. It is a body part that helps us smell and breathe."
       },
       {
         "type": "tf",
@@ -1226,7 +1226,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-08",
-        "explanation": "Satu means one. It is the number we start with when counting."
+        "explanation": "Satu means one. It is the first number when we count upwards."
       },
       {
         "type": "drop",
@@ -1244,7 +1244,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-09",
-        "explanation": "Katil means bed. A bed is where we lie down to sleep."
+        "explanation": "Katil means bed. A bed is furniture made for lying down and sleeping."
       },
       {
         "type": "mc",
@@ -1266,7 +1266,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-10",
-        "explanation": "Sekolah means school. A school is where children go to learn new things."
+        "explanation": "Sekolah means school. It is a place where pupils go to study and learn."
       }
     ],
     "Tatabahasa": [
@@ -1290,7 +1290,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-01",
-        "explanation": "Saya means I, makan means eat, and nasi means rice. This order tells us who is eating and what they eat."
+        "explanation": "Saya means I, makan means eat and nasi means rice. Malay sentences usually put the person first, then the action, then the thing affected by the action."
       },
       {
         "type": "tf",
@@ -1304,7 +1304,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-02",
-        "explanation": "Saya means I. We use it when talking about ourselves."
+        "explanation": "Saya means I. We use it to talk about ourselves, the person speaking."
       },
       {
         "type": "drop",
@@ -1322,7 +1322,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-03",
-        "explanation": "Membaca means read. It is the action we do when looking at the words in a book."
+        "explanation": "Membaca means reading. It is a kata kerja, or action word, because it tells us what Ali does with the book."
       },
       {
         "type": "mc",
@@ -1344,7 +1344,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-04",
-        "explanation": "Mereka means they. We use it when talking about a group of people."
+        "explanation": "Mereka means they. It is a kata ganti nama, or pronoun, used for a group of people."
       },
       {
         "type": "tf",
@@ -1358,7 +1358,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-05",
-        "explanation": "An ayat tanya is a question. It usually ends with a question mark (?)."
+        "explanation": "Ayat tanya means a question sentence. A question mark (?) at the end shows that someone is asking something."
       },
       {
         "type": "drop",
@@ -1376,7 +1376,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-06",
-        "explanation": "Merah means red. It describes the colour of the shirt."
+        "explanation": "Merah means red. It is a kata adjektif, or describing word, because it tells us the shirt's colour."
       },
       {
         "type": "mc",
@@ -1398,7 +1398,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-07",
-        "explanation": "Bulat means round. It describes the shape of the ball."
+        "explanation": "Bulat means round. It is a kata adjektif because it describes the ball's shape."
       },
       {
         "type": "tf",
@@ -1412,7 +1412,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-08",
-        "explanation": "Cantik means beautiful. It is a describing word, called a kata adjektif."
+        "explanation": "Cantik means beautiful. It is a kata adjektif because it describes how something looks."
       },
       {
         "type": "drop",
@@ -1430,7 +1430,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-09",
-        "explanation": "Di means in, at or on. Here it tells us where Mum is cooking."
+        "explanation": "Di means in, at or on. It tells us where something happens, so di dapur means in the kitchen."
       },
       {
         "type": "mc",
@@ -1452,7 +1452,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-10",
-        "explanation": "Di manakah means where. It is used to ask about the place of something."
+        "explanation": "Di manakah means where. It makes the sentence a question asking about the bag's location."
       }
     ],
     "Keluarga dan Rakan": [
@@ -1475,7 +1475,7 @@ const exerciseBank={
             "Younger sibling"
           ]
         },
-        "explanation": "Your father's mother is your grandmother.",
+        "explanation": "Nenek means grandmother. Your father's mother is your grandmother because she is the mother of one of your parents.",
         "id": "MAL-PM3-QUIZ-VOC-002-01"
       },
       {
@@ -1489,7 +1489,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Abang is a brother who is older than you.",
+        "explanation": "Abang means older brother. It describes a male sibling who is older than you.",
         "id": "MAL-PM3-QUIZ-VOC-002-02"
       },
       {
@@ -1507,7 +1507,7 @@ const exerciseBank={
             "Grandmother"
           ]
         },
-        "explanation": "A friend is someone you can play with.",
+        "explanation": "Kawan means friend. A friend is someone you know and enjoy spending time or playing with.",
         "id": "MAL-PM3-QUIZ-VOC-002-03"
       },
       {
@@ -1529,7 +1529,7 @@ const exerciseBank={
             "Grandmother"
           ]
         },
-        "explanation": "Adik perempuan is a sister younger than you.",
+        "explanation": "Adik perempuan means younger sister. Adik shows that the sibling is younger, and perempuan means female.",
         "id": "MAL-PM3-QUIZ-VOC-002-04"
       },
       {
@@ -1543,7 +1543,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Your parent's father is your grandfather.",
+        "explanation": "Datuk means grandfather. Your mother's or father's father is your grandfather.",
         "id": "MAL-PM3-QUIZ-VOC-002-05"
       },
       {
@@ -1561,7 +1561,7 @@ const exerciseBank={
             "Grandchild"
           ]
         },
-        "explanation": "Ayah is another word for Dad.",
+        "explanation": "Ayah means father or Dad. It is a word children use to address or talk about their father.",
         "id": "MAL-PM3-QUIZ-VOC-002-06"
       },
       {
@@ -1583,7 +1583,7 @@ const exerciseBank={
             "Older sister"
           ]
         },
-        "explanation": "Your child's child is your grandchild.",
+        "explanation": "Cucu means grandchild. Your child's son or daughter is your grandchild.",
         "id": "MAL-PM3-QUIZ-VOC-002-07"
       },
       {
@@ -1597,7 +1597,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Your cousin is your aunt's or uncle's child.",
+        "explanation": "Sepupu means cousin. A cousin is the child of your aunt or uncle.",
         "id": "MAL-PM3-QUIZ-VOC-002-08"
       },
       {
@@ -1615,7 +1615,7 @@ const exerciseBank={
             "Male"
           ]
         },
-        "explanation": "Kakak is a sister who is older than you.",
+        "explanation": "Kakak means older sister. Kakak tells us the sibling is a girl or woman who is older.",
         "id": "MAL-PM3-QUIZ-VOC-002-09"
       },
       {
@@ -1637,7 +1637,7 @@ const exerciseBank={
             "Mother"
           ]
         },
-        "explanation": "Your uncle's child is your cousin.",
+        "explanation": "Sepupu means cousin. Your uncle's or aunt's child is your cousin.",
         "id": "MAL-PM3-QUIZ-VOC-002-10"
       }
     ],
@@ -1661,7 +1661,7 @@ const exerciseBank={
             "Noodles"
           ]
         },
-        "explanation": "Milk is used to make cheese.",
+        "explanation": "Keju means cheese. Cheese is made from milk, which is turned into a thicker, solid food.",
         "id": "MAL-PM3-QUIZ-VOC-003-01"
       },
       {
@@ -1675,7 +1675,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Plain water has no added sugar.",
+        "explanation": "Air kosong means plain water. It is water without added sugar or flavouring.",
         "id": "MAL-PM3-QUIZ-VOC-003-02"
       },
       {
@@ -1693,7 +1693,7 @@ const exerciseBank={
             "Fork"
           ]
         },
-        "explanation": "A spoon can hold soup without spilling it.",
+        "explanation": "Sudu means spoon. Its bowl-shaped end helps us scoop up soup and other foods.",
         "id": "MAL-PM3-QUIZ-VOC-003-03"
       },
       {
@@ -1715,7 +1715,7 @@ const exerciseBank={
             "Lunch"
           ]
         },
-        "explanation": "We usually eat breakfast in the morning.",
+        "explanation": "Sarapan means breakfast. It is the first meal of the day, usually eaten in the morning.",
         "id": "MAL-PM3-QUIZ-VOC-003-04"
       },
       {
@@ -1729,7 +1729,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Garam means salt, which gives food a salty taste.",
+        "explanation": "Garam means salt. Salt gives food a salty taste.",
         "id": "MAL-PM3-QUIZ-VOC-003-05"
       },
       {
@@ -1747,7 +1747,7 @@ const exerciseBank={
             "Apple"
           ]
         },
-        "explanation": "Orange juice is made from oranges.",
+        "explanation": "Oren means orange. Orange juice is made by squeezing or processing oranges.",
         "id": "MAL-PM3-QUIZ-VOC-003-06"
       },
       {
@@ -1769,7 +1769,7 @@ const exerciseBank={
             "Plate"
           ]
         },
-        "explanation": "A knife has a blade for cutting food.",
+        "explanation": "Pisau means knife. Its sharp blade is used to cut food into pieces.",
         "id": "MAL-PM3-QUIZ-VOC-003-07"
       },
       {
@@ -1783,7 +1783,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Some vegetables are cooked before we eat them.",
+        "explanation": "Sayur-sayuran means vegetables. Many vegetables can be cooked, such as carrots and spinach.",
         "id": "MAL-PM3-QUIZ-VOC-003-08"
       },
       {
@@ -1801,7 +1801,7 @@ const exerciseBank={
             "Plate"
           ]
         },
-        "explanation": "A glass is made to hold a drink.",
+        "explanation": "Gelas means drinking glass. It is a container for holding drinks such as water or juice.",
         "id": "MAL-PM3-QUIZ-VOC-003-09"
       },
       {
@@ -1823,7 +1823,7 @@ const exerciseBank={
             "Bitter"
           ]
         },
-        "explanation": "Limes have a sour taste.",
+        "explanation": "Masam means sour. Limes taste sour because their juice contains natural acids.",
         "id": "MAL-PM3-QUIZ-VOC-003-10"
       }
     ],
@@ -1847,7 +1847,7 @@ const exerciseBank={
             "Goat"
           ]
         },
-        "explanation": "Pigeons fly using their wings.",
+        "explanation": "Burung merpati means pigeon. Pigeons have wings and feathers that help them fly.",
         "id": "MAL-PM3-QUIZ-VOC-004-01"
       },
       {
@@ -1861,7 +1861,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Fish live and breathe in water.",
+        "explanation": "Ikan means fish. Fish live in water and most use gills to take in oxygen from it.",
         "id": "MAL-PM3-QUIZ-VOC-004-02"
       },
       {
@@ -1879,7 +1879,7 @@ const exerciseBank={
             "Flower"
           ]
         },
-        "explanation": "Roots take in water from the soil.",
+        "explanation": "Akar means roots. Roots absorb water and minerals from the soil for the plant.",
         "id": "MAL-PM3-QUIZ-VOC-004-03"
       },
       {
@@ -1901,7 +1901,7 @@ const exerciseBank={
             "Woody stem"
           ]
         },
-        "explanation": "Leaves are usually green because of their colour pigment.",
+        "explanation": "Daun means leaf. Most leaves look green because they contain a green pigment called chlorophyll.",
         "id": "MAL-PM3-QUIZ-VOC-004-04"
       },
       {
@@ -1915,7 +1915,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "A butterfly is an insect, so it has six legs.",
+        "explanation": "Rama-rama means butterfly. An adult butterfly is an insect, and insects have six legs.",
         "id": "MAL-PM3-QUIZ-VOC-004-05"
       },
       {
@@ -1933,7 +1933,7 @@ const exerciseBank={
             "Nest"
           ]
         },
-        "explanation": "Baby chickens hatch from eggs.",
+        "explanation": "Telur means egg. A chick develops inside an egg and hatches when it is ready.",
         "id": "MAL-PM3-QUIZ-VOC-004-06"
       },
       {
@@ -1955,7 +1955,7 @@ const exerciseBank={
             "Horse"
           ]
         },
-        "explanation": "Elephants use their trunks to lift things.",
+        "explanation": "Gajah means elephant. An elephant uses its long trunk to breathe, smell and pick up things.",
         "id": "MAL-PM3-QUIZ-VOC-004-07"
       },
       {
@@ -1969,7 +1969,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Bunga means flower, the part of a plant that often grows above ground.",
+        "explanation": "Bunga means flower. Flowers usually grow on the stems or branches of a plant, above the soil.",
         "id": "MAL-PM3-QUIZ-VOC-004-08"
       },
       {
@@ -1987,7 +1987,7 @@ const exerciseBank={
             "Honey"
           ]
         },
-        "explanation": "Bees collect nectar from flowers to make honey.",
+        "explanation": "Nektar means nectar. Bees collect this sweet liquid from flowers and use it to make honey.",
         "id": "MAL-PM3-QUIZ-VOC-004-09"
       },
       {
@@ -2009,7 +2009,7 @@ const exerciseBank={
             "Fish"
           ]
         },
-        "explanation": "Frogs have strong legs that help them jump.",
+        "explanation": "Katak means frog. A frog's long, strong back legs help it push off the ground and jump.",
         "id": "MAL-PM3-QUIZ-VOC-004-10"
       }
     ],
@@ -2033,7 +2033,7 @@ const exerciseBank={
             "Bus station"
           ]
         },
-        "explanation": "A pharmacist gives out medicine at a pharmacy.",
+        "explanation": "Farmasi means pharmacy. A pharmacy is where a pharmacist prepares or supplies medicines.",
         "id": "MAL-PM3-QUIZ-VOC-005-01"
       },
       {
@@ -2047,7 +2047,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "A library lets us read and borrow books.",
+        "explanation": "Perpustakaan means library. It is a place where people can read and borrow books.",
         "id": "MAL-PM3-QUIZ-VOC-005-02"
       },
       {
@@ -2065,7 +2065,7 @@ const exerciseBank={
             "Bus"
           ]
         },
-        "explanation": "We travel through the sky in an aeroplane.",
+        "explanation": "Kapal terbang means aeroplane. It has wings and engines that allow it to travel through the air.",
         "id": "MAL-PM3-QUIZ-VOC-005-03"
       },
       {
@@ -2087,7 +2087,7 @@ const exerciseBank={
             "Bookshop"
           ]
         },
-        "explanation": "People board trains at train stations.",
+        "explanation": "Stesen kereta api means railway station. It is where people wait for, board or leave trains.",
         "id": "MAL-PM3-QUIZ-VOC-005-04"
       },
       {
@@ -2101,7 +2101,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Traffic lights help drivers know when to stop.",
+        "explanation": "Lampu isyarat means traffic light. Its different coloured lights tell road users when to stop or move.",
         "id": "MAL-PM3-QUIZ-VOC-005-05"
       },
       {
@@ -2119,7 +2119,7 @@ const exerciseBank={
             "Bus"
           ]
         },
-        "explanation": "A zebra crossing helps us cross the road safely.",
+        "explanation": "Lintasan belang means zebra crossing. Its painted stripes mark a place for people to cross the road.",
         "id": "MAL-PM3-QUIZ-VOC-005-06"
       },
       {
@@ -2141,7 +2141,7 @@ const exerciseBank={
             "Boat"
           ]
         },
-        "explanation": "Trains travel along railway tracks.",
+        "explanation": "Kereta api means train. A train travels along tracks called railway lines.",
         "id": "MAL-PM3-QUIZ-VOC-005-07"
       },
       {
@@ -2155,7 +2155,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Ships can dock at a harbour.",
+        "explanation": "Pelabuhan means harbour or port. It is a place where ships can stop and dock.",
         "id": "MAL-PM3-QUIZ-VOC-005-08"
       },
       {
@@ -2173,7 +2173,7 @@ const exerciseBank={
             "Hospital"
           ]
         },
-        "explanation": "We send letters from a post office.",
+        "explanation": "Pejabat pos means post office. People use it to send letters and parcels.",
         "id": "MAL-PM3-QUIZ-VOC-005-09"
       },
       {
@@ -2195,7 +2195,7 @@ const exerciseBank={
             "Stadium"
           ]
         },
-        "explanation": "Many different animals are cared for at a zoo.",
+        "explanation": "Zoo means zoo. It is a place where different animals are cared for and can be seen by visitors.",
         "id": "MAL-PM3-QUIZ-VOC-005-10"
       }
     ],
@@ -2219,7 +2219,7 @@ const exerciseBank={
             "Fast"
           ]
         },
-        "explanation": "A doctor helps people when they are sick.",
+        "explanation": "Doktor means doctor. It is a kata nama because it names a person who helps care for sick people.",
         "id": "MAL-PM3-QUIZ-GRM-002-01"
       },
       {
@@ -2233,7 +2233,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "A house is a place where people live.",
+        "explanation": "Rumah means house. It is a kata nama because nouns can name places as well as people and things.",
         "id": "MAL-PM3-QUIZ-GRM-002-02"
       },
       {
@@ -2251,7 +2251,7 @@ const exerciseBank={
             "Running"
           ]
         },
-        "explanation": "A rabbit is an animal. Running is an action.",
+        "explanation": "Arnab means rabbit. It is a kata nama because it names an animal.",
         "id": "MAL-PM3-QUIZ-GRM-002-03"
       },
       {
@@ -2273,7 +2273,7 @@ const exerciseBank={
             "River"
           ]
         },
-        "explanation": "Malaysia is the name of one country, so it begins with a capital letter.",
+        "explanation": "Malaysia is a kata nama khas, or proper noun, because it names one particular country. Proper nouns begin with capital letters.",
         "id": "MAL-PM3-QUIZ-GRM-002-04"
       },
       {
@@ -2287,7 +2287,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "A school is a place, and nouns can name places.",
+        "explanation": "Kata nama means noun. Nouns can name places, such as school, market or park.",
         "id": "MAL-PM3-QUIZ-GRM-002-05"
       },
       {
@@ -2305,7 +2305,7 @@ const exerciseBank={
             "Tall"
           ]
         },
-        "explanation": "A shelf holds books. 'Tall' only describes its height.",
+        "explanation": "Rak means shelf. It is a kata nama because it names a thing used for keeping books.",
         "id": "MAL-PM3-QUIZ-GRM-002-06"
       },
       {
@@ -2327,7 +2327,7 @@ const exerciseBank={
             "Hold"
           ]
         },
-        "explanation": "A balloon is the thing Mira is holding.",
+        "explanation": "Belon means balloon. It is a kata nama because it names the object Mira is holding.",
         "id": "MAL-PM3-QUIZ-GRM-002-07"
       },
       {
@@ -2341,7 +2341,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Menari means dancing. It is a kata kerja because it describes an action.",
+        "explanation": "Menari means dancing. It is a kata kerja, or verb, because it names an action someone does.",
         "id": "MAL-PM3-QUIZ-GRM-002-08"
       },
       {
@@ -2359,7 +2359,7 @@ const exerciseBank={
             "Monday (lowercase)"
           ]
         },
-        "explanation": "Day names like Isnin begin with a capital letter.",
+        "explanation": "Isnin means Monday. Day names are proper nouns, so they begin with capital letters.",
         "id": "MAL-PM3-QUIZ-GRM-002-09"
       },
       {
@@ -2381,7 +2381,7 @@ const exerciseBank={
             "Riverbank"
           ]
         },
-        "explanation": "Sungai Pahang is a kata nama khas because it names one particular river.",
+        "explanation": "Sungai Pahang names one particular river. That makes it a kata nama khas, or proper noun.",
         "id": "MAL-PM3-QUIZ-GRM-002-10"
       }
     ],
@@ -2405,7 +2405,7 @@ const exerciseBank={
             "In"
           ]
         },
-        "explanation": "Menyiram is what we do when we water flowers.",
+        "explanation": "Menyiram means watering. It is a kata kerja because it tells us the action Sara is doing to the flowers.",
         "id": "MAL-PM3-QUIZ-GRM-003-01"
       },
       {
@@ -2419,7 +2419,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Menyanyi is the action of singing.",
+        "explanation": "Menyanyi means singing. It is a kata kerja because it describes an action someone can do.",
         "id": "MAL-PM3-QUIZ-GRM-003-02"
       },
       {
@@ -2437,7 +2437,7 @@ const exerciseBank={
             "Draws"
           ]
         },
-        "explanation": "We kick a ball with our feet.",
+        "explanation": "Menendang means kicking. We use this word for hitting a ball with the foot.",
         "id": "MAL-PM3-QUIZ-GRM-003-03"
       },
       {
@@ -2459,7 +2459,7 @@ const exerciseBank={
             "Beautiful"
           ]
         },
-        "explanation": "Menutup is what we do when we close a door.",
+        "explanation": "Menutup means closing. It describes the action of moving a door into its closed position.",
         "id": "MAL-PM3-QUIZ-GRM-003-04"
       },
       {
@@ -2473,7 +2473,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Sleeping is something we do, so tidur is a verb.",
+        "explanation": "Tidur means sleeping. It can be a kata kerja because it describes an action or state someone is in.",
         "id": "MAL-PM3-QUIZ-GRM-003-05"
       },
       {
@@ -2491,7 +2491,7 @@ const exerciseBank={
             "Cuts"
           ]
         },
-        "explanation": "We use a toothbrush when we brush our teeth.",
+        "explanation": "Menggosok gigi means brushing teeth. Menggosok describes the action of rubbing or brushing.",
         "id": "MAL-PM3-QUIZ-GRM-003-06"
       },
       {
@@ -2513,7 +2513,7 @@ const exerciseBank={
             "Sits on a chair"
           ]
         },
-        "explanation": "Berenang means moving through water by swimming.",
+        "explanation": "Berenang means swimming. It describes moving through water using the body.",
         "id": "MAL-PM3-QUIZ-GRM-003-07"
       },
       {
@@ -2527,7 +2527,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Besar means big. It is a kata adjektif because it describes size.",
+        "explanation": "Besar means big. It describes size, so it is a kata adjektif, or adjective.",
         "id": "MAL-PM3-QUIZ-GRM-003-08"
       },
       {
@@ -2545,7 +2545,7 @@ const exerciseBank={
             "Reads"
           ]
         },
-        "explanation": "We wash dirty clothes to make them clean.",
+        "explanation": "Membasuh means washing. It is an action we do to clean dirty clothes with water.",
         "id": "MAL-PM3-QUIZ-GRM-003-09"
       },
       {
@@ -2567,7 +2567,7 @@ const exerciseBank={
             "The rabbit is by the fence."
           ]
         },
-        "explanation": "Melompat shows the action of jumping.",
+        "explanation": "Melompat means jumping. In 'Kelinci melompat tinggi', it tells us what the rabbit is doing.",
         "id": "MAL-PM3-QUIZ-GRM-003-10"
       }
     ],
@@ -2591,7 +2591,7 @@ const exerciseBank={
             "Garden"
           ]
         },
-        "explanation": "Besar tells us how big something is.",
+        "explanation": "Besar means big. It is a kata adjektif because it describes the elephant's size.",
         "id": "MAL-PM3-QUIZ-GRM-004-01"
       },
       {
@@ -2605,7 +2605,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Lembut tells us how soft something feels.",
+        "explanation": "Lembut means soft. It describes how a pillow feels when we touch it.",
         "id": "MAL-PM3-QUIZ-GRM-004-02"
       },
       {
@@ -2623,7 +2623,7 @@ const exerciseBank={
             "Hot"
           ]
         },
-        "explanation": "Ice feels cold, so sejuk fits.",
+        "explanation": "Sejuk means cold. It describes the temperature we feel when touching ice.",
         "id": "MAL-PM3-QUIZ-GRM-004-03"
       },
       {
@@ -2645,7 +2645,7 @@ const exerciseBank={
             "Rough"
           ]
         },
-        "explanation": "Nyaring describes a clear, high ringing sound.",
+        "explanation": "Nyaring describes a clear, high-pitched sound, such as the ringing of a bell.",
         "id": "MAL-PM3-QUIZ-GRM-004-04"
       },
       {
@@ -2659,7 +2659,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Adjectives can tell us what shape something has.",
+        "explanation": "Kata adjektif means adjective. Adjectives can describe shapes, such as bulat (round).",
         "id": "MAL-PM3-QUIZ-GRM-004-05"
       },
       {
@@ -2677,7 +2677,7 @@ const exerciseBank={
             "Bright"
           ]
         },
-        "explanation": "The sky looks dark when there is little light.",
+        "explanation": "Gelap means dark. It describes the sky when there is very little light.",
         "id": "MAL-PM3-QUIZ-GRM-004-06"
       },
       {
@@ -2699,7 +2699,7 @@ const exerciseBank={
             "Spicy"
           ]
         },
-        "explanation": "Sugar tastes sweet, so manis fits.",
+        "explanation": "Manis means sweet. It describes the taste of sugar.",
         "id": "MAL-PM3-QUIZ-GRM-004-07"
       },
       {
@@ -2713,7 +2713,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Laju tells us how fast the car is.",
+        "explanation": "Laju means fast. It describes the car's speed, so it is a kata adjektif.",
         "id": "MAL-PM3-QUIZ-GRM-004-08"
       },
       {
@@ -2731,7 +2731,7 @@ const exerciseBank={
             "Hard"
           ]
         },
-        "explanation": "Halus describes fur that feels fine and soft.",
+        "explanation": "Halus means fine or delicate. It can describe the thin, soft texture of a rabbit's fur.",
         "id": "MAL-PM3-QUIZ-GRM-004-09"
       },
       {
@@ -2753,7 +2753,7 @@ const exerciseBank={
             "Quiet"
           ]
         },
-        "explanation": "Berlubang tells us that the road has holes.",
+        "explanation": "Berlubang means full of holes. It describes a road with holes in its surface.",
         "id": "MAL-PM3-QUIZ-GRM-004-10"
       }
     ],
@@ -2777,7 +2777,7 @@ const exerciseBank={
             "We (excluding you)"
           ]
         },
-        "explanation": "Kamu means you. We use it when talking to another person.",
+        "explanation": "Kamu means you. It is a pronoun used when speaking directly to someone.",
         "id": "MAL-PM3-QUIZ-GRM-005-01"
       },
       {
@@ -2791,7 +2791,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Dia can mean either he or she.",
+        "explanation": "Dia means he or she. Malay uses the same pronoun for one male or female person.",
         "id": "MAL-PM3-QUIZ-GRM-005-02"
       },
       {
@@ -2809,7 +2809,7 @@ const exerciseBank={
             "He or she"
           ]
         },
-        "explanation": "Lina says saya because she is talking about herself.",
+        "explanation": "Saya means I. Lina uses saya because she is talking about herself.",
         "id": "MAL-PM3-QUIZ-GRM-005-03"
       },
       {
@@ -2831,7 +2831,7 @@ const exerciseBank={
             "You"
           ]
         },
-        "explanation": "Dia means he or she. It refers to one person.",
+        "explanation": "Dia means he or she. It replaces Farid's name because the sentence talks about one person.",
         "id": "MAL-PM3-QUIZ-GRM-005-04"
       },
       {
@@ -2845,7 +2845,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Mereka means they. It refers to more than one person.",
+        "explanation": "Mereka means they. It refers to a group of people instead of naming each one.",
         "id": "MAL-PM3-QUIZ-GRM-005-05"
       },
       {
@@ -2863,7 +2863,7 @@ const exerciseBank={
             "I"
           ]
         },
-        "explanation": "Ali and Bakar are two people, so we use mereka.",
+        "explanation": "Mereka means they. Ali and Bakar are two people, so this pronoun refers to both of them.",
         "id": "MAL-PM3-QUIZ-GRM-005-06"
       },
       {
@@ -2885,7 +2885,7 @@ const exerciseBank={
             "They"
           ]
         },
-        "explanation": "Aku means 'I' when speaking casually.",
+        "explanation": "Aku means I. It is a familiar, casual pronoun for the person who is speaking.",
         "id": "MAL-PM3-QUIZ-GRM-005-07"
       },
       {
@@ -2899,7 +2899,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "Awak is used when speaking directly to someone.",
+        "explanation": "Awak means you. It is used to address the person we are speaking to.",
         "id": "MAL-PM3-QUIZ-GRM-005-08"
       },
       {
@@ -2917,7 +2917,7 @@ const exerciseBank={
             "He or she"
           ]
         },
-        "explanation": "Aina is speaking to her friend, so awak fits.",
+        "explanation": "Awak means you. Aina uses it because she is asking her friend a question.",
         "id": "MAL-PM3-QUIZ-GRM-005-09"
       },
       {
@@ -2939,7 +2939,7 @@ const exerciseBank={
             "He or she"
           ]
         },
-        "explanation": "Kami means we and refers to the speaker and other people in the group.",
+        "explanation": "Kami means we and includes the speaker and others. It is used when the listener is outside that group.",
         "id": "MAL-PM3-QUIZ-GRM-005-10"
       }
     ]
