@@ -786,6 +786,45 @@ body:not(.auth-locked) #quiz .prompt:empty{display:none}
 body:not(.auth-locked) #quiz .answers{
  display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:var(--density-space)!important;
 }
+/* Equation form: five rows in each column, using the shared sizing and theme. */
+body:not(.auth-locked) #quiz .answers.formula-answers{
+ display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ grid-template-rows:repeat(5,minmax(var(--density-control),auto))!important;
+ grid-auto-flow:column!important;
+ gap:var(--density-space)!important;
+}
+body:not(.auth-locked) #quiz .formula-row{
+ display:flex;align-items:center;justify-content:flex-start;gap:var(--density-inner);
+ min-width:0;min-height:var(--density-control);font-size:var(--qr-font-body);
+ font-weight:700;color:var(--qr-text-primary);white-space:nowrap;
+}
+body:not(.auth-locked) #quiz .formula-row input{
+ box-sizing:border-box!important;width:4.5em!important;min-width:0!important;
+ height:var(--density-control)!important;min-height:var(--density-control)!important;
+ padding:var(--qr-flat-pill-padding)!important;
+ border:1px solid var(--qr-boundary)!important;border-radius:var(--qr-button-radius)!important;
+ background:var(--qr-background)!important;color:var(--qr-text-primary)!important;
+ font:inherit!important;text-align:center!important;
+}
+body:not(.auth-locked) #quiz .formula-row input[readonly]{
+ opacity:1!important;cursor:default;
+}
+body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
+ display:grid;place-items:center;flex:0 0 var(--qr-answer-marker-size);
+ width:var(--qr-answer-marker-size);height:var(--qr-answer-marker-size);
+ border-radius:50%;font-size:var(--qr-answer-mark-size);
+ line-height:1;font-weight:800;color:var(--qr-background);
+}
+body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-correct{background:var(--qr-success)}
+body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-wrong{background:var(--qr-error)}
+@media(max-width:600px){
+ body:not(.auth-locked) #quiz .answers.formula-answers{
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:none!important;grid-auto-flow:row!important;
+ }
+}
+
 body:not(.auth-locked) #quiz .answer{
  display:flex!important;align-items:center!important;justify-content:flex-start!important;
  width:100%!important;min-width:0!important;min-height:var(--density-control)!important;padding:var(--qr-unified-padding)!important;
@@ -1592,10 +1631,21 @@ function qrShuffleQuestions(items){
 async function start(v){
  clearInterval(timerHandle);timerHandle=null;quizEnded=false;quizDeadline=0;scoreAttemptRecorded=false;latestScoreKey='';timeWarningShown=false;dismissTimeWarning();version=v;index=0;resumeIndex=0;bookmarkView=false;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');score=0;wrongQuestions=[];questionOutcomes={};
  const items=activeExerciseTopic?((activeQuizForm==='formula-entry'?formulaBank[subject]?.[activeExerciseTopic]:exerciseBank[subject]?.[activeExerciseTopic])||[]):[];
- formulaChecked=false;questions=qrShuffleQuestions(items);time=quizTimeLimits[selectedCategory]||0;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
+ formulaChecked=false;questions=qrShuffleQuestions(items);
+ if(activeQuizForm==='formula-entry'){
+  const slots=['a','b','result','a','b','result','a','b','result','a'];
+  for(let i=slots.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[slots[i],slots[j]]=[slots[j],slots[i]];}
+  questions.forEach((q,i)=>{
+   q.blank=slots[i%slots.length];
+   q.expected=q.blank==='result'?q.a*q.b:q[q.blank];
+   q.q=(q.blank==='a'?'____':q.a)+' × '+(q.blank==='b'?'____':q.b)+' = '+(q.blank==='result'?'____':q.a*q.b);
+  });
+ }
+ time=quizTimeLimits[selectedCategory]||0;qrSyncSubjectAppearance();show('quiz');if(!questions.length){$('number').textContent='';$('questionTitle').textContent='No questions added yet.';$('prompt').textContent='';$('answers').innerHTML='';$('questioncount').textContent='Question 0 out of 0';updateClock();clearInterval(timerHandle);return}render();quizDeadline=Date.now()+time*1000;updateClock();timerHandle=setInterval(()=>{if(quizEnded)return;time=Math.max(0,Math.ceil((quizDeadline-Date.now())/1000));updateClock();if(time<=0){clearInterval(timerHandle);timerHandle=null;finish('time out');return}if(time<=300&&!timeWarningShown&&!$('quiz').classList.contains('hidden')){timeWarningShown=true;$('timeWarning').classList.remove('hidden')}},1000)}
 function updateClock(){const t=Math.max(0,time),h=Math.floor(t/3600),m=Math.floor((t%3600)/60),s=t%60;const digits=String(h).padStart(2,'0').slice(-2)+String(m).padStart(2,'0')+String(s).padStart(2,'0');const keys=['h1','h2','m1','m2','s1','s2'];keys.forEach((key,i)=>{const el=document.querySelector('[data-clock="'+key+'"]');if(el&&el.textContent!==digits[i])el.textContent=digits[i]});$('timer').setAttribute('aria-label','Time remaining '+h+' hours '+m+' minutes '+s+' seconds')}
 function qrUpdateQuizProgress(){const total=questions.length,pct=total?Math.round((index+1)*100/total):0;$('questioncount').textContent='Question '+(total?index+1:0)+' of '+total;$('qrProgressFill').style.width=pct+'%';$('qrProgressTrack').setAttribute('aria-valuenow',String(pct));$('qrProgressPct').textContent=pct+'%';}
 /* Formula Entry: each equation is checked when its field is left or Enter is pressed. */
+/* Submit each equation with Enter; score it once and move to the next open blank. */
 function qrFormulaProgress(){
  if(activeQuizForm!=='formula-entry')return;
  const completed=Object.keys(questionOutcomes).length;
@@ -1604,7 +1654,6 @@ function qrFormulaProgress(){
  $('qrProgressFill').style.width=pct+'%';
  $('qrProgressTrack').setAttribute('aria-valuenow',String(pct));
  $('qrProgressPct').textContent=pct+'%';
- $('nextButton').disabled=completed!==questions.length;
  formulaChecked=completed===questions.length;
 }
 function qrCheckFormula(i,moveNext=false){
@@ -1621,50 +1670,35 @@ function qrCheckFormula(i,moveNext=false){
  symbol.textContent=correct?'✓':'✕';
  symbol.classList.add(correct?'formula-correct':'formula-wrong');
  symbol.setAttribute('aria-label',correct?'Correct':'Incorrect');
- const detail=(correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||'';
- symbol.title=detail;
- const panel=$('answerFeedback');panel.replaceChildren();
- const message=document.createElement('span');
- message.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');
- message.setAttribute('role','status');
- const statusIcon=document.createElement('span');
- statusIcon.className='feedback-symbol';statusIcon.textContent=correct?'✓':'✕';
- const statusText=document.createElement('span');
- statusText.className='feedback-explanation';
- const statusHeading=document.createElement('strong');
- statusHeading.textContent=correct?'Correct! ':'Incorrect. ';
- statusText.append(statusHeading,document.createTextNode(detail));
- message.append(statusIcon,statusText);panel.appendChild(message);panel.classList.remove('hidden');
  qrFormulaProgress();
+ if(formulaChecked){finish();return;}
  if(moveNext){
-  const next=$('formula'+(i+1));
-  if(next&&!next.readOnly)next.focus();
+  const next=questions.findIndex((item,j)=>j>i&&!questionOutcomes[item.id]);
+  const fallback=next>=0?next:questions.findIndex(item=>!questionOutcomes[item.id]);
+  if(fallback>=0)$('formula'+fallback)?.focus();
  }
 }
 function qrRenderFormula(){
+ $('quiz').classList.add('qr-equation-form');
  $('quiz').querySelector('.bookmarktools').classList.add('hidden');
  $('resumeButton').classList.add('hidden');
+ $('nextButton').classList.add('hidden');
  $('number').classList.add('hidden');
- $('questionTitle').textContent='Fill in the missing number in each equation.';
+ $('questionTitle').classList.add('hidden');
+ $('questionTitle').textContent='';
  $('questionTranslation').classList.add('hidden');
  $('prompt').textContent='';
  $('answers').className='answers formula-answers';
  $('answerFeedback').replaceChildren();$('answerFeedback').classList.add('hidden');
  document.querySelector('#quiz .helper').classList.add('hidden');
- $('nextButton').querySelector('span').textContent='Finish';
- $('nextButton').disabled=true;
  $('answers').innerHTML=questions.map((q,i)=>{
-  const input='<input id="formula'+i+'" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" aria-label="Blank for equation '+(i+1)+'" onblur="qrCheckFormula('+i+')" onkeydown="if(event.key===\'Enter\'){event.preventDefault();qrCheckFormula('+i+',true)}">';
-  return '<label class="formula-row"><span>'+(q.blank==='a'?input:q.a)+'</span><span>'+(q.operation==='divide'?'÷':'×')+'</span><span>'+(q.blank==='b'?input:q.b)+'</span><span>=</span><span>'+(q.blank==='result'?input:q.operation==='divide'?q.a/q.b:q.a*q.b)+'</span><span class="feedback-symbol hidden" aria-live="polite"></span></label>';
+  const input='<input id="formula'+i+'" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" aria-label="Missing number for equation '+(i+1)+'" onkeydown="if(event.key===\'Enter\'){event.preventDefault();qrCheckFormula('+i+',true)}">';
+  return '<div class="formula-row"><span>'+(q.blank==='a'?input:q.a)+'</span><span>×</span><span>'+(q.blank==='b'?input:q.b)+'</span><span>=</span><span>'+(q.blank==='result'?input:q.a*q.b)+'</span><span class="feedback-symbol hidden" aria-live="polite"></span></div>';
  }).join('');
  qrFormulaProgress();updateClock();
 }
-function qrGradeFormula(){
- if(formulaChecked)return;
- $('answers').querySelectorAll('.formula-row input').forEach((input,i)=>qrCheckFormula(i));
- qrFormulaProgress();
-}
-function render(){if(activeQuizForm==='formula-entry'){qrRenderFormula();return} $('quiz').querySelector('.bookmarktools').classList.remove('hidden');$('number').classList.remove('hidden');document.querySelector('#quiz .helper').classList.remove('hidden');$('nextButton').querySelector('span').textContent='Next';qrUpdateQuizProgress();selected=-1;answered=false;orderChosen=[];$('nextButton').disabled=!bookmarks.has(index);updateBookmarkUI();let q=questions[index];$('questionTitle').classList.remove('qr-vocab-hover');delete $('questionTitle').dataset.en;$('questionTranslation').classList.remove('qr-vocab-tip');$('questionTranslation').textContent='';$('questionTranslation').classList.add('hidden');$('number').textContent=index+1;const textQuestion=q.type==='text'?q.q.replace(/^Fill in the blank:\s*/i,''):q.q;
+
+function render(){if(activeQuizForm==='formula-entry'){qrRenderFormula();return} $('quiz').classList.remove('qr-equation-form');$('questionTitle').classList.remove('hidden');$('nextButton').classList.remove('hidden'); $('quiz').querySelector('.bookmarktools').classList.remove('hidden');$('number').classList.remove('hidden');document.querySelector('#quiz .helper').classList.remove('hidden');$('nextButton').querySelector('span').textContent='Next';qrUpdateQuizProgress();selected=-1;answered=false;orderChosen=[];$('nextButton').disabled=!bookmarks.has(index);updateBookmarkUI();let q=questions[index];$('questionTitle').classList.remove('qr-vocab-hover');delete $('questionTitle').dataset.en;$('questionTranslation').classList.remove('qr-vocab-tip');$('questionTranslation').textContent='';$('questionTranslation').classList.add('hidden');$('number').textContent=index+1;const textQuestion=q.type==='text'?q.q.replace(/^Fill in the blank:\s*/i,''):q.q;
  const textChoices=q.type==='text'?textQuestion.match(/\s*\(([^()]*\s[/]\s[^()]*)\)\s*$/):null;
  $('questionTitle').textContent=textChoices?textQuestion.slice(0,textChoices.index).trim():textQuestion;$('prompt').textContent='';$('prompt').classList.toggle('quiz-picture',false);let a=$('answers');a.className='answers';$('answerFeedback').innerHTML='';$('answerFeedback').classList.add('hidden');if(q.type==='drop')$('questionTitle').innerHTML=qrDropQuestion(q);if(answerSnapshots[index]){a.innerHTML=answerSnapshots[index].html;a.className=answerSnapshots[index].className;showAnswerTranslations(q);$('answerFeedback').innerHTML=answerSnapshots[index].feedback||'';$('answerFeedback').classList.toggle('hidden',!answerSnapshots[index].feedback);answered=true;$('nextButton').disabled=false;document.querySelector('#quiz .helper').classList.add('hidden');updateClock();return}if(q.type==='mc'){a.innerHTML=q.options.map((o,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+escapeHtml(o)+'</span></button>').join('')}else if(q.type==='tf'){const labels=subject==='Korean'?['맞아요','틀려요']:subject==='Malay'?['Betul','Salah']:['True','False'];a.innerHTML=labels.map((v,i)=>'<button class="answer" onclick="selectAnswer('+i+')"><span>'+v+'</span></button>').join('')}else if(q.type==='drop'){qrDropPaint(q)}else if(q.type==='text'){a.innerHTML='<input id="typedAnswer" class="typebox" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer here" aria-label="Your answer" onkeydown="if(event.key===\'Enter\'){event.preventDefault();submitAnswer()}">'}else if(q.type==='order'){q.shuffled=q.steps.map((v,i)=>({v,k:(i*7+3)%q.steps.length})).sort((a,b)=>b.k-a.k).map(x=>x.v);if(q.shuffled.every((v,i)=>v===q.steps[i]))q.shuffled.reverse();paintSteps()}else if(q.type==='match'){let values=q.pairs.map(p=>p[1]).reverse();a.innerHTML='<div class="matching">'+q.pairs.map((p,i)=>'<label class="matchrow"><span>'+escapeHtml(p[0])+'</span><select onchange="checkMatches()" id="match'+i+'" aria-label="Match '+escapeHtml(p[0])+'"><option value="">Choose meaning</option>'+values.map(v=>'<option value="'+escapeHtml(v)+'">'+escapeHtml(v)+'</option>').join('')+'</select></label>').join('')+'</div>'}$('questioncount').textContent='Question '+(index+1)+' of '+questions.length;document.querySelector('.helper').textContent=q.type==='order'?'Tap all steps in order to submit.':q.type==='match'?'Match every item to submit.':q.type==='drop'?'Drag an answer into the empty box. You can also tap an answer, then tap the box.':q.type==='text'?(textChoices?'Choose from: '+textChoices[1].trim()+'. ':'')+'Type your answer and press Enter to submit.':'Tap an answer to submit.';updateClock()}
 function selectAnswer(i){if(answered)return;selected=i;[...$('answers').querySelectorAll('.answer')].forEach((b,j)=>b.classList.toggle('selected',j===i));submitAnswer()}
@@ -1946,7 +1980,6 @@ function resumeQuiz(){bookmarkView=false;$('bookmarkList').classList.add('hidden
 function dismissTimeWarning(){$('timeWarning').classList.add('hidden')}
 function finish(remark=''){
  if(quizEnded)return;
- if(activeQuizForm==='formula-entry'&&!formulaChecked)qrGradeFormula();
  quizEnded=true;
  clearInterval(timerHandle);timerHandle=null;quizDeadline=0;
  time=Math.max(0,time);updateClock();dismissTimeWarning();
