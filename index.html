@@ -1765,7 +1765,9 @@ function qrPlaceFoundationTip(x,y){
  if(!qrFoundationTooltip)return;
  const gap=16,edge=8;
  const w=qrFoundationTooltip.offsetWidth,h=qrFoundationTooltip.offsetHeight;
- const left=Math.max(edge,Math.min(x+gap,window.innerWidth-w-edge));
+ const preferred=x+gap;
+ const fallback=x-w-gap;
+ const left=Math.max(edge,Math.min(preferred+w<=window.innerWidth-edge?preferred:fallback,window.innerWidth-w-edge));
  const top=Math.max(edge,Math.min(y+4,window.innerHeight-h-edge));
  qrFoundationTooltip.style.left=left+'px';
  qrFoundationTooltip.style.top=top+'px';
