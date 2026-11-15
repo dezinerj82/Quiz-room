@@ -1732,7 +1732,7 @@ function submitAnswer(){
   if(message){
    explanation.append(document.createTextNode(' - '));
    // Paired single quotes mark references; apostrophes inside words stay untouched.
-   const references=/(?<![\\p{L}\\p{N}])'([^'\\n]+)'(?![\\p{L}\\p{N}])/gu;
+   const references=/(?<![\p{L}\p{N}])'([^'\n]+)'(?![\p{L}\p{N}])/gu;
    let cursor=0;
    for(const match of message.matchAll(references)){
     explanation.append(document.createTextNode(message.slice(cursor,match.index)));
