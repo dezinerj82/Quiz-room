@@ -1744,7 +1744,7 @@ const qrFoundationTerms=Object.freeze({
  'bar chart':'A chart using bars of different lengths to compare amounts.',
  'plural':'A word form referring to more than one person or thing.'
 });
-const qrFoundationPattern=new RegExp('(?<![\\\\p{L}\\\\p{N}])(?:'+Object.keys(qrFoundationTerms).sort((a,b)=>b.length-a.length).map(t=>t.replace(/[.*+?^$\u007b\u007d()|[\]\\]/g,'\\\\function submitAnswer(){')).join('|')+')(?![\\\\p{L}\\\\p{N}])','giu');
+const qrFoundationPattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+Object.keys(qrFoundationTerms).sort((a,b)=>b.length-a.length).join('|')+')(?![\\p{L}\\p{N}])','giu');
 function qrAppendFoundationText(target,value){
  let cursor=0;
  for(const match of value.matchAll(qrFoundationPattern)){
@@ -1764,7 +1764,7 @@ function qrAppendFoundationText(target,value){
 }
 function qrAppendFeedbackExplanation(target,value){
  // Paired single quotes identify references. Apostrophes inside words are preserved.
- const quoted=/(?<![\\p{L}\\p{N}])'([^'\\n]+)'(?![\\p{L}\\p{N}])/gu;
+ const quoted=/(?<![\p{L}\p{N}])'([^'\n]+)'(?![\p{L}\p{N}])/gu;
  let cursor=0;
  for(const match of value.matchAll(quoted)){
   qrAppendFoundationText(target,value.slice(cursor,match.index));
