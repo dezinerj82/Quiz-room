@@ -827,6 +827,13 @@ body:not(.auth-locked) #quiz .answer.answer-wrong{
  background:color-mix(in srgb,var(--qr-error) 18%,var(--qr-background))!important;
  border-color:var(--qr-error)!important;color:var(--qr-text-error)!important;
 }
+/* Softer green when showing the right answer after an incorrect selection. */
+body:not(.auth-locked) #quiz .answer.answer-correct.answer-revealed{
+ opacity:1!important;
+ background:color-mix(in srgb,var(--qr-success) 9%,var(--qr-background))!important;
+ border-color:color-mix(in srgb,var(--qr-success) 60%,var(--qr-background))!important;
+ color:var(--qr-text-success)!important;
+}
 body:not(.auth-locked) #quiz .answer.answer-correct::after,
 body:not(.auth-locked) #quiz .answer.answer-wrong::after{
  margin-left:auto;flex:0 0 auto;display:grid;place-items:center;
@@ -1788,6 +1795,7 @@ function qrMarkAnswerChoices(q,correct,value){
   choices.forEach((button,i)=>{
    button.classList.remove('selected');
    button.classList.toggle('answer-correct',i===correctIndex);
+   button.classList.toggle('answer-revealed',!correct&&i===correctIndex);
    button.classList.toggle('answer-wrong',!correct&&i===selected);
    if(i===correctIndex)button.setAttribute('aria-label',button.textContent.trim()+' (correct answer)');
    else if(!correct&&i===selected)button.setAttribute('aria-label',button.textContent.trim()+' (your answer)');
@@ -1798,6 +1806,7 @@ function qrMarkAnswerChoices(q,correct,value){
   choices.forEach((button,i)=>{
    button.classList.remove('selected');
    button.classList.toggle('answer-correct',i===correctIndex);
+   button.classList.toggle('answer-revealed',!correct&&i===correctIndex);
    button.classList.toggle('answer-wrong',!correct&&i===chosenIndex);
    if(i===correctIndex)button.setAttribute('aria-label',button.textContent.trim()+' (correct answer)');
    else if(!correct&&i===chosenIndex)button.setAttribute('aria-label',button.textContent.trim()+' (your answer)');
@@ -1813,7 +1822,7 @@ function qrMarkAnswerChoices(q,correct,value){
   input.replaceWith(selectedResult);
   if(!correct){
    const rightResult=document.createElement('div');
-   rightResult.className='answer answer-correct';
+   rightResult.className='answer answer-correct answer-revealed';
    rightResult.textContent=q.expected;
    rightResult.setAttribute('aria-label',q.expected+' (correct answer)');
    selectedResult.after(rightResult);
