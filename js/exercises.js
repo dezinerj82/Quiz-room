@@ -5582,7 +5582,7 @@ const exerciseBank={
       },
       {
         "type": "drop",
-        "q": "A class votes for a class pet: 5 pupils choose fish, 6 choose rabbits and 4 choose hamsters. How many votes are there?",
+        "q": "A class votes for a class pet: 5 pupils choose fish, 6 choose rabbits and 4 choose hamsters. Total votes: ____.",
         "expected": "15",
         "explanation": "5 + 6 + 4 = 15 votes.",
         "id": "MATH-PM3-QUIZ-U09-001-03",
