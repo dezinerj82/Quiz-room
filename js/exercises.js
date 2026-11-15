@@ -964,6 +964,1494 @@ const exerciseBank={
         "id": "KOR-PM2-QUIZ-GRM-001-10",
         "explanation": "친구 ends with a vowel sound, so we add 가 to mark it as the subject."
       }
+    ],
+    "가족과 사람": [
+      {
+        "type": "mc",
+        "q": "아버지를 뜻하는 말은 무엇인가요?",
+        "options": [
+          "아버지",
+          "동생",
+          "할머니",
+          "선생님"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word means father?",
+          "options": [
+            "Father",
+            "Younger sibling",
+            "Grandmother",
+            "Teacher"
+          ]
+        },
+        "explanation": "아버지 means father, a male parent in the family.",
+        "id": "KOR-PM3-QUIZ-002-01"
+      },
+      {
+        "type": "tf",
+        "q": "할아버지는 가족을 나타내는 말이에요.",
+        "expected": true,
+        "translation": {
+          "question": "Grandfather is a word for a family member.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "할아버지 means grandfather, the father of a parent.",
+        "id": "KOR-PM3-QUIZ-002-02"
+      },
+      {
+        "type": "drop",
+        "q": "나보다 어린 형제나 자매는 ____이에요.",
+        "expected": "동생",
+        "options": [
+          "동생",
+          "할머니"
+        ],
+        "translation": {
+          "question": "A younger brother or sister is a ____.",
+          "options": [
+            "Younger sibling",
+            "Grandmother"
+          ]
+        },
+        "explanation": "동생 means a younger brother or sister.",
+        "id": "KOR-PM3-QUIZ-002-03"
+      },
+      {
+        "type": "mc",
+        "q": "할머니는 누구인가요?",
+        "options": [
+          "언니",
+          "할머니",
+          "아기",
+          "친구"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means grandmother?",
+          "options": [
+            "Older sister",
+            "Grandmother",
+            "Baby",
+            "Friend"
+          ]
+        },
+        "explanation": "할머니 means grandmother, the mother of a parent.",
+        "id": "KOR-PM3-QUIZ-002-04"
+      },
+      {
+        "type": "tf",
+        "q": "선생님은 할머니를 뜻하는 말이에요.",
+        "expected": false,
+        "translation": {
+          "question": "선생님 means grandmother.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "선생님 means teacher, someone who helps pupils learn.",
+        "id": "KOR-PM3-QUIZ-002-05"
+      },
+      {
+        "type": "drop",
+        "q": "나보다 나이가 많은 남자 형제는 ____예요.",
+        "expected": "형",
+        "options": [
+          "형",
+          "아기"
+        ],
+        "translation": {
+          "question": "An older brother (said by a boy) is ____.",
+          "options": [
+            "Older brother",
+            "Baby"
+          ]
+        },
+        "explanation": "형 means older brother when a boy is speaking.",
+        "id": "KOR-PM3-QUIZ-002-06"
+      },
+      {
+        "type": "mc",
+        "q": "어린 아이를 나타내는 말은 무엇인가요?",
+        "options": [
+          "고모",
+          "아기",
+          "삼촌",
+          "아버지"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means baby?",
+          "options": [
+            "Aunt",
+            "Baby",
+            "Uncle",
+            "Father"
+          ]
+        },
+        "explanation": "아기 means baby, a very young child.",
+        "id": "KOR-PM3-QUIZ-002-07"
+      },
+      {
+        "type": "tf",
+        "q": "삼촌은 남자 친척을 나타내는 말이에요.",
+        "expected": true,
+        "translation": {
+          "question": "삼촌 is a word for a male relative.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "삼촌 means uncle, a male relative in the family.",
+        "id": "KOR-PM3-QUIZ-002-08"
+      },
+      {
+        "type": "drop",
+        "q": "어머니의 어머니는 ____예요.",
+        "expected": "외할머니",
+        "options": [
+          "외할머니",
+          "아버지"
+        ],
+        "translation": {
+          "question": "Mother's mother is ____.",
+          "options": [
+            "Maternal grandmother",
+            "Father"
+          ]
+        },
+        "explanation": "외할머니 means the mother of your mother.",
+        "id": "KOR-PM3-QUIZ-002-09"
+      },
+      {
+        "type": "mc",
+        "q": "어머니의 남자 형제는 누구인가요?",
+        "options": [
+          "외삼촌",
+          "할아버지",
+          "아기",
+          "동생"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word means mother's brother?",
+          "options": [
+            "Maternal uncle",
+            "Grandfather",
+            "Baby",
+            "Younger sibling"
+          ]
+        },
+        "explanation": "외삼촌 means an uncle who is your mother's brother.",
+        "id": "KOR-PM3-QUIZ-002-10"
+      }
+    ],
+    "음식과 음료": [
+      {
+        "type": "mc",
+        "q": "밥을 뜻하는 말은 무엇인가요?",
+        "options": [
+          "우유",
+          "밥",
+          "주스",
+          "빵"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means cooked rice or a meal?",
+          "options": [
+            "Milk",
+            "Rice or meal",
+            "Juice",
+            "Bread"
+          ]
+        },
+        "explanation": "밥 means cooked rice or a meal.",
+        "id": "KOR-PM3-QUIZ-003-01"
+      },
+      {
+        "type": "tf",
+        "q": "우유는 마실 수 있는 음료예요.",
+        "expected": true,
+        "translation": {
+          "question": "Milk is a drink.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "우유 means milk, a drink that comes from animals such as cows.",
+        "id": "KOR-PM3-QUIZ-003-02"
+      },
+      {
+        "type": "drop",
+        "q": "생일에 먹는 달콤한 음식은 ____예요.",
+        "expected": "케이크",
+        "options": [
+          "케이크",
+          "소금"
+        ],
+        "translation": {
+          "question": "A sweet food we eat on birthdays is ____.",
+          "options": [
+            "Cake",
+            "Salt"
+          ]
+        },
+        "explanation": "케이크 means cake, a sweet food often eaten at celebrations.",
+        "id": "KOR-PM3-QUIZ-003-03"
+      },
+      {
+        "type": "mc",
+        "q": "국을 뜻하는 말은 무엇인가요?",
+        "options": [
+          "국",
+          "물",
+          "빵",
+          "과자"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word means soup?",
+          "options": [
+            "Soup",
+            "Water",
+            "Bread",
+            "Snack"
+          ]
+        },
+        "explanation": "국 means soup, a food made with liquid and other ingredients.",
+        "id": "KOR-PM3-QUIZ-003-04"
+      },
+      {
+        "type": "tf",
+        "q": "소금은 달콤한 음식이에요.",
+        "expected": false,
+        "translation": {
+          "question": "Salt is a sweet food.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "소금 means salt, which gives food a salty taste.",
+        "id": "KOR-PM3-QUIZ-003-05"
+      },
+      {
+        "type": "drop",
+        "q": "목이 마를 때 마시는 것은 ____예요.",
+        "expected": "물",
+        "options": [
+          "물",
+          "밥"
+        ],
+        "translation": {
+          "question": "When thirsty, we drink ____.",
+          "options": [
+            "Water",
+            "Cooked rice"
+          ]
+        },
+        "explanation": "물 means water, a liquid we drink to stay hydrated.",
+        "id": "KOR-PM3-QUIZ-003-06"
+      },
+      {
+        "type": "mc",
+        "q": "당근은 어떤 음식인가요?",
+        "options": [
+          "음료",
+          "채소",
+          "과자",
+          "고기"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Carrot belongs to which food group?",
+          "options": [
+            "Drink",
+            "Vegetable",
+            "Snack",
+            "Meat"
+          ]
+        },
+        "explanation": "당근 means carrot, a vegetable that grows in the ground.",
+        "id": "KOR-PM3-QUIZ-003-07"
+      },
+      {
+        "type": "tf",
+        "q": "빵은 먹는 음식이에요.",
+        "expected": true,
+        "translation": {
+          "question": "Bread is food that people eat.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "빵 means bread, a food made from flour and baked.",
+        "id": "KOR-PM3-QUIZ-003-08"
+      },
+      {
+        "type": "drop",
+        "q": "아침에 마시는 흰색 음료는 ____예요.",
+        "expected": "우유",
+        "options": [
+          "우유",
+          "소금"
+        ],
+        "translation": {
+          "question": "A white drink we can have at breakfast is ____.",
+          "options": [
+            "Milk",
+            "Salt"
+          ]
+        },
+        "explanation": "우유 means milk, a white drink.",
+        "id": "KOR-PM3-QUIZ-003-09"
+      },
+      {
+        "type": "mc",
+        "q": "맛이 달콤한 것을 나타내는 말은 무엇인가요?",
+        "options": [
+          "짜요",
+          "매워요",
+          "달아요",
+          "써요"
+        ],
+        "correct": 2,
+        "translation": {
+          "question": "Which word means tastes sweet?",
+          "options": [
+            "Salty",
+            "Spicy",
+            "Sweet",
+            "Bitter"
+          ]
+        },
+        "explanation": "달아요 means something tastes sweet.",
+        "id": "KOR-PM3-QUIZ-003-10"
+      }
+    ],
+    "학교와 물건": [
+      {
+        "type": "mc",
+        "q": "지우개는 무엇인가요?",
+        "options": [
+          "자",
+          "지우개",
+          "책",
+          "가방"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means eraser?",
+          "options": [
+            "Ruler",
+            "Eraser",
+            "Book",
+            "Bag"
+          ]
+        },
+        "explanation": "지우개 means eraser, a tool for removing pencil marks.",
+        "id": "KOR-PM3-QUIZ-004-01"
+      },
+      {
+        "type": "tf",
+        "q": "공책은 글씨를 쓰는 데 사용해요.",
+        "expected": true,
+        "translation": {
+          "question": "A notebook is used for writing.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "공책 means notebook, which has pages for writing.",
+        "id": "KOR-PM3-QUIZ-004-02"
+      },
+      {
+        "type": "drop",
+        "q": "길이를 잴 때 ____를 사용해요.",
+        "expected": "자",
+        "options": [
+          "자",
+          "우산"
+        ],
+        "translation": {
+          "question": "We use a ____ to measure length.",
+          "options": [
+            "Ruler",
+            "Umbrella"
+          ]
+        },
+        "explanation": "자 means ruler, a tool used to measure length.",
+        "id": "KOR-PM3-QUIZ-004-03"
+      },
+      {
+        "type": "mc",
+        "q": "교실을 나타내는 말은 무엇인가요?",
+        "options": [
+          "운동장",
+          "교실",
+          "식당",
+          "병원"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means classroom?",
+          "options": [
+            "Playground",
+            "Classroom",
+            "Canteen",
+            "Hospital"
+          ]
+        },
+        "explanation": "교실 means classroom, where pupils learn lessons.",
+        "id": "KOR-PM3-QUIZ-004-04"
+      },
+      {
+        "type": "tf",
+        "q": "가위는 종이를 붙이는 도구예요.",
+        "expected": false,
+        "translation": {
+          "question": "Scissors are a tool for sticking paper.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "가위 means scissors, a tool used to cut paper.",
+        "id": "KOR-PM3-QUIZ-004-05"
+      },
+      {
+        "type": "drop",
+        "q": "책을 넣어 가지고 다니는 것은 ____이에요.",
+        "expected": "가방",
+        "options": [
+          "가방",
+          "의자"
+        ],
+        "translation": {
+          "question": "We carry books in a ____.",
+          "options": [
+            "Bag",
+            "Chair"
+          ]
+        },
+        "explanation": "가방 means bag, something used to carry books and other things.",
+        "id": "KOR-PM3-QUIZ-004-06"
+      },
+      {
+        "type": "mc",
+        "q": "칠판은 무엇인가요?",
+        "options": [
+          "시계",
+          "칠판",
+          "공책",
+          "신발"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which word means board used for teaching?",
+          "options": [
+            "Clock",
+            "Board",
+            "Notebook",
+            "Shoes"
+          ]
+        },
+        "explanation": "칠판 means board, where teachers can write during lessons.",
+        "id": "KOR-PM3-QUIZ-004-07"
+      },
+      {
+        "type": "tf",
+        "q": "도서관은 책을 읽거나 빌리는 곳이에요.",
+        "expected": true,
+        "translation": {
+          "question": "A library is a place to read or borrow books.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "도서관 means library, a place to read or borrow books.",
+        "id": "KOR-PM3-QUIZ-004-08"
+      },
+      {
+        "type": "drop",
+        "q": "종이를 자를 때 ____를 사용해요.",
+        "expected": "가위",
+        "options": [
+          "가위",
+          "지우개"
+        ],
+        "translation": {
+          "question": "We use ____ to cut paper.",
+          "options": [
+            "Scissors",
+            "Eraser"
+          ]
+        },
+        "explanation": "가위 means scissors, a tool with blades for cutting.",
+        "id": "KOR-PM3-QUIZ-004-09"
+      },
+      {
+        "type": "mc",
+        "q": "체육을 하는 장소를 나타내는 말은 무엇인가요?",
+        "options": [
+          "운동장",
+          "교실",
+          "도서관",
+          "화장실"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word means a school playground or sports ground?",
+          "options": [
+            "Sports ground",
+            "Classroom",
+            "Library",
+            "Bathroom"
+          ]
+        },
+        "explanation": "운동장 means playground or sports ground, where pupils can exercise.",
+        "id": "KOR-PM3-QUIZ-004-10"
+      }
+    ],
+    "날씨와 옷": [
+      {
+        "type": "mc",
+        "q": "비가 오는 날 사용하는 물건은 무엇인가요?",
+        "options": [
+          "모자",
+          "우산",
+          "장갑",
+          "양말"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "What do we use on a rainy day?",
+          "options": [
+            "Hat",
+            "Umbrella",
+            "Gloves",
+            "Socks"
+          ]
+        },
+        "explanation": "우산 means umbrella, which helps keep us dry in the rain.",
+        "id": "KOR-PM3-QUIZ-005-01"
+      },
+      {
+        "type": "tf",
+        "q": "눈은 추운 날에 내릴 수 있어요.",
+        "expected": true,
+        "translation": {
+          "question": "Snow can fall on cold days.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "눈 means snow when talking about weather. Snow forms in very cold clouds.",
+        "id": "KOR-PM3-QUIZ-005-02"
+      },
+      {
+        "type": "drop",
+        "q": "발에 신는 것은 ____이에요.",
+        "expected": "신발",
+        "options": [
+          "신발",
+          "모자"
+        ],
+        "translation": {
+          "question": "We wear ____ on our feet.",
+          "options": [
+            "Shoes",
+            "Hat"
+          ]
+        },
+        "explanation": "신발 means shoes, clothing worn on our feet.",
+        "id": "KOR-PM3-QUIZ-005-03"
+      },
+      {
+        "type": "mc",
+        "q": "햇빛이 강할 때 머리에 쓰는 것은 무엇인가요?",
+        "options": [
+          "장갑",
+          "모자",
+          "양말",
+          "바지"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "What can we wear on our head in strong sunlight?",
+          "options": [
+            "Gloves",
+            "Hat",
+            "Socks",
+            "Trousers"
+          ]
+        },
+        "explanation": "모자 means hat, which can shade our head from sunlight.",
+        "id": "KOR-PM3-QUIZ-005-04"
+      },
+      {
+        "type": "tf",
+        "q": "장갑은 발에 신는 옷이에요.",
+        "expected": false,
+        "translation": {
+          "question": "Gloves are worn on feet.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "장갑 means gloves, which cover and protect our hands.",
+        "id": "KOR-PM3-QUIZ-005-05"
+      },
+      {
+        "type": "drop",
+        "q": "비가 오면 하늘에서 ____가 내려요.",
+        "expected": "비",
+        "options": [
+          "비",
+          "바람"
+        ],
+        "translation": {
+          "question": "When it rains, ____ falls from the sky.",
+          "options": [
+            "Rain",
+            "Wind"
+          ]
+        },
+        "explanation": "비 means rain, water droplets falling from clouds.",
+        "id": "KOR-PM3-QUIZ-005-06"
+      },
+      {
+        "type": "mc",
+        "q": "흐린 날씨를 나타내는 말은 무엇인가요?",
+        "options": [
+          "맑아요",
+          "흐려요",
+          "더워요",
+          "추워요"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which phrase means the weather is cloudy?",
+          "options": [
+            "Clear",
+            "Cloudy",
+            "Hot",
+            "Cold"
+          ]
+        },
+        "explanation": "흐려요 describes cloudy weather when clouds cover much of the sky.",
+        "id": "KOR-PM3-QUIZ-005-07"
+      },
+      {
+        "type": "tf",
+        "q": "양말은 발에 신는 옷이에요.",
+        "expected": true,
+        "translation": {
+          "question": "Socks are worn on feet.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "양말 means socks, soft clothing worn on our feet.",
+        "id": "KOR-PM3-QUIZ-005-08"
+      },
+      {
+        "type": "drop",
+        "q": "추울 때 손을 따뜻하게 하려면 ____을 껴요.",
+        "expected": "장갑",
+        "options": [
+          "장갑",
+          "신발"
+        ],
+        "translation": {
+          "question": "We wear ____ to keep our hands warm.",
+          "options": [
+            "Gloves",
+            "Shoes"
+          ]
+        },
+        "explanation": "장갑 means gloves, which help keep our hands warm.",
+        "id": "KOR-PM3-QUIZ-005-09"
+      },
+      {
+        "type": "mc",
+        "q": "바지는 몸의 어느 부분에 입나요?",
+        "options": [
+          "머리",
+          "다리",
+          "손",
+          "목"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Trousers are worn on which part of the body?",
+          "options": [
+            "Head",
+            "Legs",
+            "Hands",
+            "Neck"
+          ]
+        },
+        "explanation": "바지 means trousers, which cover the legs.",
+        "id": "KOR-PM3-QUIZ-005-10"
+      }
+    ],
+    "주격 조사 이와 가": [
+      {
+        "type": "mc",
+        "q": "‘고양이____ 자요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "이",
+          "가",
+          "을",
+          "에"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the subject particle: 'The cat is sleeping.'",
+          "options": [
+            "Subject particle after consonant",
+            "Subject particle after vowel",
+            "Object particle",
+            "Location particle"
+          ]
+        },
+        "explanation": "고양이 ends with a vowel sound, so the subject particle is 가.",
+        "id": "KOR-PM3-QUIZ-006-01"
+      },
+      {
+        "type": "tf",
+        "q": "‘책이 있어요.’에서 ‘이’는 주어를 나타내요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'There is a book,' 이 marks the subject.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "이 marks the subject after a word ending in a consonant sound.",
+        "id": "KOR-PM3-QUIZ-006-02"
+      },
+      {
+        "type": "drop",
+        "q": "‘물이 있어요.’에서 물 뒤에는 ____를 써요.",
+        "expected": "이",
+        "options": [
+          "이",
+          "가"
+        ],
+        "translation": {
+          "question": "After 물 in 'There is water', use ____.",
+          "options": [
+            "Subject marker after consonant",
+            "Subject marker after vowel"
+          ]
+        },
+        "explanation": "물 ends with the consonant ㄹ, so we add 이 to mark the subject.",
+        "id": "KOR-PM3-QUIZ-006-03"
+      },
+      {
+        "type": "mc",
+        "q": "‘아기____ 웃어요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "을",
+          "이",
+          "가",
+          "는"
+        ],
+        "correct": 2,
+        "translation": {
+          "question": "Choose the subject particle: 'The baby smiles.'",
+          "options": [
+            "Object particle",
+            "Subject marker after consonant",
+            "Subject marker after vowel",
+            "Topic particle"
+          ]
+        },
+        "explanation": "아기 ends with a vowel sound, so we use 가.",
+        "id": "KOR-PM3-QUIZ-006-04"
+      },
+      {
+        "type": "tf",
+        "q": "‘꽃가 피어요.’는 주격 조사를 바르게 사용한 문장이에요.",
+        "expected": false,
+        "translation": {
+          "question": "'꽃가 피어요' uses the correct subject particle.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "꽃 ends with a consonant sound, so its subject particle is 이: 꽃이 피어요.",
+        "id": "KOR-PM3-QUIZ-006-05"
+      },
+      {
+        "type": "drop",
+        "q": "‘사람____ 와요.’에서 사람 뒤에는 ____를 써요.",
+        "expected": "이",
+        "options": [
+          "이",
+          "가"
+        ],
+        "translation": {
+          "question": "In 'A person is coming', use ____ after 사람.",
+          "options": [
+            "Subject marker after consonant",
+            "Subject marker after vowel"
+          ]
+        },
+        "explanation": "사람 ends with a consonant sound, so we add 이.",
+        "id": "KOR-PM3-QUIZ-006-06"
+      },
+      {
+        "type": "mc",
+        "q": "‘비____ 와요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "가",
+          "을",
+          "이",
+          "에"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the subject particle: 'It rains.'",
+          "options": [
+            "Subject particle after vowel",
+            "Object particle",
+            "Subject particle after consonant",
+            "Location particle"
+          ]
+        },
+        "explanation": "비 ends with a vowel sound, so 비가 와요 uses 가.",
+        "id": "KOR-PM3-QUIZ-006-07"
+      },
+      {
+        "type": "tf",
+        "q": "‘나무가 커요.’에서 ‘가’는 주어를 나타내요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'The tree is big,' 가 marks the subject.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "나무 ends with a vowel sound, so 가 marks it as the subject.",
+        "id": "KOR-PM3-QUIZ-006-08"
+      },
+      {
+        "type": "drop",
+        "q": "‘산____ 높아요.’에서 산 뒤에는 ____를 써요.",
+        "expected": "이",
+        "options": [
+          "이",
+          "가"
+        ],
+        "translation": {
+          "question": "In 'The mountain is high,' use ____ after 산.",
+          "options": [
+            "Subject marker after consonant",
+            "Subject marker after vowel"
+          ]
+        },
+        "explanation": "산 ends with the consonant ㄴ, so we add 이.",
+        "id": "KOR-PM3-QUIZ-006-09"
+      },
+      {
+        "type": "mc",
+        "q": "주어가 ‘바다’일 때 알맞은 표현은 무엇인가요?",
+        "options": [
+          "바다이",
+          "바다가",
+          "바다을",
+          "바다를"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which form correctly marks 바다 (sea) as the subject?",
+          "options": [
+            "Incorrect particle",
+            "Correct subject form",
+            "Object particle form",
+            "Object particle form"
+          ]
+        },
+        "explanation": "바다 ends in a vowel sound, so 바다가 marks it as the subject.",
+        "id": "KOR-PM3-QUIZ-006-10"
+      }
+    ],
+    "주제 조사 은과 는": [
+      {
+        "type": "mc",
+        "q": "‘저____ 학생이에요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "은",
+          "는",
+          "을",
+          "가"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the topic particle: 'I am a student.'",
+          "options": [
+            "Topic after consonant",
+            "Topic after vowel",
+            "Object marker",
+            "Subject marker"
+          ]
+        },
+        "explanation": "저 ends in a vowel sound, so we add 는 to make 저는.",
+        "id": "KOR-PM3-QUIZ-007-01"
+      },
+      {
+        "type": "tf",
+        "q": "‘선생님은 친절해요.’에서 ‘은’은 화제를 나타내요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'The teacher is kind,' 은 marks the topic.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "선생님 ends in a consonant sound, so 은 marks the topic.",
+        "id": "KOR-PM3-QUIZ-007-02"
+      },
+      {
+        "type": "drop",
+        "q": "‘오늘____ 날씨가 좋아요.’에서 오늘 뒤에는 ____를 써요.",
+        "expected": "은",
+        "options": [
+          "은",
+          "는"
+        ],
+        "translation": {
+          "question": "In 'Today the weather is nice,' use ____ after 오늘.",
+          "options": [
+            "Topic marker after consonant",
+            "Topic marker after vowel"
+          ]
+        },
+        "explanation": "오늘 ends with a consonant sound, so we add 은.",
+        "id": "KOR-PM3-QUIZ-007-03"
+      },
+      {
+        "type": "mc",
+        "q": "‘우리____ 친구예요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "을",
+          "은",
+          "는",
+          "를"
+        ],
+        "correct": 2,
+        "translation": {
+          "question": "Choose the topic particle: 'We are friends.'",
+          "options": [
+            "Object marker",
+            "Topic after consonant",
+            "Topic after vowel",
+            "Object marker"
+          ]
+        },
+        "explanation": "우리 ends in a vowel sound, so 우리는 uses 는.",
+        "id": "KOR-PM3-QUIZ-007-04"
+      },
+      {
+        "type": "tf",
+        "q": "‘책는 재미있어요.’는 조사를 바르게 사용한 문장이에요.",
+        "expected": false,
+        "translation": {
+          "question": "'책는 재미있어요' uses the correct topic particle.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "책 ends with a consonant sound, so we use 은: 책은 재미있어요.",
+        "id": "KOR-PM3-QUIZ-007-05"
+      },
+      {
+        "type": "drop",
+        "q": "‘집____ 커요.’에서 집 뒤에는 ____를 써요.",
+        "expected": "은",
+        "options": [
+          "은",
+          "는"
+        ],
+        "translation": {
+          "question": "In 'The house is big,' use ____ after 집.",
+          "options": [
+            "Topic after consonant",
+            "Topic after vowel"
+          ]
+        },
+        "explanation": "집 ends with a consonant sound, so 집은 uses 은.",
+        "id": "KOR-PM3-QUIZ-007-06"
+      },
+      {
+        "type": "mc",
+        "q": "‘사과____ 달아요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "는",
+          "은",
+          "가",
+          "을"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the topic particle: 'The apple is sweet.'",
+          "options": [
+            "Topic after vowel",
+            "Topic after consonant",
+            "Subject particle",
+            "Object particle"
+          ]
+        },
+        "explanation": "사과 ends in a vowel sound, so 사과는 uses 는.",
+        "id": "KOR-PM3-QUIZ-007-07"
+      },
+      {
+        "type": "tf",
+        "q": "‘학교는 커요.’에서 ‘는’은 화제를 나타내요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'The school is big,' 는 marks the topic.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "학교 ends with a vowel sound, so 는 marks the topic.",
+        "id": "KOR-PM3-QUIZ-007-08"
+      },
+      {
+        "type": "drop",
+        "q": "‘이름____ 민수예요.’에서 이름 뒤에는 ____를 써요.",
+        "expected": "은",
+        "options": [
+          "은",
+          "는"
+        ],
+        "translation": {
+          "question": "In 'The name is Minsu,' use ____ after 이름.",
+          "options": [
+            "Topic after consonant",
+            "Topic after vowel"
+          ]
+        },
+        "explanation": "이름 ends with a consonant sound, so 이름은 uses 은.",
+        "id": "KOR-PM3-QUIZ-007-09"
+      },
+      {
+        "type": "mc",
+        "q": "‘날씨’를 화제로 나타낸 표현은 무엇인가요?",
+        "options": [
+          "날씨은",
+          "날씨는",
+          "날씨를",
+          "날씨이"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Which form marks 날씨 (weather) as the topic?",
+          "options": [
+            "Wrong topic form",
+            "Topic form",
+            "Object form",
+            "Wrong subject form"
+          ]
+        },
+        "explanation": "날씨 ends with a vowel sound, so 날씨는 is the topic form.",
+        "id": "KOR-PM3-QUIZ-007-10"
+      }
+    ],
+    "장소 조사 에와 에서": [
+      {
+        "type": "mc",
+        "q": "‘학교____ 가요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "에서",
+          "에",
+          "를",
+          "이"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the particle: 'Go to school.'",
+          "options": [
+            "Place of action",
+            "Destination",
+            "Object particle",
+            "Subject particle"
+          ]
+        },
+        "explanation": "에 shows a destination, the place someone goes to.",
+        "id": "KOR-PM3-QUIZ-008-01"
+      },
+      {
+        "type": "tf",
+        "q": "‘도서관에서 책을 읽어요.’에서 ‘에서’는 행동이 일어나는 장소예요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'Read a book at the library,' 에서 marks where the action happens.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "에서 marks the place where an action happens.",
+        "id": "KOR-PM3-QUIZ-008-02"
+      },
+      {
+        "type": "drop",
+        "q": "‘집____ 돌아가요.’에서 집 뒤에는 ____를 써요.",
+        "expected": "에",
+        "options": [
+          "에",
+          "에서"
+        ],
+        "translation": {
+          "question": "In 'Return home,' use ____ after 집.",
+          "options": [
+            "Destination marker",
+            "Place of action marker"
+          ]
+        },
+        "explanation": "집에 돌아가요 uses 에 because home is the destination.",
+        "id": "KOR-PM3-QUIZ-008-03"
+      },
+      {
+        "type": "mc",
+        "q": "‘공원____ 놀아요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "에서",
+          "에",
+          "을",
+          "이"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the particle: 'Play in the park.'",
+          "options": [
+            "Place of action",
+            "Destination",
+            "Object",
+            "Subject"
+          ]
+        },
+        "explanation": "에서 tells us where playing happens.",
+        "id": "KOR-PM3-QUIZ-008-04"
+      },
+      {
+        "type": "tf",
+        "q": "‘식당에 밥을 먹어요.’는 행동 장소 조사를 바르게 사용한 문장이에요.",
+        "expected": false,
+        "translation": {
+          "question": "'식당에 밥을 먹어요' uses the correct place-of-action particle.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "식당에서 밥을 먹어요 uses 에서 because eating happens at the restaurant.",
+        "id": "KOR-PM3-QUIZ-008-05"
+      },
+      {
+        "type": "drop",
+        "q": "‘운동장____ 달려요.’에서 운동장 뒤에는 ____를 써요.",
+        "expected": "에서",
+        "options": [
+          "에서",
+          "에"
+        ],
+        "translation": {
+          "question": "In 'Run on the sports ground,' use ____ after 운동장.",
+          "options": [
+            "Place of action",
+            "Destination"
+          ]
+        },
+        "explanation": "에서 shows where running takes place.",
+        "id": "KOR-PM3-QUIZ-008-06"
+      },
+      {
+        "type": "mc",
+        "q": "‘병원____ 가요.’에 알맞은 조사는 무엇인가요?",
+        "options": [
+          "에서",
+          "에",
+          "를",
+          "는"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the particle: 'Go to the hospital.'",
+          "options": [
+            "Place of action",
+            "Destination",
+            "Object",
+            "Topic"
+          ]
+        },
+        "explanation": "에 shows the destination, so 병원에 가요 means going to hospital.",
+        "id": "KOR-PM3-QUIZ-008-07"
+      },
+      {
+        "type": "tf",
+        "q": "‘교실에서 공부해요.’에서 ‘에서’는 공부하는 장소를 나타내요.",
+        "expected": true,
+        "translation": {
+          "question": "In 'Study in the classroom,' 에서 marks where studying happens.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "에서 tells us the place where studying happens.",
+        "id": "KOR-PM3-QUIZ-008-08"
+      },
+      {
+        "type": "drop",
+        "q": "‘집____ 숙제를 해요.’에서 집 뒤에는 ____를 써요.",
+        "expected": "에서",
+        "options": [
+          "에서",
+          "에"
+        ],
+        "translation": {
+          "question": "In 'Do homework at home,' use ____ after 집.",
+          "options": [
+            "Place of action",
+            "Destination"
+          ]
+        },
+        "explanation": "집에서 숙제를 해요 uses 에서 because homework is done at home.",
+        "id": "KOR-PM3-QUIZ-008-09"
+      },
+      {
+        "type": "mc",
+        "q": "‘가게에 가요.’에서 ‘에’는 무엇을 나타내나요?",
+        "options": [
+          "목적지",
+          "사람",
+          "시간",
+          "색깔"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "In 'Go to the shop,' what does 에 tell us?",
+          "options": [
+            "Destination",
+            "Person",
+            "Time",
+            "Colour"
+          ]
+        },
+        "explanation": "에 marks the destination, the shop someone is going to.",
+        "id": "KOR-PM3-QUIZ-008-10"
+      }
+    ],
+    "현재형 문장": [
+      {
+        "type": "mc",
+        "q": "‘저는 밥을 ____.’에 알맞은 말은 무엇인가요?",
+        "options": [
+          "먹어요",
+          "먹었어요",
+          "먹을 거예요",
+          "먹는"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the present polite verb: 'I eat rice.'",
+          "options": [
+            "Eat (polite present)",
+            "Ate (past)",
+            "Will eat (future)",
+            "Eating form"
+          ]
+        },
+        "explanation": "먹어요 is the polite present form of 먹다, meaning to eat.",
+        "id": "KOR-PM3-QUIZ-009-01"
+      },
+      {
+        "type": "tf",
+        "q": "‘물을 마셔요.’는 현재 하는 일을 나타낼 수 있어요.",
+        "expected": true,
+        "translation": {
+          "question": "'Drink water' can describe something happening now.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "마셔요 is a polite present form of 마시다, meaning to drink.",
+        "id": "KOR-PM3-QUIZ-009-02"
+      },
+      {
+        "type": "drop",
+        "q": "‘저는 책을 ____.’에 알맞은 현재형은 무엇인가요?",
+        "expected": "읽어요",
+        "options": [
+          "읽어요",
+          "읽었어요"
+        ],
+        "translation": {
+          "question": "Complete 'I read a book' with the present polite verb ____.",
+          "options": [
+            "Read",
+            "Read (past)"
+          ]
+        },
+        "explanation": "읽어요 is the polite present form of 읽다, meaning to read.",
+        "id": "KOR-PM3-QUIZ-009-03"
+      },
+      {
+        "type": "mc",
+        "q": "‘학교에 ____.’에 알맞은 현재형 동사는 무엇인가요?",
+        "options": [
+          "갔어요",
+          "가요",
+          "갈 거예요",
+          "가는"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the present polite verb: 'Go to school.'",
+          "options": [
+            "Went",
+            "Go",
+            "Will go",
+            "Going form"
+          ]
+        },
+        "explanation": "가요 is the polite present form of 가다, meaning to go.",
+        "id": "KOR-PM3-QUIZ-009-04"
+      },
+      {
+        "type": "tf",
+        "q": "‘어제 밥을 먹었어요.’는 현재형 문장이에요.",
+        "expected": false,
+        "translation": {
+          "question": "'I ate rice yesterday' is a present-tense sentence.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "먹었어요 is a past form, used for an action that already happened.",
+        "id": "KOR-PM3-QUIZ-009-05"
+      },
+      {
+        "type": "drop",
+        "q": "‘아기가 ____.’에 알맞은 현재형은 무엇인가요?",
+        "expected": "자요",
+        "options": [
+          "자요",
+          "잤어요"
+        ],
+        "translation": {
+          "question": "Complete 'The baby sleeps' with the present polite verb ____.",
+          "options": [
+            "Sleeps",
+            "Slept"
+          ]
+        },
+        "explanation": "자요 is the polite present form of 자다, meaning to sleep.",
+        "id": "KOR-PM3-QUIZ-009-06"
+      },
+      {
+        "type": "mc",
+        "q": "‘음악을 ____.’에 알맞은 현재형은 무엇인가요?",
+        "options": [
+          "들었어요",
+          "들어요",
+          "들을 거예요",
+          "듣는"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "Choose the present polite verb: 'Listen to music.'",
+          "options": [
+            "Listened",
+            "Listen",
+            "Will listen",
+            "Listening form"
+          ]
+        },
+        "explanation": "들어요 is the polite present form of 듣다, meaning to listen.",
+        "id": "KOR-PM3-QUIZ-009-07"
+      },
+      {
+        "type": "tf",
+        "q": "‘매일 운동해요.’는 습관을 나타낼 수 있어요.",
+        "expected": true,
+        "translation": {
+          "question": "'I exercise every day' can describe a habit.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "운동해요 means exercise, and 매일 means every day, describing a regular habit.",
+        "id": "KOR-PM3-QUIZ-009-08"
+      },
+      {
+        "type": "drop",
+        "q": "‘저는 친구를 ____.’에 알맞은 현재형은 무엇인가요?",
+        "expected": "만나요",
+        "options": [
+          "만나요",
+          "만났어요"
+        ],
+        "translation": {
+          "question": "Complete 'I meet my friend' with the present polite verb ____.",
+          "options": [
+            "Meet",
+            "Met"
+          ]
+        },
+        "explanation": "만나요 is the polite present form of 만나다, meaning to meet.",
+        "id": "KOR-PM3-QUIZ-009-09"
+      },
+      {
+        "type": "mc",
+        "q": "‘지금 무엇을 해요?’에서 ‘해요’의 기본형은 무엇인가요?",
+        "options": [
+          "하다",
+          "가다",
+          "오다",
+          "읽다"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "What is the dictionary form of 해요 in 'What are you doing now?'",
+          "options": [
+            "Do",
+            "Go",
+            "Come",
+            "Read"
+          ]
+        },
+        "explanation": "해요 is the polite present form of 하다, meaning to do.",
+        "id": "KOR-PM3-QUIZ-009-10"
+      }
     ]
   },
   "Math": {
