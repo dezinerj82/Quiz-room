@@ -2966,7 +2966,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-01",
-        "explanation": "사과 means apple. An apple is a fruit that grows on a tree."
+        "explanation": "사과 means apple. Apples are fruits that grow on trees and contain seeds."
       },
       {
         "type": "tf",
@@ -2980,7 +2980,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-02",
-        "explanation": "고양이 means cat. A cat is an animal with fur and whiskers."
+        "explanation": "고양이 means cat. Cats are animals with fur, whiskers and four legs."
       },
       {
         "type": "drop",
@@ -2998,7 +2998,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-03",
-        "explanation": "컵 means cup. We use a cup to hold water when drinking."
+        "explanation": "컵 means cup. It is a container for holding water or other drinks."
       },
       {
         "type": "mc",
@@ -3020,7 +3020,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-04",
-        "explanation": "파란색 means blue. Blue is a colour, like the colour of a clear sky."
+        "explanation": "파란색 means blue. It is a colour, like the colour of a clear daytime sky."
       },
       {
         "type": "tf",
@@ -3034,7 +3034,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-05",
-        "explanation": "책상 means desk. A desk is furniture where we can sit to study or write."
+        "explanation": "책상 means desk. It is a piece of furniture used for studying, reading or writing."
       },
       {
         "type": "drop",
@@ -3052,7 +3052,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-06",
-        "explanation": "연필 means pencil. A pencil is used to write or draw on paper."
+        "explanation": "연필 means pencil. It is a tool for making marks on paper when writing or drawing."
       },
       {
         "type": "mc",
@@ -3074,7 +3074,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-07",
-        "explanation": "엄마 means Mum. Your mum is a member of your family."
+        "explanation": "엄마 means Mum. A mother is a member of a child's family."
       },
       {
         "type": "tf",
@@ -3088,7 +3088,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-08",
-        "explanation": "하나 means one. We use it when counting one thing."
+        "explanation": "하나 means one. Korean uses this word when counting one thing, such as one apple."
       },
       {
         "type": "drop",
@@ -3106,7 +3106,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-09",
-        "explanation": "외투 means coat. A coat is a warm outer layer of clothing worn in cold weather."
+        "explanation": "외투 means coat. A coat is outer clothing that helps keep us warm in cold weather."
       },
       {
         "type": "mc",
@@ -3128,7 +3128,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-10",
-        "explanation": "병원 means hospital. A hospital is a place where people receive medical care."
+        "explanation": "병원 means hospital. It is a place where doctors and nurses care for patients."
       }
     ],
     "문법": [
@@ -3152,7 +3152,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-01",
-        "explanation": "저는 학생이에요 means I am a student. 학생 ends with a consonant sound, so we use 이에요."
+        "explanation": "저는 학생이에요 means 'I am a student'. 학생 ends with the consonant sound ㅇ, so we use 이에요 after it."
       },
       {
         "type": "tf",
@@ -3166,7 +3166,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-02",
-        "explanation": "저 means I, and 는 marks who the sentence is about. 저는 is a polite way to start talking about yourself."
+        "explanation": "저 means I, and 는 marks the topic of the sentence. 저는 is a polite way to say 'as for me' when talking about yourself."
       },
       {
         "type": "drop",
@@ -3184,7 +3184,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-03",
-        "explanation": "에 marks a destination. 학교에 가요 means going to school."
+        "explanation": "에 marks a destination, or where someone is going. 학교에 가요 means 'I go to school'."
       },
       {
         "type": "mc",
@@ -3206,7 +3206,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-04",
-        "explanation": "책이에요 means it is a book. 책 ends with a consonant sound, so we add 이에요."
+        "explanation": "책이에요 means 'It is a book'. 책 ends with the consonant sound ㄱ, so we use 이에요 after it."
       },
       {
         "type": "tf",
@@ -3220,7 +3220,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-05",
-        "explanation": "있어요 means there is or there are. 사과가 있어요 means there are apples."
+        "explanation": "있어요 means 'there is' or 'there are'. 사과가 있어요 says that apples are present."
       },
       {
         "type": "drop",
@@ -3238,7 +3238,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-06",
-        "explanation": "가방 ends with a consonant sound, so we add 이 to mark it as the subject."
+        "explanation": "가방 ends with the consonant sound ㅇ. Korean uses the subject particle 이 after a word ending in a consonant."
       },
       {
         "type": "mc",
@@ -3260,7 +3260,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-07",
-        "explanation": "어디에 가요? means Where are you going? It is a question asking about a destination."
+        "explanation": "어디에 가요? means 'Where are you going?' 어디에 asks about the destination, so the sentence is a question."
       },
       {
         "type": "tf",
@@ -3274,7 +3274,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-08",
-        "explanation": "학교에 가요 means going to school. The particle 에 shows the destination."
+        "explanation": "학교에 가요 means 'go to school'. The particle 에 shows that school is the destination."
       },
       {
         "type": "drop",
@@ -3292,7 +3292,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-09",
-        "explanation": "저 ends with a vowel sound, so we add 는 to show who the sentence is about."
+        "explanation": "저 ends in the vowel sound ㅓ. Korean uses the topic particle 는 after a vowel, making 저는."
       },
       {
         "type": "mc",
@@ -3314,7 +3314,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-10",
-        "explanation": "친구 ends with a vowel sound, so we add 가 to mark it as the subject."
+        "explanation": "친구 ends in the vowel sound ㅜ. Korean uses the subject particle 가 after a vowel, making 친구가."
       }
     ],
     "가족과 사람": [
@@ -3337,7 +3337,7 @@ const exerciseBank={
             "Teacher"
           ]
         },
-        "explanation": "아버지 means father, a male parent in the family.",
+        "explanation": "아버지 means father. It is a respectful Korean word for a male parent.",
         "id": "KOR-PM3-QUIZ-002-01"
       },
       {
@@ -3351,7 +3351,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "할아버지 means grandfather, the father of a parent.",
+        "explanation": "할아버지 means grandfather. A grandfather is the father of your mother or father.",
         "id": "KOR-PM3-QUIZ-002-02"
       },
       {
@@ -3369,7 +3369,7 @@ const exerciseBank={
             "Grandmother"
           ]
         },
-        "explanation": "동생 means a younger brother or sister.",
+        "explanation": "동생 means younger sibling. It can describe a younger brother or a younger sister.",
         "id": "KOR-PM3-QUIZ-002-03"
       },
       {
@@ -3391,7 +3391,7 @@ const exerciseBank={
             "Friend"
           ]
         },
-        "explanation": "할머니 means grandmother, the mother of a parent.",
+        "explanation": "할머니 means grandmother. A grandmother is the mother of your mother or father.",
         "id": "KOR-PM3-QUIZ-002-04"
       },
       {
@@ -3405,7 +3405,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "선생님 means teacher, someone who helps pupils learn.",
+        "explanation": "선생님 means teacher. It is a respectful word for someone who teaches pupils.",
         "id": "KOR-PM3-QUIZ-002-05"
       },
       {
@@ -3423,7 +3423,7 @@ const exerciseBank={
             "Baby"
           ]
         },
-        "explanation": "형 means older brother when a boy is speaking.",
+        "explanation": "형 means older brother when a boy or man talks about his older brother. Girls or women use 오빠.",
         "id": "KOR-PM3-QUIZ-002-06"
       },
       {
@@ -3445,7 +3445,7 @@ const exerciseBank={
             "Father"
           ]
         },
-        "explanation": "아기 means baby, a very young child.",
+        "explanation": "아기 means baby. A baby is a very young child.",
         "id": "KOR-PM3-QUIZ-002-07"
       },
       {
@@ -3459,7 +3459,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "삼촌 means uncle, a male relative in the family.",
+        "explanation": "삼촌 means uncle. It is a family word for an older male relative such as an uncle.",
         "id": "KOR-PM3-QUIZ-002-08"
       },
       {
@@ -3477,7 +3477,7 @@ const exerciseBank={
             "Father"
           ]
         },
-        "explanation": "외할머니 means the mother of your mother.",
+        "explanation": "외할머니 means maternal grandmother. It refers specifically to your mother's mother.",
         "id": "KOR-PM3-QUIZ-002-09"
       },
       {
@@ -3499,7 +3499,7 @@ const exerciseBank={
             "Younger sibling"
           ]
         },
-        "explanation": "외삼촌 means an uncle who is your mother's brother.",
+        "explanation": "외삼촌 means maternal uncle. It refers to your mother's brother.",
         "id": "KOR-PM3-QUIZ-002-10"
       }
     ],
@@ -3523,7 +3523,7 @@ const exerciseBank={
             "Bread"
           ]
         },
-        "explanation": "밥 means cooked rice or a meal.",
+        "explanation": "밥 means cooked rice. In everyday Korean, it can also mean a meal.",
         "id": "KOR-PM3-QUIZ-003-01"
       },
       {
@@ -3537,7 +3537,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "우유 means milk, a drink that comes from animals such as cows.",
+        "explanation": "우유 means milk. It is a drink often made from cow's milk.",
         "id": "KOR-PM3-QUIZ-003-02"
       },
       {
@@ -3555,7 +3555,7 @@ const exerciseBank={
             "Salt"
           ]
         },
-        "explanation": "케이크 means cake, a sweet food often eaten at celebrations.",
+        "explanation": "케이크 means cake. It is a sweet baked food often served at birthdays.",
         "id": "KOR-PM3-QUIZ-003-03"
       },
       {
@@ -3577,7 +3577,7 @@ const exerciseBank={
             "Snack"
           ]
         },
-        "explanation": "국 means soup, a food made with liquid and other ingredients.",
+        "explanation": "국 means soup. It is a dish with broth and other ingredients.",
         "id": "KOR-PM3-QUIZ-003-04"
       },
       {
@@ -3591,7 +3591,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "소금 means salt, which gives food a salty taste.",
+        "explanation": "소금 means salt. Salt gives food a salty taste.",
         "id": "KOR-PM3-QUIZ-003-05"
       },
       {
@@ -3609,7 +3609,7 @@ const exerciseBank={
             "Cooked rice"
           ]
         },
-        "explanation": "물 means water, a liquid we drink to stay hydrated.",
+        "explanation": "물 means water. It is a liquid people drink when they are thirsty.",
         "id": "KOR-PM3-QUIZ-003-06"
       },
       {
@@ -3631,7 +3631,7 @@ const exerciseBank={
             "Meat"
           ]
         },
-        "explanation": "당근 means carrot, a vegetable that grows in the ground.",
+        "explanation": "당근 means carrot. Carrots are vegetables that grow underground.",
         "id": "KOR-PM3-QUIZ-003-07"
       },
       {
@@ -3645,7 +3645,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "빵 means bread, a food made from flour and baked.",
+        "explanation": "빵 means bread. Bread is a food usually made from flour and baked.",
         "id": "KOR-PM3-QUIZ-003-08"
       },
       {
@@ -3663,7 +3663,7 @@ const exerciseBank={
             "Salt"
           ]
         },
-        "explanation": "우유 means milk, a white drink.",
+        "explanation": "우유 means milk. Milk is a white drink, often made from cow's milk.",
         "id": "KOR-PM3-QUIZ-003-09"
       },
       {
@@ -3685,7 +3685,7 @@ const exerciseBank={
             "Bitter"
           ]
         },
-        "explanation": "달아요 means something tastes sweet.",
+        "explanation": "달아요 means 'it tastes sweet'. It describes a taste like sugar or honey.",
         "id": "KOR-PM3-QUIZ-003-10"
       }
     ],
@@ -3709,7 +3709,7 @@ const exerciseBank={
             "Bag"
           ]
         },
-        "explanation": "지우개 means eraser, a tool for removing pencil marks.",
+        "explanation": "지우개 means eraser. An eraser removes pencil marks from paper.",
         "id": "KOR-PM3-QUIZ-004-01"
       },
       {
@@ -3723,7 +3723,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "공책 means notebook, which has pages for writing.",
+        "explanation": "공책 means notebook. A notebook has pages for writing notes or doing schoolwork.",
         "id": "KOR-PM3-QUIZ-004-02"
       },
       {
@@ -3741,7 +3741,7 @@ const exerciseBank={
             "Umbrella"
           ]
         },
-        "explanation": "자 means ruler, a tool used to measure length.",
+        "explanation": "자 means ruler in this sentence. A ruler has marks for measuring length.",
         "id": "KOR-PM3-QUIZ-004-03"
       },
       {
@@ -3763,7 +3763,7 @@ const exerciseBank={
             "Hospital"
           ]
         },
-        "explanation": "교실 means classroom, where pupils learn lessons.",
+        "explanation": "교실 means classroom. Pupils learn and teachers give lessons in a classroom.",
         "id": "KOR-PM3-QUIZ-004-04"
       },
       {
@@ -3777,7 +3777,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "가위 means scissors, a tool used to cut paper.",
+        "explanation": "가위 means scissors. Their blades help cut paper or other materials.",
         "id": "KOR-PM3-QUIZ-004-05"
       },
       {
@@ -3795,7 +3795,7 @@ const exerciseBank={
             "Chair"
           ]
         },
-        "explanation": "가방 means bag, something used to carry books and other things.",
+        "explanation": "가방 means bag. A school bag is used to carry books and other school supplies.",
         "id": "KOR-PM3-QUIZ-004-06"
       },
       {
@@ -3817,7 +3817,7 @@ const exerciseBank={
             "Shoes"
           ]
         },
-        "explanation": "칠판 means board, where teachers can write during lessons.",
+        "explanation": "칠판 means classroom board. A teacher can write or draw on it during lessons.",
         "id": "KOR-PM3-QUIZ-004-07"
       },
       {
@@ -3831,7 +3831,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "도서관 means library, a place to read or borrow books.",
+        "explanation": "도서관 means library. People can read or borrow books there.",
         "id": "KOR-PM3-QUIZ-004-08"
       },
       {
@@ -3849,7 +3849,7 @@ const exerciseBank={
             "Eraser"
           ]
         },
-        "explanation": "가위 means scissors, a tool with blades for cutting.",
+        "explanation": "가위 means scissors. Their two blades close together to cut paper.",
         "id": "KOR-PM3-QUIZ-004-09"
       },
       {
@@ -3871,7 +3871,7 @@ const exerciseBank={
             "Bathroom"
           ]
         },
-        "explanation": "운동장 means playground or sports ground, where pupils can exercise.",
+        "explanation": "운동장 means sports ground or playground. Pupils can run, play and exercise there.",
         "id": "KOR-PM3-QUIZ-004-10"
       }
     ],
@@ -3895,7 +3895,7 @@ const exerciseBank={
             "Socks"
           ]
         },
-        "explanation": "우산 means umbrella, which helps keep us dry in the rain.",
+        "explanation": "우산 means umbrella. Its cover helps shield people from falling rain.",
         "id": "KOR-PM3-QUIZ-005-01"
       },
       {
@@ -3909,7 +3909,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "눈 means snow when talking about weather. Snow forms in very cold clouds.",
+        "explanation": "눈 means snow when talking about weather. Snow is made of frozen ice crystals that fall from clouds.",
         "id": "KOR-PM3-QUIZ-005-02"
       },
       {
@@ -3927,7 +3927,7 @@ const exerciseBank={
             "Hat"
           ]
         },
-        "explanation": "신발 means shoes, clothing worn on our feet.",
+        "explanation": "신발 means shoes. Shoes cover and protect our feet when we walk.",
         "id": "KOR-PM3-QUIZ-005-03"
       },
       {
@@ -3949,7 +3949,7 @@ const exerciseBank={
             "Trousers"
           ]
         },
-        "explanation": "모자 means hat, which can shade our head from sunlight.",
+        "explanation": "모자 means hat. A hat covers our head and can provide shade from sunlight.",
         "id": "KOR-PM3-QUIZ-005-04"
       },
       {
@@ -3963,7 +3963,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "장갑 means gloves, which cover and protect our hands.",
+        "explanation": "장갑 means gloves. Gloves cover our hands and can help keep them warm.",
         "id": "KOR-PM3-QUIZ-005-05"
       },
       {
@@ -3981,7 +3981,7 @@ const exerciseBank={
             "Wind"
           ]
         },
-        "explanation": "비 means rain, water droplets falling from clouds.",
+        "explanation": "비 means rain. Rain is water falling from clouds in drops.",
         "id": "KOR-PM3-QUIZ-005-06"
       },
       {
@@ -4003,7 +4003,7 @@ const exerciseBank={
             "Cold"
           ]
         },
-        "explanation": "흐려요 describes cloudy weather when clouds cover much of the sky.",
+        "explanation": "흐려요 means 'it is cloudy'. Clouds cover much of the sky in cloudy weather.",
         "id": "KOR-PM3-QUIZ-005-07"
       },
       {
@@ -4017,7 +4017,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "양말 means socks, soft clothing worn on our feet.",
+        "explanation": "양말 means socks. Socks are soft clothing worn around our feet inside shoes.",
         "id": "KOR-PM3-QUIZ-005-08"
       },
       {
@@ -4035,7 +4035,7 @@ const exerciseBank={
             "Shoes"
           ]
         },
-        "explanation": "장갑 means gloves, which help keep our hands warm.",
+        "explanation": "장갑 means gloves. They cover our fingers and hands to help keep them warm.",
         "id": "KOR-PM3-QUIZ-005-09"
       },
       {
@@ -4057,7 +4057,7 @@ const exerciseBank={
             "Neck"
           ]
         },
-        "explanation": "바지 means trousers, which cover the legs.",
+        "explanation": "바지 means trousers or pants. They cover our waist and legs.",
         "id": "KOR-PM3-QUIZ-005-10"
       }
     ],
@@ -4081,7 +4081,7 @@ const exerciseBank={
             "Location particle"
           ]
         },
-        "explanation": "고양이 ends with a vowel sound, so the subject particle is 가.",
+        "explanation": "고양이 ends with the vowel ㅣ. We add 가 after vowel-ending nouns to mark the subject: 고양이가 자요.",
         "id": "KOR-PM3-QUIZ-006-01"
       },
       {
@@ -4095,7 +4095,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "이 marks the subject after a word ending in a consonant sound.",
+        "explanation": "책 ends with the consonant ㄱ. We use 이 after consonant-ending nouns to mark the subject: 책이 있어요.",
         "id": "KOR-PM3-QUIZ-006-02"
       },
       {
@@ -4113,7 +4113,7 @@ const exerciseBank={
             "Subject marker after vowel"
           ]
         },
-        "explanation": "물 ends with the consonant ㄹ, so we add 이 to mark the subject.",
+        "explanation": "물 ends with the consonant ㄹ. We add 이 to mark it as the subject: 물이 있어요.",
         "id": "KOR-PM3-QUIZ-006-03"
       },
       {
@@ -4135,7 +4135,7 @@ const exerciseBank={
             "Topic particle"
           ]
         },
-        "explanation": "아기 ends with a vowel sound, so we use 가.",
+        "explanation": "아기 ends with the vowel ㅣ. We add 가 after vowel-ending nouns to mark the subject: 아기가 웃어요.",
         "id": "KOR-PM3-QUIZ-006-04"
       },
       {
@@ -4149,7 +4149,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "꽃 ends with a consonant sound, so its subject particle is 이: 꽃이 피어요.",
+        "explanation": "꽃 ends with the consonant ㅊ. We use 이 after a consonant-ending noun: 꽃이 피어요.",
         "id": "KOR-PM3-QUIZ-006-05"
       },
       {
@@ -4167,7 +4167,7 @@ const exerciseBank={
             "Subject marker after vowel"
           ]
         },
-        "explanation": "사람 ends with a consonant sound, so we add 이.",
+        "explanation": "사람 ends with the consonant ㅁ. We add 이 to mark the subject: 사람이 와요.",
         "id": "KOR-PM3-QUIZ-006-06"
       },
       {
@@ -4189,7 +4189,7 @@ const exerciseBank={
             "Location particle"
           ]
         },
-        "explanation": "비 ends with a vowel sound, so 비가 와요 uses 가.",
+        "explanation": "비 ends with the vowel ㅣ. We add 가 to mark the subject: 비가 와요.",
         "id": "KOR-PM3-QUIZ-006-07"
       },
       {
@@ -4203,7 +4203,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "나무 ends with a vowel sound, so 가 marks it as the subject.",
+        "explanation": "나무 ends with the vowel ㅜ. The subject marker 가 follows vowel-ending nouns: 나무가 커요.",
         "id": "KOR-PM3-QUIZ-006-08"
       },
       {
@@ -4221,7 +4221,7 @@ const exerciseBank={
             "Subject marker after vowel"
           ]
         },
-        "explanation": "산 ends with the consonant ㄴ, so we add 이.",
+        "explanation": "산 ends with the consonant ㄴ. We add 이 to mark it as the subject: 산이 높아요.",
         "id": "KOR-PM3-QUIZ-006-09"
       },
       {
@@ -4243,7 +4243,7 @@ const exerciseBank={
             "Object particle form"
           ]
         },
-        "explanation": "바다 ends in a vowel sound, so 바다가 marks it as the subject.",
+        "explanation": "바다 ends with the vowel ㅏ. We add 가 to make 바다가 when it is the subject.",
         "id": "KOR-PM3-QUIZ-006-10"
       }
     ],
@@ -4267,7 +4267,7 @@ const exerciseBank={
             "Subject marker"
           ]
         },
-        "explanation": "저 ends in a vowel sound, so we add 는 to make 저는.",
+        "explanation": "저 ends with the vowel ㅓ. We add the topic marker 는 after vowel-ending words: 저는 학생이에요.",
         "id": "KOR-PM3-QUIZ-007-01"
       },
       {
@@ -4281,7 +4281,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "선생님 ends in a consonant sound, so 은 marks the topic.",
+        "explanation": "선생님 ends with the consonant ㅁ. We add 은 to show the teacher is the topic: 선생님은 친절해요.",
         "id": "KOR-PM3-QUIZ-007-02"
       },
       {
@@ -4299,7 +4299,7 @@ const exerciseBank={
             "Topic marker after vowel"
           ]
         },
-        "explanation": "오늘 ends with a consonant sound, so we add 은.",
+        "explanation": "오늘 ends with the consonant ㄹ. We add 은 after consonant-ending words to mark the topic: 오늘은.",
         "id": "KOR-PM3-QUIZ-007-03"
       },
       {
@@ -4321,7 +4321,7 @@ const exerciseBank={
             "Object marker"
           ]
         },
-        "explanation": "우리 ends in a vowel sound, so 우리는 uses 는.",
+        "explanation": "우리 ends with the vowel ㅣ. We add 는 to mark the topic: 우리는 친구예요.",
         "id": "KOR-PM3-QUIZ-007-04"
       },
       {
@@ -4335,7 +4335,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "책 ends with a consonant sound, so we use 은: 책은 재미있어요.",
+        "explanation": "책 ends with the consonant ㄱ. We use 은 after consonant-ending words to mark the topic: 책은 재미있어요.",
         "id": "KOR-PM3-QUIZ-007-05"
       },
       {
@@ -4353,7 +4353,7 @@ const exerciseBank={
             "Topic after vowel"
           ]
         },
-        "explanation": "집 ends with a consonant sound, so 집은 uses 은.",
+        "explanation": "집 ends with the consonant ㅂ. We add 은 when the house is the topic: 집은 커요.",
         "id": "KOR-PM3-QUIZ-007-06"
       },
       {
@@ -4375,7 +4375,7 @@ const exerciseBank={
             "Object particle"
           ]
         },
-        "explanation": "사과 ends in a vowel sound, so 사과는 uses 는.",
+        "explanation": "사과 ends with the vowel ㅏ. We add 는 to mark the topic: 사과는 달아요.",
         "id": "KOR-PM3-QUIZ-007-07"
       },
       {
@@ -4389,7 +4389,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "학교 ends with a vowel sound, so 는 marks the topic.",
+        "explanation": "학교 ends with the vowel ㅛ. We add 는 to mark the topic: 학교는 커요.",
         "id": "KOR-PM3-QUIZ-007-08"
       },
       {
@@ -4407,7 +4407,7 @@ const exerciseBank={
             "Topic after vowel"
           ]
         },
-        "explanation": "이름 ends with a consonant sound, so 이름은 uses 은.",
+        "explanation": "이름 ends with the consonant ㅁ. We add 은 when the name is the topic: 이름은 민수예요.",
         "id": "KOR-PM3-QUIZ-007-09"
       },
       {
@@ -4429,7 +4429,7 @@ const exerciseBank={
             "Wrong subject form"
           ]
         },
-        "explanation": "날씨 ends with a vowel sound, so 날씨는 is the topic form.",
+        "explanation": "날씨 ends with the vowel ㅣ. We add 는 to mark the topic: 날씨는.",
         "id": "KOR-PM3-QUIZ-007-10"
       }
     ],
@@ -4453,7 +4453,7 @@ const exerciseBank={
             "Subject particle"
           ]
         },
-        "explanation": "에 shows a destination, the place someone goes to.",
+        "explanation": "에 marks a destination, the place someone goes to. 학교에 가요 means going to school.",
         "id": "KOR-PM3-QUIZ-008-01"
       },
       {
@@ -4467,7 +4467,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "에서 marks the place where an action happens.",
+        "explanation": "에서 marks the location where an action happens. Reading is done at the library: 도서관에서 책을 읽어요.",
         "id": "KOR-PM3-QUIZ-008-02"
       },
       {
@@ -4485,7 +4485,7 @@ const exerciseBank={
             "Place of action marker"
           ]
         },
-        "explanation": "집에 돌아가요 uses 에 because home is the destination.",
+        "explanation": "에 marks the destination of movement. 집에 돌아가요 means returning home.",
         "id": "KOR-PM3-QUIZ-008-03"
       },
       {
@@ -4507,7 +4507,7 @@ const exerciseBank={
             "Subject"
           ]
         },
-        "explanation": "에서 tells us where playing happens.",
+        "explanation": "에서 marks where an action takes place. 공원에서 놀아요 means playing in the park.",
         "id": "KOR-PM3-QUIZ-008-04"
       },
       {
@@ -4521,7 +4521,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "식당에서 밥을 먹어요 uses 에서 because eating happens at the restaurant.",
+        "explanation": "에서 marks where an action happens. Eating takes place at the restaurant: 식당에서 밥을 먹어요.",
         "id": "KOR-PM3-QUIZ-008-05"
       },
       {
@@ -4539,7 +4539,7 @@ const exerciseBank={
             "Destination"
           ]
         },
-        "explanation": "에서 shows where running takes place.",
+        "explanation": "에서 marks the place where running happens. 운동장에서 달려요 means running on the sports ground.",
         "id": "KOR-PM3-QUIZ-008-06"
       },
       {
@@ -4561,7 +4561,7 @@ const exerciseBank={
             "Topic"
           ]
         },
-        "explanation": "에 shows the destination, so 병원에 가요 means going to hospital.",
+        "explanation": "에 marks the destination. 병원에 가요 means going to the hospital.",
         "id": "KOR-PM3-QUIZ-008-07"
       },
       {
@@ -4575,7 +4575,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "에서 tells us the place where studying happens.",
+        "explanation": "에서 marks the place where studying happens. 교실에서 공부해요 means studying in the classroom.",
         "id": "KOR-PM3-QUIZ-008-08"
       },
       {
@@ -4593,7 +4593,7 @@ const exerciseBank={
             "Destination"
           ]
         },
-        "explanation": "집에서 숙제를 해요 uses 에서 because homework is done at home.",
+        "explanation": "에서 marks the place where an action happens. 집에서 숙제를 해요 means doing homework at home.",
         "id": "KOR-PM3-QUIZ-008-09"
       },
       {
@@ -4615,7 +4615,7 @@ const exerciseBank={
             "Colour"
           ]
         },
-        "explanation": "에 marks the destination, the shop someone is going to.",
+        "explanation": "목적지 means destination. In 가게에 가요, the particle 에 marks the shop as the place someone is going to.",
         "id": "KOR-PM3-QUIZ-008-10"
       }
     ],
@@ -4639,7 +4639,7 @@ const exerciseBank={
             "Eating form"
           ]
         },
-        "explanation": "먹어요 is the polite present form of 먹다, meaning to eat.",
+        "explanation": "먹어요 means 'eat' in polite present tense. It comes from 먹다 and describes eating now or regularly.",
         "id": "KOR-PM3-QUIZ-009-01"
       },
       {
@@ -4653,7 +4653,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "마셔요 is a polite present form of 마시다, meaning to drink.",
+        "explanation": "마셔요 means 'drink' in polite present tense. It comes from 마시다 and can describe drinking now.",
         "id": "KOR-PM3-QUIZ-009-02"
       },
       {
@@ -4671,7 +4671,7 @@ const exerciseBank={
             "Read (past)"
           ]
         },
-        "explanation": "읽어요 is the polite present form of 읽다, meaning to read.",
+        "explanation": "읽어요 means 'read' in polite present tense. It comes from 읽다 and describes reading now or regularly.",
         "id": "KOR-PM3-QUIZ-009-03"
       },
       {
@@ -4693,7 +4693,7 @@ const exerciseBank={
             "Going form"
           ]
         },
-        "explanation": "가요 is the polite present form of 가다, meaning to go.",
+        "explanation": "가요 means 'go' in polite present tense. It comes from 가다 and can describe going somewhere now or regularly.",
         "id": "KOR-PM3-QUIZ-009-04"
       },
       {
@@ -4707,7 +4707,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "먹었어요 is a past form, used for an action that already happened.",
+        "explanation": "먹었어요 is a polite past-tense form of 먹다. The ending -었어요 shows the eating happened earlier.",
         "id": "KOR-PM3-QUIZ-009-05"
       },
       {
@@ -4725,7 +4725,7 @@ const exerciseBank={
             "Slept"
           ]
         },
-        "explanation": "자요 is the polite present form of 자다, meaning to sleep.",
+        "explanation": "자요 means 'sleep' in polite present tense. It comes from 자다 and can describe sleeping now or regularly.",
         "id": "KOR-PM3-QUIZ-009-06"
       },
       {
@@ -4747,7 +4747,7 @@ const exerciseBank={
             "Listening form"
           ]
         },
-        "explanation": "들어요 is the polite present form of 듣다, meaning to listen.",
+        "explanation": "들어요 means 'listen' in polite present tense. It comes from 듣다, whose final consonant changes in this form.",
         "id": "KOR-PM3-QUIZ-009-07"
       },
       {
@@ -4761,7 +4761,7 @@ const exerciseBank={
             "False"
           ]
         },
-        "explanation": "운동해요 means exercise, and 매일 means every day, describing a regular habit.",
+        "explanation": "운동해요 means 'exercise' in polite present tense. 매일 means every day, so the sentence describes a habit.",
         "id": "KOR-PM3-QUIZ-009-08"
       },
       {
@@ -4779,7 +4779,7 @@ const exerciseBank={
             "Met"
           ]
         },
-        "explanation": "만나요 is the polite present form of 만나다, meaning to meet.",
+        "explanation": "만나요 means 'meet' in polite present tense. It comes from 만나다 and can describe meeting now or regularly.",
         "id": "KOR-PM3-QUIZ-009-09"
       },
       {
@@ -4801,7 +4801,7 @@ const exerciseBank={
             "Read"
           ]
         },
-        "explanation": "해요 is the polite present form of 하다, meaning to do.",
+        "explanation": "하다 means 'to do' and is the dictionary form. Its polite present form is 해요, as in 무엇을 해요?",
         "id": "KOR-PM3-QUIZ-009-10"
       }
     ]
