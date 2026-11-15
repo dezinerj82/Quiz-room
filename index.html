@@ -860,15 +860,15 @@ body:not(.auth-locked) #quiz .answer-feedback .foundation-term:hover,
 body:not(.auth-locked) #quiz .answer-feedback .foundation-term:focus-visible{
  outline:2px solid #6BA4C0;outline-offset:2px;
 }
-body:not(.auth-locked) #quiz .answer-feedback .foundation-term:is(:hover,:focus)::after{
- content:attr(data-definition);position:absolute;left:50%;bottom:calc(100% + 9px);
- transform:translateX(-50%);z-index:30;box-sizing:border-box;
- width:max-content;max-width:min(300px,calc(100vw - 32px));
+/* The glossary tip follows the cursor in a fixed viewport layer. */
+body:not(.auth-locked) .qr-foundation-tooltip{
+ position:fixed;left:0;top:0;z-index:10050;pointer-events:none;
+ width:max-content;max-width:min(300px,calc(100vw - 24px));
  padding:9px 12px;border:1px solid #6BA4C0;border-radius:12px;
  background:var(--qr-background);color:var(--qr-text-primary);
- font-size:var(--qr-font-small);font-weight:400;line-height:1.4;
- white-space:normal;text-align:left;box-shadow:0 3px 12px #00000016;
- pointer-events:none;
+ font-family:var(--qr-font);font-size:var(--qr-font-small);
+ font-weight:400;line-height:1.4;text-align:left;
+ white-space:normal;box-shadow:0 3px 12px #00000016;
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol,
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
@@ -1114,8 +1114,12 @@ body:not(.auth-locked) #quiz .qr-drop-zone.answer-correct{border-color:var(--qr-
 body:not(.auth-locked) #quiz .qr-drop-zone.answer-wrong{border-color:var(--qr-error);background:color-mix(in srgb,var(--qr-error) 15%,var(--qr-background))}
 body:not(.auth-locked) #quiz .qr-drop-choices{display:flex;align-items:center;flex-wrap:wrap;gap:var(--density-space)}
 body:not(.auth-locked) #quiz .qr-drop-option{
- width:auto!important;min-width:0;
+ width:auto!important;min-width:max-content!important;
+ display:inline-flex!important;align-items:center!important;gap:8px!important;
  touch-action:none;user-select:none;cursor:grab
+}
+body:not(.auth-locked) #quiz .qr-drop-option:is(.answer-correct,.answer-wrong)::after{
+ position:static!important;margin-left:8px!important;flex:0 0 27px!important;
 }
 body:not(.auth-locked) #quiz .qr-drop-option.selected{outline:2px solid var(--qr-focus);outline-offset:2px}
 body:not(.auth-locked) .qr-drop-ghost{
@@ -1752,6 +1756,54 @@ const qrFoundationTerms=Object.freeze({
  "plural":"A word form meaning more than one. For example, 'one cat' becomes 'two cats', while 'one child' becomes 'two children'."
 });
 const qrFoundationPattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+Object.keys(qrFoundationTerms).sort((a,b)=>b.length-a.length).join('|')+')(?![\\p{L}\\p{N}])','giu');
+/* One shared glossary tooltip, placed beside the pointer and kept on-screen. */
+let qrFoundationTooltip=null;
+function qrHideFoundationTip(){
+ if(qrFoundationTooltip)qrFoundationTooltip.classList.add('hidden');
+}
+function qrPlaceFoundationTip(x,y){
+ if(!qrFoundationTooltip)return;
+ const gap=16,edge=8;
+ const w=qrFoundationTooltip.offsetWidth,h=qrFoundationTooltip.offsetHeight;
+ const left=Math.max(edge,Math.min(x+gap,window.innerWidth-w-edge));
+ const top=Math.max(edge,Math.min(y+4,window.innerHeight-h-edge));
+ qrFoundationTooltip.style.left=left+'px';
+ qrFoundationTooltip.style.top=top+'px';
+}
+function qrShowFoundationTip(term,x,y){
+ if(!term||!term.dataset.definition)return;
+ if(!qrFoundationTooltip){
+  qrFoundationTooltip=document.createElement('div');
+  qrFoundationTooltip.className='qr-foundation-tooltip hidden';
+  qrFoundationTooltip.setAttribute('role','tooltip');
+  document.body.append(qrFoundationTooltip);
+ }
+ qrFoundationTooltip.textContent=term.dataset.definition;
+ qrFoundationTooltip.classList.remove('hidden');
+ qrPlaceFoundationTip(x,y);
+}
+document.addEventListener('pointerover',event=>{
+ const term=event.target.closest?.('#quiz .foundation-term');
+ if(term)qrShowFoundationTip(term,event.clientX,event.clientY);
+});
+document.addEventListener('pointermove',event=>{
+ const term=event.target.closest?.('#quiz .foundation-term');
+ if(term)qrShowFoundationTip(term,event.clientX,event.clientY);
+});
+document.addEventListener('pointerout',event=>{
+ const term=event.target.closest?.('#quiz .foundation-term');
+ if(term&&!term.contains(event.relatedTarget))qrHideFoundationTip();
+});
+document.addEventListener('focusin',event=>{
+ const term=event.target.closest?.('#quiz .foundation-term');
+ if(term){
+  const rect=term.getBoundingClientRect();
+  qrShowFoundationTip(term,rect.right,rect.top);
+ }
+});
+document.addEventListener('focusout',event=>{
+ if(event.target.closest?.('#quiz .foundation-term'))qrHideFoundationTip();
+});
 function qrAppendFoundationText(target,value){
  let cursor=0;
  for(const match of value.matchAll(qrFoundationPattern)){
