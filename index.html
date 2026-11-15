@@ -838,7 +838,17 @@ body:not(.auth-locked) #quiz .answer-feedback{
  display:grid;gap:var(--density-space);font-size:var(--qr-font-body);text-align:left;
 }
 body:not(.auth-locked) #quiz .answer-feedback .inline-feedback{
- display:flex;align-items:center;gap:var(--density-inner);padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius);line-height:1.5;font-weight:700;
+ display:flex;align-items:center;gap:var(--density-inner);padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius);line-height:1.5;font-weight:400;
+}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-explanation strong{font-weight:700}
+body:not(.auth-locked) #quiz .answer-feedback .feedback-reference{
+ display:inline;
+ background:color-mix(in srgb,var(--qr-text-primary) 10%,var(--qr-background));
+ border-radius:999px;
+ padding:0 5px;
+ font-weight:400;
+ box-decoration-break:clone;
+ -webkit-box-decoration-break:clone;
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol,
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
@@ -1719,7 +1729,21 @@ function submitAnswer(){
   const message=q.explanation||(correct?q.explanationCorrect:q.explanationIncorrect)||'';
   const answerLabel=document.createElement('strong');answerLabel.textContent=answerText;
   explanation.append(answerLabel);
-  if(message)explanation.append(document.createTextNode(' - '+message));
+  if(message){
+   explanation.append(document.createTextNode(' - '));
+   // Paired single quotes mark references; apostrophes inside words stay untouched.
+   const references=/(?<![\\p{L}\\p{N}])'([^'\\n]+)'(?![\\p{L}\\p{N}])/gu;
+   let cursor=0;
+   for(const match of message.matchAll(references)){
+    explanation.append(document.createTextNode(message.slice(cursor,match.index)));
+    const highlight=document.createElement('span');
+    highlight.className='feedback-reference';
+    highlight.textContent=match[1];
+    explanation.append(highlight);
+    cursor=match.index+match[0].length;
+   }
+   explanation.append(document.createTextNode(message.slice(cursor)));
+  }
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
