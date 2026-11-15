@@ -4881,7 +4881,7 @@ const exerciseBank={
         ],
         "correct": 1,
         "id": "MATH-PM3-QUIZ-U02-001-07",
-        "explanation": "8 × 7 = 56."
+        "explanation": "Each of the 8 boxes has 7 pencils. Multiply the boxes by the pencils in each box: 8 × 7 = 56."
       },
       {
         "type": "mc",
@@ -4894,7 +4894,7 @@ const exerciseBank={
         ],
         "correct": 1,
         "id": "MATH-PM3-QUIZ-U02-001-08",
-        "explanation": "72 ÷ 9 = 8."
+        "explanation": "Sharing 72 sweets equally among 9 children means dividing: 72 ÷ 9 = 8 sweets each."
       },
       {
         "type": "drop",
@@ -4918,7 +4918,7 @@ const exerciseBank={
         ],
         "correct": 2,
         "id": "MATH-PM3-QUIZ-U02-001-10",
-        "explanation": "1,000 − 250 − 150 = 600."
+        "explanation": "The shop sold 250 + 150 = 400 stickers. Subtract these from the original 1,000: 1,000 − 400 = 600."
       }
     ],
     "Fractions, Decimals and Percentages": [
@@ -4926,7 +4926,7 @@ const exerciseBank={
         "type": "drop",
         "q": "Fill in the blank: Half of 18 is ____.",
         "expected": "9",
-        "explanation": "18 ÷ 2 = 9.",
+        "explanation": "Half means one of two equal parts, so 18 ÷ 2 = 9.",
         "id": "MATH-PM3-QUIZ-U03-001-01",
         "options": [
           "9",
@@ -4943,21 +4943,21 @@ const exerciseBank={
           "One out of four equal parts"
         ],
         "correct": 0,
-        "explanation": "3/4 represents three of four equal parts of a whole.",
+        "explanation": "The bottom number, 4, tells us the whole has four equal parts. The top number, 3, means we take three of them.",
         "id": "MATH-PM3-QUIZ-U03-001-02"
       },
       {
         "type": "tf",
         "q": "0.7 is equal to seven tenths.",
         "expected": true,
-        "explanation": "Seven tenths is written as 0.7.",
+        "explanation": "0.7 means seven tenths because the 7 is in the tenths place.",
         "id": "MATH-PM3-QUIZ-U03-001-03"
       },
       {
         "type": "tf",
         "q": "0.5 is greater than 0.8.",
         "expected": false,
-        "explanation": "0.5 is less than 0.8.",
+        "explanation": "Both numbers have zero ones. Compare the tenths: 5 tenths is smaller than 8 tenths, so 0.5 is smaller.",
         "id": "MATH-PM3-QUIZ-U03-001-04"
       },
       {
@@ -4970,7 +4970,7 @@ const exerciseBank={
           "20"
         ],
         "correct": 1,
-        "explanation": "25% means one quarter; 40 ÷ 4 = 10.",
+        "explanation": "25% means one quarter. To find one quarter of 40, divide by four: 40 ÷ 4 = 10.",
         "id": "MATH-PM3-QUIZ-U03-001-05"
       },
       {
@@ -4983,14 +4983,14 @@ const exerciseBank={
           "0.13"
         ],
         "correct": 1,
-        "explanation": "3/10 is three tenths, or 0.3.",
+        "explanation": "The bottom number 10 means tenths. Three tenths is written as 0.3.",
         "id": "MATH-PM3-QUIZ-U03-001-06"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 1/4 is ____%.",
         "expected": "25",
-        "explanation": "One quarter is 25%.",
+        "explanation": "One quarter is one of four equal parts. 100% ÷ 4 = 25%.",
         "id": "MATH-PM3-QUIZ-U03-001-07",
         "options": [
           "25",
@@ -5007,21 +5007,21 @@ const exerciseBank={
           "1.62"
         ],
         "correct": 1,
-        "explanation": "1.25 is smaller than the other three decimals.",
+        "explanation": "Compare the whole-number parts first, then the decimal digits. 1.25 has the smallest value.",
         "id": "MATH-PM3-QUIZ-U03-001-08"
       },
       {
         "type": "tf",
         "q": "Two quarters make one half.",
         "expected": true,
-        "explanation": "1/4 + 1/4 = 2/4 = 1/2.",
+        "explanation": "1/4 + 1/4 = 2/4. Two out of four equal parts is the same as one half.",
         "id": "MATH-PM3-QUIZ-U03-001-09"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 0.6 + 0.2 = ____.",
         "expected": "0.8",
-        "explanation": "Six tenths plus two tenths equals eight tenths, or 0.8.",
+        "explanation": "0.6 + 0.2 = 0.8. Six tenths plus two tenths makes eight tenths.",
         "id": "MATH-PM3-QUIZ-U03-001-10",
         "options": [
           "0.8",
@@ -5078,7 +5078,7 @@ const exerciseBank={
         "type": "drop",
         "q": "Fill in the blank: RM10.00 − RM4.75 = RM____.",
         "expected": "5.25",
-        "explanation": "The change is RM5.25.",
+        "explanation": "RM10.00 − RM4.75 = RM5.25.",
         "id": "MATH-PM3-QUIZ-U04-001-05",
         "options": [
           "5.25",
@@ -5089,7 +5089,7 @@ const exerciseBank={
         "type": "tf",
         "q": "RM30 is enough to buy two toys costing RM18 and RM15.",
         "expected": false,
-        "explanation": "The toys cost RM33, which is RM3 more than RM30.",
+        "explanation": "RM18 + RM15 = RM33. The toys cost RM33 altogether, which is more than the RM30 available.",
         "id": "MATH-PM3-QUIZ-U04-001-06"
       },
       {
@@ -5102,14 +5102,14 @@ const exerciseBank={
           "RM18"
         ],
         "correct": 2,
-        "explanation": "RM7 + RM7 + RM3 = RM17.",
+        "explanation": "Two books cost 2 × RM7 = RM14. Add the pen: RM14 + RM3 = RM17.",
         "id": "MATH-PM3-QUIZ-U04-001-07"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 500 sen = RM____.",
         "expected": "5",
-        "explanation": "100 sen = RM1, so 500 sen = RM5.",
+        "explanation": "100 sen makes RM1, so 500 ÷ 100 = RM5.",
         "id": "MATH-PM3-QUIZ-U04-001-08",
         "options": [
           "5",
@@ -5133,7 +5133,7 @@ const exerciseBank={
           "RM13.50"
         ],
         "correct": 2,
-        "explanation": "RM20.00 − RM7.50 = RM12.50.",
+        "explanation": "Change is the money left after paying: RM20.00 − RM7.50 = RM12.50.",
         "id": "MATH-PM3-QUIZ-U04-001-10"
       }
     ],
@@ -5148,7 +5148,7 @@ const exerciseBank={
           "100"
         ],
         "correct": 2,
-        "explanation": "One hour contains 60 minutes.",
+        "explanation": "One hour has 60 minutes.",
         "id": "MATH-PM3-QUIZ-U05-001-01"
       },
       {
@@ -5172,14 +5172,14 @@ const exerciseBank={
           "4:00 p.m."
         ],
         "correct": 1,
-        "explanation": "30 minutes after 2:30 p.m. is 3:00 p.m.",
+        "explanation": "2:30 p.m. + 30 minutes = 3:00 p.m.",
         "id": "MATH-PM3-QUIZ-U05-001-03"
       },
       {
         "type": "tf",
         "q": "90 seconds is equal to 1 minute 30 seconds.",
         "expected": true,
-        "explanation": "60 seconds + 30 seconds = 90 seconds.",
+        "explanation": "One minute has 60 seconds, so 60 + 30 = 90 seconds.",
         "id": "MATH-PM3-QUIZ-U05-001-04"
       },
       {
@@ -5193,14 +5193,14 @@ const exerciseBank={
         "type": "tf",
         "q": "One hour 40 minutes is equal to 140 minutes.",
         "expected": false,
-        "explanation": "One hour 40 minutes is 60 + 40 = 100 minutes.",
+        "explanation": "One hour is 60 minutes, so 60 + 40 = 100 minutes.",
         "id": "MATH-PM3-QUIZ-U05-001-06"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: From 9:15 a.m. to 10:00 a.m. is ____ minutes.",
         "expected": "45",
-        "explanation": "It takes 45 minutes to go from 9:15 to 10:00.",
+        "explanation": "From 9:15 a.m. to 10:00 a.m. is 45 minutes.",
         "id": "MATH-PM3-QUIZ-U05-001-07",
         "options": [
           "45",
@@ -5217,7 +5217,7 @@ const exerciseBank={
           "60 minutes"
         ],
         "correct": 1,
-        "explanation": "From 7:30 to 8:00 is 30 minutes, then 10 more minutes.",
+        "explanation": "From 7:30 a.m. to 8:00 a.m. is 30 minutes. Add 10 minutes to reach 8:10 a.m., giving 40 minutes.",
         "id": "MATH-PM3-QUIZ-U05-001-08"
       },
       {
@@ -5241,7 +5241,7 @@ const exerciseBank={
           "5:15 p.m."
         ],
         "correct": 2,
-        "explanation": "From 4:20 p.m. to 5:00 p.m. is 40 minutes, then another 5 minutes reaches 5:05 p.m.",
+        "explanation": "From 4:20 p.m. to 5:00 p.m. is 40 minutes. Add 5 more minutes to reach 5:05 p.m.",
         "id": "MATH-PM3-QUIZ-U05-001-10"
       }
     ],
@@ -5256,7 +5256,7 @@ const exerciseBank={
           "50"
         ],
         "correct": 1,
-        "explanation": "1 metre is 100 centimetres.",
+        "explanation": "One metre equals 100 centimetres. A metre is a larger unit of length.",
         "id": "MATH-PM3-QUIZ-U06-001-01"
       },
       {
@@ -5274,7 +5274,7 @@ const exerciseBank={
         "type": "tf",
         "q": "One litre is equal to 1,000 millilitres.",
         "expected": true,
-        "explanation": "1 L = 1,000 mL.",
+        "explanation": "1 litre = 1,000 millilitres.",
         "id": "MATH-PM3-QUIZ-U06-001-03"
       },
       {
@@ -5287,7 +5287,7 @@ const exerciseBank={
           "30 m 5 cm"
         ],
         "correct": 1,
-        "explanation": "300 cm is 3 m and 50 cm remains.",
+        "explanation": "100 centimetres make 1 metre. 350 cm = 300 cm + 50 cm = 3 m 50 cm.",
         "id": "MATH-PM3-QUIZ-U06-001-04"
       },
       {
@@ -5305,14 +5305,14 @@ const exerciseBank={
         "type": "tf",
         "q": "2 kg 500 g is equal to 2,500 g.",
         "expected": true,
-        "explanation": "2 kg = 2,000 g; add 500 g.",
+        "explanation": "2 kg = 2,000 g. Add 500 g to get 2,500 g.",
         "id": "MATH-PM3-QUIZ-U06-001-06"
       },
       {
         "type": "tf",
         "q": "Three metres is equal to 30 centimetres.",
         "expected": false,
-        "explanation": "3 metres is 300 centimetres.",
+        "explanation": "1 metre = 100 centimetres, so 3 × 100 = 300 centimetres.",
         "id": "MATH-PM3-QUIZ-U06-001-07"
       },
       {
@@ -5325,14 +5325,14 @@ const exerciseBank={
           "1,250 mL"
         ],
         "correct": 2,
-        "explanation": "750 + 250 = 1,000 mL.",
+        "explanation": "750 mL + 250 mL = 1,000 mL.",
         "id": "MATH-PM3-QUIZ-U06-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 5 kg − 2 kg = ____ kg.",
         "expected": "3",
-        "explanation": "5 − 2 = 3 kilograms.",
+        "explanation": "5 kg − 2 kg = 3 kg.",
         "id": "MATH-PM3-QUIZ-U06-001-09",
         "options": [
           "3",
@@ -5349,7 +5349,7 @@ const exerciseBank={
           "1 m 40 cm"
         ],
         "correct": 1,
-        "explanation": "120 cm × 2 = 240 cm = 2 m 40 cm.",
+        "explanation": "1 m 20 cm = 120 cm. Two ribbons measure 120 × 2 = 240 cm = 2 m 40 cm.",
         "id": "MATH-PM3-QUIZ-U06-001-10"
       }
     ],
@@ -5358,14 +5358,14 @@ const exerciseBank={
         "type": "tf",
         "q": "All four sides of a square have equal lengths.",
         "expected": true,
-        "explanation": "A square has four equal sides.",
+        "explanation": "A square has four straight sides, and all four are the same length.",
         "id": "MATH-PM3-QUIZ-U07-001-01"
       },
       {
         "type": "tf",
         "q": "A triangle has four corners.",
         "expected": false,
-        "explanation": "A triangle has three corners.",
+        "explanation": "A triangle has three sides meeting at three corners, called vertices.",
         "id": "MATH-PM3-QUIZ-U07-001-02"
       },
       {
@@ -5378,14 +5378,14 @@ const exerciseBank={
           "8"
         ],
         "correct": 2,
-        "explanation": "A cube has six square faces.",
+        "explanation": "A cube has six flat square faces: top, bottom, front, back and two sides.",
         "id": "MATH-PM3-QUIZ-U07-001-03"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A rectangle has ____ sides.",
         "expected": "4",
-        "explanation": "A rectangle has four sides.",
+        "explanation": "A rectangle has four straight sides, with opposite sides the same length.",
         "id": "MATH-PM3-QUIZ-U07-001-04",
         "options": [
           "4",
@@ -5402,14 +5402,14 @@ const exerciseBank={
           "4"
         ],
         "correct": 0,
-        "explanation": "A sphere has a curved surface and no flat faces.",
+        "explanation": "A sphere is completely curved, like a ball, so it has zero flat faces.",
         "id": "MATH-PM3-QUIZ-U07-001-05"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A cuboid has ____ vertices.",
         "expected": "8",
-        "explanation": "A cuboid has eight corners, called vertices.",
+        "explanation": "A vertex is a corner where edges meet. A cuboid has eight such corners.",
         "id": "MATH-PM3-QUIZ-U07-001-06",
         "options": [
           "8",
@@ -5426,7 +5426,7 @@ const exerciseBank={
           "8"
         ],
         "correct": 1,
-        "explanation": "A pentagon has five sides.",
+        "explanation": "A pentagon is a flat shape with five straight sides.",
         "id": "MATH-PM3-QUIZ-U07-001-07"
       },
       {
@@ -5439,21 +5439,21 @@ const exerciseBank={
           "Pentagon"
         ],
         "correct": 2,
-        "explanation": "A circle has a curved boundary.",
+        "explanation": "A circle has one continuous curved boundary and zero straight sides.",
         "id": "MATH-PM3-QUIZ-U07-001-08"
       },
       {
         "type": "tf",
         "q": "A cylinder has two flat circular faces.",
         "expected": true,
-        "explanation": "A cylinder has a circular face at each end.",
+        "explanation": "A cylinder has one flat circular face at each end, giving two circular faces.",
         "id": "MATH-PM3-QUIZ-U07-001-09"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A hexagon has ____ sides.",
         "expected": "6",
-        "explanation": "A hexagon has six sides.",
+        "explanation": "A hexagon is a flat shape with six straight sides.",
         "id": "MATH-PM3-QUIZ-U07-001-10",
         "options": [
           "6",
@@ -5466,14 +5466,14 @@ const exerciseBank={
         "type": "tf",
         "q": "On a grid with letters marking columns and numbers marking rows, C2 means column C and row 2.",
         "expected": true,
-        "explanation": "The letter identifies the column and the number identifies the row.",
+        "explanation": "In a grid reference, the letter names the column and the number names the row. C2 means column C, row 2.",
         "id": "MATH-PM3-QUIZ-U08-001-01"
       },
       {
         "type": "tf",
         "q": "On a grid with lettered columns and numbered rows, B3 means column 3 and row B.",
         "expected": false,
-        "explanation": "B3 means column B and row 3.",
+        "explanation": "On this grid, letters name columns and numbers name rows. B3 means column B and row 3.",
         "id": "MATH-PM3-QUIZ-U08-001-02"
       },
       {
@@ -5486,14 +5486,14 @@ const exerciseBank={
           "D2"
         ],
         "correct": 1,
-        "explanation": "Column C and row 2 give C2.",
+        "explanation": "The letter C identifies the column and 2 identifies the row, so the toy is at C2.",
         "id": "MATH-PM3-QUIZ-U08-001-03"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: On a grid with columns A to D, one column to the right of B2 is ____.",
         "expected": "C2",
-        "explanation": "Moving right from B goes to C while the row remains 2.",
+        "explanation": "Moving right from column B reaches column C. The row stays 2, so the answer is C2.",
         "id": "MATH-PM3-QUIZ-U08-001-04",
         "options": [
           "C2",
@@ -5510,14 +5510,14 @@ const exerciseBank={
           "D3"
         ],
         "correct": 2,
-        "explanation": "Moving down one row changes 3 to 4; the column stays C.",
+        "explanation": "One row below row 3 is row 4. The column stays C, giving C4.",
         "id": "MATH-PM3-QUIZ-U08-001-05"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: One column to the left of D1 is ____.",
         "expected": "C1",
-        "explanation": "C is immediately to the left of D.",
+        "explanation": "C comes immediately before D in the lettered columns. The row stays 1, so the answer is C1.",
         "id": "MATH-PM3-QUIZ-U08-001-06",
         "options": [
           "C1",
@@ -5528,14 +5528,14 @@ const exerciseBank={
         "type": "tf",
         "q": "On a grid with row numbers increasing downward, one row above B4 is B3.",
         "expected": true,
-        "explanation": "Moving up one row changes 4 to 3.",
+        "explanation": "Moving up from row 4 reaches row 3. The column stays B, giving B3.",
         "id": "MATH-PM3-QUIZ-U08-001-07"
       },
       {
         "type": "tf",
         "q": "If columns A–D run left to right and rows 1–4 run top to bottom, A1 is the top-left cell.",
         "expected": true,
-        "explanation": "Column A is at the left, and row 1 is at the top.",
+        "explanation": "A is the leftmost column and 1 is the top row, so their meeting point A1 is the top-left cell.",
         "id": "MATH-PM3-QUIZ-U08-001-08"
       },
       {
@@ -5548,14 +5548,14 @@ const exerciseBank={
           "A2"
         ],
         "correct": 1,
-        "explanation": "B to C is one column, then C to D is the second.",
+        "explanation": "From B, move right to C and then to D. Two columns right of B2 is D2.",
         "id": "MATH-PM3-QUIZ-U08-001-09"
       },
       {
         "type": "tf",
         "q": "B3 and B4 are in the same row on a letter-column, number-row grid.",
         "expected": false,
-        "explanation": "They are in the same column B but in different rows, 3 and 4.",
+        "explanation": "B3 and B4 share column B. The numbers 3 and 4 show that they are in different rows.",
         "id": "MATH-PM3-QUIZ-U08-001-10"
       }
     ],
@@ -5564,7 +5564,7 @@ const exerciseBank={
         "type": "tf",
         "q": "Four tally marks represent a frequency of four.",
         "expected": true,
-        "explanation": "Each of the four tally marks counts one item.",
+        "explanation": "One tally mark counts one item. Four tally marks therefore show four items.",
         "id": "MATH-PM3-QUIZ-U09-001-01"
       },
       {
@@ -5577,14 +5577,14 @@ const exerciseBank={
           "All equally"
         ],
         "correct": 1,
-        "explanation": "Bananas have the greatest frequency, 7.",
+        "explanation": "The most popular fruit has the highest count. Bananas have 7 votes, more than the other fruits.",
         "id": "MATH-PM3-QUIZ-U09-001-02"
       },
       {
         "type": "drop",
         "q": "A class votes for a class pet: 5 pupils choose fish, 6 choose rabbits and 4 choose hamsters. Total votes: ____.",
         "expected": "15",
-        "explanation": "5 + 6 + 4 = 15 votes.",
+        "explanation": "Add all the votes: 5 + 6 + 4 = 15.",
         "id": "MATH-PM3-QUIZ-U09-001-03",
         "options": [
           "15",
@@ -5601,7 +5601,7 @@ const exerciseBank={
           "17"
         ],
         "correct": 2,
-        "explanation": "11 − 6 = 5 more red pencils.",
+        "explanation": "To find how many more, subtract the smaller count: 11 − 6 = 5.",
         "id": "MATH-PM3-QUIZ-U09-001-04"
       },
       {
@@ -5614,21 +5614,21 @@ const exerciseBank={
           "22"
         ],
         "correct": 3,
-        "explanation": "6 + 3 + 8 + 5 = 22.",
+        "explanation": "Add the four groups: 6 + 3 + 8 + 5 = 22 pupils.",
         "id": "MATH-PM3-QUIZ-U09-001-05"
       },
       {
         "type": "tf",
         "q": "A pie chart can show how a whole is divided into parts.",
         "expected": true,
-        "explanation": "Each sector of a pie chart represents part of the whole.",
+        "explanation": "A pie chart is a circle divided into sections. Each section shows one part of the whole.",
         "id": "MATH-PM3-QUIZ-U09-001-06"
       },
       {
         "type": "tf",
         "q": "Five items can be recorded using four vertical tally marks crossed by a fifth mark.",
         "expected": true,
-        "explanation": "A group of five tally marks is usually drawn as four lines crossed by a fifth.",
+        "explanation": "Tally marks are grouped in fives. The fifth mark crosses the first four so five items are easy to count.",
         "id": "MATH-PM3-QUIZ-U09-001-07"
       },
       {
@@ -5641,7 +5641,7 @@ const exerciseBank={
           "All equally"
         ],
         "correct": 1,
-        "explanation": "Red received 5 votes, fewer than blue or green.",
+        "explanation": "The fewest votes means the smallest number. Red has 5, compared with 8 for blue and 6 for green.",
         "id": "MATH-PM3-QUIZ-U09-001-08"
       },
       {
@@ -5665,7 +5665,7 @@ const exerciseBank={
           "10 pupils"
         ],
         "correct": 2,
-        "explanation": "4 pictures × 2 pupils per picture = 8 pupils.",
+        "explanation": "Each picture represents 2 pupils. Four pictures show 4 × 2 = 8 pupils.",
         "id": "MATH-PM3-QUIZ-U09-001-10"
       }
     ],
@@ -5681,14 +5681,14 @@ const exerciseBank={
           "7,000"
         ],
         "correct": 3,
-        "explanation": "The 7 is in the thousands place, so its value is 7,000."
+        "explanation": "The digit 7 is in the thousands place, so it represents 7 × 1,000 = 7,000."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-02",
         "type": "tf",
         "q": "3,905 is greater than 3,950.",
         "expected": false,
-        "explanation": "3,905 is smaller than 3,950 because 905 is less than 950."
+        "explanation": "Both numbers have 3 thousands. Compare the rest: 905 is smaller than 950, so 3,905 is smaller."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-03",
@@ -5699,7 +5699,7 @@ const exerciseBank={
           "2,650",
           "2,640"
         ],
-        "explanation": "The ones digit is 8, so we round up to 2,650."
+        "explanation": "To round to the nearest ten, check the ones digit. It is 8, so 2,648 rounds up to 2,650."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-04",
@@ -5712,14 +5712,14 @@ const exerciseBank={
           "6,999"
         ],
         "correct": 2,
-        "explanation": "Adding 1 to 5,999 gives 6,000."
+        "explanation": "Add one to the last digit of 5,999. The hundreds, tens and ones roll over, making 6,000."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-05",
         "type": "tf",
         "q": "In 4,381, the digit 3 has a value of 300.",
         "expected": true,
-        "explanation": "The 3 is in the hundreds place, so its value is 300."
+        "explanation": "The digit 3 is in the hundreds place, so it represents 3 × 100 = 300."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-06",
@@ -5730,7 +5730,7 @@ const exerciseBank={
           "1,550",
           "1,500"
         ],
-        "explanation": "The numbers increase by 100 each time, so the next is 1,550."
+        "explanation": "The pattern adds 100 each time. 1,450 + 100 = 1,550."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-07",
@@ -5743,14 +5743,14 @@ const exerciseBank={
           "2,407"
         ],
         "correct": 2,
-        "explanation": "2,074 is the smallest because it has zero hundreds."
+        "explanation": "All choices have 2 thousands. Compare the hundreds digits next: 0 is the smallest, so 2,074 is smallest."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-08",
         "type": "tf",
         "q": "8,000 + 500 + 20 + 6 = 8,526.",
         "expected": true,
-        "explanation": "The place values add up to 8,526."
+        "explanation": "Add each place value: 8,000 + 500 + 20 + 6 = 8,526."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-09",
@@ -5761,7 +5761,7 @@ const exerciseBank={
           "7,300",
           "7,400"
         ],
-        "explanation": "The tens digit is 4, so we round down to 7,300."
+        "explanation": "To round to the nearest hundred, check the tens digit. It is 4, so 7,349 rounds to 7,300."
       },
       {
         "id": "MATH-PM3-QUIZ-U01-001-10",
@@ -5820,7 +5820,7 @@ const exerciseBank={
           "63"
         ],
         "correct": 2,
-        "explanation": "6 × 9 = 54 chairs."
+        "explanation": "Each row has 9 chairs. Multiply the 6 rows by 9 chairs: 6 × 9 = 54."
       },
       {
         "id": "MATH-PM3-QUIZ-U02B-001-05",
@@ -5882,7 +5882,7 @@ const exerciseBank={
           "54"
         ],
         "correct": 2,
-        "explanation": "6 × 8 = 48 biscuits."
+        "explanation": "Each bag has 8 biscuits. Multiply the 6 bags by 8 biscuits: 6 × 8 = 48."
       }
     ]
   },
