@@ -12,7 +12,7 @@ const exerciseBank={
           "The shop beside of bank."
         ],
         "correct": 1,
-        "explanation": "'The shop is next to the bank' is a complete sentence. 'Is' goes with the singular subject 'the shop', and 'next to' tells us its position.",
+        "explanation": "'Is' connects the singular subject 'the shop' to its location. 'Next to' tells us that the shop is beside the bank.",
         "id": "ENG-PM3-PRACTICE-001-01"
       },
       {
