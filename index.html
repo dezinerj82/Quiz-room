@@ -1716,33 +1716,33 @@ function showAnswerTranslations(q){
 }
 /* Reusable child-friendly foundation terms. Reference words stay bold, with no colour. */
 const qrFoundationTerms=Object.freeze({
- 'present simple tense':'A verb tense for habits, regular activities and things that are generally true.',
- 'present simple form':'The verb form we use for habits or things that happen regularly.',
- 'present simple':'The verb tense we use for habits, repeated actions and general facts.',
- 'past tense':'A verb form showing that something happened earlier.',
- 'singular subject':'The one person or thing that the sentence is about.',
- 'plural subject':'A subject naming more than one person or thing.',
- 'helping verb':'A verb such as am, is or are that works with another verb to form a tense.',
- 'vowel sound':'A spoken sound made with an open mouth, like the first sound in apple.',
- 'consonant sound':'A speech sound made with some blocking or narrowing of the airflow, like the first sound in book.',
- 'kata adjektif':'A Malay adjective: a word describing how someone or something looks, feels or is.',
- 'kata ganti nama':'A Malay pronoun: a word such as saya or mereka that stands for a person or group.',
- 'kata kerja':'A Malay verb: a word describing an action, such as reading or running.',
- 'subject particle':'A small Korean grammar marker showing which person or thing is the subject.',
- 'topic particle':'A small Korean grammar marker showing what the sentence is talking about.',
- 'photosynthesis':'The process plants use to make their own food with energy from sunlight.',
- 'adjective':'A word that describes a person, place or thing.',
- 'adverb':'A word that describes how, when or where an action happens.',
- 'pronoun':'A word used instead of a name or noun, such as I, you or they.',
- 'noun':'A word naming a person, place, thing or idea.',
- 'verb':'A word showing an action or state, such as run or sleep.',
- 'habit':'Something a person does regularly or often.',
- 'destination':'The place someone is going to.',
- 'location word':'A word or phrase that tells us where something is or happens.',
- 'classifying':'Sorting things into groups based on features they share.',
- 'prediction':'An idea about what might happen next, based on clues or what we know.',
- 'bar chart':'A chart using bars of different lengths to compare amounts.',
- 'plural':'A word form referring to more than one person or thing.'
+ "present simple tense":"We use this tense for things that happen regularly or are usually true. For example, 'She walks to school every day.' With 'she', we usually add -s to the verb.",
+ "present simple form":"The way we write a verb when talking about habits or things that are usually true. For example, we say 'I wake up' but 'she wakes up'. With 'he', 'she' and 'it', we usually add -s or -es.",
+ "present simple":"A tense used for habits and things that are generally true. For example, 'I play every day' and 'The sun rises in the east'.",
+ "past tense":"We use the past tense to talk about something that already happened. For example, 'I walk' becomes 'I walked', and 'I go' becomes 'I went'.",
+ "singular subject":"The one person or thing a sentence talks about. In 'The cat sleeps', 'the cat' is the singular subject.",
+ "plural subject":"The people or things a sentence talks about when there is more than one. In 'The cats sleep', 'the cats' is the plural subject.",
+ "helping verb":"A word that helps the main verb tell us when an action happens. For example, 'are' helps 'playing' in 'They are playing now'.",
+ "vowel sound":"A speech sound made with the mouth open, such as the first sound in 'apple'. We use 'an' before many words that start with a vowel sound.",
+ "consonant sound":"A sound made when the lips, tongue or teeth partly block the air. The first sounds in 'book' and 'cat' are consonant sounds.",
+ "kata adjektif":"A Malay describing word. It tells us what something looks or feels like. For example, 'besar' means big and 'cantik' means beautiful.",
+ "kata ganti nama":"A Malay word that takes the place of a person's name. For example, 'dia' means he or she, and 'mereka' means they.",
+ "kata kerja":"A Malay word showing an action. For example, 'makan' means eat and 'berlari' means run.",
+ "subject particle":"A short Korean word ending that shows who or what the sentence is about. Add '이' after a consonant, or '가' after a vowel.",
+ "topic particle":"A short Korean word ending that introduces what we're talking about. Add '은' after a consonant, or '는' after a vowel, as in '저는'.",
+ "photosynthesis":"How green plants make their own food. They use energy from sunlight, water and carbon dioxide from the air.",
+ "adjective":"A describing word that tells us more about a person or thing, such as 'big', 'soft' or 'happy'.",
+ "adverb":"A word that adds detail about an action, such as how it happens. In 'She runs quickly', 'quickly' tells us how she runs.",
+ "pronoun":"A word we use instead of repeating someone's name. For example, 'Mia is here. She is happy.' 'She' means Mia.",
+ "noun":"A word naming a person, place, thing or idea. Examples are 'teacher', 'school', 'pencil' and 'friendship'.",
+ "verb":"A word that shows an action or a state. 'Run' and 'eat' are action verbs; 'is' and 'are' can tell us someone's state.",
+ "habit":"Something we do regularly, such as brushing our teeth every morning or reading before bed.",
+ "destination":"The place someone is going to. If you're going to school, 'school' is your destination.",
+ "location word":"A word that tells us where something is or happens, such as 'in', 'under' or 'beside'.",
+ "classifying":"Putting things into groups based on what they have in common, such as sorting leaves by their shapes.",
+ "prediction":"What we think might happen next, based on clues. For example, dark clouds might make us predict rain.",
+ "bar chart":"A chart with bars showing different amounts. Taller or longer bars usually mean a bigger number.",
+ "plural":"A word form meaning more than one. For example, 'one cat' becomes 'two cats', while 'one child' becomes 'two children'."
 });
 const qrFoundationPattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+Object.keys(qrFoundationTerms).sort((a,b)=>b.length-a.length).join('|')+')(?![\\p{L}\\p{N}])','giu');
 function qrAppendFoundationText(target,value){
@@ -1780,6 +1780,46 @@ function qrAppendFeedbackExplanation(target,value){
  }
  qrAppendFoundationText(target,value.slice(cursor));
 }
+/* Mark the learner's selection and reveal the correct choice in its original row. */
+function qrMarkAnswerChoices(q,correct,value){
+ const choices=[...$('answers').querySelectorAll('button.answer')];
+ if(q.type==='mc'||q.type==='tf'){
+  const correctIndex=q.type==='mc'?q.correct:(q.expected?0:1);
+  choices.forEach((button,i)=>{
+   button.classList.remove('selected');
+   button.classList.toggle('answer-correct',i===correctIndex);
+   button.classList.toggle('answer-wrong',!correct&&i===selected);
+   if(i===correctIndex)button.setAttribute('aria-label',button.textContent.trim()+' (correct answer)');
+   else if(!correct&&i===selected)button.setAttribute('aria-label',button.textContent.trim()+' (your answer)');
+  });
+ }else if(q.type==='drop'){
+  const correctIndex=q._dropChoices.indexOf(q.expected);
+  const chosenIndex=q._dropChoices.indexOf(value);
+  choices.forEach((button,i)=>{
+   button.classList.remove('selected');
+   button.classList.toggle('answer-correct',i===correctIndex);
+   button.classList.toggle('answer-wrong',!correct&&i===chosenIndex);
+   if(i===correctIndex)button.setAttribute('aria-label',button.textContent.trim()+' (correct answer)');
+   else if(!correct&&i===chosenIndex)button.setAttribute('aria-label',button.textContent.trim()+' (your answer)');
+  });
+ }else if(q.type==='text'){
+  const input=$('typedAnswer');
+  if(!input)return;
+  const selectedText=input.value;
+  const selectedResult=document.createElement('div');
+  selectedResult.className='answer '+(correct?'answer-correct':'answer-wrong');
+  selectedResult.textContent=selectedText;
+  selectedResult.setAttribute('aria-label',selectedText+(correct?' (correct answer)':' (your answer)'));
+  input.replaceWith(selectedResult);
+  if(!correct){
+   const rightResult=document.createElement('div');
+   rightResult.className='answer answer-correct';
+   rightResult.textContent=q.expected;
+   rightResult.setAttribute('aria-label',q.expected+' (correct answer)');
+   selectedResult.after(rightResult);
+  }
+ }
+}
 function submitAnswer(){
  if(answered){advance();return}
  if(!questions.length)return;
@@ -1800,19 +1840,16 @@ function submitAnswer(){
  else if(q.type==='order'){answerBox=$('answers').querySelector('.sequencepicked')}
  else if(q.type==='match'){answerBox=$('answers').querySelector('.matching');$('answers').querySelectorAll('select').forEach(x=>x.disabled=true)}
  if(answerBox){
-  answerBox.classList.add(correct?'answer-correct':'answer-wrong');
-  let feedback=document.createElement('span');feedback.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');feedback.setAttribute('role','status');
-  let symbol=document.createElement('span');symbol.className='feedback-symbol';symbol.textContent=correct?'✓':'✕';
-  let explanation=document.createElement('span');explanation.className='feedback-explanation';
-  const answerText=String(q.type==='mc'?q.options[q.correct]:q.type==='tf'?(q.expected?'True':'False'):q.expected);
-  const message=q.explanation||(correct?q.explanationCorrect:q.explanationIncorrect)||'';
-  const answerLabel=document.createElement('strong');answerLabel.textContent=answerText;
-  explanation.append(answerLabel);
-  if(message){
-   explanation.append(document.createTextNode(' - '));
-   qrAppendFeedbackExplanation(explanation,message);
+  // Choices carry the ✓ / ✕ markers; the feedback bubble only teaches the concept.
+  if(q.type!=='drop'&&q.type!=='text'&&q.type!=='mc'&&q.type!=='tf'){
+   answerBox.classList.add(correct?'answer-correct':'answer-wrong');
   }
-  feedback.append(symbol,explanation);
+  qrMarkAnswerChoices(q,correct,v);
+  const feedback=document.createElement('span');feedback.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');feedback.setAttribute('role','status');
+  const explanation=document.createElement('span');explanation.className='feedback-explanation';
+  const message=q.explanation||(correct?q.explanationCorrect:q.explanationIncorrect)||'';
+  if(message)qrAppendFeedbackExplanation(explanation,message);
+  feedback.append(explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
  $('answers').querySelectorAll('button.answer').forEach(x=>x.disabled=true);
