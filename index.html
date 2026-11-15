@@ -818,6 +818,8 @@ body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
 }
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-correct{background:var(--qr-success)}
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol.formula-wrong{background:var(--qr-error)}
+/* Equation answers are submitted with Enter; no Next or Resume buttons. */
+body:not(.auth-locked) #quiz.qr-equation-form .quizactions :is(#nextButton,#resumeButton){display:none!important}
 @media(max-width:600px){
  body:not(.auth-locked) #quiz .answers.formula-answers{
   grid-template-columns:minmax(0,1fr)!important;
