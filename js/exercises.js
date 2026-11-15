@@ -5899,14 +5899,14 @@ const exerciseBank={
           "Classifying"
         ],
         "correct": 0,
-        "explanation": "Observing means using our senses, such as sight, hearing and touch, to learn about things."
+        "explanation": "Observing is a science skill where we use our senses, such as sight, hearing and touch, to gather information."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-02",
         "type": "tf",
         "q": "Grouping leaves by their shapes is an example of classifying.",
         "expected": true,
-        "explanation": "Classifying means putting things into groups based on features they share, such as shape."
+        "explanation": "Classifying means sorting things into groups by features they share. Leaves can be grouped by shape."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-03",
@@ -5917,7 +5917,7 @@ const exerciseBank={
           "stopwatch",
           "thermometer"
         ],
-        "explanation": "A stopwatch measures how much time has passed, such as the time taken to run a race."
+        "explanation": "A stopwatch measures how much time passes. It can tell us the number of seconds taken to finish a race."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-04",
@@ -5930,14 +5930,14 @@ const exerciseBank={
           "The plant has been moved to a bigger pot."
         ],
         "correct": 1,
-        "explanation": "Dry soil and drooping leaves are clues that a plant may need water."
+        "explanation": "Dry soil and drooping leaves give clues that a plant may need water. Using clues to explain something is called making an inference."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-05",
         "type": "tf",
         "q": "A prediction describes only what has already happened.",
         "expected": false,
-        "explanation": "A prediction tells us what we think might happen next."
+        "explanation": "A prediction is a sensible idea about what may happen in the future, based on what we know or observe."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-06",
@@ -5948,7 +5948,7 @@ const exerciseBank={
           "share",
           "hide"
         ],
-        "explanation": "A bar chart helps us show and share the results of an experiment."
+        "explanation": "A bar chart shows information using bars of different lengths. It helps people compare and share results."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-07",
@@ -5961,14 +5961,14 @@ const exerciseBank={
           "At the ruler's midpoint"
         ],
         "correct": 2,
-        "explanation": "Starting at the zero mark helps us measure the full length of an object."
+        "explanation": "The zero mark is the starting point on a ruler. Aligning the object there gives a correct measurement."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-08",
         "type": "tf",
         "q": "Looking straight at a ruler's markings helps us read a measurement correctly.",
         "expected": true,
-        "explanation": "Looking straight at the ruler helps us read its markings accurately."
+        "explanation": "Reading a ruler from directly above its markings helps avoid mistakes caused by viewing from an angle."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-09",
@@ -5979,7 +5979,7 @@ const exerciseBank={
           "labels",
           "decorations"
         ],
-        "explanation": "Labels name the parts of a science drawing so others can understand it."
+        "explanation": "Labels are words that name the parts of a drawing. They help other people understand what each part shows."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-10",
@@ -5992,7 +5992,7 @@ const exerciseBank={
           "Clean and dry it"
         ],
         "correct": 3,
-        "explanation": "Cleaning and drying a beaker helps keep it ready and safe for its next use."
+        "explanation": "Cleaning removes leftover materials, and drying helps keep the beaker ready for safe storage and reuse."
       }
     ],
     "Science Room Rules": [
@@ -6007,20 +6007,20 @@ const exerciseBank={
           "Begin while the teacher is speaking."
         ],
         "correct": 1,
-        "explanation": "Pupils should follow the teacher's instructions before beginning an experiment."
+        "explanation": "Listening to the teacher first helps pupils understand the steps and safety rules before handling equipment."
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-02",
         "type": "tf",
         "q": "It is safe for pupils to pick up broken glass with bare hands.",
-        "explanation": "Broken glass may cause cuts. Tell the teacher.",
+        "explanation": "Broken glass has sharp edges that can cut skin. Tell the teacher so it can be cleaned up safely.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-03",
         "type": "drop",
         "q": "Glass containers should be carried ____ to avoid accidents.",
-        "explanation": "Careful handling helps prevent breakages.",
+        "explanation": "Carefully means moving and handling glass slowly and steadily. This helps prevent dropping or breaking it.",
         "expected": "carefully",
         "options": [
           "carefully",
@@ -6038,20 +6038,20 @@ const exerciseBank={
           "The container may be made of glass."
         ],
         "correct": 2,
-        "explanation": "Unknown substances in a science room can be harmful. Ask the teacher how to handle them safely."
+        "explanation": "Unknown substances may be harmful if swallowed. Indicator tools and the teacher's instructions are safer ways to examine them."
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-05",
         "type": "tf",
         "q": "Pupils should tell the teacher when a liquid is spilled in the science room.",
-        "explanation": "Spills should be reported to the teacher.",
+        "explanation": "Reporting a spill lets the teacher arrange a safe cleanup before someone slips or touches the liquid.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-06",
         "type": "drop",
         "q": "During an experiment, pupils should work ____.",
-        "explanation": "Calm, careful work helps prevent accidents.",
+        "explanation": "Calmly means working in a controlled way. It helps pupils handle equipment carefully and avoid accidents.",
         "expected": "calmly",
         "options": [
           "calmly",
@@ -6069,20 +6069,20 @@ const exerciseBank={
           "Ask the teacher for help"
         ],
         "correct": 3,
-        "explanation": "Pupils should ask their teacher before using unfamiliar science equipment."
+        "explanation": "The teacher can demonstrate the correct way to use unfamiliar apparatus, which helps prevent injuries and damage."
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-08",
         "type": "tf",
         "q": "Unused science equipment should be returned to its proper place.",
-        "explanation": "Putting equipment away correctly keeps the room safe.",
+        "explanation": "Returning equipment to its proper place keeps walkways clear and makes the science room safer for everyone.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U02-001-09",
         "type": "drop",
         "q": "Keeping the science work area ____ helps prevent accidents.",
-        "explanation": "A tidy work area is safer.",
+        "explanation": "Tidy means keeping tools and materials organised. A clear work area helps prevent spills and accidents.",
         "expected": "tidy",
         "options": [
           "tidy",
@@ -6100,7 +6100,7 @@ const exerciseBank={
           "Leave spills for the next class."
         ],
         "correct": 0,
-        "explanation": "At the end of a science activity, clean and store equipment properly and wash your hands."
+        "explanation": "Cleaning the work area removes leftover materials, and washing hands helps remove substances picked up during the activity."
       }
     ],
     "Teeth and Dental Care": [
@@ -6115,20 +6115,20 @@ const exerciseBank={
           "Gum"
         ],
         "correct": 2,
-        "explanation": "Incisors are the front teeth that bite and cut food."
+        "explanation": "Incisors are the flat front teeth with edges that help bite and cut food into pieces."
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-02",
         "type": "tf",
         "q": "Canine teeth help us tear food.",
-        "explanation": "Canines are pointed teeth that tear food.",
+        "explanation": "Canines are pointed teeth beside the incisors. Their shape helps grip and tear food.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-03",
         "type": "drop",
         "q": "The broad back teeth used for grinding food are called ____.",
-        "explanation": "Molars are back teeth used for grinding.",
+        "explanation": "Molars are the broad back teeth. Their wide surfaces help crush and grind food before swallowing.",
         "expected": "molars",
         "options": [
           "molars",
@@ -6146,20 +6146,20 @@ const exerciseBank={
           "Enamel"
         ],
         "correct": 3,
-        "explanation": "Enamel is the hard outer covering of the tooth."
+        "explanation": "Enamel is the very hard outer layer of a tooth. It protects the softer parts inside."
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-05",
         "type": "tf",
         "q": "The nerves inside a tooth are found in its enamel.",
-        "explanation": "Nerves are found in the pulp inside the tooth.",
+        "explanation": "The pulp is the soft inner part of a tooth where nerves and blood vessels are found.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-06",
         "type": "drop",
         "q": "The first teeth children grow are called ____ teeth.",
-        "explanation": "Milk teeth grow before permanent teeth.",
+        "explanation": "Milk teeth are the first set of teeth children grow. They are gradually replaced by permanent teeth.",
         "expected": "milk",
         "options": [
           "milk",
@@ -6177,20 +6177,20 @@ const exerciseBank={
           "They do not need brushing."
         ],
         "correct": 0,
-        "explanation": "Milk teeth help with eating and speaking before permanent teeth grow."
+        "explanation": "Milk teeth help children chew food and speak clearly while the mouth develops."
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-08",
         "type": "tf",
         "q": "Brushing our teeth regularly helps prevent tooth decay.",
-        "explanation": "Regular brushing helps remove plaque.",
+        "explanation": "Brushing removes plaque, a sticky layer of bacteria that can cause tooth decay.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U03A-001-09",
         "type": "drop",
         "q": "Eating sugary snacks too often can lead to tooth ____.",
-        "explanation": "Frequent sugar intake can increase tooth decay.",
+        "explanation": "Bacteria in dental plaque use sugar to make acids that damage teeth. Frequent sugary snacks increase this risk.",
         "expected": "decay",
         "options": [
           "decay",
@@ -6208,7 +6208,7 @@ const exerciseBank={
           "Veterinarian"
         ],
         "correct": 1,
-        "explanation": "Dentists examine and treat dental problems."
+        "explanation": "A dentist is trained to check teeth, find the cause of pain and treat problems such as decay."
       }
     ],
     "Food and Digestion": [
@@ -6223,20 +6223,20 @@ const exerciseBank={
           "Breaks food into smaller, simpler substances."
         ],
         "correct": 3,
-        "explanation": "Digestion breaks down food so the body can absorb and use nutrients."
+        "explanation": "Digestion breaks food into smaller substances so nutrients can pass into the body and be used."
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-02",
         "type": "tf",
         "q": "Chewing food breaks it into smaller pieces before swallowing.",
-        "explanation": "Teeth break food into smaller pieces for swallowing.",
+        "explanation": "Chewing uses the teeth to break food into small pieces, making it easier to swallow and digest.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-03",
         "type": "drop",
         "q": "Digestion helps our bodies absorb useful ____ from food.",
-        "explanation": "Digestion allows nutrients to be absorbed.",
+        "explanation": "Nutrients are useful substances in food that the body needs for energy, growth and repair.",
         "expected": "nutrients",
         "options": [
           "nutrients",
@@ -6254,20 +6254,20 @@ const exerciseBank={
           "Stomach"
         ],
         "correct": 0,
-        "explanation": "Digestion begins in the mouth."
+        "explanation": "The mouth begins digestion because teeth break food into pieces and saliva helps soften it."
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-05",
         "type": "tf",
         "q": "The windpipe carries swallowed food into the stomach.",
-        "explanation": "Swallowed food travels down the oesophagus to reach the stomach.",
+        "explanation": "Swallowed food travels through a tube called the oesophagus, which carries it from the mouth to the stomach.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-06",
         "type": "drop",
         "q": "The ____ mixes food with digestive juices.",
-        "explanation": "The stomach churns food with digestive juices.",
+        "explanation": "The stomach squeezes and mixes food with digestive juices to help break it down further.",
         "expected": "stomach",
         "options": [
           "stomach",
@@ -6285,20 +6285,20 @@ const exerciseBank={
           "Oesophagus"
         ],
         "correct": 1,
-        "explanation": "Most nutrient absorption happens in the small intestine."
+        "explanation": "The small intestine has a large inner surface that absorbs most digested nutrients into the body."
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-08",
         "type": "tf",
         "q": "The large intestine absorbs water from undigested food.",
-        "explanation": "The large intestine absorbs water from food waste.",
+        "explanation": "The large intestine absorbs water from food waste, helping the remaining waste become more solid.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U03B-001-09",
         "type": "drop",
         "q": "Undigested food leaves the body as ____.",
-        "explanation": "Undigested waste eventually leaves the body as faeces.",
+        "explanation": "Faeces is solid waste made from material the body cannot digest or absorb. It leaves the body during a bowel movement.",
         "expected": "faeces",
         "options": [
           "faeces",
@@ -6316,7 +6316,7 @@ const exerciseBank={
           "Take large bites while talking."
         ],
         "correct": 2,
-        "explanation": "Chewing food well helps start digestion and makes swallowing easier."
+        "explanation": "Chewing food into smaller pieces helps digestive juices work on it and makes swallowing easier."
       }
     ],
     "Animal Eating Habits": [
@@ -6331,20 +6331,20 @@ const exerciseBank={
           "Insectivore"
         ],
         "correct": 0,
-        "explanation": "A herbivore is an animal that eats plants."
+        "explanation": "A herbivore feeds mainly on plants, such as grass or leaves. Cows and giraffes are examples."
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-02",
         "type": "tf",
         "q": "A carnivore is an animal that eats other animals.",
-        "explanation": "Carnivores eat other animals.",
+        "explanation": "A carnivore eats other animals as part of its diet. Tigers are examples of carnivores.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-03",
         "type": "drop",
         "q": "A chicken eats seeds and insects, so it is an ____.",
-        "explanation": "An omnivore eats both plant and animal food.",
+        "explanation": "An omnivore eats food from both plants and animals. Chickens can eat seeds as well as insects.",
         "expected": "omnivore",
         "options": [
           "omnivore",
@@ -6362,20 +6362,20 @@ const exerciseBank={
           "Sucking nectar"
         ],
         "correct": 1,
-        "explanation": "Sharp canine teeth help meat-eating animals tear flesh."
+        "explanation": "Long, pointed canine teeth help a tiger grip prey and tear meat into pieces."
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-05",
         "type": "tf",
         "q": "Cows use long, pointed fangs to grind grass.",
-        "explanation": "Cows use broad molars to grind grass.",
+        "explanation": "Cows have broad back teeth called molars. Their flat surfaces grind grass and other plant food.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-06",
         "type": "drop",
         "q": "A bird that eats seeds and insects eats food from plants and ____.",
-        "explanation": "Seeds are plant food, and insects are animals.",
+        "explanation": "Seeds come from plants, while insects are animals. A bird eating both gets food from two different sources.",
         "expected": "animals",
         "options": [
           "animals",
@@ -6393,20 +6393,20 @@ const exerciseBank={
           "Shark"
         ],
         "correct": 2,
-        "explanation": "Giraffes are plant-eating herbivores."
+        "explanation": "Giraffes are herbivores. Their long necks help them reach leaves growing high on trees."
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-08",
         "type": "tf",
         "q": "Different animals have teeth suited to the foods they eat.",
-        "explanation": "Teeth help animals eat their different foods.",
+        "explanation": "Animals have different kinds of teeth suited to their diet. Flat teeth grind plants, while pointed teeth can tear meat.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U04-001-09",
         "type": "drop",
         "q": "A rabbit mainly eats ____ such as grass and leaves.",
-        "explanation": "Rabbits eat plant food such as grass and leaves.",
+        "explanation": "Rabbits are herbivores, so they mainly eat plants such as grass, leaves and hay.",
         "expected": "plants",
         "options": [
           "plants",
@@ -6424,7 +6424,7 @@ const exerciseBank={
           "Watch what food it chooses and eats."
         ],
         "correct": 3,
-        "explanation": "Observing what an animal eats helps us understand its eating habits."
+        "explanation": "Watching which foods an animal chooses and eats is observation. It helps us learn about the animal's diet."
       }
     ],
     "Plant Reproduction": [
@@ -6439,20 +6439,20 @@ const exerciseBank={
           "To grow taller."
         ],
         "correct": 1,
-        "explanation": "Reproduction allows new plants of the same kind to grow."
+        "explanation": "Reproduction makes new plants of the same kind, allowing that kind of plant to continue growing over generations."
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-02",
         "type": "tf",
         "q": "A seed can grow into a new plant when conditions are suitable.",
-        "explanation": "Seeds can germinate and grow under suitable conditions.",
+        "explanation": "A seed can germinate when it has suitable conditions, including enough water, air and warmth.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-03",
         "type": "drop",
         "q": "A ____ plant can grow from a stem cutting.",
-        "explanation": "Rose plants can grow from stem cuttings.",
+        "explanation": "A rose can grow from a stem cutting because the cutting may develop roots and become a new plant.",
         "expected": "rose",
         "options": [
           "rose",
@@ -6470,20 +6470,20 @@ const exerciseBank={
           "Mango"
         ],
         "correct": 2,
-        "explanation": "Potatoes can sprout from buds on tubers."
+        "explanation": "Potatoes are underground tubers with buds called eyes. These buds can grow into new potato plants."
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-05",
         "type": "tf",
         "q": "Strawberry plants can grow new plants along runners.",
-        "explanation": "Runners help strawberry plants reproduce.",
+        "explanation": "Strawberry plants make runners, which are stems that spread out and form new plants.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-06",
         "type": "drop",
         "q": "The setawar plant can grow small new plants from its ____.",
-        "explanation": "Setawar produces little plantlets along its leaves.",
+        "explanation": "Setawar plants can produce tiny new plants along the edges of their leaves. These can grow into separate plants.",
         "expected": "leaves",
         "options": [
           "leaves",
@@ -6501,20 +6501,20 @@ const exerciseBank={
           "To grow a new rose plant."
         ],
         "correct": 3,
-        "explanation": "Some plants, such as roses, can grow new plants from stem cuttings."
+        "explanation": "A rose stem cutting can develop roots and grow into another rose plant, allowing gardeners to produce more plants."
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-08",
         "type": "tf",
         "q": "Plants never need to reproduce because they live forever.",
-        "explanation": "Plants reproduce so their kind can continue.",
+        "explanation": "Reproduction allows new plants to replace older ones and keeps the plant species going.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U05-001-09",
         "type": "drop",
         "q": "Ferns reproduce using ____ rather than seeds.",
-        "explanation": "Ferns produce spores.",
+        "explanation": "Ferns reproduce using tiny spores. With suitable conditions, a spore can develop into a new fern.",
         "expected": "spores",
         "options": [
           "spores",
@@ -6532,7 +6532,7 @@ const exerciseBank={
           "Its dried fruit skin"
         ],
         "correct": 0,
-        "explanation": "Ginger can grow new plants from its underground stem, called a rhizome."
+        "explanation": "Ginger grows from an underground stem called a rhizome. Buds on the rhizome can form new shoots."
       }
     ],
     "Density": [
@@ -6547,20 +6547,20 @@ const exerciseBank={
           "A metal coin"
         ],
         "correct": 0,
-        "explanation": "Cork is typically less dense than water."
+        "explanation": "Cork has a low density compared with water, so a dry cork will usually float on its surface."
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-02",
         "type": "tf",
         "q": "Density depends on how much mass is in a certain volume.",
-        "explanation": "Density compares mass with volume.",
+        "explanation": "Density compares how much mass an object has with how much space, or volume, it occupies.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-03",
         "type": "drop",
         "q": "A metal coin usually sinks because it is ____ than water.",
-        "explanation": "Objects denser than water usually sink.",
+        "explanation": "A metal coin has more mass in a small volume than the same amount of water, so it is denser and usually sinks.",
         "expected": "denser",
         "options": [
           "denser",
@@ -6578,20 +6578,20 @@ const exerciseBank={
           "Dissolve into the water."
         ],
         "correct": 1,
-        "explanation": "Cork is less dense than water, so it rises and floats."
+        "explanation": "Cork is less dense than water. When released underwater, it rises until it floats at the surface."
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-05",
         "type": "tf",
         "q": "A wooden raft can float on water.",
-        "explanation": "Wood is usually less dense than water.",
+        "explanation": "Many kinds of wood are less dense than water. That is one reason a wooden raft can float.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-06",
         "type": "drop",
         "q": "Adding enough salt to water makes the water ____.",
-        "explanation": "Dissolved salt increases water's density.",
+        "explanation": "Dissolving salt adds mass to water without increasing its volume by the same proportion, making the salt water denser.",
         "expected": "denser",
         "options": [
           "denser",
@@ -6609,20 +6609,20 @@ const exerciseBank={
           "Oil dissolves completely in water."
         ],
         "correct": 2,
-        "explanation": "Oil typically floats above water because of its lower density."
+        "explanation": "Oil usually has a lower density than water, so it forms a layer that floats on top."
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-08",
         "type": "tf",
         "q": "When two blocks are the same size, the lighter block is always denser.",
-        "explanation": "The heavier one has more mass in the same volume.",
+        "explanation": "For blocks of equal size, the heavier block has more mass in the same volume, which means it has greater density.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U07-001-09",
         "type": "drop",
         "q": "A piece of plastic that is less dense than water will usually ____.",
-        "explanation": "An object less dense than water usually floats.",
+        "explanation": "An object with lower average density than water usually floats because water can support its weight.",
         "expected": "float",
         "options": [
           "float",
@@ -6640,7 +6640,7 @@ const exerciseBank={
           "Seawater contains salt, making it denser."
         ],
         "correct": 3,
-        "explanation": "Dissolved salt makes seawater denser and helps objects float."
+        "explanation": "Dissolved salt makes seawater denser than freshwater, so the water can support more of a person's weight."
       }
     ],
     "Acid and Alkali": [
@@ -6655,20 +6655,20 @@ const exerciseBank={
           "It turns green."
         ],
         "correct": 1,
-        "explanation": "Acids change blue litmus paper to red."
+        "explanation": "Blue litmus paper turns red in an acidic solution. Litmus is an indicator that changes colour with acidity."
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-02",
         "type": "tf",
         "q": "An alkaline liquid turns red litmus paper blue.",
-        "explanation": "Red litmus changes to blue in an alkali.",
+        "explanation": "An alkali changes red litmus paper to blue. This colour change helps identify alkaline solutions.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-03",
         "type": "drop",
         "q": "Vinegar is an example of an ____ liquid.",
-        "explanation": "Vinegar contains an acid.",
+        "explanation": "Vinegar contains acetic acid, which makes it an acidic liquid.",
         "expected": "acidic",
         "options": [
           "acidic",
@@ -6686,20 +6686,20 @@ const exerciseBank={
           "Vinegar"
         ],
         "correct": 2,
-        "explanation": "Many soap solutions are alkaline."
+        "explanation": "Many soap solutions are alkaline, which means they have a pH above 7."
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-05",
         "type": "tf",
         "q": "A neutral liquid is neither acidic nor alkaline.",
-        "explanation": "Neutral means neither acidic nor alkaline.",
+        "explanation": "A neutral liquid is neither acidic nor alkaline. Pure neutral water has a pH of about 7.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-06",
         "type": "drop",
         "q": "Distilled water is generally ____.",
-        "explanation": "Pure distilled water is generally neutral.",
+        "explanation": "Pure distilled water is neutral because it has equal amounts of acidic and alkaline ions.",
         "expected": "neutral",
         "options": [
           "neutral",
@@ -6717,20 +6717,20 @@ const exerciseBank={
           "Tasting unknown liquids may be unsafe."
         ],
         "correct": 3,
-        "explanation": "Indicator paper can help test acidity without tasting potentially harmful liquids."
+        "explanation": "Indicator paper changes colour to help show whether a liquid is acidic or alkaline, so we can test without tasting it."
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-08",
         "type": "tf",
         "q": "A liquid that turns red litmus paper blue is acidic.",
-        "explanation": "An alkali turns red litmus blue.",
+        "explanation": "Red litmus turns blue in an alkali. This colour change tells us the liquid is alkaline.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U08-001-09",
         "type": "drop",
         "q": "Neutral water does not ____ the colour of red or blue litmus paper.",
-        "explanation": "Neutral water leaves red and blue litmus paper unchanged.",
+        "explanation": "Neutral water keeps red litmus red and blue litmus blue because it is neither acidic nor alkaline.",
         "expected": "change",
         "options": [
           "change",
@@ -6748,7 +6748,7 @@ const exerciseBank={
           "Plain salt water"
         ],
         "correct": 0,
-        "explanation": "Purple cabbage juice contains natural colour pigments that react to acids and alkalis."
+        "explanation": "Purple cabbage contains natural pigments that change colour in acidic and alkaline liquids, so its juice acts as an indicator."
       }
     ],
     "The Solar System": [
@@ -6763,20 +6763,20 @@ const exerciseBank={
           "Jupiter"
         ],
         "correct": 2,
-        "explanation": "The planets orbit the Sun."
+        "explanation": "The Sun is a star at the centre of our Solar System. Its gravity keeps the planets travelling around it."
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-02",
         "type": "tf",
         "q": "Mercury is the planet closest to the Sun.",
-        "explanation": "Mercury is nearest to the Sun.",
+        "explanation": "Mercury is the closest planet to the Sun and takes the shortest time to orbit it.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-03",
         "type": "drop",
         "q": "The third planet from the Sun is ____.",
-        "explanation": "Earth is third from the Sun.",
+        "explanation": "Earth is the third planet from the Sun, after Mercury and Venus.",
         "expected": "Earth",
         "options": [
           "Earth",
@@ -6794,20 +6794,20 @@ const exerciseBank={
           "Jupiter"
         ],
         "correct": 3,
-        "explanation": "Jupiter is the largest planet."
+        "explanation": "Jupiter is the largest planet in our Solar System. It is much bigger than Earth."
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-05",
         "type": "tf",
         "q": "Saturn is known for its large ring system.",
-        "explanation": "Saturn has prominent rings.",
+        "explanation": "Saturn has a large ring system made mostly of countless pieces of ice and rock.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-06",
         "type": "drop",
         "q": "The farthest of the eight planets from the Sun is ____.",
-        "explanation": "Neptune is the eighth planet.",
+        "explanation": "Neptune is the eighth and farthest planet from the Sun in our eight-planet Solar System.",
         "expected": "Neptune",
         "options": [
           "Neptune",
@@ -6825,20 +6825,20 @@ const exerciseBank={
           "A shadow"
         ],
         "correct": 0,
-        "explanation": "A planet travels along an orbit around the Sun."
+        "explanation": "An orbit is the path a planet follows as it travels around the Sun due to gravity."
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-08",
         "type": "tf",
         "q": "Neptune takes the shortest time to travel around the Sun.",
-        "explanation": "Mercury has the shortest orbit time.",
+        "explanation": "Mercury takes about 88 Earth days to orbit the Sun, the shortest orbital time of the eight planets.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U09-001-09",
         "type": "drop",
         "q": "The planet known as the Red Planet is ____.",
-        "explanation": "Mars looks reddish because of iron-rich dust.",
+        "explanation": "Mars looks reddish because iron-rich minerals in its dust and rocks have rusted.",
         "expected": "Mars",
         "options": [
           "Mars",
@@ -6856,7 +6856,7 @@ const exerciseBank={
           "The Sun"
         ],
         "correct": 1,
-        "explanation": "The Moon naturally orbits Earth."
+        "explanation": "The Moon is Earth's natural satellite because it travels around Earth without being a human-made spacecraft."
       }
     ],
     "Pulleys and Machines": [
@@ -6871,20 +6871,20 @@ const exerciseBank={
           "A wheel with a groove for a rope."
         ],
         "correct": 3,
-        "explanation": "A pulley has a grooved wheel that holds a rope."
+        "explanation": "A pulley is a wheel with a groove that guides a rope. It can help lift or move loads."
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-02",
         "type": "tf",
         "q": "A fixed pulley can change the direction of a pulling force.",
-        "explanation": "A fixed pulley can let us pull down to lift something up.",
+        "explanation": "A fixed pulley changes the direction of the pull. Pulling down on the rope can lift a load upwards.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-03",
         "type": "drop",
         "q": "A flagpole uses a ____ to raise and lower its flag.",
-        "explanation": "Flagpoles commonly use pulleys.",
+        "explanation": "A flagpole uses a pulley and rope so a flag can be raised or lowered from the ground.",
         "expected": "pulley",
         "options": [
           "pulley",
@@ -6902,20 +6902,20 @@ const exerciseBank={
           "In a circle only"
         ],
         "correct": 0,
-        "explanation": "Pulling down can raise the load."
+        "explanation": "With a fixed pulley, pulling the free end of the rope down makes the load on the other end rise."
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-05",
         "type": "tf",
         "q": "The wheel of a pulley turns when the rope moves over it.",
-        "explanation": "The grooved wheel turns with the rope.",
+        "explanation": "The rope moves through the groove of the pulley wheel, causing the wheel to turn.",
         "expected": true
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-06",
         "type": "drop",
         "q": "A bucket must be tied ____ to the rope before lifting it.",
-        "explanation": "A load must be fastened securely before it is lifted.",
+        "explanation": "Securely means firmly attached. Tying the bucket firmly helps prevent it from falling during lifting.",
         "expected": "securely",
         "options": [
           "securely",
@@ -6933,20 +6933,20 @@ const exerciseBank={
           "Inside a schoolbag."
         ],
         "correct": 1,
-        "explanation": "A pulley can be used to lift a bucket from a well."
+        "explanation": "A pulley over a well can help lift a bucket of water by pulling the rope down."
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-08",
         "type": "tf",
         "q": "Using several pulleys always makes a heavy load even heavier.",
-        "explanation": "Multiple pulleys can reduce the force needed to lift a heavy load.",
+        "explanation": "A system of several pulleys can spread the load over multiple rope sections, reducing the pulling force needed.",
         "expected": false
       },
       {
         "id": "SCI-PM3-QUIZ-U10-001-09",
         "type": "drop",
         "q": "A ____ may use pulleys to lift construction materials.",
-        "explanation": "Cranes use pulleys to lift heavy loads.",
+        "explanation": "A crane may use a system of pulleys and ropes to lift heavy building materials.",
         "expected": "crane",
         "options": [
           "crane",
@@ -6964,7 +6964,7 @@ const exerciseBank={
           "The load hangs above other pupils."
         ],
         "correct": 2,
-        "explanation": "Always check that the pulley, support and rope are secure before using it."
+        "explanation": "Checking the rope, pulley and support helps make sure the load can be lifted without the parts slipping or breaking."
       }
     ]
   }
