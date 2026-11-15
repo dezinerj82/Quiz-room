@@ -12,7 +12,7 @@ const exerciseBank={
           "The shop beside of bank."
         ],
         "correct": 1,
-        "explanation": "'The shop is next to the bank' is a complete sentence. Is goes with the singular subject 'the shop', and 'next to' tells us its position.",
+        "explanation": "'The shop is next to the bank' is a complete sentence. 'Is' goes with the singular subject 'the shop', and 'next to' tells us its position.",
         "id": "ENG-PM3-PRACTICE-001-01"
       },
       {
@@ -25,7 +25,7 @@ const exerciseBank={
           "Generous"
         ],
         "correct": 2,
-        "explanation": "Fragile describes something that can break easily, such as thin glass.",
+        "explanation": "'Fragile' describes something that can break easily, such as thin glass.",
         "id": "ENG-PM3-PRACTICE-001-02"
       },
       {
@@ -45,28 +45,28 @@ const exerciseBank={
         "type": "tf",
         "q": "The sentence 'She wakes up early' uses the present simple tense correctly.",
         "expected": true,
-        "explanation": "Wakes is the present simple form used with she. We usually add -s to a verb when the subject is he, she or it.",
+        "explanation": "'Wakes' is the present simple form used with 'she'. We usually add '-s' to a verb when the subject is 'he', 'she' or 'it'.",
         "id": "ENG-PM3-PRACTICE-001-04"
       },
       {
         "type": "tf",
         "q": "The sentence 'I goes to school' uses the correct verb form.",
         "expected": false,
-        "explanation": "Go is the present simple form used with I, you, we and they. Goes is used with he, she and it.",
+        "explanation": "'Go' is the present simple form used with 'I', 'you', 'we' and 'they'. 'Goes' is used with 'he', 'she' and 'it'.",
         "id": "ENG-PM3-PRACTICE-001-05"
       },
       {
         "type": "text",
         "q": "Fill in the blank: They ____ playing in the park now.",
         "expected": "are",
-        "explanation": "Are is a helping verb used with they, we and you. Together with a verb ending in -ing, it shows something happening now.",
+        "explanation": "'Are' is a helping verb used with 'they', 'we' and 'you'. Together with a verb ending in '-ing', it shows something happening now.",
         "id": "ENG-PM3-PRACTICE-001-06"
       },
       {
         "type": "text",
         "q": "Fill in the blank: Yesterday, I ____ to the library.",
         "expected": "went",
-        "explanation": "Went is the past tense of go. We use it when someone travelled somewhere in the past.",
+        "explanation": "'Went' is the past tense of 'go'. We use it when someone travelled somewhere in the past.",
         "id": "ENG-PM3-PRACTICE-001-07"
       },
       {
@@ -77,7 +77,7 @@ const exerciseBank={
           "an",
           "a"
         ],
-        "explanation": "An is used before a word beginning with a vowel sound. Elephant starts with the vowel sound e.",
+        "explanation": "'An' is used before a word beginning with a vowel sound. 'Elephant' starts with the vowel sound 'e'.",
         "id": "ENG-PM3-PRACTICE-001-08"
       },
       {
@@ -88,7 +88,7 @@ const exerciseBank={
           "thirsty",
           "hungry"
         ],
-        "explanation": "Thirsty means feeling that you need something to drink, especially water.",
+        "explanation": "'Thirsty' means feeling that you need something to drink, especially water.",
         "id": "ENG-PM3-PRACTICE-001-09"
       },
       {
@@ -99,7 +99,7 @@ const exerciseBank={
           "brushes",
           "brush"
         ],
-        "explanation": "Brushes is the present simple form of brush used with she. The ending -es is added because brush ends in -sh.",
+        "explanation": "'Brushes' is the present simple form of 'brush' used with 'she'. The ending '-es' is added because 'brush' ends in '-sh'.",
         "id": "ENG-PM3-PRACTICE-001-10"
       }
     ]
@@ -116,7 +116,7 @@ const exerciseBank={
           "Pantai"
         ],
         "correct": 1,
-        "explanation": "Sekolah means school. It's a place where pupils go to learn, practise skills and study new things.",
+        "explanation": "'Sekolah' means school. It's a place where pupils go to learn, practise skills and study new things.",
         "translation": {
           "question": "Which place is used for learning?",
           "options": [
@@ -138,7 +138,7 @@ const exerciseBank={
           "Nasi saya makan sedang."
         ],
         "correct": 2,
-        "explanation": "Saya makan nasi means 'I eat rice'. In a simple Malay sentence, the person usually comes first, followed by the action and then the object.",
+        "explanation": "'Saya makan nasi' means 'I eat rice'. In a simple Malay sentence, the person usually comes first, followed by the action and then the object.",
         "translation": {
           "question": "Choose the correct sentence.",
           "options": [
@@ -160,7 +160,7 @@ const exerciseBank={
           "Ayat"
         ],
         "correct": 2,
-        "explanation": "Cantik means beautiful. It's a kata adjektif, a describing word that tells us what the flower looks like.",
+        "explanation": "'Cantik' means beautiful. It's a 'kata adjektif', a describing word that tells us what the flower looks like.",
         "translation": {
           "question": "Which word is the adjective in 'That flower is beautiful'?",
           "options": [
@@ -176,7 +176,7 @@ const exerciseBank={
         "type": "tf",
         "q": "Perkataan 'mereka' digunakan untuk lebih daripada seorang.",
         "expected": true,
-        "explanation": "Mereka means they. It's a kata ganti nama, or pronoun, used for a group of people.",
+        "explanation": "'Mereka' means they. It's a 'kata ganti nama', or pronoun, used for a group of people.",
         "translation": {
           "question": "The word mereka is used for more than one person.",
           "options": [
@@ -190,7 +190,7 @@ const exerciseBank={
         "type": "tf",
         "q": "Perkataan 'menari' ialah kata nama.",
         "expected": false,
-        "explanation": "Menari means dancing. It's a kata kerja, or verb, because it describes an action someone does.",
+        "explanation": "'Menari' means dancing. It's a 'kata kerja', or verb, because it describes an action someone does.",
         "translation": {
           "question": "The word menari is a noun.",
           "options": [
@@ -204,7 +204,7 @@ const exerciseBank={
         "type": "text",
         "q": "Isi tempat kosong: Saya minum air menggunakan ____.",
         "expected": "cawan",
-        "explanation": "Cawan means cup. It's a container we use to hold water or another drink.",
+        "explanation": "'Cawan' means cup. It's a container we use to hold water or another drink.",
         "translation": {
           "question": "Fill in the blank: I drink water using a ____. ",
           "options": []
@@ -215,7 +215,7 @@ const exerciseBank={
         "type": "text",
         "q": "Isi tempat kosong: Ibu memasak ____ dapur.",
         "expected": "di",
-        "explanation": "Di means in, at or on. It's a location word that tells us where an action happens, so di dapur means 'in the kitchen'.",
+        "explanation": "'Di' means in, at or on. It's a location word that tells us where an action happens, so 'di dapur' means 'in the kitchen'.",
         "translation": {
           "question": "Fill in the blank: Mum is cooking ____ the kitchen.",
           "options": []
@@ -230,7 +230,7 @@ const exerciseBank={
           "comel",
           "berenang"
         ],
-        "explanation": "Comel means cute. It's a kata adjektif because it describes how the rabbit looks.",
+        "explanation": "'Comel' means cute. It's a 'kata adjektif' because it describes how the rabbit looks.",
         "translation": {
           "question": "Fill in the blank: The rabbit is very ____. ",
           "options": [
@@ -248,7 +248,7 @@ const exerciseBank={
           "pensel",
           "bantal"
         ],
-        "explanation": "Pensel means pencil. It's a tool for writing or drawing on paper.",
+        "explanation": "'Pensel' means pencil. It's a tool for writing or drawing on paper.",
         "translation": {
           "question": "Fill in the blank: I write with a ____. ",
           "options": [
@@ -266,7 +266,7 @@ const exerciseBank={
           "Mereka",
           "Dia"
         ],
-        "explanation": "Mereka means they. We use this pronoun because Ali and Bakar are two people.",
+        "explanation": "'Mereka' means they. We use this pronoun because 'Ali' and 'Bakar' are two people.",
         "translation": {
           "question": "Fill in the blank: Ali and Bakar play together. ____ are happy.",
           "options": [
@@ -290,7 +290,7 @@ const exerciseBank={
           "의자"
         ],
         "correct": 0,
-        "explanation": "사과 means apple. An apple is a fruit that grows on a tree and contains seeds.",
+        "explanation": "'사과' means apple. An apple is a fruit that grows on a tree and contains seeds.",
         "translation": {
           "question": "Which of these is a fruit?",
           "options": [
@@ -312,7 +312,7 @@ const exerciseBank={
           "를"
         ],
         "correct": 2,
-        "explanation": "에 marks a destination, the place someone is going to. 학교에 가요 means 'I go to school'.",
+        "explanation": "'에' marks a destination, the place someone is going to. '학교에 가요' means 'I go to school'.",
         "translation": {
           "question": "Which particle completes 'I go to school'?",
           "options": [
@@ -334,7 +334,7 @@ const exerciseBank={
           "에서"
         ],
         "correct": 1,
-        "explanation": "이에요 means 'am' or 'is' in this sentence. We use 이에요 after a noun ending in a consonant sound, like 학생.",
+        "explanation": "'이에요' means 'am' or 'is' in this sentence. We use '이에요' after a noun ending in a consonant sound, like '학생'.",
         "translation": {
           "question": "Complete 'I am a student' with the correct ending.",
           "options": [
@@ -350,7 +350,7 @@ const exerciseBank={
         "type": "tf",
         "q": "책상은 먹는 음식이에요.",
         "expected": false,
-        "explanation": "책상 means desk. It's a piece of furniture we use for studying, reading or writing.",
+        "explanation": "'책상' means desk. It's a piece of furniture we use for studying, reading or writing.",
         "translation": {
           "question": "A desk is something we eat.",
           "options": [
@@ -364,7 +364,7 @@ const exerciseBank={
         "type": "tf",
         "q": "‘고양이가 자요.’에서 ‘가’는 주어를 나타내요.",
         "expected": true,
-        "explanation": "가 is a subject particle. We use it after a noun ending in a vowel sound, like 고양이, to show who is doing the action.",
+        "explanation": "'가' is a subject particle. We use it after a noun ending in a vowel sound, like '고양이', to show who is doing the action.",
         "translation": {
           "question": "In 'The cat sleeps', 가 marks the subject.",
           "options": [
@@ -378,7 +378,7 @@ const exerciseBank={
         "type": "text",
         "q": "빈칸에 알맞은 말을 쓰세요: 저____ 학생이에요.",
         "expected": "는",
-        "explanation": "는 is a topic particle. We use it after words ending in a vowel sound, like 저, to introduce the topic of the sentence.",
+        "explanation": "'는' is a topic particle. We use it after words ending in a vowel sound, like '저', to introduce the topic of the sentence.",
         "translation": {
           "question": "Fill in the blank: As for me, I am a student.",
           "options": []
@@ -389,7 +389,7 @@ const exerciseBank={
         "type": "text",
         "q": "빈칸에 알맞은 말을 쓰세요: 가방____ 있어요.",
         "expected": "이",
-        "explanation": "이 marks the subject after a noun ending in a consonant sound. 가방 ends with ㅇ, so we use 이.",
+        "explanation": "'이' marks the subject after a noun ending in a consonant sound. '가방' ends with 'ㅇ', so we use '이'.",
         "translation": {
           "question": "Fill in the blank: There is a bag.",
           "options": []
@@ -404,7 +404,7 @@ const exerciseBank={
           "외투",
           "수영복"
         ],
-        "explanation": "외투 means coat. It's a warm outer layer of clothing that helps keep us comfortable in cold weather.",
+        "explanation": "'외투' means coat. It's a warm outer layer of clothing that helps keep us comfortable in cold weather.",
         "translation": {
           "question": "When it's cold, I wear a ____. ",
           "options": [
@@ -422,7 +422,7 @@ const exerciseBank={
           "컵",
           "신발"
         ],
-        "explanation": "컵 means cup. A cup is a container used for holding water or other drinks.",
+        "explanation": "'컵' means cup. A cup is a container used for holding water or other drinks.",
         "translation": {
           "question": "When drinking water, we use a ____. ",
           "options": [
@@ -440,7 +440,7 @@ const exerciseBank={
           "에서",
           "에"
         ],
-        "explanation": "에서 marks the place where an action happens. 도서관에서 책을 읽어요 means 'I read books at the library'.",
+        "explanation": "'에서' marks the place where an action happens. '도서관에서 책을 읽어요' means 'I read books at the library'.",
         "translation": {
           "question": "I read books ____ the library.",
           "options": [
@@ -568,7 +568,7 @@ const exerciseBank={
           "Predicting"
         ],
         "correct": 1,
-        "explanation": "Observing means using our senses, like seeing, hearing or touching, to notice what's happening and collect information.",
+        "explanation": "'Observing' means using our senses, like seeing, hearing or touching, to notice what's happening and collect information.",
         "id": "SCI-PM3-PRACTICE-001-01"
       },
       {
@@ -581,7 +581,7 @@ const exerciseBank={
           "Anywhere on the ruler"
         ],
         "correct": 0,
-        "explanation": "The zero mark is the starting point on a ruler. Lining the object up with zero helps us measure its full length.",
+        "explanation": "The 'zero mark' is the starting point on a ruler. Lining the object up with zero helps us measure its full length.",
         "id": "SCI-PM3-PRACTICE-001-02"
       },
       {
@@ -594,35 +594,35 @@ const exerciseBank={
           "A taller pot"
         ],
         "correct": 0,
-        "explanation": "Water helps plants move nutrients and keep their stems and leaves firm. Dry soil and drooping leaves can be signs that the plant needs water.",
+        "explanation": "'Water' helps plants move nutrients and keep their stems and leaves firm. Dry soil and drooping leaves can be signs that the plant needs water.",
         "id": "SCI-PM3-PRACTICE-001-03"
       },
       {
         "type": "tf",
         "q": "Grouping leaves by their shape is an example of classifying.",
         "expected": true,
-        "explanation": "Classifying means sorting things into groups by features they share, like shape, size or colour.",
+        "explanation": "'Classifying' means sorting things into groups by features they share, like shape, size or colour.",
         "id": "SCI-PM3-PRACTICE-001-04"
       },
       {
         "type": "tf",
         "q": "A prediction tells us only what has already happened.",
         "expected": false,
-        "explanation": "A prediction is an idea about what might happen next. We make one using clues from what we know or observe.",
+        "explanation": "A 'prediction' is an idea about what might happen next. We make one using clues from what we know or observe.",
         "id": "SCI-PM3-PRACTICE-001-05"
       },
       {
         "type": "text",
         "q": "Fill in the blank: A ____ measures how many seconds a race takes.",
         "expected": "stopwatch",
-        "explanation": "A stopwatch measures the amount of time that passes between starting and stopping it.",
+        "explanation": "A 'stopwatch' measures the amount of time that passes between starting and stopping it.",
         "id": "SCI-PM3-PRACTICE-001-06"
       },
       {
         "type": "text",
         "q": "Fill in the blank: Plants absorb water from the soil through their ____.",
         "expected": "roots",
-        "explanation": "Roots are the parts of a plant that take in water and minerals from the soil.",
+        "explanation": "'Roots' are the parts of a plant that take in water and minerals from the soil.",
         "id": "SCI-PM3-PRACTICE-001-07"
       },
       {
@@ -633,7 +633,7 @@ const exerciseBank={
           "labels",
           "numbers"
         ],
-        "explanation": "Labels are words that name parts of a drawing, helping us understand what each part shows.",
+        "explanation": "'Labels' are words that name parts of a drawing, helping us understand what each part shows.",
         "id": "SCI-PM3-PRACTICE-001-08"
       },
       {
@@ -644,7 +644,7 @@ const exerciseBank={
           "compare",
           "hide"
         ],
-        "explanation": "Compare means looking at two or more things to see how they differ. A bar chart makes results easy to compare using bars of different lengths.",
+        "explanation": "'Compare' means looking at two or more things to see how they differ. A bar chart makes results easy to compare using bars of different lengths.",
         "id": "SCI-PM3-PRACTICE-001-09"
       },
       {
@@ -655,7 +655,7 @@ const exerciseBank={
           "food",
           "soil"
         ],
-        "explanation": "Plants use sunlight to make food through photosynthesis. That food gives the plant energy to grow.",
+        "explanation": "Plants use sunlight to make 'food' through photosynthesis. That food gives the plant energy to grow.",
         "id": "SCI-PM3-PRACTICE-001-10"
       }
     ]
