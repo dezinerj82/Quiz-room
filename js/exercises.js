@@ -13,7 +13,7 @@ const exerciseBank={
           "Strong"
         ],
         "correct": 0,
-        "explanation": "Fragile describes something that breaks easily, such as thin glass."
+        "explanation": "Fragile means easily broken, like a thin glass."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-02",
@@ -52,7 +52,7 @@ const exerciseBank={
           "Secret"
         ],
         "correct": 0,
-        "explanation": "Ordinary describes something usual or common in everyday life."
+        "explanation": "Ordinary means something common or usual in everyday life."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-05",
@@ -66,7 +66,7 @@ const exerciseBank={
         "q": "The word 'generous' means unwilling to share.",
         "type": "tf",
         "expected": false,
-        "explanation": "Generous describes someone who is happy to give or share."
+        "explanation": "Generous describes someone who willingly gives or shares with others."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-07",
@@ -106,7 +106,7 @@ const exerciseBank={
           "author",
           "actor"
         ],
-        "explanation": "An author is someone who writes books."
+        "explanation": "An author is a person who writes books."
       }
     ],
     "Grammar Practice": [
@@ -121,7 +121,7 @@ const exerciseBank={
           "Goes"
         ],
         "correct": 2,
-        "explanation": "Went is the past tense of go. We use it for an action that already happened."
+        "explanation": "Went is the past tense of go. We use it when the action has already happened."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-02",
@@ -147,7 +147,7 @@ const exerciseBank={
           "gone"
         ],
         "correct": 1,
-        "explanation": "With she, we use goes to describe something she does regularly."
+        "explanation": "In the present tense, we usually add s or es to the verb with he, she or it. That is why she goes is correct."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-04",
@@ -160,28 +160,28 @@ const exerciseBank={
           "Where you are going?"
         ],
         "correct": 1,
-        "explanation": "A question ends with a question mark (?) to show that someone is asking something."
+        "explanation": "A question mark (?) shows that a sentence is asking something. That is why 'Where are you going?' ends with one."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-05",
         "q": "In 'The cats are sleeping,' the word 'cats' is plural.",
         "type": "tf",
         "expected": true,
-        "explanation": "Cats is plural because the s shows there is more than one cat."
+        "explanation": "Cats is plural because the s at the end tells us there is more than one cat."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-06",
         "q": "In 'He play football every Sunday,' the verb agrees with the subject.",
         "type": "tf",
         "expected": false,
-        "explanation": "With he, the verb play becomes plays when describing something he does regularly."
+        "explanation": "In the present tense, we add s to play when the subject is he, she or it. That makes 'He plays football' correct."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-07",
         "q": "In 'She ran quickly,' the word 'quickly' is an adverb.",
         "type": "tf",
         "expected": true,
-        "explanation": "Quickly is an adverb because it tells us how she ran."
+        "explanation": "Quickly is an adverb because it describes how she ran, rather than naming a person or thing."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-08",
@@ -192,7 +192,7 @@ const exerciseBank={
           "did",
           "do"
         ],
-        "explanation": "Did is the past tense of do. We use it for an action that already happened."
+        "explanation": "Did is the past tense of do. Yesterday tells us the action happened in the past."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-09",
@@ -203,7 +203,7 @@ const exerciseBank={
           "an",
           "a"
         ],
-        "explanation": "We use an before elephant because elephant starts with a vowel sound."
+        "explanation": "An goes before a word that starts with a vowel sound. Elephant begins with the vowel sound e."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-10",
@@ -228,14 +228,14 @@ const exerciseBank={
           "Watch the sunset"
         ],
         "correct": 1,
-        "explanation": "Breakfast is usually eaten in the morning, before school.",
+        "explanation": "Breakfast is the morning meal. People often eat it before leaving for school.",
         "id": "ENG-PM3-QUIZ-T01-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank with the correct verb: I ____ my teeth every morning. (brush / brushes)",
         "expected": "brush",
-        "explanation": "With I, we use brush to describe an everyday habit.",
+        "explanation": "Brush stays in its base form with I in the present simple tense. We say 'I brush my teeth' for a regular habit.",
         "id": "ENG-PM3-QUIZ-T01-001-02",
         "options": [
           "brush",
@@ -246,7 +246,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'daily' means happening every day.",
         "expected": true,
-        "explanation": "Daily means every day.",
+        "explanation": "Daily means something that happens every day, such as brushing your teeth each morning.",
         "id": "ENG-PM3-QUIZ-T01-001-03"
       },
       {
@@ -259,14 +259,14 @@ const exerciseBank={
           "I will travel tomorrow."
         ],
         "correct": 2,
-        "explanation": "The present simple describes a regular habit.",
+        "explanation": "'I walk to school every day' describes a habit because 'every day' tells us the action happens regularly. We use the present simple for habits.",
         "id": "ENG-PM3-QUIZ-T01-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: She ____ up at seven every morning. (wake / wakes)",
         "expected": "wakes",
-        "explanation": "The verb takes -s with she.",
+        "explanation": "In the present simple, we usually add s to the verb with he, she or it. That is why wake becomes wakes with she.",
         "id": "ENG-PM3-QUIZ-T01-001-05",
         "options": [
           "wakes",
@@ -283,14 +283,14 @@ const exerciseBank={
           "At this moment"
         ],
         "correct": 1,
-        "explanation": "Every Monday describes a repeated routine.",
+        "explanation": "Every Monday tells us an action happens once each week, so it describes how often the action repeats.",
         "id": "ENG-PM3-QUIZ-T01-001-06"
       },
       {
         "type": "tf",
         "q": "In the sentence 'He goes to school by bus', 'goes' describes a regular action.",
         "expected": true,
-        "explanation": "The present simple can describe routines.",
+        "explanation": "Goes is in the present simple tense, which we use for regular activities such as travelling to school.",
         "id": "ENG-PM3-QUIZ-T01-001-07"
       },
       {
@@ -303,14 +303,14 @@ const exerciseBank={
           "My brother played football daily tomorrow."
         ],
         "correct": 1,
-        "explanation": "He or my brother takes plays in the present simple.",
+        "explanation": "My brother means he. In the present simple, we add s to play with he, making plays for a daily habit.",
         "id": "ENG-PM3-QUIZ-T01-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: We usually eat lunch at ____. (noon / midnight)",
         "expected": "noon",
-        "explanation": "Noon is twelve o'clock in the middle of the day.",
+        "explanation": "Noon means 12 o'clock in the middle of the day, when many people eat lunch.",
         "id": "ENG-PM3-QUIZ-T01-001-09",
         "options": [
           "noon",
@@ -321,7 +321,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The sentence 'I goes to school' uses the correct verb form.",
         "expected": false,
-        "explanation": "With I, use go: I go to school.",
+        "explanation": "I is followed by the base form of the verb in the present simple tense. That is why the sentence is 'I go to school'.",
         "id": "ENG-PM3-QUIZ-T01-001-10"
       }
     ],
@@ -336,14 +336,14 @@ const exerciseBank={
           "She will read tomorrow."
         ],
         "correct": 1,
-        "explanation": "Is reading describes an action in progress.",
+        "explanation": "'She is reading now' uses is plus reading to show an action happening at this moment.",
         "id": "ENG-PM3-QUIZ-T02-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The children ____ playing outside now. (is / are)",
         "expected": "are",
-        "explanation": "Children means more than one child, so we use are with it.",
+        "explanation": "Children refers to more than one child. We use are with plural subjects when describing an action happening now.",
         "id": "ENG-PM3-QUIZ-T02-001-02",
         "options": [
           "are",
@@ -354,7 +354,7 @@ const exerciseBank={
         "type": "tf",
         "q": "In 'He is running', the action is happening now.",
         "expected": true,
-        "explanation": "Is running is in the present continuous.",
+        "explanation": "'Is running' uses is with an -ing verb to show that he is running at the moment.",
         "id": "ENG-PM3-QUIZ-T02-001-03"
       },
       {
@@ -367,14 +367,14 @@ const exerciseBank={
           "I be eating lunch."
         ],
         "correct": 0,
-        "explanation": "Am goes with I when describing an action happening now.",
+        "explanation": "Am goes with I. Adding an -ing verb, as in 'I am eating', shows what is happening right now.",
         "id": "ENG-PM3-QUIZ-T02-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The baby is ____. (sleep / sleeping)",
         "expected": "sleeping",
-        "explanation": "The present continuous uses the -ing form.",
+        "explanation": "To describe an action happening now, we use is with a verb ending in -ing. Sleep becomes sleeping.",
         "id": "ENG-PM3-QUIZ-T02-001-05",
         "options": [
           "sleeping",
@@ -391,14 +391,14 @@ const exerciseBank={
           "drew"
         ],
         "correct": 2,
-        "explanation": "Is drawing is the present continuous form.",
+        "explanation": "Drawing is the -ing form of draw. With 'she is', it shows the action is happening right now.",
         "id": "ENG-PM3-QUIZ-T02-001-06"
       },
       {
         "type": "tf",
         "q": "The sentence 'They are swim in the pool' is grammatically correct.",
         "expected": false,
-        "explanation": "It should be They are swimming in the pool.",
+        "explanation": "After are, the action verb takes -ing when describing something happening now. Swim becomes swimming.",
         "id": "ENG-PM3-QUIZ-T02-001-07"
       },
       {
@@ -411,14 +411,14 @@ const exerciseBank={
           "What do you usually do?"
         ],
         "correct": 1,
-        "explanation": "'What are you doing?' correctly asks about an action happening now.",
+        "explanation": "'What are you doing?' uses are and doing to ask about an action happening at this moment.",
         "id": "ENG-PM3-QUIZ-T02-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: I ____ doing my homework right now. (am / is)",
         "expected": "am",
-        "explanation": "Am goes with I when describing an action happening now.",
+        "explanation": "Am is the helping verb used with I. 'I am doing' describes an action happening now.",
         "id": "ENG-PM3-QUIZ-T02-001-09",
         "options": [
           "am",
@@ -429,7 +429,7 @@ const exerciseBank={
         "type": "tf",
         "q": "In 'We are dancing', the word 'are' is a helping verb.",
         "expected": true,
-        "explanation": "Are helps form the present continuous tense.",
+        "explanation": "Are helps join we with dancing to show an action happening now. This form is called the present continuous.",
         "id": "ENG-PM3-QUIZ-T02-001-10"
       }
     ],
@@ -444,14 +444,14 @@ const exerciseBank={
           "July"
         ],
         "correct": 1,
-        "explanation": "May follows April.",
+        "explanation": "May is the fifth month of the year, immediately after April.",
         "id": "ENG-PM3-QUIZ-T03-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: There are ____ months in a year. (12 / 10)",
         "expected": "12",
-        "explanation": "A year has twelve months.",
+        "explanation": "There are 12 months in one year, beginning with January and ending with December.",
         "id": "ENG-PM3-QUIZ-T03-001-02",
         "options": [
           "12",
@@ -462,7 +462,7 @@ const exerciseBank={
         "type": "tf",
         "q": "December comes before November.",
         "expected": false,
-        "explanation": "November comes before December.",
+        "explanation": "November is the eleventh month, followed by December, the twelfth.",
         "id": "ENG-PM3-QUIZ-T03-001-03"
       },
       {
@@ -475,14 +475,14 @@ const exerciseBank={
           "A swimsuit"
         ],
         "correct": 0,
-        "explanation": "An umbrella helps keep you dry in the rain.",
+        "explanation": "An umbrella helps keep rain off your head and body when walking outside.",
         "id": "ENG-PM3-QUIZ-T03-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: January is the ____ month of the year. (first / last)",
         "expected": "first",
-        "explanation": "January is month one.",
+        "explanation": "January is the first month because it comes at the beginning of the calendar year.",
         "id": "ENG-PM3-QUIZ-T03-001-05",
         "options": [
           "first",
@@ -499,14 +499,14 @@ const exerciseBank={
           "Dark"
         ],
         "correct": 0,
-        "explanation": "Breezy means that a gentle wind is blowing.",
+        "explanation": "Breezy describes weather with a gentle wind blowing.",
         "id": "ENG-PM3-QUIZ-T03-001-06"
       },
       {
         "type": "tf",
         "q": "The word 'cloudy' describes a sky with many clouds.",
         "expected": true,
-        "explanation": "Cloudy means covered with or having many clouds.",
+        "explanation": "Cloudy describes a sky with many clouds covering it.",
         "id": "ENG-PM3-QUIZ-T03-001-07"
       },
       {
@@ -519,14 +519,14 @@ const exerciseBank={
           "It rain today now."
         ],
         "correct": 1,
-        "explanation": "It is raining is the correct present continuous sentence.",
+        "explanation": "'It is raining today' uses is and the -ing form raining to describe weather happening now.",
         "id": "ENG-PM3-QUIZ-T03-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The month after August is ____. (September / July)",
         "expected": "September",
-        "explanation": "September comes immediately after August.",
+        "explanation": "September is the ninth month of the year, immediately after August.",
         "id": "ENG-PM3-QUIZ-T03-001-09",
         "options": [
           "September",
@@ -537,7 +537,7 @@ const exerciseBank={
         "type": "tf",
         "q": "February is always the longest month of the year.",
         "expected": false,
-        "explanation": "February has fewer days than the other months.",
+        "explanation": "February has 28 days in most years and 29 in leap years, making it the shortest month.",
         "id": "ENG-PM3-QUIZ-T03-001-10"
       }
     ],
@@ -552,14 +552,14 @@ const exerciseBank={
           "Garage"
         ],
         "correct": 1,
-        "explanation": "Meals are commonly prepared in the kitchen.",
+        "explanation": "A kitchen is the room where food is commonly prepared and cooked.",
         "id": "ENG-PM3-QUIZ-T04-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: There ____ two windows in this room. (is / are)",
         "expected": "are",
-        "explanation": "Two windows means more than one, so we use are.",
+        "explanation": "Two windows means more than one window. We use are with plural subjects.",
         "id": "ENG-PM3-QUIZ-T04-001-02",
         "options": [
           "are",
@@ -570,7 +570,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'furniture' includes chairs and tables.",
         "expected": true,
-        "explanation": "Chairs and tables are furniture.",
+        "explanation": "Furniture means movable items used in a home, such as chairs, tables and beds.",
         "id": "ENG-PM3-QUIZ-T04-001-03"
       },
       {
@@ -583,14 +583,14 @@ const exerciseBank={
           "The chair is wooden."
         ],
         "correct": 1,
-        "explanation": "Under the table describes a position.",
+        "explanation": "Under tells us the bag is in a lower position than the table. It describes where the bag is.",
         "id": "ENG-PM3-QUIZ-T04-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The cat is ____ the box, not outside it. (inside / above)",
         "expected": "inside",
-        "explanation": "Inside means within the box.",
+        "explanation": "Inside means within something, such as a cat sitting within a box.",
         "id": "ENG-PM3-QUIZ-T04-001-05",
         "options": [
           "inside",
@@ -607,14 +607,14 @@ const exerciseBank={
           "Nearby"
         ],
         "correct": 1,
-        "explanation": "Downstairs refers to a lower floor.",
+        "explanation": "Downstairs means on a lower floor of a building.",
         "id": "ENG-PM3-QUIZ-T04-001-06"
       },
       {
         "type": "tf",
         "q": "In 'The lamp is beside the sofa', 'beside' tells us the lamp's position.",
         "expected": true,
-        "explanation": "Beside means next to.",
+        "explanation": "Beside means next to. It tells us the lamp is next to the sofa.",
         "id": "ENG-PM3-QUIZ-T04-001-07"
       },
       {
@@ -627,14 +627,14 @@ const exerciseBank={
           "There be three chairs."
         ],
         "correct": 1,
-        "explanation": "There are is used when talking about more than one chair.",
+        "explanation": "We say 'there are' when talking about more than one item. Three chairs is plural.",
         "id": "ENG-PM3-QUIZ-T04-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A person usually sleeps in a ____. (bed / sink)",
         "expected": "bed",
-        "explanation": "A bed is used for sleeping.",
+        "explanation": "A bed is a piece of furniture where people lie down to sleep.",
         "id": "ENG-PM3-QUIZ-T04-001-09",
         "options": [
           "bed",
@@ -645,7 +645,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'behind' means the same as 'in front of'.",
         "expected": false,
-        "explanation": "Behind refers to the back of something.",
+        "explanation": "Behind means at the back of something, such as a bag behind a chair.",
         "id": "ENG-PM3-QUIZ-T04-001-10"
       }
     ],
@@ -660,14 +660,14 @@ const exerciseBank={
           "Bread"
         ],
         "correct": 1,
-        "explanation": "An apple is a fruit.",
+        "explanation": "An apple is a fruit that grows on a tree and contains seeds.",
         "id": "ENG-PM3-QUIZ-T05-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: I would like ____ orange. (a / an)",
         "expected": "an",
-        "explanation": "Orange begins with a vowel sound, so use an.",
+        "explanation": "An is used before words that begin with a vowel sound. Orange starts with the vowel sound o.",
         "id": "ENG-PM3-QUIZ-T05-001-02",
         "options": [
           "an",
@@ -678,7 +678,7 @@ const exerciseBank={
         "type": "tf",
         "q": "We use 'some' with plural nouns, as in 'some apples'.",
         "expected": true,
-        "explanation": "Some can be used with plural countable nouns.",
+        "explanation": "Some can describe an unspecified number of things, such as some apples or some bananas.",
         "id": "ENG-PM3-QUIZ-T05-001-03"
       },
       {
@@ -691,14 +691,14 @@ const exerciseBank={
           "I having a banana."
         ],
         "correct": 1,
-        "explanation": "Banana begins with a consonant sound, so use a.",
+        "explanation": "A goes before a singular word beginning with a consonant sound. Banana starts with the b sound.",
         "id": "ENG-PM3-QUIZ-T05-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: She drinks a glass of ____. (water / plate)",
         "expected": "water",
-        "explanation": "Water is a liquid that we drink.",
+        "explanation": "Water is a liquid that people drink to stay hydrated.",
         "id": "ENG-PM3-QUIZ-T05-001-05",
         "options": [
           "water",
@@ -715,14 +715,14 @@ const exerciseBank={
           "Apple"
         ],
         "correct": 0,
-        "explanation": "Cheese is made from milk.",
+        "explanation": "Cheese is a food made by turning milk into a solid food.",
         "id": "ENG-PM3-QUIZ-T05-001-06"
       },
       {
         "type": "tf",
         "q": "The phrase 'two breads' is the usual way to count two slices of bread.",
         "expected": false,
-        "explanation": "Say two slices of bread.",
+        "explanation": "Bread is usually counted by slices or loaves. Two slices of bread means two individual pieces.",
         "id": "ENG-PM3-QUIZ-T05-001-07"
       },
       {
@@ -735,14 +735,14 @@ const exerciseBank={
           "Tomatoies"
         ],
         "correct": 1,
-        "explanation": "Tomato becomes tomatoes in the plural.",
+        "explanation": "Tomato becomes tomatoes in the plural. We add es to this word when talking about more than one.",
         "id": "ENG-PM3-QUIZ-T05-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The soup is very ____. (hot / loudly)",
         "expected": "hot",
-        "explanation": "Hot is an adjective describing the soup's temperature.",
+        "explanation": "Hot is an adjective because it describes the temperature of the soup.",
         "id": "ENG-PM3-QUIZ-T05-001-09",
         "options": [
           "hot",
@@ -753,7 +753,7 @@ const exerciseBank={
         "type": "tf",
         "q": "A recipe gives instructions for preparing food.",
         "expected": true,
-        "explanation": "A recipe lists ingredients and steps for cooking.",
+        "explanation": "A recipe explains which ingredients to use and the steps needed to prepare a dish.",
         "id": "ENG-PM3-QUIZ-T05-001-10"
       }
     ],
@@ -768,14 +768,14 @@ const exerciseBank={
           "Restaurant"
         ],
         "correct": 0,
-        "explanation": "Libraries lend books.",
+        "explanation": "A library lends books so people can read them at home or in the library.",
         "id": "ENG-PM3-QUIZ-T06-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: The doctor works at a ____. (hospital / cinema)",
         "expected": "hospital",
-        "explanation": "Doctors commonly work in hospitals.",
+        "explanation": "A hospital is a place where doctors and nurses care for people who are ill or injured.",
         "id": "ENG-PM3-QUIZ-T06-001-02",
         "options": [
           "hospital",
@@ -786,7 +786,7 @@ const exerciseBank={
         "type": "tf",
         "q": "A pedestrian is a person who travels on foot.",
         "expected": true,
-        "explanation": "A pedestrian walks.",
+        "explanation": "A pedestrian is a person travelling on foot, such as someone walking along a pavement.",
         "id": "ENG-PM3-QUIZ-T06-001-03"
       },
       {
@@ -799,14 +799,14 @@ const exerciseBank={
           "Playground"
         ],
         "correct": 0,
-        "explanation": "A post office handles mail and parcels.",
+        "explanation": "A post office is a place where people can send letters and parcels.",
         "id": "ENG-PM3-QUIZ-T06-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: We wait for the bus at the bus ____. (stop / shop)",
         "expected": "stop",
-        "explanation": "The place where buses pick up passengers is a bus stop.",
+        "explanation": "A bus stop is a marked place where buses stop to pick up or drop off passengers.",
         "id": "ENG-PM3-QUIZ-T06-001-05",
         "options": [
           "stop",
@@ -823,14 +823,14 @@ const exerciseBank={
           "Wake up"
         ],
         "correct": 0,
-        "explanation": "Go left tells you to change direction.",
+        "explanation": "Go left gives a direction by telling someone to turn towards their left side.",
         "id": "ENG-PM3-QUIZ-T06-001-06"
       },
       {
         "type": "tf",
         "q": "A zebra crossing is a marked place where pedestrians can cross the road.",
         "expected": true,
-        "explanation": "Zebra crossings are marked for pedestrians.",
+        "explanation": "A zebra crossing is a marked area on the road that helps pedestrians cross safely.",
         "id": "ENG-PM3-QUIZ-T06-001-07"
       },
       {
@@ -843,14 +843,14 @@ const exerciseBank={
           "The shop beside of bank."
         ],
         "correct": 0,
-        "explanation": "Next to is a correct phrase for position.",
+        "explanation": "Next to means beside. It tells us the shop is beside the bank.",
         "id": "ENG-PM3-QUIZ-T06-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: Stop when the traffic light is ____. (red / green)",
         "expected": "red",
-        "explanation": "A red traffic light means stop.",
+        "explanation": "A red traffic light tells road users to stop so other traffic can move safely.",
         "id": "ENG-PM3-QUIZ-T06-001-09",
         "options": [
           "red",
@@ -861,7 +861,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'opposite' can mean across from another place.",
         "expected": true,
-        "explanation": "Opposite describes something on the other side.",
+        "explanation": "Opposite can mean on the other side of a street or facing another place.",
         "id": "ENG-PM3-QUIZ-T06-001-10"
       }
     ],
@@ -876,14 +876,14 @@ const exerciseBank={
           "Eats"
         ],
         "correct": 1,
-        "explanation": "Ate is the past tense of eat.",
+        "explanation": "Ate is the past tense of eat. We use ate for food eaten earlier.",
         "id": "ENG-PM3-QUIZ-T07-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: Yesterday, we ____ football. (played / play)",
         "expected": "played",
-        "explanation": "Yesterday indicates a completed action in the past.",
+        "explanation": "Played is the past tense of play. We add ed to many regular verbs to describe actions that already happened.",
         "id": "ENG-PM3-QUIZ-T07-001-02",
         "options": [
           "played",
@@ -894,7 +894,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'built' is the past tense of 'build'.",
         "expected": true,
-        "explanation": "Built is the irregular past tense of build.",
+        "explanation": "Built is the past tense of build. It changes spelling instead of taking the usual ed ending.",
         "id": "ENG-PM3-QUIZ-T07-001-03"
       },
       {
@@ -907,14 +907,14 @@ const exerciseBank={
           "She visits her aunt yesterday tomorrow."
         ],
         "correct": 1,
-        "explanation": "Visited is the past-tense verb.",
+        "explanation": "Visited has an ed ending because visit is a regular verb describing an action in the past.",
         "id": "ENG-PM3-QUIZ-T07-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: Last night, I ____ a storybook. (read / reads)",
         "expected": "read",
-        "explanation": "The past tense of read is spelled read.",
+        "explanation": "Read is spelled the same in the present and past, but the past form is pronounced 'red'.",
         "id": "ENG-PM3-QUIZ-T07-001-05",
         "options": [
           "read",
@@ -931,14 +931,14 @@ const exerciseBank={
           "Buys"
         ],
         "correct": 1,
-        "explanation": "Bought is the past tense of buy.",
+        "explanation": "Bought is the past tense of buy. Its spelling changes when we describe an earlier purchase.",
         "id": "ENG-PM3-QUIZ-T07-001-06"
       },
       {
         "type": "tf",
         "q": "In the sentence 'He was happy yesterday', 'was' is in the past tense.",
         "expected": true,
-        "explanation": "Was is a past-tense form of be.",
+        "explanation": "Was is the past form of am or is. Yesterday tells us the feeling happened in the past.",
         "id": "ENG-PM3-QUIZ-T07-001-07"
       },
       {
@@ -951,14 +951,14 @@ const exerciseBank={
           "Sees"
         ],
         "correct": 0,
-        "explanation": "Saw is the simple past form of see.",
+        "explanation": "Saw is the past tense of see. We use saw for something seen earlier.",
         "id": "ENG-PM3-QUIZ-T07-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: They ____ at home yesterday. (were / was)",
         "expected": "were",
-        "explanation": "Were is the past form of are when used with they.",
+        "explanation": "Were is the past form of are when used with they or we.",
         "id": "ENG-PM3-QUIZ-T07-001-09",
         "options": [
           "were",
@@ -969,7 +969,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The sentence 'I goed to the park' uses the correct past tense.",
         "expected": false,
-        "explanation": "Went is the past tense of go, used for something that already happened.",
+        "explanation": "Went is the past tense of go. It changes spelling because go is an irregular verb.",
         "id": "ENG-PM3-QUIZ-T07-001-10"
       }
     ],
@@ -984,14 +984,14 @@ const exerciseBank={
           "Lizard"
         ],
         "correct": 2,
-        "explanation": "Dolphins are mammals.",
+        "explanation": "A dolphin is a mammal because it breathes air, gives birth to live young and feeds its babies milk.",
         "id": "ENG-PM3-QUIZ-T09-001-01"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A young cat is called a ____. (kitten / puppy)",
         "expected": "kitten",
-        "explanation": "A kitten is a young cat.",
+        "explanation": "A kitten is a young cat. A puppy is a young dog.",
         "id": "ENG-PM3-QUIZ-T09-001-02",
         "options": [
           "kitten",
@@ -1002,7 +1002,7 @@ const exerciseBank={
         "type": "tf",
         "q": "A butterfly has six legs.",
         "expected": true,
-        "explanation": "Butterflies are insects, and adult insects have six legs.",
+        "explanation": "An adult butterfly is an insect. Insects have six legs, so butterflies have six legs too.",
         "id": "ENG-PM3-QUIZ-T09-001-03"
       },
       {
@@ -1015,14 +1015,14 @@ const exerciseBank={
           "Fruit"
         ],
         "correct": 2,
-        "explanation": "Roots absorb water from the soil.",
+        "explanation": "Roots absorb water from the soil and carry it to the rest of the plant.",
         "id": "ENG-PM3-QUIZ-T09-001-04"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: Birds use their ____ to fly. (wings / fins)",
         "expected": "wings",
-        "explanation": "Birds fly using wings.",
+        "explanation": "Wings help birds move through the air when they fly.",
         "id": "ENG-PM3-QUIZ-T09-001-05",
         "options": [
           "wings",
@@ -1039,14 +1039,14 @@ const exerciseBank={
           "Grassland"
         ],
         "correct": 0,
-        "explanation": "The ocean is an aquatic habitat.",
+        "explanation": "The ocean is a large body of salt water where many fish live.",
         "id": "ENG-PM3-QUIZ-T09-001-06"
       },
       {
         "type": "tf",
         "q": "The word 'nocturnal' describes animals that are active mainly at night.",
         "expected": true,
-        "explanation": "Nocturnal animals are mainly active at night.",
+        "explanation": "Nocturnal means active mainly at night, like many owls and bats.",
         "id": "ENG-PM3-QUIZ-T09-001-07"
       },
       {
@@ -1059,14 +1059,14 @@ const exerciseBank={
           "Shade"
         ],
         "correct": 2,
-        "explanation": "Tall describes the noun tree.",
+        "explanation": "Tall is an adjective because it describes the height of the tree.",
         "id": "ENG-PM3-QUIZ-T09-001-08"
       },
       {
         "type": "drop",
         "q": "Fill in the blank: A plant needs water and ____ to grow well. (light / plastic)",
         "expected": "light",
-        "explanation": "Plants generally need light to grow.",
+        "explanation": "Plants use light to make food through photosynthesis, which helps them grow.",
         "id": "ENG-PM3-QUIZ-T09-001-09",
         "options": [
           "light",
@@ -1077,7 +1077,7 @@ const exerciseBank={
         "type": "tf",
         "q": "The word 'habitat' means an animal's natural home.",
         "expected": true,
-        "explanation": "A habitat is the place an organism naturally lives.",
+        "explanation": "A habitat is the natural place where an animal or plant lives and finds what it needs.",
         "id": "ENG-PM3-QUIZ-T09-001-10"
       }
     ]
