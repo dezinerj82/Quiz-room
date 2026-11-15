@@ -841,14 +841,27 @@ body:not(.auth-locked) #quiz .answer-feedback .inline-feedback{
  display:flex;align-items:center;gap:var(--density-inner);padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius);line-height:1.5;font-weight:400;
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-explanation strong{font-weight:700}
-body:not(.auth-locked) #quiz .answer-feedback .feedback-reference{
- display:inline;
- background:color-mix(in srgb,var(--qr-text-primary) 10%,var(--qr-background));
- border-radius:999px;
- padding:0 5px;
- font-weight:400;
- box-decoration-break:clone;
- -webkit-box-decoration-break:clone;
+body:not(.auth-locked) #quiz .answer-feedback .feedback-reference{font-weight:700;color:inherit}
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term{
+ display:inline-flex;align-items:center;gap:4px;position:relative;vertical-align:baseline;
+ padding:1px 7px;border:1px solid #6BA4C0;border-radius:999px;
+ background:#DCEFF9;color:#245273;font:inherit;font-weight:600;line-height:1.35;
+ cursor:help;
+}
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term .foundation-info{font-size:.85em;line-height:1}
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term:hover,
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term:focus-visible{
+ outline:2px solid #6BA4C0;outline-offset:2px;
+}
+body:not(.auth-locked) #quiz .answer-feedback .foundation-term:is(:hover,:focus)::after{
+ content:attr(data-definition);position:absolute;left:50%;bottom:calc(100% + 9px);
+ transform:translateX(-50%);z-index:30;box-sizing:border-box;
+ width:max-content;max-width:min(300px,calc(100vw - 32px));
+ padding:9px 12px;border:1px solid #6BA4C0;border-radius:12px;
+ background:var(--qr-background);color:var(--qr-text-primary);
+ font-size:var(--qr-font-small);font-weight:400;line-height:1.4;
+ white-space:normal;text-align:left;box-shadow:0 3px 12px #00000016;
+ pointer-events:none;
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol,
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
@@ -1701,6 +1714,72 @@ function showAnswerTranslations(q){
   button.appendChild(translation);
  });
 }
+/* Reusable child-friendly foundation terms. Reference words stay bold, with no colour. */
+const qrFoundationTerms=Object.freeze({
+ 'present simple tense':'A verb tense for habits, regular activities and things that are generally true.',
+ 'present simple form':'The verb form we use for habits or things that happen regularly.',
+ 'present simple':'The verb tense we use for habits, repeated actions and general facts.',
+ 'past tense':'A verb form showing that something happened earlier.',
+ 'singular subject':'The one person or thing that the sentence is about.',
+ 'plural subject':'A subject naming more than one person or thing.',
+ 'helping verb':'A verb such as am, is or are that works with another verb to form a tense.',
+ 'vowel sound':'A spoken sound made with an open mouth, like the first sound in apple.',
+ 'consonant sound':'A speech sound made with some blocking or narrowing of the airflow, like the first sound in book.',
+ 'kata adjektif':'A Malay adjective: a word describing how someone or something looks, feels or is.',
+ 'kata ganti nama':'A Malay pronoun: a word such as saya or mereka that stands for a person or group.',
+ 'kata kerja':'A Malay verb: a word describing an action, such as reading or running.',
+ 'subject particle':'A small Korean grammar marker showing which person or thing is the subject.',
+ 'topic particle':'A small Korean grammar marker showing what the sentence is talking about.',
+ 'photosynthesis':'The process plants use to make their own food with energy from sunlight.',
+ 'adjective':'A word that describes a person, place or thing.',
+ 'adverb':'A word that describes how, when or where an action happens.',
+ 'pronoun':'A word used instead of a name or noun, such as I, you or they.',
+ 'noun':'A word naming a person, place, thing or idea.',
+ 'verb':'A word showing an action or state, such as run or sleep.',
+ 'habit':'Something a person does regularly or often.',
+ 'destination':'The place someone is going to.',
+ 'location word':'A word or phrase that tells us where something is or happens.',
+ 'classifying':'Sorting things into groups based on features they share.',
+ 'prediction':'An idea about what might happen next, based on clues or what we know.',
+ 'bar chart':'A chart using bars of different lengths to compare amounts.',
+ 'plural':'A word form referring to more than one person or thing.'
+});
+const qrFoundationPattern=new RegExp('(?<![\\\\p{L}\\\\p{N}])(?:'+Object.keys(qrFoundationTerms).sort((a,b)=>b.length-a.length).map(t=>t.replace(/[.*+?^$\u007b\u007d()|[\]\\]/g,'\\\\function submitAnswer(){')).join('|')+')(?![\\\\p{L}\\\\p{N}])','giu');
+function qrAppendFoundationText(target,value){
+ let cursor=0;
+ for(const match of value.matchAll(qrFoundationPattern)){
+  target.append(document.createTextNode(value.slice(cursor,match.index)));
+  const term=document.createElement('button');
+  term.type='button';term.className='foundation-term';
+  const definition=qrFoundationTerms[match[0].toLowerCase()];
+  term.setAttribute('data-definition',definition);
+  term.setAttribute('aria-label',match[0]+': '+definition);
+  const label=document.createElement('span');label.textContent=match[0];
+  const info=document.createElement('span');info.className='foundation-info';
+  info.setAttribute('aria-hidden','true');info.textContent='ⓘ';
+  term.append(label,info);target.append(term);
+  cursor=match.index+match[0].length;
+ }
+ target.append(document.createTextNode(value.slice(cursor)));
+}
+function qrAppendFeedbackExplanation(target,value){
+ // Paired single quotes identify references. Apostrophes inside words are preserved.
+ const quoted=/(?<![\\p{L}\\p{N}])'([^'\\n]+)'(?![\\p{L}\\p{N}])/gu;
+ let cursor=0;
+ for(const match of value.matchAll(quoted)){
+  qrAppendFoundationText(target,value.slice(cursor,match.index));
+  const word=match[1];
+  if(qrFoundationTerms[word.toLowerCase()]){
+   qrAppendFoundationText(target,word);
+  }else{
+   const reference=document.createElement('strong');
+   reference.className='feedback-reference';reference.textContent=word;
+   target.append(reference);
+  }
+  cursor=match.index+match[0].length;
+ }
+ qrAppendFoundationText(target,value.slice(cursor));
+}
 function submitAnswer(){
  if(answered){advance();return}
  if(!questions.length)return;
@@ -1731,18 +1810,7 @@ function submitAnswer(){
   explanation.append(answerLabel);
   if(message){
    explanation.append(document.createTextNode(' - '));
-   // Paired single quotes mark references; apostrophes inside words stay untouched.
-   const references=/(?<![\p{L}\p{N}])'([^'\n]+)'(?![\p{L}\p{N}])/gu;
-   let cursor=0;
-   for(const match of message.matchAll(references)){
-    explanation.append(document.createTextNode(message.slice(cursor,match.index)));
-    const highlight=document.createElement('span');
-    highlight.className='feedback-reference';
-    highlight.textContent=match[1];
-    explanation.append(highlight);
-    cursor=match.index+match[0].length;
-   }
-   explanation.append(document.createTextNode(message.slice(cursor)));
+   qrAppendFeedbackExplanation(explanation,message);
   }
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
