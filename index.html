@@ -839,10 +839,13 @@ body:not(.auth-locked) #quiz .answer.answer-correct.answer-revealed{
  border-color:var(--qr-reveal-border)!important;
  color:var(--qr-text-success)!important;
 }
+/* One font-scaled marker size across every quiz answer format. */
+body:not(.auth-locked) #quiz{--qr-answer-marker-size:calc(var(--qr-font-body) * 1.7);--qr-answer-mark-size:calc(var(--qr-font-body) * .85)}
 body:not(.auth-locked) #quiz .answer.answer-correct::after,
 body:not(.auth-locked) #quiz .answer.answer-wrong::after{
- margin-left:auto;flex:0 0 auto;display:grid;place-items:center;
- width:27px;height:27px;border-radius:50%;font-size:17px;line-height:1;font-weight:800;color:var(--qr-background);
+ margin-left:auto;flex:0 0 var(--qr-answer-marker-size);display:grid;place-items:center;
+ width:var(--qr-answer-marker-size);height:var(--qr-answer-marker-size);
+ border-radius:50%;font-size:var(--qr-answer-mark-size);line-height:1;font-weight:800;color:var(--qr-background);
 }
 body:not(.auth-locked) #quiz .answer.answer-correct::after{content:"✓";background:var(--qr-success)}
 body:not(.auth-locked) #quiz .answer.answer-correct.answer-revealed::after{
@@ -882,8 +885,9 @@ body:not(.auth-locked) .qr-foundation-tooltip{
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-symbol,
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
- display:grid;place-items:center;flex:0 0 auto;width:27px;height:27px;
- border-radius:50%;font-size:17px;line-height:1;font-weight:800;color:var(--qr-background);
+ display:grid;place-items:center;flex:0 0 var(--qr-answer-marker-size);
+ width:var(--qr-answer-marker-size);height:var(--qr-answer-marker-size);
+ border-radius:50%;font-size:var(--qr-answer-mark-size);line-height:1;font-weight:800;color:var(--qr-background);
 }
 body:not(.auth-locked) #quiz .answer-feedback .feedback-correct{
  color:var(--qr-text-success);background:color-mix(in srgb,var(--qr-success) 16%,var(--qr-background));
@@ -1129,7 +1133,7 @@ body:not(.auth-locked) #quiz .qr-drop-option{
  touch-action:none;user-select:none;cursor:grab
 }
 body:not(.auth-locked) #quiz .qr-drop-option:is(.answer-correct,.answer-wrong)::after{
- position:static!important;margin-left:8px!important;flex:0 0 27px!important;
+ position:static!important;margin-left:8px!important;flex:0 0 var(--qr-answer-marker-size)!important;
 }
 body:not(.auth-locked) #quiz .qr-drop-option.selected{outline:2px solid var(--qr-focus);outline-offset:2px}
 body:not(.auth-locked) .qr-drop-ghost{
