@@ -1,6 +1,5 @@
 /* Eight PM3 revision quizzes. Original question IDs are kept for score history. */
 const exerciseBank={
-  
   "English": {
     "Word Meanings 2": [
       {
@@ -14,8 +13,7 @@ const exerciseBank={
           "Strong"
         ],
         "correct": 0,
-        "explanationCorrect": "Fragile means easy to break.",
-        "explanationIncorrect": "Fragile describes something that can break easily."
+        "explanation": "Fragile describes something that breaks easily, such as thin glass."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-02",
@@ -28,8 +26,7 @@ const exerciseBank={
           "Tiny"
         ],
         "correct": 1,
-        "explanationCorrect": "Enormous means extremely big.",
-        "explanationIncorrect": "Enormous describes something very big, not small."
+        "explanation": "Enormous means extremely big, like a giant whale."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-03",
@@ -42,8 +39,7 @@ const exerciseBank={
           "To copy"
         ],
         "correct": 1,
-        "explanationCorrect": "To protect means to keep something safe.",
-        "explanationIncorrect": "To protect something is to keep it from harm."
+        "explanation": "To protect something means to keep it safe from harm."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-04",
@@ -56,68 +52,61 @@ const exerciseBank={
           "Secret"
         ],
         "correct": 0,
-        "explanationCorrect": "Ordinary means normal or not special.",
-        "explanationIncorrect": "Ordinary describes something common or usual."
+        "explanation": "Ordinary describes something usual or common in everyday life."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-05",
         "q": "The word 'ancient' means very old.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "Ancient means very old.",
-        "explanationIncorrect": "Ancient describes something from long ago."
+        "explanation": "Ancient describes something from a very long time ago."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-06",
         "q": "The word 'generous' means unwilling to share.",
         "type": "tf",
         "expected": false,
-        "explanationCorrect": "Generous means willing to share.",
-        "explanationIncorrect": "Generous means happy to give or share, not unwilling."
+        "explanation": "Generous describes someone who is happy to give or share."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-07",
         "q": "A journey is a trip from one place to another.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "A journey is a trip from one place to another.",
-        "explanationIncorrect": "A journey means travelling from one place to another."
+        "explanation": "A journey is a trip from one place to another."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-08",
         "q": "Fill in the blank: I borrowed a book from the ____.",
         "type": "drop",
         "expected": "library",
-        "explanationCorrect": "A library is a place to read or borrow books.",
-        "explanationIncorrect": "A library is where people can borrow books.",
         "options": [
           "library",
           "hospital"
-        ]
+        ],
+        "explanation": "A library is a place where people can read or borrow books."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-09",
         "q": "Fill in the blank: After running in the sun, I was very ____ and needed water.",
         "type": "drop",
         "expected": "thirsty",
-        "explanationCorrect": "Thirsty means needing a drink.",
-        "explanationIncorrect": "Thirsty means wanting something to drink, not food.",
         "options": [
           "thirsty",
           "hungry"
-        ]
+        ],
+        "explanation": "Thirsty means needing something to drink."
       },
       {
         "id": "ENG-PM3-QUIZ-VOC-002-10",
         "q": "Fill in the blank: A person who writes books is called an ____.",
         "type": "drop",
         "expected": "author",
-        "explanationCorrect": "An author is someone who writes books.",
-        "explanationIncorrect": "An author writes books; an actor performs in plays or films.",
         "options": [
           "author",
           "actor"
-        ]
+        ],
+        "explanation": "An author is someone who writes books."
       }
     ],
     "Grammar Practice": [
@@ -132,8 +121,7 @@ const exerciseBank={
           "Goes"
         ],
         "correct": 2,
-        "explanationCorrect": "Went is the past tense of go.",
-        "explanationIncorrect": "We use went for the past, not goed."
+        "explanation": "Went is the past tense of go. We use it for an action that already happened."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-02",
@@ -146,8 +134,7 @@ const exerciseBank={
           "Children"
         ],
         "correct": 3,
-        "explanationCorrect": "Children is the plural of child.",
-        "explanationIncorrect": "We say children for more than one child, not childs."
+        "explanation": "Children is the plural of child. It means more than one child."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-03",
@@ -160,8 +147,7 @@ const exerciseBank={
           "gone"
         ],
         "correct": 1,
-        "explanationCorrect": "We use goes with she for everyday actions.",
-        "explanationIncorrect": "With she, we say goes, not go."
+        "explanation": "With she, we use goes to describe something she does regularly."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-04",
@@ -174,68 +160,61 @@ const exerciseBank={
           "Where you are going?"
         ],
         "correct": 1,
-        "explanationCorrect": "A question ends with a question mark (?).",
-        "explanationIncorrect": "A question needs a question mark, not a full stop."
+        "explanation": "A question ends with a question mark (?) to show that someone is asking something."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-05",
         "q": "In 'The cats are sleeping,' the word 'cats' is plural.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "Cats is plural because it means more than one cat.",
-        "explanationIncorrect": "The s in cats shows there is more than one."
+        "explanation": "Cats is plural because the s shows there is more than one cat."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-06",
         "q": "In 'He play football every Sunday,' the verb agrees with the subject.",
         "type": "tf",
         "expected": false,
-        "explanationCorrect": "We say he plays, not he play.",
-        "explanationIncorrect": "With he, add s to play: he plays."
+        "explanation": "With he, the verb play becomes plays when describing something he does regularly."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-07",
         "q": "In 'She ran quickly,' the word 'quickly' is an adverb.",
         "type": "tf",
         "expected": true,
-        "explanationCorrect": "Quickly tells us how she ran.",
-        "explanationIncorrect": "Quickly describes how an action happens."
+        "explanation": "Quickly is an adverb because it tells us how she ran."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-08",
         "q": "Fill in the blank: Yesterday, I ____ my homework before dinner.",
         "type": "drop",
         "expected": "did",
-        "explanationCorrect": "Did is the past tense of do.",
-        "explanationIncorrect": "We use did for something done yesterday.",
         "options": [
           "did",
           "do"
-        ]
+        ],
+        "explanation": "Did is the past tense of do. We use it for an action that already happened."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-09",
         "q": "Fill in the blank: I saw ____ elephant at the zoo.",
         "type": "drop",
         "expected": "an",
-        "explanationCorrect": "We use an before the vowel sound in elephant.",
-        "explanationIncorrect": "Elephant starts with a vowel sound, so we say an elephant.",
         "options": [
           "an",
           "a"
-        ]
+        ],
+        "explanation": "We use an before elephant because elephant starts with a vowel sound."
       },
       {
         "id": "ENG-PM3-QUIZ-GRM-001-10",
         "q": "Fill in the blank: They ____ playing in the park now.",
         "type": "drop",
         "expected": "are",
-        "explanationCorrect": "We say they are playing, not they is playing.",
-        "explanationIncorrect": "Use are with they: they are playing.",
         "options": [
           "are",
           "is"
-        ]
+        ],
+        "explanation": "Are is used with they because English uses are with plural subjects, such as we and they."
       }
     ]
   },
@@ -261,8 +240,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-01",
-        "explanationCorrect": "A cat is an animal, just like a dog.",
-        "explanationIncorrect": "Kucing means cat. A cat is an animal, not furniture."
+        "explanation": "Kucing means cat. A cat is an animal that has fur, whiskers and four legs."
       },
       {
         "type": "tf",
@@ -276,8 +254,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-02",
-        "explanationCorrect": "Bananas grow on plants and are eaten as fruit.",
-        "explanationIncorrect": "A banana is a fruit, not a vegetable."
+        "explanation": "Pisang means banana. A banana is a fruit that grows on a plant."
       },
       {
         "type": "drop",
@@ -295,8 +272,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-03",
-        "explanationCorrect": "A cup holds a drink.",
-        "explanationIncorrect": "We write with a pencil, but drink from a cup."
+        "explanation": "Cawan means cup. We use a cup to hold water or other drinks."
       },
       {
         "type": "mc",
@@ -318,8 +294,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-04",
-        "explanationCorrect": "Yellow is a colour we can see.",
-        "explanationIncorrect": "Kuning means yellow. The other choices name places or things."
+        "explanation": "Kuning means yellow. Yellow is a colour, like the colour of a ripe banana."
       },
       {
         "type": "tf",
@@ -333,8 +308,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-05",
-        "explanationCorrect": "A chicken is a bird, so it is an animal.",
-        "explanationIncorrect": "Chickens are animals, not plants."
+        "explanation": "Ayam means chicken. A chicken is a bird, which is a type of animal."
       },
       {
         "type": "drop",
@@ -352,8 +326,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-06",
-        "explanationCorrect": "A pencil makes marks on paper.",
-        "explanationIncorrect": "We write with a pencil, not a spoon."
+        "explanation": "Pensel means pencil. A pencil is used for writing and drawing on paper."
       },
       {
         "type": "mc",
@@ -375,8 +348,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-07",
-        "explanationCorrect": "Our nose helps us smell.",
-        "explanationIncorrect": "Hidung means nose. It is part of our body."
+        "explanation": "Hidung means nose. Your nose is a body part that helps you smell."
       },
       {
         "type": "tf",
@@ -390,8 +362,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-08",
-        "explanationCorrect": "Satu is the first number when counting.",
-        "explanationIncorrect": "Satu means one, so the statement is true."
+        "explanation": "Satu means one. It is the number we start with when counting."
       },
       {
         "type": "drop",
@@ -409,8 +380,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-09",
-        "explanationCorrect": "A bed is made for sleeping.",
-        "explanationIncorrect": "We sleep on a bed, not a bicycle."
+        "explanation": "Katil means bed. A bed is where we lie down to sleep."
       },
       {
         "type": "mc",
@@ -432,8 +402,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-VOC-001-10",
-        "explanationCorrect": "Children go to school to learn.",
-        "explanationIncorrect": "Sekolah means school. A market is for shopping, not lessons."
+        "explanation": "Sekolah means school. A school is where children go to learn new things."
       }
     ],
     "Tatabahasa": [
@@ -457,8 +426,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-01",
-        "explanationCorrect": "Saya tells us who is eating, before the action makan.",
-        "explanationIncorrect": "Start with who is eating, then what they are doing: Saya makan nasi."
+        "explanation": "Saya means I, makan means eat, and nasi means rice. This order tells us who is eating and what they eat."
       },
       {
         "type": "tf",
@@ -472,8 +440,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-02",
-        "explanationCorrect": "Saya is used when we talk about ourselves.",
-        "explanationIncorrect": "Saya means I, so the statement is true."
+        "explanation": "Saya means I. We use it when talking about ourselves."
       },
       {
         "type": "drop",
@@ -491,8 +458,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-03",
-        "explanationCorrect": "We read books, so membaca fits.",
-        "explanationIncorrect": "Membaca means read; minum means drink."
+        "explanation": "Membaca means read. It is the action we do when looking at the words in a book."
       },
       {
         "type": "mc",
@@ -514,8 +480,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-04",
-        "explanationCorrect": "Mereka refers to a group of people.",
-        "explanationIncorrect": "Mereka means they, not just one person."
+        "explanation": "Mereka means they. We use it when talking about a group of people."
       },
       {
         "type": "tf",
@@ -529,8 +494,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-05",
-        "explanationCorrect": "A question usually ends with a question mark.",
-        "explanationIncorrect": "A question ends with ?, so the statement is true."
+        "explanation": "An ayat tanya is a question. It usually ends with a question mark (?)."
       },
       {
         "type": "drop",
@@ -548,8 +512,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-06",
-        "explanationCorrect": "Merah tells us the colour of the shirt.",
-        "explanationIncorrect": "Merah means red; membaca means reading."
+        "explanation": "Merah means red. It describes the colour of the shirt."
       },
       {
         "type": "mc",
@@ -571,8 +534,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-07",
-        "explanationCorrect": "Bulat tells us the ball's shape.",
-        "explanationIncorrect": "A ball is round. Bulat means round."
+        "explanation": "Bulat means round. It describes the shape of the ball."
       },
       {
         "type": "tf",
@@ -586,8 +548,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-08",
-        "explanationCorrect": "Cantik describes how something looks.",
-        "explanationIncorrect": "Cantik means beautiful; it is not an action."
+        "explanation": "Cantik means beautiful. It is a describing word, called a kata adjektif."
       },
       {
         "type": "drop",
@@ -605,8 +566,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-09",
-        "explanationCorrect": "Di tells us where someone is.",
-        "explanationIncorrect": "Mum is cooking in the kitchen, not going to it."
+        "explanation": "Di means in, at or on. Here it tells us where Mum is cooking."
       },
       {
         "type": "mc",
@@ -628,8 +588,7 @@ const exerciseBank={
           ]
         },
         "id": "MAL-PM1-QUIZ-GRM-001-10",
-        "explanationCorrect": "Di manakah asks where something is.",
-        "explanationIncorrect": "This sentence asks where the bag is, so it ends with ?."
+        "explanation": "Di manakah means where. It is used to ask about the place of something."
       }
     ]
   },
@@ -655,8 +614,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-01",
-        "explanationCorrect": "Apples are fruits we can eat.",
-        "explanationIncorrect": "사과 means apple, which is a fruit, not furniture."
+        "explanation": "사과 means apple. An apple is a fruit that grows on a tree."
       },
       {
         "type": "tf",
@@ -670,8 +628,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-02",
-        "explanationCorrect": "A cat is an animal.",
-        "explanationIncorrect": "고양이 means cat, and cats are animals."
+        "explanation": "고양이 means cat. A cat is an animal with fur and whiskers."
       },
       {
         "type": "drop",
@@ -689,8 +646,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-03",
-        "explanationCorrect": "A cup holds water for drinking.",
-        "explanationIncorrect": "컵 means cup. We drink from a cup, not a book."
+        "explanation": "컵 means cup. We use a cup to hold water when drinking."
       },
       {
         "type": "mc",
@@ -712,8 +668,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-04",
-        "explanationCorrect": "Blue is a colour we can see.",
-        "explanationIncorrect": "파란색 means blue, not school or a bag."
+        "explanation": "파란색 means blue. Blue is a colour, like the colour of a clear sky."
       },
       {
         "type": "tf",
@@ -727,8 +682,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-05",
-        "explanationCorrect": "A desk is furniture we use for studying.",
-        "explanationIncorrect": "책상 means desk, which is not food."
+        "explanation": "책상 means desk. A desk is furniture where we can sit to study or write."
       },
       {
         "type": "drop",
@@ -746,8 +700,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-06",
-        "explanationCorrect": "A pencil helps us write.",
-        "explanationIncorrect": "연필 means pencil. An umbrella cannot be used for writing."
+        "explanation": "연필 means pencil. A pencil is used to write or draw on paper."
       },
       {
         "type": "mc",
@@ -769,8 +722,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-07",
-        "explanationCorrect": "A mother is part of a family.",
-        "explanationIncorrect": "엄마 means Mum, a family member."
+        "explanation": "엄마 means Mum. Your mum is a member of your family."
       },
       {
         "type": "tf",
@@ -784,8 +736,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-08",
-        "explanationCorrect": "하나 is used when counting one thing.",
-        "explanationIncorrect": "하나 means one, so the statement is true."
+        "explanation": "하나 means one. We use it when counting one thing."
       },
       {
         "type": "drop",
@@ -803,8 +754,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-09",
-        "explanationCorrect": "A coat keeps us warm in cold weather.",
-        "explanationIncorrect": "외투 means coat. A swimsuit is for swimming, not staying warm."
+        "explanation": "외투 means coat. A coat is a warm outer layer of clothing worn in cold weather."
       },
       {
         "type": "mc",
@@ -826,8 +776,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-VOC-001-10",
-        "explanationCorrect": "A hospital is a place people can visit.",
-        "explanationIncorrect": "병원 means hospital, which is a place."
+        "explanation": "병원 means hospital. A hospital is a place where people receive medical care."
       }
     ],
     "문법": [
@@ -851,8 +800,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-01",
-        "explanationCorrect": "학생 ends with a consonant, so we add 이에요.",
-        "explanationIncorrect": "We use 이에요 after 학생 because its last sound is a consonant."
+        "explanation": "저는 학생이에요 means I am a student. 학생 ends with a consonant sound, so we use 이에요."
       },
       {
         "type": "tf",
@@ -866,8 +814,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-02",
-        "explanationCorrect": "저는 is used when speaking politely about yourself.",
-        "explanationIncorrect": "저 means I, and 는 tells us we are talking about that person."
+        "explanation": "저 means I, and 는 marks who the sentence is about. 저는 is a polite way to start talking about yourself."
       },
       {
         "type": "drop",
@@ -885,8 +832,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-03",
-        "explanationCorrect": "에 shows the place someone is going to.",
-        "explanationIncorrect": "학교에 가요 means going to school. 에 marks the destination."
+        "explanation": "에 marks a destination. 학교에 가요 means going to school."
       },
       {
         "type": "mc",
@@ -908,8 +854,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-04",
-        "explanationCorrect": "책 ends with a consonant, so we add 이에요.",
-        "explanationIncorrect": "We say 책이에요 because 책 ends with a consonant sound."
+        "explanation": "책이에요 means it is a book. 책 ends with a consonant sound, so we add 이에요."
       },
       {
         "type": "tf",
@@ -923,8 +868,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-05",
-        "explanationCorrect": "있어요 tells us something is there.",
-        "explanationIncorrect": "사과가 있어요 means there are apples, not that they are missing."
+        "explanation": "있어요 means there is or there are. 사과가 있어요 means there are apples."
       },
       {
         "type": "drop",
@@ -942,8 +886,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-06",
-        "explanationCorrect": "가방 ends with a consonant, so we use 이.",
-        "explanationIncorrect": "We use 이 after 가방 because its last sound is a consonant."
+        "explanation": "가방 ends with a consonant sound, so we add 이 to mark it as the subject."
       },
       {
         "type": "mc",
@@ -965,8 +908,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-07",
-        "explanationCorrect": "어디에 가요? asks where someone is going.",
-        "explanationIncorrect": "This sentence asks a question, while the others make statements."
+        "explanation": "어디에 가요? means Where are you going? It is a question asking about a destination."
       },
       {
         "type": "tf",
@@ -980,8 +922,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-08",
-        "explanationCorrect": "에 shows that school is the destination.",
-        "explanationIncorrect": "학교에 가요 means going to school, so the statement is true."
+        "explanation": "학교에 가요 means going to school. The particle 에 shows the destination."
       },
       {
         "type": "drop",
@@ -999,8 +940,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-09",
-        "explanationCorrect": "저 ends with a vowel, so we add 는.",
-        "explanationIncorrect": "Use 는 after 저 because its last sound is a vowel."
+        "explanation": "저 ends with a vowel sound, so we add 는 to show who the sentence is about."
       },
       {
         "type": "mc",
@@ -1022,8 +962,7 @@ const exerciseBank={
           ]
         },
         "id": "KOR-PM2-QUIZ-GRM-001-10",
-        "explanationCorrect": "친구 ends with a vowel, so we add 가.",
-        "explanationIncorrect": "친구 ends in a vowel sound, so 가 is the right subject marker."
+        "explanation": "친구 ends with a vowel sound, so we add 가 to mark it as the subject."
       }
     ]
   },
@@ -1040,20 +979,18 @@ const exerciseBank={
         ],
         "correct": 1,
         "id": "MATH-PM3-QUIZ-U02-001-01",
-        "explanationCorrect": "Add the hundreds, tens and ones to get 605.",
-        "explanationIncorrect": "347 plus 258 gives 605, not 595 or 615."
+        "explanation": "347 + 258 = 605."
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 800 − 275 = ____.",
         "expected": "525",
         "id": "MATH-PM3-QUIZ-U02-001-02",
-        "explanationCorrect": "Subtract 275 from 800 to get 525.",
-        "explanationIncorrect": "800 minus 275 leaves 525.",
         "options": [
           "525",
           "535"
-        ]
+        ],
+        "explanation": "800 − 275 = 525."
       },
       {
         "type": "mc",
@@ -1066,36 +1003,32 @@ const exerciseBank={
         ],
         "correct": 2,
         "id": "MATH-PM3-QUIZ-U02-001-03",
-        "explanationCorrect": "Six groups of eight make 48.",
-        "explanationIncorrect": "6 times 8 is 48, not 42 or 56."
+        "explanation": "6 × 8 = 48."
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 63 ÷ 7 = ____.",
         "expected": "9",
         "id": "MATH-PM3-QUIZ-U02-001-04",
-        "explanationCorrect": "Seven groups of nine make 63.",
-        "explanationIncorrect": "63 divided into seven equal groups gives 9 in each group.",
         "options": [
           "9",
           "8"
-        ]
+        ],
+        "explanation": "63 ÷ 7 = 9."
       },
       {
         "type": "tf",
         "q": "450 + 125 = 575.",
         "expected": true,
         "id": "MATH-PM3-QUIZ-U02-001-05",
-        "explanationCorrect": "Adding 450 and 125 gives 575.",
-        "explanationIncorrect": "450 + 125 really does equal 575."
+        "explanation": "450 + 125 = 575."
       },
       {
         "type": "tf",
         "q": "900 − 450 = 550.",
         "expected": false,
         "id": "MATH-PM3-QUIZ-U02-001-06",
-        "explanationCorrect": "Subtracting 450 from 900 leaves 450.",
-        "explanationIncorrect": "900 minus 450 is 450, not 550."
+        "explanation": "900 − 450 = 450."
       },
       {
         "type": "mc",
@@ -1108,8 +1041,7 @@ const exerciseBank={
         ],
         "correct": 1,
         "id": "MATH-PM3-QUIZ-U02-001-07",
-        "explanationCorrect": "Eight boxes of seven pencils make 56.",
-        "explanationIncorrect": "Multiply 8 boxes by 7 pencils: 8 × 7 = 56."
+        "explanation": "8 × 7 = 56."
       },
       {
         "type": "mc",
@@ -1122,20 +1054,18 @@ const exerciseBank={
         ],
         "correct": 1,
         "id": "MATH-PM3-QUIZ-U02-001-08",
-        "explanationCorrect": "Nine groups of eight sweets make 72.",
-        "explanationIncorrect": "Sharing 72 equally among 9 children gives 8 each."
+        "explanation": "72 ÷ 9 = 8."
       },
       {
         "type": "drop",
         "q": "Fill in the blank: 4 × 9 = ____.",
         "expected": "36",
         "id": "MATH-PM3-QUIZ-U02-001-09",
-        "explanationCorrect": "Four groups of nine make 36.",
-        "explanationIncorrect": "4 multiplied by 9 gives 36.",
         "options": [
           "36",
           "32"
-        ]
+        ],
+        "explanation": "4 × 9 = 36."
       },
       {
         "type": "mc",
@@ -1148,8 +1078,7 @@ const exerciseBank={
         ],
         "correct": 2,
         "id": "MATH-PM3-QUIZ-U02-001-10",
-        "explanationCorrect": "The shop sold 400 stickers, leaving 600.",
-        "explanationIncorrect": "250 + 150 = 400 sold. 1,000 − 400 = 600 left."
+        "explanation": "1,000 − 250 − 150 = 600."
       }
     ]
   },
@@ -1166,16 +1095,14 @@ const exerciseBank={
           "Classifying"
         ],
         "correct": 0,
-        "explanationCorrect": "Observing means using our senses, like sight and hearing.",
-        "explanationIncorrect": "We use our senses to observe things around us."
+        "explanation": "Observing means using our senses, such as sight, hearing and touch, to learn about things."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-02",
         "type": "tf",
         "q": "Grouping leaves by their shapes is an example of classifying.",
         "expected": true,
-        "explanationCorrect": "Classifying means sorting things by what they have in common.",
-        "explanationIncorrect": "Grouping leaves by shape is classifying, so the statement is true."
+        "explanation": "Classifying means putting things into groups based on features they share, such as shape."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-03",
@@ -1186,8 +1113,7 @@ const exerciseBank={
           "stopwatch",
           "thermometer"
         ],
-        "explanationCorrect": "A stopwatch measures how much time has passed.",
-        "explanationIncorrect": "A stopwatch measures time; a thermometer measures temperature."
+        "explanation": "A stopwatch measures how much time has passed, such as the time taken to run a race."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-04",
@@ -1200,16 +1126,14 @@ const exerciseBank={
           "The plant has been moved to a bigger pot."
         ],
         "correct": 1,
-        "explanationCorrect": "Dry soil and drooping leaves suggest the plant needs water.",
-        "explanationIncorrect": "The dry soil is a clue that the plant has not had enough water."
+        "explanation": "Dry soil and drooping leaves are clues that a plant may need water."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-05",
         "type": "tf",
         "q": "A prediction describes only what has already happened.",
         "expected": false,
-        "explanationCorrect": "A prediction says what might happen next.",
-        "explanationIncorrect": "A prediction is about what may happen, not only what already happened."
+        "explanation": "A prediction tells us what we think might happen next."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-06",
@@ -1220,8 +1144,7 @@ const exerciseBank={
           "share",
           "hide"
         ],
-        "explanationCorrect": "Bar charts help other people understand results.",
-        "explanationIncorrect": "We share experiment results with a chart, not hide them."
+        "explanation": "A bar chart helps us show and share the results of an experiment."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-07",
@@ -1234,16 +1157,14 @@ const exerciseBank={
           "At the ruler's midpoint"
         ],
         "correct": 2,
-        "explanationCorrect": "We start from zero so the length is measured correctly.",
-        "explanationIncorrect": "Put the pencil's end at zero on the ruler."
+        "explanation": "Starting at the zero mark helps us measure the full length of an object."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-08",
         "type": "tf",
         "q": "Looking straight at a ruler's markings helps us read a measurement correctly.",
         "expected": true,
-        "explanationCorrect": "Looking straight at the ruler helps us read it accurately.",
-        "explanationIncorrect": "Reading at eye level helps prevent mistakes."
+        "explanation": "Looking straight at the ruler helps us read its markings accurately."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-09",
@@ -1254,8 +1175,7 @@ const exerciseBank={
           "labels",
           "decorations"
         ],
-        "explanationCorrect": "Labels tell us which part is which.",
-        "explanationIncorrect": "Labels help readers understand a science drawing."
+        "explanation": "Labels name the parts of a science drawing so others can understand it."
       },
       {
         "id": "SCI-PM3-QUIZ-U01-001-10",
@@ -1268,8 +1188,7 @@ const exerciseBank={
           "Clean and dry it"
         ],
         "correct": 3,
-        "explanationCorrect": "Clean and dry equipment before putting it away.",
-        "explanationIncorrect": "A wet or dirty beaker should be cleaned and dried before storage."
+        "explanation": "Cleaning and drying a beaker helps keep it ready and safe for its next use."
       }
     ]
   }
