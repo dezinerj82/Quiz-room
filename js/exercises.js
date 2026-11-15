@@ -452,110 +452,7 @@ const exerciseBank={
       }
     ]
   },
-  "Math": {
-    "Basic Operations": [
-      {
-        "type": "mc",
-        "q": "What is 347 + 258?",
-        "options": [
-          "595",
-          "605",
-          "615",
-          "705"
-        ],
-        "correct": 1,
-        "explanation": "347 + 258 = 605.",
-        "id": "MATH-PM3-PRACTICE-001-01"
-      },
-      {
-        "type": "mc",
-        "q": "A shop has 1,000 stickers. It sells 250 in the morning and 150 in the afternoon. How many are left?",
-        "options": [
-          "500",
-          "550",
-          "600",
-          "650"
-        ],
-        "correct": 2,
-        "explanation": "1,000 − 250 − 150 = 600.",
-        "id": "MATH-PM3-PRACTICE-001-02"
-      },
-      {
-        "type": "mc",
-        "q": "There are 8 boxes with 7 pencils in each box. How many pencils are there?",
-        "options": [
-          "54",
-          "56",
-          "63",
-          "64"
-        ],
-        "correct": 1,
-        "explanation": "8 × 7 = 56.",
-        "id": "MATH-PM3-PRACTICE-001-03"
-      },
-      {
-        "type": "tf",
-        "q": "450 + 125 = 575.",
-        "expected": true,
-        "explanation": "450 + 125 = 575.",
-        "id": "MATH-PM3-PRACTICE-001-04"
-      },
-      {
-        "type": "tf",
-        "q": "900 − 450 = 550.",
-        "expected": false,
-        "explanation": "900 − 450 = 450.",
-        "id": "MATH-PM3-PRACTICE-001-05"
-      },
-      {
-        "type": "text",
-        "q": "Fill in the blank: 63 ÷ 7 = ____.",
-        "expected": "9",
-        "explanation": "63 ÷ 7 = 9.",
-        "id": "MATH-PM3-PRACTICE-001-06"
-      },
-      {
-        "type": "text",
-        "q": "Fill in the blank: 800 − 275 = ____.",
-        "expected": "525",
-        "explanation": "800 − 275 = 525.",
-        "id": "MATH-PM3-PRACTICE-001-07"
-      },
-      {
-        "type": "drop",
-        "q": "Fill in the blank: 4 × 9 = ____.",
-        "expected": "36",
-        "options": [
-          "36",
-          "32"
-        ],
-        "explanation": "4 × 9 = 36.",
-        "id": "MATH-PM3-PRACTICE-001-08"
-      },
-      {
-        "type": "drop",
-        "q": "Fill in the blank: Half of 18 is ____.",
-        "expected": "9",
-        "options": [
-          "9",
-          "8"
-        ],
-        "explanation": "18 ÷ 2 = 9.",
-        "id": "MATH-PM3-PRACTICE-001-09"
-      },
-      {
-        "type": "drop",
-        "q": "Fill in the blank: RM10.00 − RM4.75 = RM____.",
-        "expected": "5.25",
-        "options": [
-          "5.25",
-          "5.75"
-        ],
-        "explanation": "RM10.00 − RM4.75 = RM5.25.",
-        "id": "MATH-PM3-PRACTICE-001-10"
-      }
-    ]
-  },
+  "Math": {},
   "Science": {
     "Scientific Skills": [
       {
@@ -661,5 +558,76 @@ const exerciseBank={
     ]
   }
 };
-/* No formula-entry sets are active. */
-const formulaBank={Math:{}};
+/* Equation-form multiplication, with the blank randomized for each attempt. */
+const formulaBank={Math:{"Basic Operations (Multiply)":[
+  {
+    "id": "MATH-PM3-MULTIPLY-001-01",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 2,
+    "b": 3
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-02",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 3,
+    "b": 5
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-03",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 7,
+    "b": 2
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-04",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 4,
+    "b": 6
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-05",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 8,
+    "b": 4
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-06",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 5,
+    "b": 9
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-07",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 6,
+    "b": 7
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-08",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 9,
+    "b": 8
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-09",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 4,
+    "b": 7
+  },
+  {
+    "id": "MATH-PM3-MULTIPLY-001-10",
+    "type": "equation",
+    "operation": "multiply",
+    "a": 6,
+    "b": 6
+  }
+]}};
