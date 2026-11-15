@@ -1707,11 +1707,22 @@ function submitAnswer(){
   let feedback=document.createElement('span');feedback.className='inline-feedback '+(correct?'feedback-correct':'feedback-wrong');feedback.setAttribute('role','status');
   let symbol=document.createElement('span');symbol.className='feedback-symbol';symbol.textContent=correct?'✓':'✕';
   let explanation=document.createElement('span');explanation.className='feedback-explanation';
-  const heading=document.createElement('strong');heading.textContent=correct?'Correct! ':'Wrong! ';
-  const answerText=q.type==='mc'?q.options[q.correct]:q.type==='tf'?(q.expected?'True':'False'):q.expected;
-  const answerLabel=document.createElement('strong');answerLabel.textContent=String(answerText)+(/[.!?]$/.test(String(answerText))?'':'.');
-  const message=(correct?q.explanationCorrect:q.explanationIncorrect)||q.explanation||'';
-  explanation.append(heading,document.createTextNode('The answer is '),answerLabel,document.createTextNode(message?' '+message:''));
+  const answerText=String(q.type==='mc'?q.options[q.correct]:q.type==='tf'?(q.expected?'True':'False'):q.expected);
+  const message=q.explanation||(correct?q.explanationCorrect:q.explanationIncorrect)||'';
+  const answerLabel=document.createElement('strong');answerLabel.textContent=answerText;
+  if(!correct){
+   explanation.append(document.createTextNode('The answer is '),answerLabel,document.createTextNode(/[.!?]$/.test(answerText)?' ':'. '));
+   explanation.append(document.createTextNode(message));
+  }else{
+   const match=message.toLowerCase().indexOf(answerText.toLowerCase());
+   if(match>=0){
+    explanation.append(document.createTextNode(message.slice(0,match)));
+    const highlighted=document.createElement('strong');highlighted.textContent=message.slice(match,match+answerText.length);
+    explanation.append(highlighted,document.createTextNode(message.slice(match+answerText.length)));
+   }else{
+    explanation.append(answerLabel,document.createTextNode(/[.!?]$/.test(answerText)?' ':'. '),document.createTextNode(message));
+   }
+  }
   feedback.append(symbol,explanation);
   $('answerFeedback').appendChild(feedback);$('answerFeedback').classList.remove('hidden');
  }
