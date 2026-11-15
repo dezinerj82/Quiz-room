@@ -216,6 +216,870 @@ const exerciseBank={
         ],
         "explanation": "Are is used with they because English uses are with plural subjects, such as we and they."
       }
+    ],
+    "Daily Routines": [
+      {
+        "type": "mc",
+        "q": "Which activity do people usually do before going to school?",
+        "options": [
+          "Go to bed",
+          "Eat breakfast",
+          "Have dinner",
+          "Watch the sunset"
+        ],
+        "correct": 1,
+        "explanation": "Breakfast is usually eaten in the morning, before school.",
+        "id": "ENG-PM3-QUIZ-T01-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank with the correct verb: I ____ my teeth every morning. (brush / brushes)",
+        "expected": "brush",
+        "explanation": "With I, we use brush to describe an everyday habit.",
+        "id": "ENG-PM3-QUIZ-T01-001-02",
+        "options": [
+          "brush",
+          "brushes"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'daily' means happening every day.",
+        "expected": true,
+        "explanation": "Daily means every day.",
+        "id": "ENG-PM3-QUIZ-T01-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence describes a habit?",
+        "options": [
+          "I am swimming now.",
+          "I played yesterday.",
+          "I walk to school every day.",
+          "I will travel tomorrow."
+        ],
+        "correct": 2,
+        "explanation": "The present simple describes a regular habit.",
+        "id": "ENG-PM3-QUIZ-T01-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: She ____ up at seven every morning. (wake / wakes)",
+        "expected": "wakes",
+        "explanation": "The verb takes -s with she.",
+        "id": "ENG-PM3-QUIZ-T01-001-05",
+        "options": [
+          "wakes",
+          "wake"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which phrase tells us how often something happens?",
+        "options": [
+          "Last night",
+          "Every Monday",
+          "Next year",
+          "At this moment"
+        ],
+        "correct": 1,
+        "explanation": "Every Monday describes a repeated routine.",
+        "id": "ENG-PM3-QUIZ-T01-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "In the sentence 'He goes to school by bus', 'goes' describes a regular action.",
+        "expected": true,
+        "explanation": "The present simple can describe routines.",
+        "id": "ENG-PM3-QUIZ-T01-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence correctly describes something your brother does every day?",
+        "options": [
+          "My brother play football daily.",
+          "My brother plays football daily.",
+          "My brother playing football daily.",
+          "My brother played football daily tomorrow."
+        ],
+        "correct": 1,
+        "explanation": "He or my brother takes plays in the present simple.",
+        "id": "ENG-PM3-QUIZ-T01-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: We usually eat lunch at ____. (noon / midnight)",
+        "expected": "noon",
+        "explanation": "Noon is twelve o'clock in the middle of the day.",
+        "id": "ENG-PM3-QUIZ-T01-001-09",
+        "options": [
+          "noon",
+          "midnight"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The sentence 'I goes to school' uses the correct verb form.",
+        "expected": false,
+        "explanation": "With I, use go: I go to school.",
+        "id": "ENG-PM3-QUIZ-T01-001-10"
+      }
+    ],
+    "Actions Happening Now": [
+      {
+        "type": "mc",
+        "q": "Which sentence shows something happening right now?",
+        "options": [
+          "She reads every Sunday.",
+          "She is reading now.",
+          "She read yesterday.",
+          "She will read tomorrow."
+        ],
+        "correct": 1,
+        "explanation": "Is reading describes an action in progress.",
+        "id": "ENG-PM3-QUIZ-T02-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The children ____ playing outside now. (is / are)",
+        "expected": "are",
+        "explanation": "Children means more than one child, so we use are with it.",
+        "id": "ENG-PM3-QUIZ-T02-001-02",
+        "options": [
+          "are",
+          "is"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "In 'He is running', the action is happening now.",
+        "expected": true,
+        "explanation": "Is running is in the present continuous.",
+        "id": "ENG-PM3-QUIZ-T02-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence correctly uses 'am' to describe an action happening now?",
+        "options": [
+          "I am eating lunch.",
+          "I is eating lunch.",
+          "I are eating lunch.",
+          "I be eating lunch."
+        ],
+        "correct": 0,
+        "explanation": "Am goes with I when describing an action happening now.",
+        "id": "ENG-PM3-QUIZ-T02-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The baby is ____. (sleep / sleeping)",
+        "expected": "sleeping",
+        "explanation": "The present continuous uses the -ing form.",
+        "id": "ENG-PM3-QUIZ-T02-001-05",
+        "options": [
+          "sleeping",
+          "sleep"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which word correctly completes 'She is ____ a picture'?",
+        "options": [
+          "draw",
+          "draws",
+          "drawing",
+          "drew"
+        ],
+        "correct": 2,
+        "explanation": "Is drawing is the present continuous form.",
+        "id": "ENG-PM3-QUIZ-T02-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "The sentence 'They are swim in the pool' is grammatically correct.",
+        "expected": false,
+        "explanation": "It should be They are swimming in the pool.",
+        "id": "ENG-PM3-QUIZ-T02-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which question correctly asks what someone is doing right now?",
+        "options": [
+          "What you are doing?",
+          "What are you doing?",
+          "What did you do yesterday?",
+          "What do you usually do?"
+        ],
+        "correct": 1,
+        "explanation": "'What are you doing?' correctly asks about an action happening now.",
+        "id": "ENG-PM3-QUIZ-T02-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: I ____ doing my homework right now. (am / is)",
+        "expected": "am",
+        "explanation": "Am goes with I when describing an action happening now.",
+        "id": "ENG-PM3-QUIZ-T02-001-09",
+        "options": [
+          "am",
+          "is"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "In 'We are dancing', the word 'are' is a helping verb.",
+        "expected": true,
+        "explanation": "Are helps form the present continuous tense.",
+        "id": "ENG-PM3-QUIZ-T02-001-10"
+      }
+    ],
+    "Months and Weather": [
+      {
+        "type": "mc",
+        "q": "Which month comes after April?",
+        "options": [
+          "March",
+          "May",
+          "June",
+          "July"
+        ],
+        "correct": 1,
+        "explanation": "May follows April.",
+        "id": "ENG-PM3-QUIZ-T03-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: There are ____ months in a year. (12 / 10)",
+        "expected": "12",
+        "explanation": "A year has twelve months.",
+        "id": "ENG-PM3-QUIZ-T03-001-02",
+        "options": [
+          "12",
+          "10"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "December comes before November.",
+        "expected": false,
+        "explanation": "November comes before December.",
+        "id": "ENG-PM3-QUIZ-T03-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "What would you most likely use on a rainy day?",
+        "options": [
+          "An umbrella",
+          "Sunglasses",
+          "A fan",
+          "A swimsuit"
+        ],
+        "correct": 0,
+        "explanation": "An umbrella helps keep you dry in the rain.",
+        "id": "ENG-PM3-QUIZ-T03-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: January is the ____ month of the year. (first / last)",
+        "expected": "first",
+        "explanation": "January is month one.",
+        "id": "ENG-PM3-QUIZ-T03-001-05",
+        "options": [
+          "first",
+          "last"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which word describes a day with a gentle wind?",
+        "options": [
+          "Breezy",
+          "Silent",
+          "Dry",
+          "Dark"
+        ],
+        "correct": 0,
+        "explanation": "Breezy means that a gentle wind is blowing.",
+        "id": "ENG-PM3-QUIZ-T03-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "The word 'cloudy' describes a sky with many clouds.",
+        "expected": true,
+        "explanation": "Cloudy means covered with or having many clouds.",
+        "id": "ENG-PM3-QUIZ-T03-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence correctly describes rainy weather today?",
+        "options": [
+          "It raining today.",
+          "It is raining today.",
+          "It are raining today.",
+          "It rain today now."
+        ],
+        "correct": 1,
+        "explanation": "It is raining is the correct present continuous sentence.",
+        "id": "ENG-PM3-QUIZ-T03-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The month after August is ____. (September / July)",
+        "expected": "September",
+        "explanation": "September comes immediately after August.",
+        "id": "ENG-PM3-QUIZ-T03-001-09",
+        "options": [
+          "September",
+          "July"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "February is always the longest month of the year.",
+        "expected": false,
+        "explanation": "February has fewer days than the other months.",
+        "id": "ENG-PM3-QUIZ-T03-001-10"
+      }
+    ],
+    "My Home": [
+      {
+        "type": "mc",
+        "q": "Where would you usually prepare a meal?",
+        "options": [
+          "Bathroom",
+          "Kitchen",
+          "Bedroom",
+          "Garage"
+        ],
+        "correct": 1,
+        "explanation": "Meals are commonly prepared in the kitchen.",
+        "id": "ENG-PM3-QUIZ-T04-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: There ____ two windows in this room. (is / are)",
+        "expected": "are",
+        "explanation": "Two windows means more than one, so we use are.",
+        "id": "ENG-PM3-QUIZ-T04-001-02",
+        "options": [
+          "are",
+          "is"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'furniture' includes chairs and tables.",
+        "expected": true,
+        "explanation": "Chairs and tables are furniture.",
+        "id": "ENG-PM3-QUIZ-T04-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence describes an object's position?",
+        "options": [
+          "The room is clean.",
+          "The bag is under the table.",
+          "The door is blue.",
+          "The chair is wooden."
+        ],
+        "correct": 1,
+        "explanation": "Under the table describes a position.",
+        "id": "ENG-PM3-QUIZ-T04-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The cat is ____ the box, not outside it. (inside / above)",
+        "expected": "inside",
+        "explanation": "Inside means within the box.",
+        "id": "ENG-PM3-QUIZ-T04-001-05",
+        "options": [
+          "inside",
+          "above"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which word means the opposite of 'upstairs'?",
+        "options": [
+          "Outside",
+          "Downstairs",
+          "Inside",
+          "Nearby"
+        ],
+        "correct": 1,
+        "explanation": "Downstairs refers to a lower floor.",
+        "id": "ENG-PM3-QUIZ-T04-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "In 'The lamp is beside the sofa', 'beside' tells us the lamp's position.",
+        "expected": true,
+        "explanation": "Beside means next to.",
+        "id": "ENG-PM3-QUIZ-T04-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Choose the grammatically correct sentence.",
+        "options": [
+          "There is three chairs.",
+          "There are three chairs.",
+          "There am three chairs.",
+          "There be three chairs."
+        ],
+        "correct": 1,
+        "explanation": "There are is used when talking about more than one chair.",
+        "id": "ENG-PM3-QUIZ-T04-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A person usually sleeps in a ____. (bed / sink)",
+        "expected": "bed",
+        "explanation": "A bed is used for sleeping.",
+        "id": "ENG-PM3-QUIZ-T04-001-09",
+        "options": [
+          "bed",
+          "sink"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'behind' means the same as 'in front of'.",
+        "expected": false,
+        "explanation": "Behind refers to the back of something.",
+        "id": "ENG-PM3-QUIZ-T04-001-10"
+      }
+    ],
+    "Food and Meals": [
+      {
+        "type": "mc",
+        "q": "Which food is a fruit?",
+        "options": [
+          "Carrot",
+          "Apple",
+          "Rice",
+          "Bread"
+        ],
+        "correct": 1,
+        "explanation": "An apple is a fruit.",
+        "id": "ENG-PM3-QUIZ-T05-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: I would like ____ orange. (a / an)",
+        "expected": "an",
+        "explanation": "Orange begins with a vowel sound, so use an.",
+        "id": "ENG-PM3-QUIZ-T05-001-02",
+        "options": [
+          "an",
+          "a"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "We use 'some' with plural nouns, as in 'some apples'.",
+        "expected": true,
+        "explanation": "Some can be used with plural countable nouns.",
+        "id": "ENG-PM3-QUIZ-T05-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence correctly uses 'a' before a food name?",
+        "options": [
+          "I have an banana.",
+          "I have a banana.",
+          "I has a banana.",
+          "I having a banana."
+        ],
+        "correct": 1,
+        "explanation": "Banana begins with a consonant sound, so use a.",
+        "id": "ENG-PM3-QUIZ-T05-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: She drinks a glass of ____. (water / plate)",
+        "expected": "water",
+        "explanation": "Water is a liquid that we drink.",
+        "id": "ENG-PM3-QUIZ-T05-001-05",
+        "options": [
+          "water",
+          "plate"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which food is made mainly from milk?",
+        "options": [
+          "Cheese",
+          "Carrot",
+          "Rice",
+          "Apple"
+        ],
+        "correct": 0,
+        "explanation": "Cheese is made from milk.",
+        "id": "ENG-PM3-QUIZ-T05-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "The phrase 'two breads' is the usual way to count two slices of bread.",
+        "expected": false,
+        "explanation": "Say two slices of bread.",
+        "id": "ENG-PM3-QUIZ-T05-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "What is the plural of 'tomato'?",
+        "options": [
+          "Tomatos",
+          "Tomatoes",
+          "Tomato's",
+          "Tomatoies"
+        ],
+        "correct": 1,
+        "explanation": "Tomato becomes tomatoes in the plural.",
+        "id": "ENG-PM3-QUIZ-T05-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The soup is very ____. (hot / loudly)",
+        "expected": "hot",
+        "explanation": "Hot is an adjective describing the soup's temperature.",
+        "id": "ENG-PM3-QUIZ-T05-001-09",
+        "options": [
+          "hot",
+          "loudly"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "A recipe gives instructions for preparing food.",
+        "expected": true,
+        "explanation": "A recipe lists ingredients and steps for cooking.",
+        "id": "ENG-PM3-QUIZ-T05-001-10"
+      }
+    ],
+    "Around Town": [
+      {
+        "type": "mc",
+        "q": "Where can someone borrow books?",
+        "options": [
+          "Library",
+          "Hospital",
+          "Bank",
+          "Restaurant"
+        ],
+        "correct": 0,
+        "explanation": "Libraries lend books.",
+        "id": "ENG-PM3-QUIZ-T06-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: The doctor works at a ____. (hospital / cinema)",
+        "expected": "hospital",
+        "explanation": "Doctors commonly work in hospitals.",
+        "id": "ENG-PM3-QUIZ-T06-001-02",
+        "options": [
+          "hospital",
+          "cinema"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "A pedestrian is a person who travels on foot.",
+        "expected": true,
+        "explanation": "A pedestrian walks.",
+        "id": "ENG-PM3-QUIZ-T06-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which place is used to send letters and parcels?",
+        "options": [
+          "Post office",
+          "Swimming pool",
+          "Museum",
+          "Playground"
+        ],
+        "correct": 0,
+        "explanation": "A post office handles mail and parcels.",
+        "id": "ENG-PM3-QUIZ-T06-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: We wait for the bus at the bus ____. (stop / shop)",
+        "expected": "stop",
+        "explanation": "The place where buses pick up passengers is a bus stop.",
+        "id": "ENG-PM3-QUIZ-T06-001-05",
+        "options": [
+          "stop",
+          "shop"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which instruction tells you to turn in a direction?",
+        "options": [
+          "Go left",
+          "Eat lunch",
+          "Read silently",
+          "Wake up"
+        ],
+        "correct": 0,
+        "explanation": "Go left tells you to change direction.",
+        "id": "ENG-PM3-QUIZ-T06-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "A zebra crossing is a marked place where pedestrians can cross the road.",
+        "expected": true,
+        "explanation": "Zebra crossings are marked for pedestrians.",
+        "id": "ENG-PM3-QUIZ-T06-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which is the correct sentence?",
+        "options": [
+          "The shop is next to the bank.",
+          "The shop next the bank.",
+          "The shop are next the bank.",
+          "The shop beside of bank."
+        ],
+        "correct": 0,
+        "explanation": "Next to is a correct phrase for position.",
+        "id": "ENG-PM3-QUIZ-T06-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Stop when the traffic light is ____. (red / green)",
+        "expected": "red",
+        "explanation": "A red traffic light means stop.",
+        "id": "ENG-PM3-QUIZ-T06-001-09",
+        "options": [
+          "red",
+          "green"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'opposite' can mean across from another place.",
+        "expected": true,
+        "explanation": "Opposite describes something on the other side.",
+        "id": "ENG-PM3-QUIZ-T06-001-10"
+      }
+    ],
+    "Yesterday and the Past": [
+      {
+        "type": "mc",
+        "q": "What is the past tense of 'eat'?",
+        "options": [
+          "Eated",
+          "Ate",
+          "Eating",
+          "Eats"
+        ],
+        "correct": 1,
+        "explanation": "Ate is the past tense of eat.",
+        "id": "ENG-PM3-QUIZ-T07-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Yesterday, we ____ football. (played / play)",
+        "expected": "played",
+        "explanation": "Yesterday indicates a completed action in the past.",
+        "id": "ENG-PM3-QUIZ-T07-001-02",
+        "options": [
+          "played",
+          "play"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'built' is the past tense of 'build'.",
+        "expected": true,
+        "explanation": "Built is the irregular past tense of build.",
+        "id": "ENG-PM3-QUIZ-T07-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which sentence correctly tells us about a visit that happened yesterday?",
+        "options": [
+          "She visit her aunt yesterday.",
+          "She visited her aunt yesterday.",
+          "She visiting her aunt yesterday.",
+          "She visits her aunt yesterday tomorrow."
+        ],
+        "correct": 1,
+        "explanation": "Visited is the past-tense verb.",
+        "id": "ENG-PM3-QUIZ-T07-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Last night, I ____ a storybook. (read / reads)",
+        "expected": "read",
+        "explanation": "The past tense of read is spelled read.",
+        "id": "ENG-PM3-QUIZ-T07-001-05",
+        "options": [
+          "read",
+          "reads"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which is the past tense of 'buy'?",
+        "options": [
+          "Buyed",
+          "Bought",
+          "Buying",
+          "Buys"
+        ],
+        "correct": 1,
+        "explanation": "Bought is the past tense of buy.",
+        "id": "ENG-PM3-QUIZ-T07-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "In the sentence 'He was happy yesterday', 'was' is in the past tense.",
+        "expected": true,
+        "explanation": "Was is a past-tense form of be.",
+        "id": "ENG-PM3-QUIZ-T07-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which word is the past tense of 'see'?",
+        "options": [
+          "Saw",
+          "Seen",
+          "Seeing",
+          "Sees"
+        ],
+        "correct": 0,
+        "explanation": "Saw is the simple past form of see.",
+        "id": "ENG-PM3-QUIZ-T07-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: They ____ at home yesterday. (were / was)",
+        "expected": "were",
+        "explanation": "Were is the past form of are when used with they.",
+        "id": "ENG-PM3-QUIZ-T07-001-09",
+        "options": [
+          "were",
+          "was"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The sentence 'I goed to the park' uses the correct past tense.",
+        "expected": false,
+        "explanation": "Went is the past tense of go, used for something that already happened.",
+        "id": "ENG-PM3-QUIZ-T07-001-10"
+      }
+    ],
+    "Nature and Animals": [
+      {
+        "type": "mc",
+        "q": "Which animal is a mammal?",
+        "options": [
+          "Frog",
+          "Butterfly",
+          "Dolphin",
+          "Lizard"
+        ],
+        "correct": 2,
+        "explanation": "Dolphins are mammals.",
+        "id": "ENG-PM3-QUIZ-T09-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A young cat is called a ____. (kitten / puppy)",
+        "expected": "kitten",
+        "explanation": "A kitten is a young cat.",
+        "id": "ENG-PM3-QUIZ-T09-001-02",
+        "options": [
+          "kitten",
+          "puppy"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "A butterfly has six legs.",
+        "expected": true,
+        "explanation": "Butterflies are insects, and adult insects have six legs.",
+        "id": "ENG-PM3-QUIZ-T09-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "Which part of a plant usually absorbs water from the soil?",
+        "options": [
+          "Flower",
+          "Leaf",
+          "Root",
+          "Fruit"
+        ],
+        "correct": 2,
+        "explanation": "Roots absorb water from the soil.",
+        "id": "ENG-PM3-QUIZ-T09-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Birds use their ____ to fly. (wings / fins)",
+        "expected": "wings",
+        "explanation": "Birds fly using wings.",
+        "id": "ENG-PM3-QUIZ-T09-001-05",
+        "options": [
+          "wings",
+          "fins"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which habitat is home to many fish?",
+        "options": [
+          "Ocean",
+          "Desert",
+          "Mountain peak",
+          "Grassland"
+        ],
+        "correct": 0,
+        "explanation": "The ocean is an aquatic habitat.",
+        "id": "ENG-PM3-QUIZ-T09-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "The word 'nocturnal' describes animals that are active mainly at night.",
+        "expected": true,
+        "explanation": "Nocturnal animals are mainly active at night.",
+        "id": "ENG-PM3-QUIZ-T09-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which word is an adjective in 'The tall tree gives shade'?",
+        "options": [
+          "Tree",
+          "Gives",
+          "Tall",
+          "Shade"
+        ],
+        "correct": 2,
+        "explanation": "Tall describes the noun tree.",
+        "id": "ENG-PM3-QUIZ-T09-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A plant needs water and ____ to grow well. (light / plastic)",
+        "expected": "light",
+        "explanation": "Plants generally need light to grow.",
+        "id": "ENG-PM3-QUIZ-T09-001-09",
+        "options": [
+          "light",
+          "plastic"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "The word 'habitat' means an animal's natural home.",
+        "expected": true,
+        "explanation": "A habitat is the place an organism naturally lives.",
+        "id": "ENG-PM3-QUIZ-T09-001-10"
+      }
     ]
   },
   "Malay": {
@@ -589,6 +1453,1494 @@ const exerciseBank={
         },
         "id": "MAL-PM1-QUIZ-GRM-001-10",
         "explanation": "Di manakah means where. It is used to ask about the place of something."
+      }
+    ],
+    "Keluarga dan Rakan": [
+      {
+        "type": "mc",
+        "q": "Siapakah ibu kepada ayah kita?",
+        "options": [
+          "Nenek",
+          "Kakak",
+          "Mak cik",
+          "Adik"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Who is our father's mother?",
+          "options": [
+            "Grandmother",
+            "Older sister",
+            "Aunt",
+            "Younger sibling"
+          ]
+        },
+        "explanation": "Your father's mother is your grandmother.",
+        "id": "MAL-PM3-QUIZ-VOC-002-01"
+      },
+      {
+        "type": "tf",
+        "q": "Abang ialah saudara lelaki yang lebih tua.",
+        "expected": true,
+        "translation": {
+          "question": "Abang is an older brother.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Abang is a brother who is older than you.",
+        "id": "MAL-PM3-QUIZ-VOC-002-02"
+      },
+      {
+        "type": "drop",
+        "q": "Saya bermain dengan ____ di taman.",
+        "expected": "kawan",
+        "options": [
+          "kawan",
+          "nenek"
+        ],
+        "translation": {
+          "question": "I play with my ____ at the park.",
+          "options": [
+            "Friend",
+            "Grandmother"
+          ]
+        },
+        "explanation": "A friend is someone you can play with.",
+        "id": "MAL-PM3-QUIZ-VOC-002-03"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah panggilan untuk saudara perempuan yang lebih muda?",
+        "options": [
+          "Kakak",
+          "Adik perempuan",
+          "Ibu",
+          "Nenek"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "What do we call a younger sister?",
+          "options": [
+            "Older sister",
+            "Younger sister",
+            "Mother",
+            "Grandmother"
+          ]
+        },
+        "explanation": "Adik perempuan is a sister younger than you.",
+        "id": "MAL-PM3-QUIZ-VOC-002-04"
+      },
+      {
+        "type": "tf",
+        "q": "Datuk ialah bapa kepada ibu atau ayah kita.",
+        "expected": true,
+        "translation": {
+          "question": "Datuk is the father of our mother or father.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Your parent's father is your grandfather.",
+        "id": "MAL-PM3-QUIZ-VOC-002-05"
+      },
+      {
+        "type": "drop",
+        "q": "Bapa saya juga dipanggil ____.",
+        "expected": "ayah",
+        "options": [
+          "ayah",
+          "cucu"
+        ],
+        "translation": {
+          "question": "My father is also called ____.",
+          "options": [
+            "Dad",
+            "Grandchild"
+          ]
+        },
+        "explanation": "Ayah is another word for Dad.",
+        "id": "MAL-PM3-QUIZ-VOC-002-06"
+      },
+      {
+        "type": "mc",
+        "q": "Siapakah anak kepada anak kita?",
+        "options": [
+          "Cucu",
+          "Sepupu",
+          "Pak cik",
+          "Kakak"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Who is our child's child?",
+          "options": [
+            "Grandchild",
+            "Cousin",
+            "Uncle",
+            "Older sister"
+          ]
+        },
+        "explanation": "Your child's child is your grandchild.",
+        "id": "MAL-PM3-QUIZ-VOC-002-07"
+      },
+      {
+        "type": "tf",
+        "q": "Sepupu ialah anak kepada datuk atau nenek kita.",
+        "expected": false,
+        "translation": {
+          "question": "A cousin is the child of our grandfather or grandmother.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Your cousin is your aunt's or uncle's child.",
+        "id": "MAL-PM3-QUIZ-VOC-002-08"
+      },
+      {
+        "type": "drop",
+        "q": "Kakak saya ialah saudara ____ yang lebih tua.",
+        "expected": "perempuan",
+        "options": [
+          "perempuan",
+          "lelaki"
+        ],
+        "translation": {
+          "question": "My older sister is an older ____ sibling.",
+          "options": [
+            "Female",
+            "Male"
+          ]
+        },
+        "explanation": "Kakak is a sister who is older than you.",
+        "id": "MAL-PM3-QUIZ-VOC-002-09"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah panggilan untuk anak kepada pak cik kita?",
+        "options": [
+          "Cucu",
+          "Sepupu",
+          "Nenek",
+          "Ibu"
+        ],
+        "correct": 1,
+        "translation": {
+          "question": "What do we call our uncle's child?",
+          "options": [
+            "Grandchild",
+            "Cousin",
+            "Grandmother",
+            "Mother"
+          ]
+        },
+        "explanation": "Your uncle's child is your cousin.",
+        "id": "MAL-PM3-QUIZ-VOC-002-10"
+      }
+    ],
+    "Makanan dan Minuman": [
+      {
+        "type": "mc",
+        "q": "Yang manakah makanan yang dibuat daripada susu?",
+        "options": [
+          "Keju",
+          "Roti",
+          "Nasi",
+          "Mi"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which food is made from milk?",
+          "options": [
+            "Cheese",
+            "Bread",
+            "Rice",
+            "Noodles"
+          ]
+        },
+        "explanation": "Milk is used to make cheese.",
+        "id": "MAL-PM3-QUIZ-VOC-003-01"
+      },
+      {
+        "type": "tf",
+        "q": "Air kosong ialah minuman tanpa gula tambahan.",
+        "expected": true,
+        "translation": {
+          "question": "Plain water is a drink without added sugar.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Plain water has no added sugar.",
+        "id": "MAL-PM3-QUIZ-VOC-003-02"
+      },
+      {
+        "type": "drop",
+        "q": "Saya makan sup menggunakan ____.",
+        "expected": "sudu",
+        "options": [
+          "sudu",
+          "garpu"
+        ],
+        "translation": {
+          "question": "I eat soup using a ____.",
+          "options": [
+            "Spoon",
+            "Fork"
+          ]
+        },
+        "explanation": "A spoon can hold soup without spilling it.",
+        "id": "MAL-PM3-QUIZ-VOC-003-03"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah nama waktu makan pada waktu pagi?",
+        "options": [
+          "Sarapan",
+          "Makan malam",
+          "Minum petang",
+          "Makan tengah hari"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "What is the morning meal called?",
+          "options": [
+            "Breakfast",
+            "Dinner",
+            "Afternoon tea",
+            "Lunch"
+          ]
+        },
+        "explanation": "We usually eat breakfast in the morning.",
+        "id": "MAL-PM3-QUIZ-VOC-003-04"
+      },
+      {
+        "type": "tf",
+        "q": "Garam biasanya memberi rasa manis kepada makanan.",
+        "expected": false,
+        "translation": {
+          "question": "Salt usually gives food a sweet taste.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Garam means salt, which gives food a salty taste.",
+        "id": "MAL-PM3-QUIZ-VOC-003-05"
+      },
+      {
+        "type": "drop",
+        "q": "Jus oren dibuat daripada buah ____.",
+        "expected": "oren",
+        "options": [
+          "oren",
+          "epal"
+        ],
+        "translation": {
+          "question": "Orange juice is made from ____ fruit.",
+          "options": [
+            "Orange",
+            "Apple"
+          ]
+        },
+        "explanation": "Orange juice is made from oranges.",
+        "id": "MAL-PM3-QUIZ-VOC-003-06"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah digunakan untuk memotong makanan?",
+        "options": [
+          "Pisau",
+          "Mangkuk",
+          "Cawan",
+          "Pinggan"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which item is used to cut food?",
+          "options": [
+            "Knife",
+            "Bowl",
+            "Cup",
+            "Plate"
+          ]
+        },
+        "explanation": "A knife has a blade for cutting food.",
+        "id": "MAL-PM3-QUIZ-VOC-003-07"
+      },
+      {
+        "type": "tf",
+        "q": "Sayur-sayuran boleh dimasak sebelum dimakan.",
+        "expected": true,
+        "translation": {
+          "question": "Vegetables can be cooked before eating.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Some vegetables are cooked before we eat them.",
+        "id": "MAL-PM3-QUIZ-VOC-003-08"
+      },
+      {
+        "type": "drop",
+        "q": "Saya menuang air ke dalam ____.",
+        "expected": "gelas",
+        "options": [
+          "gelas",
+          "pinggan"
+        ],
+        "translation": {
+          "question": "I pour water into a ____.",
+          "options": [
+            "Glass",
+            "Plate"
+          ]
+        },
+        "explanation": "A glass is made to hold a drink.",
+        "id": "MAL-PM3-QUIZ-VOC-003-09"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah rasa buah limau?",
+        "options": [
+          "Masam",
+          "Masin",
+          "Pedas",
+          "Pahit"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "What taste does a lime usually have?",
+          "options": [
+            "Sour",
+            "Salty",
+            "Spicy",
+            "Bitter"
+          ]
+        },
+        "explanation": "Limes have a sour taste.",
+        "id": "MAL-PM3-QUIZ-VOC-003-10"
+      }
+    ],
+    "Haiwan dan Tumbuhan": [
+      {
+        "type": "mc",
+        "q": "Haiwan manakah boleh terbang dengan sayap?",
+        "options": [
+          "Burung merpati",
+          "Ikan emas",
+          "Kura-kura",
+          "Kambing"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which animal can fly using wings?",
+          "options": [
+            "Pigeon",
+            "Goldfish",
+            "Tortoise",
+            "Goat"
+          ]
+        },
+        "explanation": "Pigeons fly using their wings.",
+        "id": "MAL-PM3-QUIZ-VOC-004-01"
+      },
+      {
+        "type": "tf",
+        "q": "Ikan hidup di dalam air.",
+        "expected": true,
+        "translation": {
+          "question": "Fish live in water.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Fish live and breathe in water.",
+        "id": "MAL-PM3-QUIZ-VOC-004-02"
+      },
+      {
+        "type": "drop",
+        "q": "Pokok menyerap air melalui ____.",
+        "expected": "akar",
+        "options": [
+          "akar",
+          "bunga"
+        ],
+        "translation": {
+          "question": "A plant absorbs water through its ____.",
+          "options": [
+            "Roots",
+            "Flower"
+          ]
+        },
+        "explanation": "Roots take in water from the soil.",
+        "id": "MAL-PM3-QUIZ-VOC-004-03"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah bahagian tumbuhan yang biasanya berwarna hijau?",
+        "options": [
+          "Daun",
+          "Akar",
+          "Biji benih",
+          "Batang kayu"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which plant part is usually green?",
+          "options": [
+            "Leaf",
+            "Root",
+            "Seed",
+            "Woody stem"
+          ]
+        },
+        "explanation": "Leaves are usually green because of their colour pigment.",
+        "id": "MAL-PM3-QUIZ-VOC-004-04"
+      },
+      {
+        "type": "tf",
+        "q": "Rama-rama mempunyai enam kaki.",
+        "expected": true,
+        "translation": {
+          "question": "A butterfly has six legs.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "A butterfly is an insect, so it has six legs.",
+        "id": "MAL-PM3-QUIZ-VOC-004-05"
+      },
+      {
+        "type": "drop",
+        "q": "Anak ayam keluar daripada ____.",
+        "expected": "telur",
+        "options": [
+          "telur",
+          "sarang"
+        ],
+        "translation": {
+          "question": "A chick hatches from an ____.",
+          "options": [
+            "Egg",
+            "Nest"
+          ]
+        },
+        "explanation": "Baby chickens hatch from eggs.",
+        "id": "MAL-PM3-QUIZ-VOC-004-06"
+      },
+      {
+        "type": "mc",
+        "q": "Haiwan manakah mempunyai belalai?",
+        "options": [
+          "Gajah",
+          "Harimau",
+          "Arnab",
+          "Kuda"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which animal has a trunk?",
+          "options": [
+            "Elephant",
+            "Tiger",
+            "Rabbit",
+            "Horse"
+          ]
+        },
+        "explanation": "Elephants use their trunks to lift things.",
+        "id": "MAL-PM3-QUIZ-VOC-004-07"
+      },
+      {
+        "type": "tf",
+        "q": "Bunga ialah bahagian tumbuhan yang berada di bawah tanah.",
+        "expected": false,
+        "translation": {
+          "question": "A flower is a plant part found underground.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Bunga means flower, the part of a plant that often grows above ground.",
+        "id": "MAL-PM3-QUIZ-VOC-004-08"
+      },
+      {
+        "type": "drop",
+        "q": "Lebah mengumpul ____ daripada bunga.",
+        "expected": "nektar",
+        "options": [
+          "nektar",
+          "madu"
+        ],
+        "translation": {
+          "question": "Bees collect ____ from flowers.",
+          "options": [
+            "Nectar",
+            "Honey"
+          ]
+        },
+        "explanation": "Bees collect nectar from flowers to make honey.",
+        "id": "MAL-PM3-QUIZ-VOC-004-09"
+      },
+      {
+        "type": "mc",
+        "q": "Haiwan manakah biasanya bergerak dengan melompat?",
+        "options": [
+          "Katak",
+          "Ular",
+          "Siput",
+          "Ikan"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which animal usually moves by hopping?",
+          "options": [
+            "Frog",
+            "Snake",
+            "Snail",
+            "Fish"
+          ]
+        },
+        "explanation": "Frogs have strong legs that help them jump.",
+        "id": "MAL-PM3-QUIZ-VOC-004-10"
+      }
+    ],
+    "Tempat dan Perjalanan": [
+      {
+        "type": "mc",
+        "q": "Di manakah kita membeli ubat daripada ahli farmasi?",
+        "options": [
+          "Farmasi",
+          "Perpustakaan",
+          "Pejabat pos",
+          "Stesen bas"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Where do we buy medicine from a pharmacist?",
+          "options": [
+            "Pharmacy",
+            "Library",
+            "Post office",
+            "Bus station"
+          ]
+        },
+        "explanation": "A pharmacist gives out medicine at a pharmacy.",
+        "id": "MAL-PM3-QUIZ-VOC-005-01"
+      },
+      {
+        "type": "tf",
+        "q": "Perpustakaan ialah tempat untuk membaca dan meminjam buku.",
+        "expected": true,
+        "translation": {
+          "question": "A library is a place to read and borrow books.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "A library lets us read and borrow books.",
+        "id": "MAL-PM3-QUIZ-VOC-005-02"
+      },
+      {
+        "type": "drop",
+        "q": "Saya menaiki ____ untuk terbang ke negara lain.",
+        "expected": "kapal terbang",
+        "options": [
+          "kapal terbang",
+          "bas"
+        ],
+        "translation": {
+          "question": "I take an ____ to fly to another country.",
+          "options": [
+            "Aeroplane",
+            "Bus"
+          ]
+        },
+        "explanation": "We travel through the sky in an aeroplane.",
+        "id": "MAL-PM3-QUIZ-VOC-005-03"
+      },
+      {
+        "type": "mc",
+        "q": "Di manakah orang menunggu kereta api?",
+        "options": [
+          "Stesen kereta api",
+          "Balai bomba",
+          "Klinik",
+          "Kedai buku"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Where do people wait for trains?",
+          "options": [
+            "Train station",
+            "Fire station",
+            "Clinic",
+            "Bookshop"
+          ]
+        },
+        "explanation": "People board trains at train stations.",
+        "id": "MAL-PM3-QUIZ-VOC-005-04"
+      },
+      {
+        "type": "tf",
+        "q": "Lampu isyarat membantu mengawal lalu lintas.",
+        "expected": true,
+        "translation": {
+          "question": "Traffic lights help control traffic.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Traffic lights help drivers know when to stop.",
+        "id": "MAL-PM3-QUIZ-VOC-005-05"
+      },
+      {
+        "type": "drop",
+        "q": "Kita melintas jalan di lintasan ____.",
+        "expected": "belang",
+        "options": [
+          "belang",
+          "bas"
+        ],
+        "translation": {
+          "question": "We cross the road at a ____ crossing.",
+          "options": [
+            "Zebra",
+            "Bus"
+          ]
+        },
+        "explanation": "A zebra crossing helps us cross the road safely.",
+        "id": "MAL-PM3-QUIZ-VOC-005-06"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah kenderaan yang bergerak di atas landasan?",
+        "options": [
+          "Kereta api",
+          "Motosikal",
+          "Basikal",
+          "Bot"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which vehicle travels on tracks?",
+          "options": [
+            "Train",
+            "Motorcycle",
+            "Bicycle",
+            "Boat"
+          ]
+        },
+        "explanation": "Trains travel along railway tracks.",
+        "id": "MAL-PM3-QUIZ-VOC-005-07"
+      },
+      {
+        "type": "tf",
+        "q": "Pelabuhan ialah tempat kapal berlabuh.",
+        "expected": true,
+        "translation": {
+          "question": "A harbour is a place where ships dock.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Ships can dock at a harbour.",
+        "id": "MAL-PM3-QUIZ-VOC-005-08"
+      },
+      {
+        "type": "drop",
+        "q": "Saya menghantar surat di ____.",
+        "expected": "pejabat pos",
+        "options": [
+          "pejabat pos",
+          "hospital"
+        ],
+        "translation": {
+          "question": "I send a letter at the ____.",
+          "options": [
+            "Post office",
+            "Hospital"
+          ]
+        },
+        "explanation": "We send letters from a post office.",
+        "id": "MAL-PM3-QUIZ-VOC-005-09"
+      },
+      {
+        "type": "mc",
+        "q": "Di manakah kita boleh melihat banyak haiwan liar yang dijaga?",
+        "options": [
+          "Zoo",
+          "Pasar raya",
+          "Bank",
+          "Stadium"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Where can we see many wild animals being cared for?",
+          "options": [
+            "Zoo",
+            "Supermarket",
+            "Bank",
+            "Stadium"
+          ]
+        },
+        "explanation": "Many different animals are cared for at a zoo.",
+        "id": "MAL-PM3-QUIZ-VOC-005-10"
+      }
+    ],
+    "Kata Nama": [
+      {
+        "type": "mc",
+        "q": "Yang manakah kata nama bagi manusia?",
+        "options": [
+          "Doktor",
+          "Berjalan",
+          "Bersih",
+          "Cepat"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word is a noun for a person?",
+          "options": [
+            "Doctor",
+            "Walking",
+            "Clean",
+            "Fast"
+          ]
+        },
+        "explanation": "A doctor helps people when they are sick.",
+        "id": "MAL-PM3-QUIZ-GRM-002-01"
+      },
+      {
+        "type": "tf",
+        "q": "Perkataan “rumah” ialah kata nama.",
+        "expected": true,
+        "translation": {
+          "question": "The word rumah is a noun.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "A house is a place where people live.",
+        "id": "MAL-PM3-QUIZ-GRM-002-02"
+      },
+      {
+        "type": "drop",
+        "q": "Perkataan “____” ialah nama seekor haiwan.",
+        "expected": "arnab",
+        "options": [
+          "arnab",
+          "berlari"
+        ],
+        "translation": {
+          "question": "The word ____ is the name of an animal.",
+          "options": [
+            "Rabbit",
+            "Running"
+          ]
+        },
+        "explanation": "A rabbit is an animal. Running is an action.",
+        "id": "MAL-PM3-QUIZ-GRM-002-03"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah kata nama khas?",
+        "options": [
+          "Malaysia",
+          "negara",
+          "bandar",
+          "sungai"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which is a proper noun?",
+          "options": [
+            "Malaysia",
+            "Country",
+            "City",
+            "River"
+          ]
+        },
+        "explanation": "Malaysia is the name of one country, so it begins with a capital letter.",
+        "id": "MAL-PM3-QUIZ-GRM-002-04"
+      },
+      {
+        "type": "tf",
+        "q": "Kata nama boleh digunakan untuk menamakan tempat.",
+        "expected": true,
+        "translation": {
+          "question": "A noun can be used to name a place.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "A school is a place, and nouns can name places.",
+        "id": "MAL-PM3-QUIZ-GRM-002-05"
+      },
+      {
+        "type": "drop",
+        "q": "“____” ialah kata nama bagi tempat menyimpan buku.",
+        "expected": "rak",
+        "options": [
+          "rak",
+          "tinggi"
+        ],
+        "translation": {
+          "question": "____ is a noun for something that holds books.",
+          "options": [
+            "Shelf",
+            "Tall"
+          ]
+        },
+        "explanation": "A shelf holds books. 'Tall' only describes its height.",
+        "id": "MAL-PM3-QUIZ-GRM-002-06"
+      },
+      {
+        "type": "mc",
+        "q": "Dalam ayat “Mira memegang belon”, yang manakah kata nama bagi benda?",
+        "options": [
+          "belon",
+          "memegang",
+          "Mira memegang",
+          "pegang"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "In 'Mira holds a balloon', which word is a noun for an object?",
+          "options": [
+            "Balloon",
+            "Holds",
+            "Mira holds",
+            "Hold"
+          ]
+        },
+        "explanation": "A balloon is the thing Mira is holding.",
+        "id": "MAL-PM3-QUIZ-GRM-002-07"
+      },
+      {
+        "type": "tf",
+        "q": "Dalam ayat “Adik menari”, perkataan “menari” ialah kata nama.",
+        "expected": false,
+        "translation": {
+          "question": "In 'Younger sibling dances', menari is a noun.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Menari means dancing. It is a kata kerja because it describes an action.",
+        "id": "MAL-PM3-QUIZ-GRM-002-08"
+      },
+      {
+        "type": "drop",
+        "q": "Nama hari “____” mesti bermula dengan huruf besar.",
+        "expected": "Isnin",
+        "options": [
+          "Isnin",
+          "isnin"
+        ],
+        "translation": {
+          "question": "The day name ____ must begin with a capital letter.",
+          "options": [
+            "Monday (capitalised)",
+            "Monday (lowercase)"
+          ]
+        },
+        "explanation": "Day names like Isnin begin with a capital letter.",
+        "id": "MAL-PM3-QUIZ-GRM-002-09"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah nama sebuah sungai yang khusus?",
+        "options": [
+          "Sungai Pahang",
+          "sungai",
+          "air",
+          "tebing"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which is the name of a specific river?",
+          "options": [
+            "Pahang River",
+            "River",
+            "Water",
+            "Riverbank"
+          ]
+        },
+        "explanation": "Sungai Pahang is a kata nama khas because it names one particular river.",
+        "id": "MAL-PM3-QUIZ-GRM-002-10"
+      }
+    ],
+    "Kata Kerja": [
+      {
+        "type": "mc",
+        "q": "Dalam ayat “Sara menyiram bunga”, perkataan manakah menunjukkan perbuatan?",
+        "options": [
+          "menyiram",
+          "Sara",
+          "bunga",
+          "dalam"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "In 'Sara waters flowers', which word shows an action?",
+          "options": [
+            "Waters",
+            "Sara",
+            "Flowers",
+            "In"
+          ]
+        },
+        "explanation": "Menyiram is what we do when we water flowers.",
+        "id": "MAL-PM3-QUIZ-GRM-003-01"
+      },
+      {
+        "type": "tf",
+        "q": "Perkataan “menyanyi” menunjukkan suatu perbuatan.",
+        "expected": true,
+        "translation": {
+          "question": "The word menyanyi shows an action.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Menyanyi is the action of singing.",
+        "id": "MAL-PM3-QUIZ-GRM-003-02"
+      },
+      {
+        "type": "drop",
+        "q": "Amir ____ bola ke arah rakannya.",
+        "expected": "menendang",
+        "options": [
+          "menendang",
+          "melukis"
+        ],
+        "translation": {
+          "question": "Amir ____ the ball towards his friend.",
+          "options": [
+            "Kicks",
+            "Draws"
+          ]
+        },
+        "explanation": "We kick a ball with our feet.",
+        "id": "MAL-PM3-QUIZ-GRM-003-03"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah kata kerja yang sesuai untuk ayat “Nina ____ pintu”?",
+        "options": [
+          "menutup",
+          "merah",
+          "bulat",
+          "cantik"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which verb fits 'Nina ____ the door'?",
+          "options": [
+            "Closes",
+            "Red",
+            "Round",
+            "Beautiful"
+          ]
+        },
+        "explanation": "Menutup is what we do when we close a door.",
+        "id": "MAL-PM3-QUIZ-GRM-003-04"
+      },
+      {
+        "type": "tf",
+        "q": "“Tidur” boleh digunakan sebagai kata kerja.",
+        "expected": true,
+        "translation": {
+          "question": "Tidur can be used as a verb.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Sleeping is something we do, so tidur is a verb.",
+        "id": "MAL-PM3-QUIZ-GRM-003-05"
+      },
+      {
+        "type": "drop",
+        "q": "Abang ____ gigi sebelum tidur.",
+        "expected": "menggosok",
+        "options": [
+          "menggosok",
+          "memotong"
+        ],
+        "translation": {
+          "question": "Older brother ____ his teeth before sleeping.",
+          "options": [
+            "Brushes",
+            "Cuts"
+          ]
+        },
+        "explanation": "We use a toothbrush when we brush our teeth.",
+        "id": "MAL-PM3-QUIZ-GRM-003-06"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah yang dilakukan oleh seseorang yang “berenang”?",
+        "options": [
+          "Bergerak di dalam air",
+          "Berjalan di jalan raya",
+          "Menulis pada kertas",
+          "Duduk di atas kerusi"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "What does a person who berenang do?",
+          "options": [
+            "Moves through water",
+            "Walks on a road",
+            "Writes on paper",
+            "Sits on a chair"
+          ]
+        },
+        "explanation": "Berenang means moving through water by swimming.",
+        "id": "MAL-PM3-QUIZ-GRM-003-07"
+      },
+      {
+        "type": "tf",
+        "q": "“Besar” ialah kata kerja yang menunjukkan perbuatan.",
+        "expected": false,
+        "translation": {
+          "question": "Besar is an action verb.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Besar means big. It is a kata adjektif because it describes size.",
+        "id": "MAL-PM3-QUIZ-GRM-003-08"
+      },
+      {
+        "type": "drop",
+        "q": "Ibu ____ pakaian yang sudah kotor.",
+        "expected": "membasuh",
+        "options": [
+          "membasuh",
+          "membaca"
+        ],
+        "translation": {
+          "question": "Mother ____ the dirty clothes.",
+          "options": [
+            "Washes",
+            "Reads"
+          ]
+        },
+        "explanation": "We wash dirty clothes to make them clean.",
+        "id": "MAL-PM3-QUIZ-GRM-003-09"
+      },
+      {
+        "type": "mc",
+        "q": "Ayat manakah mempunyai kata kerja “melompat”?",
+        "options": [
+          "Kelinci melompat tinggi.",
+          "Kelinci berbulu putih.",
+          "Kelinci sangat kecil.",
+          "Kelinci di tepi pagar."
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which sentence contains the verb melompat?",
+          "options": [
+            "The rabbit jumps high.",
+            "The rabbit has white fur.",
+            "The rabbit is very small.",
+            "The rabbit is by the fence."
+          ]
+        },
+        "explanation": "Melompat shows the action of jumping.",
+        "id": "MAL-PM3-QUIZ-GRM-003-10"
+      }
+    ],
+    "Kata Adjektif": [
+      {
+        "type": "mc",
+        "q": "Perkataan manakah sesuai untuk menerangkan saiz gajah?",
+        "options": [
+          "besar",
+          "makan",
+          "berjalan",
+          "kebun"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word describes an elephant's size?",
+          "options": [
+            "Big",
+            "Eat",
+            "Walk",
+            "Garden"
+          ]
+        },
+        "explanation": "Besar tells us how big something is.",
+        "id": "MAL-PM3-QUIZ-GRM-004-01"
+      },
+      {
+        "type": "tf",
+        "q": "“Lembut” boleh digunakan untuk menerangkan bantal.",
+        "expected": true,
+        "translation": {
+          "question": "Lembut can describe a pillow.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Lembut tells us how soft something feels.",
+        "id": "MAL-PM3-QUIZ-GRM-004-02"
+      },
+      {
+        "type": "drop",
+        "q": "Air batu terasa ____ apabila disentuh.",
+        "expected": "sejuk",
+        "options": [
+          "sejuk",
+          "panas"
+        ],
+        "translation": {
+          "question": "Ice feels ____ when touched.",
+          "options": [
+            "Cold",
+            "Hot"
+          ]
+        },
+        "explanation": "Ice feels cold, so sejuk fits.",
+        "id": "MAL-PM3-QUIZ-GRM-004-03"
+      },
+      {
+        "type": "mc",
+        "q": "Apakah kata adjektif bagi bunyi loceng yang kuat?",
+        "options": [
+          "nyaring",
+          "perlahan",
+          "pahit",
+          "kasar"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which adjective can describe the loud ringing of a bell?",
+          "options": [
+            "Loud and clear",
+            "Slow",
+            "Bitter",
+            "Rough"
+          ]
+        },
+        "explanation": "Nyaring describes a clear, high ringing sound.",
+        "id": "MAL-PM3-QUIZ-GRM-004-04"
+      },
+      {
+        "type": "tf",
+        "q": "Kata adjektif boleh menerangkan bentuk sesuatu benda.",
+        "expected": true,
+        "translation": {
+          "question": "Adjectives can describe an object's shape.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Adjectives can tell us what shape something has.",
+        "id": "MAL-PM3-QUIZ-GRM-004-05"
+      },
+      {
+        "type": "drop",
+        "q": "Langit pada waktu malam kelihatan ____.",
+        "expected": "gelap",
+        "options": [
+          "gelap",
+          "terang"
+        ],
+        "translation": {
+          "question": "The sky at night looks ____.",
+          "options": [
+            "Dark",
+            "Bright"
+          ]
+        },
+        "explanation": "The sky looks dark when there is little light.",
+        "id": "MAL-PM3-QUIZ-GRM-004-06"
+      },
+      {
+        "type": "mc",
+        "q": "Yang manakah kata adjektif bagi rasa gula?",
+        "options": [
+          "manis",
+          "masam",
+          "masin",
+          "pedas"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which adjective describes the taste of sugar?",
+          "options": [
+            "Sweet",
+            "Sour",
+            "Salty",
+            "Spicy"
+          ]
+        },
+        "explanation": "Sugar tastes sweet, so manis fits.",
+        "id": "MAL-PM3-QUIZ-GRM-004-07"
+      },
+      {
+        "type": "tf",
+        "q": "Dalam ayat “Kereta itu laju”, perkataan “laju” ialah kata kerja.",
+        "expected": false,
+        "translation": {
+          "question": "In 'The car is fast', laju is a verb.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Laju tells us how fast the car is.",
+        "id": "MAL-PM3-QUIZ-GRM-004-08"
+      },
+      {
+        "type": "drop",
+        "q": "Bulu arnab itu sangat ____.",
+        "expected": "halus",
+        "options": [
+          "halus",
+          "keras"
+        ],
+        "translation": {
+          "question": "The rabbit's fur is very ____.",
+          "options": [
+            "Fine and soft",
+            "Hard"
+          ]
+        },
+        "explanation": "Halus describes fur that feels fine and soft.",
+        "id": "MAL-PM3-QUIZ-GRM-004-09"
+      },
+      {
+        "type": "mc",
+        "q": "Perkataan manakah sesuai untuk menerangkan jalan yang tidak rata?",
+        "options": [
+          "berlubang",
+          "ceria",
+          "manis",
+          "sunyi"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which word describes a road with holes?",
+          "options": [
+            "Full of holes",
+            "Cheerful",
+            "Sweet",
+            "Quiet"
+          ]
+        },
+        "explanation": "Berlubang tells us that the road has holes.",
+        "id": "MAL-PM3-QUIZ-GRM-004-10"
+      }
+    ],
+    "Kata Ganti Nama": [
+      {
+        "type": "mc",
+        "q": "Pilih kata ganti nama untuk bercakap dengan seorang kawan.",
+        "options": [
+          "kamu",
+          "mereka",
+          "dia",
+          "kami"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Choose the pronoun for speaking to one friend.",
+          "options": [
+            "You",
+            "They",
+            "He or she",
+            "We (excluding you)"
+          ]
+        },
+        "explanation": "Kamu means you. We use it when talking to another person.",
+        "id": "MAL-PM3-QUIZ-GRM-005-01"
+      },
+      {
+        "type": "tf",
+        "q": "“Dia” boleh digunakan untuk merujuk kepada seorang lelaki atau perempuan.",
+        "expected": true,
+        "translation": {
+          "question": "Dia can refer to a man or a woman.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Dia can mean either he or she.",
+        "id": "MAL-PM3-QUIZ-GRM-005-02"
+      },
+      {
+        "type": "drop",
+        "q": "“____ suka membaca,” kata Lina tentang dirinya.",
+        "expected": "Saya",
+        "options": [
+          "Saya",
+          "Dia"
+        ],
+        "translation": {
+          "question": "'____ like reading,' Lina says about herself.",
+          "options": [
+            "I",
+            "He or she"
+          ]
+        },
+        "explanation": "Lina says saya because she is talking about herself.",
+        "id": "MAL-PM3-QUIZ-GRM-005-03"
+      },
+      {
+        "type": "mc",
+        "q": "Dalam ayat “Farid sedang makan. ____ lapar”, kata ganti nama yang sesuai ialah?",
+        "options": [
+          "Dia",
+          "Kita",
+          "Mereka",
+          "Awak"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "In 'Farid is eating. ____ is hungry', which pronoun fits?",
+          "options": [
+            "He",
+            "We (including you)",
+            "They",
+            "You"
+          ]
+        },
+        "explanation": "Dia means he or she. It refers to one person.",
+        "id": "MAL-PM3-QUIZ-GRM-005-04"
+      },
+      {
+        "type": "tf",
+        "q": "“Mereka” digunakan untuk merujuk kepada lebih daripada seorang.",
+        "expected": true,
+        "translation": {
+          "question": "Mereka refers to more than one person.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Mereka means they. It refers to more than one person.",
+        "id": "MAL-PM3-QUIZ-GRM-005-05"
+      },
+      {
+        "type": "drop",
+        "q": "Ali dan Bakar sedang bermain. ____ gembira.",
+        "expected": "Mereka",
+        "options": [
+          "Mereka",
+          "Saya"
+        ],
+        "translation": {
+          "question": "Ali and Bakar are playing. ____ are happy.",
+          "options": [
+            "They",
+            "I"
+          ]
+        },
+        "explanation": "Ali and Bakar are two people, so we use mereka.",
+        "id": "MAL-PM3-QUIZ-GRM-005-06"
+      },
+      {
+        "type": "mc",
+        "q": "Manakah kata ganti nama yang merujuk kepada orang yang bercakap?",
+        "options": [
+          "aku",
+          "dia",
+          "kamu",
+          "mereka"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Which pronoun refers to the speaker?",
+          "options": [
+            "I",
+            "He or she",
+            "You",
+            "They"
+          ]
+        },
+        "explanation": "Aku means 'I' when speaking casually.",
+        "id": "MAL-PM3-QUIZ-GRM-005-07"
+      },
+      {
+        "type": "tf",
+        "q": "“Awak” ialah kata ganti nama untuk orang yang sedang diajak bercakap.",
+        "expected": true,
+        "translation": {
+          "question": "Awak is a pronoun for the person being spoken to.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "explanation": "Awak is used when speaking directly to someone.",
+        "id": "MAL-PM3-QUIZ-GRM-005-08"
+      },
+      {
+        "type": "drop",
+        "q": "“____ hendak ke taman?” tanya Aina kepada kawannya.",
+        "expected": "Awak",
+        "options": [
+          "Awak",
+          "Dia"
+        ],
+        "translation": {
+          "question": "'____ want to go to the park?' Aina asks her friend.",
+          "options": [
+            "You",
+            "He or she"
+          ]
+        },
+        "explanation": "Aina is speaking to her friend, so awak fits.",
+        "id": "MAL-PM3-QUIZ-GRM-005-09"
+      },
+      {
+        "type": "mc",
+        "q": "Ali dan saya pergi bersama, tetapi kamu tidak ikut. Perkataan manakah menggantikan “Ali dan saya”?",
+        "options": [
+          "Kami",
+          "Kita",
+          "Mereka",
+          "Dia"
+        ],
+        "correct": 0,
+        "translation": {
+          "question": "Ali and I go together, but you do not join us. Which pronoun replaces 'Ali and I'?",
+          "options": [
+            "We (excluding you)",
+            "We (including you)",
+            "They",
+            "He or she"
+          ]
+        },
+        "explanation": "Kami means we and refers to the speaker and other people in the group.",
+        "id": "MAL-PM3-QUIZ-GRM-005-10"
       }
     ]
   },
@@ -2568,6 +4920,970 @@ const exerciseBank={
         "id": "MATH-PM3-QUIZ-U02-001-10",
         "explanation": "1,000 − 250 − 150 = 600."
       }
+    ],
+    "Fractions, Decimals and Percentages": [
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Half of 18 is ____.",
+        "expected": "9",
+        "explanation": "18 ÷ 2 = 9.",
+        "id": "MATH-PM3-QUIZ-U03-001-01",
+        "options": [
+          "9",
+          "8"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "What does the fraction 3/4 mean?",
+        "options": [
+          "Three out of four equal parts",
+          "Four out of three equal parts",
+          "Three complete wholes",
+          "One out of four equal parts"
+        ],
+        "correct": 0,
+        "explanation": "3/4 represents three of four equal parts of a whole.",
+        "id": "MATH-PM3-QUIZ-U03-001-02"
+      },
+      {
+        "type": "tf",
+        "q": "0.7 is equal to seven tenths.",
+        "expected": true,
+        "explanation": "Seven tenths is written as 0.7.",
+        "id": "MATH-PM3-QUIZ-U03-001-03"
+      },
+      {
+        "type": "tf",
+        "q": "0.5 is greater than 0.8.",
+        "expected": false,
+        "explanation": "0.5 is less than 0.8.",
+        "id": "MATH-PM3-QUIZ-U03-001-04"
+      },
+      {
+        "type": "mc",
+        "q": "What is 25% of 40?",
+        "options": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "correct": 1,
+        "explanation": "25% means one quarter; 40 ÷ 4 = 10.",
+        "id": "MATH-PM3-QUIZ-U03-001-05"
+      },
+      {
+        "type": "mc",
+        "q": "Which decimal is equal to 3/10?",
+        "options": [
+          "0.03",
+          "0.3",
+          "3.0",
+          "0.13"
+        ],
+        "correct": 1,
+        "explanation": "3/10 is three tenths, or 0.3.",
+        "id": "MATH-PM3-QUIZ-U03-001-06"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 1/4 is ____%.",
+        "expected": "25",
+        "explanation": "One quarter is 25%.",
+        "id": "MATH-PM3-QUIZ-U03-001-07",
+        "options": [
+          "25",
+          "20"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "Which decimal is smaller?",
+        "options": [
+          "1.52",
+          "1.25",
+          "1.75",
+          "1.62"
+        ],
+        "correct": 1,
+        "explanation": "1.25 is smaller than the other three decimals.",
+        "id": "MATH-PM3-QUIZ-U03-001-08"
+      },
+      {
+        "type": "tf",
+        "q": "Two quarters make one half.",
+        "expected": true,
+        "explanation": "1/4 + 1/4 = 2/4 = 1/2.",
+        "id": "MATH-PM3-QUIZ-U03-001-09"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 0.6 + 0.2 = ____.",
+        "expected": "0.8",
+        "explanation": "Six tenths plus two tenths equals eight tenths, or 0.8.",
+        "id": "MATH-PM3-QUIZ-U03-001-10",
+        "options": [
+          "0.8",
+          "0.7"
+        ]
+      }
+    ],
+    "Money": [
+      {
+        "type": "mc",
+        "q": "A notebook costs RM12 and a pencil case costs RM8. How much do they cost altogether?",
+        "options": [
+          "RM18",
+          "RM19",
+          "RM20",
+          "RM21"
+        ],
+        "correct": 2,
+        "explanation": "RM12 + RM8 = RM20.",
+        "id": "MATH-PM3-QUIZ-U04-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: RM50 − RM17 = RM____.",
+        "expected": "33",
+        "explanation": "RM50 − RM17 = RM33.",
+        "id": "MATH-PM3-QUIZ-U04-001-02",
+        "options": [
+          "33",
+          "37"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "What is RM4.50 + RM2.20?",
+        "options": [
+          "RM6.50",
+          "RM6.70",
+          "RM7.20",
+          "RM5.70"
+        ],
+        "correct": 1,
+        "explanation": "RM4.50 + RM2.20 = RM6.70.",
+        "id": "MATH-PM3-QUIZ-U04-001-03"
+      },
+      {
+        "type": "tf",
+        "q": "Three pencils costing RM2 each cost RM6 altogether.",
+        "expected": true,
+        "explanation": "3 × RM2 = RM6.",
+        "id": "MATH-PM3-QUIZ-U04-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: RM10.00 − RM4.75 = RM____.",
+        "expected": "5.25",
+        "explanation": "The change is RM5.25.",
+        "id": "MATH-PM3-QUIZ-U04-001-05",
+        "options": [
+          "5.25",
+          "5.75"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "RM30 is enough to buy two toys costing RM18 and RM15.",
+        "expected": false,
+        "explanation": "The toys cost RM33, which is RM3 more than RM30.",
+        "id": "MATH-PM3-QUIZ-U04-001-06"
+      },
+      {
+        "type": "mc",
+        "q": "Two books cost RM7 each. A pen costs RM3. How much is the total?",
+        "options": [
+          "RM14",
+          "RM16",
+          "RM17",
+          "RM18"
+        ],
+        "correct": 2,
+        "explanation": "RM7 + RM7 + RM3 = RM17.",
+        "id": "MATH-PM3-QUIZ-U04-001-07"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 500 sen = RM____.",
+        "expected": "5",
+        "explanation": "100 sen = RM1, so 500 sen = RM5.",
+        "id": "MATH-PM3-QUIZ-U04-001-08",
+        "options": [
+          "5",
+          "50"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "RM6.40 + RM1.60 = RM8.00.",
+        "expected": true,
+        "explanation": "RM6.40 + RM1.60 = RM8.00.",
+        "id": "MATH-PM3-QUIZ-U04-001-09"
+      },
+      {
+        "type": "mc",
+        "q": "You pay RM20.00 for an item costing RM7.50. How much change should you receive?",
+        "options": [
+          "RM11.50",
+          "RM12.00",
+          "RM12.50",
+          "RM13.50"
+        ],
+        "correct": 2,
+        "explanation": "RM20.00 − RM7.50 = RM12.50.",
+        "id": "MATH-PM3-QUIZ-U04-001-10"
+      }
+    ],
+    "Time": [
+      {
+        "type": "mc",
+        "q": "How many minutes are in one hour?",
+        "options": [
+          "30",
+          "45",
+          "60",
+          "100"
+        ],
+        "correct": 2,
+        "explanation": "One hour contains 60 minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 2 hours 15 minutes = ____ minutes.",
+        "expected": "135",
+        "explanation": "2 × 60 + 15 = 135 minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-02",
+        "options": [
+          "135",
+          "125"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "What time is 30 minutes after 2:30 p.m.?",
+        "options": [
+          "2:45 p.m.",
+          "3:00 p.m.",
+          "3:15 p.m.",
+          "4:00 p.m."
+        ],
+        "correct": 1,
+        "explanation": "30 minutes after 2:30 p.m. is 3:00 p.m.",
+        "id": "MATH-PM3-QUIZ-U05-001-03"
+      },
+      {
+        "type": "tf",
+        "q": "90 seconds is equal to 1 minute 30 seconds.",
+        "expected": true,
+        "explanation": "60 seconds + 30 seconds = 90 seconds.",
+        "id": "MATH-PM3-QUIZ-U05-001-04"
+      },
+      {
+        "type": "tf",
+        "q": "Three hours is equal to 180 minutes.",
+        "expected": true,
+        "explanation": "3 × 60 = 180 minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-05"
+      },
+      {
+        "type": "tf",
+        "q": "One hour 40 minutes is equal to 140 minutes.",
+        "expected": false,
+        "explanation": "One hour 40 minutes is 60 + 40 = 100 minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-06"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: From 9:15 a.m. to 10:00 a.m. is ____ minutes.",
+        "expected": "45",
+        "explanation": "It takes 45 minutes to go from 9:15 to 10:00.",
+        "id": "MATH-PM3-QUIZ-U05-001-07",
+        "options": [
+          "45",
+          "35"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "A lesson begins at 7:30 a.m. and ends at 8:10 a.m. How long does it last?",
+        "options": [
+          "30 minutes",
+          "40 minutes",
+          "50 minutes",
+          "60 minutes"
+        ],
+        "correct": 1,
+        "explanation": "From 7:30 to 8:00 is 30 minutes, then 10 more minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 120 seconds = ____ minutes.",
+        "expected": "2",
+        "explanation": "120 ÷ 60 = 2 minutes.",
+        "id": "MATH-PM3-QUIZ-U05-001-09",
+        "options": [
+          "2",
+          "12"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "What time is 45 minutes after 4:20 p.m.?",
+        "options": [
+          "4:55 p.m.",
+          "5:00 p.m.",
+          "5:05 p.m.",
+          "5:15 p.m."
+        ],
+        "correct": 2,
+        "explanation": "From 4:20 p.m. to 5:00 p.m. is 40 minutes, then another 5 minutes reaches 5:05 p.m.",
+        "id": "MATH-PM3-QUIZ-U05-001-10"
+      }
+    ],
+    "Measurement": [
+      {
+        "type": "mc",
+        "q": "How many centimetres are in 1 metre?",
+        "options": [
+          "10",
+          "100",
+          "1,000",
+          "50"
+        ],
+        "correct": 1,
+        "explanation": "1 metre is 100 centimetres.",
+        "id": "MATH-PM3-QUIZ-U06-001-01"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 2 kg = ____ g.",
+        "expected": "2000",
+        "explanation": "2 × 1,000 = 2,000 grams.",
+        "id": "MATH-PM3-QUIZ-U06-001-02",
+        "options": [
+          "2000",
+          "200"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "One litre is equal to 1,000 millilitres.",
+        "expected": true,
+        "explanation": "1 L = 1,000 mL.",
+        "id": "MATH-PM3-QUIZ-U06-001-03"
+      },
+      {
+        "type": "mc",
+        "q": "350 cm is the same length as which measurement?",
+        "options": [
+          "3 m 5 cm",
+          "3 m 50 cm",
+          "35 m",
+          "30 m 5 cm"
+        ],
+        "correct": 1,
+        "explanation": "300 cm is 3 m and 50 cm remains.",
+        "id": "MATH-PM3-QUIZ-U06-001-04"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: Four bottles contain 250 mL each. Their total volume is ____ mL.",
+        "expected": "1000",
+        "explanation": "4 × 250 mL = 1,000 mL.",
+        "id": "MATH-PM3-QUIZ-U06-001-05",
+        "options": [
+          "1000",
+          "900"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "2 kg 500 g is equal to 2,500 g.",
+        "expected": true,
+        "explanation": "2 kg = 2,000 g; add 500 g.",
+        "id": "MATH-PM3-QUIZ-U06-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "Three metres is equal to 30 centimetres.",
+        "expected": false,
+        "explanation": "3 metres is 300 centimetres.",
+        "id": "MATH-PM3-QUIZ-U06-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "What is 750 mL + 250 mL?",
+        "options": [
+          "500 mL",
+          "900 mL",
+          "1,000 mL",
+          "1,250 mL"
+        ],
+        "correct": 2,
+        "explanation": "750 + 250 = 1,000 mL.",
+        "id": "MATH-PM3-QUIZ-U06-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: 5 kg − 2 kg = ____ kg.",
+        "expected": "3",
+        "explanation": "5 − 2 = 3 kilograms.",
+        "id": "MATH-PM3-QUIZ-U06-001-09",
+        "options": [
+          "3",
+          "2"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "A ribbon is 1 m 20 cm long. What is the total length of two such ribbons?",
+        "options": [
+          "2 m 20 cm",
+          "2 m 40 cm",
+          "2 m 60 cm",
+          "1 m 40 cm"
+        ],
+        "correct": 1,
+        "explanation": "120 cm × 2 = 240 cm = 2 m 40 cm.",
+        "id": "MATH-PM3-QUIZ-U06-001-10"
+      }
+    ],
+    "Shapes": [
+      {
+        "type": "tf",
+        "q": "All four sides of a square have equal lengths.",
+        "expected": true,
+        "explanation": "A square has four equal sides.",
+        "id": "MATH-PM3-QUIZ-U07-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "A triangle has four corners.",
+        "expected": false,
+        "explanation": "A triangle has three corners.",
+        "id": "MATH-PM3-QUIZ-U07-001-02"
+      },
+      {
+        "type": "mc",
+        "q": "How many flat faces does a cube have?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "8"
+        ],
+        "correct": 2,
+        "explanation": "A cube has six square faces.",
+        "id": "MATH-PM3-QUIZ-U07-001-03"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A rectangle has ____ sides.",
+        "expected": "4",
+        "explanation": "A rectangle has four sides.",
+        "id": "MATH-PM3-QUIZ-U07-001-04",
+        "options": [
+          "4",
+          "3"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "How many flat faces does a sphere have?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "4"
+        ],
+        "correct": 0,
+        "explanation": "A sphere has a curved surface and no flat faces.",
+        "id": "MATH-PM3-QUIZ-U07-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A cuboid has ____ vertices.",
+        "expected": "8",
+        "explanation": "A cuboid has eight corners, called vertices.",
+        "id": "MATH-PM3-QUIZ-U07-001-06",
+        "options": [
+          "8",
+          "6"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "How many sides does a pentagon have?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "8"
+        ],
+        "correct": 1,
+        "explanation": "A pentagon has five sides.",
+        "id": "MATH-PM3-QUIZ-U07-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Which shape has a curved boundary and no straight sides?",
+        "options": [
+          "Triangle",
+          "Rectangle",
+          "Circle",
+          "Pentagon"
+        ],
+        "correct": 2,
+        "explanation": "A circle has a curved boundary.",
+        "id": "MATH-PM3-QUIZ-U07-001-08"
+      },
+      {
+        "type": "tf",
+        "q": "A cylinder has two flat circular faces.",
+        "expected": true,
+        "explanation": "A cylinder has a circular face at each end.",
+        "id": "MATH-PM3-QUIZ-U07-001-09"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A hexagon has ____ sides.",
+        "expected": "6",
+        "explanation": "A hexagon has six sides.",
+        "id": "MATH-PM3-QUIZ-U07-001-10",
+        "options": [
+          "6",
+          "5"
+        ]
+      }
+    ],
+    "Location": [
+      {
+        "type": "tf",
+        "q": "On a grid with letters marking columns and numbers marking rows, C2 means column C and row 2.",
+        "expected": true,
+        "explanation": "The letter identifies the column and the number identifies the row.",
+        "id": "MATH-PM3-QUIZ-U08-001-01"
+      },
+      {
+        "type": "tf",
+        "q": "On a grid with lettered columns and numbered rows, B3 means column 3 and row B.",
+        "expected": false,
+        "explanation": "B3 means column B and row 3.",
+        "id": "MATH-PM3-QUIZ-U08-001-02"
+      },
+      {
+        "type": "mc",
+        "q": "A grid has columns A, B, C, D from left to right and rows 1, 2, 3, 4 from top to bottom. A toy is in column C, row 2. What is its position?",
+        "options": [
+          "B2",
+          "C2",
+          "C3",
+          "D2"
+        ],
+        "correct": 1,
+        "explanation": "Column C and row 2 give C2.",
+        "id": "MATH-PM3-QUIZ-U08-001-03"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: On a grid with columns A to D, one column to the right of B2 is ____.",
+        "expected": "C2",
+        "explanation": "Moving right from B goes to C while the row remains 2.",
+        "id": "MATH-PM3-QUIZ-U08-001-04",
+        "options": [
+          "C2",
+          "D2"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "A grid has numbered rows increasing downward. Which position is one row below C3?",
+        "options": [
+          "B3",
+          "C2",
+          "C4",
+          "D3"
+        ],
+        "correct": 2,
+        "explanation": "Moving down one row changes 3 to 4; the column stays C.",
+        "id": "MATH-PM3-QUIZ-U08-001-05"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: One column to the left of D1 is ____.",
+        "expected": "C1",
+        "explanation": "C is immediately to the left of D.",
+        "id": "MATH-PM3-QUIZ-U08-001-06",
+        "options": [
+          "C1",
+          "B1"
+        ]
+      },
+      {
+        "type": "tf",
+        "q": "On a grid with row numbers increasing downward, one row above B4 is B3.",
+        "expected": true,
+        "explanation": "Moving up one row changes 4 to 3.",
+        "id": "MATH-PM3-QUIZ-U08-001-07"
+      },
+      {
+        "type": "tf",
+        "q": "If columns A–D run left to right and rows 1–4 run top to bottom, A1 is the top-left cell.",
+        "expected": true,
+        "explanation": "Column A is at the left, and row 1 is at the top.",
+        "id": "MATH-PM3-QUIZ-U08-001-08"
+      },
+      {
+        "type": "mc",
+        "q": "Start at B2 on a grid with columns A to D from left to right. Move two columns right. Where are you?",
+        "options": [
+          "C2",
+          "D2",
+          "B4",
+          "A2"
+        ],
+        "correct": 1,
+        "explanation": "B to C is one column, then C to D is the second.",
+        "id": "MATH-PM3-QUIZ-U08-001-09"
+      },
+      {
+        "type": "tf",
+        "q": "B3 and B4 are in the same row on a letter-column, number-row grid.",
+        "expected": false,
+        "explanation": "They are in the same column B but in different rows, 3 and 4.",
+        "id": "MATH-PM3-QUIZ-U08-001-10"
+      }
+    ],
+    "Data Management": [
+      {
+        "type": "tf",
+        "q": "Four tally marks represent a frequency of four.",
+        "expected": true,
+        "explanation": "Each of the four tally marks counts one item.",
+        "id": "MATH-PM3-QUIZ-U09-001-01"
+      },
+      {
+        "type": "mc",
+        "q": "A fruit survey recorded 4 apples, 7 bananas and 2 oranges. Which fruit was chosen most?",
+        "options": [
+          "Apples",
+          "Bananas",
+          "Oranges",
+          "All equally"
+        ],
+        "correct": 1,
+        "explanation": "Bananas have the greatest frequency, 7.",
+        "id": "MATH-PM3-QUIZ-U09-001-02"
+      },
+      {
+        "type": "drop",
+        "q": "A class votes for a class pet: 5 pupils choose fish, 6 choose rabbits and 4 choose hamsters. How many votes are there?",
+        "expected": "15",
+        "explanation": "5 + 6 + 4 = 15 votes.",
+        "id": "MATH-PM3-QUIZ-U09-001-03",
+        "options": [
+          "15",
+          "12"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "A class counts 11 red pencils and 6 blue pencils. How many more red pencils are there?",
+        "options": [
+          "4",
+          "6",
+          "5",
+          "17"
+        ],
+        "correct": 2,
+        "explanation": "11 − 6 = 5 more red pencils.",
+        "id": "MATH-PM3-QUIZ-U09-001-04"
+      },
+      {
+        "type": "mc",
+        "q": "A class recorded: bicycles 6, trains 3, cars 8 and walking 5. How many pupils were counted?",
+        "options": [
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "correct": 3,
+        "explanation": "6 + 3 + 8 + 5 = 22.",
+        "id": "MATH-PM3-QUIZ-U09-001-05"
+      },
+      {
+        "type": "tf",
+        "q": "A pie chart can show how a whole is divided into parts.",
+        "expected": true,
+        "explanation": "Each sector of a pie chart represents part of the whole.",
+        "id": "MATH-PM3-QUIZ-U09-001-06"
+      },
+      {
+        "type": "tf",
+        "q": "Five items can be recorded using four vertical tally marks crossed by a fifth mark.",
+        "expected": true,
+        "explanation": "A group of five tally marks is usually drawn as four lines crossed by a fifth.",
+        "id": "MATH-PM3-QUIZ-U09-001-07"
+      },
+      {
+        "type": "mc",
+        "q": "Votes were Blue 8, Red 5 and Green 6. Which colour received the fewest votes?",
+        "options": [
+          "Blue",
+          "Red",
+          "Green",
+          "All equally"
+        ],
+        "correct": 1,
+        "explanation": "Red received 5 votes, fewer than blue or green.",
+        "id": "MATH-PM3-QUIZ-U09-001-08"
+      },
+      {
+        "type": "drop",
+        "q": "Fill in the blank: A table records 12 cats and 9 dogs. There are ____ more cats than dogs.",
+        "expected": "3",
+        "explanation": "12 − 9 = 3.",
+        "id": "MATH-PM3-QUIZ-U09-001-09",
+        "options": [
+          "3",
+          "4"
+        ]
+      },
+      {
+        "type": "mc",
+        "q": "A pictograph uses one picture to represent 2 pupils. What do 4 pictures represent?",
+        "options": [
+          "4 pupils",
+          "6 pupils",
+          "8 pupils",
+          "10 pupils"
+        ],
+        "correct": 2,
+        "explanation": "4 pictures × 2 pupils per picture = 8 pupils.",
+        "id": "MATH-PM3-QUIZ-U09-001-10"
+      }
+    ],
+    "Numbers Up to 10 000": [
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-01",
+        "type": "mc",
+        "q": "What is the value of 7 in 7,426?",
+        "options": [
+          "7",
+          "70",
+          "700",
+          "7,000"
+        ],
+        "correct": 3,
+        "explanation": "The 7 is in the thousands place, so its value is 7,000."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-02",
+        "type": "tf",
+        "q": "3,905 is greater than 3,950.",
+        "expected": false,
+        "explanation": "3,905 is smaller than 3,950 because 905 is less than 950."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-03",
+        "type": "drop",
+        "q": "Round 2,648 to the nearest ten: ____.",
+        "expected": "2,650",
+        "options": [
+          "2,650",
+          "2,640"
+        ],
+        "explanation": "The ones digit is 8, so we round up to 2,650."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-04",
+        "type": "mc",
+        "q": "Which number comes immediately after 5,999?",
+        "options": [
+          "5,998",
+          "5,990",
+          "6,000",
+          "6,999"
+        ],
+        "correct": 2,
+        "explanation": "Adding 1 to 5,999 gives 6,000."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-05",
+        "type": "tf",
+        "q": "In 4,381, the digit 3 has a value of 300.",
+        "expected": true,
+        "explanation": "The 3 is in the hundreds place, so its value is 300."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-06",
+        "type": "drop",
+        "q": "Complete the pattern: 1,250, 1,350, 1,450, ____.",
+        "expected": "1,550",
+        "options": [
+          "1,550",
+          "1,500"
+        ],
+        "explanation": "The numbers increase by 100 each time, so the next is 1,550."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-07",
+        "type": "mc",
+        "q": "Which number is the smallest?",
+        "options": [
+          "2,704",
+          "2,740",
+          "2,074",
+          "2,407"
+        ],
+        "correct": 2,
+        "explanation": "2,074 is the smallest because it has zero hundreds."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-08",
+        "type": "tf",
+        "q": "8,000 + 500 + 20 + 6 = 8,526.",
+        "expected": true,
+        "explanation": "The place values add up to 8,526."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-09",
+        "type": "drop",
+        "q": "Round 7,349 to the nearest hundred: ____.",
+        "expected": "7,300",
+        "options": [
+          "7,300",
+          "7,400"
+        ],
+        "explanation": "The tens digit is 4, so we round down to 7,300."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U01-001-10",
+        "type": "mc",
+        "q": "What number is 6,000 + 40 + 9?",
+        "options": [
+          "6,490",
+          "6,049",
+          "6,409",
+          "6,940"
+        ],
+        "correct": 1,
+        "explanation": "6,000 + 40 + 9 = 6,049."
+      }
+    ],
+    "Multiplication and Division": [
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-01",
+        "type": "mc",
+        "q": "What is 7 × 8?",
+        "options": [
+          "54",
+          "56",
+          "64",
+          "48"
+        ],
+        "correct": 1,
+        "explanation": "7 × 8 = 56."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-02",
+        "type": "tf",
+        "q": "9 × 6 = 54.",
+        "expected": true,
+        "explanation": "9 × 6 = 54."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-03",
+        "type": "drop",
+        "q": "Fill in the blank: 72 ÷ 8 = ____.",
+        "expected": "9",
+        "options": [
+          "9",
+          "8"
+        ],
+        "explanation": "72 ÷ 8 = 9."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-04",
+        "type": "mc",
+        "q": "There are 6 rows with 9 chairs in each row. How many chairs are there?",
+        "options": [
+          "45",
+          "48",
+          "54",
+          "63"
+        ],
+        "correct": 2,
+        "explanation": "6 × 9 = 54 chairs."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-05",
+        "type": "tf",
+        "q": "42 ÷ 7 = 8.",
+        "expected": false,
+        "explanation": "42 ÷ 7 = 6."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-06",
+        "type": "drop",
+        "q": "Fill in the blank: 8 × ____ = 64.",
+        "expected": "8",
+        "options": [
+          "8",
+          "7"
+        ],
+        "explanation": "8 × 8 = 64."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-07",
+        "type": "mc",
+        "q": "What is 48 ÷ 6?",
+        "options": [
+          "6",
+          "8",
+          "9",
+          "7"
+        ],
+        "correct": 1,
+        "explanation": "48 ÷ 6 = 8."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-08",
+        "type": "tf",
+        "q": "5 × 9 = 45.",
+        "expected": true,
+        "explanation": "5 × 9 = 45."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-09",
+        "type": "drop",
+        "q": "Fill in the blank: ____ ÷ 4 = 7.",
+        "expected": "28",
+        "options": [
+          "28",
+          "24"
+        ],
+        "explanation": "28 ÷ 4 = 7."
+      },
+      {
+        "id": "MATH-PM3-QUIZ-U02B-001-10",
+        "type": "mc",
+        "q": "A baker fills 6 bags with 8 biscuits each. How many biscuits are there?",
+        "options": [
+          "40",
+          "42",
+          "48",
+          "54"
+        ],
+        "correct": 2,
+        "explanation": "6 × 8 = 48 biscuits."
+      }
     ]
   },
   "Science": {
@@ -2677,6 +5993,978 @@ const exerciseBank={
         ],
         "correct": 3,
         "explanation": "Cleaning and drying a beaker helps keep it ready and safe for its next use."
+      }
+    ],
+    "Science Room Rules": [
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-01",
+        "type": "mc",
+        "q": "Before starting a science activity, what should pupils do?",
+        "options": [
+          "Start mixing materials straight away.",
+          "Listen to the teacher's instructions",
+          "Choose tools before listening.",
+          "Begin while the teacher is speaking."
+        ],
+        "correct": 1,
+        "explanation": "Pupils should follow the teacher's instructions before beginning an experiment."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-02",
+        "type": "tf",
+        "q": "It is safe for pupils to pick up broken glass with bare hands.",
+        "explanation": "Broken glass may cause cuts. Tell the teacher.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-03",
+        "type": "drop",
+        "q": "Glass containers should be carried ____ to avoid accidents.",
+        "explanation": "Careful handling helps prevent breakages.",
+        "expected": "carefully",
+        "options": [
+          "carefully",
+          "quickly"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-04",
+        "type": "mc",
+        "q": "Why should pupils never taste substances in a science room?",
+        "options": [
+          "The labels may be missing.",
+          "The liquid may look like water.",
+          "They may be harmful",
+          "The container may be made of glass."
+        ],
+        "correct": 2,
+        "explanation": "Unknown substances in a science room can be harmful. Ask the teacher how to handle them safely."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-05",
+        "type": "tf",
+        "q": "Pupils should tell the teacher when a liquid is spilled in the science room.",
+        "explanation": "Spills should be reported to the teacher.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-06",
+        "type": "drop",
+        "q": "During an experiment, pupils should work ____.",
+        "explanation": "Calm, careful work helps prevent accidents.",
+        "expected": "calmly",
+        "options": [
+          "calmly",
+          "roughly"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-07",
+        "type": "mc",
+        "q": "If a pupil is unsure how to use an apparatus, what should they do?",
+        "options": [
+          "Copy how another pupil uses it without checking.",
+          "Use it first and ask questions later.",
+          "Guess which part to switch on.",
+          "Ask the teacher for help"
+        ],
+        "correct": 3,
+        "explanation": "Pupils should ask their teacher before using unfamiliar science equipment."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-08",
+        "type": "tf",
+        "q": "Unused science equipment should be returned to its proper place.",
+        "explanation": "Putting equipment away correctly keeps the room safe.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-09",
+        "type": "drop",
+        "q": "Keeping the science work area ____ helps prevent accidents.",
+        "explanation": "A tidy work area is safer.",
+        "expected": "tidy",
+        "options": [
+          "tidy",
+          "messy"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U02-001-10",
+        "type": "mc",
+        "q": "What should pupils do after finishing an investigation?",
+        "options": [
+          "Clean the workplace and wash their hands",
+          "Leave apparatus on the workbench.",
+          "Put equipment away without cleaning it.",
+          "Leave spills for the next class."
+        ],
+        "correct": 0,
+        "explanation": "At the end of a science activity, clean and store equipment properly and wash your hands."
+      }
+    ],
+    "Teeth and Dental Care": [
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-01",
+        "type": "mc",
+        "q": "Which type of tooth is mainly used to cut food?",
+        "options": [
+          "Molar",
+          "Canine",
+          "Incisor",
+          "Gum"
+        ],
+        "correct": 2,
+        "explanation": "Incisors are the front teeth that bite and cut food."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-02",
+        "type": "tf",
+        "q": "Canine teeth help us tear food.",
+        "explanation": "Canines are pointed teeth that tear food.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-03",
+        "type": "drop",
+        "q": "The broad back teeth used for grinding food are called ____.",
+        "explanation": "Molars are back teeth used for grinding.",
+        "expected": "molars",
+        "options": [
+          "molars",
+          "incisors"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-04",
+        "type": "mc",
+        "q": "What is the hard outermost layer of a tooth called?",
+        "options": [
+          "Pulp",
+          "Root",
+          "Gum",
+          "Enamel"
+        ],
+        "correct": 3,
+        "explanation": "Enamel is the hard outer covering of the tooth."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-05",
+        "type": "tf",
+        "q": "The nerves inside a tooth are found in its enamel.",
+        "explanation": "Nerves are found in the pulp inside the tooth.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-06",
+        "type": "drop",
+        "q": "The first teeth children grow are called ____ teeth.",
+        "explanation": "Milk teeth grow before permanent teeth.",
+        "expected": "milk",
+        "options": [
+          "milk",
+          "permanent"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-07",
+        "type": "mc",
+        "q": "Why is it important to take care of milk teeth?",
+        "options": [
+          "They help children chew and speak clearly.",
+          "They can never be damaged.",
+          "They will stay forever.",
+          "They do not need brushing."
+        ],
+        "correct": 0,
+        "explanation": "Milk teeth help with eating and speaking before permanent teeth grow."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-08",
+        "type": "tf",
+        "q": "Brushing our teeth regularly helps prevent tooth decay.",
+        "explanation": "Regular brushing helps remove plaque.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-09",
+        "type": "drop",
+        "q": "Eating sugary snacks too often can lead to tooth ____.",
+        "explanation": "Frequent sugar intake can increase tooth decay.",
+        "expected": "decay",
+        "options": [
+          "decay",
+          "growth"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03A-001-10",
+        "type": "mc",
+        "q": "Who should examine a painful or decaying tooth?",
+        "options": [
+          "Pharmacist",
+          "Dentist",
+          "Optician",
+          "Veterinarian"
+        ],
+        "correct": 1,
+        "explanation": "Dentists examine and treat dental problems."
+      }
+    ],
+    "Food and Digestion": [
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-01",
+        "type": "mc",
+        "q": "What does digestion do to the food we eat?",
+        "options": [
+          "Moves oxygen around the body.",
+          "Pumps blood to body organs.",
+          "Controls how quickly we breathe.",
+          "Breaks food into smaller, simpler substances."
+        ],
+        "correct": 3,
+        "explanation": "Digestion breaks down food so the body can absorb and use nutrients."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-02",
+        "type": "tf",
+        "q": "Chewing food breaks it into smaller pieces before swallowing.",
+        "explanation": "Teeth break food into smaller pieces for swallowing.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-03",
+        "type": "drop",
+        "q": "Digestion helps our bodies absorb useful ____ from food.",
+        "explanation": "Digestion allows nutrients to be absorbed.",
+        "expected": "nutrients",
+        "options": [
+          "nutrients",
+          "shadows"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-04",
+        "type": "mc",
+        "q": "Which part of the digestive system first chews and mixes food with saliva?",
+        "options": [
+          "Mouth",
+          "Small intestine",
+          "Large intestine",
+          "Stomach"
+        ],
+        "correct": 0,
+        "explanation": "Digestion begins in the mouth."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-05",
+        "type": "tf",
+        "q": "The windpipe carries swallowed food into the stomach.",
+        "explanation": "Swallowed food travels down the oesophagus to reach the stomach.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-06",
+        "type": "drop",
+        "q": "The ____ mixes food with digestive juices.",
+        "explanation": "The stomach churns food with digestive juices.",
+        "expected": "stomach",
+        "options": [
+          "stomach",
+          "heart"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-07",
+        "type": "mc",
+        "q": "Where are most digested nutrients absorbed into the blood?",
+        "options": [
+          "Mouth",
+          "Small intestine",
+          "Large intestine",
+          "Oesophagus"
+        ],
+        "correct": 1,
+        "explanation": "Most nutrient absorption happens in the small intestine."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-08",
+        "type": "tf",
+        "q": "The large intestine absorbs water from undigested food.",
+        "explanation": "The large intestine absorbs water from food waste.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-09",
+        "type": "drop",
+        "q": "Undigested food leaves the body as ____.",
+        "explanation": "Undigested waste eventually leaves the body as faeces.",
+        "expected": "faeces",
+        "options": [
+          "faeces",
+          "saliva"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U03B-001-10",
+        "type": "mc",
+        "q": "Which action helps the digestive system work well when eating?",
+        "options": [
+          "Swallow large pieces of food.",
+          "Eat very quickly without chewing.",
+          "Chew food properly before swallowing.",
+          "Take large bites while talking."
+        ],
+        "correct": 2,
+        "explanation": "Chewing food well helps start digestion and makes swallowing easier."
+      }
+    ],
+    "Animal Eating Habits": [
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-01",
+        "type": "mc",
+        "q": "An animal that feeds mainly on plants is called a ...",
+        "options": [
+          "Herbivore",
+          "Carnivore",
+          "Omnivore",
+          "Insectivore"
+        ],
+        "correct": 0,
+        "explanation": "A herbivore is an animal that eats plants."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-02",
+        "type": "tf",
+        "q": "A carnivore is an animal that eats other animals.",
+        "explanation": "Carnivores eat other animals.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-03",
+        "type": "drop",
+        "q": "A chicken eats seeds and insects, so it is an ____.",
+        "explanation": "An omnivore eats both plant and animal food.",
+        "expected": "omnivore",
+        "options": [
+          "omnivore",
+          "herbivore"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-04",
+        "type": "mc",
+        "q": "A tiger has long, sharp canine teeth. What are these adapted for?",
+        "options": [
+          "Grinding grass",
+          "Holding and tearing meat",
+          "Cracking seeds only",
+          "Sucking nectar"
+        ],
+        "correct": 1,
+        "explanation": "Sharp canine teeth help meat-eating animals tear flesh."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-05",
+        "type": "tf",
+        "q": "Cows use long, pointed fangs to grind grass.",
+        "explanation": "Cows use broad molars to grind grass.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-06",
+        "type": "drop",
+        "q": "A bird that eats seeds and insects eats food from plants and ____.",
+        "explanation": "Seeds are plant food, and insects are animals.",
+        "expected": "animals",
+        "options": [
+          "animals",
+          "stones"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-07",
+        "type": "mc",
+        "q": "Which of these animals mainly feeds on leaves?",
+        "options": [
+          "Eagle",
+          "Crocodile",
+          "Giraffe",
+          "Shark"
+        ],
+        "correct": 2,
+        "explanation": "Giraffes are plant-eating herbivores."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-08",
+        "type": "tf",
+        "q": "Different animals have teeth suited to the foods they eat.",
+        "explanation": "Teeth help animals eat their different foods.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-09",
+        "type": "drop",
+        "q": "A rabbit mainly eats ____ such as grass and leaves.",
+        "explanation": "Rabbits eat plant food such as grass and leaves.",
+        "expected": "plants",
+        "options": [
+          "plants",
+          "meat"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U04-001-10",
+        "type": "mc",
+        "q": "How can we find out what a pet eats?",
+        "options": [
+          "Measure the length of its tail.",
+          "Count its spots.",
+          "Look only at its sleeping place.",
+          "Watch what food it chooses and eats."
+        ],
+        "correct": 3,
+        "explanation": "Observing what an animal eats helps us understand its eating habits."
+      }
+    ],
+    "Plant Reproduction": [
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-01",
+        "type": "mc",
+        "q": "Why do plants reproduce?",
+        "options": [
+          "To absorb more water.",
+          "To grow more plants of the same kind.",
+          "To store extra food.",
+          "To grow taller."
+        ],
+        "correct": 1,
+        "explanation": "Reproduction allows new plants of the same kind to grow."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-02",
+        "type": "tf",
+        "q": "A seed can grow into a new plant when conditions are suitable.",
+        "explanation": "Seeds can germinate and grow under suitable conditions.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-03",
+        "type": "drop",
+        "q": "A ____ plant can grow from a stem cutting.",
+        "explanation": "Rose plants can grow from stem cuttings.",
+        "expected": "rose",
+        "options": [
+          "rose",
+          "coconut"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-04",
+        "type": "mc",
+        "q": "Which plant can reproduce through underground tubers?",
+        "options": [
+          "Sunflower",
+          "Watermelon",
+          "Potato",
+          "Mango"
+        ],
+        "correct": 2,
+        "explanation": "Potatoes can sprout from buds on tubers."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-05",
+        "type": "tf",
+        "q": "Strawberry plants can grow new plants along runners.",
+        "explanation": "Runners help strawberry plants reproduce.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-06",
+        "type": "drop",
+        "q": "The setawar plant can grow small new plants from its ____.",
+        "explanation": "Setawar produces little plantlets along its leaves.",
+        "expected": "leaves",
+        "options": [
+          "leaves",
+          "fruits"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-07",
+        "type": "mc",
+        "q": "Why might a gardener plant a rose stem cutting?",
+        "options": [
+          "To make the flowers change colour.",
+          "To make the stem dry out.",
+          "To make the original rose stop growing.",
+          "To grow a new rose plant."
+        ],
+        "correct": 3,
+        "explanation": "Some plants, such as roses, can grow new plants from stem cuttings."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-08",
+        "type": "tf",
+        "q": "Plants never need to reproduce because they live forever.",
+        "explanation": "Plants reproduce so their kind can continue.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-09",
+        "type": "drop",
+        "q": "Ferns reproduce using ____ rather than seeds.",
+        "explanation": "Ferns produce spores.",
+        "expected": "spores",
+        "options": [
+          "spores",
+          "flowers"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U05-001-10",
+        "type": "mc",
+        "q": "Which part of ginger can grow into a new plant?",
+        "options": [
+          "Its underground stem",
+          "Its flower petals",
+          "Its old leaves",
+          "Its dried fruit skin"
+        ],
+        "correct": 0,
+        "explanation": "Ginger can grow new plants from its underground stem, called a rhizome."
+      }
+    ],
+    "Density": [
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-01",
+        "type": "mc",
+        "q": "Which object is most likely to float on water?",
+        "options": [
+          "A dry cork",
+          "A steel spoon",
+          "A glass marble",
+          "A metal coin"
+        ],
+        "correct": 0,
+        "explanation": "Cork is typically less dense than water."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-02",
+        "type": "tf",
+        "q": "Density depends on how much mass is in a certain volume.",
+        "explanation": "Density compares mass with volume.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-03",
+        "type": "drop",
+        "q": "A metal coin usually sinks because it is ____ than water.",
+        "explanation": "Objects denser than water usually sink.",
+        "expected": "denser",
+        "options": [
+          "denser",
+          "less dense"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-04",
+        "type": "mc",
+        "q": "A cork is pushed under water and then released. What will it do?",
+        "options": [
+          "Sink to the bottom.",
+          "Rise and float again.",
+          "Stay where it was released.",
+          "Dissolve into the water."
+        ],
+        "correct": 1,
+        "explanation": "Cork is less dense than water, so it rises and floats."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-05",
+        "type": "tf",
+        "q": "A wooden raft can float on water.",
+        "explanation": "Wood is usually less dense than water.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-06",
+        "type": "drop",
+        "q": "Adding enough salt to water makes the water ____.",
+        "explanation": "Dissolved salt increases water's density.",
+        "expected": "denser",
+        "options": [
+          "denser",
+          "less dense"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-07",
+        "type": "mc",
+        "q": "Oil commonly forms a layer above water. What does that suggest?",
+        "options": [
+          "Oil is denser than water.",
+          "Oil and water have exactly the same density.",
+          "Oil is less dense than water",
+          "Oil dissolves completely in water."
+        ],
+        "correct": 2,
+        "explanation": "Oil typically floats above water because of its lower density."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-08",
+        "type": "tf",
+        "q": "When two blocks are the same size, the lighter block is always denser.",
+        "explanation": "The heavier one has more mass in the same volume.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-09",
+        "type": "drop",
+        "q": "A piece of plastic that is less dense than water will usually ____.",
+        "explanation": "An object less dense than water usually floats.",
+        "expected": "float",
+        "options": [
+          "float",
+          "sink"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U07-001-10",
+        "type": "mc",
+        "q": "Why is it often easier to float in seawater than in freshwater?",
+        "options": [
+          "Freshwater is always deeper.",
+          "Salt removes the swimmer's weight.",
+          "Seawater contains fewer dissolved materials.",
+          "Seawater contains salt, making it denser."
+        ],
+        "correct": 3,
+        "explanation": "Dissolved salt makes seawater denser and helps objects float."
+      }
+    ],
+    "Acid and Alkali": [
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-01",
+        "type": "mc",
+        "q": "What happens to blue litmus paper in an acidic solution?",
+        "options": [
+          "It stays blue.",
+          "It turns red",
+          "It turns yellow.",
+          "It turns green."
+        ],
+        "correct": 1,
+        "explanation": "Acids change blue litmus paper to red."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-02",
+        "type": "tf",
+        "q": "An alkaline liquid turns red litmus paper blue.",
+        "explanation": "Red litmus changes to blue in an alkali.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-03",
+        "type": "drop",
+        "q": "Vinegar is an example of an ____ liquid.",
+        "explanation": "Vinegar contains an acid.",
+        "expected": "acidic",
+        "options": [
+          "acidic",
+          "alkaline"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-04",
+        "type": "mc",
+        "q": "Which of these substances is usually alkaline?",
+        "options": [
+          "Lemon juice",
+          "Orange juice",
+          "Soap solution",
+          "Vinegar"
+        ],
+        "correct": 2,
+        "explanation": "Many soap solutions are alkaline."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-05",
+        "type": "tf",
+        "q": "A neutral liquid is neither acidic nor alkaline.",
+        "explanation": "Neutral means neither acidic nor alkaline.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-06",
+        "type": "drop",
+        "q": "Distilled water is generally ____.",
+        "explanation": "Pure distilled water is generally neutral.",
+        "expected": "neutral",
+        "options": [
+          "neutral",
+          "acidic"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-07",
+        "type": "mc",
+        "q": "Why do we use indicator paper to test an unknown liquid instead of tasting it?",
+        "options": [
+          "The liquid might look clear.",
+          "Indicator paper always smells stronger.",
+          "Every unknown liquid tastes sour.",
+          "Tasting unknown liquids may be unsafe."
+        ],
+        "correct": 3,
+        "explanation": "Indicator paper can help test acidity without tasting potentially harmful liquids."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-08",
+        "type": "tf",
+        "q": "A liquid that turns red litmus paper blue is acidic.",
+        "explanation": "An alkali turns red litmus blue.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-09",
+        "type": "drop",
+        "q": "Neutral water does not ____ the colour of red or blue litmus paper.",
+        "explanation": "Neutral water does not change either litmus colour.",
+        "expected": "change",
+        "options": [
+          "change",
+          "darken"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U08-001-10",
+        "type": "mc",
+        "q": "Which plant material can change colour in acids and alkalis?",
+        "options": [
+          "Purple cabbage juice",
+          "Cooking oil",
+          "Clear sugar water",
+          "Plain salt water"
+        ],
+        "correct": 0,
+        "explanation": "Purple cabbage juice contains natural colour pigments that react to acids and alkalis."
+      }
+    ],
+    "The Solar System": [
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-01",
+        "type": "mc",
+        "q": "Which star is at the centre of our Solar System?",
+        "options": [
+          "The Moon",
+          "Earth",
+          "The Sun",
+          "Jupiter"
+        ],
+        "correct": 2,
+        "explanation": "The planets orbit the Sun."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-02",
+        "type": "tf",
+        "q": "Mercury is the planet closest to the Sun.",
+        "explanation": "Mercury is nearest to the Sun.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-03",
+        "type": "drop",
+        "q": "The third planet from the Sun is ____.",
+        "explanation": "Earth is third from the Sun.",
+        "expected": "Earth",
+        "options": [
+          "Earth",
+          "Mars"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-04",
+        "type": "mc",
+        "q": "Which planet is the largest in our Solar System?",
+        "options": [
+          "Saturn",
+          "Neptune",
+          "Uranus",
+          "Jupiter"
+        ],
+        "correct": 3,
+        "explanation": "Jupiter is the largest planet."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-05",
+        "type": "tf",
+        "q": "Saturn is known for its large ring system.",
+        "explanation": "Saturn has prominent rings.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-06",
+        "type": "drop",
+        "q": "The farthest of the eight planets from the Sun is ____.",
+        "explanation": "Neptune is the eighth planet.",
+        "expected": "Neptune",
+        "options": [
+          "Neptune",
+          "Uranus"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-07",
+        "type": "mc",
+        "q": "What is the path a planet follows around the Sun called?",
+        "options": [
+          "An orbit",
+          "An axis",
+          "A ring",
+          "A shadow"
+        ],
+        "correct": 0,
+        "explanation": "A planet travels along an orbit around the Sun."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-08",
+        "type": "tf",
+        "q": "Neptune takes the shortest time to travel around the Sun.",
+        "explanation": "Mercury has the shortest orbit time.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-09",
+        "type": "drop",
+        "q": "The planet known as the Red Planet is ____.",
+        "explanation": "Mars looks reddish because of iron-rich dust.",
+        "expected": "Mars",
+        "options": [
+          "Mars",
+          "Venus"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U09-001-10",
+        "type": "mc",
+        "q": "Which of these is a natural satellite of Earth?",
+        "options": [
+          "Mars",
+          "The Moon",
+          "Saturn",
+          "The Sun"
+        ],
+        "correct": 1,
+        "explanation": "The Moon naturally orbits Earth."
+      }
+    ],
+    "Pulleys and Machines": [
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-01",
+        "type": "mc",
+        "q": "What is a pulley?",
+        "options": [
+          "A flat board used as a ramp.",
+          "A bar that moves around a fixed point.",
+          "A wheel used without any rope.",
+          "A wheel with a groove for a rope."
+        ],
+        "correct": 3,
+        "explanation": "A pulley has a grooved wheel that holds a rope."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-02",
+        "type": "tf",
+        "q": "A fixed pulley can change the direction of a pulling force.",
+        "explanation": "A fixed pulley can let us pull down to lift something up.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-03",
+        "type": "drop",
+        "q": "A flagpole uses a ____ to raise and lower its flag.",
+        "explanation": "Flagpoles commonly use pulleys.",
+        "expected": "pulley",
+        "options": [
+          "pulley",
+          "ruler"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-04",
+        "type": "mc",
+        "q": "When lifting a load with a fixed pulley, in which direction can the person pull?",
+        "options": [
+          "Downwards",
+          "Only upwards",
+          "Only sideways",
+          "In a circle only"
+        ],
+        "correct": 0,
+        "explanation": "Pulling down can raise the load."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-05",
+        "type": "tf",
+        "q": "The wheel of a pulley turns when the rope moves over it.",
+        "explanation": "The grooved wheel turns with the rope.",
+        "expected": true
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-06",
+        "type": "drop",
+        "q": "A bucket must be tied ____ to the rope before lifting it.",
+        "explanation": "A load must be fastened securely before it is lifted.",
+        "expected": "securely",
+        "options": [
+          "securely",
+          "loosely"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-07",
+        "type": "mc",
+        "q": "Where might you find a pulley used to lift a bucket of water?",
+        "options": [
+          "Beside a classroom desk.",
+          "At a well",
+          "On a kitchen shelf.",
+          "Inside a schoolbag."
+        ],
+        "correct": 1,
+        "explanation": "A pulley can be used to lift a bucket from a well."
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-08",
+        "type": "tf",
+        "q": "Using several pulleys always makes a heavy load even heavier.",
+        "explanation": "Multiple pulleys can reduce the force needed to lift a heavy load.",
+        "expected": false
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-09",
+        "type": "drop",
+        "q": "A ____ may use pulleys to lift construction materials.",
+        "explanation": "Cranes use pulleys to lift heavy loads.",
+        "expected": "crane",
+        "options": [
+          "crane",
+          "thermometer"
+        ]
+      },
+      {
+        "id": "SCI-PM3-QUIZ-U10-001-10",
+        "type": "mc",
+        "q": "What should you check before using a model pulley?",
+        "options": [
+          "The rope is loose.",
+          "The support is unstable.",
+          "The rope and support are secure.",
+          "The load hangs above other pupils."
+        ],
+        "correct": 2,
+        "explanation": "Always check that the pulley, support and rope are secure before using it."
       }
     ]
   }
