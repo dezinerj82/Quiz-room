@@ -1480,7 +1480,7 @@ const qrLanguageQuizTitles={
   '현재형 문장':'현재형 문장 (Present Tense)'
  }
 };
-function qrDisplayQuizTopic(s,topic){if((s==='English'&&topic==='PM3 Practice')||(s==='Malay'&&topic==='Latihan PM3')||(s==='Korean'&&topic==='연습 퀴즈'))return 'Practice Quiz';return s==='English'&&topic==='Word Meanings 2'?'Vocabulary':qrLanguageQuizTitles[s]?.[topic]||topic}
+function qrDisplayQuizTopic(s,topic){if((s==='English'&&topic==='PM3 Practice')||(s==='Malay'&&topic==='Latihan PM3')||(s==='Korean'&&topic==='연습 퀴즈'))return 'Vocabulary and Grammar';return s==='English'&&topic==='Word Meanings 2'?'Vocabulary':qrLanguageQuizTitles[s]?.[topic]||topic}
 function availableEntries(level,s,category){
  const entries=[];
  // Each category is shown only when it contains real playable questions.
