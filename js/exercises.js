@@ -3410,7 +3410,7 @@ const exerciseBank={
       },
       {
         "type": "drop",
-        "q": "나보다 나이가 많은 남자 형제는 ____예요.",
+        "q": "남학생이 자기보다 나이가 많은 남자 형제를 말할 때 ____이라고 해요.",
         "expected": "형",
         "options": [
           "형",
@@ -6730,7 +6730,7 @@ const exerciseBank={
         "id": "SCI-PM3-QUIZ-U08-001-09",
         "type": "drop",
         "q": "Neutral water does not ____ the colour of red or blue litmus paper.",
-        "explanation": "Neutral water does not change either litmus colour.",
+        "explanation": "Neutral water leaves red and blue litmus paper unchanged.",
         "expected": "change",
         "options": [
           "change",
