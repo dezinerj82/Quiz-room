@@ -6,7 +6,7 @@ button,input,select,textarea{font:inherit}
 button{cursor:pointer;touch-action:manipulation}
 .hidden{display:none!important}
 .screen{min-height:100dvh;width:100%}
-.tile,.version,.pill,.level-button{border:0;font-weight:700}
+.version,.pill,.level-button{border:0;font-weight:700}
 .versionlist{display:grid;gap:var(--density-space,18px)}
 #results .resultpanel{margin:0 auto;text-align:center}
 .time-warning{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:var(--density-space);background:color-mix(in srgb,var(--qr-primary) 50%,transparent)}
@@ -121,7 +121,7 @@ body:not(.auth-locked) .qr-profile-btn,
 body:not(.auth-locked) .pill,
 body:not(.auth-locked) .level-button,
 body:not(.auth-locked) .version,
-body:not(.auth-locked) .tile,
+
 body:not(.auth-locked) .resultbutton,
 body:not(.auth-locked) .bookmark-list-button,
 body:not(.auth-locked) .qr-steps button{
@@ -129,7 +129,7 @@ border-radius:var(--qr-button-radius)!important;
 
 font-family:var(--qr-font)!important;
 }
-body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button):not(:disabled):hover:not(.answer):not(.tile):not(.exitpill):not(.qr-profile-btn){
+body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button):not(:disabled):hover:not(.answer):not(.exitpill):not(.qr-profile-btn){
  background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;
 }
 body:not(.auth-locked) .qr-profile-btn{background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;border:0!important;padding:var(--qr-unified-padding)!important}
@@ -240,7 +240,7 @@ body:not(.auth-locked) .qr-main .resultpanel,body:not(.auth-locked) .qr-main .re
 body:not(.auth-locked) .qr-main .modal-content,body:not(.auth-locked) .qr-main .modalbox{
 padding:var(--qr-unified-padding)!important;border-radius:var(--density-radius)!important;
 }
-body:not(.auth-locked) .qr-main .qr-home-grid,body:not(.auth-locked) .qr-main .tilegrid,
+body:not(.auth-locked) .qr-main .qr-home-grid,
 body:not(.auth-locked) .qr-main .answers,body:not(.auth-locked) .qr-main .options{gap:var(--density-space)!important}
 body:not(.auth-locked) .qr-main .qr-hero,body:not(.auth-locked) .qr-main .qr-top,
 body:not(.auth-locked) .qr-main .qr-card:not(:last-child){margin-bottom:var(--density-space)!important}
@@ -253,7 +253,7 @@ body:not(.auth-locked) .qr-main .feedback{font-size:var(--qr-font-small)!importa
 body:not(.auth-locked) .qr-main button:not(.qr-side button):not(.answer):not(.letter):not(.number),
 body:not(.auth-locked) .qr-main .qr-btn,body:not(.auth-locked) .qr-main .qr-profile-btn,
 body:not(.auth-locked) .qr-main .pill,body:not(.auth-locked) .qr-main .version,
-body:not(.auth-locked) .qr-main .resultbutton,body:not(.auth-locked) .qr-main .tile{
+body:not(.auth-locked) .qr-main .resultbutton{
 min-height:var(--density-control)!important;font-size:var(--qr-font-body)!important;padding:var(--qr-unified-padding)!important;border-radius:999px!important;
 }
 body:not(.auth-locked) .qr-main input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
@@ -954,9 +954,9 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
 
 /* Shared equal-sided control padding; panel/card interiors retain their existing spacing. */
 :root{--qr-control-padding:9px 16px;--qr-card-padding:20px}
-body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
+body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
 body:not(.auth-locked) #selection .qr-steps button,
-body:not(.auth-locked) #quiz .formula-row input,
+
 #googleGate button{padding:var(--qr-control-padding)!important}
 /* Sidebar navigation keeps its previous separate control padding. */
 body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle){padding:12px!important}
@@ -985,9 +985,9 @@ body:not(.auth-locked) #scoresPage .qr-score-percent{text-align:right;white-spac
 }
 
 /* Shared controls: 9px vertical / 16px horizontal everywhere except left navigation. */
-body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.tile,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
+body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
 body:not(.auth-locked) #selection .qr-steps button,
-body:not(.auth-locked) #quiz .formula-row input,
+
 body:not(.auth-locked) .time-warning-card button,
 body:not(.auth-locked) .qr-crop-modal button,
 #googleGate button{padding:var(--qr-control-padding)!important}
