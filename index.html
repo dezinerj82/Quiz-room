@@ -1336,154 +1336,154 @@ body:not(.auth-locked) #quiz #questionTranslation.qr-vocab-tip{
 
 /* Home visual rebuild, scoped to Home only. Other pages keep their existing functionality and styles. */
 :root{--qr-home-primary:#099aab;--qr-home-secondary:#e6f6f6;--qr-home-third:#fdad56;--qr-home-fourth:#eaaea4;--qr-home-fifth:#e5c8a6;--qr-home-sixth:#e5c8a6;--qr-home-navigation:#dadada;--qr-home-focus:#f1ada4;--qr-home-ink:#171717;--qr-home-gap:20px;--qr-home-inner-padding:24px;--qr-home-stage-radius:44px;--qr-home-radius:32px;--qr-home-pill-radius:999px;--qr-home-shadow:0 12px 30px rgba(9,154,171,.12),0 3px 8px rgba(23,23,23,.04)}
-body:not(.auth-locked) #home{background:var(--qr-home-secondary)!important;color:var(--qr-home-ink);padding:18px!important;min-height:100dvh!important;height:auto!important;overflow:visible!important}
-body:not(.auth-locked) #home .qr-home-shell{display:grid!important;grid-template-columns:190px minmax(240px,310px) minmax(0,1fr)!important;align-items:stretch;gap:var(--qr-home-gap)!important;height:auto!important;min-height:calc(100dvh - 36px)!important;max-width:1920px;margin:auto;padding:12px!important;border-radius:calc(var(--qr-home-stage-radius) + 12px)!important;background:var(--qr-home-secondary);border:0!important;outline:0!important;box-shadow:none!important;overflow:visible!important}
-body:not(.auth-locked) #home .qr-side{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;height:auto!important;min-height:100%!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;gap:var(--qr-home-gap)!important;background:var(--qr-home-primary)!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:var(--qr-home-stage-radius)!important;color:#fff!important}
-body:not(.auth-locked) #home .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
-body:not(.auth-locked) #home .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
-body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
-body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible,.active){background:#fff!important;color:var(--qr-home-primary)!important}
-body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
-body:not(.auth-locked) #home .qr-side .qr-nav-label{display:inline!important}
-body:not(.auth-locked) #home .qr-sidebar-toggle{display:none!important}
-body:not(.auth-locked) #home .qr-home-side{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap)!important;min-width:0;min-height:0;overflow:visible!important;padding:0!important}
-body:not(.auth-locked) #home .qr-home-surface{background:#fff!important;border:0!important;outline:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);padding:var(--qr-home-inner-padding)!important;margin:0!important;min-width:0}
-body:not(.auth-locked) #home .qr-home-profile{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px!important}
-body:not(.auth-locked) #home .qr-home-portrait{display:grid;place-items:center;width:126px;height:126px;border-radius:50%;overflow:hidden;background:var(--qr-home-secondary);color:var(--qr-home-primary);margin:0 auto 4px}
-body:not(.auth-locked) #home .qr-home-portrait img{width:100%;height:100%;object-fit:cover}
-body:not(.auth-locked) #home .qr-home-avatar-initial{font-size:46px;color:var(--qr-home-primary)}
-body:not(.auth-locked) #home .qr-home-profile h2{margin:0!important;font-size:26px!important;font-weight:800;color:var(--qr-home-ink)!important;overflow-wrap:anywhere}
-body:not(.auth-locked) #home .qr-home-accent{color:var(--qr-home-primary)!important;font-size:17px!important;font-weight:800}
-body:not(.auth-locked) #home .qr-home-subtitle{color:#929a9d!important;font-size:14px!important;line-height:1.4;text-align:center}
-body:not(.auth-locked) #home .qr-home-stats{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #e9eeee;padding-top:16px;margin-top:14px}
-body:not(.auth-locked) #home .qr-home-stats>div{display:grid;gap:7px;align-content:start;padding:0 5px;text-align:center;min-width:0}
-body:not(.auth-locked) #home .qr-home-stats>div+div{border-left:1px solid #e9eeee}
-body:not(.auth-locked) #home .qr-home-stats span{font-size:11px!important;color:#929a9d!important}
-body:not(.auth-locked) #home .qr-home-stats strong{font-size:20px;color:var(--qr-home-ink);font-weight:800}
-body:not(.auth-locked) #home .qr-home-highest{display:grid;align-content:start;gap:var(--qr-home-gap);flex:1;min-height:0}
-body:not(.auth-locked) #home .qr-home-best-title{display:flex;align-items:center;gap:12px}
-body:not(.auth-locked) #home .qr-home-trophy{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:14px;background:#fff0de;color:var(--qr-home-third);font-size:26px}
-body:not(.auth-locked) #home .qr-home-best-title h2{font-size:20px!important;color:var(--qr-home-ink)!important;margin:0!important}
-body:not(.auth-locked) #home .qr-home-best-title p{font-size:12px!important;color:#929a9d!important}
-body:not(.auth-locked) #home .qr-home-best-level{margin:0}
-body:not(.auth-locked) #home #qrBestLevel{width:auto;max-width:100%;font-size:13px!important;color:var(--qr-home-primary)!important;background:var(--qr-home-secondary)!important;border:0!important;outline:0!important;box-shadow:none!important}
-body:not(.auth-locked) #home #qrBestLevel:is(:hover,:focus,:focus-visible){border:0!important;outline:0!important;outline-offset:0!important;box-shadow:none!important}
-body:not(.auth-locked) #home .qr-best-list{display:grid;gap:16px!important}
-body:not(.auth-locked) #home .qr-best-subject{display:block!important;min-width:0}
-body:not(.auth-locked) #home .qr-best-subject .qr-best-heading{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:7px 10px;align-items:center}
-body:not(.auth-locked) #home .qr-best-subject h3{grid-column:1;font-size:14px!important;color:var(--qr-home-ink)!important;font-weight:800}
-body:not(.auth-locked) #home .qr-best-percentage{grid-column:2;grid-row:1;font-size:14px!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #home .qr-best-track{grid-column:1/-1;grid-row:2;width:100%;height:9px!important;min-height:9px!important;background:#e7eef0!important;border-radius:999px}
-body:not(.auth-locked) #home .qr-best-track span{background:var(--qr-home-subject-color,var(--qr-home-primary))!important;border-radius:inherit}
-body:not(.auth-locked) #home .qr-best-subject:nth-child(5n+1){--qr-home-subject-color:var(--qr-home-primary)}
-body:not(.auth-locked) #home .qr-best-subject:nth-child(5n+2){--qr-home-subject-color:var(--qr-home-third)}
-body:not(.auth-locked) #home .qr-best-subject:nth-child(5n+3){--qr-home-subject-color:var(--qr-home-fourth)}
-body:not(.auth-locked) #home .qr-best-subject:nth-child(5n+4){--qr-home-subject-color:var(--qr-home-fifth)}
-body:not(.auth-locked) #home .qr-best-subject:nth-child(5n+5){--qr-home-subject-color:var(--qr-home-secondary)}
-body:not(.auth-locked) #home .qr-home-main{min-width:0!important;min-height:0!important;max-width:none!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;background:#fff!important;box-shadow:var(--qr-home-shadow)}
-body:not(.auth-locked) #home .qr-top{margin:0 0 var(--qr-home-gap)!important;align-items:center;gap:var(--qr-home-gap)!important}
-body:not(.auth-locked) #home .qr-top h1{font-size:34px!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #home .qr-profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-body:not(.auth-locked) #home .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:14px!important;font-weight:800}
-body:not(.auth-locked) #home .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-primary)!important;color:#fff!important}
-body:not(.auth-locked) #home .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
-body:not(.auth-locked) #home .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
-body:not(.auth-locked) #home .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 8px!important}
-body:not(.auth-locked) #home .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
-body:not(.auth-locked) #home .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-primary)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
-body:not(.auth-locked) #home .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #home .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
-body:not(.auth-locked) #home .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
-body:not(.auth-locked) #home .qr-home-hero-mark span:nth-child(2){position:absolute;top:7%;right:9%;font-size:clamp(12px,2.6vw,25px);color:var(--qr-home-fourth)}
-body:not(.auth-locked) #home .qr-home-hero-mark span:nth-child(3){position:absolute;bottom:4%;left:3%;font-size:clamp(10px,2vw,19px);color:var(--qr-home-primary)}
-body:not(.auth-locked) #home .qr-home-section-title{display:flex;justify-content:space-between;align-items:center;gap:var(--qr-home-gap);margin:0 0 var(--qr-home-gap)}
-body:not(.auth-locked) #home .qr-home-section-title h2{margin:0!important;font-size:20px!important;font-weight:800;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #home .qr-home-section-title p{color:#929a9d!important;font-size:13px!important}
-body:not(.auth-locked) #home .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
-body:not(.auth-locked) #home .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) #home .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
-body:not(.auth-locked) #home .qr-home-subject:nth-child(5n+2){background:#ffeddd!important}
-body:not(.auth-locked) #home .qr-home-subject:nth-child(5n+3){background:#ffeaeb!important}
-body:not(.auth-locked) #home .qr-home-subject:nth-child(5n+4){background:#f8eadb!important}
-body:not(.auth-locked) #home .qr-home-subject:nth-child(5n+5){background:#e7f8f8!important}
-body:not(.auth-locked) #home .qr-home-subject:is(:hover,:focus-visible){background:var(--qr-home-focus)!important}
-body:not(.auth-locked) #home .qr-home-bottom{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
-body:not(.auth-locked) #home .qr-home-bottom>section{min-width:0}
-body:not(.auth-locked) #home .qr-home-text-link{border:0!important;background:transparent!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
-body:not(.auth-locked) #home .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
-body:not(.auth-locked) #home .qr-home-activity-row{display:flex;align-items:center;gap:12px;padding:11px 0;min-width:0}
-body:not(.auth-locked) #home .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee}
-body:not(.auth-locked) #home .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
-body:not(.auth-locked) #home .qr-home-activity-copy{min-width:0;display:grid;gap:4px;flex:1}
-body:not(.auth-locked) #home .qr-home-activity-copy strong{font-size:13px;color:var(--qr-home-ink);overflow-wrap:anywhere}
-body:not(.auth-locked) #home .qr-home-activity-copy small{font-size:11px;color:#929a9d}
-body:not(.auth-locked) #home .qr-home-activity-value{flex:0 0 auto;border-radius:999px;padding:7px 10px;background:var(--qr-home-secondary);font-size:13px;color:var(--qr-home-primary);font-weight:800}
-body:not(.auth-locked) #home .qr-home-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:200px;padding:var(--qr-home-inner-padding)!important}
-body:not(.auth-locked) #home .qr-home-ring{width:142px;height:142px;flex:0 0 142px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(closest-side,#fff 78%,transparent 80% 100%),conic-gradient(var(--qr-home-primary) var(--qr-home-ring-value,0%),#e8eef0 0)}
-body:not(.auth-locked) #home .qr-home-ring strong{font-size:26px;color:var(--qr-home-ink)}
-body:not(.auth-locked) #home .qr-home-ring span{font-size:12px;color:#929a9d}
-body:not(.auth-locked) #home .qr-home-overview-stats{flex:1;display:grid;gap:18px;min-width:0}
-body:not(.auth-locked) #home .qr-home-overview-stats p{display:grid;gap:3px;padding-bottom:10px;border-bottom:1px solid #e9eeee}
-body:not(.auth-locked) #home .qr-home-overview-stats span{font-size:12px;color:#929a9d}
-body:not(.auth-locked) #home .qr-home-overview-stats strong{font-size:14px;color:var(--qr-home-ink)}
-@media(max-width:1170px){body:not(.auth-locked) #home .qr-home-shell{grid-template-columns:155px minmax(215px,265px) minmax(0,1fr)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) #home .qr-side{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle){gap:9px!important;padding:12px!important;font-size:14px!important}body:not(.auth-locked) #home .qr-home-main{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) #home .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}body:not(.auth-locked) #home .qr-home-bottom{grid-template-columns:1fr}body:not(.auth-locked) #home .qr-home-ring{width:130px;height:130px;flex-basis:130px}}
+body:not(.auth-locked) :is(#home,#scoresPage){background:var(--qr-home-secondary)!important;color:var(--qr-home-ink);padding:18px!important;min-height:100dvh!important;height:auto!important;overflow:visible!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{display:grid!important;grid-template-columns:190px minmax(240px,310px) minmax(0,1fr)!important;align-items:stretch;gap:var(--qr-home-gap)!important;height:auto!important;min-height:calc(100dvh - 36px)!important;max-width:1920px;margin:auto;padding:12px!important;border-radius:calc(var(--qr-home-stage-radius) + 12px)!important;background:var(--qr-home-secondary);border:0!important;outline:0!important;box-shadow:none!important;overflow:visible!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;height:auto!important;min-height:100%!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;gap:var(--qr-home-gap)!important;background:var(--qr-home-primary)!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:var(--qr-home-stage-radius)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible,.active){background:#fff!important;color:var(--qr-home-primary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side .qr-nav-label{display:inline!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-sidebar-toggle{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap)!important;min-width:0;min-height:0;overflow:visible!important;padding:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-surface{background:#fff!important;border:0!important;outline:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);padding:var(--qr-home-inner-padding)!important;margin:0!important;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-profile{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait{display:grid;place-items:center;width:126px;height:126px;border-radius:50%;overflow:hidden;background:var(--qr-home-secondary);color:var(--qr-home-primary);margin:0 auto 4px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait img{width:100%;height:100%;object-fit:cover}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-avatar-initial{font-size:46px;color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-profile h2{margin:0!important;font-size:26px!important;font-weight:800;color:var(--qr-home-ink)!important;overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-accent{color:var(--qr-home-primary)!important;font-size:17px!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subtitle{color:#929a9d!important;font-size:14px!important;line-height:1.4;text-align:center}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #e9eeee;padding-top:16px;margin-top:14px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats>div{display:grid;gap:7px;align-content:start;padding:0 5px;text-align:center;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats>div+div{border-left:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats span{font-size:11px!important;color:#929a9d!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats strong{font-size:20px;color:var(--qr-home-ink);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-highest{display:grid;align-content:start;gap:var(--qr-home-gap);flex:1;min-height:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title{display:flex;align-items:center;gap:12px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-trophy{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:14px;background:#fff0de;color:var(--qr-home-third);font-size:26px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title h2{font-size:20px!important;color:var(--qr-home-ink)!important;margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title p{font-size:12px!important;color:#929a9d!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-level{margin:0}
+body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel{width:auto;max-width:100%;font-size:13px!important;color:var(--qr-home-primary)!important;background:var(--qr-home-secondary)!important;border:0!important;outline:0!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel:is(:hover,:focus,:focus-visible){border:0!important;outline:0!important;outline-offset:0!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-list{display:grid;gap:16px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject{display:block!important;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject .qr-best-heading{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:7px 10px;align-items:center}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject h3{grid-column:1;font-size:14px!important;color:var(--qr-home-ink)!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{grid-column:2;grid-row:1;font-size:14px!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track{grid-column:1/-1;grid-row:2;width:100%;height:9px!important;min-height:9px!important;background:#e7eef0!important;border-radius:999px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track span{background:var(--qr-home-subject-color,var(--qr-home-primary))!important;border-radius:inherit}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+1){--qr-home-subject-color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+2){--qr-home-subject-color:var(--qr-home-third)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+3){--qr-home-subject-color:var(--qr-home-fourth)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+4){--qr-home-subject-color:var(--qr-home-fifth)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+5){--qr-home-subject-color:var(--qr-home-secondary)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{min-width:0!important;min-height:0!important;max-width:none!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;background:#fff!important;box-shadow:var(--qr-home-shadow)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-top{margin:0 0 var(--qr-home-gap)!important;align-items:center;gap:var(--qr-home-gap)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-top h1{font-size:34px!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:14px!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-primary)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 8px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-primary)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(2){position:absolute;top:7%;right:9%;font-size:clamp(12px,2.6vw,25px);color:var(--qr-home-fourth)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(3){position:absolute;bottom:4%;left:3%;font-size:clamp(10px,2vw,19px);color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title{display:flex;justify-content:space-between;align-items:center;gap:var(--qr-home-gap);margin:0 0 var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title h2{margin:0!important;font-size:20px!important;font-weight:800;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title p{color:#929a9d!important;font-size:13px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+2){background:#ffeddd!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+3){background:#ffeaeb!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+4){background:#f8eadb!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+5){background:#e7f8f8!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:is(:hover,:focus-visible){background:var(--qr-home-focus)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom>section{min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-text-link{border:0!important;background:transparent!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-row{display:flex;align-items:center;gap:12px;padding:11px 0;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy{min-width:0;display:grid;gap:4px;flex:1}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy strong{font-size:13px;color:var(--qr-home-ink);overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy small{font-size:11px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-value{flex:0 0 auto;border-radius:999px;padding:7px 10px;background:var(--qr-home-secondary);font-size:13px;color:var(--qr-home-primary);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:200px;padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring{width:142px;height:142px;flex:0 0 142px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(closest-side,#fff 78%,transparent 80% 100%),conic-gradient(var(--qr-home-primary) var(--qr-home-ring-value,0%),#e8eef0 0)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring strong{font-size:26px;color:var(--qr-home-ink)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring span{font-size:12px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats{flex:1;display:grid;gap:18px;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats p{display:grid;gap:3px;padding-bottom:10px;border-bottom:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats span{font-size:12px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats strong{font-size:14px;color:var(--qr-home-ink)}
+@media(max-width:1170px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:155px minmax(215px,265px) minmax(0,1fr)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){gap:9px!important;padding:12px!important;font-size:14px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring{width:130px;height:130px;flex-basis:130px}}
 /* At narrower desktop widths, place navigation across the top so no stage is squeezed or separately scrolled. */
 @media(max-width:1080px){
- body:not(.auth-locked) #home .qr-home-shell{grid-template-columns:minmax(240px,290px) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:var(--qr-home-gap)!important}
- body:not(.auth-locked) #home .qr-side{grid-column:1/-1;grid-row:1;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;gap:12px!important;border-radius:var(--qr-home-stage-radius)!important}
- body:not(.auth-locked) #home .qr-nav-brand{width:auto!important;max-width:100%;padding:8px 16px 8px 0!important;margin:0!important;border-bottom:0!important;border-right:1px solid rgba(255,255,255,.3);font-size:16px!important;white-space:normal!important}
- body:not(.auth-locked) #home .qr-nav-brand .qr-icon{width:30px!important;height:30px!important}
- body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle){flex:0 1 auto!important;width:auto!important;min-width:100px!important;min-height:46px!important;padding:10px 16px!important;gap:8px!important;justify-content:center!important;border-radius:var(--qr-home-pill-radius)!important}
- body:not(.auth-locked) #home .qr-home-side{grid-column:1;grid-row:2;align-self:stretch}
- body:not(.auth-locked) #home .qr-home-main{grid-column:2;grid-row:2;align-self:stretch}
- body:not(.auth-locked) #home .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}
- body:not(.auth-locked) #home .qr-home-bottom{grid-template-columns:1fr}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:minmax(240px,290px) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-column:1/-1;grid-row:1;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;gap:12px!important;border-radius:var(--qr-home-stage-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{width:auto!important;max-width:100%;padding:8px 16px 8px 0!important;margin:0!important;border-bottom:0!important;border-right:1px solid rgba(255,255,255,.3);font-size:16px!important;white-space:normal!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand .qr-icon{width:30px!important;height:30px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){flex:0 1 auto!important;width:auto!important;min-width:100px!important;min-height:46px!important;padding:10px 16px!important;gap:8px!important;justify-content:center!important;border-radius:var(--qr-home-pill-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-column:1;grid-row:2;align-self:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{grid-column:2;grid-row:2;align-self:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{grid-template-columns:1fr}
 }
-@media(max-width:740px){body:not(.auth-locked) #home .qr-home-shell{grid-template-rows:auto auto auto!important}body:not(.auth-locked) #home .qr-side{grid-column:1!important;grid-row:1!important}body:not(.auth-locked) #home .qr-home-side{grid-column:1!important;grid-row:2!important}body:not(.auth-locked) #home .qr-home-main{grid-column:1!important;grid-row:3!important}body:not(.auth-locked) #home{padding:10px!important;height:auto!important;min-height:100dvh!important;overflow:visible!important}body:not(.auth-locked) #home .qr-home-shell{height:auto!important;min-height:0!important;overflow:visible!important}body:not(.auth-locked) #home .qr-home-side,body:not(.auth-locked) #home .qr-home-main,body:not(.auth-locked) #home .qr-side{height:auto!important;overflow:visible!important}body:not(.auth-locked) #home .qr-home-highest{flex:initial}body:not(.auth-locked) #home .qr-home-shell{grid-template-columns:minmax(0,1fr)!important;padding:10px!important;border-radius:var(--qr-home-stage-radius)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) #home .qr-side{flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:8px!important}body:not(.auth-locked) #home .qr-nav-brand{width:100%!important;border-bottom:0!important;border-right:0!important;margin:0!important;padding:4px 8px!important;font-size:18px!important}body:not(.auth-locked) #home .qr-side button:not(.qr-sidebar-toggle){flex:1 1 90px;justify-content:center!important;min-height:46px!important;padding:9px!important;border-radius:999px!important}body:not(.auth-locked) #home .qr-home-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0;gap:var(--qr-home-gap)}body:not(.auth-locked) #home .qr-home-main{padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important}body:not(.auth-locked) #home .qr-home-welcome{min-height:180px;padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) #home .qr-home-portrait{width:96px;height:96px}}
-@media(max-width:550px){body:not(.auth-locked) #home .qr-home-side{grid-template-columns:1fr}body:not(.auth-locked) #home .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) #home .qr-home-welcome h2{font-size:23px!important}body:not(.auth-locked) #home .qr-home-welcome p{font-size:15px!important}body:not(.auth-locked) #home .qr-home-hero-mark{display:grid!important;flex:0 0 clamp(58px,22vw,110px);width:clamp(58px,22vw,110px)}body:not(.auth-locked) #home .qr-home-main{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) #home .qr-top{align-items:flex-start}body:not(.auth-locked) #home .qr-profile-btn{padding:8px 12px!important;font-size:12px!important}body:not(.auth-locked) #home .qr-home-section-title{align-items:flex-start}body:not(.auth-locked) #home .qr-home-section-title p{max-width:45%;text-align:right}}
+@media(max-width:740px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-rows:auto auto auto!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-column:1!important;grid-row:1!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-column:1!important;grid-row:2!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{grid-column:1!important;grid-row:3!important}body:not(.auth-locked) :is(#home,#scoresPage){padding:10px!important;height:auto!important;min-height:100dvh!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{height:auto!important;min-height:0!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side,body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main,body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{height:auto!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-highest{flex:initial}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:minmax(0,1fr)!important;padding:10px!important;border-radius:var(--qr-home-stage-radius)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:8px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{width:100%!important;border-bottom:0!important;border-right:0!important;margin:0!important;padding:4px 8px!important;font-size:18px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){flex:1 1 90px;justify-content:center!important;min-height:46px!important;padding:9px!important;border-radius:999px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0;gap:var(--qr-home-gap)}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{min-height:180px;padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait{width:96px;height:96px}}
+@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome h2{font-size:23px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome p{font-size:15px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{display:grid!important;flex:0 0 clamp(58px,22vw,110px);width:clamp(58px,22vw,110px)}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-top{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn{padding:8px 12px!important;font-size:12px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title p{max-width:45%;text-align:right}}
 
 
 /* Home responsive navigation: one grouped menu, centered as browser narrows.
    Share a proportional soft stage/card curve and keep every control pill-shaped. */
 :root{--qr-home-stage-radius:clamp(30px,3.3vw,44px);--qr-home-radius:var(--qr-home-stage-radius)}
-body:not(.auth-locked) #home .qr-home-nav-links{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap);min-width:0}
-body:not(.auth-locked) #home .qr-home-nav-links>button{border-radius:var(--qr-home-pill-radius)!important}
-body:not(.auth-locked) #home .qr-home-surface,
-body:not(.auth-locked) #home .qr-home-main,
-body:not(.auth-locked) #home .qr-side{border-radius:var(--qr-home-stage-radius)!important}
-body:not(.auth-locked) #home .qr-home-welcome{border-radius:var(--qr-home-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap);min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{border-radius:var(--qr-home-pill-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-surface,
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main,
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{border-radius:var(--qr-home-radius)!important}
 @media(max-width:1080px){
- body:not(.auth-locked) #home .qr-side{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-content:center!important;align-items:center!important;justify-content:stretch!important}
- body:not(.auth-locked) #home .qr-nav-brand{grid-column:1;grid-row:1;margin:0!important;min-width:0}
- body:not(.auth-locked) #home .qr-home-nav-links{grid-column:2;grid-row:1;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:12px!important;width:100%;min-width:0}
- body:not(.auth-locked) #home .qr-home-nav-links>button{flex:0 0 auto!important;width:auto!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-content:center!important;align-items:center!important;justify-content:stretch!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{grid-column:1;grid-row:1;margin:0!important;min-width:0}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-column:2;grid-row:1;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:12px!important;width:100%;min-width:0}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{flex:0 0 auto!important;width:auto!important}
 }
 @media(max-width:740px){
- body:not(.auth-locked) #home .qr-side{grid-template-columns:minmax(0,1fr)!important;justify-items:center!important}
- body:not(.auth-locked) #home .qr-nav-brand{grid-column:1;grid-row:1;justify-content:center!important;text-align:center!important;width:100%!important;padding:4px 8px!important;border:0!important}
- body:not(.auth-locked) #home .qr-home-nav-links{grid-column:1;grid-row:2;justify-content:center!important;gap:8px!important}
- body:not(.auth-locked) #home .qr-home-nav-links>button{flex:0 0 auto!important;min-width:0!important;justify-content:center!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-template-columns:minmax(0,1fr)!important;justify-items:center!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{grid-column:1;grid-row:1;justify-content:center!important;text-align:center!important;width:100%!important;padding:4px 8px!important;border:0!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-column:1;grid-row:2;justify-content:center!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{flex:0 0 auto!important;min-width:0!important;justify-content:center!important}
 }
 
 /* Final Home alignment: supersede old global .qr-main > * width and shell padding. */
-body:not(.auth-locked) #home .qr-shell > .qr-home-main{box-sizing:border-box!important;width:100%!important;margin:0!important;border:0!important;padding:var(--qr-home-inner-padding)!important;min-height:0!important}
-body:not(.auth-locked) #home .qr-home-main > *{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
-body:not(.auth-locked) #home .qr-home-main > .qr-top{margin:0 0 var(--qr-home-gap)!important}
-body:not(.auth-locked) #home .qr-home-main > .qr-home-welcome{margin:0!important}
-body:not(.auth-locked) #home .qr-home-main > .qr-home-section-title{margin:var(--qr-home-gap) 0!important}
-body:not(.auth-locked) #home .qr-home-main > .qr-home-bottom{margin:var(--qr-home-gap) 0 0!important}
-body:not(.auth-locked) #home .qr-home-main > .qr-home-subjects{margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-shell > .qr-home-main{box-sizing:border-box!important;width:100%!important;margin:0!important;border:0!important;padding:var(--qr-home-inner-padding)!important;min-height:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > *{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-top{margin:0 0 var(--qr-home-gap)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-welcome{margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-section-title{margin:var(--qr-home-gap) 0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-bottom{margin:var(--qr-home-gap) 0 0!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-subjects{margin:0!important}
 /* Distribute responsive navigation evenly, retaining the grouped menu in both rows. */
 @media(max-width:1080px){
- body:not(.auth-locked) #home .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:100%!important;gap:12px!important}
- body:not(.auth-locked) #home .qr-home-nav-links>button{box-sizing:border-box!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:100%!important;gap:12px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{box-sizing:border-box!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
 }
 @media(max-width:740px){
- body:not(.auth-locked) #home .qr-home-nav-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
- body:not(.auth-locked) #home .qr-side{border-radius:var(--qr-home-stage-radius)!important;overflow:hidden!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important;overflow:hidden!important}
 }
 @media(max-width:410px){
- body:not(.auth-locked) #home .qr-home-nav-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 /* Login page: centered white surface on the new light-aqua Quiz Room theme. */
 body.auth-locked{background:#e6f6f6!important}
@@ -1526,22 +1526,22 @@ body.auth-locked{background:#e6f6f6!important}
 @media(prefers-reduced-motion:reduce){
  #googleGate button.qr-processing{animation:none!important;box-shadow:0 0 18px 6px rgba(241,173,164,.35)!important}
 }
-@media(max-width:550px){body:not(.auth-locked) #home .qr-home-welcome{gap:12px!important}body:not(.auth-locked) #home .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) #home .qr-home-hero-mark{align-self:center}}
+@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{gap:12px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{align-self:center}}
 
 /* Home Highest Score dropdown: matched pill and fully styled open menu. */
-body:not(.auth-locked) #home .qr-home-best-level{position:relative!important;display:block!important;overflow:visible!important;z-index:12}
-body:not(.auth-locked) #home #qrBestLevel{display:none!important}
-body:not(.auth-locked) #home .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
-body:not(.auth-locked) #home .qr-home-dropdown[hidden],body:not(.auth-locked) #home .qr-home-dropdown-options[hidden]{display:none!important}
-body:not(.auth-locked) #home .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
-body:not(.auth-locked) #home .qr-home-dropdown-trigger:hover{background:#099aab!important;color:#fff!important}
-body:not(.auth-locked) #home .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
-body:not(.auth-locked) #home .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
-body:not(.auth-locked) #home .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
-body:not(.auth-locked) #home .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
-body:not(.auth-locked) #home .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
-body:not(.auth-locked) #home .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
-body:not(.auth-locked) #home .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-level{position:relative!important;display:block!important;overflow:visible!important;z-index:12}
+body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown[hidden],body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options[hidden]{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger:hover{background:#099aab!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1599,14 +1599,34 @@ body:not(.auth-locked) #home .qr-home-dropdown-options button:is(:hover,:focus-v
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div class="qr-home-surface qr-home-overview"><div class="qr-home-ring" id="qrHomeRing"><strong id="qrHomeRingText">—</strong><span>Avg. Score</span></div><div class="qr-home-overview-stats"><p><span>Completed</span><strong id="qrHomeTotalAttempts">0 quizzes</strong></p><p><span>Subjects</span><strong id="qrHomeTotalSubjects">0 subjects</strong></p></div></div></section>
  </div>
 </div>
-</div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a level</h2><div class="level-grid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Scores</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div id="qrScoreHistoryCard" class="qr-card">
-<div class="qr-top"><h2>Score History</h2></div>
-<div class="qr-score-filter"><label class="qr-profile-label" for="qrScoreSubject">Select Subject</label><select id="qrScoreSubject" class="qr-input" aria-label="Select Subject" onchange="qrRenderScores()" hidden></select></div>
-<div class="qr-top">
-<h2>List of Scores</h2>
+</div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a level</h2><div class="level-grid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell qr-home-shell qr-scores-shell">
+<nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><div class="qr-home-nav-links"><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></div><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav>
+<div class="qr-home-side qr-scores-side" aria-label="Profile and best scores">
+ <section class="qr-home-profile qr-home-surface" aria-label="Your profile">
+  <div class="qr-home-portrait"><img id="qrScoresAvatar" class="qr-avatar" alt="Profile photo" hidden><span class="qr-home-avatar-initial" aria-hidden="true">★</span></div>
+  <h2 id="qrScoresName">Student</h2>
+  <p id="qrScoresLevel" class="qr-home-accent">Quiz Room learner</p>
+  <p class="qr-home-subtitle">Your learning journey</p>
+  <div class="qr-home-stats">
+   <div><span>Quizzes</span><strong id="qrScoresQuizzes">0</strong></div>
+   <div><span>Avg. Score</span><strong id="qrScoresSideAverage">—</strong></div>
+   <div><span>Subjects</span><strong id="qrScoresSubjectsCount">0</strong></div>
+  </div>
+ </section>
+ <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
+  <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
+  <div class="qr-best-heading qr-home-best-level"><span id="qrScoresBestLevel" class="qr-scores-level-badge" hidden></span></div>
+  <div id="qrScoresBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
+ </section>
 </div>
-<div id="qrScoresList" class="qr-list"></div>
-</div>
+
+<div class="qr-main qr-home-main qr-scores-main">
+ <header class="qr-top"><h1>Scores</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
+ <div class="qr-scores-filter" aria-label="Filter scores by subject"><button type="button" data-score-subject="all" class="qr-scores-filter-pill" onclick="qrChooseScoresSubject('all')">All Subjects</button><button type="button" data-score-subject="English" onclick="qrChooseScoresSubject('English')" class="qr-scores-filter-pill">English</button><button type="button" data-score-subject="Malay" onclick="qrChooseScoresSubject('Malay')" class="qr-scores-filter-pill">Malay</button><button type="button" data-score-subject="Korean" onclick="qrChooseScoresSubject('Korean')" class="qr-scores-filter-pill">Korean</button><button type="button" data-score-subject="Math" onclick="qrChooseScoresSubject('Math')" class="qr-scores-filter-pill">Math</button><button type="button" data-score-subject="Science" onclick="qrChooseScoresSubject('Science')" class="qr-scores-filter-pill">Science</button></div>
+ <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
+ <div class="qr-scores-highlights"><article class="qr-scores-highlight qr-scores-highlight-average"><h2>Overall Average</h2><strong id="qrScoresAverageLarge">—</strong><p id="qrScoresAverageCaption">No completed quizzes yet</p><span aria-hidden="true" class="qr-scores-medal">★</span></article><article class="qr-scores-highlight qr-scores-highlight-best"><h2>Highest Score</h2><strong id="qrScoresTopPercent">—</strong><p id="qrScoresTopSubject">Complete a quiz to get started</p><span aria-hidden="true" class="qr-scores-medal">✦</span></article></div>
+ <div class="qr-scores-performance-row"><section><h2 class="qr-scores-heading">Subject Performance</h2><div id="qrScoresPerformance" class="qr-home-surface qr-scores-performance"><p class="qr-muted">Your subject scores will appear here.</p></div></section><section><h2 class="qr-scores-heading">Average Score</h2><div class="qr-home-surface qr-scores-donut-box"><div id="qrScoresDonut" class="qr-home-ring qr-scores-donut"><strong id="qrScoresDonutText">—</strong><span>Avg. Score</span></div></div></section></div>
+ <div class="qr-scores-bottom"><section><div class="qr-scores-section-header"><h2 class="qr-scores-heading">Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div><div id="qrScoreHistoryCard" class="qr-home-surface qr-scores-history"><div id="qrScoresList" class="qr-list"><p class="qr-muted">No scores yet.</p></div></div></section><section><h2 class="qr-scores-heading">Total Quizzes</h2><div class="qr-home-surface qr-scores-total-card"><span aria-hidden="true" class="qr-scores-total-icon">▤</span><div><strong id="qrScoresTotalCount">0</strong><p>Completed quizzes</p></div></div></section></div>
 </div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><div class="qr-profile-actions"><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header>
 <div class="qr-card qr-profile-surface">
  <section id="qrProfileView" class="qr-profile-section">
@@ -2396,20 +2416,61 @@ function qrScoreDisplayDate(value){
  const hour=Number(m[4]);
  return m[1]+'/'+m[2]+'/'+m[3]+' '+String(hour%12||12).padStart(2,'0')+':'+m[5]+(hour<12?'AM':'PM');
 }
+let qrScoresActiveSubject='all';
+function qrChooseScoresSubject(name){qrScoresActiveSubject=name;qrRenderScores()}
 function qrRenderScores(){
- const entries=qrEntries(),subject=$('qrScoreSubject'),list=$('qrScoresList');
- const subjects=[...new Set(entries.map(e=>e.subject).filter(Boolean))].sort();
- const selected=subject.value;
- subject.replaceChildren(...subjects.map(name=>new Option(name,name)));
- if(subjects.includes(selected))subject.value=selected;
- subject.hidden=!subjects.length;
- const chosen=subject.value;
- list.innerHTML=entries.filter(e=>e.subject===chosen)
-  .flatMap(e=>e.attempts.map(a=>({e,a})))
-  .sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||'')))
-  .map(({e,a})=>'<div class="qr-list-item qr-score-row"><span class="qr-score-subject">'+escapeHtml(e.subject)+'</span><span class="qr-score-name">'+escapeHtml(String(e.chapter||'').replace(/^(?:Quiz|Exercise|Exam(?:\s+Revision)?)\s+/i,'').trim())+(a.remark?' · '+escapeHtml(a.remark):'')+'</span><time class="qr-score-date">'+escapeHtml(qrScoreDisplayDate(a.time))+'</time><strong class="qr-score-percent">'+(a.total?Math.round(100*a.score/a.total):0)+'%</strong></div>')
-  .join('')||'<p class="qr-muted">No scores yet.</p>';
-
+ const entries=qrEntries();
+ const attempts=entries.flatMap(entry=>(entry.attempts||[]).map(a=>({entry,a}))).filter(({a})=>Number.isFinite(Number(a.score))&&Number.isFinite(Number(a.total))&&Number(a.total)>0);
+ const percent=({a})=>Math.max(0,Math.min(100,Math.round(100*Number(a.score)/Number(a.total))));
+ const subjects=[...new Set(attempts.map(({entry})=>entry.subject).filter(Boolean))].sort();
+ const selected=qrScoresActiveSubject;
+ const filtered=selected==='all'?attempts:attempts.filter(({entry})=>entry.subject===selected);
+ const avg=rows=>rows.length?Math.round(rows.reduce((sum,item)=>sum+percent(item),0)/rows.length):null;
+ const average=avg(filtered);
+ const overall=avg(attempts);
+ const name=qrProfile.name||qrAccount().split('@')[0]||'Student';
+ $('qrScoresName').textContent=name;
+ const avatar=$('qrScoresAvatar');
+ avatar.hidden=!qrProfile.photo;
+ if(qrProfile.photo)avatar.src=qrProfile.photo;
+ $('scoresPage').querySelector('.qr-home-avatar-initial').hidden=!!qrProfile.photo;
+ const levels=[...new Set(attempts.map(({entry,a})=>a.level||entry.level).filter(Boolean))];
+ $('qrScoresLevel').textContent=levels.length===1?'Level '+levels[0]:'Quiz Room learner';
+ $('qrScoresQuizzes').textContent=String(attempts.length);
+ $('qrScoresSideAverage').textContent=overall===null?'—':overall+'%';
+ $('qrScoresSubjectsCount').textContent=String(subjects.length);
+ const levelsBest=qrBestScoreRecords();
+ const activeLevel=levelsBest.some(x=>x.level==='PM3')?'PM3':levelsBest[0]?.level;
+ const bestRows=levelsBest.filter(x=>x.level===activeLevel);
+ const best=new Map();
+ for(const row of bestRows)best.set(row.subject,Math.max(best.get(row.subject)||0,row.percentage));
+ const bestLevel=$('qrScoresBestLevel');
+ bestLevel.hidden=!activeLevel;
+ bestLevel.textContent=activeLevel||'';
+ $('qrScoresBestScores').innerHTML=[...best].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,score])=>'<div class="qr-best-subject"><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3><div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div><span class="qr-best-percentage">'+score+'%</span></div></div>').join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
+ document.querySelectorAll('#scoresPage .qr-scores-filter-pill').forEach(button=>{
+  const subject=button.dataset.scoreSubject;
+  button.classList.toggle('active',subject===selected);
+  button.setAttribute('aria-pressed',String(subject===selected));
+  button.hidden=subject!=='all'&&!subjects.includes(subject);
+ });
+ $('qrScoresAverageLarge').textContent=average===null?'—':average+'%';
+ $('qrScoresAverageCaption').textContent=filtered.length+' completed '+(filtered.length===1?'quiz':'quizzes');
+ $('qrScoresDonutText').textContent=average===null?'—':average+'%';
+ $('qrScoresDonut').style.setProperty('--qr-home-ring-value',(average||0)+'%');
+ const top=filtered.length?filtered.reduce((winner,item)=>percent(item)>percent(winner)?item:winner):null;
+ $('qrScoresTopPercent').textContent=top?percent(top)+'%':'—';
+ $('qrScoresTopSubject').textContent=top?top.entry.subject+' · '+(top.entry.chapter||'Quiz'):'Complete a quiz to get started';
+ const groups=new Map();
+ for(const item of filtered){const key=item.entry.subject;if(!key)continue;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item)}
+ $('qrScoresPerformance').innerHTML=[...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,rows],i)=>{
+  const score=avg(rows);
+  return '<div class="qr-scores-subject-row"><div class="qr-scores-subject-title"><span>'+escapeHtml(subject)+'</span><strong>'+score+'%</strong></div><div class="qr-scores-subject-track" role="progressbar" aria-label="'+escapeHtml(subject)+' average score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div></div>';
+ }).join('')||'<p class="qr-muted">No scores yet.</p>';
+ const recent=filtered.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||'')));
+ $('qrScoresHistoryCount').textContent=recent.length+' results';
+ $('qrScoresList').innerHTML=recent.map(({entry,a})=>'<div class="qr-scores-history-row"><span class="qr-scores-activity-icon" aria-hidden="true">▶</span><div class="qr-scores-history-copy"><strong>'+escapeHtml(entry.subject+' · '+String(entry.chapter||'Quiz'))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-scores-percent-pill">'+percent({a})+'%</span></div>').join('')||'<p class="qr-muted">No scores yet.</p>';
+ $('qrScoresTotalCount').textContent=String(filtered.length);
 }
 let qrNotes=[];
 let qrEditingNote=null,qrNotesBusy=false;
