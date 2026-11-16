@@ -1013,12 +1013,8 @@ body:not(.auth-locked) #home .qr-best-percentage{color:var(--qr-text-primary);fo
 body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
 body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
-/* Shared equal-sided control padding; panel/card interiors retain their existing spacing. */
+/* Shared control and card padding defaults. */
 :root{--qr-control-padding:9px 16px;--qr-card-padding:20px}
-body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button,.qr-profile-btn,.pill,.version,.level-button,.resultbutton,.answer,input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),textarea),
-body:not(.auth-locked) #selection .qr-steps button,
-
-#googleGate button{padding:var(--qr-control-padding)!important}
 /* Sidebar navigation keeps its previous separate control padding. */
 body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle){padding:12px!important}
 /* Dropdown arrows need separate trailing clearance for long subject names. */
@@ -1133,11 +1129,6 @@ body:not(.auth-locked) .qr-crop-modal button,
  min-height:0!important;height:auto!important;
  padding:var(--qr-control-padding)!important;
 }
-body:not(.auth-locked) #quiz :is(.qr-drop-zone,.qr-drop-ghost){
- padding:var(--qr-control-padding)!important;
-}
-
-
 /* Quiz toolbars sit outside the padded question card; no empty row remains inside it. */
 body:not(.auth-locked) #selection #quiz:not(.hidden){
  display:flex;flex-direction:column;gap:var(--density-space)
@@ -1153,7 +1144,7 @@ body:not(.auth-locked) #quiz > .qr-quiz-outside-bottom{
 }
 body:not(.auth-locked) #quiz > .qr-quiz-outside-top #timer{
  height:auto!important;min-height:0!important;max-height:none!important;
- padding:9px 16px!important
+ padding:var(--qr-control-padding)!important
 }
 body:not(.auth-locked) #quiz > .qr-quiz-outside-top .bookmarklabel{
  box-sizing:border-box;width:39px;height:39px;min-width:39px;min-height:39px;
@@ -1161,7 +1152,7 @@ body:not(.auth-locked) #quiz > .qr-quiz-outside-top .bookmarklabel{
 }
 body:not(.auth-locked) #quiz > .qr-quiz-outside-top .bookmark-list-button,
 body:not(.auth-locked) #quiz > .qr-quiz-outside-bottom .pill{
- height:auto!important;min-height:0!important;padding:9px 16px!important
+ height:auto!important;min-height:0!important;padding:var(--qr-control-padding)!important
 }
 
 /* Inline answer target plus two draggable choices; reused by all subjects. */
@@ -1196,7 +1187,7 @@ body:not(.auth-locked) #quiz .qr-drop-option.selected{
 }
 body:not(.auth-locked) .qr-drop-ghost{
  position:fixed;left:0;top:0;transform:translate(-50%,-50%);
- z-index:10000;padding:9px 16px;background:var(--qr-focus);color:var(--qr-primary);
+ z-index:10000;padding:var(--qr-flat-pill-padding);background:var(--qr-focus);color:var(--qr-primary);
  border:2px solid var(--qr-primary);border-radius:var(--qr-button-radius);
  font:700 var(--qr-font-body) var(--qr-font);pointer-events:none;white-space:nowrap
 }
@@ -1236,7 +1227,7 @@ body:not(.auth-locked) #results .qr-result-actions{
  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px
 }
 body:not(.auth-locked) #results .qr-result-actions .resultbutton{
- margin:0!important;padding:var(--qr-control-padding)!important;min-height:0!important;
+ margin:0!important;min-height:0!important;
 }
 body:not(.auth-locked) #results .qr-result-actions .resultbutton:nth-child(2){
  background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;
