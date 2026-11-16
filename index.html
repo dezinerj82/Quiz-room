@@ -1547,10 +1547,11 @@ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:i
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:var(--qr-home-gap)!important}
 body:not(.auth-locked) #scoresPage .qr-scores-main > *{width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
 body:not(.auth-locked) #scoresPage .qr-scores-main>.qr-top{margin-bottom:0!important}
-body:not(.auth-locked) #scoresPage .qr-scores-level-badge{display:inline-block;margin:0;padding:9px 20px;border-radius:999px;background:#e6f6f6;color:#099aab;font-size:13px;font-weight:800}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap);margin:0!important}
+body:not(.auth-locked) #scoresPage .qr-scores-level-badge{display:inline-block;margin:0;padding:9px 15px;border-radius:999px;background:#e6f6f6;color:#099aab;font-size:13px;font-weight:800}
 body:not(.auth-locked) #scoresPage .qr-scores-level-badge[hidden]{display:none!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter{display:flex;flex-wrap:wrap;gap:var(--qr-home-gap);align-items:center}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{flex:1 1 95px;min-width:0;border:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
+body:not(.auth-locked) #scoresPage .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(4){background:#fde8e7!important;color:#885652!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
@@ -1558,7 +1559,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visib
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden]{display:none!important}
 body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;min-height:150px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:#e6f6f6}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best{background:#fff0e1}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight h2{font-size:17px!important;line-height:1.3;color:var(--qr-home-ink)!important;margin:0!important;position:relative;z-index:1}
@@ -1598,8 +1599,8 @@ body:not(.auth-locked) #scoresPage .qr-scores-total-card{display:flex;align-item
 body:not(.auth-locked) #scoresPage .qr-scores-total-icon{flex:0 0 54px;display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:#e6f6f6;color:#099aab;font-size:29px}
 body:not(.auth-locked) #scoresPage .qr-scores-total-card strong{font-size:40px;line-height:1;color:#099aab}
 body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:#829da0;margin-top:5px}
-@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-performance-row,body:not(.auth-locked) #scoresPage .qr-scores-bottom{grid-template-columns:1fr}}
-@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{flex:1 1 105px}body:not(.auth-locked) #scoresPage .qr-scores-donut-box{min-height:190px}}
+@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-performance-row,body:not(.auth-locked) #scoresPage .qr-scores-bottom{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) #scoresPage .qr-scores-donut-box{min-height:190px}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1680,9 +1681,11 @@ body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:
 
 <div class="qr-main qr-home-main qr-scores-main">
  <header class="qr-top"><h1>Scores</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
+ <div class="qr-scores-highlights"><article class="qr-scores-highlight qr-scores-highlight-average"><h2>Overall Average</h2><strong id="qrScoresAverageLarge">—</strong><p id="qrScoresAverageCaption">No completed quizzes yet</p><span aria-hidden="true" class="qr-scores-medal">★</span></article><article class="qr-scores-highlight qr-scores-highlight-best"><h2>Highest Score</h2><strong id="qrScoresTopPercent">—</strong><p id="qrScoresTopSubject">Complete a quiz to get started</p><span aria-hidden="true" class="qr-scores-medal">✦</span></article></div>
+
+ <div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to view</p></div>
  <div class="qr-scores-filter" aria-label="Filter scores by subject"><button type="button" data-score-subject="all" class="qr-scores-filter-pill" onclick="qrChooseScoresSubject('all')">All Subjects</button><button type="button" data-score-subject="English" onclick="qrChooseScoresSubject('English')" class="qr-scores-filter-pill">English</button><button type="button" data-score-subject="Malay" onclick="qrChooseScoresSubject('Malay')" class="qr-scores-filter-pill">Malay</button><button type="button" data-score-subject="Korean" onclick="qrChooseScoresSubject('Korean')" class="qr-scores-filter-pill">Korean</button><button type="button" data-score-subject="Math" onclick="qrChooseScoresSubject('Math')" class="qr-scores-filter-pill">Math</button><button type="button" data-score-subject="Science" onclick="qrChooseScoresSubject('Science')" class="qr-scores-filter-pill">Science</button></div>
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
- <div class="qr-scores-highlights"><article class="qr-scores-highlight qr-scores-highlight-average"><h2>Overall Average</h2><strong id="qrScoresAverageLarge">—</strong><p id="qrScoresAverageCaption">No completed quizzes yet</p><span aria-hidden="true" class="qr-scores-medal">★</span></article><article class="qr-scores-highlight qr-scores-highlight-best"><h2>Highest Score</h2><strong id="qrScoresTopPercent">—</strong><p id="qrScoresTopSubject">Complete a quiz to get started</p><span aria-hidden="true" class="qr-scores-medal">✦</span></article></div>
  <div class="qr-scores-performance-row"><section><h2 class="qr-scores-heading">Subject Performance</h2><div id="qrScoresPerformance" class="qr-home-surface qr-scores-performance"><p class="qr-muted">Your subject scores will appear here.</p></div></section><section><h2 class="qr-scores-heading">Average Score</h2><div class="qr-home-surface qr-scores-donut-box"><div id="qrScoresDonut" class="qr-home-ring qr-scores-donut"><strong id="qrScoresDonutText">—</strong><span>Avg. Score</span></div></div></section></div>
  <div class="qr-scores-bottom"><section><div class="qr-scores-section-header"><h2 class="qr-scores-heading">Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div><div id="qrScoreHistoryCard" class="qr-home-surface qr-scores-history"><div id="qrScoresList" class="qr-list"><p class="qr-muted">No scores yet.</p></div></div></section><section><h2 class="qr-scores-heading">Total Quizzes</h2><div class="qr-home-surface qr-scores-total-card"><span aria-hidden="true" class="qr-scores-total-icon">▤</span><div><strong id="qrScoresTotalCount">0</strong><p>Completed quizzes</p></div></div></section></div>
 </div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><div class="qr-profile-actions"><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header>
@@ -2497,15 +2500,13 @@ function qrRenderScores(){
  $('qrScoresQuizzes').textContent=String(attempts.length);
  $('qrScoresSideAverage').textContent=overall===null?'—':overall+'%';
  $('qrScoresSubjectsCount').textContent=String(subjects.length);
- const levelsBest=qrBestScoreRecords();
- const activeLevel=levelsBest.some(x=>x.level==='PM3')?'PM3':levelsBest[0]?.level;
- const bestRows=levelsBest.filter(x=>x.level===activeLevel);
- const best=new Map();
- for(const row of bestRows)best.set(row.subject,Math.max(best.get(row.subject)||0,row.percentage));
+ // Reuse Home's rendered Highest Score content, keeping one source of truth.
+ qrRenderBestScores();
+ const homeLevel=$('qrHomeLevelDropdown');
  const bestLevel=$('qrScoresBestLevel');
- bestLevel.hidden=!activeLevel;
- bestLevel.textContent=activeLevel||'';
- $('qrScoresBestScores').innerHTML=[...best].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,score])=>'<div class="qr-best-subject"><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3><div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div><span class="qr-best-percentage">'+score+'%</span></div></div>').join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
+ bestLevel.hidden=homeLevel.hidden;
+ bestLevel.textContent=homeLevel.hidden?'':$('qrHomeLevelLabel').textContent;
+ $('qrScoresBestScores').innerHTML=$('qrBestScores').innerHTML;
  document.querySelectorAll('#scoresPage .qr-scores-filter-pill').forEach(button=>{
   const subject=button.dataset.scoreSubject;
   button.classList.toggle('active',subject===selected);
