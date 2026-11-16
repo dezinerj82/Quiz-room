@@ -1464,6 +1464,46 @@ body:not(.auth-locked) #home .qr-home-welcome{border-radius:var(--qr-home-radius
  body:not(.auth-locked) #home .qr-home-nav-links{grid-column:1;grid-row:2;justify-content:center!important;gap:8px!important}
  body:not(.auth-locked) #home .qr-home-nav-links>button{flex:0 0 auto!important;min-width:0!important;justify-content:center!important}
 }
+
+/* Final Home alignment: supersede old global .qr-main > * width and shell padding. */
+body:not(.auth-locked) #home .qr-shell > .qr-home-main{box-sizing:border-box!important;width:100%!important;margin:0!important;border:0!important;padding:var(--qr-home-inner-padding)!important;min-height:0!important}
+body:not(.auth-locked) #home .qr-home-main > *{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+body:not(.auth-locked) #home .qr-home-main > .qr-top{margin:0 0 var(--qr-home-gap)!important}
+body:not(.auth-locked) #home .qr-home-main > .qr-home-welcome{margin:0!important}
+body:not(.auth-locked) #home .qr-home-main > .qr-home-section-title{margin:var(--qr-home-gap) 0!important}
+body:not(.auth-locked) #home .qr-home-main > .qr-home-bottom{margin:var(--qr-home-gap) 0 0!important}
+body:not(.auth-locked) #home .qr-home-main > .qr-home-subjects{margin:0!important}
+/* Distribute responsive navigation evenly, retaining the grouped menu in both rows. */
+@media(max-width:1080px){
+ body:not(.auth-locked) #home .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:100%!important;gap:12px!important}
+ body:not(.auth-locked) #home .qr-home-nav-links>button{box-sizing:border-box!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+}
+@media(max-width:740px){
+ body:not(.auth-locked) #home .qr-home-nav-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+ body:not(.auth-locked) #home .qr-side{border-radius:var(--qr-home-stage-radius)!important;overflow:hidden!important}
+}
+@media(max-width:410px){
+ body:not(.auth-locked) #home .qr-home-nav-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+/* Login page: centered white surface on the new light-aqua Quiz Room theme. */
+body.auth-locked{background:#e6f6f6!important}
+#googleGate{box-sizing:border-box;min-height:100dvh!important;display:grid!important;place-items:center!important;padding:24px!important;background:#e6f6f6!important;color:#171717!important}
+#googleGate.hidden{display:none!important}
+#googleGate .qr-login-card{box-sizing:border-box;width:min(460px,100%);display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(24px,4vw,40px);border:0;outline:0;border-radius:clamp(32px,4vw,44px);background:#fff;box-shadow:0 16px 45px rgba(9,154,171,.12),0 4px 10px rgba(15,40,45,.04);text-align:center}
+#googleGate .qr-login-logo{width:72px;height:72px;display:grid;place-items:center;flex:none;border-radius:50%;background:#099aab;color:#fff}
+#googleGate .qr-login-logo svg{width:42px;height:42px}
+#googleGate h1{font-family:var(--qr-font)!important;font-size:clamp(25px,3vw,32px)!important;line-height:1.2!important;font-weight:800!important;color:#171717!important;margin:0!important}
+#googleGate .qr-login-subtitle{font-size:15px!important;color:#099aab!important;line-height:1.45;margin:0!important}
+#googleGate .account-list{display:grid;gap:12px;width:100%;min-width:0}
+#googleGate .account-list:empty{display:none}
+#googleGate button{box-sizing:border-box;width:100%;min-height:48px!important;padding:12px 20px!important;border:0!important;outline:0!important;border-radius:999px!important;background:#099aab!important;color:#fff!important;font:800 15px var(--qr-font)!important;line-height:1.3!important;box-shadow:none!important;transition:background .2s ease,color .2s ease!important}
+#googleGate button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important;outline:0!important;box-shadow:inset 0 0 0 2px #099aab!important;transform:none!important}
+#googleGate .account-list button{background:#e6f6f6!important;color:#099aab!important;overflow-wrap:anywhere}
+#googleGate .account-list button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important}
+#googleGate .qr-login-footnote{font-size:12px!important;color:#929a9d!important;margin:0!important}
+#googleGate .status{font-size:13px!important;line-height:1.45;color:#c0534e!important;min-height:0!important;margin:0!important}
+#googleGate .status:empty{display:none!important}
+@media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -2415,7 +2455,7 @@ async function qrLoadAccount(){
 }
 
 </script>
-<div id="googleGate" role="region" aria-label="Google account login"><h1>Quiz time</h1><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div></div>
+<div id="googleGate" role="region" aria-label="Google account login"><div class="qr-login-card"><div class="qr-login-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg></div><h1>Welcome to Quiz Room</h1><p class="qr-login-subtitle">Your learning adventure starts here.</p><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div><p class="qr-login-footnote">Secure Google sign-in</p></div></div>
 <script>
 (()=>{
 "use strict";
