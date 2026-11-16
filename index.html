@@ -1527,6 +1527,20 @@ body.auth-locked{background:#e6f6f6!important}
  #googleGate button.qr-processing{animation:none!important;box-shadow:0 0 18px 6px rgba(241,173,164,.35)!important}
 }
 @media(max-width:550px){body:not(.auth-locked) #home .qr-home-welcome{gap:12px!important}body:not(.auth-locked) #home .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) #home .qr-home-hero-mark{align-self:center}}
+
+/* Home Highest Score dropdown: matched pill and fully styled open menu. */
+body:not(.auth-locked) #home .qr-home-best-level{position:relative!important;display:block!important;overflow:visible!important;z-index:12}
+body:not(.auth-locked) #home #qrBestLevel{display:none!important}
+body:not(.auth-locked) #home .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
+body:not(.auth-locked) #home .qr-home-dropdown[hidden],body:not(.auth-locked) #home .qr-home-dropdown-options[hidden]{display:none!important}
+body:not(.auth-locked) #home .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
+body:not(.auth-locked) #home .qr-home-dropdown-trigger:hover{background:#daf1f2!important}
+body:not(.auth-locked) #home .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
+body:not(.auth-locked) #home .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
+body:not(.auth-locked) #home .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
+body:not(.auth-locked) #home .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
+body:not(.auth-locked) #home .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
+body:not(.auth-locked) #home .qr-home-dropdown-options button:is(:hover,:focus-visible),body:not(.auth-locked) #home .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1561,7 +1575,7 @@ body.auth-locked{background:#e6f6f6!important}
  </section>
  <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
   <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
-  <div class="qr-best-heading qr-home-best-level"><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select></div>
+  <div class="qr-best-heading qr-home-best-level"><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select><div id="qrHomeLevelDropdown" class="qr-home-dropdown" hidden><button id="qrHomeLevelTrigger" type="button" class="qr-home-dropdown-trigger" aria-label="Select school level" aria-haspopup="listbox" aria-expanded="false" aria-controls="qrHomeLevelOptions" onclick="qrToggleHomeLevelMenu()"><span id="qrHomeLevelLabel">PM3</span><svg class="qr-home-dropdown-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button><div id="qrHomeLevelOptions" class="qr-home-dropdown-options" role="listbox" aria-label="School level options" hidden></div></div></div>
   <div id="qrBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
  </section>
 </div>
@@ -2285,10 +2299,47 @@ function qrBestScoreRecords(){
   return [{level,subject:entry.subject,percentage:Math.max(0,Math.min(100,Math.round(score/total*100)))}];
  }));
 }
+function qrCloseHomeLevelMenu(){
+ const menu=$('qrHomeLevelOptions'),trigger=$('qrHomeLevelTrigger');
+ if(!menu||!trigger)return;
+ menu.hidden=true;trigger.setAttribute('aria-expanded','false');
+}
+function qrToggleHomeLevelMenu(){
+ const menu=$('qrHomeLevelOptions'),trigger=$('qrHomeLevelTrigger');
+ const opening=menu.hidden;
+ menu.hidden=!opening;trigger.setAttribute('aria-expanded',String(opening));
+ if(opening){const current=menu.querySelector('[aria-selected="true"]');(current||menu.querySelector('button'))?.focus()}
+}
+function qrChooseHomeLevel(value){
+ const level=$('qrBestLevel');
+ if(![...level.options].some(option=>option.value===value))return;
+ level.value=value;qrCloseHomeLevelMenu();qrRenderBestScores();$('qrHomeLevelTrigger').focus();
+}
+function qrRenderHomeLevelMenu(available,selected){
+ const dropdown=$('qrHomeLevelDropdown'),menu=$('qrHomeLevelOptions');
+ dropdown.hidden=false;$('qrHomeLevelLabel').textContent=selected;
+ menu.replaceChildren(...available.map(value=>{
+  const button=document.createElement('button');button.type='button';
+  button.setAttribute('role','option');button.setAttribute('aria-selected',String(value===selected));
+  button.textContent=value;button.addEventListener('click',()=>qrChooseHomeLevel(value));
+  button.addEventListener('keydown',event=>{
+   const buttons=[...menu.querySelectorAll('[role="option"]')],index=buttons.indexOf(button);
+   if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();buttons[(index+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length].focus()}
+   if(event.key==='Home'){event.preventDefault();buttons[0].focus()}
+   if(event.key==='End'){event.preventDefault();buttons[buttons.length-1].focus()}
+   if(event.key==='Escape'){event.preventDefault();qrCloseHomeLevelMenu();$('qrHomeLevelTrigger').focus()}
+  });
+  return button;
+ }));
+}
+document.addEventListener('pointerdown',event=>{if(!event.target.closest('#qrHomeLevelDropdown'))qrCloseHomeLevelMenu()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('qrHomeLevelOptions').hidden){qrCloseHomeLevelMenu();$('qrHomeLevelTrigger').focus()}});
 function qrRenderBestScores(){
  const records=qrBestScoreRecords(),level=$('qrBestLevel'),list=$('qrBestScores');
  if(!records.length){
   level.hidden=true;level.replaceChildren();
+  $('qrHomeLevelDropdown').hidden=true;
+  qrCloseHomeLevelMenu();
   list.innerHTML='<p class="qr-muted">Complete a quiz to see your progress.</p>';
   return;
  }
@@ -2298,7 +2349,8 @@ function qrRenderBestScores(){
  });
  const selected=available.includes(level.value)?level.value:available[0];
  level.replaceChildren(...available.map(name=>new Option(name,name)));
- level.value=selected;level.hidden=false;
+ level.value=selected;level.hidden=true;
+ qrRenderHomeLevelMenu(available,selected);
  const best=new Map();
  for(const r of records){
   if(r.level!==selected)continue;
