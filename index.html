@@ -1504,6 +1504,28 @@ body.auth-locked{background:#e6f6f6!important}
 #googleGate .status{font-size:13px!important;line-height:1.45;color:#c0534e!important;min-height:0!important;margin:0!important}
 #googleGate .status:empty{display:none!important}
 @media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
+/* Login-only pending state: soft focus-color heartbeat, never a rotating outline. */
+#googleGate button.qr-processing,
+#googleGate button.qr-processing:disabled,
+#googleGate button.qr-processing:is(:hover,:focus,:focus-visible){
+ position:relative;isolation:isolate;
+ border:0!important;outline:0!important;outline-offset:0!important;
+ opacity:1!important;cursor:wait!important;
+ box-shadow:0 0 0 0 rgba(241,173,164,.38),0 0 18px 4px rgba(241,173,164,.24)!important;
+ animation:qrLoginHeartbeat 1.8s ease-in-out infinite!important;
+}
+#googleGate button.qr-processing::before,
+#googleGate button.qr-processing::after{
+ content:none!important;display:none!important;animation:none!important;
+ background:none!important;-webkit-mask:none!important;mask:none!important;
+}
+@keyframes qrLoginHeartbeat{
+ 0%,100%{box-shadow:0 0 0 0 rgba(241,173,164,.32),0 0 12px 2px rgba(241,173,164,.2)}
+ 50%{box-shadow:0 0 0 7px rgba(241,173,164,.08),0 0 26px 9px rgba(241,173,164,.5)}
+}
+@media(prefers-reduced-motion:reduce){
+ #googleGate button.qr-processing{animation:none!important;box-shadow:0 0 18px 6px rgba(241,173,164,.35)!important}
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
