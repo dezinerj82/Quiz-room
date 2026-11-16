@@ -2233,7 +2233,7 @@ function qrRender(){
  $('qrHomeTotalAttempts').textContent=attempts.length+' '+(attempts.length===1?'quiz':'quizzes');
  $('qrHomeTotalSubjects').textContent=subjects.size+' '+(subjects.size===1?'subject':'subjects');
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
- $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
+ $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
  qrRenderBestScores();
 }
 
