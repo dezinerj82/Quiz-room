@@ -810,6 +810,14 @@ body:not(.auth-locked) #quiz .formula-row input{
 body:not(.auth-locked) #quiz .formula-row input[readonly]{
  opacity:1!important;cursor:default;
 }
+body:not(.auth-locked) #quiz .formula-row input.formula-correct{
+ background:color-mix(in srgb,var(--qr-success) 18%,var(--qr-background))!important;
+ border-color:var(--qr-success)!important;color:var(--qr-text-success)!important;
+}
+body:not(.auth-locked) #quiz .formula-row input.formula-wrong{
+ background:color-mix(in srgb,var(--qr-error) 18%,var(--qr-background))!important;
+ border-color:var(--qr-error)!important;color:var(--qr-text-error)!important;
+}
 body:not(.auth-locked) #quiz .formula-row .feedback-symbol{
  display:grid;place-items:center;flex:0 0 var(--qr-answer-marker-size);
  width:var(--qr-answer-marker-size);height:var(--qr-answer-marker-size);
@@ -1685,6 +1693,7 @@ function qrCheckFormula(i,moveNext=false){
  questionOutcomes[q.id]={correct,choice:value};
  if(correct)score++;else wrongQuestions.push({id:q.id,question:q.q});
  input.readOnly=true;input.setAttribute('aria-readonly','true');
+ input.classList.add(correct?'formula-correct':'formula-wrong');
  const symbol=input.closest('.formula-row').querySelector('.feedback-symbol');
  symbol.classList.remove('hidden');
  symbol.textContent=correct?'✓':'✕';
