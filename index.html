@@ -1548,8 +1548,6 @@ body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:c
 body:not(.auth-locked) #scoresPage .qr-scores-main > *{width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
 body:not(.auth-locked) #scoresPage .qr-scores-main>.qr-top{margin-bottom:0!important}
 body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap);margin:0!important}
-body:not(.auth-locked) #scoresPage .qr-scores-level-badge{display:inline-block;margin:0;padding:9px 15px;border-radius:999px;background:#e6f6f6;color:#099aab;font-size:13px;font-weight:800}
-body:not(.auth-locked) #scoresPage .qr-scores-level-badge[hidden]{display:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
@@ -1674,7 +1672,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:
  </section>
  <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
   <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
-  <div class="qr-best-heading qr-home-best-level"><span id="qrScoresBestLevel" class="qr-scores-level-badge" hidden></span></div>
+  <div class="qr-best-heading qr-home-best-level"><div id="qrScoresLevelMount"></div></div>
   <div id="qrScoresBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
  </section>
 </div>
@@ -2502,10 +2500,38 @@ function qrRenderScores(){
  $('qrScoresSubjectsCount').textContent=String(subjects.length);
  // Reuse Home's rendered Highest Score content, keeping one source of truth.
  qrRenderBestScores();
- const homeLevel=$('qrHomeLevelDropdown');
- const bestLevel=$('qrScoresBestLevel');
- bestLevel.hidden=homeLevel.hidden;
- bestLevel.textContent=homeLevel.hidden?'':$('qrHomeLevelLabel').textContent;
+ const homeLevel=$('qrHomeLevelDropdown'),mount=$('qrScoresLevelMount');
+ mount.replaceChildren();
+ if(!homeLevel.hidden){
+  const menu=homeLevel.cloneNode(true);
+  menu.id='qrScoresLevelDropdown';
+  const trigger=menu.querySelector('#qrHomeLevelTrigger');
+  const options=menu.querySelector('#qrHomeLevelOptions');
+  trigger.id='qrScoresLevelTrigger';trigger.removeAttribute('onclick');
+  trigger.setAttribute('aria-controls','qrScoresLevelOptions');
+  trigger.setAttribute('aria-expanded','false');
+  options.id='qrScoresLevelOptions';options.hidden=true;
+  trigger.addEventListener('click',()=>{
+   options.hidden=!options.hidden;
+   trigger.setAttribute('aria-expanded',String(!options.hidden));
+  });
+  const optionButtons=[...options.querySelectorAll('button')];
+  optionButtons.forEach((button,index)=>{
+   button.addEventListener('click',()=>{
+    $('qrBestLevel').value=button.textContent;
+    qrRenderScores();
+    $('qrScoresLevelTrigger')?.focus();
+   });
+   button.addEventListener('keydown',event=>{
+    if(event.key==='Escape'){options.hidden=true;trigger.setAttribute('aria-expanded','false');trigger.focus()}
+    if(event.key==='ArrowDown'||event.key==='ArrowUp'){
+     event.preventDefault();
+     optionButtons[(index+(event.key==='ArrowDown'?1:-1)+optionButtons.length)%optionButtons.length].focus();
+    }
+   });
+  });
+  mount.append(menu);
+ }
  $('qrScoresBestScores').innerHTML=$('qrBestScores').innerHTML;
  document.querySelectorAll('#scoresPage .qr-scores-filter-pill').forEach(button=>{
   const subject=button.dataset.scoreSubject;
