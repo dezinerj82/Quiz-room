@@ -2476,6 +2476,15 @@ function qrScoreDisplayDate(value){
  return m[1]+'/'+m[2]+'/'+m[3]+' '+String(hour%12||12).padStart(2,'0')+':'+m[5]+(hour<12?'AM':'PM');
 }
 let qrScoresActiveSubject='all';
+document.addEventListener('pointerdown',event=>{
+ const menu=$('qrScoresLevelDropdown');
+ if(!menu||event.target.closest('#qrScoresLevelDropdown'))return;
+ const options=$('qrScoresLevelOptions');
+ if(options)options.hidden=true;
+ const trigger=$('qrScoresLevelTrigger');
+ if(trigger)trigger.setAttribute('aria-expanded','false');
+});
+
 function qrChooseScoresSubject(name){qrScoresActiveSubject=name;qrRenderScores()}
 function qrRenderScores(){
  const entries=qrEntries();
@@ -2508,6 +2517,7 @@ function qrRenderScores(){
   const trigger=menu.querySelector('#qrHomeLevelTrigger');
   const options=menu.querySelector('#qrHomeLevelOptions');
   trigger.id='qrScoresLevelTrigger';trigger.removeAttribute('onclick');
+  menu.querySelector('#qrHomeLevelLabel').id='qrScoresLevelLabel';
   trigger.setAttribute('aria-controls','qrScoresLevelOptions');
   trigger.setAttribute('aria-expanded','false');
   options.id='qrScoresLevelOptions';options.hidden=true;
