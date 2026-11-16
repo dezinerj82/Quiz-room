@@ -1542,6 +1542,63 @@ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options{position
 body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
 body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
 body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
+
+/* Scores dashboard: same shared stages, cards, gaps, curves and pill styling as Home. */
+body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:var(--qr-home-gap)!important}
+body:not(.auth-locked) #scoresPage .qr-scores-main > *{width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
+body:not(.auth-locked) #scoresPage .qr-scores-main>.qr-top{margin-bottom:0!important}
+body:not(.auth-locked) #scoresPage .qr-scores-level-badge{display:inline-block;margin:0;padding:9px 20px;border-radius:999px;background:#e6f6f6;color:#099aab;font-size:13px;font-weight:800}
+body:not(.auth-locked) #scoresPage .qr-scores-level-badge[hidden]{display:none!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{flex:1 1 95px;min-width:0;border:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(4){background:#fde8e7!important;color:#885652!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) #scoresPage .qr-scores-filter-pill.active{background:#099aab!important;color:white!important;outline:0!important;box-shadow:none!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden]{display:none!important}
+body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
+body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;min-height:150px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:#e6f6f6}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight-best{background:#fff0e1}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight h2{font-size:17px!important;line-height:1.3;color:var(--qr-home-ink)!important;margin:0!important;position:relative;z-index:1}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight strong{font-size:clamp(27px,3vw,42px);font-weight:800;color:#099aab;line-height:1.15;position:relative;z-index:1}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight p{font-size:13px;color:#7e9395;max-width:85%;overflow-wrap:anywhere;position:relative;z-index:1}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight-best strong{color:#c68136}
+body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px;top:calc(50% - 24px);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff8ec;color:#fdad56;font-size:36px;opacity:.7}
+body:not(.auth-locked) #scoresPage .qr-scores-performance-row{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.95fr);gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-bottom{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.75fr);gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-performance-row>section,body:not(.auth-locked) #scoresPage .qr-scores-bottom>section{min-width:0;display:flex;flex-direction:column;gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-heading{margin:0!important;font-size:20px!important;line-height:1.3;font-weight:800!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) #scoresPage .qr-scores-performance{display:grid;align-content:start;gap:16px;padding:var(--qr-home-inner-padding)!important;flex:1}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-row{display:grid;gap:8px;min-width:0}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-title{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:800;color:var(--qr-home-ink)}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-track{height:10px;width:100%;border-radius:999px;overflow:hidden;background:#e8eff0}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-track span{display:block;height:100%;border-radius:inherit;background:#099aab}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+2) .qr-scores-subject-track span{background:#fdad56}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+3) .qr-scores-subject-track span{background:#eaaea4}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+4) .qr-scores-subject-track span{background:#e5c8a6}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+5) .qr-scores-subject-track span{background:#62cbd1}
+body:not(.auth-locked) #scoresPage .qr-scores-donut-box{display:grid;place-items:center;flex:1;min-height:220px}
+body:not(.auth-locked) #scoresPage .qr-scores-donut{width:170px;height:170px;flex:none}
+body:not(.auth-locked) #scoresPage .qr-scores-donut strong{font-size:30px}
+body:not(.auth-locked) #scoresPage .qr-scores-section-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color:#829da0}
+body:not(.auth-locked) #scoresPage .qr-scores-history{padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
+body:not(.auth-locked) #scoresPage .qr-scores-history-row{display:flex;align-items:center;gap:12px;min-width:0;padding:11px 0}
+body:not(.auth-locked) #scoresPage .qr-scores-history-row+.qr-scores-history-row{border-top:1px solid #e9eff0}
+body:not(.auth-locked) #scoresPage .qr-scores-activity-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:14px;background:#e6f6f6;color:#099aab;font-size:14px}
+body:not(.auth-locked) #scoresPage .qr-scores-history-copy{min-width:0;flex:1;display:grid;gap:3px}
+body:not(.auth-locked) #scoresPage .qr-scores-history-copy strong{font-size:13px;color:#171717;overflow-wrap:anywhere}
+body:not(.auth-locked) #scoresPage .qr-scores-history-copy small{font-size:11px;color:#929a9d}
+body:not(.auth-locked) #scoresPage .qr-scores-percent-pill{flex:none;border-radius:999px;background:#e6f6f6;color:#099aab;font-weight:800;font-size:13px;padding:7px 11px}
+body:not(.auth-locked) #scoresPage .qr-scores-total-card{display:flex;align-items:center;gap:18px;min-height:150px}
+body:not(.auth-locked) #scoresPage .qr-scores-total-icon{flex:0 0 54px;display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:#e6f6f6;color:#099aab;font-size:29px}
+body:not(.auth-locked) #scoresPage .qr-scores-total-card strong{font-size:40px;line-height:1;color:#099aab}
+body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:#829da0;margin-top:5px}
+@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-performance-row,body:not(.auth-locked) #scoresPage .qr-scores-bottom{grid-template-columns:1fr}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{flex:1 1 105px}body:not(.auth-locked) #scoresPage .qr-scores-donut-box{min-height:190px}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
