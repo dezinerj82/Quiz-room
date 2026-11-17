@@ -1543,62 +1543,30 @@ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button{d
 body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
 body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
 
-/* Scores dashboard: same shared stages, cards, gaps, curves and pill styling as Home. */
+/* Scores uses the Home stages, shared cards, 24px gaps and 32px main padding. */
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:var(--qr-home-gap)!important}
-body:not(.auth-locked) #scoresPage .qr-scores-main > *{width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
-body:not(.auth-locked) #scoresPage .qr-scores-main>.qr-top{margin-bottom:0!important}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap);margin:0!important}
+body:not(.auth-locked) #scoresPage .qr-scores-main>*{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:0!important}
+body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
 body:not(.auth-locked) #scoresPage .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:var(--qr-home-pill-radius)!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(4){background:#fde8e7!important;color:#885652!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) #scoresPage .qr-scores-filter-pill.active{background:#099aab!important;color:white!important;outline:0!important;box-shadow:none!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden]{display:none!important}
-body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) #scoresPage .qr-scores-filter-pill.active{background:var(--qr-home-primary)!important;color:white!important;outline:0!important;box-shadow:none!important}
+body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
-body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:#e6f6f6}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:var(--qr-home-secondary)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best{background:#fff0e1}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight h2{font-size:17px!important;line-height:1.3;color:var(--qr-home-ink)!important;margin:0!important;position:relative;z-index:1}
-body:not(.auth-locked) #scoresPage .qr-scores-highlight strong{font-size:clamp(27px,3vw,42px);font-weight:800;color:#099aab;line-height:1.15;position:relative;z-index:1}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight strong{font-size:clamp(27px,3vw,42px);font-weight:800;color:var(--qr-home-primary);line-height:1.15;position:relative;z-index:1}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight p{font-size:13px;color:#7e9395;max-width:85%;overflow-wrap:anywhere;position:relative;z-index:1}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best strong{color:#c68136}
-body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px;top:calc(50% - 24px);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff8ec;color:#fdad56;font-size:36px;opacity:.7}
-body:not(.auth-locked) #scoresPage .qr-scores-performance-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-performance-row>section,body:not(.auth-locked) #scoresPage .qr-scores-bottom>section{min-width:0;display:flex;flex-direction:column;gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-performance-row>section>.qr-home-surface,body:not(.auth-locked) #scoresPage .qr-scores-bottom>section>.qr-home-surface{width:100%!important;min-width:0!important;box-sizing:border-box!important;flex:1}
-body:not(.auth-locked) #scoresPage .qr-scores-heading{margin:0!important;font-size:20px!important;line-height:1.3;font-weight:800!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #scoresPage .qr-scores-performance{display:grid;align-content:start;gap:16px;padding:var(--qr-home-inner-padding)!important;flex:1}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-row{display:grid;gap:7px;min-width:0}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-title{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:800;color:var(--qr-home-ink)}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-track{height:10px;width:100%;border-radius:999px;overflow:hidden;background:#e8eff0}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-track span{display:block;height:100%;border-radius:inherit;background:#099aab}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+2) .qr-scores-subject-track span{background:#fdad56}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+3) .qr-scores-subject-track span{background:#eaaea4}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+4) .qr-scores-subject-track span{background:#e5c8a6}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-row:nth-child(5n+5) .qr-scores-subject-track span{background:#62cbd1}
-body:not(.auth-locked) #scoresPage .qr-scores-donut-box{display:grid;place-items:center;flex:1;min-height:220px}
-body:not(.auth-locked) #scoresPage .qr-scores-donut{width:170px;height:170px;flex:none}
-body:not(.auth-locked) #scoresPage .qr-scores-donut strong{font-size:30px}
-body:not(.auth-locked) #scoresPage .qr-scores-section-header{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px;top:calc(50% - 24px);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff8ec;color:var(--qr-home-third);font-size:36px;opacity:.7}
 body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color:#829da0}
-body:not(.auth-locked) #scoresPage .qr-scores-history{padding:var(--qr-home-inner-padding)!important}
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
-body:not(.auth-locked) #scoresPage .qr-scores-history-row{display:flex;align-items:center;gap:12px;min-width:0;padding:11px 0}
-body:not(.auth-locked) #scoresPage .qr-scores-history-row+.qr-scores-history-row{border-top:1px solid #e9eff0}
-body:not(.auth-locked) #scoresPage .qr-scores-activity-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:14px;background:#e6f6f6;color:#099aab;font-size:14px}
-body:not(.auth-locked) #scoresPage .qr-scores-history-copy{min-width:0;flex:1;display:grid;gap:3px}
-body:not(.auth-locked) #scoresPage .qr-scores-history-copy strong{font-size:13px;color:#171717;overflow-wrap:anywhere}
-body:not(.auth-locked) #scoresPage .qr-scores-history-copy small{font-size:11px;color:#929a9d}
-body:not(.auth-locked) #scoresPage .qr-scores-percent-pill{flex:none;border-radius:999px;background:#e6f6f6;color:#099aab;font-weight:800;font-size:13px;padding:7px 11px}
-body:not(.auth-locked) #scoresPage .qr-scores-total-card{display:flex;align-items:center;gap:var(--qr-home-gap);min-height:150px}
-body:not(.auth-locked) #scoresPage .qr-scores-total-icon{flex:0 0 54px;display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:#e6f6f6;color:#099aab;font-size:29px}
-body:not(.auth-locked) #scoresPage .qr-scores-total-card strong{font-size:40px;line-height:1;color:#099aab}
-body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:#829da0;margin-top:5px}
-@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-performance-row,body:not(.auth-locked) #scoresPage .qr-scores-bottom{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) #scoresPage .qr-scores-donut-box{min-height:190px}}
+@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1670,11 +1638,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:
    <div><span>Subjects</span><strong id="qrScoresSubjectsCount">0</strong></div>
   </div>
  </section>
- <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
-  <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
-  <div class="qr-best-heading qr-home-best-level"><div id="qrScoresLevelMount"></div></div>
-  <div id="qrScoresBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
- </section>
+ <div id="qrScoresHighestSlot"></div>
 </div>
 
 <div class="qr-main qr-home-main qr-scores-main">
@@ -1684,8 +1648,12 @@ body:not(.auth-locked) #scoresPage .qr-scores-total-card p{font-size:13px;color:
  <div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to view</p></div>
  <div class="qr-scores-filter" aria-label="Filter scores by subject"><button type="button" data-score-subject="all" class="qr-scores-filter-pill" onclick="qrChooseScoresSubject('all')">All Subjects</button><button type="button" data-score-subject="English" onclick="qrChooseScoresSubject('English')" class="qr-scores-filter-pill">English</button><button type="button" data-score-subject="Malay" onclick="qrChooseScoresSubject('Malay')" class="qr-scores-filter-pill">Malay</button><button type="button" data-score-subject="Korean" onclick="qrChooseScoresSubject('Korean')" class="qr-scores-filter-pill">Korean</button><button type="button" data-score-subject="Math" onclick="qrChooseScoresSubject('Math')" class="qr-scores-filter-pill">Math</button><button type="button" data-score-subject="Science" onclick="qrChooseScoresSubject('Science')" class="qr-scores-filter-pill">Science</button></div>
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
- <div class="qr-scores-performance-row"><section><h2 class="qr-scores-heading">Subject Performance</h2><div id="qrScoresPerformance" class="qr-home-surface qr-scores-performance"><p class="qr-muted">Your subject scores will appear here.</p></div></section><section><h2 class="qr-scores-heading">Average Score</h2><div class="qr-home-surface qr-scores-donut-box"><div id="qrScoresDonut" class="qr-home-ring qr-scores-donut"><strong id="qrScoresDonutText">—</strong><span>Avg. Score</span></div></div></section></div>
- <div class="qr-scores-bottom"><section><div class="qr-scores-section-header"><h2 class="qr-scores-heading">Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div><div id="qrScoreHistoryCard" class="qr-home-surface qr-scores-history"><div id="qrScoresList" class="qr-list"><p class="qr-muted">No scores yet.</p></div></div></section><section><h2 class="qr-scores-heading">Total Quizzes</h2><div class="qr-home-surface qr-scores-total-card"><span aria-hidden="true" class="qr-scores-total-icon">▤</span><div><strong id="qrScoresTotalCount">0</strong><p>Completed quizzes</p></div></div></section></div>
+ <div class="qr-home-bottom qr-scores-bottom">
+  <section><div class="qr-home-section-title"><h2>Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div>
+   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-list"><p class="qr-muted">No scores yet.</p></div></div>
+  </section>
+  <section><div class="qr-home-section-title"><h2>Overview</h2></div><div id="qrScoresOverviewSlot"></div></section>
+ </div>
 </div></div></section><section id="profilePage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Profile</h1><div class="qr-profile-actions"><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header>
 <div class="qr-card qr-profile-surface">
  <section id="qrProfileView" class="qr-profile-section">
@@ -1843,7 +1811,7 @@ function qrCloseSidebars(){
 }
 window.addEventListener('resize',()=>{if(window.innerWidth>860)qrCloseSidebars()});
 document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))qrCloseSidebars()});
-function show(id){qrCloseSidebars();if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
+function show(id){qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
  document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  const selectionCard=document.querySelector('#selection .qr-main > .qr-card');if(selectionCard)selectionCard.inert=locked;
  $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
@@ -2476,96 +2444,54 @@ function qrScoreDisplayDate(value){
  return m[1]+'/'+m[2]+'/'+m[3]+' '+String(hour%12||12).padStart(2,'0')+':'+m[5]+(hour<12?'AM':'PM');
 }
 let qrScoresActiveSubject='all';
-document.addEventListener('pointerdown',event=>{
- const menu=$('qrScoresLevelDropdown');
- if(!menu||event.target.closest('#qrScoresLevelDropdown'))return;
- const options=$('qrScoresLevelOptions');
- if(options)options.hidden=true;
- const trigger=$('qrScoresLevelTrigger');
- if(trigger)trigger.setAttribute('aria-expanded','false');
-});
-
+/* Move the actual Home cards between stages. Never duplicate their markup or data. */
+function qrPlaceSharedScoreCards(onScores){
+ const highest=document.querySelector('#home .qr-home-highest, #qrScoresHighestSlot .qr-home-highest');
+ const overview=document.querySelector('#home .qr-home-overview, #qrScoresOverviewSlot .qr-home-overview');
+ if(!highest||!overview)return;
+ const bestParent=onScores?$('qrScoresHighestSlot'):document.querySelector('#home .qr-home-side');
+ const overviewParent=onScores?$('qrScoresOverviewSlot'):document.querySelector('#home .qr-home-bottom > section:nth-child(2)');
+ if(bestParent&&highest.parentElement!==bestParent)bestParent.append(highest);
+ if(overviewParent&&overview.parentElement!==overviewParent)overviewParent.append(overview);
+}
 function qrChooseScoresSubject(name){qrScoresActiveSubject=name;qrRenderScores()}
 function qrRenderScores(){
  const entries=qrEntries();
  const attempts=entries.flatMap(entry=>(entry.attempts||[]).map(a=>({entry,a}))).filter(({a})=>Number.isFinite(Number(a.score))&&Number.isFinite(Number(a.total))&&Number(a.total)>0);
  const percent=({a})=>Math.max(0,Math.min(100,Math.round(100*Number(a.score)/Number(a.total))));
  const subjects=[...new Set(attempts.map(({entry})=>entry.subject).filter(Boolean))].sort();
- const selected=qrScoresActiveSubject;
- const filtered=selected==='all'?attempts:attempts.filter(({entry})=>entry.subject===selected);
- const avg=rows=>rows.length?Math.round(rows.reduce((sum,item)=>sum+percent(item),0)/rows.length):null;
- const average=avg(filtered);
- const overall=avg(attempts);
+ const filtered=qrScoresActiveSubject==='all'?attempts:attempts.filter(({entry})=>entry.subject===qrScoresActiveSubject);
+ const average=filtered.length?Math.round(filtered.reduce((sum,item)=>sum+percent(item),0)/filtered.length):null;
  const name=qrProfile.name||qrAccount().split('@')[0]||'Student';
  $('qrScoresName').textContent=name;
- const avatar=$('qrScoresAvatar');
- avatar.hidden=!qrProfile.photo;
+ const avatar=$('qrScoresAvatar');avatar.hidden=!qrProfile.photo;
  if(qrProfile.photo)avatar.src=qrProfile.photo;
  $('scoresPage').querySelector('.qr-home-avatar-initial').hidden=!!qrProfile.photo;
  const levels=[...new Set(attempts.map(({entry,a})=>a.level||entry.level).filter(Boolean))];
  $('qrScoresLevel').textContent=levels.length===1?'Level '+levels[0]:'Quiz Room learner';
  $('qrScoresQuizzes').textContent=String(attempts.length);
- $('qrScoresSideAverage').textContent=overall===null?'—':overall+'%';
+ $('qrScoresSideAverage').textContent=attempts.length?Math.round(attempts.reduce((sum,item)=>sum+percent(item),0)/attempts.length)+'%':'—';
  $('qrScoresSubjectsCount').textContent=String(subjects.length);
- // Reuse Home's rendered Highest Score content, keeping one source of truth.
- qrRenderBestScores();
- const homeLevel=$('qrHomeLevelDropdown'),mount=$('qrScoresLevelMount');
- mount.replaceChildren();
- if(!homeLevel.hidden){
-  const menu=homeLevel.cloneNode(true);
-  menu.id='qrScoresLevelDropdown';
-  const trigger=menu.querySelector('#qrHomeLevelTrigger');
-  const options=menu.querySelector('#qrHomeLevelOptions');
-  trigger.id='qrScoresLevelTrigger';trigger.removeAttribute('onclick');
-  menu.querySelector('#qrHomeLevelLabel').id='qrScoresLevelLabel';
-  trigger.setAttribute('aria-controls','qrScoresLevelOptions');
-  trigger.setAttribute('aria-expanded','false');
-  options.id='qrScoresLevelOptions';options.hidden=true;
-  trigger.addEventListener('click',()=>{
-   options.hidden=!options.hidden;
-   trigger.setAttribute('aria-expanded',String(!options.hidden));
-  });
-  const optionButtons=[...options.querySelectorAll('button')];
-  optionButtons.forEach((button,index)=>{
-   button.addEventListener('click',()=>{
-    $('qrBestLevel').value=button.textContent;
-    qrRenderScores();
-    $('qrScoresLevelTrigger')?.focus();
-   });
-   button.addEventListener('keydown',event=>{
-    if(event.key==='Escape'){options.hidden=true;trigger.setAttribute('aria-expanded','false');trigger.focus()}
-    if(event.key==='ArrowDown'||event.key==='ArrowUp'){
-     event.preventDefault();
-     optionButtons[(index+(event.key==='ArrowDown'?1:-1)+optionButtons.length)%optionButtons.length].focus();
-    }
-   });
-  });
-  mount.append(menu);
- }
- $('qrScoresBestScores').innerHTML=$('qrBestScores').innerHTML;
+ // Home owns the Highest Score and Overview cards, including their dropdowns.
+ qrRender();qrPlaceSharedScoreCards(true);
  document.querySelectorAll('#scoresPage .qr-scores-filter-pill').forEach(button=>{
   const subject=button.dataset.scoreSubject;
-  button.classList.toggle('active',subject===selected);
-  button.setAttribute('aria-pressed',String(subject===selected));
+  button.classList.toggle('active',subject===qrScoresActiveSubject);
+  button.setAttribute('aria-pressed',String(subject===qrScoresActiveSubject));
   button.hidden=subject!=='all'&&!subjects.includes(subject);
  });
  $('qrScoresAverageLarge').textContent=average===null?'—':average+'%';
  $('qrScoresAverageCaption').textContent=filtered.length+' completed '+(filtered.length===1?'quiz':'quizzes');
- $('qrScoresDonutText').textContent=average===null?'—':average+'%';
- $('qrScoresDonut').style.setProperty('--qr-home-ring-value',(average||0)+'%');
  const top=filtered.length?filtered.reduce((winner,item)=>percent(item)>percent(winner)?item:winner):null;
  $('qrScoresTopPercent').textContent=top?percent(top)+'%':'—';
  $('qrScoresTopSubject').textContent=top?top.entry.subject+' · '+(top.entry.chapter||'Quiz'):'Complete a quiz to get started';
- const groups=new Map();
- for(const item of filtered){const key=item.entry.subject;if(!key)continue;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item)}
- $('qrScoresPerformance').innerHTML=[...groups].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,rows],i)=>{
-  const score=avg(rows);
-  return '<div class="qr-scores-subject-row"><div class="qr-scores-subject-title"><span>'+escapeHtml(subject)+'</span><strong>'+score+'%</strong></div><div class="qr-scores-subject-track" role="progressbar" aria-label="'+escapeHtml(subject)+' average score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div></div>';
- }).join('')||'<p class="qr-muted">No scores yet.</p>';
  const recent=filtered.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||'')));
  $('qrScoresHistoryCount').textContent=recent.length+' results';
- $('qrScoresList').innerHTML=recent.map(({entry,a})=>'<div class="qr-scores-history-row"><span class="qr-scores-activity-icon" aria-hidden="true">▶</span><div class="qr-scores-history-copy"><strong>'+escapeHtml(entry.subject+' · '+String(entry.chapter||'Quiz'))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-scores-percent-pill">'+percent({a})+'%</span></div>').join('')||'<p class="qr-muted">No scores yet.</p>';
- $('qrScoresTotalCount').textContent=String(filtered.length);
+ $('qrScoresList').innerHTML=recent.map(({entry,a})=>
+  '<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+
+  escapeHtml(entry.subject+' · '+String(entry.chapter||'Quiz'))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+
+  '</small></div><span class="qr-home-activity-value">'+percent({a})+'%</span></div>'
+ ).join('')||'<p class="qr-muted">No scores yet.</p>';
 }
 let qrNotes=[];
 let qrEditingNote=null,qrNotesBusy=false;
