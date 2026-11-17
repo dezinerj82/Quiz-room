@@ -2350,7 +2350,7 @@ renderLevelChoices();let initial=new URLSearchParams(location.search).get('subje
 // Dashboard: independent navigation, existing quiz logic is unchanged.
 let qrProfile={name:'',photo:''};
 const qrAccount=()=>window.quizRoomGoogleEmail?.()||'';
-function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;if(page==='quizStart'){selectedLevel=null;selectedCategory=null;subject='';activeExerciseTopic=null;renderLevelChoices()}show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='notesPage'){qrRender();qrPlaceNotesSide();qrRenderNotes();qrRenderNoteGlossary()}if(page==='profilePage')qrProfileSection('view')}
+function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;if(page==='quizStart'){selectedLevel=null;selectedCategory=null;subject='';activeExerciseTopic=null;renderLevelChoices()}show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='notesPage'){qrRender();qrPlaceNotesSide();qrRenderNotes();qrRenderNoteSubjectButtons();qrRenderNoteGlossary()}if(page==='profilePage')qrProfileSection('view')}
 function qrEntries(){return Object.values(loadScoreHistory()).filter(e=>e.name===qrAccount()&&Array.isArray(e.attempts))}
 function qrBestScoreRecords(){
  return qrEntries().flatMap(entry=>(entry.attempts||[]).flatMap(attempt=>{
@@ -2423,6 +2423,12 @@ function qrRenderBestScores(){
   '<span class="qr-best-percentage">'+score+'%</span></div></div>'
  ).join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
 }
+function qrRenderOverview(count,subjectCount,average){
+ $('qrHomeRingText').textContent=average===null?'—':average+'%';
+ $('qrHomeRing').style.setProperty('--qr-home-ring-value',(average||0)+'%');
+ $('qrHomeTotalAttempts').textContent=count+' '+(count===1?'quiz':'quizzes');
+ $('qrHomeTotalSubjects').textContent=subjectCount+' '+(subjectCount===1?'subject':'subjects');
+}
 function qrRender(){
  const name=qrProfile.name||qrAccount().split('@')[0]||'Student';
  $('qrGreeting').textContent='Welcome back, '+name+'!';
@@ -2439,10 +2445,7 @@ function qrRender(){
  $('qrHomeQuizzes').textContent=String(attempts.length);
  $('qrHomeAverage').textContent=avg===null?'—':avg+'%';
  $('qrHomeSubjectsCount').textContent=String(subjects.size);
- $('qrHomeRingText').textContent=avg===null?'—':avg+'%';
- $('qrHomeRing').style.setProperty('--qr-home-ring-value',(avg||0)+'%');
- $('qrHomeTotalAttempts').textContent=attempts.length+' '+(attempts.length===1?'quiz':'quizzes');
- $('qrHomeTotalSubjects').textContent=subjects.size+' '+(subjects.size===1?'subject':'subjects');
+ qrRenderOverview(attempts.length,subjects.size,avg);
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
  $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
  qrRenderBestScores();
@@ -2487,6 +2490,7 @@ function qrRenderScores(){
  $('qrScoresSubjectsCount').textContent=String(subjects.length);
  // Home owns the Highest Score and Overview cards, including their dropdowns.
  qrRender();qrPlaceSharedScoreCards(true);
+ qrRenderOverview(filtered.length,new Set(filtered.map(({entry})=>entry.subject).filter(Boolean)).size,average);
  document.querySelectorAll('#scoresPage .qr-scores-filter-pill').forEach(button=>{
   const subject=button.dataset.scoreSubject;
   button.classList.toggle('active',subject===qrScoresActiveSubject);
@@ -2525,7 +2529,7 @@ const qrNoteGlossaryData={
  Math:[['Place value','The value of a digit depends on its position in a number.','In 352, the digit 5 means 50.'],['Multiplication','Adding equal groups together.','4 × 3 means four groups of three, which equals 12.'],['Fraction','A number showing part of a whole.','One half means one of two equal parts.']],
  Science:[['Energy','The ability to cause change or do work.','Light and heat are forms of energy.'],['Habitat','The natural place where a living thing lives.','A pond is a habitat for frogs.'],['Evaporation','When liquid changes into gas at its surface.','Water in wet clothes evaporates as they dry.']]
 };
-function qrChooseNoteSubject(name){if(qrNotesBusy)return;qrNoteSubject=qrNoteSubject===name?'all':name;qrEditingNote=null;qrRenderNotes();qrRenderNoteGlossary()}
+function qrChooseNoteSubject(name){qrNoteSubject=name;qrRenderNoteSubjectButtons();qrRenderNoteGlossary()}
 let qrStudySubject='',qrStudyIndex=-1;
 function qrRenderNoteGlossary(index){
  const keys=Object.keys(qrNoteGlossaryData),name=qrNoteSubject==='all'?(qrStudySubject||keys[Math.floor(Math.random()*keys.length)]):qrNoteSubject;
@@ -2548,9 +2552,11 @@ function qrNoteDate(value){
 function qrNoteParagraphs(text){
  return String(text).split(/\r?\n/).map(line=>'<p class="qr-note-paragraph">'+(line?escapeHtml(line):'&nbsp;')+'</p>').join('');
 }
-function qrRenderNotes(){
+function qrRenderNoteSubjectButtons(){
  document.querySelectorAll('#notesPage [data-note-subject]').forEach(b=>{const active=b.dataset.noteSubject===qrNoteSubject;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
- $('qrNotesList').innerHTML=qrNotes.filter(n=>qrNoteSubject==='all'||n.subject===qrNoteSubject).slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
+}
+function qrRenderNotes(){
+ $('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
   const id=JSON.stringify(n.id).replace(/"/g,'&quot;'),editing=qrEditingNote===n.id;
   return '<div class="qr-past-note qr-home-activity-row" data-note-id="'+escapeHtml(n.id)+'">'+
    '<span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy">'+
@@ -2618,7 +2624,7 @@ async function qrSaveNote(button){
  const text=$('qrNoteText').value.trim();
  if(!text)return;
  qrNotesBusy=true;qrButtonProcessing(button,true);
- const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text,...(qrNoteSubject==='all'?{}:{subject:qrNoteSubject})}];
+ const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text}];
  try{
   await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));
   qrNotes=next;$('qrNoteText').value='';$('qrNoteStatus').textContent='';qrRenderNotes();
@@ -2652,7 +2658,7 @@ async function qrLoadAccount(){
  if(p)qrProfile=JSON.parse(p);
  if(n)qrNotes=JSON.parse(n);
  qrScoreHistory=scores;
- qrRender();
+ if(!$('scoresPage').classList.contains('hidden'))qrRenderScores();else qrRender();
 }
 
 </script>
