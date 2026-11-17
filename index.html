@@ -1366,7 +1366,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-logout{backgro
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 var(--qr-home-paragraph-gap)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;margin:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-weight:800!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
@@ -1377,7 +1377,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title 
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title p{color:#929a9d!important;font-size:13px!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject{min-width:0!important;border:0!important;font-weight:800!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Malay"]{background:#ffeddd!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Korean"]{background:#ffeaeb!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Math"]{background:#f8eadb!important}
@@ -1386,12 +1386,14 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject.active
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-subject:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-cta:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-activity-value:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-text-link:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-width:0}
+body:not(.auth-locked) #home .qr-home-bottom>section{display:flex;flex-direction:column}
+body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{flex:1;align-content:start}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-text-link{border:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row{display:flex;align-items:center;gap:var(--qr-home-row-gap);padding:var(--qr-home-row-padding) 0;min-width:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
-:root{--qr-home-inline-gap:4px;--qr-home-paragraph-gap:8px;--qr-home-row-gap:12px;--qr-home-row-padding:11px;--qr-home-value-padding:7px 10px}
+:root{--qr-home-inline-gap:4px;--qr-home-paragraph-gap:8px;--qr-home-row-gap:12px;--qr-home-row-padding:11px;--qr-home-value-padding:7px 10px;--qr-home-standard-pill-font:14px;--qr-home-standard-pill-line:1.4;--qr-home-standard-pill-padding:var(--qr-flat-pill-padding)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{min-width:0;display:grid;gap:var(--qr-home-inline-gap);flex:1}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{font-size:13px;color:var(--qr-home-ink)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy :is(strong,.qr-note-body){font-size:inherit;color:inherit;font-weight:700;overflow-wrap:anywhere}
@@ -1514,7 +1516,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-level{pos
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrBestLevel{display:none!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown[hidden],body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options[hidden]{display:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;margin:0!important;border:0!important;outline:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-family:var(--qr-font)!important;font-weight:700!important;box-shadow:none!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:hover{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:focus-visible{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important;outline:2px solid var(--qr-home-focus)!important;outline-offset:2px}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
@@ -1545,6 +1547,9 @@ body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
 @media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Standard pill geometry: Math subject button is the reference. Shared CTA, level dropdown and score indicators use the same height and curve. */
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button:is(.qr-home-subject,.qr-home-cta),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) button.qr-home-dropdown-trigger,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row>span.qr-home-activity-value{box-sizing:border-box!important;height:auto!important;min-height:0!important;font-size:var(--qr-home-standard-pill-font)!important;line-height:var(--qr-home-standard-pill-line)!important;padding:var(--qr-home-standard-pill-padding)!important;border-radius:var(--qr-home-pill-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row>span.qr-home-activity-value{display:inline-flex;align-items:center;justify-content:center}
 /* All Home-layout pages use the same focus palette. */
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) :is(button,input,textarea,select):focus-visible{outline-color:var(--qr-home-focus)!important}
 /* Notes: functional layout only; shared Home classes supply visual defaults. */
