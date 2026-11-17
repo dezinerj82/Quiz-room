@@ -1224,12 +1224,12 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:var(--qr-font-body)!important;font-weight:800}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:var(--qr-home-top-height);gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;box-sizing:border-box;height:var(--qr-home-top-height);min-height:var(--qr-home-top-height);gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome h2{font-size:var(--qr-font-heading)!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 var(--qr-home-paragraph-gap)!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome p{font-size:var(--qr-font-body)!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome p{font-size:var(--qr-font-body)!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 var(--qr-home-gap)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;margin:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-weight:800!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 min(clamp(64px,16vw,150px),calc(var(--qr-home-top-height) - 2 * var(--qr-home-inner-padding)));width:min(clamp(64px,16vw,150px),calc(var(--qr-home-top-height) - 2 * var(--qr-home-inner-padding)));aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-hero-mark span:nth-child(2){position:absolute;top:7%;right:9%;font-size:clamp(12px,2.6vw,25px);color:var(--qr-home-fourth)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-hero-mark span:nth-child(3){position:absolute;bottom:4%;left:3%;font-size:clamp(10px,2vw,19px);color:var(--qr-home-primary)}
@@ -1396,7 +1396,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px
 body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:var(--qr-font-small);color:#829da0}
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
 @media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:var(--qr-home-top-height);min-height:var(--qr-home-top-height)}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Standard pill geometry: Math subject button is the reference. Shared CTA, level dropdown, score indicators and Notes pills use the same height and curve. */
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-main button:is(.qr-home-subject,.qr-home-cta),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) button.qr-home-dropdown-trigger,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-activity-row>span.qr-home-activity-value,body:not(.auth-locked) #notesPage .qr-main :is(button.qr-home-activity-value,span.qr-home-activity-value,.qr-study-key){box-sizing:border-box!important;height:auto!important;min-height:0!important;font-size:var(--qr-home-standard-pill-font)!important;line-height:var(--qr-home-standard-pill-line)!important;padding:var(--qr-home-standard-pill-padding)!important;border-radius:var(--qr-home-pill-radius)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-activity-row>span.qr-home-activity-value{display:inline-flex;align-items:center;justify-content:center}
@@ -1457,10 +1457,22 @@ body:not(.auth-locked) #notesPage .qr-note-glossary-header{flex:none}
 body:not(.auth-locked) #notesPage .qr-study-scroll{display:flex;flex-direction:column;gap:var(--qr-home-gap);flex:1}
 body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
 /* Common desktop stage boundary; existing narrow-screen layout remains stacked. */
+/* Dashboard cards share the available space, preserving the existing padding. */
+@media(min-width:1081px){
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{display:flex!important;flex-direction:column;align-items:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > :not(.qr-home-bottom):not(dialog){flex:0 0 auto}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{flex:1 1 0;min-height:0;grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-height:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-section-title{flex:none;min-height:calc(var(--qr-font-heading) * 1.4)}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;flex:1 1 0;min-height:0!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{flex:1 1 0;min-height:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:hidden}
+}
+
 @media(min-width:1081px){
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{box-sizing:border-box!important;height:calc(100dvh - var(--qr-home-inner-padding)*2)!important;min-height:0!important;grid-template-rows:minmax(0,1fr)}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-main{min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{min-height:0;overflow:hidden!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-main{min-height:0!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{min-height:0;overflow:visible!important}
 }
 /* Quiz selection and results reuse the same stage and card defaults. */
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-quiz-menu:not(.hidden){display:flex;flex-direction:column;gap:var(--qr-home-gap)}
