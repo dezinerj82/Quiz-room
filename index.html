@@ -1317,7 +1317,8 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{position:relat
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;justify-content:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible,.active){background:#fff!important;color:var(--qr-home-primary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle).active{background:#fff!important;color:var(--qr-home-primary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side .qr-nav-label{display:inline!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-sidebar-toggle{display:none!important}
@@ -1360,12 +1361,12 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-top{margin:0 0 var(
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-top h1{font-size:34px!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:14px!important;font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-primary)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 8px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 var(--qr-home-paragraph-gap)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-primary)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
@@ -1381,16 +1382,16 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-s
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Korean"]{background:#ffeaeb!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Math"]{background:#f8eadb!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Science"]{background:#e7f8f8!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject.active{background:var(--qr-home-primary)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject.active{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;box-shadow:inset 0 0 0 1px var(--qr-home-primary)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-subject:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-cta:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-activity-value:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-text-link:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-text-link{border:0!important;background:transparent!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-text-link{border:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row{display:flex;align-items:center;gap:var(--qr-home-row-gap);padding:var(--qr-home-row-padding) 0;min-width:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
-:root{--qr-home-inline-gap:4px;--qr-home-row-gap:12px;--qr-home-row-padding:11px;--qr-home-value-padding:7px 10px}
+:root{--qr-home-inline-gap:4px;--qr-home-paragraph-gap:8px;--qr-home-row-gap:12px;--qr-home-row-padding:11px;--qr-home-value-padding:7px 10px}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{min-width:0;display:grid;gap:var(--qr-home-inline-gap);flex:1}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{font-size:13px;color:var(--qr-home-ink)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy :is(strong,.qr-note-body){font-size:inherit;color:inherit;font-weight:700;overflow-wrap:anywhere}
@@ -1514,14 +1515,14 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrBestLevel{display:no
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown[hidden],body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options[hidden]{display:none!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:hover{background:#099aab!important;color:#fff!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:hover{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:focus-visible{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important;outline:2px solid var(--qr-home-focus)!important;outline-offset:2px}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button[aria-selected="true"]{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;box-shadow:inset 0 0 0 1px var(--qr-home-primary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 
 /* Scores uses the Home stages, shared cards, 24px gaps and 32px main padding. */
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:0!important}
@@ -1532,7 +1533,7 @@ body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-subject-heading{di
 body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
+body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--qr-home-paragraph-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:var(--qr-home-secondary)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best{background:#fff0e1}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight h2{font-size:17px!important;line-height:1.3;color:var(--qr-home-ink)!important;margin:0!important;position:relative;z-index:1}
@@ -1544,6 +1545,8 @@ body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
 @media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* All Home-layout pages use the same focus palette. */
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) :is(button,input,textarea,select):focus-visible{outline-color:var(--qr-home-focus)!important}
 /* Notes: functional layout only; shared Home classes supply visual defaults. */
 body:not(.auth-locked) #notesPage .qr-note-compose{box-sizing:border-box;flex-direction:column;align-items:stretch;height:225px;background:var(--qr-home-secondary)!important}
 body:not(.auth-locked) #notesPage #qrNoteText{flex:1;min-height:0!important;height:0!important;width:100%;box-sizing:border-box;resize:none;margin:0!important;background:#fff!important;border:0!important;border-radius:var(--qr-home-radius)!important;padding:var(--qr-home-inner-padding)!important;color:var(--qr-home-ink)!important;font-size:var(--qr-font-body)!important}
@@ -1552,6 +1555,7 @@ body:not(.auth-locked) #notesPage .qr-note-compose-actions button{order:2}
 body:not(.auth-locked) #notesPage .qr-note-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:var(--qr-home-inline-gap)}
 body:not(.auth-locked) #notesPage .qr-note-body{min-width:0;overflow-wrap:anywhere}
 body:not(.auth-locked) #notesPage .qr-note-paragraph{white-space:pre-wrap;margin:0!important}
+body:not(.auth-locked) #notesPage .qr-note-paragraph+.qr-note-paragraph{margin-top:var(--qr-home-paragraph-gap)!important}
 body:not(.auth-locked) #notesPage .qr-note-edit{box-sizing:border-box;width:100%;min-height:90px;resize:vertical;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important;font-size:var(--qr-font-body)!important}
 body:not(.auth-locked) #notesPage .qr-home-bottom>section{display:flex;flex-direction:column}
 body:not(.auth-locked) #notesPage .qr-home-bottom>section>.qr-home-surface{flex:1;align-content:start}
@@ -1561,12 +1565,12 @@ body:not(.auth-locked) #notesPage .qr-note-glossary p{margin:0!important}
 body:not(.auth-locked) #notesPage .qr-note-glossary-header{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
 body:not(.auth-locked) #notesPage .qr-study-controls{display:flex;align-items:center;gap:var(--qr-home-inline-gap)}
 body:not(.auth-locked) #notesPage .qr-study-controls svg{width:20px;height:20px;display:block}
-body:not(.auth-locked) #notesPage .qr-study-key-group{display:grid;gap:var(--qr-home-inline-gap)}
+body:not(.auth-locked) #notesPage .qr-study-key-group{display:grid;gap:var(--qr-home-paragraph-gap)}
 body:not(.auth-locked) #notesPage .qr-study-key{display:flex;align-items:center;align-self:stretch;padding:var(--qr-home-value-padding);padding-inline:var(--qr-home-row-gap)}
 body:not(.auth-locked) #notesPage .qr-study-points{display:grid;gap:var(--qr-home-inline-gap);padding-inline-start:var(--qr-home-inner-padding);margin:0;list-style:disc outside}
 body:not(.auth-locked) #notesPage .qr-study-points li::marker{color:var(--qr-home-primary)}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary{box-sizing:border-box;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-inner-radius);background:color-mix(in srgb,var(--qr-home-third) 20%,white);margin-top:auto}
-body:not(.auth-locked) #notesPage .qr-note-glossary-summary{display:grid;gap:var(--qr-home-inline-gap)}
+body:not(.auth-locked) #notesPage .qr-note-glossary-summary{display:grid;gap:var(--qr-home-paragraph-gap)}
 body:not(.auth-locked) #notesPage .qr-study-summary-heading{display:flex;align-items:center;gap:var(--qr-home-row-gap);color:#c68136}
 body:not(.auth-locked) #notesPage .qr-study-summary-heading svg{width:20px;height:20px;flex:none;color:var(--qr-home-third)}
 body:not(.auth-locked) #notesPage .qr-study-menu{display:grid;gap:var(--qr-home-inline-gap)}
