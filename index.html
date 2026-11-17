@@ -1000,18 +1000,18 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
 /* Dashboard best scores: one card aligned beside greeting; values come from saved attempts. */
 body:not(.auth-locked) #home .qr-home-grid{grid-template-columns:minmax(0,1fr);align-items:stretch}
 body:not(.auth-locked) #home .qr-home-grid>.qr-card{height:100%;margin-bottom:0!important}
-body:not(.auth-locked) #home .qr-best-card{display:flex;flex-direction:column;gap:var(--density-space)}
-body:not(.auth-locked) #home .qr-best-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--density-space)}
-body:not(.auth-locked) #home .qr-best-heading h2{margin:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-card{display:flex;flex-direction:column;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-heading h2{margin:0}
 body:not(.auth-locked) #home #qrBestLevel{width:auto;min-width:96px;max-width:min(100%,160px)}
 body:not(.auth-locked) #home #qrBestLevel[hidden]{display:none!important}
-body:not(.auth-locked) #home .qr-best-list{display:grid;gap:var(--density-space)}
-body:not(.auth-locked) #home .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
-body:not(.auth-locked) #home .qr-best-subject .qr-best-heading{display:grid;grid-template-columns:110px minmax(0,1fr) 66px}
-body:not(.auth-locked) #home .qr-best-subject h3{margin:0;color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
-body:not(.auth-locked) #home .qr-best-percentage{color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800}
-body:not(.auth-locked) #home .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
-body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-list{display:grid;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject .qr-best-heading{display:grid;grid-template-columns:110px minmax(0,1fr) 66px}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject h3{margin:0;color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
 /* Shared control and card padding defaults. */
 :root{--qr-control-padding:9px 16px;--qr-card-padding:20px}
@@ -1019,7 +1019,7 @@ body:not(.auth-locked) #home .qr-best-track span{display:block;height:100%;max-w
 body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle){padding:12px!important}
 /* Dropdown arrows need separate trailing clearance for long subject names. */
 body:not(.auth-locked) .qr-main select{padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important}
-body:not(.auth-locked) #home .qr-best-percentage{text-align:right}
+body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{text-align:right}
 /* One row for Score History's subject label and selection control. */
 body:not(.auth-locked) #scoresPage .qr-score-filter{
  display:flex;align-items:center;justify-content:space-between;gap:var(--density-space);min-width:0
