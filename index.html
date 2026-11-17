@@ -448,10 +448,10 @@ html:not(.qr-font-ready) #googleGate{visibility:hidden}
  border:0;border-radius:var(--qr-button-radius,999px);padding:var(--qr-unified-padding)!important;
  font:700 var(--qr-font-body) var(--qr-font);line-height:1.4;
  background:var(--qr-secondary);color:var(--qr-on-secondary);
- cursor:pointer;transition:transform .2s ease,opacity .2s ease;
+ cursor:pointer;transition:background-color var(--qr-motion-color),color var(--qr-motion-color);
 }
 #googleGate button:nth-child(even){background:var(--qr-secondary)}
-#googleGate button:hover:not(:disabled){transform:translateY(-2px)}
+
 #googleGate button:focus-visible{outline:3px solid var(--qr-focus);outline-offset:2px}
 #googleGate button:disabled{opacity:var(--qr-inactive-opacity);cursor:wait}
 #googleGate #otherGoogle{background:var(--qr-focus);color:var(--qr-on-focus)}
@@ -1045,55 +1045,25 @@ body:not(.auth-locked) .qr-main .qr-card,
 body:not(.auth-locked) #quiz .qr-question-frame,
 body:not(.auth-locked) .time-warning-card,
 body:not(.auth-locked) .qr-crop-box{padding:var(--qr-card-padding)!important}
-/* All clickable controls except sidebar get Soft Press + Outline. */
-body:not(.auth-locked) .qr-main :is(button,.qr-file-button):not(:disabled),
-body:not(.auth-locked) .time-warning-card button:not(:disabled),
-body:not(.auth-locked) .qr-crop-modal button:not(:disabled),
-#googleGate button:not(:disabled){
- transition:transform .17s ease,box-shadow .17s ease,background-color .17s ease;
- transform-origin:center;
+/* Shared gentle color transition; pending controls retain a static visible busy state. */
+:root{--qr-motion-color:180ms ease;--qr-motion-detail:180ms ease}
+body:not(.auth-locked) .qr-main :is(button,.qr-file-button),
+body:not(.auth-locked) .qr-side button,
+body:not(.auth-locked) .time-warning-card button,
+body:not(.auth-locked) .qr-crop-modal button,
+#googleGate button{
+ transition:background-color var(--qr-motion-color),color var(--qr-motion-color);
 }
-body:not(.auth-locked) .qr-main :is(button,.qr-file-button):not(:disabled):active,
-body:not(.auth-locked) .time-warning-card button:not(:disabled):active,
-body:not(.auth-locked) .qr-crop-modal button:not(:disabled):active,
-#googleGate button:not(:disabled):active{
- transform:scale(.93);box-shadow:inset 0 0 0 2px var(--qr-primary)!important;
-}
-/* Animated line on a button while its asynchronous operation is pending. */
 body:not(.auth-locked) :is(button,.qr-file-button).qr-processing,
 #googleGate button.qr-processing{
- position:relative;isolation:isolate;
- box-shadow:inset 0 0 0 2px var(--qr-primary)!important;
- opacity:1!important;cursor:wait;
+ background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;opacity:1!important;cursor:wait;
 }
-body:not(.auth-locked) :is(button,.qr-file-button).qr-processing::before,
-#googleGate button.qr-processing::before{
- content:"";position:absolute;inset:-3px;border-radius:inherit;padding:3px;
- background:conic-gradient(from var(--qr-outline-angle),transparent 0 65%,var(--qr-primary) 78%,var(--qr-focus) 92%,transparent);
- -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
- -webkit-mask-composite:xor;mask-composite:exclude;
- pointer-events:none;animation:qrButtonOrbit 1s linear infinite;
-}
-@property --qr-outline-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
-@keyframes qrButtonOrbit{to{--qr-outline-angle:360deg}}
 @media(prefers-reduced-motion:reduce){
  body:not(.auth-locked) .qr-main :is(button,.qr-file-button),
+ body:not(.auth-locked) .qr-side button,
+ body:not(.auth-locked) .time-warning-card button,
+ body:not(.auth-locked) .qr-crop-modal button,
  #googleGate button{transition:none!important}
-}
-
-/* Same soft-press reaction on the left navigation; its padding remains independent. */
-body:not(.auth-locked) .qr-side button:not(:disabled){
- transition:transform .17s ease,box-shadow .17s ease
-}
-body:not(.auth-locked) .qr-side button:not(:disabled):active{
- transform:scale(.93);box-shadow:inset 0 0 0 2px var(--qr-focus)!important
-}
-/* Keep the busy outline visible even when processing disables the button. */
-body:not(.auth-locked) button.qr-processing:disabled,
-#googleGate button.qr-processing:disabled{opacity:1!important}
-@media(prefers-reduced-motion:reduce){
- body:not(.auth-locked) .qr-side button{transition:none!important}
- body:not(.auth-locked) button.qr-processing::before,#googleGate button.qr-processing::before{animation:none}
 }
 
 /* One content-sized control rule across Quiz Room. Navigation rail and cards keep their own sizing. */
@@ -1316,7 +1286,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{display:
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;height:auto!important;min-height:100%!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;gap:var(--qr-home-gap)!important;background:var(--qr-home-primary)!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:var(--qr-home-stage-radius)!important;color:#fff!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;justify-content:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background-color var(--qr-motion-color),color var(--qr-motion-color)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle).active{background:#fff!important;color:var(--qr-home-primary)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
@@ -1479,7 +1449,7 @@ body.auth-locked{background:#e6f6f6!important}
 #googleGate .qr-login-subtitle{font-size:15px!important;color:#099aab!important;line-height:1.45;margin:0!important}
 #googleGate .account-list{display:grid;gap:12px;width:100%;min-width:0}
 #googleGate .account-list:empty{display:none}
-#googleGate button{box-sizing:border-box;width:100%;min-height:48px!important;padding:12px 20px!important;border:0!important;outline:0!important;border-radius:999px!important;background:#099aab!important;color:#fff!important;font:800 15px var(--qr-font)!important;line-height:1.3!important;box-shadow:none!important;transition:background .2s ease,color .2s ease!important}
+#googleGate button{box-sizing:border-box;width:100%;min-height:48px!important;padding:12px 20px!important;border:0!important;outline:0!important;border-radius:999px!important;background:#099aab!important;color:#fff!important;font:800 15px var(--qr-font)!important;line-height:1.3!important;box-shadow:none!important;transition:background-color var(--qr-motion-color),color var(--qr-motion-color)}
 #googleGate button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important;outline:0!important;box-shadow:inset 0 0 0 2px #099aab!important;transform:none!important}
 #googleGate .account-list button{background:#e6f6f6!important;color:#099aab!important;overflow-wrap:anywhere}
 #googleGate .account-list button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important}
@@ -1487,27 +1457,12 @@ body.auth-locked{background:#e6f6f6!important}
 #googleGate .status{font-size:13px!important;line-height:1.45;color:#c0534e!important;min-height:0!important;margin:0!important}
 #googleGate .status:empty{display:none!important}
 @media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
-/* Login-only pending state: soft focus-color heartbeat, never a rotating outline. */
+/* Login uses the same quiet color-only pending state. */
 #googleGate button.qr-processing,
 #googleGate button.qr-processing:disabled,
 #googleGate button.qr-processing:is(:hover,:focus,:focus-visible){
- position:relative;isolation:isolate;
- border:0!important;outline:0!important;outline-offset:0!important;
- opacity:1!important;cursor:wait!important;
- box-shadow:0 0 0 0 rgba(241,173,164,.38),0 0 18px 4px rgba(241,173,164,.24)!important;
- animation:qrLoginHeartbeat 1.8s ease-in-out infinite!important;
-}
-#googleGate button.qr-processing::before,
-#googleGate button.qr-processing::after{
- content:none!important;display:none!important;animation:none!important;
- background:none!important;-webkit-mask:none!important;mask:none!important;
-}
-@keyframes qrLoginHeartbeat{
- 0%,100%{filter:drop-shadow(0 0 2px rgba(241,173,164,.18))}
- 50%{filter:drop-shadow(0 0 15px rgba(241,173,164,.75))}
-}
-@media(prefers-reduced-motion:reduce){
- #googleGate button.qr-processing{animation:none!important;box-shadow:0 0 18px 6px rgba(241,173,164,.35)!important}
+ background:#f1ada4!important;color:#171717!important;
+ opacity:1!important;cursor:wait!important;box-shadow:none!important;
 }
 @media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{gap:12px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{align-self:center}}
 
@@ -1519,7 +1474,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown[hidde
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;margin:0!important;border:0!important;outline:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-family:var(--qr-font)!important;font-weight:700!important;box-shadow:none!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:hover{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:focus-visible{background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important;outline:2px solid var(--qr-home-focus)!important;outline-offset:2px}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform var(--qr-motion-detail)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
