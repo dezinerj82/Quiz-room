@@ -1464,23 +1464,26 @@ body:not(.auth-locked) #notesPage .qr-note-glossary{overflow:hidden;min-height:0
 body:not(.auth-locked) #notesPage .qr-note-glossary-header{flex:none}
 body:not(.auth-locked) #notesPage .qr-study-scroll{display:flex;flex-direction:column;gap:var(--qr-home-gap);flex:1}
 body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
-/* Common desktop stage boundary; existing narrow-screen layout remains stacked. */
-/* Dashboard cards share the available space, preserving the existing padding. */
+/* Common desktop stage boundary. Both outer and inner gutters count toward viewport height. */
 @media(min-width:1081px){
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{display:flex!important;flex-direction:column;align-items:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection){box-sizing:border-box!important;height:100dvh!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{box-sizing:border-box!important;height:100%!important;min-height:0!important;grid-template-rows:minmax(0,1fr);align-items:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell>:is(.qr-side,.qr-home-side,.qr-home-main){box-sizing:border-box!important;min-height:0!important;height:100%!important;max-height:100%!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{flex:0 0 auto}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{box-sizing:border-box;flex:1 1 0;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{display:flex!important;flex-direction:column;align-items:stretch;overflow:visible!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > :not(.qr-home-bottom):not(dialog){flex:0 0 auto}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{flex:1 1 0;min-height:0;grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{flex:1 1 0;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:repeat(2,minmax(0,1fr))}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-height:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-section-title{flex:none;min-height:calc(var(--qr-font-heading) * 1.4)}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;flex:1 1 0;min-height:0!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;flex:1 1 0;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{flex:1 1 0;min-height:0}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:hidden}
-}
-
-@media(min-width:1081px){
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{box-sizing:border-box!important;height:calc(100dvh - var(--qr-home-inner-padding)*2)!important;min-height:0!important;grid-template-rows:minmax(0,1fr)}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-main{min-height:0!important;overflow:visible!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{min-height:0;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary)}
+ body:not(.auth-locked) #selection.qr-active-stage .qr-home-main{display:flex!important;flex-direction:column;overflow:visible!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz:not(.hidden){flex:1 1 0;min-height:0!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{flex:1 1 0;min-height:0!important;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary);padding:var(--qr-home-inner-padding)!important}
 }
 /* Quiz selection and results reuse the same stage and card defaults. */
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-quiz-menu:not(.hidden){display:flex;flex-direction:column;gap:var(--qr-home-gap)}
