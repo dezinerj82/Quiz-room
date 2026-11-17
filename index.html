@@ -1377,10 +1377,10 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title 
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+2){background:#ffeddd!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+3){background:#ffeaeb!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+4){background:#f8eadb!important}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+5){background:#e7f8f8!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Malay"]{background:#ffeddd!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Korean"]{background:#ffeaeb!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Math"]{background:#f8eadb!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject[data-subject="Science"]{background:#e7f8f8!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject.active{background:var(--qr-home-primary)!important;color:#fff!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-subject:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-cta:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-activity-value:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-text-link:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
@@ -1393,7 +1393,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-icon{
 :root{--qr-home-inline-gap:4px;--qr-home-row-gap:12px;--qr-home-row-padding:11px;--qr-home-value-padding:7px 10px}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{min-width:0;display:grid;gap:var(--qr-home-inline-gap);flex:1}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{font-size:13px;color:var(--qr-home-ink)}
-body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy strong{font-size:inherit;color:inherit;overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy :is(strong,.qr-note-body){font-size:inherit;color:inherit;font-weight:700;overflow-wrap:anywhere}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy small{font-size:11px;color:#929a9d}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-value{flex:0 0 auto;border-radius:var(--qr-home-pill-radius);padding:var(--qr-home-value-padding);background:var(--qr-home-secondary);font-size:13px;color:var(--qr-home-primary);font-weight:800}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-main button.qr-home-activity-value{border:0!important;padding:var(--qr-home-value-padding)!important;line-height:inherit!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;margin:0!important}
@@ -1564,7 +1564,7 @@ body:not(.auth-locked) #notesPage .qr-study-controls svg{width:20px;height:20px;
 body:not(.auth-locked) #notesPage .qr-study-key{align-self:stretch}
 body:not(.auth-locked) #notesPage .qr-study-points{padding-left:var(--qr-home-inner-padding);margin:0}
 body:not(.auth-locked) #notesPage .qr-study-points li::marker{color:var(--qr-home-primary)}
-body:not(.auth-locked) #notesPage .qr-note-glossary-summary{padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:color-mix(in srgb,var(--qr-home-third) 20%,white);margin-top:auto}
+body:not(.auth-locked) #notesPage .qr-note-glossary-summary{padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:var(--qr-home-secondary);margin-top:auto}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary strong{color:var(--qr-home-ink)}
 body:not(.auth-locked) #notesPage .qr-study-menu{display:grid;gap:var(--qr-home-inline-gap)}
 body:not(.auth-locked) #notesPage .qr-study-menu[hidden]{display:none!important}
@@ -1616,11 +1616,11 @@ body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!importan
  </section>
  <div class="qr-home-section-title"><h2>Subjects</h2><p>Choose a subject to practise</p></div>
  <div class="qr-home-subjects" aria-label="Available quiz subjects">
-  <button class="qr-home-subject" onclick="qrOpen('quizStart')">English</button>
-  <button class="qr-home-subject" onclick="qrOpen('quizStart')">Malay</button>
-  <button class="qr-home-subject" onclick="qrOpen('quizStart')">Korean</button>
-  <button class="qr-home-subject" onclick="qrOpen('quizStart')">Math</button>
-  <button class="qr-home-subject" onclick="qrOpen('quizStart')">Science</button>
+  <button class="qr-home-subject" data-subject="English" onclick="qrOpen('quizStart')">English</button>
+  <button class="qr-home-subject" data-subject="Malay" onclick="qrOpen('quizStart')">Malay</button>
+  <button class="qr-home-subject" data-subject="Korean" onclick="qrOpen('quizStart')">Korean</button>
+  <button class="qr-home-subject" data-subject="Math" onclick="qrOpen('quizStart')">Math</button>
+  <button class="qr-home-subject" data-subject="Science" onclick="qrOpen('quizStart')">Science</button>
  </div>
  <div class="qr-home-bottom">
   <section><div class="qr-home-section-title"><h2>Recent Activity</h2><button class="qr-home-text-link" onclick="qrOpen('scoresPage')">View All →</button></div><div id="qrHomeActivity" class="qr-home-surface qr-home-activity"><p class="qr-muted">Your completed quizzes will appear here.</p></div></section>
@@ -1634,7 +1634,7 @@ body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!importan
 <header class="qr-top"><h1>Note</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
 <section class="qr-home-welcome qr-note-compose"><textarea id="qrNoteText" class="qr-input qr-textarea" aria-label="Write a note" placeholder="Write your note here…"></textarea><div class="qr-note-compose-actions"><button type="button" class="qr-btn qr-home-cta" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></section>
 <div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to learn a thing or two</p></div>
-<div class="qr-home-subjects" aria-label="Choose a subject"><button type="button" data-note-subject="English" class="qr-home-subject" onclick="qrChooseNoteSubject('English')">English</button><button type="button" data-note-subject="Malay" class="qr-home-subject" onclick="qrChooseNoteSubject('Malay')">Malay</button><button type="button" data-note-subject="Korean" class="qr-home-subject" onclick="qrChooseNoteSubject('Korean')">Korean</button><button type="button" data-note-subject="Math" class="qr-home-subject" onclick="qrChooseNoteSubject('Math')">Math</button><button type="button" data-note-subject="Science" class="qr-home-subject" onclick="qrChooseNoteSubject('Science')">Science</button></div>
+<div class="qr-home-subjects" aria-label="Choose a subject"><button type="button" data-note-subject="English" data-subject="English" class="qr-home-subject" onclick="qrChooseNoteSubject('English')">English</button><button type="button" data-note-subject="Malay" data-subject="Malay" class="qr-home-subject" onclick="qrChooseNoteSubject('Malay')">Malay</button><button type="button" data-note-subject="Korean" data-subject="Korean" class="qr-home-subject" onclick="qrChooseNoteSubject('Korean')">Korean</button><button type="button" data-note-subject="Math" data-subject="Math" class="qr-home-subject" onclick="qrChooseNoteSubject('Math')">Math</button><button type="button" data-note-subject="Science" data-subject="Science" class="qr-home-subject" onclick="qrChooseNoteSubject('Science')">Science</button></div>
 <div class="qr-home-bottom"><section><div class="qr-home-section-title"><h2>Note list</h2></div><div class="qr-home-surface qr-home-activity"><div id="qrNotesList" class="qr-home-activity-list"></div></div></section>
 <section><div class="qr-home-section-title"><h2>Study card</h2></div><div class="qr-home-surface qr-note-glossary" aria-live="polite" id="qrNoteGlossary"></div></section></div>
 </div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell qr-home-shell qr-scores-shell">
@@ -1659,7 +1659,7 @@ body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!importan
  <div class="qr-scores-highlights"><article class="qr-scores-highlight qr-scores-highlight-average"><h2>Overall Average</h2><strong id="qrScoresAverageLarge">—</strong><p id="qrScoresAverageCaption">No completed quizzes yet</p><span aria-hidden="true" class="qr-scores-medal">★</span></article><article class="qr-scores-highlight qr-scores-highlight-best"><h2>Highest Score</h2><strong id="qrScoresTopPercent">—</strong><p id="qrScoresTopSubject">Complete a quiz to get started</p><span aria-hidden="true" class="qr-scores-medal">✦</span></article></div>
 
  <div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to view</p></div>
- <div class="qr-scores-filter" aria-label="Filter scores by subject"><button type="button" data-score-subject="all" class="qr-home-subject qr-scores-filter-pill" onclick="qrChooseScoresSubject('all')">All Subjects</button><button type="button" data-score-subject="English" onclick="qrChooseScoresSubject('English')" class="qr-home-subject qr-scores-filter-pill">English</button><button type="button" data-score-subject="Malay" onclick="qrChooseScoresSubject('Malay')" class="qr-home-subject qr-scores-filter-pill">Malay</button><button type="button" data-score-subject="Korean" onclick="qrChooseScoresSubject('Korean')" class="qr-home-subject qr-scores-filter-pill">Korean</button><button type="button" data-score-subject="Math" onclick="qrChooseScoresSubject('Math')" class="qr-home-subject qr-scores-filter-pill">Math</button><button type="button" data-score-subject="Science" onclick="qrChooseScoresSubject('Science')" class="qr-home-subject qr-scores-filter-pill">Science</button></div>
+ <div class="qr-scores-filter" aria-label="Filter scores by subject"><button type="button" data-score-subject="all" class="qr-home-subject qr-scores-filter-pill" onclick="qrChooseScoresSubject('all')">All Subjects</button><button type="button" data-score-subject="English" data-subject="English" onclick="qrChooseScoresSubject('English')" class="qr-home-subject qr-scores-filter-pill">English</button><button type="button" data-score-subject="Malay" data-subject="Malay" onclick="qrChooseScoresSubject('Malay')" class="qr-home-subject qr-scores-filter-pill">Malay</button><button type="button" data-score-subject="Korean" data-subject="Korean" onclick="qrChooseScoresSubject('Korean')" class="qr-home-subject qr-scores-filter-pill">Korean</button><button type="button" data-score-subject="Math" data-subject="Math" onclick="qrChooseScoresSubject('Math')" class="qr-home-subject qr-scores-filter-pill">Math</button><button type="button" data-score-subject="Science" data-subject="Science" onclick="qrChooseScoresSubject('Science')" class="qr-home-subject qr-scores-filter-pill">Science</button></div>
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
  <div class="qr-home-bottom qr-scores-bottom">
   <section><div class="qr-home-section-title"><h2>Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div>
