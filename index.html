@@ -1000,18 +1000,18 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
 /* Dashboard best scores: one card aligned beside greeting; values come from saved attempts. */
 body:not(.auth-locked) #home .qr-home-grid{grid-template-columns:minmax(0,1fr);align-items:stretch}
 body:not(.auth-locked) #home .qr-home-grid>.qr-card{height:100%;margin-bottom:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-card{display:flex;flex-direction:column;gap:var(--density-space)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--density-space)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-heading h2{margin:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-card{display:flex;flex-direction:column;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-heading h2{margin:0}
 body:not(.auth-locked) #home #qrBestLevel{width:auto;min-width:96px;max-width:min(100%,160px)}
 body:not(.auth-locked) #home #qrBestLevel[hidden]{display:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-list{display:grid;gap:var(--density-space)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject .qr-best-heading{display:grid;grid-template-columns:110px minmax(0,1fr) 66px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject h3{margin:0;color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-list{display:grid;gap:var(--density-space)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject{display:grid;gap:var(--density-space);min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject .qr-best-heading{display:grid;grid-template-columns:110px minmax(0,1fr) 66px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject h3{margin:0;color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800;overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-percentage{color:var(--qr-text-primary);font-size:var(--qr-font-heading);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-track{width:100%;height:calc(var(--density-control) * .32);min-height:10px;border-radius:var(--qr-button-radius);background:color-mix(in srgb,var(--qr-navigation) 45%,var(--qr-background));overflow:hidden}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-progress-active);border-radius:inherit}
 
 /* Shared control and card padding defaults. */
 :root{--qr-control-padding:9px 16px;--qr-card-padding:20px}
@@ -1019,7 +1019,7 @@ body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track span{display:block;
 body:not(.auth-locked) .qr-side button:not(.qr-sidebar-toggle){padding:12px!important}
 /* Dropdown arrows need separate trailing clearance for long subject names. */
 body:not(.auth-locked) .qr-main select{padding:9px var(--qr-dropdown-arrow-space) 9px 16px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{text-align:right}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-percentage{text-align:right}
 /* One row for Score History's subject label and selection control. */
 body:not(.auth-locked) #scoresPage .qr-score-filter{
  display:flex;align-items:center;justify-content:space-between;gap:var(--density-space);min-width:0
@@ -1336,155 +1336,155 @@ body:not(.auth-locked) #quiz #questionTranslation.qr-vocab-tip{
 
 /* Home is the default layout for new pages. Reuse its layout and shared settings before making page-specific changes. */
 :root{--qr-home-primary:#099aab;--qr-home-secondary:#e6f6f6;--qr-home-third:#fdad56;--qr-home-fourth:#eaaea4;--qr-home-fifth:#e5c8a6;--qr-home-sixth:#e5c8a6;--qr-home-navigation:#dadada;--qr-home-focus:#f1ada4;--qr-home-ink:#171717;--qr-home-gap:24px;--qr-home-inner-padding:24px;--qr-home-main-padding:32px;--qr-home-stage-radius:44px;--qr-home-radius:32px;--qr-home-pill-radius:999px;--qr-home-shadow:0 12px 30px rgba(9,154,171,.12),0 3px 8px rgba(23,23,23,.04)}
-body:not(.auth-locked) :is(#home,#scoresPage){background:var(--qr-home-secondary)!important;color:var(--qr-home-ink);padding:var(--qr-home-inner-padding)!important;min-height:100dvh!important;height:auto!important;overflow:visible!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{display:grid!important;grid-template-columns:190px minmax(240px,310px) minmax(0,1fr)!important;align-items:stretch;gap:var(--qr-home-gap)!important;height:auto!important;min-height:calc(100dvh - 48px)!important;max-width:1920px;margin:auto;padding:var(--qr-home-inner-padding)!important;border-radius:calc(var(--qr-home-stage-radius) + 12px)!important;background:var(--qr-home-secondary);border:0!important;outline:0!important;box-shadow:none!important;overflow:visible!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;height:auto!important;min-height:100%!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;gap:var(--qr-home-gap)!important;background:var(--qr-home-primary)!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:var(--qr-home-stage-radius)!important;color:#fff!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;justify-content:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible,.active){background:#fff!important;color:var(--qr-home-primary)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side .qr-nav-label{display:inline!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-sidebar-toggle{display:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap)!important;min-width:0;min-height:0;overflow:visible!important;padding:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-surface{background:#fff!important;border:0!important;outline:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);padding:var(--qr-home-inner-padding)!important;margin:0!important;min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-profile{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait{display:grid;place-items:center;width:126px;height:126px;border-radius:50%;overflow:hidden;background:var(--qr-home-secondary);color:var(--qr-home-primary);margin:0 auto 4px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait img{width:100%;height:100%;object-fit:cover}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-avatar-initial{font-size:46px;color:var(--qr-home-primary)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-profile h2{margin:0!important;font-size:26px!important;font-weight:800;color:var(--qr-home-ink)!important;overflow-wrap:anywhere}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-accent{color:var(--qr-home-primary)!important;font-size:17px!important;font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subtitle{color:#929a9d!important;font-size:14px!important;line-height:1.4;text-align:center}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #e9eeee;padding-top:16px;margin-top:14px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats>div{display:grid;gap:7px;align-content:start;padding:0 5px;text-align:center;min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats>div+div{border-left:1px solid #e9eeee}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats span{font-size:11px!important;color:#929a9d!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-stats strong{font-size:20px;color:var(--qr-home-ink);font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-highest{display:grid;align-content:start;gap:var(--qr-home-gap);flex:1;min-height:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title{display:flex;align-items:center;gap:12px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-trophy{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:14px;background:#fff0de;color:var(--qr-home-third);font-size:26px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title h2{font-size:20px!important;color:var(--qr-home-ink)!important;margin:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-title p{font-size:12px!important;color:#929a9d!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-level{margin:0}
-body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel{width:auto;max-width:100%;font-size:13px!important;color:var(--qr-home-primary)!important;background:var(--qr-home-secondary)!important;border:0!important;outline:0!important;box-shadow:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel:is(:hover,:focus,:focus-visible){border:0!important;outline:0!important;outline-offset:0!important;box-shadow:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-list{display:grid;gap:16px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject{display:block!important;min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject .qr-best-heading{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:7px 10px;align-items:center}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject h3{grid-column:1;font-size:14px!important;color:var(--qr-home-ink)!important;font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-percentage{grid-column:2;grid-row:1;font-size:14px!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track{grid-column:1/-1;grid-row:2;width:100%;height:9px!important;min-height:9px!important;background:#e7eef0!important;border-radius:999px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-home-subject-color,var(--qr-home-primary))!important;border-radius:inherit}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+1){--qr-home-subject-color:var(--qr-home-primary)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+2){--qr-home-subject-color:var(--qr-home-third)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+3){--qr-home-subject-color:var(--qr-home-fourth)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+4){--qr-home-subject-color:var(--qr-home-fifth)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-best-subject:nth-child(5n+5){--qr-home-subject-color:var(--qr-home-secondary)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{min-width:0!important;min-height:0!important;max-width:none!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-main-padding)!important;border-radius:var(--qr-home-stage-radius)!important;background:#fff!important;box-shadow:var(--qr-home-shadow)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-top{margin:0 0 var(--qr-home-gap)!important;align-items:center;gap:var(--qr-home-gap)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-top h1{font-size:34px!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:14px!important;font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-primary)!important;color:#fff!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 8px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-primary)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(2){position:absolute;top:7%;right:9%;font-size:clamp(12px,2.6vw,25px);color:var(--qr-home-fourth)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark span:nth-child(3){position:absolute;bottom:4%;left:3%;font-size:clamp(10px,2vw,19px);color:var(--qr-home-primary)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title{display:flex;justify-content:space-between;align-items:center;gap:var(--qr-home-gap);margin:0 0 var(--qr-home-gap)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title h2{margin:0!important;font-size:20px!important;font-weight:800;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title p{color:#929a9d!important;font-size:13px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+2){background:#ffeddd!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+3){background:#ffeaeb!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+4){background:#f8eadb!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:nth-child(5n+5){background:#e7f8f8!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subject:is(:hover,:focus-visible){background:var(--qr-home-focus)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom>section{min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-text-link{border:0!important;background:transparent!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-row{display:flex;align-items:center;gap:12px;padding:11px 0;min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy{min-width:0;display:grid;gap:4px;flex:1}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy strong{font-size:13px;color:var(--qr-home-ink);overflow-wrap:anywhere}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-copy small{font-size:11px;color:#929a9d}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-activity-value{flex:0 0 auto;border-radius:999px;padding:7px 10px;background:var(--qr-home-secondary);font-size:13px;color:var(--qr-home-primary);font-weight:800}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:200px;padding:var(--qr-home-inner-padding)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring{width:142px;height:142px;flex:0 0 142px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(closest-side,#fff 78%,transparent 80% 100%),conic-gradient(var(--qr-home-primary) var(--qr-home-ring-value,0%),#e8eef0 0)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring strong{font-size:26px;color:var(--qr-home-ink)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring span{font-size:12px;color:#929a9d}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats{flex:1;display:grid;gap:18px;min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats p{display:grid;gap:3px;padding-bottom:10px;border-bottom:1px solid #e9eeee}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats span{font-size:12px;color:#929a9d}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview-stats strong{font-size:14px;color:var(--qr-home-ink)}
-@media(max-width:1170px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:155px minmax(215px,265px) minmax(0,1fr)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){gap:8px!important;min-height:46px!important;padding:10px 8px!important;font-size:14px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:20px!important;height:20px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{font-size:17px!important;gap:8px!important;padding:12px 0 18px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand .qr-icon{width:32px!important;height:32px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-main-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-ring{width:130px;height:130px;flex-basis:130px}}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage){background:var(--qr-home-secondary)!important;color:var(--qr-home-ink);padding:var(--qr-home-inner-padding)!important;min-height:100dvh!important;height:auto!important;overflow:visible!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{display:grid!important;grid-template-columns:190px minmax(240px,310px) minmax(0,1fr)!important;align-items:stretch;gap:var(--qr-home-gap)!important;height:auto!important;min-height:calc(100dvh - 48px)!important;max-width:1920px;margin:auto;padding:var(--qr-home-inner-padding)!important;border-radius:calc(var(--qr-home-stage-radius) + 12px)!important;background:var(--qr-home-secondary);border:0!important;outline:0!important;box-shadow:none!important;overflow:visible!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;height:auto!important;min-height:100%!important;overflow:visible!important;padding:var(--qr-home-inner-padding)!important;gap:var(--qr-home-gap)!important;background:var(--qr-home-primary)!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:var(--qr-home-stage-radius)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{display:flex!important;gap:10px!important;align-items:center!important;justify-content:center!important;min-width:0!important;white-space:normal!important;color:#fff!important;font-size:20px!important;font-weight:800!important;padding:12px 8px 22px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.3)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand .qr-icon{width:38px!important;height:38px!important;flex-shrink:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;width:100%!important;min-height:62px!important;height:auto!important;padding:13px 18px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--qr-home-pill-radius)!important;background:rgba(255,255,255,.08)!important;box-shadow:0 4px 12px rgba(0,88,102,.1);color:#fff!important;font-size:16px!important;font-weight:800!important;transition:background .2s ease,color .2s ease,transform .17s ease!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle):is(:hover,:focus-visible,.active){background:#fff!important;color:var(--qr-home-primary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side .qr-nav-label{display:inline!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-sidebar-toggle{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap)!important;min-width:0;min-height:0;overflow:visible!important;padding:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-surface{background:#fff!important;border:0!important;outline:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);padding:var(--qr-home-inner-padding)!important;margin:0!important;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-profile{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-portrait{display:grid;place-items:center;width:126px;height:126px;border-radius:50%;overflow:hidden;background:var(--qr-home-secondary);color:var(--qr-home-primary);margin:0 auto 4px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-portrait img{width:100%;height:100%;object-fit:cover}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-avatar-initial{font-size:46px;color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-profile h2{margin:0!important;font-size:26px!important;font-weight:800;color:var(--qr-home-ink)!important;overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-accent{color:var(--qr-home-primary)!important;font-size:17px!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subtitle{color:#929a9d!important;font-size:14px!important;line-height:1.4;text-align:center}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-stats{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #e9eeee;padding-top:16px;margin-top:14px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-stats>div{display:grid;gap:7px;align-content:start;padding:0 5px;text-align:center;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-stats>div+div{border-left:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-stats span{font-size:11px!important;color:#929a9d!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-stats strong{font-size:20px;color:var(--qr-home-ink);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-highest{display:grid;align-content:start;gap:var(--qr-home-gap);flex:1;min-height:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-title{display:flex;align-items:center;gap:12px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-trophy{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:14px;background:#fff0de;color:var(--qr-home-third);font-size:26px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-title h2{font-size:20px!important;color:var(--qr-home-ink)!important;margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-title p{font-size:12px!important;color:#929a9d!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-level{margin:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrBestLevel{width:auto;max-width:100%;font-size:13px!important;color:var(--qr-home-primary)!important;background:var(--qr-home-secondary)!important;border:0!important;outline:0!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrBestLevel:is(:hover,:focus,:focus-visible){border:0!important;outline:0!important;outline-offset:0!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-list{display:grid;gap:16px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject{display:block!important;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject .qr-best-heading{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:7px 10px;align-items:center}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject h3{grid-column:1;font-size:14px!important;color:var(--qr-home-ink)!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-percentage{grid-column:2;grid-row:1;font-size:14px!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-track{grid-column:1/-1;grid-row:2;width:100%;height:9px!important;min-height:9px!important;background:#e7eef0!important;border-radius:999px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-home-subject-color,var(--qr-home-primary))!important;border-radius:inherit}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject:nth-child(5n+1){--qr-home-subject-color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject:nth-child(5n+2){--qr-home-subject-color:var(--qr-home-third)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject:nth-child(5n+3){--qr-home-subject-color:var(--qr-home-fourth)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject:nth-child(5n+4){--qr-home-subject-color:var(--qr-home-fifth)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-best-subject:nth-child(5n+5){--qr-home-subject-color:var(--qr-home-secondary)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{min-width:0!important;min-height:0!important;max-width:none!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-main-padding)!important;border-radius:var(--qr-home-stage-radius)!important;background:#fff!important;box-shadow:var(--qr-home-shadow)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-top{margin:0 0 var(--qr-home-gap)!important;align-items:center;gap:var(--qr-home-gap)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-top h1{font-size:34px!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn{border:0!important;border-radius:999px!important;min-height:42px!important;padding:10px 20px!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:14px!important;font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn:is(:hover,:focus-visible){background:var(--qr-home-primary)!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-logout{background:#ffe9e4!important;color:#d87368!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{display:flex;justify-content:space-between;align-items:center;min-height:225px;gap:var(--qr-home-gap);padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius);background:linear-gradient(105deg,#fff5ec,#fef0e9 68%,#e6f6f6);overflow:hidden}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome h2{font-size:27px!important;color:var(--qr-home-ink)!important;line-height:1.2;margin:0 0 8px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome p{font-size:18px!important;color:var(--qr-home-primary)!important;line-height:1.4;margin:0 0 24px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0!important;border-radius:999px!important;padding:12px 26px!important;margin:0!important;background:var(--qr-home-primary)!important;color:#fff!important;font-size:16px!important;font-weight:800!important;min-height:48px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{display:grid;place-items:center;flex:0 1 clamp(64px,16vw,150px);width:clamp(64px,16vw,150px);aspect-ratio:1;height:auto;min-width:0;border-radius:42% 58% 40% 60%;background:var(--qr-home-secondary);position:relative;color:var(--qr-home-third)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark span:nth-child(1){font-size:clamp(36px,8vw,78px)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark span:nth-child(2){position:absolute;top:7%;right:9%;font-size:clamp(12px,2.6vw,25px);color:var(--qr-home-fourth)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark span:nth-child(3){position:absolute;bottom:4%;left:3%;font-size:clamp(10px,2vw,19px);color:var(--qr-home-primary)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title{display:flex;justify-content:space-between;align-items:center;gap:var(--qr-home-gap);margin:0 0 var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title h2{margin:0!important;font-size:20px!important;font-weight:800;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title p{color:#929a9d!important;font-size:13px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject{min-width:0!important;height:auto!important;min-height:56px!important;padding:12px 8px!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;font-weight:800!important;font-size:14px!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+2){background:#ffeddd!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+3){background:#ffeaeb!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+4){background:#f8eadb!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:nth-child(5n+5){background:#e7f8f8!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subject:is(:hover,:focus-visible){background:var(--qr-home-focus)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-text-link{border:0!important;background:transparent!important;color:var(--qr-home-primary)!important;font-size:13px!important;font-weight:800!important;padding:4px!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row{display:flex;align-items:center;gap:12px;padding:11px 0;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-row+.qr-home-activity-row{border-top:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:14px;background:var(--qr-home-secondary);color:var(--qr-home-primary);font-size:16px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy{min-width:0;display:grid;gap:4px;flex:1}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy strong{font-size:13px;color:var(--qr-home-ink);overflow-wrap:anywhere}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-copy small{font-size:11px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity-value{flex:0 0 auto;border-radius:999px;padding:7px 10px;background:var(--qr-home-secondary);font-size:13px;color:var(--qr-home-primary);font-weight:800}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:200px;padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-ring{width:142px;height:142px;flex:0 0 142px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(closest-side,#fff 78%,transparent 80% 100%),conic-gradient(var(--qr-home-primary) var(--qr-home-ring-value,0%),#e8eef0 0)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-ring strong{font-size:26px;color:var(--qr-home-ink)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-ring span{font-size:12px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview-stats{flex:1;display:grid;gap:18px;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview-stats p{display:grid;gap:3px;padding-bottom:10px;border-bottom:1px solid #e9eeee}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview-stats span{font-size:12px;color:#929a9d}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview-stats strong{font-size:14px;color:var(--qr-home-ink)}
+@media(max-width:1170px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{grid-template-columns:155px minmax(215px,265px) minmax(0,1fr)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){gap:8px!important;min-height:46px!important;padding:10px 8px!important;font-size:14px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:20px!important;height:20px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{font-size:17px!important;gap:8px!important;padding:12px 0 18px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand .qr-icon{width:32px!important;height:32px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{padding:var(--qr-home-main-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-ring{width:130px;height:130px;flex-basis:130px}}
 /* At narrower desktop widths, place navigation across the top so no stage is squeezed or separately scrolled. */
 @media(max-width:1080px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:minmax(240px,290px) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:var(--qr-home-gap)!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-column:1/-1;grid-row:1;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;gap:12px!important;border-radius:var(--qr-home-stage-radius)!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{width:auto!important;justify-content:flex-start!important;max-width:100%;padding:8px 16px 8px 0!important;margin:0!important;border-bottom:0!important;border-right:1px solid rgba(255,255,255,.3);font-size:16px!important;white-space:normal!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand .qr-icon{width:30px!important;height:30px!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){flex:0 1 auto!important;width:auto!important;min-width:100px!important;min-height:46px!important;padding:10px 16px!important;gap:8px!important;justify-content:center!important;border-radius:var(--qr-home-pill-radius)!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-column:1;grid-row:2;align-self:stretch}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{grid-column:2;grid-row:2;align-self:stretch}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom{grid-template-columns:1fr}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{grid-template-columns:minmax(240px,290px) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{grid-column:1/-1;grid-row:1;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;gap:12px!important;border-radius:var(--qr-home-stage-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{width:auto!important;justify-content:flex-start!important;max-width:100%;padding:8px 16px 8px 0!important;margin:0!important;border-bottom:0!important;border-right:1px solid rgba(255,255,255,.3);font-size:16px!important;white-space:normal!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand .qr-icon{width:30px!important;height:30px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){flex:0 1 auto!important;width:auto!important;min-width:100px!important;min-height:46px!important;padding:10px 16px!important;gap:8px!important;justify-content:center!important;border-radius:var(--qr-home-pill-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:24px!important;height:24px!important;flex-shrink:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side{grid-column:1;grid-row:2;align-self:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{grid-column:2;grid-row:2;align-self:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{grid-template-columns:1fr}
 }
-@media(max-width:740px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-rows:auto auto auto!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-column:1!important;grid-row:1!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-column:1!important;grid-row:2!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{grid-column:1!important;grid-row:3!important}body:not(.auth-locked) :is(#home,#scoresPage){padding:var(--qr-home-inner-padding)!important;height:auto!important;min-height:100dvh!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{height:auto!important;min-height:0!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side,body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main,body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{height:auto!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-highest{flex:initial}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-shell{grid-template-columns:minmax(0,1fr)!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:8px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{width:100%!important;border-bottom:0!important;border-right:0!important;margin:0!important;padding:4px 8px!important;font-size:18px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-side button:not(.qr-sidebar-toggle){flex:1 1 90px;justify-content:center!important;min-height:46px!important;padding:9px!important;border-radius:999px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0;gap:var(--qr-home-gap)}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-main-padding)!important;border-radius:var(--qr-home-stage-radius)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{min-height:180px;padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-portrait{width:96px;height:96px}}
-@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-side{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome h2{font-size:23px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome p{font-size:15px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{display:grid!important;flex:0 0 clamp(58px,22vw,110px);width:clamp(58px,22vw,110px)}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main{padding:var(--qr-home-main-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-top{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage) .qr-profile-btn{padding:8px 12px!important;font-size:12px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-section-title p{max-width:45%;text-align:right}}
+@media(max-width:740px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{grid-template-rows:auto auto auto!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{grid-column:1!important;grid-row:1!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side{grid-column:1!important;grid-row:2!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{grid-column:1!important;grid-row:3!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage){padding:var(--qr-home-inner-padding)!important;height:auto!important;min-height:100dvh!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{height:auto!important;min-height:0!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{height:auto!important;overflow:visible!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-highest{flex:initial}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{grid-template-columns:minmax(0,1fr)!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:var(--qr-home-gap)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-home-stage-radius)!important;gap:8px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{width:100%!important;border-bottom:0!important;border-right:0!important;margin:0!important;padding:4px 8px!important;font-size:18px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side button:not(.qr-sidebar-toggle){flex:1 1 90px;justify-content:center!important;min-height:46px!important;padding:9px!important;border-radius:999px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0;gap:var(--qr-home-gap)}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{padding:var(--qr-home-main-padding)!important;border-radius:var(--qr-home-stage-radius)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{min-height:180px;padding:var(--qr-home-inner-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-portrait{width:96px;height:96px}}
+@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-side{grid-template-columns:1fr}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome h2{font-size:23px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome p{font-size:15px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{display:grid!important;flex:0 0 clamp(58px,22vw,110px);width:clamp(58px,22vw,110px)}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{padding:var(--qr-home-main-padding)!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-top{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-profile-btn{padding:8px 12px!important;font-size:12px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title{align-items:flex-start}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-section-title p{max-width:45%;text-align:right}}
 
 
 /* Home responsive navigation: one grouped menu, centered as browser narrows.
    Share a proportional soft stage/card curve and keep every control pill-shaped. */
 :root{--qr-home-stage-radius:clamp(30px,3.3vw,44px);--qr-home-radius:var(--qr-home-stage-radius)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap);min-width:0}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{border-radius:var(--qr-home-pill-radius)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-surface,
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main,
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{border-radius:var(--qr-home-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{display:flex;flex-direction:column;align-items:stretch;gap:var(--qr-home-gap);min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links>button{border-radius:var(--qr-home-pill-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-surface,
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main,
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{border-radius:var(--qr-home-radius)!important}
 @media(max-width:1080px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-content:center!important;align-items:center!important;justify-content:stretch!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{grid-column:1;grid-row:1;margin:0!important;min-width:0}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-column:2;grid-row:1;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:12px!important;width:100%;min-width:0}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{flex:0 0 auto!important;width:auto!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-content:center!important;align-items:center!important;justify-content:stretch!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{grid-column:1;grid-row:1;margin:0!important;min-width:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{grid-column:2;grid-row:1;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:12px!important;width:100%;min-width:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links>button{flex:0 0 auto!important;width:auto!important}
 }
 @media(max-width:740px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{grid-template-columns:minmax(0,1fr)!important;justify-items:center!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-nav-brand{grid-column:1;grid-row:1;justify-content:center!important;text-align:center!important;width:100%!important;padding:4px 8px!important;border:0!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-column:1;grid-row:2;justify-content:center!important;gap:8px!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{flex:0 0 auto!important;min-width:0!important;justify-content:center!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{grid-template-columns:minmax(0,1fr)!important;justify-items:center!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-nav-brand{grid-column:1;grid-row:1;justify-content:center!important;text-align:center!important;width:100%!important;padding:4px 8px!important;border:0!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{grid-column:1;grid-row:2;justify-content:center!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links>button{flex:0 0 auto!important;min-width:0!important;justify-content:center!important}
 }
 
 /* Final Home alignment: supersede old global .qr-main > * width and shell padding. */
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-shell > .qr-home-main{box-sizing:border-box!important;width:100%!important;margin:0!important;border:0!important;padding:var(--qr-home-main-padding)!important;min-height:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > *{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-top{margin:0 0 var(--qr-home-gap)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-welcome{margin:0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-section-title{margin:var(--qr-home-gap) 0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-bottom{margin:var(--qr-home-gap) 0 0!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-main > .qr-home-subjects{margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-shell > .qr-home-main{box-sizing:border-box!important;width:100%!important;margin:0!important;border:0!important;padding:var(--qr-home-main-padding)!important;min-height:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > *{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-top{margin:0 0 var(--qr-home-gap)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-welcome{margin:0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-section-title{margin:var(--qr-home-gap) 0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{margin:var(--qr-home-gap) 0 0!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-subjects{margin:0!important}
 /* Distribute responsive navigation evenly, retaining the grouped menu in both rows. */
 @media(max-width:1080px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:100%!important;gap:12px!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links>button{box-sizing:border-box!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;width:100%!important;gap:12px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links>button{box-sizing:border-box!important;width:100%!important;min-width:0!important;margin:0!important;padding:10px 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
 }
 @media(max-width:740px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important;overflow:hidden!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-side{border-radius:var(--qr-home-stage-radius)!important;overflow:hidden!important}
 }
 @media(max-width:410px){
- body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-nav-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-nav-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 /* Login page: centered white surface on the new light-aqua Quiz Room theme. */
 body.auth-locked{background:#e6f6f6!important}
@@ -1527,36 +1527,36 @@ body.auth-locked{background:#e6f6f6!important}
 @media(prefers-reduced-motion:reduce){
  #googleGate button.qr-processing{animation:none!important;box-shadow:0 0 18px 6px rgba(241,173,164,.35)!important}
 }
-@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome{gap:12px!important}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-hero-mark{align-self:center}}
+@media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome{gap:12px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-hero-mark{align-self:center}}
 
 /* Home Highest Score dropdown: matched pill and fully styled open menu. */
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-best-level{position:relative!important;display:block!important;overflow:visible!important;z-index:12}
-body:not(.auth-locked) :is(#home,#scoresPage) #qrBestLevel{display:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown[hidden],body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options[hidden]{display:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger:hover{background:#099aab!important;color:#fff!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
-body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-best-level{position:relative!important;display:block!important;overflow:visible!important;z-index:12}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrBestLevel{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown{position:relative;width:fit-content;max-width:100%}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown[hidden],body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options[hidden]{display:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger{display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;min-width:112px;min-height:38px!important;height:auto!important;padding:9px 15px!important;margin:0!important;border:0!important;outline:0!important;border-radius:999px!important;background:#e6f6f6!important;color:#099aab!important;font:700 13px var(--qr-font)!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:hover{background:#099aab!important;color:#fff!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger:focus-visible{outline:0!important;box-shadow:0 0 0 3px rgba(241,173,164,.45)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-chevron{flex:0 0 15px;width:15px;height:15px;transition:transform .18s ease}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-trigger[aria-expanded="true"] .qr-home-dropdown-chevron{transform:rotate(180deg)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options{position:absolute;z-index:30;top:calc(100% + 8px);left:0;display:grid;gap:4px;width:max(100%,112px);min-width:112px;max-height:240px;overflow-y:auto;padding:7px!important;background:#fff!important;border:0!important;outline:0!important;border-radius:20px!important;box-shadow:0 12px 30px rgba(9,154,171,.16),0 3px 8px rgba(23,23,23,.06)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button{display:block!important;min-height:36px!important;width:100%!important;margin:0!important;padding:9px 12px!important;text-align:left!important;border:0!important;outline:0!important;border-radius:999px!important;background:#fff!important;color:#099aab!important;box-shadow:none!important;font:700 13px var(--qr-font)!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button[aria-selected="true"]{background:#e6f6f6!important;color:#099aab!important}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-dropdown-options button:is(:hover,:focus-visible){background:#099aab!important;color:#fff!important}
 
 /* Scores uses the Home stages, shared cards, 24px gaps and 32px main padding. */
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:0!important}
 body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{display:flex;flex:1;min-height:0;min-width:0}
 body:not(.auth-locked) #scoresPage #qrScoresHighestSlot>.qr-home-highest{width:100%;min-width:0}
 body:not(.auth-locked) #scoresPage .qr-scores-main>*{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:0!important}
-body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
-body:not(.auth-locked) #scoresPage .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:var(--qr-home-pill-radius)!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(4){background:#fde8e7!important;color:#885652!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) #scoresPage .qr-scores-filter-pill.active{background:var(--qr-home-primary)!important;color:white!important;outline:0!important;box-shadow:none!important}
-body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill{min-width:0;border:0!important;border-radius:var(--qr-home-pill-radius)!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;padding:11px 14px!important;font-size:14px!important;font-weight:800!important;min-height:42px!important;text-align:center;white-space:nowrap}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill:nth-child(3){background:#fff0df!important;color:#81542d!important}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill:nth-child(4){background:#fde8e7!important;color:#885652!important}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill.active{background:var(--qr-home-primary)!important;color:white!important;outline:0!important;box-shadow:none!important}
+body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:var(--qr-home-secondary)}
@@ -1568,8 +1568,21 @@ body:not(.auth-locked) #scoresPage .qr-scores-highlight-best strong{color:#c6813
 body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px;top:calc(50% - 24px);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff8ec;color:var(--qr-home-third);font-size:36px;opacity:.7}
 body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color:#829da0}
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
-@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Notes uses the Home layout and shared subject pills. */
+body:not(.auth-locked) #notesPage .qr-note-compose{display:flex;flex-direction:column;gap:var(--qr-home-gap);min-height:225px;background:var(--qr-home-secondary)!important}
+body:not(.auth-locked) #notesPage #qrNoteText{flex:1;min-height:150px;width:100%;box-sizing:border-box;resize:vertical;background:#fff!important;border:0!important;border-radius:var(--qr-home-radius)!important;padding:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) #notesPage .qr-note-compose-actions{display:flex;align-items:center;gap:12px}
+body:not(.auth-locked) #notesPage #qrNotesList{display:grid;gap:12px;min-width:0}
+body:not(.auth-locked) #notesPage #qrNotesList .qr-list-item{min-width:0;border:0!important;border-radius:var(--qr-home-radius)!important;padding:12px!important;box-shadow:none!important}
+body:not(.auth-locked) #notesPage .qr-note-glossary{display:grid;gap:16px;min-height:200px;margin-top:0!important}
+body:not(.auth-locked) #notesPage .qr-note-glossary h2{font-size:20px!important;margin:0!important;overflow-wrap:anywhere}
+body:not(.auth-locked) #notesPage .qr-note-glossary p{line-height:1.5;margin:0!important}
+body:not(.auth-locked) #notesPage .qr-note-glossary-pill{justify-self:start;border-radius:var(--qr-home-pill-radius);background:var(--qr-home-secondary);color:var(--qr-home-primary);padding:7px 14px;font-weight:800;font-size:13px}
+body:not(.auth-locked) #notesPage .qr-note-glossary-summary{padding:16px;border-radius:var(--qr-home-radius);background:#fff0e1}
+body:not(.auth-locked) #notesPage .qr-note-glossary-summary strong{color:#81542d}
+body:not(.auth-locked) #notesPage .qr-home-bottom>section:nth-child(2){padding-top:0}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1627,7 +1640,17 @@ body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div class="qr-home-surface qr-home-overview"><div class="qr-home-ring" id="qrHomeRing"><strong id="qrHomeRingText">—</strong><span>Avg. Score</span></div><div class="qr-home-overview-stats"><p><span>Completed</span><strong id="qrHomeTotalAttempts">0 quizzes</strong></p><p><span>Subjects</span><strong id="qrHomeTotalSubjects">0 subjects</strong></p></div></div></section>
  </div>
 </div>
-</div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a level</h2><div class="level-grid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Notes</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><textarea id="qrNoteText" class="qr-input qr-textarea" placeholder="Write your note here…"></textarea><div><button class="qr-btn" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></div><div class="qr-card"><h2>Past Notes</h2><div id="qrNotesList" class="qr-list"></div></div></div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell qr-home-shell qr-scores-shell">
+</div></main><section id="quizStart" class="screen hidden"><div class="qr-shell"><nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav><div class="qr-main"><header class="qr-top"><h1>Quiz</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn" onclick="qrLogout()">Log out</button></div></header><div class="qr-card"><h2>Choose a level</h2><div class="level-grid" id="subjects"></div></div></div></div></section><section id="notesPage" class="screen hidden"><div class="qr-shell qr-home-shell">
+<nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><div class="qr-home-nav-links"><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></div><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav>
+<div id="qrNotesSideSlot" class="qr-home-side" aria-label="Profile and best scores"></div>
+<div class="qr-main qr-home-main qr-notes-main">
+<header class="qr-top"><h1>Note</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
+<section class="qr-home-surface qr-note-compose"><textarea id="qrNoteText" class="qr-input qr-textarea" aria-label="Write a note" placeholder="Write your note here…"></textarea><div class="qr-note-compose-actions"><button type="button" class="qr-btn" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></section>
+<div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to learn a thing or two</p></div>
+<div class="qr-scores-filter" aria-label="Choose a subject"><button type="button" data-note-subject="all" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('all')">All Subjects</button><button type="button" data-note-subject="English" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('English')">English</button><button type="button" data-note-subject="Malay" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('Malay')">Malay</button><button type="button" data-note-subject="Korean" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('Korean')">Korean</button><button type="button" data-note-subject="Math" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('Math')">Math</button><button type="button" data-note-subject="Science" class="qr-scores-filter-pill" onclick="qrChooseNoteSubject('Science')">Science</button></div>
+<div class="qr-home-bottom"><section><div class="qr-home-section-title"><h2>Note list</h2></div><div class="qr-home-surface qr-home-activity"><div id="qrNotesList" class="qr-list"></div></div></section>
+<section><div class="qr-home-surface qr-note-glossary" aria-live="polite" id="qrNoteGlossary"></div></section></div>
+</div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell qr-home-shell qr-scores-shell">
 <nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><div class="qr-home-nav-links"><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></div><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav>
 <div class="qr-home-side qr-scores-side" aria-label="Profile and best scores">
  <section class="qr-home-profile qr-home-surface" aria-label="Your profile">
@@ -1814,7 +1837,7 @@ function qrCloseSidebars(){
 }
 window.addEventListener('resize',()=>{if(window.innerWidth>860)qrCloseSidebars()});
 document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))qrCloseSidebars()});
-function show(id){qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
+function show(id){qrRestoreNotesSide();qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
  document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  const selectionCard=document.querySelector('#selection .qr-main > .qr-card');if(selectionCard)selectionCard.inert=locked;
  $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
@@ -2340,7 +2363,7 @@ renderLevelChoices();let initial=new URLSearchParams(location.search).get('subje
 // Dashboard: independent navigation, existing quiz logic is unchanged.
 let qrProfile={name:'',photo:''};
 const qrAccount=()=>window.quizRoomGoogleEmail?.()||'';
-function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;if(page==='quizStart'){selectedLevel=null;selectedCategory=null;subject='';activeExerciseTopic=null;renderLevelChoices()}show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='notesPage')qrRenderNotes();if(page==='profilePage')qrProfileSection('view')}
+function qrOpen(page){if(!$('quiz').classList.contains('hidden'))return;if(page==='quizStart'){selectedLevel=null;selectedCategory=null;subject='';activeExerciseTopic=null;renderLevelChoices()}show(page);if(page==='home')qrRender();if(page==='scoresPage')qrRenderScores();if(page==='notesPage'){qrRender();qrPlaceNotesSide();qrRenderNotes();qrRenderNoteGlossary()}if(page==='profilePage')qrProfileSection('view')}
 function qrEntries(){return Object.values(loadScoreHistory()).filter(e=>e.name===qrAccount()&&Array.isArray(e.attempts))}
 function qrBestScoreRecords(){
  return qrEntries().flatMap(entry=>(entry.attempts||[]).flatMap(attempt=>{
@@ -2420,7 +2443,7 @@ function qrRender(){
  const avatar=$('qrHomeAvatar');
  avatar.hidden=!qrProfile.photo;
  if(qrProfile.photo)avatar.src=qrProfile.photo;
- $('home').querySelector('.qr-home-avatar-initial').hidden=!!qrProfile.photo;
+ avatar.closest('.qr-home-portrait').querySelector('.qr-home-avatar-initial').hidden=!!qrProfile.photo;
  const attempts=qrEntries().flatMap(e=>(e.attempts||[]).map(a=>({e,a}))).filter(({a})=>Number.isFinite(Number(a.score))&&Number.isFinite(Number(a.total))&&Number(a.total)>0);
  const subjects=new Set(attempts.map(({e})=>e.subject).filter(Boolean));
  const avg=attempts.length?Math.round(attempts.reduce((sum,{a})=>sum+100*Number(a.score)/Number(a.total),0)/attempts.length):null;
@@ -2496,6 +2519,32 @@ function qrRenderScores(){
   '</small></div><span class="qr-home-activity-value">'+percent({a})+'%</span></div>'
  ).join('')||'<p class="qr-muted">No scores yet.</p>';
 }
+let qrNoteSubject='all';
+function qrRestoreNotesSide(){
+ const side=$('qrNotesSideSlot');
+ if(!side||!side.querySelector('#qrHomeAvatar'))return;
+ const slot=document.createElement('div');slot.id='qrNotesSideSlot';slot.className='qr-home-side';
+ side.replaceWith(slot);side.removeAttribute('id');
+ $('home').querySelector('.qr-home-shell').insertBefore(side,$('home').querySelector('.qr-home-main'));
+}
+function qrPlaceNotesSide(){
+ const side=$('home').querySelector('.qr-home-shell > .qr-home-side'),slot=$('qrNotesSideSlot');
+ if(side&&slot){slot.replaceWith(side);side.id='qrNotesSideSlot'}
+}
+const qrNoteGlossaryData={
+ English:[['Noun','A word that names a person, place, thing or idea.','Teacher, school and book are nouns.'],['Verb','A word that describes an action or state.','Run, read and is are verbs.'],['Adjective','A word that describes a noun.','A small bird: small is the adjective.']],
+ Malay:[['Kata nama','Perkataan yang menamakan orang, tempat, benda atau haiwan.','Guru, sekolah dan buku ialah kata nama.'],['Kata kerja','Perkataan yang menunjukkan perbuatan.','Makan, membaca dan berlari ialah kata kerja.'],['Kata adjektif','Perkataan yang menerangkan sifat sesuatu.','Besar, kecil dan cantik ialah kata adjektif.']],
+ Korean:[['명사 (Noun)','사람, 장소, 물건 등의 이름을 나타내는 말.','학교, 책, 친구는 명사예요.'],['동사 (Verb)','움직임이나 동작을 나타내는 말.','먹다, 읽다, 달리다는 동사예요.'],['형용사 (Adjective)','상태나 성질을 나타내는 말.','크다, 작다, 예쁘다는 형용사예요.']],
+ Math:[['Place value','The value of a digit depends on its position in a number.','In 352, the digit 5 means 50.'],['Multiplication','Adding equal groups together.','4 × 3 means four groups of three, which equals 12.'],['Fraction','A number showing part of a whole.','One half means one of two equal parts.']],
+ Science:[['Energy','The ability to cause change or do work.','Light and heat are forms of energy.'],['Habitat','The natural place where a living thing lives.','A pond is a habitat for frogs.'],['Evaporation','When liquid changes into gas at its surface.','Water in wet clothes evaporates as they dry.']]
+};
+function qrChooseNoteSubject(name){qrNoteSubject=name;qrEditingNote=null;qrRenderNotes();qrRenderNoteGlossary()}
+function qrRenderNoteGlossary(){
+ const keys=Object.keys(qrNoteGlossaryData),name=qrNoteSubject==='all'?keys[Math.floor(Math.random()*keys.length)]:qrNoteSubject;
+ const entries=qrNoteGlossaryData[name];if(!entries)return;
+ const [term,definition,example]=entries[Math.floor(Math.random()*entries.length)];
+ $('qrNoteGlossary').innerHTML='<span class="qr-note-glossary-pill">'+escapeHtml(name)+'</span><h2>'+escapeHtml(term)+'</h2><p>'+escapeHtml(definition)+'</p><div class="qr-note-glossary-summary"><strong>Example</strong><p>'+escapeHtml(example)+'</p></div>';
+}
 let qrNotes=[];
 let qrEditingNote=null,qrNotesBusy=false;
 function qrNoteDate(value){
@@ -2508,10 +2557,11 @@ function qrNoteParagraphs(text){
  return String(text).split(/\r?\n/).map(line=>'<p class="qr-note-paragraph">'+(line?escapeHtml(line):'&nbsp;')+'</p>').join('');
 }
 function qrRenderNotes(){
- $('qrNotesList').innerHTML=qrNotes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
+ document.querySelectorAll('#notesPage [data-note-subject]').forEach(b=>{const active=b.dataset.noteSubject===qrNoteSubject;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+ $('qrNotesList').innerHTML=qrNotes.filter(n=>qrNoteSubject==='all'||n.subject===qrNoteSubject).slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
   const id=JSON.stringify(n.id).replace(/"/g,'&quot;'),editing=qrEditingNote===n.id;
   return '<div class="qr-list-item qr-past-note" data-note-id="'+escapeHtml(n.id)+'">'+
-   '<div class="qr-note-top"><time class="qr-muted" title="Created date">'+escapeHtml(qrNoteDate(n.date))+'</time>'+
+   '<div class="qr-note-top">'+(n.subject?'<span class="qr-note-glossary-pill">'+escapeHtml(n.subject)+'</span>':'')+'<time class="qr-muted" title="Created date">'+escapeHtml(qrNoteDate(n.date))+'</time>'+
    '<div class="qr-note-actions">'+
    (editing?'<button type="button" class="qr-btn" onclick="qrSaveEditedNote('+id+',this)">Save</button>':
    '<button type="button" class="qr-btn" onclick="qrEditNote('+id+')">Edit</button>')+
@@ -2578,7 +2628,7 @@ async function qrSaveNote(button){
  const text=$('qrNoteText').value.trim();
  if(!text)return;
  qrNotesBusy=true;qrButtonProcessing(button,true);
- const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text}];
+ const next=[...qrNotes,{id:Date.now().toString(36),date:new Date().toISOString(),text,...(qrNoteSubject==='all'?{}:{subject:qrNoteSubject})}];
  try{
   await window.qrDriveWrite('Notes','notes.json',JSON.stringify(next));
   qrNotes=next;$('qrNoteText').value='';$('qrNoteStatus').textContent='';qrRenderNotes();
@@ -2604,7 +2654,7 @@ function qrCropCancel(){qrCropImage=null;$('qrCropModal').classList.add('hidden'
 function qrCropApply(){qrCropDraw();qrCroppedPhoto=$('qrCropCanvas').toDataURL('image/jpeg',0.82);qrCropImage=null;$('qrCropModal').classList.add('hidden');$('qrCropModal').style.display='none';$('qrPhotoPreview').src=qrCroppedPhoto;$('qrPhotoPreview').hidden=false;$('qrProfileStatus').textContent='Photo cropped. Select Save profile to keep it.';$('qrPhoto').value=''}
 (function(){const canvas=$('qrCropCanvas');canvas.addEventListener('pointerdown',e=>{if(!qrCropImage)return;qrCropPointer={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointermove',e=>{if(!qrCropPointer)return;const factor=canvas.width/canvas.getBoundingClientRect().width;qrCropX+=(e.clientX-qrCropPointer.x)*factor;qrCropY+=(e.clientY-qrCropPointer.y)*factor;qrCropPointer={x:e.clientX,y:e.clientY};qrCropDraw()});const end=()=>qrCropPointer=null;canvas.addEventListener('pointerup',end);canvas.addEventListener('pointercancel',end)})();
 async function qrSaveProfile(button){const status=$('qrProfileStatus');qrButtonProcessing(button,true);status.textContent='';const next={...qrProfile,name:$('qrDisplayName').value.trim()};if(qrCroppedPhoto)next.photo=qrCroppedPhoto;try{await window.qrDriveWrite('Profile','profile.json',JSON.stringify(next));qrProfile=next;qrCroppedPhoto=null;status.textContent='Profile saved.';qrRender();qrProfileSection('view')}catch(e){status.textContent='Could not save: '+e.message}finally{qrButtonProcessing(button,false)}}
-function qrLogout(){window.qrGoogleLogout?.();qrEditingNote=null;qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};show('home')}
+function qrLogout(){window.qrGoogleLogout?.();qrEditingNote=null;qrNoteSubject='all';qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};show('home')}
 async function qrLoadAccount(){
  qrEditingNote=null;
  qrProfile={name:'',photo:''};qrNotes=[];qrScoreHistory={};
