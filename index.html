@@ -1545,6 +1545,8 @@ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-dropdown-options button:i
 
 /* Scores uses the Home stages, shared cards, 24px gaps and 32px main padding. */
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:var(--qr-home-gap)!important}
+body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{display:flex;flex:1;min-height:0;min-width:0}
+body:not(.auth-locked) #scoresPage #qrScoresHighestSlot>.qr-home-highest{width:100%;min-width:0}
 body:not(.auth-locked) #scoresPage .qr-scores-main>*{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:0!important}
 body:not(.auth-locked) #scoresPage .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
 body:not(.auth-locked) #scoresPage .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
