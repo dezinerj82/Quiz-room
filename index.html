@@ -1010,7 +1010,7 @@ body:not(.auth-locked) .qr-crop-modal button,
 }
 body:not(.auth-locked) :is(button,.qr-file-button).qr-processing,
 #googleGate button.qr-processing{
- background:var(--qr-focus)!important;color:var(--qr-on-focus)!important;opacity:1!important;cursor:wait;
+ opacity:1!important;cursor:wait;
 }
 @media(prefers-reduced-motion:reduce){
  body:not(.auth-locked) .qr-main :is(button,.qr-file-button),
@@ -1396,13 +1396,15 @@ body.auth-locked{background:#e6f6f6!important}
 #googleGate .status{font-size:var(--qr-font-small)!important;line-height:1.45;color:#c0534e!important;min-height:0!important;margin:0!important}
 #googleGate .status:empty{display:none!important}
 @media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
-/* Login uses the same quiet color-only pending state. */
-#googleGate button.qr-processing,
-#googleGate button.qr-processing:disabled,
-#googleGate button.qr-processing:is(:hover,:focus,:focus-visible){
- background:#f1ada4!important;color:#171717!important;
- opacity:1!important;cursor:wait!important;box-shadow:none!important;
-}
+/* All pending buttons share the same fading-dot indicator. */
+body:not(.auth-locked) .qr-main button.qr-processing:disabled,#googleGate button.qr-processing:disabled{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;opacity:1!important;cursor:wait!important}
+.qr-processing .qr-loading-dots{display:inline-flex;align-items:center;gap:var(--qr-home-inline-gap);margin-inline-start:var(--qr-home-inline-gap);vertical-align:middle;flex:none}
+.qr-loading-dots i{display:block;width:.34em;height:.34em;border-radius:50%;background:currentColor;animation:qrLoadingFade 1.4s ease-in-out infinite}
+.qr-loading-dots i:nth-child(2){animation-delay:.2s}
+.qr-loading-dots i:nth-child(3){animation-delay:.4s}
+@keyframes qrLoadingFade{0%,100%{opacity:.2}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.qr-loading-dots i{animation:none;opacity:.65}}
+
 @media(max-width:550px){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#selection:where(.qr-active-stage)) .qr-home-welcome{gap:12px!important}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#selection:where(.qr-active-stage)) .qr-home-welcome>div:first-child{min-width:0;flex:1}body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#selection:where(.qr-active-stage)) .qr-home-hero-mark{align-self:center}}
 
 /* Home Highest Score dropdown: matched pill and fully styled open menu. */
@@ -2557,6 +2559,7 @@ function qrEditNote(id){
 function qrButtonProcessing(button,active){
  if(!button)return;
  button.classList.toggle('qr-processing',active);
+ if(active&&!button.querySelector('.qr-loading-dots')){const dots=document.createElement('span');dots.className='qr-loading-dots';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';button.append(dots)}else if(!active)button.querySelector('.qr-loading-dots')?.remove();
  button.disabled=active;
  if(active)button.setAttribute('aria-busy','true');
  else button.removeAttribute('aria-busy');
@@ -2656,9 +2659,9 @@ function render(){accounts.replaceChildren();for(const a of saved()){const b=doc
 function setBusy(v,button=null){
  busy=v;
  if(v)loginButton=button||other;
- accounts.querySelectorAll("button").forEach(b=>{b.disabled=v;b.classList.toggle('qr-processing',v&&b===loginButton);});
+ accounts.querySelectorAll("button").forEach(b=>{qrButtonProcessing(b,v&&b===loginButton);b.disabled=v;});
+ qrButtonProcessing(other,v&&other===loginButton);
  other.disabled=v;
- other.classList.toggle('qr-processing',v&&other===loginButton);
  if(v){say("");}
  else{loginButton=null;render();}
 }
