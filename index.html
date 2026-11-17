@@ -1557,7 +1557,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(4){backgroun
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:nth-child(5){background:#f5e9dc!important;color:#815a36!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill:is(:hover,:focus-visible),body:not(.auth-locked) #scoresPage .qr-scores-filter-pill.active{background:var(--qr-home-primary)!important;color:white!important;outline:0!important;box-shadow:none!important}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
-body:not(.auth-locked) #scoresPage .qr-scores-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
+body:not(.auth-locked) #scoresPage .qr-scores-highlights,body:not(.auth-locked) #scoresPage .qr-scores-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight{position:relative;min-width:0;height:225px;min-height:225px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:var(--qr-home-inner-padding);border-radius:var(--qr-home-radius)!important;overflow:hidden}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-average{background:var(--qr-home-secondary)}
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best{background:#fff0e1}
@@ -1569,7 +1569,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px
 body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:12px;color:#829da0}
 body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
 @media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlights,body:not(.auth-locked) #scoresPage .qr-scores-bottom{grid-template-columns:1fr}body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:auto;min-height:160px}body:not(.auth-locked) #scoresPage .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
