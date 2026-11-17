@@ -1250,8 +1250,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-main button.qr-home-subject:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-main button.qr-home-cta:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-main button.qr-home-activity-value:not(:disabled):is(:hover,:focus-visible),body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-main button.qr-home-text-link:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--qr-home-gap);margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-bottom>section{min-width:0}
-body:not(.auth-locked) #home .qr-home-bottom>section{display:flex;flex-direction:column}
-body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{flex:1;align-content:start}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{display:flex;flex-direction:column;min-width:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-text-link{border:0!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:var(--qr-font-body)!important;font-weight:800!important;padding:4px!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-activity{display:grid;gap:0!important;padding:var(--qr-home-inner-padding)!important}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-activity-row{display:flex;align-items:center;gap:var(--qr-home-row-gap);padding:var(--qr-home-row-padding) 0;min-width:0}
@@ -1420,8 +1419,7 @@ body:not(.auth-locked) #notesPage #qrNoteEditDialog .qr-note-edit{box-sizing:bor
 body:not(.auth-locked) #notesPage #qrNoteEditDialog .qr-note-edit:is(:focus,:focus-visible){outline:none!important;border:0!important;box-shadow:none!important}
 #qrNoteEditDialog .qr-note-actions{gap:var(--qr-home-row-gap)}
 #qrNoteEditDialog #qrNoteEditStatus:empty{display:none}
-body:not(.auth-locked) #notesPage .qr-home-bottom>section{display:flex;flex-direction:column}
-body:not(.auth-locked) #notesPage .qr-home-bottom>section>.qr-home-surface{flex:1;align-content:start}
+
 body:not(.auth-locked) #notesPage .qr-note-glossary{display:flex;flex-direction:column;gap:var(--qr-home-gap);color:var(--qr-home-ink);font-size:var(--qr-font-body)}
 body:not(.auth-locked) #notesPage .qr-note-glossary h2{font-size:var(--qr-font-heading)!important;margin:0!important;overflow-wrap:anywhere;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) #notesPage .qr-note-glossary p{margin:0!important}
@@ -1440,6 +1438,24 @@ body:not(.auth-locked) #notesPage .qr-study-menu{display:grid;gap:var(--qr-home-
 body:not(.auth-locked) #notesPage .qr-study-menu[hidden]{display:none!important}
 body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!important;width:100%!important}
 @media(max-width:740px){body:not(.auth-locked) #notesPage .qr-note-compose{height:180px}}
+/* Shared fixed dashboard card heights; scrolling is restricted to content. */
+:root{--qr-home-bottom-height:clamp(288px,37dvh,336px);--qr-home-highest-height:clamp(336px,55dvh,488px);--qr-home-scroll-width:8px}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{box-sizing:border-box;height:var(--qr-home-bottom-height)!important;min-height:0!important;max-height:var(--qr-home-bottom-height)!important;flex:none}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{display:flex;min-width:0}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{width:100%}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom .qr-home-activity{display:grid;grid-template-rows:minmax(0,1fr);align-content:stretch}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-highest{height:var(--qr-home-highest-height);min-height:0;max-height:var(--qr-home-highest-height);flex:none;grid-template-rows:auto auto minmax(0,1fr);align-content:stretch}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresHighestSlot{flex:none}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll{min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;padding-inline-end:var(--qr-home-row-gap);align-content:start;scrollbar-width:auto;scrollbar-color:auto}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll::-webkit-scrollbar{width:var(--qr-home-scroll-width)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll::-webkit-scrollbar-track{background:var(--qr-home-secondary);border-radius:var(--qr-home-pill-radius)}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll::-webkit-scrollbar-thumb{background:var(--qr-home-primary);border-radius:var(--qr-home-pill-radius)}
+@supports not selector(::-webkit-scrollbar){body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll{scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary)}}
+body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:auto;gap:var(--qr-home-row-gap)}
+body:not(.auth-locked) #notesPage .qr-note-glossary{overflow:hidden;min-height:0}
+body:not(.auth-locked) #notesPage .qr-note-glossary-header{flex:none}
+body:not(.auth-locked) #notesPage .qr-study-scroll{display:flex;flex-direction:column;gap:var(--qr-home-gap);flex:1}
+body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
 /* Quiz selection and results reuse the same stage and card defaults. */
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-quiz-menu:not(.hidden){display:flex;flex-direction:column;gap:var(--qr-home-gap)}
 body:not(.auth-locked) #quizStart .qr-quiz-menu .qr-home-section-title{margin:0!important}
@@ -1569,7 +1585,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
  <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
   <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
   <div class="qr-best-heading qr-home-best-level"><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select><div id="qrHomeLevelDropdown" class="qr-home-dropdown" hidden><button id="qrHomeLevelTrigger" type="button" class="qr-home-dropdown-trigger" aria-label="Select school level" aria-haspopup="listbox" aria-expanded="false" aria-controls="qrHomeLevelOptions" onclick="qrToggleHomeLevelMenu()"><span id="qrHomeLevelLabel">PM3</span><svg class="qr-home-dropdown-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button><div id="qrHomeLevelOptions" class="qr-home-dropdown-options" role="listbox" aria-label="School level options" hidden></div></div></div>
-  <div id="qrBestScores" class="qr-best-list"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
+  <div id="qrBestScores" class="qr-best-list qr-card-scroll"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
  </section>
 </div>
 <div class="qr-main qr-home-main">
@@ -1587,7 +1603,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
   <button class="qr-home-subject" data-subject="Science" onclick="qrOpen('quizStart')">Science</button>
  </div>
  <div class="qr-home-bottom">
-  <section><div class="qr-home-section-title"><h2>Recent Activity</h2><button class="qr-home-text-link" onclick="qrOpen('scoresPage')">View All →</button></div><div id="qrHomeActivity" class="qr-home-surface qr-home-activity"><p class="qr-muted">Your completed quizzes will appear here.</p></div></section>
+  <section><div class="qr-home-section-title"><h2>Recent Activity</h2><button class="qr-home-text-link" onclick="qrOpen('scoresPage')">View All →</button></div><div class="qr-home-surface qr-home-activity"><div id="qrHomeActivity" class="qr-card-scroll"><p class="qr-muted">Your completed quizzes will appear here.</p></div></div></section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div class="qr-home-surface qr-home-overview"><div class="qr-home-ring" id="qrHomeRing"><strong id="qrHomeRingText">—</strong><span>Avg. Score</span></div><div class="qr-home-overview-stats"><p><span>Completed</span><strong id="qrHomeTotalAttempts">0 quizzes</strong></p><p><span>Subjects</span><strong id="qrHomeTotalSubjects">0 subjects</strong></p></div></div></section>
  </div>
 </div>
@@ -1599,7 +1615,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
 <section class="qr-home-welcome qr-note-compose"><textarea id="qrNoteText" class="qr-input qr-textarea" aria-label="Write a note" placeholder="Write your note here…"></textarea><div class="qr-note-compose-actions"><button type="button" class="qr-btn qr-home-cta" onclick="qrSaveNote(this)">Save</button><span id="qrNoteStatus" class="qr-muted" role="status"></span></div></section>
 <div class="qr-home-section-title qr-scores-subject-heading"><h2>Subjects</h2><p>Choose a subject to learn a thing or two</p></div>
 <div class="qr-home-subjects" aria-label="Choose a subject"><button type="button" data-note-subject="English" data-subject="English" class="qr-home-subject" onclick="qrChooseNoteSubject('English')">English</button><button type="button" data-note-subject="Malay" data-subject="Malay" class="qr-home-subject" onclick="qrChooseNoteSubject('Malay')">Malay</button><button type="button" data-note-subject="Korean" data-subject="Korean" class="qr-home-subject" onclick="qrChooseNoteSubject('Korean')">Korean</button><button type="button" data-note-subject="Math" data-subject="Math" class="qr-home-subject" onclick="qrChooseNoteSubject('Math')">Math</button><button type="button" data-note-subject="Science" data-subject="Science" class="qr-home-subject" onclick="qrChooseNoteSubject('Science')">Science</button></div>
-<dialog id="qrNoteEditDialog" class="qr-home-surface" aria-labelledby="qrNoteEditTitle"><h2 id="qrNoteEditTitle">Edit note</h2><textarea id="qrNoteEditText" class="qr-input qr-note-edit" aria-label="Edit note" rows="5"></textarea><p id="qrNoteEditStatus" class="qr-muted" role="status"></p><div class="qr-note-actions"><button type="button" class="qr-btn qr-home-activity-value" onclick="qrCloseNoteEditor()">Cancel</button><button type="button" class="qr-btn qr-home-activity-value" onclick="qrSaveEditedNote(qrEditingNote,this)">Save</button><button type="button" class="qr-btn qr-home-activity-value" onclick="qrDeleteNote(qrEditingNote,this)">Delete</button></div></dialog><div class="qr-home-bottom"><section><div class="qr-home-section-title"><h2>Note list</h2></div><div class="qr-home-surface qr-home-activity"><div id="qrNotesList" class="qr-home-activity-list"></div></div></section>
+<dialog id="qrNoteEditDialog" class="qr-home-surface" aria-labelledby="qrNoteEditTitle"><h2 id="qrNoteEditTitle">Edit note</h2><textarea id="qrNoteEditText" class="qr-input qr-note-edit" aria-label="Edit note" rows="5"></textarea><p id="qrNoteEditStatus" class="qr-muted" role="status"></p><div class="qr-note-actions"><button type="button" class="qr-btn qr-home-activity-value" onclick="qrCloseNoteEditor()">Cancel</button><button type="button" class="qr-btn qr-home-activity-value" onclick="qrSaveEditedNote(qrEditingNote,this)">Save</button><button type="button" class="qr-btn qr-home-activity-value" onclick="qrDeleteNote(qrEditingNote,this)">Delete</button></div></dialog><div class="qr-home-bottom"><section><div class="qr-home-section-title"><h2>Note list</h2></div><div class="qr-home-surface qr-home-activity"><div id="qrNotesList" class="qr-home-activity-list qr-card-scroll"></div></div></section>
 <section><div class="qr-home-section-title"><h2>Study card</h2></div><div class="qr-home-surface qr-note-glossary" aria-live="polite" id="qrNoteGlossary"></div></section></div>
 </div></div></section><section id="scoresPage" class="screen hidden"><div class="qr-shell qr-home-shell qr-scores-shell">
 <nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><div class="qr-home-nav-links"><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></div><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation">&gt;</button></nav>
@@ -1627,7 +1643,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
  <div class="qr-home-bottom qr-scores-bottom">
   <section><div class="qr-home-section-title"><h2>Score History</h2><span id="qrScoresHistoryCount" class="qr-scores-history-label"></span></div>
-   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-list"><p class="qr-muted">No scores yet.</p></div></div>
+   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-list qr-card-scroll"><p class="qr-muted">No scores yet.</p></div></div>
   </section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div id="qrScoresOverviewSlot"></div></section>
  </div>
@@ -2543,7 +2559,9 @@ function qrRenderNoteGlossary(index){
  qrStudySubject=name;qrStudyIndex=index;
  const [term,definition,example]=entries[index];
  $('qrNoteGlossary').innerHTML='<div class="qr-note-glossary-header"><span class="qr-home-activity-value qr-study-subject" data-subject="'+escapeHtml(name)+'">'+escapeHtml(name)+'</span><div class="qr-study-controls"><button type="button" class="qr-home-text-link" aria-label="Refresh study card" title="Refresh" onclick="qrRenderNoteGlossary()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7v5h-5M4 17v-5h5M6 8a7 7 0 0 1 12-2l2 6M4 12l2 6a7 7 0 0 0 12-2"/></svg></button><button type="button" class="qr-home-text-link" aria-label="Study card list" title="Study card list" aria-expanded="false" aria-controls="qrStudyMenu" onclick="qrToggleStudyMenu(this)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div><div id="qrStudyMenu" class="qr-study-menu" hidden>'+entries.map((entry,i)=>'<button type="button" class="qr-home-activity-value" onclick="qrRenderNoteGlossary('+i+')">'+escapeHtml(entry[0])+'</button>').join('')+'</div><h2>'+escapeHtml(term)+'</h2><div class="qr-study-key-group"><div class="qr-study-key qr-home-activity-value">Key Points</div><ul class="qr-study-points"><li>'+escapeHtml(definition)+'</li></ul></div><div class="qr-note-glossary-summary"><div class="qr-study-summary-heading"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 4h4M8 15a6 6 0 1 1 8 0c-.8.7-1 1.4-1 3H9c0-1.6-.2-2.3-1-3ZM12 1v1M3 4l2 2M1 11h2m18 0h2m-4-5 2-2"/></svg><strong>Quick Summary</strong></div><p>'+escapeHtml(example)+'</p></div>';
+ qrWrapStudyContent();
 }
+function qrWrapStudyContent(){const card=$('qrNoteGlossary'),head=card.querySelector('.qr-note-glossary-header');if(!head)return;const body=document.createElement('div');body.className='qr-study-scroll qr-card-scroll';while(head.nextSibling)body.append(head.nextSibling);card.append(body)}
 function qrToggleStudyMenu(button){const menu=$('qrStudyMenu');menu.hidden=!menu.hidden;button.setAttribute('aria-expanded',String(!menu.hidden))}
 let qrNotes=[];
 let qrEditingNote=null,qrNotesBusy=false;
