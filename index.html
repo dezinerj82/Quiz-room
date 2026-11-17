@@ -1454,7 +1454,7 @@ body:not(.auth-locked) #notesPage .qr-note-actions{display:flex;align-items:cent
 body:not(.auth-locked) #notesPage .qr-note-body{min-width:0;overflow-wrap:anywhere}
 body:not(.auth-locked) #notesPage .qr-note-paragraph{white-space:pre-wrap;margin:0!important}
 body:not(.auth-locked) #notesPage .qr-note-paragraph+.qr-note-paragraph{margin-top:var(--qr-home-paragraph-gap)!important}
-body:not(.auth-locked) #notesPage #qrNoteEditDialog{box-sizing:border-box;width:min(calc(100% - var(--qr-home-main-padding)),560px);max-height:calc(100dvh - var(--qr-home-main-padding));margin:auto!important;overflow:auto;color:var(--qr-home-ink)}
+body:not(.auth-locked) #notesPage #qrNoteEditDialog{box-sizing:border-box;position:fixed;inset:auto;width:var(--qr-note-editor-width)!important;max-width:calc(100vw - var(--qr-home-inner-padding)*2)!important;max-height:calc(100dvh - var(--qr-home-inner-padding)*2);left:var(--qr-note-editor-left);top:var(--qr-note-editor-top);margin:0!important;overflow:auto;color:var(--qr-home-ink)}
 #qrNoteEditDialog::backdrop{background:color-mix(in srgb,var(--qr-home-ink) 25%,transparent)}
 #qrNoteEditDialog[open]{display:flex;flex-direction:column;gap:var(--qr-home-gap)}
 #qrNoteEditDialog h2{font-size:var(--qr-font-heading);margin:0}
@@ -2565,9 +2565,24 @@ function qrEditNote(id){
  qrEditingNote=id;
  $('qrNoteEditText').value=note.text;
  $('qrNoteEditStatus').textContent='';
+ qrPositionNoteEditor();
  $('qrNoteEditDialog').showModal();
+ qrPositionNoteEditor();
  $('qrNoteEditText').focus();
 }
+function qrPositionNoteEditor(){
+ const dialog=$('qrNoteEditDialog'),card=$('qrNotesList').closest('.qr-home-surface');
+ if(!card)return;
+ const rect=card.getBoundingClientRect(),pad=parseFloat(getComputedStyle(card).paddingLeft)||0;
+ const width=Math.min(Math.max(0,rect.width-2*pad),window.innerWidth-2*pad);
+ dialog.style.setProperty('--qr-note-editor-width',width+'px');
+ const left=Math.max(pad,Math.min(rect.left+pad,window.innerWidth-width-pad));
+ dialog.style.setProperty('--qr-note-editor-left',left+'px');
+ const height=dialog.open?dialog.getBoundingClientRect().height:0;
+ const top=Math.max(pad,Math.min(rect.top+pad,window.innerHeight-height-pad));
+ dialog.style.setProperty('--qr-note-editor-top',top+'px');
+}
+window.addEventListener('resize',()=>{if($('qrNoteEditDialog').open)qrPositionNoteEditor()});
 function qrCloseNoteEditor(force=false){
  if(qrNotesBusy&&!force)return;
  const dialog=$('qrNoteEditDialog');if(dialog.open)dialog.close();
