@@ -1352,7 +1352,15 @@ body.auth-locked{background:#e6f6f6!important}
 @media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
 /* All pending buttons share the same fading-dot indicator. */
 body:not(.auth-locked) .qr-main button.qr-processing:disabled,#googleGate button.qr-processing:disabled{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;opacity:1!important;cursor:wait!important}
-.qr-processing .qr-loading-dots{display:inline-flex;align-items:center;gap:var(--qr-home-inline-gap);margin-inline-start:var(--qr-home-inline-gap);vertical-align:middle;flex:none}
+.qr-processing{position:relative!important;overflow:visible!important}
+.qr-processing .qr-loading-dots{position:absolute;top:calc(100% + var(--qr-home-inline-gap));left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:var(--qr-home-inline-gap);pointer-events:none;color:var(--qr-home-primary)}
+#googleGate .qr-login-card{position:relative;overflow:visible}
+#googleGate .qr-login-orbit{position:absolute;inset:0;pointer-events:none;color:var(--qr-home-primary)}
+#googleGate .qr-login-orbit i{position:absolute;left:0;top:0;offset-path:inset(calc(-1 * var(--qr-home-row-gap)) round var(--qr-home-radius));offset-rotate:0deg;animation:qrLoginTravel 3.2s linear infinite,qrLoadingFade 1.4s ease-in-out infinite}
+#googleGate .qr-login-orbit i:nth-child(2){animation-delay:-.12s,.2s}
+#googleGate .qr-login-orbit i:nth-child(3){animation-delay:-.24s,.4s}
+@keyframes qrLoginTravel{from{offset-distance:0%}to{offset-distance:100%}}
+@media(prefers-reduced-motion:reduce){#googleGate .qr-login-orbit i{animation:none;offset-path:none;left:50%;top:calc(100% + var(--qr-home-inline-gap));transform:translateX(-50%)}#googleGate .qr-login-orbit i:nth-child(1){margin-left:calc(-1 * var(--qr-home-row-gap))}#googleGate .qr-login-orbit i:nth-child(3){margin-left:var(--qr-home-row-gap)}}
 .qr-loading-dots i{display:block;width:.34em;height:.34em;border-radius:50%;background:currentColor;animation:qrLoadingFade 1.4s ease-in-out infinite}
 .qr-loading-dots i:nth-child(2){animation-delay:.2s}
 .qr-loading-dots i:nth-child(3){animation-delay:.4s}
@@ -1570,6 +1578,42 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
 
 #selection.qr-active-stage #quiz.qr-equation-form #qrActiveQuizPrev{display:none!important}
 @media(max-width:550px){body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-quiz-progress{flex-wrap:wrap}body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-progress-track{min-width:0;flex:1}}
+.qr-mobile-stats{display:none!important}
+/* Phone layout: same live controls and data, arranged in one column. */
+@media(max-width:740px){
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage){box-sizing:border-box!important;min-height:100dvh!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-row-gap)!important;padding-bottom:calc(var(--density-control)*2 + var(--qr-home-gap)*2 + env(safe-area-inset-bottom))!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell{display:flex!important;flex-direction:column!important;gap:var(--qr-home-gap)!important;width:100%!important;max-width:100%!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-main{order:0;box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;overflow:visible!important;background:white!important;border:0!important;border-radius:var(--qr-home-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side{position:fixed!important;inset:auto var(--qr-home-row-gap) calc(var(--qr-home-row-gap) + env(safe-area-inset-bottom))!important;z-index:50;display:block!important;width:auto!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:var(--qr-home-row-gap)!important;background:var(--qr-home-primary)!important;border:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side :is(.qr-nav-brand,.qr-sidebar-toggle){display:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:var(--qr-home-inline-gap)!important;width:100%!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:var(--qr-home-inline-gap)!important;width:100%!important;min-width:0!important;min-height:var(--density-control)!important;padding:var(--qr-home-paragraph-gap) var(--qr-home-inline-gap)!important;border-radius:var(--qr-inner-radius)!important;font-size:var(--qr-font-small)!important;line-height:1.4!important;color:white!important;background:transparent!important;box-shadow:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button.active{background:white!important;color:var(--qr-home-primary)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-label{display:block!important;white-space:normal!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#quizStart,#selection,#notesPage) .qr-home-side{display:none!important}
+ body:not(.auth-locked) #scoresPage .qr-home-side{display:flex!important;order:1;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:flex!important;flex-direction:column;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;min-height:0!important;flex:none}
+ body:not(.auth-locked) #home .qr-home-bottom>section:nth-child(2){display:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-card-scroll{overflow:visible!important;scrollbar-gutter:auto;padding-inline-end:0}
+ body:not(.auth-locked) #notesPage .qr-note-glossary{overflow:visible}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--qr-home-row-gap)!important}
+ body:not(.auth-locked) :is(#home,#quizStart,#selection) .qr-home-welcome{height:auto!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#quizStart,#selection) .qr-home-welcome p{margin-bottom:var(--qr-home-row-gap)!important}
+ body:not(.auth-locked) :is(#home,#quizStart,#selection) .qr-home-hero-mark{display:none!important}
+ body:not(.auth-locked) #home .qr-mobile-stats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--qr-home-inline-gap);margin-top:var(--qr-home-gap)!important}
+ body:not(.auth-locked) #home .qr-mobile-stats>div{display:grid;justify-items:center;gap:var(--qr-home-inline-gap);padding:var(--qr-home-row-gap) var(--qr-home-inline-gap);background:var(--qr-home-secondary);border-radius:var(--qr-inner-radius);text-align:center}
+ body:not(.auth-locked) #home .qr-mobile-stats span{font-size:var(--qr-font-small);color:var(--qr-home-primary)}
+ body:not(.auth-locked) #home .qr-mobile-stats strong{font-size:var(--qr-font-heading);color:var(--qr-home-ink)}
+ body:not(.auth-locked) #selection #quiz .qr-quiz-progress{flex-wrap:wrap}
+ body:not(.auth-locked) #selection #quiz .qr-progress-track{min-width:0}
+ body:not(.auth-locked) #selection #quiz .quizactions{gap:var(--qr-home-row-gap)!important}
+ body:not(.auth-locked) #selection #quiz .answer{white-space:normal!important;overflow-wrap:anywhere}
+ body:not(.auth-locked) #notesPage .qr-past-note{flex-wrap:wrap}
+ body:not(.auth-locked) #notesPage #qrNoteEditDialog{max-width:calc(100vw - var(--qr-home-inner-padding)*2)!important}
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1614,7 +1658,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
   <div><h2 id="qrGreeting">Welcome back!</h2><p>Ready for another learning adventure?</p><button class="qr-btn qr-home-cta" data-primary-pill onclick="qrOpen('quizStart')">Continue Quiz <span aria-hidden="true">→</span></button></div>
   <div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div>
  </section>
- <div class="qr-home-section-title"><h2>Subjects</h2><p>Choose a subject to practise</p></div>
+ <div class="qr-mobile-stats"><div><span>Quizzes</span><strong id="qrMobileQuizzes">0</strong></div><div><span>Avg. Score</span><strong id="qrMobileAverage">—</strong></div><div><span>Subjects</span><strong id="qrMobileSubjects">0</strong></div></div><div class="qr-home-section-title"><h2>Subjects</h2><p>Choose a subject to practise</p></div>
  <div class="qr-home-subjects" aria-label="Available quiz subjects">
   <button class="qr-home-subject" data-subject="English" onclick="qrOpen('quizStart')">English</button>
   <button class="qr-home-subject" data-subject="Malay" onclick="qrOpen('quizStart')">Malay</button>
@@ -1824,7 +1868,7 @@ function qrCloseSidebars(){
 }
 window.addEventListener('resize',()=>{if(window.innerWidth>860)qrCloseSidebars()});
 document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))qrCloseSidebars()});
-function show(id){qrRestoreQuizSide();qrRestoreNotesSide();qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);qrActiveQuizLayout(id==='quiz');qrPlaceQuizSide(id);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
+function show(id){qrPrepareMobileProfileNav();qrRestoreQuizSide();qrRestoreNotesSide();qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);qrActiveQuizLayout(id==='quiz');qrPlaceQuizSide(id);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
  document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  const selectionCard=$('qrQuizMenu');if(selectionCard){selectionCard.inert=locked;selectionCard.classList.toggle('hidden',id==='quiz'||id==='results')}
  $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
@@ -2020,6 +2064,8 @@ function qrRenderFormula(){
  qrFormulaProgress();updateClock();
 }
 
+function qrPrepareMobileProfileNav(){const nav=$('profilePage')?.querySelector('.qr-side');if(!nav)return;const old=nav.querySelector('.qr-home-nav-links');if(!matchMedia('(max-width:740px)').matches){if(old){while(old.firstChild)nav.insertBefore(old.firstChild,old);old.remove()}return}if(old)return;const links=document.createElement('div');links.className='qr-home-nav-links';[...nav.querySelectorAll('button:not(.qr-sidebar-toggle)')].forEach(b=>links.append(b));nav.insertBefore(links,nav.querySelector('.qr-sidebar-toggle'))}
+window.addEventListener('resize',qrPrepareMobileProfileNav);
 function qrRestoreQuizSide(){
  const side=$('qrActiveQuizSide');if(!side)return;
  side.removeAttribute('id');$('home').querySelector('.qr-home-shell').insertBefore(side,$('home').querySelector('.qr-home-main'));
@@ -2486,6 +2532,7 @@ function qrRender(){
  $('qrHomeQuizzes').textContent=String(attempts.length);
  $('qrHomeAverage').textContent=avg===null?'—':avg+'%';
  $('qrHomeSubjectsCount').textContent=String(subjects.size);
+ $('qrMobileQuizzes').textContent=String(attempts.length);$('qrMobileAverage').textContent=avg===null?'—':avg+'%';$('qrMobileSubjects').textContent=String(subjects.size);
  qrRenderOverview(attempts.length,subjects.size,avg);
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
  $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
@@ -2648,7 +2695,11 @@ function qrNoteEditorBusy(button,active){
 function qrButtonProcessing(button,active){
  if(!button)return;
  button.classList.toggle('qr-processing',active);
- if(active&&!button.querySelector('.qr-loading-dots')){const dots=document.createElement('span');dots.className='qr-loading-dots';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';button.append(dots)}else if(!active)button.querySelector('.qr-loading-dots')?.remove();
+ const loginCard=button.closest('#googleGate .qr-login-card');
+ if(loginCard){
+  if(active&&!loginCard.querySelector('.qr-login-orbit')){const dots=document.createElement('span');dots.className='qr-loading-dots qr-login-orbit';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';loginCard.append(dots)}
+  if(!active&&!loginCard.querySelector('button.qr-processing'))loginCard.querySelector('.qr-login-orbit')?.remove();
+ }else if(active&&!button.querySelector('.qr-loading-dots')){const dots=document.createElement('span');dots.className='qr-loading-dots';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';button.append(dots)}else if(!active)button.querySelector('.qr-loading-dots')?.remove();
  button.disabled=active;
  if(active)button.setAttribute('aria-busy','true');
  else button.removeAttribute('aria-busy');
