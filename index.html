@@ -1601,21 +1601,26 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
 
 #selection.qr-active-stage #quiz.qr-equation-form #qrActiveQuizPrev{display:none!important}
 @media(max-width:550px){body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-quiz-progress{flex-wrap:wrap}body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-progress-track{min-width:0;flex:1}}
-.qr-mobile-stats{display:none!important}
+.qr-mobile-stats,.qr-mobile-quiz-nav{display:none!important}
 /* Phone layout: same live controls and data, arranged in one column. */
 @media(max-width:740px){
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage){box-sizing:border-box!important;min-height:100dvh!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-row-gap)!important;padding-bottom:calc(var(--density-control)*2 + var(--qr-home-gap)*2 + env(safe-area-inset-bottom))!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage){box-sizing:border-box!important;min-height:100dvh!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-row-gap)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell{display:flex!important;flex-direction:column!important;gap:var(--qr-home-gap)!important;width:100%!important;max-width:100%!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;overflow:visible!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-main{order:0;box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;overflow:visible!important;background:white!important;border:0!important;border-radius:var(--qr-home-radius)!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side{position:fixed!important;inset:auto var(--qr-home-row-gap) calc(var(--qr-home-row-gap) + env(safe-area-inset-bottom))!important;z-index:50;display:block!important;width:auto!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:var(--qr-home-row-gap)!important;background:var(--qr-home-primary)!important;border:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);overflow:visible!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side :is(.qr-nav-brand,.qr-sidebar-toggle){display:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-main{order:1;box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;overflow:visible!important;background:white!important;border:0!important;border-radius:var(--qr-home-radius)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side{order:0;position:relative!important;inset:auto!important;z-index:auto;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:var(--qr-home-row-gap)!important;width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:var(--qr-home-row-gap)!important;background:var(--qr-home-primary)!important;border:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-sidebar-toggle{display:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand{display:flex!important;align-items:center!important;justify-content:center!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;gap:var(--qr-home-row-gap)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:var(--qr-home-inline-gap)!important;width:100%!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle){display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:var(--qr-home-inline-gap)!important;width:100%!important;min-width:0!important;min-height:var(--density-control)!important;padding:var(--qr-home-paragraph-gap) var(--qr-home-inline-gap)!important;border-radius:var(--qr-inner-radius)!important;font-size:var(--qr-font-small)!important;line-height:1.4!important;color:white!important;background:transparent!important;box-shadow:none!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle){box-sizing:border-box!important;display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:center!important;gap:var(--qr-home-inline-gap)!important;width:100%!important;min-width:0!important;min-height:0!important;height:auto!important;padding:var(--qr-home-standard-pill-padding)!important;border-radius:var(--qr-home-pill-radius)!important;font-size:var(--qr-home-standard-pill-font)!important;line-height:var(--qr-home-standard-pill-line)!important;color:white!important;background:rgba(255,255,255,.08)!important;box-shadow:none!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button.active{background:white!important;color:var(--qr-home-primary)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-label{display:block!important;white-space:normal!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links>button{flex:initial!important;width:100%!important;min-width:0!important;margin:0!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:1em!important;height:1em!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand .qr-icon{width:var(--qr-font-heading)!important;height:var(--qr-font-heading)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell>.qr-main{padding:var(--qr-home-main-padding)!important}
  body:not(.auth-locked) :is(#home,#quizStart,#selection,#notesPage) .qr-home-side{display:none!important}
- body:not(.auth-locked) #scoresPage .qr-home-side{display:flex!important;order:1;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) #scoresPage .qr-home-side{display:flex!important;order:2;gap:var(--qr-home-gap)!important}
  body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:none!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom{display:flex!important;flex-direction:column;gap:var(--qr-home-gap)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;min-height:0!important;flex:none}
@@ -1636,6 +1641,13 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions button:hove
  body:not(.auth-locked) #selection #quiz .answer{white-space:normal!important;overflow-wrap:anywhere}
  body:not(.auth-locked) #notesPage .qr-past-note{flex-wrap:wrap}
  body:not(.auth-locked) #notesPage #qrNoteEditDialog{max-width:calc(100vw - var(--qr-home-inner-padding)*2)!important}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-active-breadcrumb{display:none!important}
+ body:not(.auth-locked) #quizStart #qrLevelSteps{display:none!important}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-mobile-quiz-nav{display:flex!important;flex-wrap:wrap;align-items:center;gap:var(--qr-home-row-gap);margin-top:var(--qr-home-row-gap)}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-mobile-quiz-nav .qr-home-cta{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-mobile-quiz-nav .qr-home-cta:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
+ body:not(.auth-locked) #quizStart #subjects{display:flex!important;flex-wrap:wrap;gap:var(--qr-home-row-gap)}
+
 }
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
@@ -1987,6 +1999,7 @@ function qrQuizNavigation(active=false){
  const root=active?"qrActiveQuizLeave(false)":"qrOpen('quizStart')";
  return '<button type="button" onclick="'+root+'">'+icon+' Quiz</button>'+(selectedLevel?' <span>›</span> <span>Level</span> <span>›</span> '+(active?'<span>'+escapeHtml(selectedLevel)+'</span>':'<button type="button" onclick="qrQuizChooseLevelAgain()">'+escapeHtml(selectedLevel)+'</button>'):'')+(subject?' <span>›</span> <strong>'+escapeHtml(subject)+'</strong>':'');
 }
+function qrMobileQuizNav(active=false){const root=active?"qrActiveQuizLeave(false)":"qrOpen(\'quizStart\')";return '<div class="qr-mobile-quiz-nav" aria-label="Quiz navigation"><button type="button" class="qr-home-cta" onclick="'+root+'">Quiz</button>'+(selectedLevel?'<button type="button" class="qr-home-cta" '+(active?'disabled':'onclick="qrQuizChooseLevelAgain()"')+'>'+escapeHtml(selectedLevel)+'</button>':'')+(subject?'<button type="button" class="qr-home-cta" '+(active?'disabled':'onclick="selectionBack()"')+'>'+escapeHtml(subject)+'</button>':'')+'</div>'}
 function qrQuizChooseLevelAgain(){activeExerciseTopic=null;subject='';selectedCategory=null;renderChapterList()}
 function renderChapterList(){
  const container=$('versions');
@@ -1997,7 +2010,7 @@ function renderChapterList(){
  $('qrQuizSteps').className='qr-active-breadcrumb';
  $('qrQuizSteps').innerHTML=qrQuizNavigation();
  $('subjectTitle').classList.add('hidden');
- const intro='<section class="qr-home-welcome"><div><h2>'+escapeHtml(subject||'Choose a subject')+'</h2><p>'+(subject?'Choose a quiz to begin.':'What shall we learn today?')+'</p></div><div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div></section>';
+ const intro='<section class="qr-home-welcome"><div><h2>'+escapeHtml(subject||'Choose a subject')+'</h2><p>'+(subject?'Choose a quiz to begin.':'What shall we learn today?')+'</p>'+qrMobileQuizNav()+'</div><div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div></section>';
  const menu=intro+'<div class="qr-home-subjects" role="group" aria-label="Choose subject">'+available.map(name=>'<button class="qr-home-subject'+(name===subject?' active':'')+'" data-subject="'+escapeHtml(name)+'" aria-pressed="'+String(name===subject)+'" onclick="choose(\''+name+'\')">'+escapeHtml(name)+'</button>').join('')+'</div>';
  if(!subject){container.innerHTML=menu;return}
  const categories=availableCategories(selectedLevel,subject);
@@ -2153,7 +2166,7 @@ function qrActiveQuizLayout(on){
  const progress=quiz.querySelector('.qr-quiz-progress'),card=quiz.querySelector('.qr-card'),head=quiz.querySelector('.qr-quiz-outside-top'),tools=quiz.querySelector('.qr-quiz-tools'),actions=quiz.querySelector('.quizactions');
  if(on){
   card.classList.add('qr-home-surface');
-  const header=document.createElement('div');header.id='qrActiveQuizHeader';header.innerHTML='<nav class="qr-active-breadcrumb" aria-label="Quiz navigation">'+qrQuizNavigation(true)+'</nav>';
+  const header=document.createElement('div');header.id='qrActiveQuizHeader';header.innerHTML='<nav class="qr-active-breadcrumb" aria-label="Quiz navigation">'+qrQuizNavigation(true)+'</nav>'+qrMobileQuizNav(true);
   quiz.prepend(header);card.before(progress);progress.append($('timer'));
   const label=document.createElement('span');label.id='qrActiveQuizSubject';label.className='qr-active-subject qr-home-activity-value qr-study-subject';label.dataset.subject=subject;label.textContent=subject;quiz.querySelector('.questionheading').prepend(label);
   const prev=document.createElement('button');prev.type='button';prev.id='qrActiveQuizPrev';prev.className='pill';prev.innerHTML='<svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg><span>Previous</span>';prev.onclick=qrActiveQuizPrevious;actions.prepend(prev);card.append(actions);
