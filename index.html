@@ -43,6 +43,7 @@ body:not(.auth-locked) .qr-main .qr-hero > div:first-child > .qr-btn{margin:0}
 .qr-list{display:grid;gap:var(--density-space)}
 .qr-list-item{padding:var(--qr-unified-padding)!important;background:color-mix(in srgb,var(--qr-secondary) 9%,var(--qr-background))}
 .qr-muted{color:var(--qr-text-primary);font-size:var(--qr-font-small)}
+body:not(.auth-locked) .qr-empty-state{color:#929a9d!important;font-size:var(--qr-font-small);font-family:var(--qr-font)}
 
 .qr-input{box-sizing:border-box;width:100%;border:1px solid var(--qr-boundary);border-radius:var(--density-radius,24px);padding:var(--qr-unified-padding)!important;font:inherit}
 .qr-textarea{min-height:90px;resize:vertical}
@@ -1703,7 +1704,7 @@ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quiz
  <section class="qr-home-surface qr-home-highest" aria-label="Highest scores">
   <div class="qr-home-best-title"><span class="qr-home-trophy" aria-hidden="true">★</span><div><h2>Highest Score</h2><p>Best results by subject</p></div></div>
   <div class="qr-best-heading qr-home-best-level"><select id="qrBestLevel" class="qr-input" aria-label="Select school level" onchange="qrRenderBestScores()" hidden></select><div id="qrHomeLevelDropdown" class="qr-home-dropdown" hidden><button id="qrHomeLevelTrigger" type="button" class="qr-home-dropdown-trigger" aria-label="Select school level" aria-haspopup="listbox" aria-expanded="false" aria-controls="qrHomeLevelOptions" onclick="qrToggleHomeLevelMenu()"><span id="qrHomeLevelLabel">PM3</span><svg class="qr-home-dropdown-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button><div id="qrHomeLevelOptions" class="qr-home-dropdown-options" role="listbox" aria-label="School level options" hidden></div></div><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrBestScores',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrBestScores',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div>
-  <div id="qrBestScores" class="qr-best-list qr-card-scroll"><p class="qr-muted">Complete a quiz to see your progress.</p></div>
+  <div id="qrBestScores" class="qr-best-list qr-card-scroll"><p class="qr-empty-state">Complete a quiz to see your progress.</p></div>
  </section>
 </div>
 <div class="qr-main qr-home-main">
@@ -1721,7 +1722,7 @@ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quiz
   <button class="qr-home-subject" data-subject="Science" onclick="qrOpen('quizStart')">Science</button>
  </div>
  <div class="qr-home-bottom">
-  <section><div class="qr-home-section-title"><h2>Recent Activity</h2><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrHomeActivity',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrHomeActivity',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div><div class="qr-home-surface qr-home-activity"><div id="qrHomeActivity" class="qr-card-scroll"><p class="qr-muted">Your completed quizzes will appear here.</p></div></div></section>
+  <section><div class="qr-home-section-title"><h2>Recent Activity</h2><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrHomeActivity',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrHomeActivity',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div><div class="qr-home-surface qr-home-activity"><div id="qrHomeActivity" class="qr-card-scroll"><p class="qr-empty-state">Your completed quizzes will appear here.</p></div></div></section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div class="qr-home-surface qr-home-overview"><div class="qr-home-ring" id="qrHomeRing"><strong id="qrHomeRingText">—</strong><span>Avg. Score</span></div><div class="qr-home-overview-stats"><p><span>Completed</span><strong id="qrHomeTotalAttempts">0 quizzes</strong></p><p><span>Subjects</span><strong id="qrHomeTotalSubjects">0 subjects</strong></p></div></div></section>
  </div>
 </div>
@@ -1761,7 +1762,7 @@ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quiz
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
  <div class="qr-home-bottom qr-scores-bottom">
   <section><div class="qr-home-section-title"><h2>Score History</h2><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrScoresList',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrScoresList',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div>
-   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-card-scroll"><p class="qr-muted">No scores yet.</p></div></div>
+   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-card-scroll"><p class="qr-empty-state">No scores yet.</p></div></div>
   </section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div id="qrScoresOverviewSlot"></div></section>
  </div>
@@ -2617,7 +2618,7 @@ function qrRenderBestScores(){
   level.hidden=true;level.replaceChildren();
   $('qrHomeLevelDropdown').hidden=true;
   qrCloseHomeLevelMenu();
-  list.innerHTML='<p class="qr-muted">Complete a quiz to see your progress.</p>';
+  list.innerHTML='<p class="qr-empty-state">Complete a quiz to see your progress.</p>';
   return;
  }
  const available=[...new Set(records.map(r=>r.level))].sort((a,b)=>{
@@ -2637,7 +2638,7 @@ function qrRenderBestScores(){
   '<div class="qr-best-subject"'+qrSubjectMark(subject)+'><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3>'+
   '<div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div>'+
   '<span class="qr-best-percentage">'+score+'%</span></div></div>'
- ).join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
+ ).join('')||'<p class="qr-empty-state">Complete a quiz to see your progress.</p>';
 }
 function qrRenderOverview(count,subjectCount,average){
  $('qrHomeRingText').textContent=average===null?'—':average+'%';
@@ -2664,7 +2665,7 @@ function qrRender(){
  $('qrMobileQuizzes').textContent=String(attempts.length);$('qrMobileAverage').textContent=avg===null?'—':avg+'%';$('qrMobileSubjects').textContent=String(subjects.size);
  qrRenderOverview(attempts.length,subjects.size,avg);
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
- $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"'+qrSubjectMark(e.subject)+'><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
+ $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"'+qrSubjectMark(e.subject)+'><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-empty-state">Your completed quizzes will appear here.</p>';
  qrRenderBestScores();
  qrScheduleHomeMeasure();
 }
@@ -2726,7 +2727,7 @@ function qrRenderScores(){
   '<div class="qr-home-activity-row"'+qrSubjectMark(entry.subject)+'><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+
   escapeHtml(entry.subject+' · '+String(entry.chapter||'Quiz'))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+
   '</small></div><span class="qr-home-activity-value">'+percent({a})+'%</span></div>'
- ).join('')||'<p class="qr-muted">No scores yet.</p>';
+ ).join('')||'<p class="qr-empty-state">No scores yet.</p>';
 }
 let qrNoteSubject='all';
 function qrRestoreNotesSide(){
@@ -2787,7 +2788,7 @@ function qrRenderNotes(){
    '<small>'+escapeHtml((n.subject?n.subject+' · ':'')+qrNoteDate(n.date))+'</small></div>'+
    '<div class="qr-note-actions">'+
    '<button type="button" class="qr-btn qr-home-activity-value" onclick="qrEditNote('+id+')">Edit</button></div></div>';
- }).join('')||'<p class="qr-muted">No notes yet.</p>';
+ }).join('')||'<p class="qr-empty-state">No notes yet.</p>';
 }
 function qrEditNote(id){
  if(qrNotesBusy)return;
