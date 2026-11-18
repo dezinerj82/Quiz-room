@@ -1387,6 +1387,8 @@ body:not(.auth-locked) #notesPage .qr-study-key-group{display:grid;gap:var(--qr-
 body:not(.auth-locked) #notesPage .qr-study-key{display:flex;align-items:center;align-self:stretch}
 body:not(.auth-locked) #notesPage .qr-study-points{display:grid;gap:var(--qr-home-inline-gap);padding-inline-start:var(--qr-home-inner-padding);margin:0;list-style:disc outside}
 body:not(.auth-locked) #notesPage .qr-study-points li::marker{color:var(--qr-home-primary)}
+body:not(.auth-locked) #notesPage .qr-study-wrong{color:#b94040;font-weight:800}
+body:not(.auth-locked) #notesPage .qr-study-correct{color:#21834e;font-weight:800}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary{box-sizing:border-box;padding-block:var(--qr-home-paragraph-gap)!important;padding-inline:var(--qr-home-inner-padding)!important;border-radius:var(--qr-inner-radius);background:color-mix(in srgb,var(--qr-home-third) 20%,white);margin-top:auto}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary{display:grid;gap:var(--qr-home-paragraph-gap)}
 body:not(.auth-locked) #notesPage .qr-study-summary-heading{display:flex;align-items:center;gap:var(--qr-home-inline-gap);color:#c68136;font-size:var(--qr-font-small);line-height:var(--qr-home-standard-pill-line)}
@@ -2742,11 +2744,279 @@ function qrPlaceNotesSide(){
  if(side&&slot){slot.replaceWith(side);side.id='qrNotesSideSlot'}
 }
 const qrNoteGlossaryData={
- English:[['Noun','A word that names a person, place, thing or idea.','Teacher, school and book are nouns.'],['Verb','A word that describes an action or state.','Run, read and is are verbs.'],['Adjective','A word that describes a noun.','A small bird: small is the adjective.']],
- Malay:[['Kata nama','Perkataan yang menamakan orang, tempat, benda atau haiwan.','Guru, sekolah dan buku ialah kata nama.'],['Kata kerja','Perkataan yang menunjukkan perbuatan.','Makan, membaca dan berlari ialah kata kerja.'],['Kata adjektif','Perkataan yang menerangkan sifat sesuatu.','Besar, kecil dan cantik ialah kata adjektif.']],
- Korean:[['명사 (Noun)','사람, 장소, 물건 등의 이름을 나타내는 말.','학교, 책, 친구는 명사예요.'],['동사 (Verb)','움직임이나 동작을 나타내는 말.','먹다, 읽다, 달리다는 동사예요.'],['형용사 (Adjective)','상태나 성질을 나타내는 말.','크다, 작다, 예쁘다는 형용사예요.']],
- Math:[['Place value','The value of a digit depends on its position in a number.','In 352, the digit 5 means 50.'],['Multiplication','Adding equal groups together.','4 × 3 means four groups of three, which equals 12.'],['Fraction','A number showing part of a whole.','One half means one of two equal parts.']],
- Science:[['Energy','The ability to cause change or do work.','Light and heat are forms of energy.'],['Habitat','The natural place where a living thing lives.','A pond is a habitat for frogs.'],['Evaporation','When liquid changes into gas at its surface.','Water in wet clothes evaporates as they dry.']]
+  "English": [
+    [
+      "Noun",
+      "A word that names a person, place, thing or idea.",
+      [
+        "Common nouns name general things.",
+        "Proper nouns name specific people or places and start with a capital letter."
+      ],
+      [
+        "teacher, school, book",
+        "Malaysia, Monday"
+      ],
+      [
+        "i live in malaysia.",
+        "I live in Malaysia."
+      ],
+      "Nouns tell us who or what we are talking about."
+    ],
+    [
+      "Verb",
+      "A word that expresses an action or state.",
+      [
+        "Action verbs tell what someone or something does.",
+        "Verbs such as is, am and are can describe a state."
+      ],
+      [
+        "I read a book.",
+        "She runs fast.",
+        "He is happy."
+      ],
+      [
+        "She run every day.",
+        "She runs every day."
+      ],
+      "Verbs tell us what happens or what something is like."
+    ],
+    [
+      "Adjective",
+      "A word that describes a noun.",
+      [
+        "Can describe size, shape, color or feeling.",
+        "Often comes before a noun or after a linking verb such as is."
+      ],
+      [
+        "A big elephant.",
+        "A red apple.",
+        "The girl is happy."
+      ],
+      [
+        "A flower beautiful.",
+        "A beautiful flower."
+      ],
+      "Adjectives give more information about nouns."
+    ]
+  ],
+  "Malay": [
+    [
+      "Kata nama (Noun)",
+      "A word that names a person, place, thing or animal.",
+      [
+        "Kata nama am names general things.",
+        "Kata nama khas names specific people or places and begins with a capital letter."
+      ],
+      [
+        "guru = teacher; sekolah = school",
+        "buku = book; kucing = cat",
+        "Malaysia = a country"
+      ],
+      [
+        "malaysia (country name without a capital letter)",
+        "Malaysia"
+      ],
+      "Kata nama tells us who or what we are talking about."
+    ],
+    [
+      "Kata kerja (Verb)",
+      "A word that expresses an action.",
+      [
+        "It tells us what someone or something does.",
+        "Some verbs have prefixes, such as membaca (to read)."
+      ],
+      [
+        "makan = eat; membaca = read",
+        "berlari = run",
+        "Ali membaca buku. = Ali reads a book."
+      ],
+      [
+        "Recognizing cantik (beautiful) as an action verb.",
+        "Recognize membaca (read) as an action verb."
+      ],
+      "Kata kerja expresses an action, such as makan or berlari."
+    ],
+    [
+      "Kata adjektif (Adjective)",
+      "A word that describes a quality or characteristic.",
+      [
+        "Can describe size, color, shape or feeling.",
+        "Often comes after the noun it describes in Malay."
+      ],
+      [
+        "buku besar = big book",
+        "bunga cantik = beautiful flower",
+        "kucing kecil = small cat"
+      ],
+      [
+        "cantik bunga (ordinary noun phrase)",
+        "bunga cantik"
+      ],
+      "Kata adjektif describes what someone or something is like."
+    ]
+  ],
+  "Korean": [
+    [
+      "명사 (Noun)",
+      "A word that names a person, place, thing or idea.",
+      [
+        "Nouns can be followed by particles such as 은/는 or 이/가.",
+        "Korean nouns do not change to show grammatical gender."
+      ],
+      [
+        "학교 = school; 책 = book",
+        "친구 = friend",
+        "책이 있어요. = There is a book."
+      ],
+      [
+        "Treating 읽다 (to read) as a noun.",
+        "책 (book) is a noun; 읽다 is a verb."
+      ],
+      "명사 names someone or something."
+    ],
+    [
+      "동사 (Verb)",
+      "A word that expresses an action.",
+      [
+        "Dictionary forms usually end in 다.",
+        "Verbs change their endings to fit tense and politeness."
+      ],
+      [
+        "먹다 = eat; 읽다 = read",
+        "달리다 = run",
+        "책을 읽어요. = I read a book."
+      ],
+      [
+        "저는 책을 읽다. (polite everyday speech)",
+        "저는 책을 읽어요. = I read a book."
+      ],
+      "동사 tells us what someone or something does."
+    ],
+    [
+      "형용사 (Adjective)",
+      "A word that describes a state or quality.",
+      [
+        "Dictionary forms usually end in 다.",
+        "When placed before a noun, adjectives use a different ending."
+      ],
+      [
+        "크다 = big; 작다 = small",
+        "예쁘다 = pretty",
+        "큰 집 = big house"
+      ],
+      [
+        "크다 집",
+        "큰 집"
+      ],
+      "형용사 tells us what something is like."
+    ]
+  ],
+  "Math": [
+    [
+      "Place value",
+      "The value of a digit depends on its position in a number.",
+      [
+        "From right to left: ones, tens, hundreds.",
+        "A digit in the tens place represents that many groups of ten."
+      ],
+      [
+        "352 = 300 + 50 + 2",
+        "In 407, 4 represents 400."
+      ],
+      [
+        "In 352, 5 represents 5.",
+        "In 352, 5 represents 50."
+      ],
+      "The same digit can have different values in different positions."
+    ],
+    [
+      "Multiplication",
+      "Combining equal groups to find their total.",
+      [
+        "Multiplication is repeated addition of equal groups.",
+        "Changing the order of the factors does not change the product."
+      ],
+      [
+        "4 × 3 = 3 + 3 + 3 + 3 = 12",
+        "5 × 2 = 10"
+      ],
+      [
+        "4 × 3 = 7",
+        "4 × 3 = 12"
+      ],
+      "Multiply the number of groups by the number in each group."
+    ],
+    [
+      "Fraction",
+      "A number that can show part of a whole divided into equal parts.",
+      [
+        "The denominator tells how many equal parts make the whole.",
+        "The numerator tells how many parts are counted."
+      ],
+      [
+        "1/2 = one of two equal parts",
+        "3/4 = three of four equal parts"
+      ],
+      [
+        "Three of four equal parts = 4/3",
+        "Three of four equal parts = 3/4"
+      ],
+      "A fraction compares counted parts with the equal parts in one whole."
+    ]
+  ],
+  "Science": [
+    [
+      "Energy",
+      "The ability to do work or cause change.",
+      [
+        "Energy can come in forms such as light, heat and movement.",
+        "Living things need energy from food or, for plants, sunlight to make food."
+      ],
+      [
+        "Sunlight warms the ground.",
+        "Food supplies energy to our bodies."
+      ],
+      [
+        "Energy is only found in batteries.",
+        "Energy is found in many forms, including light and heat."
+      ],
+      "Energy makes things happen and can change from one form to another."
+    ],
+    [
+      "Habitat",
+      "The natural place where a living thing lives.",
+      [
+        "A habitat provides things needed for survival, such as food, water and shelter.",
+        "Different living things need different conditions."
+      ],
+      [
+        "A pond is a habitat for frogs.",
+        "A forest is a habitat for many birds."
+      ],
+      [
+        "All animals live in the same habitat.",
+        "Animals live in habitats suited to their needs."
+      ],
+      "A habitat is a living thing’s natural home."
+    ],
+    [
+      "Evaporation",
+      "When a liquid changes into gas at its surface.",
+      [
+        "Evaporation can happen without boiling.",
+        "Warmth and moving air can help water evaporate faster."
+      ],
+      [
+        "Wet clothes dry as water evaporates.",
+        "A puddle shrinks on a sunny day."
+      ],
+      [
+        "Water must boil before it can evaporate.",
+        "Water can evaporate at ordinary temperatures."
+      ],
+      "During evaporation, liquid water becomes water vapor."
+    ]
+  ]
 };
 function qrChooseNoteSubject(name){qrNoteSubject=name;qrRenderNoteSubjectButtons();qrRenderNoteGlossary()}
 let qrStudySubject='',qrStudyIndex=-1;
@@ -2756,8 +3026,10 @@ function qrRenderNoteGlossary(index){
  if(!Number.isInteger(index)){const choices=entries.map((_,i)=>i).filter(i=>name!==qrStudySubject||i!==qrStudyIndex);index=choices.length?choices[Math.floor(Math.random()*choices.length)]:0}
  if(!entries[index])return;
  qrStudySubject=name;qrStudyIndex=index;
- const [term,definition,example]=entries[index];
- $('qrNoteGlossary').innerHTML='<div class="qr-note-glossary-header"><span class="qr-home-activity-value qr-study-subject"'+qrSubjectMark(name)+'>'+escapeHtml(name)+'</span><div class="qr-study-controls"><button type="button" class="qr-home-text-link" aria-label="Refresh study card" title="Refresh" onclick="qrRenderNoteGlossary()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg></button><button type="button" class="qr-home-text-link" aria-label="Study card list" title="Study card list" aria-expanded="false" aria-controls="qrStudyMenu" onclick="qrToggleStudyMenu(this)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div><div id="qrStudyMenu" class="qr-study-menu" hidden>'+entries.map((entry,i)=>'<button type="button" class="qr-home-activity-value" onclick="qrRenderNoteGlossary('+i+')">'+escapeHtml(entry[0])+'</button>').join('')+'</div><h2>'+escapeHtml(term)+'</h2><div class="qr-study-key-group"><div class="qr-study-key qr-home-activity-value">Key Points</div><ul class="qr-study-points"><li>'+escapeHtml(definition)+'</li></ul></div><div class="qr-note-glossary-summary"><div class="qr-study-summary-heading"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 4h4M8 15a6 6 0 1 1 8 0c-.8.7-1 1.4-1 3H9c0-1.6-.2-2.3-1-3ZM12 1v1M3 4l2 2M1 11h2m18 0h2m-4-5 2-2"/></svg><strong>Quick Summary</strong></div><p>'+escapeHtml(example)+'</p></div>';
+ const [term,definition,points,examples,mistake,summary]=entries[index];
+ const studyList=items=>'<ul class="qr-study-points">'+items.map(item=>'<li>'+escapeHtml(item)+'</li>').join('')+'</ul>';
+ const studySection=(title,body)=>'<div class="qr-study-key-group"><div class="qr-study-key qr-home-activity-value">'+title+'</div>'+body+'</div>';
+ $('qrNoteGlossary').innerHTML='<div class="qr-note-glossary-header"><span class="qr-home-activity-value qr-study-subject"'+qrSubjectMark(name)+'>'+escapeHtml(name)+'</span><div class="qr-study-controls"><button type="button" class="qr-home-text-link" aria-label="Refresh study card" title="Refresh" onclick="qrRenderNoteGlossary()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg></button><button type="button" class="qr-home-text-link" aria-label="Study card list" title="Study card list" aria-expanded="false" aria-controls="qrStudyMenu" onclick="qrToggleStudyMenu(this)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div><div id="qrStudyMenu" class="qr-study-menu" hidden>'+entries.map((entry,i)=>'<button type="button" class="qr-home-activity-value" onclick="qrRenderNoteGlossary('+i+')">'+escapeHtml(entry[0])+'</button>').join('')+'</div><div class="qr-study-key-group"><h2>'+escapeHtml(term)+'</h2><p>'+escapeHtml(definition)+'</p></div>'+studySection('Key Points',studyList(points))+studySection('Examples',studyList(examples))+studySection('Common Mistake','<p><span class="qr-study-wrong" aria-label="Incorrect">✕</span> '+escapeHtml(mistake[0])+'</p><p><span class="qr-study-correct" aria-label="Correct">✓</span> '+escapeHtml(mistake[1])+'</p>')+'<div class="qr-note-glossary-summary"><div class="qr-study-summary-heading"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 4h4M8 15a6 6 0 1 1 8 0c-.8.7-1 1.4-1 3H9c0-1.6-.2-2.3-1-3ZM12 1v1M3 4l2 2M1 11h2m18 0h2m-4-5 2-2"/></svg><strong>Quick Summary</strong></div><p>'+escapeHtml(summary)+'</p></div>';
  const controls=$('qrNoteGlossary').querySelector('.qr-study-controls');
  controls.insertAdjacentHTML('beforeend',qrScrollButtons('qrNoteGlossary'));
  $('qrStudyTitleControls').replaceChildren(...controls.childNodes);controls.remove();
