@@ -1173,12 +1173,7 @@ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quiz
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject h3{grid-column:1;font-size:var(--qr-font-body)!important;color:var(--qr-home-ink)!important;font-weight:800}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-percentage{grid-column:2;grid-row:1;font-size:var(--qr-font-body)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-track{grid-column:1/-1;grid-row:2;width:100%;height:9px!important;min-height:9px!important;background:#e7eef0!important;border-radius:999px}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-home-subject-color,var(--qr-home-primary))!important;border-radius:inherit}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject:nth-child(5n+1){--qr-home-subject-color:var(--qr-home-primary)}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject:nth-child(5n+2){--qr-home-subject-color:var(--qr-home-third)}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject:nth-child(5n+3){--qr-home-subject-color:var(--qr-home-fourth)}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject:nth-child(5n+4){--qr-home-subject-color:var(--qr-home-fifth)}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-subject:nth-child(5n+5){--qr-home-subject-color:var(--qr-home-secondary)}
+body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-best-track span{display:block;height:100%;max-width:100%;background:var(--qr-subject-mark,var(--qr-subject-palette-1))!important;border-radius:inherit}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-main{min-width:0!important;min-height:0!important;max-width:none!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-main-padding)!important;border-radius:var(--qr-home-stage-radius)!important;background:#fff!important;box-shadow:var(--qr-home-shadow)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-top{margin:0 0 var(--qr-home-gap)!important;align-items:center;gap:var(--qr-home-gap)!important}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-top h1{font-size:var(--qr-font-title)!important;color:var(--qr-home-ink)!important}
@@ -1201,10 +1196,6 @@ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quiz
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-welcome+.qr-home-section-title{margin-top:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subject{min-width:0!important;border:0!important;font-weight:800!important;color:var(--qr-home-ink)!important;background:var(--qr-home-secondary)!important}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) :is(.qr-home-subject,.qr-study-subject)[data-subject="Malay"]{background:#ffeddd!important}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) :is(.qr-home-subject,.qr-study-subject)[data-subject="Korean"]{background:#ffeaeb!important}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) :is(.qr-home-subject,.qr-study-subject)[data-subject="Math"]{background:#f8eadb!important}
-body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) :is(.qr-home-subject,.qr-study-subject)[data-subject="Science"]{background:#e7f8f8!important}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subject.active{box-shadow:inset 0 0 0 1px var(--qr-home-primary)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-study-subject{color:var(--qr-home-ink);background:var(--qr-home-secondary)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-main :is(button.qr-home-cta[data-primary-pill],button.qr-home-subject[data-score-subject="all"]){background:var(--qr-home-primary)!important;color:#fff!important}
@@ -1492,10 +1483,6 @@ body:not(.auth-locked) :is(#quizStart,#selection) .qr-main :is(.level-grid,.chap
 body:not(.auth-locked) #selection .qr-steps{display:flex;align-items:center;flex-wrap:wrap;margin:0!important;color:var(--qr-home-ink)}
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-main :is(.level-button,.version,.qr-steps button,#results .resultbutton){border:0!important;border-radius:var(--qr-home-pill-radius)!important;padding:var(--qr-flat-pill-padding)!important;min-height:0!important;height:auto!important;font-size:var(--qr-font-body)!important;line-height:var(--qr-home-standard-pill-line)!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important}
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-main :is(.level-button,.version,.qr-steps button,#results .resultbutton):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #selection .qr-main .level-button.qr-home-subject[data-subject="Malay"]{background:#ffeddd!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #selection .qr-main .level-button.qr-home-subject[data-subject="Korean"]{background:#ffeaeb!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #selection .qr-main .level-button.qr-home-subject[data-subject="Math"]{background:#f8eadb!important;color:var(--qr-home-ink)!important}
-body:not(.auth-locked) #selection .qr-main .level-button.qr-home-subject[data-subject="Science"]{background:#e7f8f8!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) #selection .qr-main .level-button.qr-home-subject:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) #selection #results .qr-card{padding:var(--qr-home-inner-padding)!important}
 body:not(.auth-locked) #selection #results .resultpanel{border:0!important;background:transparent!important;color:var(--qr-home-ink)!important;gap:var(--qr-home-gap)!important}
@@ -1532,7 +1519,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-active-subject{displ
 body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-quiz-progress{box-sizing:border-box;display:flex!important;align-items:center;align-self:stretch;width:100%!important;max-width:100%!important;min-width:0;margin:0!important;padding:0!important;gap:var(--qr-home-row-gap);font-family:var(--qr-font);font-size:var(--qr-font-body);line-height:var(--qr-home-standard-pill-line);color:var(--qr-home-ink)}
 body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-quiz-progress .questioncount{flex:0 0 auto;margin:0!important;padding:0!important;font-family:var(--qr-font);font-size:var(--qr-font-body)!important;font-weight:400;line-height:var(--qr-home-standard-pill-line);letter-spacing:normal;color:inherit}
 body:not(.auth-locked) #selection.qr-active-stage #quiz .qr-progress-track{flex:1 1 0;width:auto;min-width:0;margin:0!important;background:var(--qr-home-navigation)!important}
-body:not(.auth-locked) #selection.qr-active-stage #quiz #qrProgressFill{background:var(--qr-home-primary)!important}
+body:not(.auth-locked) #selection.qr-active-stage #quiz #qrProgressFill{background:var(--quiz-subject-color,var(--qr-subject-palette-1))!important}
 body:not(.auth-locked) #selection.qr-active-stage #quiz #timer{box-sizing:border-box;background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important;padding:var(--qr-flat-pill-padding)!important;height:auto!important;min-height:0!important;margin:0!important;gap:var(--qr-home-inline-gap)!important;font-family:var(--qr-font);font-size:var(--qr-font-body)!important;line-height:var(--qr-home-standard-pill-line)!important;letter-spacing:normal}
 body:not(.auth-locked) #selection.qr-active-stage #quiz #timer :is(.flip-digit,.flip-colon){color:var(--qr-home-ink)!important;font-family:var(--qr-font);font-size:var(--qr-font-body)!important;line-height:var(--qr-home-standard-pill-line)!important;letter-spacing:normal;font-variant-numeric:tabular-nums}
 body:not(.auth-locked) #selection.qr-active-stage #quiz #timer :is(.flip-unit,.flip-digits){gap:0!important}
@@ -1668,6 +1655,18 @@ body:not(.auth-locked) #profilePage #qrPhoto{position:absolute;width:1px;height:
 body:not(.auth-locked) #profilePage .qr-photo-tools img{object-fit:cover;border:0;border-radius:50%}
 body:not(.auth-locked) #profilePage #qrProfileStatus{margin:0!important}
 body:not(.auth-locked) #profilePage #qrProfileStatus:empty{display:none}
+
+/* Subject-only palette; repeat every five subjects. */
+:root{--qr-subject-palette-1:#F78AC2;--qr-subject-palette-2:#FFC56E;--qr-subject-palette-3:#FFA279;--qr-subject-palette-4:#58BABB;--qr-subject-palette-5:#99A7ED}
+[data-subject="English"]{--qr-subject-mark:var(--qr-subject-palette-1)}
+[data-subject="Malay"]{--qr-subject-mark:var(--qr-subject-palette-2)}
+[data-subject="Korean"]{--qr-subject-mark:var(--qr-subject-palette-3)}
+[data-subject="Math"]{--qr-subject-mark:var(--qr-subject-palette-4)}
+[data-subject="Science"]{--qr-subject-mark:var(--qr-subject-palette-5)}
+[data-subject="PJPK"]{--qr-subject-mark:var(--qr-subject-palette-1)}
+body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) :is(.qr-home-subject,.qr-study-subject)[data-subject],body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-main .qr-mobile-quiz-nav button[data-subject]{background:var(--qr-subject-mark,var(--qr-subject-palette-1))!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-activity-row[data-subject] :is(.qr-home-activity-icon,.qr-home-activity-value){background:var(--qr-subject-mark,var(--qr-subject-palette-1))!important;color:var(--qr-home-ink)!important}
+body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-main :is(button.qr-home-subject,button.qr-home-cta)[data-subject]:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
 
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
@@ -2035,7 +2034,7 @@ function qrQuizNavigation(active=false){
  const root=active?"qrActiveQuizLeave(false)":"qrOpen('quizStart')";
  return '<button type="button" onclick="'+root+'">'+icon+' Quiz</button>'+(selectedLevel?' <svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(-90 10 10)"/></svg> <span>Level</span> <svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(-90 10 10)"/></svg> '+(active?'<span>'+escapeHtml(selectedLevel)+'</span>':'<button type="button" onclick="qrQuizChooseLevelAgain()">'+escapeHtml(selectedLevel)+'</button>'):'')+(subject?' <svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(-90 10 10)"/></svg> <strong>'+escapeHtml(subject)+'</strong>':'');
 }
-function qrMobileQuizNav(active=false){const root=active?"qrActiveQuizLeave(false)":"qrOpen(\'quizStart\')";return '<div class="qr-mobile-quiz-nav" aria-label="Quiz navigation"><button type="button" class="qr-home-cta" onclick="'+root+'">Quiz</button>'+(selectedLevel?'<button type="button" class="qr-home-cta" '+(active?'disabled':'onclick="qrQuizChooseLevelAgain()"')+'>'+escapeHtml(selectedLevel)+'</button>':'')+(subject?'<button type="button" class="qr-home-cta" '+(active?'disabled':'onclick="selectionBack()"')+'>'+escapeHtml(subject)+'</button>':'')+'</div>'}
+function qrMobileQuizNav(active=false){const root=active?"qrActiveQuizLeave(false)":"qrOpen(\'quizStart\')";return '<div class="qr-mobile-quiz-nav" aria-label="Quiz navigation"><button type="button" class="qr-home-cta" onclick="'+root+'">Quiz</button>'+(selectedLevel?'<button type="button" class="qr-home-cta" '+(active?'disabled':'onclick="qrQuizChooseLevelAgain()"')+'>'+escapeHtml(selectedLevel)+'</button>':'')+(subject?'<button type="button" class="qr-home-cta"'+qrSubjectMark(subject)+' '+(active?'disabled':'onclick="selectionBack()"')+'>'+escapeHtml(subject)+'</button>':'')+'</div>'}
 function qrQuizChooseLevelAgain(){qrOpen('quizStart')}
 function renderChapterList(){
  const container=$('versions');
@@ -2047,7 +2046,7 @@ function renderChapterList(){
  $('qrQuizSteps').innerHTML='';
  $('subjectTitle').classList.add('hidden');
  const intro='<section class="qr-home-welcome"><div><h2>'+escapeHtml(subject||'Choose a subject')+'</h2><p>'+(subject?'Choose a quiz to begin.':'What shall we learn today?')+'</p>'+qrMobileQuizNav()+'</div><div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div></section>';
- const menu=intro+'<div class="qr-home-subjects" role="group" aria-label="Choose subject">'+available.map(name=>'<button class="qr-home-subject'+(name===subject?' active':'')+'" data-subject="'+escapeHtml(name)+'" aria-pressed="'+String(name===subject)+'" onclick="choose(\''+name+'\')">'+escapeHtml(name)+'</button>').join('')+'</div>';
+ const menu=intro+'<div class="qr-home-subjects" role="group" aria-label="Choose subject">'+available.map(name=>'<button class="qr-home-subject'+(name===subject?' active':'')+'"'+qrSubjectMark(name)+' aria-pressed="'+String(name===subject)+'" onclick="choose(\''+name+'\')">'+escapeHtml(name)+'</button>').join('')+'</div>';
  if(!subject){container.innerHTML=menu;return}
  const categories=availableCategories(selectedLevel,subject);
  if(selectedCategory&&!categories.includes(selectedCategory))selectedCategory=null;
@@ -2076,16 +2075,21 @@ function selectionBack(){
  if(subject){subject='';selectedCategory=null;renderChapterList()}
  else qrOpen('quizStart');
 }
+function qrSubjectPaletteIndex(name){
+ const ordered=['English','Malay','Korean','Math','Science','PJPK'];
+ const extra=typeof exerciseBank==='undefined'?[]:Object.keys(exerciseBank).filter(s=>!ordered.includes(s));
+ const index=[...ordered,...extra].indexOf(name);
+ return (index<0?0:index)%5+1;
+}
+function qrSubjectMark(name){return ' data-subject="'+escapeHtml(name)+'" style="--qr-subject-mark:var(--qr-subject-palette-'+qrSubjectPaletteIndex(name)+')"';}
 function qrSyncSubjectAppearance(){
  const heading=document.getElementById('qrActiveQuizHeading');
  if(heading)heading.textContent='Quiz';
- const names=['English','Korean','Malay','Math','Science','PJPK'];
- const idx=names.indexOf(subject);
- const colorIndex=idx<0?1:idx%6+1;
- const subjectInk='var(--qr-on-subject'+colorIndex+',var(--qr-on-background))';
+ const colorIndex=qrSubjectPaletteIndex(subject);
+ const subjectInk='var(--qr-home-ink)';
  ['quiz','selection','results'].forEach(id=>{
   const el=document.getElementById(id);
-  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject'+colorIndex+')');el.style.setProperty('--qr-on-subject',subjectInk);}
+  if(el){el.style.setProperty('--quiz-subject-color','var(--qr-subject-palette-'+colorIndex+')');el.style.setProperty('--qr-on-subject',subjectInk);}
  });
 }
 function choose(s){if(!selectedLevel||!availableCategories(selectedLevel,s).length)return;activeExerciseTopic=null;activeQuizForm='question-answer';subject=s;selectedCategory=null;qrSyncSubjectAppearance();clearInterval(timerHandle);$('subjectTitle').textContent=s;renderChapterList();show('selection')}
@@ -2202,7 +2206,7 @@ function qrActiveQuizLayout(on){
   card.classList.add('qr-home-surface');
   const header=document.createElement('div');header.id='qrActiveQuizHeader';header.innerHTML='<nav class="qr-active-breadcrumb" aria-label="Quiz navigation">'+qrQuizNavigation(true)+'</nav>'+qrMobileQuizNav(true);
   quiz.prepend(header);card.before(progress);progress.append($('timer'));
-  const label=document.createElement('span');label.id='qrActiveQuizSubject';label.className='qr-active-subject qr-home-activity-value qr-study-subject';label.dataset.subject=subject;label.textContent=subject;quiz.querySelector('.questionheading').prepend(label);
+  const label=document.createElement('span');label.id='qrActiveQuizSubject';label.className='qr-active-subject qr-home-activity-value qr-study-subject';label.dataset.subject=subject;label.style.setProperty('--qr-subject-mark','var(--qr-subject-palette-'+qrSubjectPaletteIndex(subject)+')');label.textContent=subject;quiz.querySelector('.questionheading').prepend(label);
   const prev=document.createElement('button');prev.type='button';prev.id='qrActiveQuizPrev';prev.className='pill';prev.innerHTML='<svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8.4 6 6 6-6" transform="rotate(90 12 12)"/></svg><span>Previous</span>';prev.onclick=qrActiveQuizPrevious;actions.prepend(prev);card.append(actions);
  }else{
   card.classList.remove('qr-home-surface');
@@ -2614,7 +2618,7 @@ function qrRenderBestScores(){
   best.set(r.subject,Math.max(best.get(r.subject)??0,r.percentage));
  }
  list.innerHTML=[...best].sort((a,b)=>a[0].localeCompare(b[0])).map(([subject,score])=>
-  '<div class="qr-best-subject"><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3>'+
+  '<div class="qr-best-subject"'+qrSubjectMark(subject)+'><div class="qr-best-heading"><h3>'+escapeHtml(subject)+'</h3>'+
   '<div class="qr-best-track" role="progressbar" aria-label="'+escapeHtml(subject)+' best score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+score+'"><span style="width:'+score+'%"></span></div>'+
   '<span class="qr-best-percentage">'+score+'%</span></div></div>'
  ).join('')||'<p class="qr-muted">Complete a quiz to see your progress.</p>';
@@ -2644,7 +2648,7 @@ function qrRender(){
  $('qrMobileQuizzes').textContent=String(attempts.length);$('qrMobileAverage').textContent=avg===null?'—':avg+'%';$('qrMobileSubjects').textContent=String(subjects.size);
  qrRenderOverview(attempts.length,subjects.size,avg);
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
- $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
+ $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"'+qrSubjectMark(e.subject)+'><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
  qrRenderBestScores();
  qrScheduleHomeMeasure();
 }
@@ -2703,7 +2707,7 @@ function qrRenderScores(){
  const recent=filtered.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||'')));
 
  $('qrScoresList').innerHTML=recent.map(({entry,a})=>
-  '<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+
+  '<div class="qr-home-activity-row"'+qrSubjectMark(entry.subject)+'><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+
   escapeHtml(entry.subject+' · '+String(entry.chapter||'Quiz'))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+
   '</small></div><span class="qr-home-activity-value">'+percent({a})+'%</span></div>'
  ).join('')||'<p class="qr-muted">No scores yet.</p>';
@@ -2736,7 +2740,7 @@ function qrRenderNoteGlossary(index){
  if(!entries[index])return;
  qrStudySubject=name;qrStudyIndex=index;
  const [term,definition,example]=entries[index];
- $('qrNoteGlossary').innerHTML='<div class="qr-note-glossary-header"><span class="qr-home-activity-value qr-study-subject" data-subject="'+escapeHtml(name)+'">'+escapeHtml(name)+'</span><div class="qr-study-controls"><button type="button" class="qr-home-text-link" aria-label="Refresh study card" title="Refresh" onclick="qrRenderNoteGlossary()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg></button><button type="button" class="qr-home-text-link" aria-label="Study card list" title="Study card list" aria-expanded="false" aria-controls="qrStudyMenu" onclick="qrToggleStudyMenu(this)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div><div id="qrStudyMenu" class="qr-study-menu" hidden>'+entries.map((entry,i)=>'<button type="button" class="qr-home-activity-value" onclick="qrRenderNoteGlossary('+i+')">'+escapeHtml(entry[0])+'</button>').join('')+'</div><h2>'+escapeHtml(term)+'</h2><div class="qr-study-key-group"><div class="qr-study-key qr-home-activity-value">Key Points</div><ul class="qr-study-points"><li>'+escapeHtml(definition)+'</li></ul></div><div class="qr-note-glossary-summary"><div class="qr-study-summary-heading"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 4h4M8 15a6 6 0 1 1 8 0c-.8.7-1 1.4-1 3H9c0-1.6-.2-2.3-1-3ZM12 1v1M3 4l2 2M1 11h2m18 0h2m-4-5 2-2"/></svg><strong>Quick Summary</strong></div><p>'+escapeHtml(example)+'</p></div>';
+ $('qrNoteGlossary').innerHTML='<div class="qr-note-glossary-header"><span class="qr-home-activity-value qr-study-subject"'+qrSubjectMark(name)+'>'+escapeHtml(name)+'</span><div class="qr-study-controls"><button type="button" class="qr-home-text-link" aria-label="Refresh study card" title="Refresh" onclick="qrRenderNoteGlossary()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg></button><button type="button" class="qr-home-text-link" aria-label="Study card list" title="Study card list" aria-expanded="false" aria-controls="qrStudyMenu" onclick="qrToggleStudyMenu(this)"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></div></div><div id="qrStudyMenu" class="qr-study-menu" hidden>'+entries.map((entry,i)=>'<button type="button" class="qr-home-activity-value" onclick="qrRenderNoteGlossary('+i+')">'+escapeHtml(entry[0])+'</button>').join('')+'</div><h2>'+escapeHtml(term)+'</h2><div class="qr-study-key-group"><div class="qr-study-key qr-home-activity-value">Key Points</div><ul class="qr-study-points"><li>'+escapeHtml(definition)+'</li></ul></div><div class="qr-note-glossary-summary"><div class="qr-study-summary-heading"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 4h4M8 15a6 6 0 1 1 8 0c-.8.7-1 1.4-1 3H9c0-1.6-.2-2.3-1-3ZM12 1v1M3 4l2 2M1 11h2m18 0h2m-4-5 2-2"/></svg><strong>Quick Summary</strong></div><p>'+escapeHtml(example)+'</p></div>';
  const controls=$('qrNoteGlossary').querySelector('.qr-study-controls');
  controls.insertAdjacentHTML('beforeend',qrScrollButtons('qrNoteGlossary'));
  $('qrStudyTitleControls').replaceChildren(...controls.childNodes);controls.remove();
