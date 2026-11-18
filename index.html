@@ -1461,7 +1461,7 @@ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-overview{width
 
  /* Match Home's measured cut line and corresponding cards on every other desktop page. */
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell{height:var(--qr-home-reference-shell,auto)!important;grid-template-rows:minmax(0,1fr)}
- body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{box-sizing:border-box;height:var(--qr-home-reference-profile,auto);flex:0 0 auto}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{box-sizing:border-box;height:var(--qr-home-reference-profile,auto);flex:0 0 auto;overflow:hidden}
  body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{flex:1 1 0;min-height:0}
  body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{box-sizing:border-box;height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;max-height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;flex:0 0 var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
  body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot{flex:0 0 var(--qr-home-reference-bottom,var(--qr-home-bottom-height));height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
@@ -1473,7 +1473,8 @@ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-overview{width
  body:not(.auth-locked) #selection #results:not(.hidden){min-height:0;overflow:auto}
  body:not(.auth-locked) #selection.qr-active-stage .qr-home-main{display:flex!important;flex-direction:column;overflow:visible!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz:not(.hidden){flex:1 1 0;min-height:0!important}
- body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{flex:1 1 0;min-height:0!important;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary);padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{flex:1 1 0;min-height:0!important;overflow:auto;scrollbar-width:none;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content::-webkit-scrollbar{display:none}
 }
 /* Quiz selection and results reuse the same stage and card defaults. */
 body:not(.auth-locked) :is(#quizStart,#selection) .qr-quiz-menu:not(.hidden){display:flex;flex-direction:column;gap:var(--qr-home-gap)}
@@ -1945,7 +1946,7 @@ function qrMeasureHomeLayout(){
  const viewport=innerWidth+'x'+innerHeight;
  if(qrHomeMeasuredViewport===viewport)return;
  let sample=home,copy=null;
- if(home.classList.contains('hidden')){
+ {
   copy=home.cloneNode(true);
   copy.classList.remove('hidden');copy.inert=true;copy.setAttribute('aria-hidden','true');
   const shell=copy.querySelector('.qr-home-shell'),main=shell.querySelector('.qr-home-main');
@@ -1961,6 +1962,22 @@ function qrMeasureHomeLayout(){
   if(overviewSlot&&!overviewSlot.querySelector('.qr-home-overview')){
    const overview=document.querySelector('.qr-home-overview');if(overview)overviewSlot.append(overview.cloneNode(true));
   }
+  // Measure the same complete dashboard template for every account.
+  // These placeholders exist only inside the invisible, inert layout sample.
+  const refProfile=copy.querySelector('.qr-home-profile');
+  if(refProfile){
+   refProfile.querySelector('h2').textContent='Student';
+   refProfile.querySelector('.qr-home-accent').textContent='Primary 3';
+   refProfile.querySelector('.qr-home-subtitle').textContent='Your learning journey';
+   refProfile.querySelectorAll('.qr-home-stats strong').forEach(el=>el.textContent='0');
+  }
+  const bestList=copy.querySelector('.qr-best-list');
+  if(bestList)bestList.innerHTML=Array.from({length:5},()=>'<div class="qr-best-subject"><div class="qr-best-heading"><h3>Subject</h3><div class="qr-best-track"><span></span></div><span class="qr-best-percentage">0%</span></div></div>').join('');
+  const dropdown=copy.querySelector('.qr-home-best-level .qr-home-dropdown');
+  if(dropdown){dropdown.hidden=false;const menu=dropdown.querySelector('.qr-home-dropdown-options');if(menu)menu.hidden=true}
+  const activity=copy.querySelector('.qr-home-activity .qr-card-scroll');
+  if(activity)activity.innerHTML=Array.from({length:3},()=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon">▶</span><div class="qr-home-activity-copy"><strong>Subject · Quiz</strong><small>0000/00/00 00:00AM</small></div><span class="qr-home-activity-value">0%</span></div>').join('');
+  const greeting=copy.querySelector('#qrGreeting');if(greeting)greeting.textContent='Welcome back!';
   copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id')); copy.id='qrHomeMeasureCopy';
   copy.querySelectorAll('[autofocus]').forEach(el=>el.removeAttribute('autofocus'));
   copy.style.cssText='position:fixed!important;inset:0!important;visibility:hidden!important;pointer-events:none!important;z-index:-1!important;';
