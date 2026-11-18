@@ -1498,7 +1498,7 @@ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-overview{width
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom .qr-home-overview{align-items:center}
 
  /* Match Home's measured cut line and corresponding cards on every other desktop page. */
- body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{height:var(--qr-home-reference-shell,auto)!important;grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{height:var(--qr-home-reference-shell,auto)!important;grid-template-rows:minmax(0,1fr)}
  body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{box-sizing:border-box;height:var(--qr-home-reference-profile,auto);flex:0 0 auto}
  body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{flex:1 1 0;min-height:0}
  body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{box-sizing:border-box;height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;max-height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;flex:0 0 var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
@@ -1620,19 +1620,19 @@ body:not(.auth-locked) #quizStart #subjects{display:flex!important;flex-wrap:wra
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage){box-sizing:border-box!important;min-height:100dvh!important;height:auto!important;overflow:visible!important;padding:var(--qr-home-row-gap)!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell{display:flex!important;flex-direction:column!important;gap:var(--qr-home-gap)!important;width:100%!important;max-width:100%!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;overflow:visible!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-main{order:1;box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;height:auto!important;min-height:0!important;padding:var(--qr-home-inner-padding)!important;overflow:visible!important;background:white!important;border:0!important;border-radius:var(--qr-home-radius)!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side{order:0;position:relative!important;inset:auto!important;z-index:auto;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:var(--qr-home-row-gap)!important;width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:var(--qr-home-row-gap)!important;background:var(--qr-home-primary)!important;border:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side{order:0;position:relative!important;inset:auto!important;z-index:auto;display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;align-items:center!important;justify-content:center!important;gap:clamp(4px,1.1vw,var(--qr-home-row-gap))!important;width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:var(--qr-home-row-gap)!important;background:var(--qr-home-primary)!important;border:0!important;border-radius:var(--qr-home-radius)!important;box-shadow:var(--qr-home-shadow);overflow:visible!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-sidebar-toggle{display:none!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand{display:flex!important;align-items:center!important;justify-content:center!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;gap:var(--qr-home-row-gap)!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:var(--qr-home-inline-gap)!important;width:100%!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle){box-sizing:border-box!important;display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:center!important;gap:var(--qr-home-inline-gap)!important;width:100%!important;min-width:0!important;min-height:0!important;height:auto!important;padding:var(--qr-home-standard-pill-padding)!important;border-radius:var(--qr-home-pill-radius)!important;font-size:var(--qr-home-standard-pill-font)!important;line-height:var(--qr-home-standard-pill-line)!important;color:white!important;background:rgba(255,255,255,.08)!important;box-shadow:none!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button.active{background:white!important;color:var(--qr-home-primary)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand{display:flex!important;align-items:center!important;justify-content:center!important;width:auto!important;margin:0!important;padding:0 clamp(4px,1.1vw,var(--qr-home-row-gap)) 0 0!important;border:0!important;border-right:1px solid rgba(255,255,255,.3)!important;gap:clamp(2px,.7vw,var(--qr-home-inline-gap))!important;grid-column:1!important;grid-row:1!important;font-size:clamp(8px,1.9vw,var(--qr-font-body))!important;white-space:nowrap!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:clamp(2px,.8vw,var(--qr-home-row-gap))!important;width:100%!important;grid-column:2!important;grid-row:1!important;min-width:0!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle){box-sizing:border-box!important;display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:center!important;gap:clamp(1px,.5vw,var(--qr-home-inline-gap))!important;width:100%!important;min-width:0!important;min-height:0!important;height:auto!important;padding:var(--qr-home-standard-pill-padding)!important;border-radius:var(--qr-home-pill-radius)!important;font-size:clamp(8px,1.9vw,var(--qr-home-standard-pill-font))!important;line-height:var(--qr-home-standard-pill-line)!important;color:white!important;background:rgba(255,255,255,.08)!important;box-shadow:none!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button.active:not(.qr-sidebar-toggle){background:white!important;color:var(--qr-home-primary)!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(:disabled):is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-label{display:block!important;white-space:normal!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-label{display:block!important;white-space:nowrap!important;overflow:visible!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-nav-links>button:not(.qr-sidebar-toggle){flex:initial!important;width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;justify-self:stretch}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand span{display:inline!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand{max-width:100%!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side button:not(.qr-sidebar-toggle) .qr-icon{width:1em!important;height:1em!important;flex:0 0 1em!important}
- body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand .qr-icon{width:var(--qr-font-heading)!important;height:var(--qr-font-heading)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-side .qr-nav-brand .qr-icon{width:1.5em!important;height:1.5em!important;flex:0 0 1.5em!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell>.qr-main{padding:var(--qr-home-main-padding)!important}
  body:not(.auth-locked) :is(#home,#quizStart,#selection,#notesPage) .qr-home-side{display:none!important}
  body:not(.auth-locked) #scoresPage .qr-home-side{display:flex!important;order:2;gap:var(--qr-home-gap)!important}
@@ -1928,7 +1928,7 @@ function qrScrollCard(id,dir){
 function qrScrollButtons(id){
  return '<div class="qr-scroll-controls">'+[-1,1].map(dir=>'<button type="button" class="qr-scroll-pill" aria-label="Scroll '+(dir<0?'up':'down')+'" onclick="qrScrollCard(\''+id+'\','+dir+')"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate('+(dir<0?180:0)+' 10 10)"/></svg></button>').join('')+'</div>'
 }
-let qrHomeMeasureFrame=0;
+let qrHomeMeasureFrame=0,qrHomeMeasuredViewport="";
 function qrScheduleHomeMeasure(){
  cancelAnimationFrame(qrHomeMeasureFrame);
  qrHomeMeasureFrame=requestAnimationFrame(qrMeasureHomeLayout);
@@ -1936,6 +1936,8 @@ function qrScheduleHomeMeasure(){
 function qrMeasureHomeLayout(){
  if(!matchMedia('(min-width:1081px)').matches||document.body.classList.contains('auth-locked'))return;
  const home=$('home');if(!home)return;
+ const viewport=innerWidth+'x'+innerHeight;
+ if(qrHomeMeasuredViewport===viewport)return;
  let sample=home,copy=null;
  if(home.classList.contains('hidden')){
   copy=home.cloneNode(true);
@@ -1964,6 +1966,7 @@ function qrMeasureHomeLayout(){
    const height=el?.getBoundingClientRect().height;
    if(height>0)document.documentElement.style.setProperty('--qr-home-reference-'+name,height+'px');
   }
+  if(shell?.getBoundingClientRect().height>0&&profile?.getBoundingClientRect().height>0&&bottom?.getBoundingClientRect().height>0)qrHomeMeasuredViewport=viewport;
  }finally{copy?.remove()}
 }
 window.addEventListener('resize',qrScheduleHomeMeasure);
@@ -1972,7 +1975,7 @@ function show(id){qrPrepareMobileProfileNav();qrRestoreQuizSide();qrRestoreNotes
  const selectionCard=$('qrQuizMenu');if(selectionCard){selectionCard.inert=locked;selectionCard.classList.toggle('hidden',id==='quiz'||id==='results')}
  $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
  document.querySelectorAll('#selection .qr-sidebar-toggle').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
- window.scrollTo(0,0);qrScheduleHomeMeasure()}
+ window.scrollTo(0,0);if(!qrHomeMeasuredViewport)qrScheduleHomeMeasure()}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');activeExerciseTopic=null;renderChapterList();show('selection')}
 const schoolLevels=['PM1','PM2','PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
