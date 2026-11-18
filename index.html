@@ -1375,7 +1375,7 @@ body:not(.auth-locked) #notesPage #qrNoteEditDialog .qr-note-edit:is(:focus,:foc
 #qrNoteEditDialog .qr-note-actions{gap:var(--qr-home-row-gap)}
 #qrNoteEditDialog #qrNoteEditStatus:empty{display:none}
 
-body:not(.auth-locked) #notesPage .qr-note-glossary{display:flex;flex-direction:column;gap:var(--qr-home-gap);color:var(--qr-home-ink);font-size:var(--qr-font-body)}
+body:not(.auth-locked) #notesPage .qr-note-glossary{display:flex;flex-direction:column;gap:var(--qr-home-gap);color:var(--qr-home-ink);font-family:var(--qr-font);font-size:var(--qr-font-body);line-height:var(--qr-home-standard-pill-line)}
 body:not(.auth-locked) #notesPage .qr-note-glossary h2{font-size:var(--qr-font-heading)!important;margin:0!important;overflow-wrap:anywhere;color:var(--qr-home-ink)!important}
 body:not(.auth-locked) #notesPage .qr-note-glossary p{margin:0!important}
 body:not(.auth-locked) #notesPage .qr-note-glossary-header{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
@@ -1384,14 +1384,13 @@ body:not(.auth-locked) #notesPage .qr-home-section-title:has(>#qrStudyTitleContr
 body:not(.auth-locked) #notesPage .qr-study-controls svg{width:1em;height:1em;display:block}
 body:not(.auth-locked) #notesPage .qr-study-key-group{display:grid;gap:var(--qr-home-paragraph-gap)}
 body:not(.auth-locked) #notesPage .qr-study-key{display:flex;align-items:center;align-self:stretch}
-body:not(.auth-locked) #notesPage .qr-main .qr-study-key.qr-home-activity-value{font-size:19px!important}
 body:not(.auth-locked) #notesPage .qr-study-points{display:grid;gap:var(--qr-home-inline-gap);padding-inline-start:var(--qr-home-inner-padding);margin:0;list-style:disc outside}
 body:not(.auth-locked) #notesPage .qr-study-points li::marker{color:var(--qr-home-primary)}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary{box-sizing:border-box;padding:var(--qr-home-inner-padding)!important;border-radius:var(--qr-inner-radius);background:color-mix(in srgb,var(--qr-home-third) 20%,white);margin-top:auto}
 body:not(.auth-locked) #notesPage .qr-note-glossary-summary{display:grid;gap:var(--qr-home-paragraph-gap)}
-body:not(.auth-locked) #notesPage .qr-study-summary-heading{display:flex;align-items:center;gap:var(--qr-home-row-gap);color:#c68136;font-size:19px}
+body:not(.auth-locked) #notesPage .qr-study-summary-heading{display:flex;align-items:center;gap:var(--qr-home-inline-gap);color:#c68136;font-size:var(--qr-font-body);line-height:var(--qr-home-standard-pill-line)}
 body:not(.auth-locked) #notesPage .qr-study-summary-heading strong{font-size:inherit!important}
-body:not(.auth-locked) #notesPage .qr-study-summary-heading svg{width:20px;height:20px;flex:none;color:var(--qr-home-third)}
+body:not(.auth-locked) #notesPage .qr-study-summary-heading svg{width:1em;height:1em;flex:none;color:var(--qr-home-third)}
 body:not(.auth-locked) #notesPage .qr-study-menu{display:grid;gap:var(--qr-home-inline-gap)}
 body:not(.auth-locked) #notesPage .qr-study-menu[hidden]{display:none!important}
 body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!important;width:100%!important}
