@@ -2635,8 +2635,8 @@ function qrRender(){
  const attempts=qrEntries().flatMap(e=>(e.attempts||[]).map(a=>({e,a}))).filter(({a})=>Number.isFinite(Number(a.score))&&Number.isFinite(Number(a.total))&&Number(a.total)>0);
  const subjects=new Set(attempts.map(({e})=>e.subject).filter(Boolean));
  const avg=attempts.length?Math.round(attempts.reduce((sum,{a})=>sum+100*Number(a.score)/Number(a.total),0)/attempts.length):null;
- const levels=[...new Set(attempts.map(({e,a})=>a.level||e.level).filter(Boolean))];
- $('qrHomeLevel').textContent=levels.length===1?'Level '+levels[0]:'Quiz Room learner';
+ $('qrHomeLevel').textContent=qrSchoolLevel(qrProfile.birthDate)||'Quiz Room learner';
+ $('qrHomeLevel').closest('.qr-home-profile').querySelector('.qr-home-subtitle').textContent=qrProfile.dailyMessage||'Your learning journey';
  $('qrHomeQuizzes').textContent=String(attempts.length);
  $('qrHomeAverage').textContent=avg===null?'—':avg+'%';
  $('qrHomeSubjectsCount').textContent=String(subjects.size);
@@ -2680,8 +2680,8 @@ function qrRenderScores(){
  const avatar=$('qrScoresAvatar');avatar.hidden=!qrProfile.photo;
  if(qrProfile.photo)avatar.src=qrProfile.photo;
  $('scoresPage').querySelector('.qr-home-avatar-initial').hidden=!!qrProfile.photo;
- const levels=[...new Set(attempts.map(({entry,a})=>a.level||entry.level).filter(Boolean))];
- $('qrScoresLevel').textContent=levels.length===1?'Level '+levels[0]:'Quiz Room learner';
+ $('qrScoresLevel').textContent=qrSchoolLevel(qrProfile.birthDate)||'Quiz Room learner';
+ $('qrScoresLevel').closest('.qr-home-profile').querySelector('.qr-home-subtitle').textContent=qrProfile.dailyMessage||'Your learning journey';
  $('qrScoresQuizzes').textContent=String(attempts.length);
  $('qrScoresSideAverage').textContent=attempts.length?Math.round(attempts.reduce((sum,item)=>sum+percent(item),0)/attempts.length)+'%':'—';
  $('qrScoresSubjectsCount').textContent=String(subjects.length);
