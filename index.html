@@ -1636,7 +1636,7 @@ body:not(.auth-locked) #quizStart #subjects{display:flex!important;flex-wrap:wra
 /* Profile retains its two-stage arrangement and inherits Home's shell and card geometry. */
 body:not(.auth-locked) #profilePage .qr-home-main{grid-column:2/-1;display:flex!important;flex-direction:column;align-items:stretch}
 body:not(.auth-locked) #profilePage .qr-profile-surface{font-family:var(--qr-font);font-size:var(--qr-font-body);color:var(--qr-home-ink);box-sizing:border-box;flex:0 1 auto;min-height:0}
-@media(min-width:1081px){body:not(.auth-locked) #profilePage .qr-profile-surface{overflow:auto}}
+@media(min-width:1081px){body:not(.auth-locked) #profilePage .qr-profile-surface{overflow:auto;scrollbar-width:none}body:not(.auth-locked) #profilePage .qr-profile-surface::-webkit-scrollbar{display:none}}
 @media(max-width:1080px){body:not(.auth-locked) #profilePage .qr-home-main{grid-column:1/-1;grid-row:2}}
 @media(max-width:740px){body:not(.auth-locked) #profilePage .qr-profile-grid{grid-template-columns:1fr}}
 body:not(.auth-locked) #profilePage .qr-profile-section{display:flex;flex-direction:column;gap:var(--qr-home-gap)}
@@ -1656,8 +1656,9 @@ body:not(.auth-locked) #profilePage :is(.qr-profile-value,.qr-input,.qr-photo-in
 body:not(.auth-locked) #profilePage .qr-input:focus-visible{outline:2px solid var(--qr-home-focus)!important}
 body:not(.auth-locked) #profilePage #qrEmail{cursor:default;pointer-events:none}
 body:not(.auth-locked) #profilePage .qr-profile-message{display:grid;gap:var(--qr-home-paragraph-gap)}
-body:not(.auth-locked) #profilePage :is(#qrSavedProfileMessage,#qrDailyMessage){box-sizing:border-box;white-space:pre-wrap;overflow-wrap:anywhere;background:color-mix(in srgb,var(--qr-home-third) 20%,white)!important;color:var(--qr-home-ink)!important;border-radius:var(--qr-inner-radius)!important;padding:var(--qr-home-inner-padding)!important;margin:0!important;font-size:var(--qr-font-body)!important}
-body:not(.auth-locked) #profilePage #qrDailyMessage{width:100%;resize:vertical;min-height:0}
+body:not(.auth-locked) #profilePage :is(#qrSavedProfileMessage,#qrDailyMessage){box-sizing:border-box;white-space:pre-wrap;overflow-wrap:anywhere;background:color-mix(in srgb,var(--qr-home-third) 20%,white)!important;color:var(--qr-home-ink)!important;border-radius:var(--qr-inner-radius)!important;padding:var(--qr-home-row-padding) var(--qr-home-row-gap)!important;margin:0!important;font-size:var(--qr-font-body)!important;line-height:var(--qr-home-standard-pill-line)!important}
+body:not(.auth-locked) #profilePage #qrDailyMessage{width:100%;resize:none;min-height:0;scrollbar-width:none}
+body:not(.auth-locked) #profilePage #qrDailyMessage::-webkit-scrollbar{display:none}
 body:not(.auth-locked) #profilePage .qr-profile-actions{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:var(--qr-home-row-gap);margin:0!important}
 body:not(.auth-locked) #profilePage .qr-main :is(.qr-btn,.qr-file-button){display:inline-flex;align-items:center;justify-content:center;min-height:0!important;height:auto!important;padding:var(--qr-flat-pill-padding)!important;border:0!important;border-radius:var(--qr-home-pill-radius)!important;background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;font-size:var(--qr-font-body)!important;font-weight:800;line-height:var(--qr-home-standard-pill-line)!important;cursor:pointer;margin:0!important}
 body:not(.auth-locked) #profilePage .qr-main .qr-profile-primary{background:var(--qr-home-primary)!important;color:white!important}
@@ -1790,7 +1791,7 @@ body:not(.auth-locked) #profilePage #qrProfileStatus:empty{display:none}
    <div class="qr-profile-field"><label class="qr-profile-label" for="qrBirthDate">Date of birth</label><input id="qrBirthDate" class="qr-input" type="date" onchange="qrUpdateSchoolLevel()"></div>
    <div class="qr-profile-field"><span class="qr-profile-label">School level</span><output id="qrSchoolLevelPreview" for="qrBirthDate" class="qr-profile-value"></output></div>
   </div>
-  <div class="qr-profile-message"><h2><label for="qrDailyMessage">Message of the day</label></h2><textarea id="qrDailyMessage" class="qr-input" rows="3" placeholder="Write your message here"></textarea></div>
+  <div class="qr-profile-message"><h2><label for="qrDailyMessage">Message of the day</label></h2><textarea id="qrDailyMessage" class="qr-input" rows="1" placeholder="Write your message here"></textarea></div>
   <div class="qr-profile-field"><label class="qr-profile-label" for="qrPhoto">Upload photo</label>
    <div class="qr-photo-input-row"><label for="qrPhoto" class="qr-btn qr-file-button">Choose file</label><span id="qrPhotoFilename" class="qr-muted">No file chosen</span><input id="qrPhoto" type="file" accept="image/png,image/jpeg,image/webp" onchange="qrChoosePhoto(this)"></div>
    <div class="qr-photo-tools"><button type="button" class="qr-btn" id="qrCropOpen" onclick="qrReopenCrop()" disabled>Crop photo</button><img id="qrPhotoPreview" alt="Cropped square photo preview" hidden width="88" height="88"></div>
