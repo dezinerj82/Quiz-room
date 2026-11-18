@@ -1440,13 +1440,14 @@ body:not(.auth-locked) #notesPage .qr-study-menu[hidden]{display:none!important}
 body:not(.auth-locked) #notesPage .qr-study-menu button{text-align:left!important;width:100%!important}
 @media(max-width:740px){body:not(.auth-locked) #notesPage .qr-note-compose{height:var(--qr-home-top-height)}}
 /* Shared fixed dashboard card heights; scrolling is restricted to content. */
-:root{--qr-home-top-height:clamp(160px,calc(100dvh - var(--qr-home-bottom-height) - var(--qr-home-main-padding)*2 - var(--qr-home-gap)*8),180px);--qr-home-bottom-height:clamp(288px,37dvh,336px);--qr-home-scroll-width:8px}
+:root{--qr-home-top-height:clamp(160px,calc(100dvh - var(--qr-home-bottom-height) - var(--qr-home-main-padding)*2 - var(--qr-home-gap)*8),180px);--qr-home-bottom-height:clamp(288px,37dvh,336px);--qr-home-highest-height:clamp(336px,55dvh,488px);--qr-home-scroll-width:8px}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{box-sizing:border-box;height:var(--qr-home-bottom-height)!important;min-height:0!important;max-height:var(--qr-home-bottom-height)!important;flex:none}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{display:flex;min-width:0}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{width:100%}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom .qr-home-activity{display:grid;grid-template-rows:minmax(0,1fr);align-content:stretch}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{height:auto;min-height:0;flex:1;grid-template-rows:auto auto minmax(0,1fr);align-content:stretch}
 body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{flex:1;min-height:0}
+@media(min-width:1081px){body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{flex:0 1 var(--qr-home-highest-height);max-height:var(--qr-home-highest-height);min-height:0}body:not(.auth-locked) #scoresPage #qrScoresHighestSlot>.qr-home-highest{flex:1 1 auto;min-height:0;height:100%}}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-card-scroll{min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;padding-inline-end:var(--qr-home-row-gap);align-content:start;scrollbar-width:auto;scrollbar-color:auto}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-card-scroll::-webkit-scrollbar{width:var(--qr-home-scroll-width)}
 body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-card-scroll::-webkit-scrollbar-track{background:var(--qr-home-secondary);border-radius:var(--qr-home-pill-radius)}
@@ -1464,15 +1465,15 @@ body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell>:is(.qr-side,.qr-home-side,.qr-home-main){box-sizing:border-box!important;min-height:0!important;height:100%!important;max-height:100%!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{overflow:visible!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{flex:0 0 auto}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{box-sizing:border-box;flex:1 1 0;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{box-sizing:border-box;flex:0 1 var(--qr-home-highest-height);height:var(--qr-home-highest-height);max-height:var(--qr-home-highest-height);min-height:0!important;padding:var(--qr-home-inner-padding)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{display:flex!important;flex-direction:column;align-items:stretch;overflow:visible!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > :not(.qr-home-bottom):not(dialog){flex:0 0 auto}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{flex:1 1 0;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
  body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:repeat(2,minmax(0,1fr))}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section{min-height:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-section-title{flex:none;min-height:calc(var(--qr-font-heading) * 1.4)}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;flex:1 1 0;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{flex:1 1 0;min-height:0}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot>.qr-home-surface{height:var(--qr-home-bottom-height)!important;max-height:var(--qr-home-bottom-height)!important;flex:0 1 var(--qr-home-bottom-height);min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{flex:0 1 var(--qr-home-bottom-height);min-height:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary)}
  body:not(.auth-locked) #selection.qr-active-stage .qr-home-main{display:flex!important;flex-direction:column;overflow:visible!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz:not(.hidden){flex:1 1 0;min-height:0!important}
