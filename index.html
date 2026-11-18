@@ -1335,7 +1335,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .
 body.auth-locked{background:#e6f6f6!important}
 #googleGate{box-sizing:border-box;min-height:100dvh!important;display:grid!important;place-items:center!important;padding:24px!important;background:#e6f6f6!important;color:#171717!important}
 #googleGate.hidden{display:none!important}
-#googleGate .qr-login-card{box-sizing:border-box;width:min(460px,100%);display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(24px,4vw,40px);border:0;outline:0;border-radius:clamp(32px,4vw,44px);background:#fff;box-shadow:0 16px 45px rgba(9,154,171,.12),0 4px 10px rgba(15,40,45,.04);text-align:center}
+#googleGate .qr-login-card{box-sizing:border-box;width:min(460px,100%);display:flex;flex-direction:column;align-items:center;gap:20px;padding:var(--qr-home-inner-padding);border:0;outline:0;border-radius:clamp(32px,4vw,44px);background:#fff;box-shadow:0 16px 45px rgba(9,154,171,.12),0 4px 10px rgba(15,40,45,.04);text-align:center}
 #googleGate .qr-login-logo{width:72px;height:72px;display:grid;place-items:center;flex:none;border-radius:50%;background:#099aab;color:#fff}
 #googleGate .qr-login-logo svg{width:42px;height:42px}
 #googleGate h1{font-family:var(--qr-font)!important;font-size:clamp(25px,3vw,32px)!important;line-height:1.2!important;font-weight:800!important;color:#171717!important;margin:0!important}
@@ -1346,21 +1346,14 @@ body.auth-locked{background:#e6f6f6!important}
 #googleGate button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important;outline:0!important;box-shadow:inset 0 0 0 2px #099aab!important;transform:none!important}
 #googleGate .account-list button{background:#e6f6f6!important;color:#099aab!important;overflow-wrap:anywhere}
 #googleGate .account-list button:is(:hover,:focus-visible):not(:disabled){background:#fff!important;color:#099aab!important}
-#googleGate .qr-login-footnote{font-size:var(--qr-font-small)!important;color:#929a9d!important;margin:0!important}
+
 #googleGate .status{font-size:var(--qr-font-small)!important;line-height:1.45;color:#c0534e!important;min-height:0!important;margin:0!important}
 #googleGate .status:empty{display:none!important}
-@media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{padding:28px 22px;gap:18px}}
+@media(max-width:480px){#googleGate{padding:16px!important}#googleGate .qr-login-card{gap:18px}}
 /* All pending buttons share the same fading-dot indicator. */
 body:not(.auth-locked) .qr-main button.qr-processing:disabled,#googleGate button.qr-processing:disabled{background:var(--qr-home-secondary)!important;color:var(--qr-home-primary)!important;opacity:1!important;cursor:wait!important}
 .qr-processing{position:relative!important;overflow:visible!important}
 .qr-processing .qr-loading-dots{position:absolute;top:calc(100% + var(--qr-home-inline-gap));left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:var(--qr-home-inline-gap);pointer-events:none;color:var(--qr-home-primary)}
-#googleGate .qr-login-card{position:relative;overflow:visible}
-#googleGate .qr-login-orbit{position:absolute;inset:0;pointer-events:none;color:var(--qr-home-primary)}
-#googleGate .qr-login-orbit i{position:absolute;left:0;top:0;offset-path:inset(calc(-1 * var(--qr-home-row-gap)) round var(--qr-home-radius));offset-rotate:0deg;animation:qrLoginTravel 3.2s linear infinite,qrLoadingFade 1.4s ease-in-out infinite}
-#googleGate .qr-login-orbit i:nth-child(2){animation-delay:-.12s,.2s}
-#googleGate .qr-login-orbit i:nth-child(3){animation-delay:-.24s,.4s}
-@keyframes qrLoginTravel{from{offset-distance:0%}to{offset-distance:100%}}
-@media(prefers-reduced-motion:reduce){#googleGate .qr-login-orbit i{animation:none;offset-path:none;left:50%;top:calc(100% + var(--qr-home-inline-gap));transform:translateX(-50%)}#googleGate .qr-login-orbit i:nth-child(1){margin-left:calc(-1 * var(--qr-home-row-gap))}#googleGate .qr-login-orbit i:nth-child(3){margin-left:var(--qr-home-row-gap)}}
 .qr-loading-dots i{display:block;width:.34em;height:.34em;border-radius:50%;background:currentColor;animation:qrLoadingFade 1.4s ease-in-out infinite}
 .qr-loading-dots i:nth-child(2){animation-delay:.2s}
 .qr-loading-dots i:nth-child(3){animation-delay:.4s}
@@ -2698,11 +2691,7 @@ function qrNoteEditorBusy(button,active){
 function qrButtonProcessing(button,active){
  if(!button)return;
  button.classList.toggle('qr-processing',active);
- const loginCard=button.closest('#googleGate .qr-login-card');
- if(loginCard){
-  if(active&&!loginCard.querySelector('.qr-login-orbit')){const dots=document.createElement('span');dots.className='qr-loading-dots qr-login-orbit';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';loginCard.append(dots)}
-  if(!active&&!loginCard.querySelector('button.qr-processing'))loginCard.querySelector('.qr-login-orbit')?.remove();
- }else if(active&&!button.querySelector('.qr-loading-dots')){const dots=document.createElement('span');dots.className='qr-loading-dots';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';button.append(dots)}else if(!active)button.querySelector('.qr-loading-dots')?.remove();
+ if(active&&!button.querySelector('.qr-loading-dots')){const dots=document.createElement('span');dots.className='qr-loading-dots';dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';button.append(dots)}else if(!active)button.querySelector('.qr-loading-dots')?.remove();
  button.disabled=active;
  if(active)button.setAttribute('aria-busy','true');
  else button.removeAttribute('aria-busy');
@@ -2788,7 +2777,7 @@ async function qrLoadAccount(){
 }
 
 </script>
-<div id="googleGate" role="region" aria-label="Google account login"><div class="qr-login-card"><div class="qr-login-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg></div><h1>Welcome to Quiz Room</h1><p class="qr-login-subtitle">Your learning adventure starts here.</p><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div><p class="qr-login-footnote">Secure Google sign-in</p></div></div>
+<div id="googleGate" role="region" aria-label="Google account login"><div class="qr-login-card"><div class="qr-login-logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg></div><h1>Welcome to Quiz Room</h1><p class="qr-login-subtitle">Your learning adventure starts here.</p><div class="account-list" id="googleAccounts"></div><button id="otherGoogle" type="button">Login to start</button><div class="status" id="googleStatus" role="status"></div></div></div>
 <script>
 (()=>{
 "use strict";
