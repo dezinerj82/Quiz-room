@@ -1381,7 +1381,7 @@ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .
 body:not(.auth-locked) #scoresPage .qr-scores-main{display:flex;flex-direction:column;gap:0!important}
 body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{display:flex;flex:1;min-height:0;min-width:0}
 body:not(.auth-locked) #scoresPage #qrScoresHighestSlot>.qr-home-highest{width:100%;min-width:0}
-body:not(.auth-locked) #scoresPage .qr-scores-main>*{box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:0!important}
+
 body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-subject-heading{display:flex;align-items:center;justify-content:space-between;gap:var(--qr-home-gap)}
 body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--qr-home-gap);align-items:center}
 body:not(.auth-locked) #scoresPage .qr-scores-filter-pill[hidden],body:not(.auth-locked) #scoresPage #qrScoreSubject{display:none!important}
@@ -1465,7 +1465,7 @@ body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell>:is(.qr-side,.qr-home-side,.qr-home-main){box-sizing:border-box!important;min-height:0!important;height:100%!important;max-height:100%!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-side{overflow:visible!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{flex:0 0 auto}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{box-sizing:border-box;flex:0 1 var(--qr-home-highest-height);height:var(--qr-home-highest-height);max-height:var(--qr-home-highest-height);min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{box-sizing:border-box;flex:1 1 auto;height:auto;max-height:none;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main{display:flex!important;flex-direction:column;align-items:stretch;overflow:visible!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > :not(.qr-home-bottom):not(dialog){flex:0 0 auto}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-main > .qr-home-bottom{flex:1 1 auto;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
@@ -1476,19 +1476,31 @@ body:not(.auth-locked) #notesPage .qr-study-scroll>*{flex-shrink:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) #qrScoresOverviewSlot{flex:1 1 auto;min-height:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-overview{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary)}
  /* Dashboard cut line follows the tallest required column, capped by the viewport. */
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell{height:auto!important;max-height:100%!important;grid-template-rows:minmax(0,auto);align-items:stretch}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-shell>:is(.qr-side,.qr-home-side,.qr-home-main){height:auto!important;min-height:0!important;max-height:none!important}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-highest{flex:1 1 auto;height:auto;max-height:none;min-height:0!important;padding:var(--qr-home-inner-padding)!important}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{height:auto!important;max-height:100%!important;grid-template-rows:minmax(0,auto);align-items:stretch}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell>:is(.qr-side,.qr-home-side,.qr-home-main){height:auto!important;min-height:0!important;max-height:none!important}
+ 
  body:not(.auth-locked) #scoresPage #qrScoresHighestSlot{flex:1 1 auto;min-height:0}
  body:not(.auth-locked) #scoresPage #qrScoresHighestSlot>.qr-home-highest{flex:1 1 auto;height:auto}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom .qr-card-scroll{max-height:calc(var(--qr-home-bottom-height) - 2 * var(--qr-home-inner-padding))}
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-highest .qr-card-scroll{max-height:calc(var(--qr-home-highest-height) - 2 * var(--qr-home-inner-padding))}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest .qr-card-scroll{max-height:calc(var(--qr-home-highest-height) - 2 * var(--qr-home-inner-padding))}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-section-title{margin:0 0 var(--qr-home-gap)!important}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity .qr-home-activity-row:first-child{padding-top:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-activity .qr-home-activity-row:last-child{padding-bottom:0}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom .qr-home-activity{grid-template-rows:minmax(0,auto);align-content:start}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage) .qr-home-bottom .qr-home-overview{align-items:center}
 
+ /* Match Home's measured cut line and corresponding cards on every other desktop page. */
+ body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-shell{height:var(--qr-home-reference-shell,auto)!important;grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-profile{box-sizing:border-box;height:var(--qr-home-reference-profile,auto);flex:0 0 auto}
+ body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{flex:1 1 0;min-height:0}
+ body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;max-height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;flex:0 1 var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
+ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot{flex:0 1 var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
+ body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-home-bottom .qr-card-scroll{max-height:100%}
+ body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(6,minmax(0,1fr))}
+ body:not(.auth-locked) #notesPage .qr-scores-filter{grid-template-columns:repeat(5,minmax(0,1fr))}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-home-main{display:flex!important;flex-direction:column}
+ body:not(.auth-locked) :is(#quizStart,#selection) .qr-home-main>.qr-quiz-menu{min-height:0;overflow:auto}
+ body:not(.auth-locked) #selection #results:not(.hidden){min-height:0;overflow:auto}
  body:not(.auth-locked) #selection.qr-active-stage .qr-home-main{display:flex!important;flex-direction:column;overflow:visible!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz:not(.hidden){flex:1 1 0;min-height:0!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{flex:1 1 0;min-height:0!important;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--qr-home-primary) var(--qr-home-secondary);padding:var(--qr-home-inner-padding)!important}
@@ -1879,12 +1891,51 @@ function qrCloseSidebars(){
 }
 window.addEventListener('resize',()=>{if(window.innerWidth>860)qrCloseSidebars()});
 document.addEventListener('click',event=>{if(!event.target.closest('.qr-side'))qrCloseSidebars()});
+let qrHomeMeasureFrame=0;
+function qrScheduleHomeMeasure(){
+ cancelAnimationFrame(qrHomeMeasureFrame);
+ qrHomeMeasureFrame=requestAnimationFrame(qrMeasureHomeLayout);
+}
+function qrMeasureHomeLayout(){
+ if(!matchMedia('(min-width:1081px)').matches||document.body.classList.contains('auth-locked'))return;
+ const home=$('home');if(!home)return;
+ let sample=home,copy=null;
+ if(home.classList.contains('hidden')){
+  copy=home.cloneNode(true);
+  copy.classList.remove('hidden');copy.inert=true;copy.setAttribute('aria-hidden','true');
+  const shell=copy.querySelector('.qr-home-shell'),main=shell.querySelector('.qr-home-main');
+  if(!shell.querySelector('.qr-home-side')){
+   const source=document.querySelector('#qrActiveQuizSide,#qrNotesSideSlot:has(.qr-home-profile),#scoresPage .qr-home-side');
+   if(source)shell.insertBefore(source.cloneNode(true),main);
+  }
+  const side=shell.querySelector('.qr-home-side');
+  if(side&&!side.querySelector('.qr-home-highest')){
+   const best=document.querySelector('.qr-home-highest');if(best)side.append(best.cloneNode(true));
+  }
+  const overviewSlot=copy.querySelector('.qr-home-bottom>section:nth-child(2)');
+  if(overviewSlot&&!overviewSlot.querySelector('.qr-home-overview')){
+   const overview=document.querySelector('.qr-home-overview');if(overview)overviewSlot.append(overview.cloneNode(true));
+  }
+  copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+  copy.querySelectorAll('[autofocus]').forEach(el=>el.removeAttribute('autofocus'));
+  copy.style.cssText='position:fixed!important;inset:0!important;visibility:hidden!important;pointer-events:none!important;z-index:-1!important;';
+  document.body.append(copy);sample=copy;
+ }
+ try{
+  const shell=sample.querySelector('.qr-home-shell'),profile=sample.querySelector('.qr-home-profile'),bottom=sample.querySelector('.qr-home-bottom .qr-home-activity');
+  for(const [name,el] of [['shell',shell],['profile',profile],['bottom',bottom]]){
+   const height=el?.getBoundingClientRect().height;
+   if(height>0)document.documentElement.style.setProperty('--qr-home-reference-'+name,height+'px');
+  }
+ }finally{copy?.remove()}
+}
+window.addEventListener('resize',qrScheduleHomeMeasure);
 function show(id){qrPrepareMobileProfileNav();qrRestoreQuizSide();qrRestoreNotesSide();qrCloseSidebars();if(id!=='scoresPage')qrPlaceSharedScoreCards(false);qrActiveQuizLayout(id==='quiz');qrPlaceQuizSide(id);if(id!=='quiz')dismissTimeWarning();document.querySelectorAll('.screen').forEach(el=>el.classList.add('hidden'));const page=['quiz','results'].includes(id)?'selection':id;$(page).classList.remove('hidden');$('quiz').classList.toggle('hidden',id!=='quiz');$('results').classList.toggle('hidden',id!=='results');document.querySelectorAll('.qr-side button:not(.qr-sidebar-toggle)').forEach(button=>{const action=button.getAttribute('onclick')||'';const section=['selection','quiz','results'].includes(id)?'quizStart':id;const selected=action.includes("qrOpen('"+section+"')");button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');const locked=id==='quiz';button.disabled=locked;button.setAttribute('aria-disabled',String(locked));button.tabIndex=locked?-1:0});const locked=id==='quiz';
  document.querySelectorAll('#selection .qr-profile-actions button').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
  const selectionCard=$('qrQuizMenu');if(selectionCard){selectionCard.inert=locked;selectionCard.classList.toggle('hidden',id==='quiz'||id==='results')}
  $('selection').classList.toggle('qr-compact-active-quiz',id==='quiz'||id==='results');
  document.querySelectorAll('#selection .qr-sidebar-toggle').forEach(button=>{button.disabled=locked;button.setAttribute('aria-disabled',String(locked));});
- window.scrollTo(0,0)}
+ window.scrollTo(0,0);qrScheduleHomeMeasure()}
 function home(){clearInterval(timerHandle);dismissTimeWarning();show('home');qrRender()}
 function exitQuiz(){dismissTimeWarning();clearInterval(timerHandle);timerHandle=null;answered=false;selected=-1;bookmarks.clear();answerSnapshots={};$('bookmarkList').classList.add('hidden');activeExerciseTopic=null;renderChapterList();show('selection')}
 const schoolLevels=['PM1','PM2','PM3','PM4','PM5','PM6','SC1','SC2','SC3','SC4','SC5'];
@@ -2548,6 +2599,7 @@ function qrRender(){
  const recent=attempts.slice().sort((x,y)=>String(y.a.time||'').localeCompare(String(x.a.time||''))).slice(0,3);
  $('qrHomeActivity').innerHTML=recent.map(({e,a})=>'<div class="qr-home-activity-row"><span class="qr-home-activity-icon" aria-hidden="true">▶</span><div class="qr-home-activity-copy"><strong>'+escapeHtml(e.subject+' · '+String(e.chapter||'Quiz').replace(/^(?:Quiz|Exercise|Exam)\s+/i,''))+'</strong><small>'+escapeHtml(qrScoreDisplayDate(a.time))+'</small></div><span class="qr-home-activity-value">'+Math.round(Number(a.score)/Number(a.total)*100)+'%</span></div>').join('')||'<p class="qr-muted">Your completed quizzes will appear here.</p>';
  qrRenderBestScores();
+ qrScheduleHomeMeasure();
 }
 
 /* Date display only: preserve original timestamps in Google Drive. */
