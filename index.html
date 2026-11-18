@@ -1395,7 +1395,7 @@ body:not(.auth-locked) #scoresPage .qr-scores-highlight p{font-size:var(--qr-fon
 body:not(.auth-locked) #scoresPage .qr-scores-highlight-best strong{color:#c68136}
 body:not(.auth-locked) #scoresPage .qr-scores-medal{position:absolute;right:20px;top:calc(50% - 24px);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff8ec;color:var(--qr-home-third);font-size:36px;opacity:.7}
 body:not(.auth-locked) #scoresPage .qr-scores-history-label{font-size:var(--qr-font-small);color:#829da0}
-body:not(.auth-locked) #scoresPage #qrScoresList{display:grid;gap:0}
+
 @media(max-width:1170px){body:not(.auth-locked) #scoresPage .qr-scores-highlights{grid-template-columns:1fr}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:550px){body:not(.auth-locked) #scoresPage .qr-scores-highlight{height:var(--qr-home-top-height);min-height:var(--qr-home-top-height)}body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-scores-filter{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Standard pill geometry: Math subject button is the reference. Shared CTA, level dropdown, score indicators and Notes pills use the same height and curve. */
@@ -1757,7 +1757,7 @@ body:not(.auth-locked) #quizStart #subjects{display:flex!important;flex-wrap:wra
  <select id="qrScoreSubject" aria-label="Select subject" hidden></select>
  <div class="qr-home-bottom qr-scores-bottom">
   <section><div class="qr-home-section-title"><h2>Score History</h2><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrScoresList',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrScoresList',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div>
-   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-list qr-card-scroll"><p class="qr-muted">No scores yet.</p></div></div>
+   <div id="qrScoreHistoryCard" class="qr-home-surface qr-home-activity"><div id="qrScoresList" class="qr-card-scroll"><p class="qr-muted">No scores yet.</p></div></div>
   </section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div id="qrScoresOverviewSlot"></div></section>
  </div>
