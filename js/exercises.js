@@ -1,4 +1,4 @@
-/* Five PM3 practice quizzes to calibrate answer explanations. */
+/* PM3 practice quizzes. Permanent question IDs preserve score history. */
 const exerciseBank={
   "English": {
     "PM3 Practice": [
@@ -101,6 +101,124 @@ const exerciseBank={
         ],
         "explanation": "'Brushes' is the present simple form of 'brush' used with 'she'. The ending '-es' is added because 'brush' ends in '-sh'.",
         "id": "ENG-PM3-PRACTICE-001-10"
+      }
+    ],
+    "PM3 Practice 2": [
+      {
+        "type": "mc",
+        "q": "Which word means the opposite of narrow?",
+        "options": [
+          "Wide",
+          "Deep",
+          "Quiet",
+          "Smooth"
+        ],
+        "correct": 0,
+        "explanation": "'Wide' means having a large distance from one side to the other.",
+        "id": "ENG-PM3-PRACTICE-002-01"
+      },
+      {
+        "type": "mc",
+        "q": "Which word is a noun in 'The puppy sleeps soundly'?",
+        "options": [
+          "The",
+          "Puppy",
+          "Sleeps",
+          "Soundly"
+        ],
+        "correct": 1,
+        "explanation": "'Puppy' names a young dog, so it is a noun.",
+        "id": "ENG-PM3-PRACTICE-002-02"
+      },
+      {
+        "type": "tf",
+        "q": "The plural of 'child' is 'children'.",
+        "expected": true,
+        "explanation": "'Children' is an irregular plural. It does not simply add -s.",
+        "id": "ENG-PM3-PRACTICE-002-03"
+      },
+      {
+        "type": "tf",
+        "q": "The word 'slowly' describes a noun.",
+        "expected": false,
+        "explanation": "'Slowly' is an adverb that describes how an action happens.",
+        "id": "ENG-PM3-PRACTICE-002-04"
+      },
+      {
+        "type": "text",
+        "q": "Complete the plural: One tooth, many ____.",
+        "expected": "teeth",
+        "explanation": "'Teeth' is the irregular plural of tooth.",
+        "id": "ENG-PM3-PRACTICE-002-05"
+      },
+      {
+        "type": "text",
+        "q": "Write the past tense of eat: I ____ breakfast yesterday.",
+        "expected": "ate",
+        "explanation": "'Ate' is the past tense of eat.",
+        "id": "ENG-PM3-PRACTICE-002-06"
+      },
+      {
+        "type": "drop",
+        "q": "This bag belongs to me. It is ____ bag.",
+        "expected": "my",
+        "explanation": "'My' shows that something belongs to the speaker.",
+        "options": [
+          "my",
+          "their"
+        ],
+        "id": "ENG-PM3-PRACTICE-002-07"
+      },
+      {
+        "type": "drop",
+        "q": "The bird flew ____ the roof, high in the air.",
+        "expected": "over",
+        "explanation": "'Over' means above something.",
+        "options": [
+          "over",
+          "inside"
+        ],
+        "id": "ENG-PM3-PRACTICE-002-08"
+      },
+      {
+        "type": "order",
+        "q": "Arrange the words to form a question.",
+        "steps": [
+          "Where",
+          "is",
+          "your",
+          "book?"
+        ],
+        "explanation": "A question about location begins with 'where', followed here by is and the subject.",
+        "id": "ENG-PM3-PRACTICE-002-09"
+      },
+      {
+        "type": "sort",
+        "q": "Sort these words by their use in the given phrases.",
+        "groups": [
+          "Nouns",
+          "Verbs"
+        ],
+        "items": [
+          {
+            "text": "a pencil",
+            "group": 0
+          },
+          {
+            "text": "to swim",
+            "group": 1
+          },
+          {
+            "text": "a mountain",
+            "group": 0
+          },
+          {
+            "text": "to laugh",
+            "group": 1
+          }
+        ],
+        "explanation": "A 'noun' names someone or something; a 'verb' expresses an action.",
+        "id": "ENG-PM3-PRACTICE-002-10"
       }
     ]
   },
@@ -276,6 +394,186 @@ const exerciseBank={
         },
         "id": "MAL-PM3-PRACTICE-001-10"
       }
+    ],
+    "Latihan PM3 2": [
+      {
+        "type": "mc",
+        "q": "Apakah lawan bagi perkataan 'tinggi'?",
+        "options": [
+          "Rendah",
+          "Panjang",
+          "Tebal",
+          "Luas"
+        ],
+        "correct": 0,
+        "explanation": "'Rendah' means low or short in height, the opposite of tinggi.",
+        "translation": {
+          "question": "What is the opposite of tall?",
+          "options": [
+            "Low",
+            "Long",
+            "Thick",
+            "Wide"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-01"
+      },
+      {
+        "type": "mc",
+        "q": "Pilih penjodoh bilangan yang betul: se____ kasut.",
+        "options": [
+          "Batang",
+          "Ekor",
+          "Pasang",
+          "Helai"
+        ],
+        "correct": 2,
+        "explanation": "'Pasang' is a classifier used for pairs, such as shoes.",
+        "translation": {
+          "question": "Choose the correct classifier for a pair of shoes.",
+          "options": [
+            "Long objects",
+            "Animals",
+            "Pairs",
+            "Thin sheets"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-02"
+      },
+      {
+        "type": "tf",
+        "q": "Perkataan 'manis' menerangkan rasa.",
+        "expected": true,
+        "explanation": "'Manis' means sweet. It describes taste.",
+        "translation": {
+          "question": "The word manis describes taste.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-03"
+      },
+      {
+        "type": "tf",
+        "q": "Nama khas 'Sabah' perlu ditulis dengan huruf kecil pada awalnya.",
+        "expected": false,
+        "explanation": "'Sabah' is a proper noun and begins with a capital letter.",
+        "translation": {
+          "question": "The proper noun Sabah should begin with a lowercase letter.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-04"
+      },
+      {
+        "type": "text",
+        "q": "Satu ekor kucing, dua ____ kucing.",
+        "expected": "ekor",
+        "explanation": "'Ekor' is a classifier used when counting animals.",
+        "translation": {
+          "question": "One cat, two cats: fill in the animal classifier.",
+          "options": []
+        },
+        "id": "MAL-PM3-PRACTICE-002-05"
+      },
+      {
+        "type": "text",
+        "q": "Lawan perkataan 'panas' ialah ____.",
+        "expected": "sejuk",
+        "explanation": "'Sejuk' means cold or cool, the opposite of panas.",
+        "translation": {
+          "question": "The opposite of hot is ____.",
+          "options": []
+        },
+        "id": "MAL-PM3-PRACTICE-002-06"
+      },
+      {
+        "type": "drop",
+        "q": "Adik tidur di atas ____.",
+        "expected": "katil",
+        "explanation": "'Katil' means bed, a place to sleep.",
+        "options": [
+          "katil",
+          "pinggan"
+        ],
+        "translation": {
+          "question": "The younger sibling sleeps on a ____.",
+          "options": [
+            "Bed",
+            "Plate"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-07"
+      },
+      {
+        "type": "drop",
+        "q": "Kakak ____ surat kepada nenek.",
+        "expected": "menulis",
+        "explanation": "'Menulis' means to write, an action used when making a letter.",
+        "options": [
+          "menulis",
+          "meminum"
+        ],
+        "translation": {
+          "question": "Older sister ____ a letter to grandmother.",
+          "options": [
+            "Writes",
+            "Drinks"
+          ]
+        },
+        "id": "MAL-PM3-PRACTICE-002-08"
+      },
+      {
+        "type": "order",
+        "q": "Susun perkataan menjadi ayat yang betul.",
+        "steps": [
+          "Amin",
+          "membaca",
+          "buku",
+          "cerita."
+        ],
+        "explanation": "Amin membaca buku cerita means Amin reads a storybook. The subject comes before the action and object.",
+        "translation": {
+          "question": "Arrange the words to form a correct sentence.",
+          "options": []
+        },
+        "id": "MAL-PM3-PRACTICE-002-09"
+      },
+      {
+        "type": "sort",
+        "q": "Asingkan kata nama dan kata kerja.",
+        "groups": [
+          "Kata nama",
+          "Kata kerja"
+        ],
+        "items": [
+          {
+            "text": "kerusi",
+            "group": 0
+          },
+          {
+            "text": "melompat",
+            "group": 1
+          },
+          {
+            "text": "gajah",
+            "group": 0
+          },
+          {
+            "text": "menyanyi",
+            "group": 1
+          }
+        ],
+        "explanation": "Kerusi (chair) and gajah (elephant) are nouns. Melompat (jump) and menyanyi (sing) are verbs.",
+        "translation": {
+          "question": "Sort the words into nouns and verbs.",
+          "options": []
+        },
+        "id": "MAL-PM3-PRACTICE-002-10"
+      }
     ]
   },
   "Korean": {
@@ -450,6 +748,186 @@ const exerciseBank={
         },
         "id": "KOR-PM3-PRACTICE-001-10"
       }
+    ],
+    "연습 퀴즈 2": [
+      {
+        "type": "mc",
+        "q": "다음 중 동물은 무엇인가요?",
+        "options": [
+          "우산",
+          "토끼",
+          "신문",
+          "모자"
+        ],
+        "correct": 1,
+        "explanation": "'토끼' means rabbit, which is an animal.",
+        "translation": {
+          "question": "Which of these is an animal?",
+          "options": [
+            "Umbrella",
+            "Rabbit",
+            "Newspaper",
+            "Hat"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-01"
+      },
+      {
+        "type": "mc",
+        "q": "‘큰 나무’에서 크기를 나타내는 말은 무엇인가요?",
+        "options": [
+          "큰",
+          "나무",
+          "에서",
+          "말"
+        ],
+        "correct": 0,
+        "explanation": "'큰' means big and describes the size of the tree.",
+        "translation": {
+          "question": "Which word in 'big tree' describes size?",
+          "options": [
+            "Big",
+            "Tree",
+            "At/from",
+            "Word"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-02"
+      },
+      {
+        "type": "tf",
+        "q": "‘우유’는 마실 수 있어요.",
+        "expected": true,
+        "explanation": "'우유' means milk, a drink.",
+        "translation": {
+          "question": "Milk can be drunk.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-03"
+      },
+      {
+        "type": "tf",
+        "q": "‘바다’는 산을 뜻해요.",
+        "expected": false,
+        "explanation": "'바다' means sea; 산 means mountain.",
+        "translation": {
+          "question": "바다 means mountain.",
+          "options": [
+            "True",
+            "False"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-04"
+      },
+      {
+        "type": "text",
+        "q": "‘손’ 뒤에 알맞은 목적격 조사: 손____ 씻어요.",
+        "expected": "을",
+        "explanation": "'을' marks an object after a noun ending in a consonant, such as 손.",
+        "translation": {
+          "question": "Choose the object particle: I wash my hands.",
+          "options": []
+        },
+        "id": "KOR-PM3-PRACTICE-002-05"
+      },
+      {
+        "type": "text",
+        "q": "‘책’ 뒤에 알맞은 주제 조사: 책____ 재미있어요.",
+        "expected": "은",
+        "explanation": "'은' marks the topic after a noun ending in a consonant.",
+        "translation": {
+          "question": "Choose the topic particle: The book is interesting.",
+          "options": []
+        },
+        "id": "KOR-PM3-PRACTICE-002-06"
+      },
+      {
+        "type": "drop",
+        "q": "비가 올 때 ____을 써요.",
+        "expected": "우산",
+        "explanation": "'우산' means umbrella, which protects us from rain.",
+        "options": [
+          "우산",
+          "수건"
+        ],
+        "translation": {
+          "question": "When it rains, I use a ____.",
+          "options": [
+            "Umbrella",
+            "Towel"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-07"
+      },
+      {
+        "type": "drop",
+        "q": "저는 사과____ 먹어요.",
+        "expected": "를",
+        "explanation": "'를' marks the object after a noun ending in a vowel, such as 사과.",
+        "options": [
+          "를",
+          "을"
+        ],
+        "translation": {
+          "question": "I eat an apple. Choose the object particle.",
+          "options": [
+            "After a vowel",
+            "After a consonant"
+          ]
+        },
+        "id": "KOR-PM3-PRACTICE-002-08"
+      },
+      {
+        "type": "order",
+        "q": "문장을 완성하세요: 'I exercise every day.' (주어부터 시작하세요.)",
+        "steps": [
+          "저는",
+          "매일",
+          "운동을",
+          "해요."
+        ],
+        "explanation": "저는 매일 운동을 해요 means I exercise every day. The verb goes at the end.",
+        "translation": {
+          "question": "Complete 'I exercise every day', starting with the subject.",
+          "options": []
+        },
+        "id": "KOR-PM3-PRACTICE-002-09"
+      },
+      {
+        "type": "sort",
+        "q": "명사와 동사를 나누세요.",
+        "groups": [
+          "명사",
+          "동사"
+        ],
+        "items": [
+          {
+            "text": "꽃",
+            "group": 0
+          },
+          {
+            "text": "걷다",
+            "group": 1
+          },
+          {
+            "text": "문",
+            "group": 0
+          },
+          {
+            "text": "웃다",
+            "group": 1
+          }
+        ],
+        "explanation": "꽃 (flower) and 문 (door) are nouns. 걷다 (walk) and 웃다 (laugh) are verbs.",
+        "translation": {
+          "question": "Sort the words into nouns and verbs.",
+          "options": []
+        },
+        "id": "KOR-PM3-PRACTICE-002-10"
+      }
     ]
   },
   "Math": {},
@@ -555,79 +1033,273 @@ const exerciseBank={
         "explanation": "Plants use sunlight to make 'food' through photosynthesis. That food gives the plant energy to grow.",
         "id": "SCI-PM3-PRACTICE-001-10"
       }
+    ],
+    "Matter and Living Things": [
+      {
+        "type": "mc",
+        "q": "Which tool is best for measuring the temperature of water?",
+        "options": [
+          "Balance",
+          "Thermometer",
+          "Ruler",
+          "Magnifying glass"
+        ],
+        "correct": 1,
+        "explanation": "A 'thermometer' measures temperature.",
+        "id": "SCI-PM3-PRACTICE-002-01"
+      },
+      {
+        "type": "mc",
+        "q": "Which material lets most visible light pass through it?",
+        "options": [
+          "Clear glass",
+          "Cardboard",
+          "Wood",
+          "Metal foil"
+        ],
+        "correct": 0,
+        "explanation": "'Transparent' materials allow light to pass through clearly.",
+        "id": "SCI-PM3-PRACTICE-002-02"
+      },
+      {
+        "type": "tf",
+        "q": "Air takes up space.",
+        "expected": true,
+        "explanation": "Air is matter and occupies space, even though we cannot usually see it.",
+        "id": "SCI-PM3-PRACTICE-002-03"
+      },
+      {
+        "type": "tf",
+        "q": "All magnets attract every kind of metal.",
+        "expected": false,
+        "explanation": "Magnets attract certain metals, such as iron, but not all metals.",
+        "id": "SCI-PM3-PRACTICE-002-04"
+      },
+      {
+        "type": "text",
+        "q": "The solid form of water is called ____.",
+        "expected": "ice",
+        "explanation": "'Ice' forms when water freezes.",
+        "id": "SCI-PM3-PRACTICE-002-05"
+      },
+      {
+        "type": "text",
+        "q": "The body part used to smell is the ____.",
+        "expected": "nose",
+        "explanation": "The nose detects smells.",
+        "id": "SCI-PM3-PRACTICE-002-06"
+      },
+      {
+        "type": "drop",
+        "q": "A shadow forms when light is ____ by an object.",
+        "expected": "blocked",
+        "explanation": "A shadow appears where an object blocks light.",
+        "options": [
+          "blocked",
+          "created"
+        ],
+        "id": "SCI-PM3-PRACTICE-002-07"
+      },
+      {
+        "type": "drop",
+        "q": "A seed needs water to begin ____.",
+        "expected": "germination",
+        "explanation": "'Germination' is the beginning of a seed's growth.",
+        "options": [
+          "germination",
+          "freezing"
+        ],
+        "id": "SCI-PM3-PRACTICE-002-08"
+      },
+      {
+        "type": "order",
+        "q": "Arrange these stages of a butterfly's life cycle.",
+        "steps": [
+          "Egg",
+          "Caterpillar",
+          "Pupa",
+          "Adult butterfly"
+        ],
+        "explanation": "A butterfly develops from an egg into a caterpillar, then a pupa, and finally an adult.",
+        "id": "SCI-PM3-PRACTICE-002-09"
+      },
+      {
+        "type": "sort",
+        "q": "Sort these actions into Do and Don't in the science room.",
+        "groups": [
+          "Do",
+          "Don't"
+        ],
+        "items": [
+          {
+            "text": "Follow teacher instructions",
+            "group": 0
+          },
+          {
+            "text": "Taste unknown liquids",
+            "group": 1
+          },
+          {
+            "text": "Report a spill",
+            "group": 0
+          },
+          {
+            "text": "Run between tables",
+            "group": 1
+          }
+        ],
+        "explanation": "Safe science habits protect everyone: follow instructions and report spills. Never taste unknown substances or run in the science room.",
+        "id": "SCI-PM3-PRACTICE-002-10"
+      }
     ]
   }
 };
 /* Equation-form multiplication, with the blank randomized for each attempt. */
-const formulaBank={Math:{"Basic Operations (Multiply)":[
-  {
-    "id": "MATH-PM3-MULTIPLY-001-01",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 2,
-    "b": 3
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-02",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 3,
-    "b": 5
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-03",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 7,
-    "b": 2
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-04",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 4,
-    "b": 6
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-05",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 8,
-    "b": 4
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-06",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 5,
-    "b": 9
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-07",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 6,
-    "b": 7
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-08",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 9,
-    "b": 8
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-09",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 4,
-    "b": 7
-  },
-  {
-    "id": "MATH-PM3-MULTIPLY-001-10",
-    "type": "equation",
-    "operation": "multiply",
-    "a": 6,
-    "b": 6
+const formulaBank={
+  "Math": {
+    "Basic Operations (Multiply)": [
+      {
+        "id": "MATH-PM3-MULTIPLY-001-01",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 2,
+        "b": 3
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-02",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 3,
+        "b": 5
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-03",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 7,
+        "b": 2
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-04",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 4,
+        "b": 6
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-05",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 8,
+        "b": 4
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-06",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 5,
+        "b": 9
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-07",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 6,
+        "b": 7
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-08",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 9,
+        "b": 8
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-09",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 4,
+        "b": 7
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-001-10",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 6,
+        "b": 6
+      }
+    ],
+    "Basic Operations (Multiply) 2": [
+      {
+        "id": "MATH-PM3-MULTIPLY-002-01",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 2,
+        "b": 8
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-02",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 3,
+        "b": 7
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-03",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 4,
+        "b": 9
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-04",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 5,
+        "b": 5
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-05",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 6,
+        "b": 8
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-06",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 7,
+        "b": 9
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-07",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 2,
+        "b": 9
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-08",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 3,
+        "b": 6
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-09",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 5,
+        "b": 8
+      },
+      {
+        "id": "MATH-PM3-MULTIPLY-002-10",
+        "type": "equation",
+        "operation": "multiply",
+        "a": 7,
+        "b": 7
+      }
+    ]
   }
-]}};
+};
