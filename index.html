@@ -1454,7 +1454,6 @@ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-overview{width
  body:not(.auth-locked) #notesPage .qr-scores-filter{grid-template-columns:repeat(5,minmax(0,1fr))}
  body:not(.auth-locked) :is(#quizStart,#selection) .qr-home-main{display:flex!important;flex-direction:column}
  body:not(.auth-locked) :is(#quizStart,#selection) .qr-home-main>.qr-quiz-menu{min-height:0;overflow:auto}
- body:not(.auth-locked) #selection #results:not(.hidden){min-height:0;overflow:auto}
  body:not(.auth-locked) #selection.qr-active-stage .qr-home-main{display:flex!important;flex-direction:column;overflow:visible!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz:not(.hidden){flex:1 1 0;min-height:0!important}
  body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{flex:1 1 0;min-height:0!important;overflow:auto;scrollbar-width:none;padding:var(--qr-home-inner-padding)!important}
@@ -1666,9 +1665,9 @@ body:not(.auth-locked) .qr-best-inactive :is(h3,.qr-best-percentage){color:#929a
 body:not(.auth-locked) #home .qr-home-subject[aria-pressed="true"]{outline:2px solid var(--qr-home-ink)!important;outline-offset:2px}
 @media(max-width:740px){body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-overview.qr-overview-empty{min-height:0!important}}
 /* Completion and timeout stay inside the shared third stage. */
-body:not(.auth-locked) #selection #results:not(.hidden){box-sizing:border-box;min-width:0;min-height:0;overflow:auto;scrollbar-width:none;flex:1 1 0;padding:0 var(--qr-home-inline-gap) var(--qr-home-row-gap)}
-body:not(.auth-locked) #selection #results::-webkit-scrollbar{display:none}
-body:not(.auth-locked) #selection #results>.qr-card{box-sizing:border-box;min-width:0;width:100%;max-width:100%;height:auto!important;min-height:100%;overflow:visible!important}
+body:not(.auth-locked) #selection #results:not(.hidden){box-sizing:border-box;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:visible!important;flex:1 1 0;padding:0}
+body:not(.auth-locked) #selection #results>.qr-card{box-sizing:border-box;min-width:0;width:100%;max-width:100%;height:auto!important;min-height:0!important;flex:1 1 0;overflow:auto!important;scrollbar-width:none}
+body:not(.auth-locked) #selection #results>.qr-card::-webkit-scrollbar{display:none}
 body:not(.auth-locked) #selection #results .resultpanel{box-sizing:border-box;display:flex!important;flex-direction:column;align-items:center;justify-content:center;width:100%!important;max-width:100%!important;min-width:0;min-height:0;padding:0!important;gap:var(--qr-home-row-gap)!important}
 body:not(.auth-locked) #results .qr-result-subject{align-self:flex-start;background:var(--qr-subject-mark,var(--quiz-subject-color));color:var(--qr-home-ink);border-radius:var(--qr-home-pill-radius);padding:var(--qr-flat-pill-padding);font-size:var(--qr-font-body);font-weight:800;line-height:1.4}
 body:not(.auth-locked) #results .qr-result-stars{display:flex;align-items:center;gap:var(--qr-home-row-gap);font-size:22px;color:var(--qr-home-primary);line-height:1}
@@ -1690,7 +1689,7 @@ body:not(.auth-locked) #results .qr-result-time svg{width:1em;height:1em}
 body:not(.auth-locked) #selection #results .qr-result-actions .resultbutton{font-weight:800}
 body:not(.auth-locked) #selection #results .qr-result-actions .qr-result-finish{background:var(--qr-home-primary)!important;color:white!important}
 body:not(.auth-locked) #selection #results .qr-result-actions .resultbutton:is(:hover,:focus-visible){background:var(--qr-home-focus)!important;color:var(--qr-home-ink)!important}
-@media(max-width:1080px){body:not(.auth-locked) #selection #results:not(.hidden){flex:none;overflow:visible}body:not(.auth-locked) #selection #results>.qr-card{min-height:0}}
+@media(max-width:1080px){body:not(.auth-locked) #selection #results:not(.hidden){flex:none}body:not(.auth-locked) #selection #results>.qr-card{flex:none;overflow:visible!important}}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
