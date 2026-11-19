@@ -1444,7 +1444,7 @@ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-overview{width
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom .qr-home-overview{align-items:center}
 
  /* Match Home's measured cut line and corresponding cards on every other desktop page. */
- body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell{height:var(--qr-home-reference-shell,auto)!important;grid-template-rows:minmax(0,1fr)}
+ body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell{height:min(calc(var(--qr-home-reference-shell,100%) + var(--qr-home-main-padding)),100%)!important;grid-template-rows:minmax(0,1fr)}
  body:not(.auth-locked) :is(#home,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-profile{box-sizing:border-box;height:var(--qr-home-reference-profile,auto);flex:0 0 auto;overflow:hidden}
  body:not(.auth-locked) :is(#scoresPage,#notesPage,#quizStart,#selection) .qr-home-highest{flex:1 1 0;min-height:0}
  body:not(.auth-locked) :is(#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{box-sizing:border-box;height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;max-height:var(--qr-home-reference-bottom,var(--qr-home-bottom-height))!important;flex:0 0 var(--qr-home-reference-bottom,var(--qr-home-bottom-height))}
