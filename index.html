@@ -1600,7 +1600,10 @@ body:not(.auth-locked) #quizStart #subjects{display:flex!important;flex-wrap:wra
  body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:none!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom{display:flex!important;flex-direction:column;gap:var(--qr-home-gap)!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface,body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot>.qr-home-surface{height:auto!important;max-height:none!important;min-height:0!important;flex:none}
- body:not(.auth-locked) #home .qr-home-bottom>section:nth-child(2){display:none!important}
+ /* Mobile Overview grows with its chart and stats instead of collapsing under size containment. */
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom .qr-home-overview{container-type:inline-size;grid-template-rows:auto;min-height:0!important;height:auto!important;max-height:none!important;overflow:visible}
+ body:not(.auth-locked) :is(#home,#scoresPage) .qr-home-bottom .qr-home-overview .qr-home-ring{width:100%;max-width:var(--qr-home-bottom-height);height:auto;min-width:0;aspect-ratio:1}
+ body:not(.auth-locked) #scoresPage #qrScoresOverviewSlot{height:auto!important;min-height:0;flex:0 0 auto}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-card-scroll{overflow:visible!important;scrollbar-gutter:auto;padding-inline-end:0}
  body:not(.auth-locked) #notesPage .qr-note-glossary{overflow:visible}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--qr-home-row-gap)!important}
