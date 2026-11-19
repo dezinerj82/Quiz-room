@@ -1878,7 +1878,23 @@ let orderChosen=[],bookmarks=new Set(),answerSnapshots={},questionOutcomes={},re
 function dropStep(event){event.preventDefault();const i=Number(event.dataTransfer.getData('text/plain'));if(Number.isInteger(i))pickStep(i)}
 function pickStep(i){if(answered||orderChosen.includes(i))return;orderChosen.push(i);paintSteps();if(orderChosen.length===questions[index].steps.length)submitAnswer()}
 function undoStep(){if(answered)return;orderChosen.pop();paintSteps()}
-function paintSteps(){let q=questions[index];$('answers').innerHTML='<div class="sequence"><div class="sequencepicked" ondragover="event.preventDefault()" ondrop="dropStep(event)">'+(orderChosen.map(i=>'<span class="picked">'+escapeHtml(q.shuffled[i])+'</span>').join('')+Array.from({length:q.steps.length-orderChosen.length},()=>'<span class="qr-order-slot" aria-hidden="true"></span>').join(''))+'</div><div class="stepgrid">'+q.shuffled.map((v,i)=>orderChosen.includes(i)?'':'<button draggable="true" ondragstart="event.dataTransfer.setData(&quot;text/plain&quot;,&quot;'+i+'&quot;)" class="answer step" '+(orderChosen.includes(i)?'disabled':'')+' onclick="pickStep('+i+')">'+escapeHtml(v)+'</button>').join('')+'</div><button class="undo" onclick="undoStep()">Undo last step</button></div>'}
+function qrPillDrag(event,i){
+ const el=event.currentTarget,dt=event.dataTransfer;
+ dt.setData('text/plain',String(i));
+ const rect=el.getBoundingClientRect(),style=getComputedStyle(el),w=Math.ceil(rect.width),h=Math.ceil(rect.height);
+ if(!w||!h||!dt.setDragImage)return;
+ const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+ const ctx=canvas.getContext('2d');if(!ctx)return;
+ ctx.fillStyle=style.backgroundColor;ctx.beginPath();ctx.roundRect(0,0,w,h,Math.min(w,h)/2);ctx.fill();
+ ctx.fillStyle=style.color;ctx.font=style.fontWeight+' '+style.fontSize+' '+style.fontFamily;ctx.textAlign='center';ctx.textBaseline='middle';
+ const max=Math.max(1,w-2*(parseFloat(style.paddingLeft)||8)),lines=[];let line='';
+ for(const word of el.textContent.trim().split(/\s+/)){const candidate=line?line+' '+word:word;if(line&&ctx.measureText(candidate).width>max){lines.push(line);line=word}else line=candidate}if(line)lines.push(line);
+ const lh=parseFloat(style.lineHeight)||parseFloat(style.fontSize)*1.4;
+ lines.forEach((v,j)=>ctx.fillText(v,w/2,h/2+(j-(lines.length-1)/2)*lh,max));
+ canvas.style.cssText='position:fixed;left:-10000px;top:0;pointer-events:none;background:transparent';
+ document.body.appendChild(canvas);dt.setDragImage(canvas,Math.max(0,Math.min(w,event.clientX-rect.left)),Math.max(0,Math.min(h,event.clientY-rect.top)));setTimeout(()=>canvas.remove(),0);
+}
+function paintSteps(){let q=questions[index];$('answers').innerHTML='<div class="sequence"><div class="sequencepicked" ondragover="event.preventDefault()" ondrop="dropStep(event)">'+(orderChosen.map(i=>'<span class="picked">'+escapeHtml(q.shuffled[i])+'</span>').join('')+Array.from({length:q.steps.length-orderChosen.length},()=>'<span class="qr-order-slot" aria-hidden="true"></span>').join(''))+'</div><div class="stepgrid">'+q.shuffled.map((v,i)=>orderChosen.includes(i)?'':'<button draggable="true" ondragstart="qrPillDrag(event,'+i+')" class="answer step" '+(orderChosen.includes(i)?'disabled':'')+' onclick="pickStep('+i+')">'+escapeHtml(v)+'</button>').join('')+'</div><button class="undo" onclick="undoStep()">Undo last step</button></div>'}
 /* Existing blank-choice questions retain their type and IDs for score compatibility. */
 function qrDropQuestion(q){
  return escapeHtml(String(q.q).replace(/^Fill in the blank(?: with the correct verb)?:\s*/i,'').replace(/\s*\(([^()]*\s[/]\s[^()]*)\)\s*$/,'').trim());
@@ -1902,7 +1918,7 @@ function qrSortDrop(event,g){event.preventDefault();const raw=event.dataTransfer
 function qrSortAssign(g,i=qrSortSelected){const q=questions[index];if(answered||q?.type!=='sort'||!Number.isInteger(i)||!q.items[i]||!q.groups[g])return;qrSortAssignments[i]=g;qrSortSelected=-1;qrPaintSort();if(Object.keys(qrSortAssignments).length===q.items.length)submitAnswer()}
 function qrPaintSort(marked=false){
  const q=questions[index];
- const item=(x,i)=>'<button type="button" class="answer qr-sort-item'+(i===qrSortSelected?' selected':'')+'" draggable="true" ondragstart="event.dataTransfer.setData(\'text/plain\',\''+i+'\')" onclick="qrSortPick('+i+')" aria-pressed="'+(i===qrSortSelected)+'">'+escapeHtml(x.text)+'</button>';
+ const item=(x,i)=>'<button type="button" class="answer qr-sort-item'+(i===qrSortSelected?' selected':'')+'" draggable="true" ondragstart="qrPillDrag(event,'+i+')" onclick="qrSortPick('+i+')" aria-pressed="'+(i===qrSortSelected)+'">'+escapeHtml(x.text)+'</button>';
  const results=(g)=>q.items.map((x,i)=>qrSortAssignments[i]===g?marked?'<div class="answer qr-typed-result '+(x.group===g?'answer-correct':'answer-wrong')+'">'+escapeHtml(x.text)+'</div>':'<span class="qr-sort-chip">'+escapeHtml(x.text)+'</span>':'').join('');
  $('answers').innerHTML='<div class="qr-sort-pool">'+(marked?'':q.items.map((x,i)=>Object.hasOwn(qrSortAssignments,i)?'':item(x,i)).join(''))+'</div><div class="qr-sort-groups">'+q.groups.map((g,i)=>'<div class="qr-sort-group" ondragover="event.preventDefault()" ondrop="qrSortDrop(event,'+i+')"><button type="button" class="answer qr-sort-target" onclick="qrSortAssign('+i+')" '+(marked?'disabled':'')+'>'+escapeHtml(g)+'</button><div class="qr-sort-content">'+(results(i)||'<span class="qr-sort-placeholder">Drop here</span>')+'</div></div>').join('')+'</div>';
 }
