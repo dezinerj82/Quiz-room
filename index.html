@@ -1795,6 +1795,12 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer
 body:not(.auth-locked) #home .qr-home-top-group{display:flex;flex-direction:column;width:100%;min-width:0;flex:0 0 auto}
 body:not(.auth-locked) #home .qr-home-top-group>.qr-top{margin:0 0 var(--qr-home-gap)!important}
 body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{margin:0!important}
+
+/* Invisible Home groups: move the profile details and subjects as units. */
+body:not(.auth-locked) #home .qr-home-profile-group{display:flex;flex-direction:column;align-items:center;gap:var(--qr-home-paragraph-gap);width:100%;min-width:0}
+body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0}
+body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{margin:0!important}
+body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{margin:0!important}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1817,10 +1823,12 @@ body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{margin:0!import
 <nav class="qr-side" aria-label="Main menu"><div class="qr-nav-brand"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-6 10 6-10 6L2 9Z"/><path d="M6 12v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span>Quiz Room</span></div><div class="qr-home-nav-links"><button onclick="qrOpen('home')" title="Home"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span class="qr-nav-label">Home</span></button><button onclick="qrOpen('quizStart')" title="Quiz"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg><span class="qr-nav-label">Quiz</span></button><button onclick="qrOpen('scoresPage')" title="Scores"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13h4v7M10 20V9h4v11M16 20V4h4v16M2 20h20"/></svg><span class="qr-nav-label">Scores</span></button><button onclick="qrOpen('notesPage')" title="Notes"><svg class="qr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="qr-nav-label">Notes</span></button></div><button type="button" class="qr-sidebar-toggle" onclick="qrToggleSidebar(event)" aria-label="Expand navigation" aria-expanded="false" title="Expand navigation"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(-90 10 10)"/></svg></button></nav>
 <div class="qr-home-side" aria-label="Profile and best scores">
  <section class="qr-home-profile qr-home-surface" aria-label="Your profile">
+  <div class="qr-home-profile-group">
   <div class="qr-home-portrait"><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden><span class="qr-home-avatar-initial" aria-hidden="true">★</span></div>
   <h2 id="qrHomeName">Student</h2>
   <p id="qrHomeLevel" class="qr-home-accent">Quiz Room learner</p>
   <p class="qr-home-subtitle">Your learning journey</p>
+  </div>
   <div class="qr-home-stats">
    <div><span>Quizzes</span><strong id="qrHomeQuizzes">0</strong></div>
    <div><span>Avg. Score</span><strong id="qrHomeAverage">—</strong></div>
@@ -1841,14 +1849,14 @@ body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{margin:0!import
   <div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div>
  </section>
  </div>
- <div class="qr-mobile-stats"><div><span>Quizzes</span><strong id="qrMobileQuizzes">0</strong></div><div><span>Avg. Score</span><strong id="qrMobileAverage">—</strong></div><div><span>Subjects</span><strong id="qrMobileSubjects">0</strong></div></div><div class="qr-home-section-title"><h2>Subjects</h2><p>Choose a subject to practise</p></div>
+ <div class="qr-mobile-stats"><div><span>Quizzes</span><strong id="qrMobileQuizzes">0</strong></div><div><span>Avg. Score</span><strong id="qrMobileAverage">—</strong></div><div><span>Subjects</span><strong id="qrMobileSubjects">0</strong></div></div><div class="qr-home-subject-group"><div class="qr-home-section-title"><h2>Subjects</h2><p>Choose a subject to practise</p></div>
  <div class="qr-home-subjects" aria-label="Available quiz subjects">
   <button class="qr-home-subject" data-subject="English" onclick="qrOpen('quizStart')">English</button>
   <button class="qr-home-subject" data-subject="Malay" onclick="qrOpen('quizStart')">Malay</button>
   <button class="qr-home-subject" data-subject="Korean" onclick="qrOpen('quizStart')">Korean</button>
   <button class="qr-home-subject" data-subject="Math" onclick="qrOpen('quizStart')">Math</button>
   <button class="qr-home-subject" data-subject="Science" onclick="qrOpen('quizStart')">Science</button>
- </div>
+ </div></div>
  <div class="qr-home-bottom">
   <section><div class="qr-home-section-title"><h2>Recent Activity</h2><div class="qr-scroll-controls"><button type="button" class="qr-scroll-pill" aria-label="Scroll up" onclick="qrScrollCard('qrHomeActivity',-1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(180 10 10)"/></svg></button><button type="button" class="qr-scroll-pill" aria-label="Scroll down" onclick="qrScrollCard('qrHomeActivity',1)"><svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(0 10 10)"/></svg></button></div></div><div class="qr-home-surface qr-home-activity"><div id="qrHomeActivity" class="qr-card-scroll"><p class="qr-empty-state">Your completed quizzes will appear here.</p></div></div></section>
   <section><div class="qr-home-section-title"><h2>Overview</h2></div><div class="qr-home-surface qr-home-overview"><div class="qr-home-ring" id="qrHomeRing"><strong id="qrHomeRingText">—</strong><span>Avg. Score</span></div><div class="qr-home-overview-stats"><p><span>Completed</span><strong id="qrHomeTotalAttempts">0 quizzes</strong></p><p><span>Subjects</span><strong id="qrHomeTotalSubjects">0 subjects</strong></p></div></div></section>
