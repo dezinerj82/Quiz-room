@@ -1810,6 +1810,12 @@ body:not(.auth-locked) #home .qr-home-profile{height:auto!important;min-height:0
 body:not(.auth-locked) #home .qr-home-bottom>section{padding-bottom:0!important;align-self:stretch!important}
 body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{align-self:stretch!important;flex:1 1 auto!important;min-height:0!important;margin-bottom:0!important}
 body:not(.auth-locked) #home .qr-home-bottom :is(.qr-home-activity,.qr-home-overview){padding-block:var(--qr-home-inner-padding)!important}
+/* Home stage alignment: top and section edges share one responsive baseline. */
+@media(min-width:1081px){
+body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-top:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) #home .qr-home-top-group{box-sizing:border-box;display:flex;flex-direction:column;min-height:0}
+body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{flex:1 1 auto!important;min-height:0!important}
+}
 /* Stage 3: align the two purple frames and extend them to the orange bottom. */
 @media(min-width:1081px){
 body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-bottom:0!important}
@@ -3473,5 +3479,20 @@ window.quizRoomGoogleEmail=()=>activeEmail;
 window.qrLoadAccount=qrLoadAccount;
 other.addEventListener("click",()=>login("",other));
 render();
+})();
+</script><script>
+/* Keep Home column boundaries aligned as the browser resizes. */
+(function(){
+ const sync=()=>{
+  const home=document.getElementById('home');
+  if(!home||getComputedStyle(home).display==='none')return;
+  const profile=home.querySelector('.qr-home-side>.qr-home-profile');
+  const top=home.querySelector('.qr-home-main>.qr-home-top-group');
+  if(!profile||!top)return;
+  if(window.innerWidth<=1080){top.style.removeProperty('height');return}
+  const target=Math.max(0,profile.getBoundingClientRect().bottom-top.getBoundingClientRect().top);
+  top.style.height=target+'px';
+ };
+ document.addEventListener('DOMContentLoaded',()=>{sync();window.addEventListener('resize',sync,{passive:true});if(window.ResizeObserver){const profile=document.querySelector('#home .qr-home-side>.qr-home-profile');if(profile)new ResizeObserver(sync).observe(profile)}});
 })();
 </script></body></html>
