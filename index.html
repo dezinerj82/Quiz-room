@@ -1810,10 +1810,12 @@ body:not(.auth-locked) #home .qr-home-profile{height:auto!important;min-height:0
 body:not(.auth-locked) #home .qr-home-bottom>section{padding-bottom:0!important;align-self:stretch!important}
 body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{align-self:stretch!important;flex:1 1 auto!important;min-height:0!important;margin-bottom:0!important}
 body:not(.auth-locked) #home .qr-home-bottom :is(.qr-home-activity,.qr-home-overview){padding-block:var(--qr-home-inner-padding)!important}
-/* Align the stage 3 section borders with the orange stage bottom. */
+/* Stage 3: align the two purple frames and extend them to the orange bottom. */
 @media(min-width:1081px){
-body:not(.auth-locked) #home .qr-home-main{padding-bottom:0!important}
-body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{margin-bottom:0!important}
+body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-bottom:0!important}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{gap:0!important;margin-bottom:0!important;align-items:stretch!important}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{height:100%!important;min-height:0!important}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{flex:1 1 auto!important}
 }
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
