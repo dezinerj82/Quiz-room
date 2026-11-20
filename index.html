@@ -1804,7 +1804,7 @@ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{margi
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{margin:0!important}
 
 /* Home stage 2: restore the shared inset inside the profile details frame. */
-body:not(.auth-locked) #home .qr-home-profile-group{padding-block:var(--qr-home-inner-padding);box-sizing:border-box}
+body:not(.auth-locked) #home .qr-home-profile-group{padding-block:0;box-sizing:border-box}
 body:not(.auth-locked) #home .qr-home-profile{height:auto!important;min-height:0!important;overflow:visible!important}
 /* Home stage 3: align each inner card's lower edge with its section. */
 body:not(.auth-locked) #home .qr-home-bottom>section{padding-bottom:0!important;align-self:stretch!important}
@@ -3523,7 +3523,7 @@ render();
    }
    const height=Math.max(0,top.getBoundingClientRect().bottom-profile.getBoundingClientRect().top);
    const next=height.toFixed(2)+'px';
-   if(profile.style.height!==next)profile.style.height=next;
+   if(profile.style.getPropertyValue('height')!==next||profile.style.getPropertyPriority('height')!=='important')profile.style.setProperty('height',next,'important');
   });
  }
  document.addEventListener('DOMContentLoaded',()=>{
@@ -3531,7 +3531,7 @@ render();
   window.addEventListener('resize',sync,{passive:true});
   if(window.ResizeObserver){
    const main=document.querySelector('#home .qr-home-shell>.qr-home-main');
-   if(main)new ResizeObserver(sync).observe(main);
+   if(main){const observer=new ResizeObserver(sync);observer.observe(main);const top=document.querySelector('#home .qr-home-main>.qr-home-top-group');if(top)observer.observe(top)}
   }
  });
 })();
