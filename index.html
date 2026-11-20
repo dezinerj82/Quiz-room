@@ -1802,6 +1802,18 @@ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{margin-top:0!import
 body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0;outline:2px solid #a45cff;outline-offset:0}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{margin:0!important}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{margin:0!important}
+
+/* Home stage 2: restore the shared inset inside the profile details frame. */
+body:not(.auth-locked) #home .qr-home-profile-group{padding-block:var(--qr-home-inner-padding);box-sizing:border-box}
+body:not(.auth-locked) #home .qr-home-profile{height:auto!important;min-height:0!important;overflow:visible!important}
+/* Home stage 3: align each inner card's lower edge with its section. */
+body:not(.auth-locked) #home .qr-home-bottom>section{padding-bottom:0!important;align-self:stretch!important}
+body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{align-self:stretch!important;flex:1 1 auto!important;min-height:0!important;margin-bottom:0!important}
+body:not(.auth-locked) #home .qr-home-bottom :is(.qr-home-activity,.qr-home-overview){padding-block:var(--qr-home-inner-padding)!important}
+/* Extend the two bottom sections to the orange stage edge on desktop. */
+@media(min-width:1081px){
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{margin-bottom:calc(-1 * var(--qr-home-main-padding))!important}
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
