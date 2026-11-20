@@ -1810,9 +1810,10 @@ body:not(.auth-locked) #home .qr-home-profile{height:auto!important;min-height:0
 body:not(.auth-locked) #home .qr-home-bottom>section{padding-bottom:0!important;align-self:stretch!important}
 body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{align-self:stretch!important;flex:1 1 auto!important;min-height:0!important;margin-bottom:0!important}
 body:not(.auth-locked) #home .qr-home-bottom :is(.qr-home-activity,.qr-home-overview){padding-block:var(--qr-home-inner-padding)!important}
-/* Extend the two bottom sections to the orange stage edge on desktop. */
+/* Align the stage 3 section borders with the orange stage bottom. */
 @media(min-width:1081px){
-body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{margin-bottom:calc(-1 * var(--qr-home-main-padding))!important}
+body:not(.auth-locked) #home .qr-home-main{padding-bottom:0!important}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{margin-bottom:0!important}
 }
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
