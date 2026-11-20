@@ -1741,7 +1741,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz .answers{row-gap:var(--q
 body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer-feedback{margin:0!important}
 
 /* Responsive Quiz Room: reuse existing cards, motion and shared tokens. Desktop >1080px unchanged. */
-@media (min-width:741px) and (max-width:1080px){
+@media (min-width:861px) and (max-width:1080px){
  body:not(.auth-locked){--qr-responsive-scale:.8;--qr-home-gap:calc(24px * var(--qr-responsive-scale));--qr-home-inner-padding:calc(24px * var(--qr-responsive-scale));--qr-home-main-padding:calc(32px * var(--qr-responsive-scale));--qr-home-row-gap:calc(12px * var(--qr-responsive-scale));--qr-home-row-padding:calc(11px * var(--qr-responsive-scale));--qr-home-paragraph-gap:calc(8px * var(--qr-responsive-scale));--qr-font-small:11.7px;--qr-font-body:13.5px;--qr-font-heading:19.8px;--qr-font-title:28.8px;--qr-home-stage-radius:calc(44px * .9);--qr-home-radius:calc(32px * .9);--qr-flat-pill-padding:.24em .75em}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell{display:grid!important;grid-template-columns:minmax(112px,14%) minmax(168px,22%) minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr)!important;align-items:stretch!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell>.qr-side{grid-column:1!important;grid-row:1!important;display:flex!important;flex-direction:column!important;min-height:100%!important;flex-wrap:nowrap!important;gap:var(--qr-home-gap)!important}
@@ -1753,7 +1753,7 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:var(--qr-home-row-gap)!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:var(--qr-home-gap)!important}
 }
-@media (max-width:740px){
+@media (max-width:860px){
  body:not(.auth-locked){--qr-responsive-scale:.7;--qr-home-gap:calc(24px * var(--qr-responsive-scale));--qr-home-inner-padding:calc(24px * var(--qr-responsive-scale));--qr-home-main-padding:calc(32px * var(--qr-responsive-scale));--qr-home-row-gap:calc(12px * var(--qr-responsive-scale));--qr-home-row-padding:calc(11px * var(--qr-responsive-scale));--qr-home-paragraph-gap:calc(8px * var(--qr-responsive-scale));--qr-font-small:11.05px;--qr-font-body:12.75px;--qr-font-heading:18.7px;--qr-font-title:27.2px;--qr-home-stage-radius:calc(44px * .85);--qr-home-radius:calc(32px * .85);--qr-flat-pill-padding:.2em .65em}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:var(--qr-home-gap)!important;grid-template-columns:none!important}
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-home-shell>.qr-side{order:0!important;min-height:0!important}
@@ -1769,6 +1769,24 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer
  body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-overview .qr-home-ring{max-width:100%!important}
  body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:flex!important}
  body:not(.auth-locked) #scoresPage .qr-home-side{order:1!important}
+
+/* Keep the existing top navigation horizontal and each stage full width when stacked. */
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell{display:flex!important;flex-direction:column!important;min-height:0!important;height:auto!important;max-height:none!important;align-items:stretch!important;gap:var(--qr-home-gap)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell>.qr-side{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;grid-template-rows:auto!important;align-items:center!important;min-height:0!important;height:auto!important;gap:var(--qr-home-inline-gap)!important;padding:var(--qr-home-row-gap)!important;order:0!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell .qr-nav-brand{grid-column:1!important;grid-row:1!important;max-width:100%!important;width:auto!important;min-width:0!important;margin:0!important;padding:0 var(--qr-home-row-gap) 0 0!important;white-space:nowrap!important;border-bottom:0!important;border-right:1px solid rgba(255,255,255,.3)!important;font-size:clamp(10px,2.5vw,var(--qr-font-body))!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell .qr-home-nav-links{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-column:2!important;grid-row:1!important;min-width:0!important;width:100%!important;gap:var(--qr-home-inline-gap)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell .qr-home-nav-links button{min-width:0!important;min-height:0!important;padding:var(--qr-flat-pill-padding)!important;gap:var(--qr-home-inline-gap)!important;white-space:nowrap!important;font-size:var(--qr-font-body)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell>.qr-home-side{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:auto!important;align-items:stretch!important;min-width:0!important;width:100%!important;min-height:0!important;height:auto!important;order:1!important;gap:var(--qr-home-row-gap)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell>.qr-home-side>.qr-home-surface{height:auto!important;max-height:none!important;min-width:0!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-shell.qr-home-shell>.qr-home-main{display:flex!important;flex-direction:column!important;order:2!important;grid-column:auto!important;grid-row:auto!important;min-width:0!important;width:100%!important;height:auto!important;max-height:none!important;overflow:visible!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-main>.qr-home-bottom{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:var(--qr-home-row-gap)!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom>section{min-width:0!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage) .qr-home-bottom>section>.qr-home-surface{height:auto!important;max-height:none!important;min-height:0!important;flex:1 1 auto!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:var(--qr-home-inline-gap)!important;min-width:0!important}
+ body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection) .qr-home-subjects>.qr-home-subject{min-width:0!important;font-size:clamp(10px,2.6vw,var(--qr-font-body))!important;padding:.2em .25em!important;white-space:nowrap!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-card.qr-quiz-content{min-height:clamp(260px,43dvh,460px)!important;height:auto!important;flex:1 1 auto!important}
+ body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions{margin-top:auto!important}
+ body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:flex!important}
 }
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
