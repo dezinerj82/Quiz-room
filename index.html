@@ -1791,6 +1791,11 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer
  body:not(.auth-locked) #selection.qr-active-stage #quiz .quizactions{margin-top:auto!important}
  body:not(.auth-locked) #scoresPage .qr-home-side .qr-home-profile{display:flex!important}
 }
+/* Home only: the title and greeting belong to the same existing Welcome card. */
+body:not(.auth-locked) #home .qr-home-main>.qr-home-welcome{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto minmax(0,1fr);align-items:center;gap:var(--qr-home-gap)!important;height:auto!important;min-height:var(--qr-home-top-height)!important}
+body:not(.auth-locked) #home .qr-home-welcome>.qr-top{grid-column:1/-1;grid-row:1;display:flex;justify-content:space-between;align-items:center;width:100%;min-width:0;margin:0!important;padding:0!important;gap:var(--qr-home-row-gap)!important;background:transparent!important}
+body:not(.auth-locked) #home .qr-home-welcome>div:first-of-type{grid-column:1;grid-row:2;min-width:0}
+body:not(.auth-locked) #home .qr-home-welcome>.qr-home-hero-mark{grid-column:2;grid-row:2;min-width:0}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
@@ -1830,8 +1835,8 @@ body:not(.auth-locked) #selection.qr-active-stage #quiz>.qr-quiz-content>.answer
  </section>
 </div>
 <div class="qr-main qr-home-main">
- <header class="qr-top"><h1>Home</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
  <section class="qr-home-welcome">
+  <header class="qr-top"><h1>Home</h1><div class="qr-profile-actions"><button class="qr-profile-btn" onclick="qrOpen('profilePage')">Profile</button><button type="button" class="qr-profile-btn qr-home-logout" onclick="qrLogout()">Log out</button></div></header>
   <div><h2 id="qrGreeting">Welcome back!</h2><p>Ready for another learning adventure?</p><button class="qr-btn qr-home-cta" data-primary-pill onclick="qrOpen('quizStart')">Continue Quiz <svg class="qr-direction-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5 5-5" transform="rotate(-90 10 10)"/></svg></button></div>
   <div class="qr-home-hero-mark" aria-hidden="true"><span>✦</span><span>✧</span><span>★</span></div>
  </section>
