@@ -1796,9 +1796,10 @@ body:not(.auth-locked) #home .qr-home-top-group{display:flex;flex-direction:colu
 body:not(.auth-locked) #home .qr-home-top-group>.qr-top{margin:0 0 var(--qr-home-gap)!important}
 body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{margin:0!important}
 
-/* Invisible Home groups: move the profile details and subjects as units. */
-body:not(.auth-locked) #home .qr-home-profile-group{display:flex;flex-direction:column;align-items:center;gap:var(--qr-home-paragraph-gap);width:100%;min-width:0}
-body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0}
+/* Visible grouping frames only; outline does not change element sizing. */
+body:not(.auth-locked) #home .qr-home-profile-group{display:flex;flex-direction:column;align-items:center;gap:var(--qr-home-paragraph-gap);width:100%;min-width:0;outline:2px solid #f5df00;outline-offset:0}
+body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{margin-top:0!important}
+body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0;outline:2px solid #a45cff;outline-offset:0}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{margin:0!important}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{margin:0!important}
 </style><script>
