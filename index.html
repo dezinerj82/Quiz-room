@@ -1797,9 +1797,9 @@ body:not(.auth-locked) #home .qr-home-top-group>.qr-top{margin:0 0 var(--qr-home
 body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{margin:0!important}
 
 /* Visible grouping frames only; outline does not change element sizing. */
-body:not(.auth-locked) #home .qr-home-profile-group{display:flex;flex-direction:column;align-items:center;gap:var(--qr-home-paragraph-gap);width:100%;min-width:0;outline:2px solid #f5df00;outline-offset:0}
+body:not(.auth-locked) #home .qr-home-profile-group{display:flex;flex-direction:column;align-items:center;gap:var(--qr-home-paragraph-gap);width:100%;min-width:0}
 body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{margin-top:0!important}
-body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0;outline:2px solid #a45cff;outline-offset:0}
+body:not(.auth-locked) #home .qr-home-subject-group{display:flex;flex-direction:column;gap:var(--qr-home-gap);width:100%;min-width:0;flex:0 0 auto;margin:var(--qr-home-gap) 0 0}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{margin:0!important}
 body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{margin:0!important}
 
@@ -1816,12 +1816,24 @@ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-top:v
 body:not(.auth-locked) #home .qr-home-top-group{box-sizing:border-box;display:flex;flex-direction:column;min-height:0}
 body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{flex:1 1 auto!important;min-height:0!important}
 }
-/* Stage 3: align the two purple frames and extend them to the orange bottom. */
+/* Stage 3: equal card columns, default gap, and lower inset matching Highest Score. */
 @media(min-width:1081px){
-body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-bottom:0!important}
-body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{gap:0!important;margin-bottom:0!important;align-items:stretch!important}
-body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{display:grid!important;grid-template-rows:auto minmax(0,1fr)!important;height:100%!important;min-height:0!important;align-content:stretch!important}
-body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{box-sizing:border-box!important;display:grid!important;height:100%!important;max-height:none!important;min-height:0!important;width:100%!important;align-self:stretch!important}
+body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{padding-bottom:var(--qr-home-inner-padding)!important}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ column-gap:var(--qr-home-gap)!important;row-gap:0!important;
+ margin:0!important;align-items:stretch!important;min-width:0!important;
+}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{
+ display:grid!important;grid-template-rows:auto minmax(0,1fr)!important;
+ width:100%!important;min-width:0!important;height:100%!important;
+ min-height:0!important;align-content:stretch!important;
+}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
+ box-sizing:border-box!important;display:grid!important;height:100%!important;
+ max-height:none!important;min-height:0!important;width:100%!important;
+ padding:var(--qr-home-inner-padding)!important;align-self:stretch!important;
+}
 }
 /* Stage 2 follows Stage 3: 40% top, 60% bottom; subjects are 20% of Stage 3's lower 60%. */
 @media(min-width:1081px){
