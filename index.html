@@ -1983,6 +1983,49 @@ body:not(.auth-locked) #home .qr-home-overview-group{
  box-sizing:border-box!important;
  padding:0!important;
 }
+
+/* Home group padding only: purple cards, orange sections, green content.
+   Keep existing sizes, ratios, positioning, and other screens unchanged. */
+@media(min-width:1081px){
+ /* Purple: shared inner padding on all four sides. */
+ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-side,
+ body:not(.auth-locked) #home .qr-home-side>.qr-home-profile,
+ body:not(.auth-locked) #home .qr-home-side>.qr-home-highest{
+  box-sizing:border-box!important;
+  padding:var(--qr-home-inner-padding)!important;
+ }
+ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main{
+  box-sizing:border-box!important;
+  padding:var(--qr-home-main-padding)!important;
+ }
+ /* Orange: no horizontal inset, default vertical inset. */
+ body:not(.auth-locked) #home .qr-side>.qr-nav-brand,
+ body:not(.auth-locked) #home .qr-side>.qr-home-nav-links,
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-profile-group,
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats,
+ body:not(.auth-locked) #home .qr-home-highest>.qr-home-best-title,
+ body:not(.auth-locked) #home .qr-home-highest>.qr-home-best-level,
+ body:not(.auth-locked) #home .qr-home-highest>.qr-best-list,
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-top-group,
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-subject-group,
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+  box-sizing:border-box!important;
+  padding-inline:0!important;
+  padding-block:var(--qr-home-inner-padding)!important;
+ }
+ /* Green: content uses the same vertical padding with no horizontal inset. */
+ body:not(.auth-locked) #home .qr-home-top-group>.qr-top,
+ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title,
+ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects,
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title,
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface,
+ body:not(.auth-locked) #home .qr-home-activity>#qrHomeActivity,
+ body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
+  box-sizing:border-box!important;
+  padding-inline:0!important;
+  padding-block:var(--qr-home-inner-padding)!important;
+ }
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
