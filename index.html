@@ -1812,6 +1812,7 @@ body:not(.auth-locked) #home .qr-home-profile-group :is(.qr-home-accent,.qr-home
  font-size:calc(var(--qr-font-small) * .92)!important;line-height:1.25!important;
 }
 body:not(.auth-locked) #home .qr-home-profile-group :is(h2,p){margin:0!important}
+body:not(.auth-locked) #home .qr-home-profile-details{min-width:0;}
 body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{
  margin-top:0!important;
 }
@@ -1869,8 +1870,37 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  body:not(.auth-locked) #home .qr-home-profile{
   justify-content:flex-start!important;
  }
+ /* Profile top orange section: square image first, flexible text in remaining width. */
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-profile-group{
+  display:grid!important;
+  grid-template-columns:clamp(64px,6vw,96px) minmax(0,1fr)!important;
+  align-items:center!important;
+  column-gap:var(--qr-home-row-gap)!important;
+  width:100%!important;min-width:0!important;
+ }
  body:not(.auth-locked) #home .qr-home-profile-group .qr-home-portrait{
-  flex:0 0 64px!important;width:64px!important;height:64px!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  place-items:center!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:1 / 1!important;
+  margin:0!important;
+  min-width:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group .qr-home-profile-details{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  min-width:0!important;
+  gap:2px!important;
+  text-align:left!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group .qr-home-profile-details :is(h2,p){
+  text-align:left!important;
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
  }
  body:not(.auth-locked) #home .qr-home-profile-group{gap:2px!important}
  body:not(.auth-locked) #home .qr-home-profile-group h2{
@@ -2011,9 +2041,11 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  <section class="qr-home-profile qr-home-surface" aria-label="Your profile">
   <div class="qr-home-profile-group">
   <div class="qr-home-portrait"><img id="qrHomeAvatar" class="qr-avatar" alt="Profile photo" hidden><span class="qr-home-avatar-initial" aria-hidden="true">★</span></div>
-  <h2 id="qrHomeName">Student</h2>
-  <p id="qrHomeLevel" class="qr-home-accent">Quiz Room learner</p>
-  <p class="qr-home-subtitle">Your learning journey</p>
+  <div class="qr-home-profile-details">
+   <h2 id="qrHomeName">Student</h2>
+   <p id="qrHomeLevel" class="qr-home-accent">Quiz Room learner</p>
+   <p class="qr-home-subtitle">Your learning journey</p>
+  </div>
   </div>
   <div class="qr-home-stats">
    <div><span>Quizzes</span><strong id="qrHomeQuizzes">0</strong></div>
