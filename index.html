@@ -1959,7 +1959,7 @@ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{
   padding-inline:var(--qr-home-inner-padding)!important;
  }
 }
-/* Home-only checks: default padding on all sides and full-height activity content. */
+/* Home-only navigation inset. */
 @media(min-width:1081px){
  body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-side{
   padding:var(--qr-home-inner-padding)!important;
@@ -1967,21 +1967,6 @@ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{
 }
 body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  margin-bottom:var(--qr-home-gap)!important;
-}
-body:not(.auth-locked) #home .qr-home-activity{
- display:grid!important;grid-template-rows:minmax(0,1fr)!important;
- align-content:stretch!important;padding:var(--qr-home-inner-padding)!important;
-}
-body:not(.auth-locked) #home #qrHomeActivity{
- box-sizing:border-box!important;width:100%!important;height:100%!important;
- min-height:0!important;overflow-y:auto!important;
-}
-body:not(.auth-locked) #home .qr-home-overview{
- padding:var(--qr-home-inner-padding)!important;
-}
-body:not(.auth-locked) #home .qr-home-overview-group{
- box-sizing:border-box!important;
- padding:0!important;
 }
 
 /* Home group padding only: purple cards, orange sections, green content.
@@ -2025,7 +2010,9 @@ body:not(.auth-locked) #home .qr-home-overview-group{
  }
 }
 
-/* Home Stage 3 only: preserve fixed groups, restore the two separate bottom cards. */
+/* Home Stage 3: shared nested structure for the two bottom cards.
+   Orange = each section; outer green = rounded white card; inner green = rectangular content.
+   Both sections are equal width and share one stable grid row. */
 @media(min-width:1081px){
  body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{
   box-sizing:border-box!important;
@@ -2034,59 +2021,11 @@ body:not(.auth-locked) #home .qr-home-overview-group{
  body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
   display:grid!important;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  column-gap:var(--qr-home-gap)!important;
-  min-width:0!important;
-  align-items:stretch!important;
- }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{
-  display:grid!important;
-  grid-template-rows:auto minmax(0,1fr)!important;
   gap:var(--qr-home-gap)!important;
-  min-width:0!important;
-  min-height:0!important;
-  height:100%!important;
- }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-section-title{
-  margin:0!important;
-  padding:0!important;
- }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
-  display:grid!important;
-  box-sizing:border-box!important;
-  width:100%!important;
-  height:100%!important;
-  min-width:0!important;
-  min-height:0!important;
-  max-height:none!important;
-  margin:0!important;
-  padding:var(--qr-home-inner-padding)!important;
-  background:#fff!important;
-  border:0!important;
-  border-radius:var(--qr-home-radius)!important;
-  box-shadow:var(--qr-home-shadow)!important;
- }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-overview{
-  display:flex!important;
-  justify-content:center!important;
-  align-items:center!important;
-  overflow:hidden!important;
- }
- body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
-  width:100%!important;
-  padding:0!important;
- }
-}
-
-/* Home Stage 3 bottom: each direct child is its own orange section.
-   The two cards stay equal and their green content areas remain independent. */
-@media(min-width:1081px){
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
-  display:grid!important;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
-  column-gap:var(--qr-home-gap)!important;
   align-items:stretch!important;
+  min-width:0!important;
  }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{
+ body:not(.auth-locked) #home .qr-home-bottom>section{
   display:grid!important;
   grid-template-columns:minmax(0,1fr)!important;
   grid-template-rows:auto minmax(0,1fr)!important;
@@ -2096,47 +2035,54 @@ body:not(.auth-locked) #home .qr-home-overview-group{
   height:100%!important;
   padding:0!important;
  }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-section-title{
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
   box-sizing:border-box!important;
   margin:0!important;
   padding:0!important;
-  min-width:0!important;
  }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{
   box-sizing:border-box!important;
-  width:100%!important;
-  height:100%!important;
-  min-width:0!important;
-  min-height:0!important;
-  max-height:none!important;
-  padding:var(--qr-home-inner-padding)!important;
-  background:#fff!important;
-  border:0!important;
-  border-radius:var(--qr-home-radius)!important;
-  box-shadow:var(--qr-home-shadow)!important;
- }
- /* Overview only: stretch its green content group to match the existing Recent Activity frame. */
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-overview{
   display:grid!important;
   grid-template-columns:minmax(0,1fr)!important;
   grid-template-rows:minmax(0,1fr)!important;
   align-items:stretch!important;
   justify-items:stretch!important;
-  align-content:stretch!important;
-  justify-content:stretch!important;
- }
- body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
-  box-sizing:border-box!important;
-  display:grid!important;
-  grid-template-columns:minmax(0,3fr) minmax(0,2fr)!important;
-  align-items:center!important;
-  gap:var(--qr-home-row-gap)!important;
   width:100%!important;
   height:100%!important;
   min-width:0!important;
   min-height:0!important;
-  border-radius:0!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:var(--qr-home-inner-padding)!important;
+  background:#fff!important;
+  border:0!important;
+  border-radius:var(--qr-home-radius)!important;
+  box-shadow:var(--qr-home-shadow)!important;
+  overflow:hidden!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom .qr-home-activity>#qrHomeActivity,
+ body:not(.auth-locked) #home .qr-home-bottom .qr-home-overview>.qr-home-overview-group{
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-height:none!important;
   padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  align-self:stretch!important;
+  justify-self:stretch!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom .qr-home-activity>#qrHomeActivity{
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom .qr-home-overview>.qr-home-overview-group{
+  display:grid!important;
+  grid-template-columns:minmax(0,3fr) minmax(0,2fr)!important;
+  gap:var(--qr-home-row-gap)!important;
+  align-items:center!important;
  }
  body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-ring{
   max-width:100%!important;
@@ -2144,7 +2090,12 @@ body:not(.auth-locked) #home .qr-home-overview-group{
   justify-self:center!important;
  }
 }
-/* Show the two actual orange sections when the DevTools frame overlay is active. */
+/* The temporary DevTools outlines show the Overview outer card as green,
+   just like Recent Activity, without leaving outlines on the live site. */
+#home:has([data-qr-debug="green"]) .qr-home-bottom .qr-home-overview{
+ outline:2px solid #00c853!important;
+ outline-offset:-2px!important;
+}
 #home .qr-home-bottom[data-qr-debug="orange"]>section{
  outline:2px solid #ff8500!important;
  outline-offset:-2px!important;
