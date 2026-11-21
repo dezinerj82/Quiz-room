@@ -2076,6 +2076,62 @@ body:not(.auth-locked) #home .qr-home-overview-group{
   padding:0!important;
  }
 }
+
+/* Home Stage 3 bottom: each direct child is its own orange section.
+   The two cards stay equal and their green content areas remain independent. */
+@media(min-width:1081px){
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  column-gap:var(--qr-home-gap)!important;
+  align-items:stretch!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto minmax(0,1fr)!important;
+  gap:var(--qr-home-gap)!important;
+  min-width:0!important;
+  min-height:0!important;
+  height:100%!important;
+  padding:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-section-title{
+  box-sizing:border-box!important;
+  margin:0!important;
+  padding:0!important;
+  min-width:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-height:none!important;
+  padding:var(--qr-home-inner-padding)!important;
+  background:#fff!important;
+  border:0!important;
+  border-radius:var(--qr-home-radius)!important;
+  box-shadow:var(--qr-home-shadow)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-overview{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
+  box-sizing:border-box!important;
+  width:100%!important;
+  min-width:0!important;
+  padding:0!important;
+ }
+}
+/* Show the two actual orange sections when the DevTools frame overlay is active. */
+#home .qr-home-bottom[data-qr-debug="orange"]>section{
+ outline:2px solid #ff8500!important;
+ outline-offset:-2px!important;
+}
 </style><script>
 /* Recalculate readable text colors from the six shared color groups on load. */
 (function(){
