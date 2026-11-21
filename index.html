@@ -131,7 +131,7 @@ body:not(.auth-locked) .qr-main :is(button,.qr-btn,.qr-file-button):not(:disable
 }
 body:not(.auth-locked) .qr-profile-btn{background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;border:0!important;padding:var(--qr-unified-padding)!important}
 body:not(.auth-locked) .qr-btn{background:var(--qr-navigation)!important;color:var(--qr-on-navigation)!important;border:0!important}
-body:not(.auth-locked) #home .qr-hero .qr-btn{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important}
+
 body:not(.auth-locked) .qr-steps button{background:var(--qr-secondary)!important;color:var(--qr-on-secondary)!important;border:0!important}
 
 
@@ -874,9 +874,7 @@ body:not(.auth-locked) #quiz .quizactions .pill:disabled{opacity:var(--qr-inacti
 
 
 
-/* Dashboard best scores: one card aligned beside greeting; values come from saved attempts. */
-body:not(.auth-locked) #home .qr-home-grid{grid-template-columns:minmax(0,1fr);align-items:stretch}
-body:not(.auth-locked) #home .qr-home-grid>.qr-card{height:100%;margin-bottom:0!important}
+
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-best-card{display:flex;flex-direction:column;gap:var(--density-space)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-best-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--density-space)}
 body:not(.auth-locked) :is(#home,#qrHomeMeasureCopy,#scoresPage,#notesPage,#quizStart,#selection,#profilePage) .qr-best-heading h2{margin:0}
@@ -1914,7 +1912,7 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  }
  body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{
   box-sizing:border-box!important;
-  flex:0 0 auto!important;flex-shrink:0!important;
+  flex:0 0 auto!important;
   margin-top:0!important;min-height:0!important;
   padding:5px 0 0!important;
  }
@@ -1961,8 +1959,6 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
   flex:0 0 auto!important;height:auto!important;min-height:0!important;
   padding:0 var(--qr-home-inner-padding)!important;
  }
- /* Keep the Welcome heading and paragraph's normal spacing.
-    Only the outside top and bottom inset is removed. */
  /* Two equal orange sections, each with its own title and white rounded card. */
  body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
