@@ -2031,6 +2031,159 @@ body:not(.auth-locked) #home [data-qr-home-group]{
   padding-bottom:24px!important;
  }
 }
+/* Home responsive UI: keep the padding; resize or rearrange content instead. */
+body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{
+ padding:24px!important;
+ min-width:0!important;
+ min-height:0!important;
+ height:auto!important;
+}
+body:not(.auth-locked) #home .qr-home-welcome>div:first-child{
+ flex:1 1 0!important;
+ min-width:0!important;
+}
+body:not(.auth-locked) #home .qr-home-welcome h2{
+ font-size:clamp(15px,1.4vw,22px)!important;
+}
+body:not(.auth-locked) #home .qr-home-welcome p{
+ font-size:clamp(11px,.95vw,15px)!important;
+}
+body:not(.auth-locked) #home .qr-home-hero-mark{
+ flex-shrink:1!important;
+ max-width:34%!important;
+}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section{
+ min-width:0!important;
+}
+body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
+ box-sizing:border-box!important;
+ min-width:0!important;
+ padding:24px!important;
+ overflow:auto!important;
+}
+body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
+ box-sizing:border-box!important;
+ min-width:0!important;
+ min-height:0!important;
+ width:100%!important;
+ max-height:none!important;
+ gap:12px!important;
+}
+body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-ring{
+ box-sizing:border-box!important;
+ width:min(100%,220px)!important;
+ height:auto!important;
+ aspect-ratio:1 / 1!important;
+ min-width:0!important;
+ flex:0 0 auto!important;
+ max-height:none!important;
+ justify-self:center!important;
+}
+body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-overview-stats{
+ box-sizing:border-box!important;
+ min-width:0!important;
+ width:100%!important;
+ padding:0!important;
+ overflow-wrap:anywhere;
+}
+body:not(.auth-locked) #home .qr-home-overview-stats :is(span,strong){
+ font-size:clamp(10px,.85vw,14px)!important;
+}
+body:not(.auth-locked) #home .qr-home-subject{
+ min-width:0!important;
+ font-size:clamp(10px,.9vw,14px)!important;
+}
+body:not(.auth-locked) #home .qr-home-profile-group .qr-home-portrait{
+ max-width:100%!important;
+ aspect-ratio:1/1!important;
+}
+@media(min-width:1081px){
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-profile-group{
+  grid-template-columns:minmax(0,40%) minmax(0,1fr)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{
+  padding:24px!important;
+ }
+}
+/* Shorter windows: let content scroll rather than flatten the chart or cut off stats. */
+@media(max-height:750px) and (min-width:1081px){
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+  min-height:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-surface{
+  overflow:auto!important;
+ }
+}
+/* When the available space is tight, place the chart above its table. */
+@media(max-width:1250px), (max-height:750px){
+ body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  align-items:stretch!important;
+  height:auto!important;
+  min-height:100%!important;
+  gap:12px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-ring{
+  width:min(58%,160px)!important;
+  max-width:100%!important;
+  flex:0 0 auto!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-overview-stats{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:12px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview-stats>p{
+  min-width:0!important;
+  margin:0!important;
+ }
+}
+/* Compact and mobile Home keeps 24px outer/inner card padding; children may wrap. */
+@media(max-width:1080px){
+ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-main,
+ body:not(.auth-locked) #home .qr-home-side>.qr-home-profile,
+ body:not(.auth-locked) #home .qr-home-side>.qr-home-highest,
+ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-side{
+  box-sizing:border-box!important;
+  padding:24px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
+  height:auto!important;
+  min-height:220px!important;
+  max-height:none!important;
+  padding:24px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom>section{
+  min-width:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
+  height:auto!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group .qr-home-portrait{
+  width:min(100%,96px)!important;
+  height:auto!important;
+ }
+ body:not(.auth-locked) #home .qr-home-subjects{
+  min-width:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:var(--qr-home-gap)!important;
+ }
+}
+@media(max-width:700px){
+ body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
+  grid-template-columns:minmax(0,1fr)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group .qr-home-portrait{
+  width:min(100%,84px)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-ring{
+  width:min(50%,150px)!important;
+ }
+}
 /* Temporary DevTools frame highlights, shown only during debug. */
 #home:has([data-qr-debug="green"]) .qr-home-bottom .qr-home-overview{
  outline:2px solid #00c853!important;outline-offset:-2px!important;
