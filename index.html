@@ -1802,9 +1802,7 @@ body:not(.auth-locked) #home .qr-home-overview{
  border-radius:0!important;padding:var(--qr-home-inner-padding)!important;
  display:flex!important;align-items:center!important;
 }
-body:not(.auth-locked) #home .qr-home-overview-group{
- outline:1px solid #e6cf00;outline-offset:0;
-}
+
 
 body:not(.auth-locked) #home .qr-home-profile-group{
  display:flex;flex-direction:column;align-items:center;
@@ -1908,6 +1906,57 @@ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-subjects{
   min-width:0!important;min-height:0!important;height:100%!important;
   max-height:none!important;align-self:stretch!important;
   padding:var(--qr-home-inner-padding)!important;
+ }
+}
+/* Home: keep profile summary inside its shared inset, and align headings with card contents. */
+@media(min-width:1081px){
+ body:not(.auth-locked) #home .qr-home-profile{
+  justify-content:flex-start!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group .qr-home-portrait{
+  flex-basis:64px!important;width:64px!important;height:64px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group{
+  gap:2px!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group h2{
+  font-size:calc(var(--qr-font-heading) * .8)!important;
+  line-height:1.1!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile-group :is(.qr-home-accent,.qr-home-subtitle){
+  font-size:calc(var(--qr-font-small) * .84)!important;
+  line-height:1.1!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats{
+  box-sizing:border-box!important;
+  flex-shrink:0!important;
+  padding-top:calc(var(--qr-home-row-gap) / 2)!important;
+  padding-bottom:0!important;
+  margin-top:0!important;
+  min-height:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats>div{
+  gap:0!important;
+  padding-inline:calc(var(--qr-home-inline-gap) / 2)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats span{
+  font-size:calc(var(--qr-font-small) * .85)!important;
+  line-height:1.15!important;
+  white-space:nowrap;
+ }
+ body:not(.auth-locked) #home .qr-home-profile>.qr-home-stats strong{
+  font-size:calc(var(--qr-font-heading) * .79)!important;
+  line-height:1.1!important;
+ }
+ body:not(.auth-locked) #home .qr-home-top-group>.qr-top{
+  padding-inline:var(--qr-home-inner-padding)!important;
+ }
+ body:not(.auth-locked) #home .qr-home-subject-group>.qr-home-section-title{
+  padding-inline:0!important;
+ }
+ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
+  box-sizing:border-box!important;
+  padding-inline:var(--qr-home-inner-padding)!important;
  }
 }
 /* Home-only checks: default padding on all sides and full-height activity content. */
