@@ -1853,7 +1853,7 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-home-side{
   display:grid!important;
   grid-template-columns:minmax(0,1fr)!important;
-  grid-template-rows:minmax(0,var(--qr-home-profile-row,40%)) minmax(0,1fr)!important;
+  grid-template-rows:max-content minmax(0,1fr)!important;
   gap:var(--qr-home-gap)!important;
   min-height:0!important;height:100%!important;align-items:stretch!important;
  }
@@ -1863,7 +1863,9 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
   box-sizing:border-box!important;
   padding:var(--qr-home-inner-padding)!important;
  }
- body:not(.auth-locked) #home .qr-home-side>.qr-home-profile,
+ body:not(.auth-locked) #home .qr-home-side>.qr-home-profile{
+  height:auto!important;min-height:0!important;overflow:visible!important;flex:none!important;
+ }
  body:not(.auth-locked) #home .qr-home-side>.qr-home-highest{
   height:100%!important;min-height:0!important;overflow:hidden!important;flex:none!important;
  }
@@ -3677,23 +3679,5 @@ window.quizRoomGoogleEmail=()=>activeEmail;
 window.qrLoadAccount=qrLoadAccount;
 other.addEventListener("click",()=>login("",other));
 render();
-})();
-</script><script>
-/* The shorter Home welcome card sets the matching Profile card height. */
-(function(){
- function align(){
-  const home=document.getElementById('home');
-  if(!home)return;
-  const top=home.querySelector('.qr-home-top-group');
-  if(!top)return;
-  if(window.innerWidth<=1080){home.style.removeProperty('--qr-home-profile-row');return;}
-  const height=Math.max(0,Math.round(top.getBoundingClientRect().height));
-  home.style.setProperty('--qr-home-profile-row',height+'px');
- }
- document.addEventListener('DOMContentLoaded',()=>{
-  align();window.addEventListener('resize',align,{passive:true});
-  const top=document.querySelector('#home .qr-home-top-group');
-  if(top&&window.ResizeObserver)new ResizeObserver(align).observe(top);
- });
 })();
 </script></body></html>
