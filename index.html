@@ -2115,44 +2115,30 @@ body:not(.auth-locked) #home .qr-home-overview-group{
   border-radius:var(--qr-home-radius)!important;
   box-shadow:var(--qr-home-shadow)!important;
  }
- /* Both white cards fill the same grid row; their inner green groups fill the same inset. */
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-surface{
-  align-self:stretch!important;
-  justify-self:stretch!important;
- }
+ /* Overview only: stretch its green content group to match the existing Recent Activity frame. */
  body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-overview{
   display:grid!important;
   grid-template-columns:minmax(0,1fr)!important;
   grid-template-rows:minmax(0,1fr)!important;
-  justify-content:stretch!important;
-  align-content:stretch!important;
   align-items:stretch!important;
   justify-items:stretch!important;
+  align-content:stretch!important;
+  justify-content:stretch!important;
  }
- body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom>section>.qr-home-activity{
-  display:grid!important;
-  grid-template-columns:minmax(0,1fr)!important;
-  grid-template-rows:minmax(0,1fr)!important;
- }
- body:not(.auth-locked) #home .qr-home-activity>#qrHomeActivity,
  body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
   box-sizing:border-box!important;
-  width:100%!important;
-  min-width:0!important;
-  height:100%!important;
-  min-height:0!important;
-  padding:0!important;
-  border-radius:var(--qr-home-radius)!important;
- }
- body:not(.auth-locked) #home .qr-home-overview>.qr-home-overview-group{
   display:grid!important;
   grid-template-columns:minmax(0,3fr) minmax(0,2fr)!important;
   align-items:center!important;
-  justify-items:stretch!important;
   gap:var(--qr-home-row-gap)!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  border-radius:var(--qr-home-radius)!important;
+  padding:0!important;
  }
  body:not(.auth-locked) #home .qr-home-overview-group>.qr-home-ring{
-  width:min(100%,100cqh)!important;
   max-width:100%!important;
   max-height:100%!important;
   justify-self:center!important;
