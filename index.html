@@ -1957,23 +1957,10 @@ body:not(.auth-locked) #home .qr-home-bottom>section>.qr-home-section-title{
  body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome{
   box-sizing:border-box!important;
   flex:0 0 auto!important;height:auto!important;min-height:0!important;
-  padding:var(--qr-home-inner-padding)!important;
-  padding-top:24px!important;
-  padding-bottom:24px!important;
+  padding:0 var(--qr-home-inner-padding)!important;
  }
- /* Home Welcome: remove text-group inset and default paragraph margins.
-    The surrounding Welcome card keeps its 24px inset. */
- body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome>div:first-child{
-  box-sizing:border-box!important;
-  padding:0!important;
-  margin:0!important;
-  min-width:0!important;
- }
- body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome>div:first-child>h2,
- body:not(.auth-locked) #home .qr-home-top-group>.qr-home-welcome>div:first-child>p{
-  padding:0!important;
-  margin:0!important;
- }
+ /* Keep the Welcome heading and paragraph's normal spacing.
+    Only the outside top and bottom inset is removed. */
  /* Two equal orange sections, each with its own title and white rounded card. */
  body:not(.auth-locked) #home .qr-home-main>.qr-home-bottom{
   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
