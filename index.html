@@ -2025,6 +2025,12 @@ body:not(.auth-locked) #home [data-qr-home-group]{
   align-self:stretch!important;
  }
 }
+/* Home menu: 24px between Quiz Room title and its divider. */
+@media(min-width:1081px){
+ body:not(.auth-locked) #home .qr-shell.qr-home-shell>.qr-side>.qr-nav-brand{
+  padding-bottom:24px!important;
+ }
+}
 /* Temporary DevTools frame highlights, shown only during debug. */
 #home:has([data-qr-debug="green"]) .qr-home-bottom .qr-home-overview{
  outline:2px solid #00c853!important;outline-offset:-2px!important;
