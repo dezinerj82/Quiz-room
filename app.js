@@ -227,13 +227,10 @@ function showMathQuizList() {
   list.className = "math-quiz";
   const header = document.createElement("div");
   header.className = "math-quiz-header";
-  const subtitle = document.createElement("div");
-  subtitle.className = "math-quiz-subtitle";
-  subtitle.textContent = "Math";
   const title = document.createElement("div");
   title.className = "math-quiz-title";
   title.textContent = "Choose Quiz";
-  header.append(subtitle, title);
+  header.append(title);
 
   const options = document.createElement("nav");
   options.className = "menu-buttons";
