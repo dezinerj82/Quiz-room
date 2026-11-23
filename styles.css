@@ -1,5 +1,5 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Google Sans", "Segoe UI", sans-serif;
   color: #171717;
   background: #f6f6f6;
   font-synthesis: none;
@@ -61,7 +61,7 @@ button {
   align-items: center;
   gap: 12px;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: -0.5px;
 }
 
@@ -82,7 +82,7 @@ h1 {
   font-size: 32px;
   line-height: 1.16;
   letter-spacing: -1px;
-  font-weight: 750;
+  font-weight: 400;
 }
 
 .description {
@@ -104,7 +104,7 @@ h1 {
   background: #181818;
   color: #fff;
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 #google-login:focus-visible {
@@ -118,7 +118,7 @@ h1 {
 
 .google-mark {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -207,7 +207,7 @@ h1 {
 /* Only the new Math quiz elements; stages and frames stay unchanged. */
 .math-quiz {
   padding: 0 12px 24px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Google Sans", "Segoe UI", sans-serif;
 }
 
 .math-quiz-header {
@@ -224,7 +224,7 @@ h1 {
   background: #f1f1f1;
   border-radius: 999px;
   font-size: 18px;
-  font-weight: 750;
+  font-weight: 400;
   letter-spacing: -.5px;
 }
 
@@ -258,7 +258,7 @@ h1 {
   justify-content: center;
   gap: 10px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -274,7 +274,7 @@ h1 {
   text-align: center;
   font: inherit;
   font-size: 16px;
-  font-weight: 750;
+  font-weight: 400;
 }
 
 .math-quiz-answer:focus {
@@ -298,7 +298,7 @@ h1 {
   width: 26px;
   text-align: center;
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1;
 }
 
