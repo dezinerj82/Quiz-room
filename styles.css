@@ -36,24 +36,7 @@ button {
   background: #f6f6f6;
 }
 
-.corner-label {
-  position: absolute;
-  left: 42px;
-  top: 26px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
 
-.corner-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 26px;
-  color: #8b8b8b;
-  text-align: center;
-  font-size: 13px;
-}
 
 #login-stage {
   position: absolute;
@@ -140,12 +123,6 @@ h1 {
   line-height: 1;
 }
 
-.helper {
-  margin: 0;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.4;
-}
 
 #login-status {
   position: absolute;
