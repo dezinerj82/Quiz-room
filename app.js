@@ -152,6 +152,66 @@ document.getElementById("logout").addEventListener("click", () => {
   window.location.reload();
 });
 
+const homeMenuButton = document.getElementById("menu-home");
+const quizMenuButton = document.getElementById("menu-quiz");
+const quizStepLabel = document.getElementById("quiz-step-label");
+const quizStepActions = document.getElementById("quiz-step-actions");
+const quizSubjects = ["Math", "Malay", "English", "Korean", "Science"];
+let quizMode = null;
+
+function setMainMenu(activeButton) {
+  for (const button of [homeMenuButton, quizMenuButton]) {
+    const active = button === activeButton;
+    button.classList.toggle("is-active", active);
+    if (active) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  }
+}
+
+function quizOption(text, onClick, selected = false) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = text;
+  button.classList.toggle("is-active", selected);
+  if (selected) button.setAttribute("aria-pressed", "true");
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+function openQuizMenu() {
+  quizMode = null;
+  setMainMenu(quizMenuButton);
+  quizStepLabel.textContent = "Choose a mode";
+  quizStepActions.replaceChildren(
+    quizOption("Quiz", () => chooseMode("Quiz")),
+    quizOption("Exam", () => chooseMode("Exam"))
+  );
+}
+
+function chooseMode(mode) {
+  quizMode = mode;
+  quizStepLabel.textContent = "Choose a subject";
+  const back = quizOption("Back", openQuizMenu);
+  const subjects = quizSubjects.map(subject => quizOption(subject, () => {
+    quizStepLabel.textContent = subject + " · " + quizMode;
+    for (const button of quizStepActions.querySelectorAll("button")) {
+      const selected = button.textContent === subject;
+      button.classList.toggle("is-active", selected);
+      if (selected) button.setAttribute("aria-pressed", "true");
+      else button.removeAttribute("aria-pressed");
+    }
+  }));
+  quizStepActions.replaceChildren(back, ...subjects);
+}
+
+homeMenuButton.addEventListener("click", () => {
+  quizMode = null;
+  setMainMenu(homeMenuButton);
+  quizStepLabel.textContent = "";
+  quizStepActions.replaceChildren();
+});
+quizMenuButton.addEventListener("click", openQuizMenu);
+
 window.addEventListener("resize", scaleFrame);
 scaleFrame();
 restoreLogin();

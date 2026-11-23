@@ -32,8 +32,8 @@
             <span>Quiz Room</span>
           </div>
           <nav class="menu-buttons" aria-label="Pages">
-            <button type="button" class="is-active" aria-current="page">Home</button>
-            <button type="button" hidden>Quiz</button>
+            <button id="menu-home" type="button" class="is-active" aria-current="page">Home</button>
+            <button id="menu-quiz" type="button">Quiz</button>
             <button type="button" hidden>Note</button>
             <button type="button" hidden>Profile</button>
             <button id="logout" type="button">Log out</button>
@@ -41,7 +41,10 @@
         </div>
       </section>
       <section id="navigation-stage" class="stage" aria-label="Navigation">
-        <div class="inner-card"></div>
+        <div class="inner-card menu-inner">
+          <span id="quiz-step-label" class="brand"></span>
+          <nav id="quiz-step-actions" class="menu-buttons" aria-label="Quiz choices"></nav>
+        </div>
       </section>
       <section id="question-stage" class="stage" aria-label="Content">
         <div class="inner-card"></div>
