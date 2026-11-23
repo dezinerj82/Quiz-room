@@ -28,8 +28,8 @@ button {
   top: 50%;
   width: var(--frame-width);
   height: var(--frame-height);
-  margin-left: calc(var(--frame-width) / -2);
-  margin-top: calc(var(--frame-height) / -2);
+  margin-left: calc(var(--frame-width) * -0.5);
+  margin-top: calc(var(--frame-height) * -0.5);
   transform: scale(var(--scale));
   transform-origin: center center;
   overflow: hidden;
