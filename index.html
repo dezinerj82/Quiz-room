@@ -48,7 +48,21 @@
         </div>
       </section>
       <section id="question-stage" class="stage" aria-label="Content">
-        <div id="quiz-content" class="inner-card"></div>
+        <div class="inner-card quiz-panel">
+          <div id="quiz-toolbar" hidden>
+            <span id="quiz-toolbar-name" class="math-quiz-title">Times Tables</span>
+            <span id="quiz-count">0 / 10</span>
+            <span id="quiz-progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+              <span id="quiz-progress-fill"></span>
+            </span>
+            <span id="quiz-clock" role="timer">30:00</span>
+            <nav class="menu-buttons" aria-label="Quiz actions">
+              <button id="quiz-exit" type="button">Exit</button>
+              <button id="quiz-finish" type="button" hidden>Finish</button>
+            </nav>
+          </div>
+          <div id="quiz-content"></div>
+        </div>
       </section>
     </div>
   </main>

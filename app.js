@@ -179,13 +179,228 @@ function quizOption(text, onClick, selected = false) {
 }
 
 const quizContent = document.getElementById("quiz-content");
+const quizToolbar = document.getElementById("quiz-toolbar");
+const quizCount = document.getElementById("quiz-count");
+const quizProgressTrack = document.getElementById("quiz-progress-track");
+const quizProgressFill = document.getElementById("quiz-progress-fill");
+const quizClock = document.getElementById("quiz-clock");
+const quizExitButton = document.getElementById("quiz-exit");
+const quizFinishButton = document.getElementById("quiz-finish");
 let quizRenderRun = 0;
+let activeQuiz = null;
+let quizTimerId = null;
+let quizDeadline = 0;
+let quizSaving = false;
+
+function stopQuizTimer() {
+  if (quizTimerId !== null) {
+    clearInterval(quizTimerId);
+    quizTimerId = null;
+  }
+}
 
 function resetQuizContent() {
+  stopQuizTimer();
   quizRenderRun += 1;
+  activeQuiz = null;
+  quizSaving = false;
+  quizToolbar.hidden = true;
+  quizFinishButton.hidden = true;
+  quizFinishButton.disabled = false;
+  quizFinishButton.textContent = "Finish";
+  quizExitButton.disabled = false;
   quizContent.replaceChildren();
   quizContent.scrollTop = 0;
 }
+
+function updateQuizProgress() {
+  if (!activeQuiz) return;
+  const checked = activeQuiz.answers.filter(answer => answer.dataset.checked === "true").length;
+  const total = activeQuiz.answers.length;
+  quizCount.textContent = checked + " / " + total;
+  quizProgressFill.style.width = (checked / total * 100) + "%";
+  quizProgressTrack.setAttribute("aria-valuemax", String(total));
+  quizProgressTrack.setAttribute("aria-valuenow", String(checked));
+  quizFinishButton.hidden = checked !== total || activeQuiz.expired || activeQuiz.completed;
+}
+
+function updateQuizClock() {
+  if (!activeQuiz || activeQuiz.completed || activeQuiz.expired) return;
+  const remaining = Math.max(0, Math.ceil((quizDeadline - Date.now()) / 1000));
+  quizClock.textContent =
+    String(Math.floor(remaining / 60)).padStart(2, "0") + ":" +
+    String(remaining % 60).padStart(2, "0");
+
+  if (remaining === 0) {
+    stopQuizTimer();
+    activeQuiz.expired = true;
+    activeQuiz.answers.forEach(answer => { answer.disabled = true; });
+    quizFinishButton.hidden = true;
+  }
+}
+
+function startQuiz(questions, answers) {
+  stopQuizTimer();
+  activeQuiz = {
+    questions,
+    answers,
+    startedAt: new Date().toISOString(),
+    completed: false,
+    expired: false
+  };
+  quizToolbar.hidden = false;
+  quizExitButton.disabled = false;
+  quizFinishButton.disabled = false;
+  quizFinishButton.textContent = "Finish";
+  quizFinishButton.hidden = true;
+  quizDeadline = Date.now() + 30 * 60 * 1000;
+  updateQuizProgress();
+  updateQuizClock();
+  quizTimerId = setInterval(updateQuizClock, 1000);
+}
+
+function freshScoreToken() {
+  const cached = getSavedLogin();
+  if (cached) return Promise.resolve(cached);
+
+  return new Promise((resolve, reject) => {
+    if (!window.google || !google.accounts || !google.accounts.oauth2) {
+      reject(new Error("Google sign-in unavailable."));
+      return;
+    }
+
+    const client = google.accounts.oauth2.initTokenClient({
+      client_id: clientId,
+      scope: scopes,
+      callback: response => {
+        if (response.error || !response.access_token) {
+          reject(new Error("Google sign-in was not completed."));
+          return;
+        }
+        accessToken = response.access_token;
+        saveLogin(response);
+        resolve(response.access_token);
+      },
+      error_callback: () => reject(new Error("Google sign-in was not completed."))
+    });
+
+    try {
+      client.requestAccessToken({ prompt: "select_account" });
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+async function scoreDriveRequest(url, token, options = {}) {
+  const headers = { Authorization: "Bearer " + token, ...options.headers };
+  const response = await fetch(url, { ...options, headers });
+  if (response.status === 401) clearSavedLogin();
+  if (!response.ok) throw new Error("Google Drive could not save the score.");
+  return response.json();
+}
+
+async function saveCompletedScore(token, score) {
+  const q = encodeURIComponent(
+    "name = 'Quiz Room' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+  );
+  const found = await scoreDriveRequest(
+    "https://www.googleapis.com/drive/v3/files?q=" + q + "&fields=files(id)&pageSize=100",
+    token
+  );
+  let folderId = found.files?.[0]?.id;
+
+  if (!folderId) {
+    const created = await scoreDriveRequest(
+      "https://www.googleapis.com/drive/v3/files?fields=id",
+      token,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Quiz Room",
+          mimeType: "application/vnd.google-apps.folder"
+        })
+      }
+    );
+    folderId = created.id;
+  }
+
+  if (!folderId) throw new Error("Google Drive folder is unavailable.");
+
+  const boundary = "quiz_room_" + Date.now() + "_" + Math.floor(Math.random() * 1000000);
+  const metadata = {
+    name: "Math Times Tables " + score.completedAt.replace(/[:.]/g, "-") + ".json",
+    mimeType: "application/json",
+    parents: [folderId]
+  };
+  const body = [
+    "--" + boundary,
+    "Content-Type: application/json; charset=UTF-8",
+    "",
+    JSON.stringify(metadata),
+    "--" + boundary,
+    "Content-Type: application/json",
+    "",
+    JSON.stringify(score),
+    "--" + boundary + "--",
+    ""
+  ].join("\r\n");
+
+  const saved = await scoreDriveRequest(
+    "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id",
+    token,
+    {
+      method: "POST",
+      headers: { "Content-Type": "multipart/related; boundary=" + boundary },
+      body
+    }
+  );
+  if (!saved.id) throw new Error("Google Drive did not confirm the score.");
+}
+
+async function finishMathQuiz() {
+  const session = activeQuiz;
+  if (!session || session.completed || session.expired || quizSaving ||
+      session.answers.some(answer => answer.dataset.checked !== "true")) return;
+
+  quizSaving = true;
+  stopQuizTimer();
+  quizExitButton.disabled = true;
+  quizFinishButton.disabled = true;
+  quizFinishButton.textContent = "Saving";
+
+  const score = {
+    subject: "Math",
+    quiz: "Times Tables",
+    score: session.answers.filter(answer => answer.dataset.correct === "true").length,
+    total: session.answers.length,
+    questionIds: session.questions.map(question => question.id),
+    startedAt: session.startedAt,
+    completedAt: new Date().toISOString()
+  };
+
+  try {
+    const token = await freshScoreToken();
+    await saveCompletedScore(token, score);
+    if (activeQuiz !== session) return;
+    session.completed = true;
+    session.answers.forEach(answer => { answer.readOnly = true; });
+    quizFinishButton.textContent = "Saved";
+    quizFinishButton.disabled = true;
+  } catch (error) {
+    if (activeQuiz !== session) return;
+    quizFinishButton.textContent = "Retry save";
+    quizFinishButton.disabled = false;
+    quizFinishButton.title = "Could not save to Google Drive. Please try again.";
+  } finally {
+    quizSaving = false;
+    if (activeQuiz === session) quizExitButton.disabled = false;
+  }
+}
+
+quizExitButton.addEventListener("click", showMathQuizList);
+quizFinishButton.addEventListener("click", finishMathQuiz);
 
 function openQuizMenu() {
   quizMode = null;
@@ -252,13 +467,6 @@ function makeMathQuiz(questions) {
   const quiz = document.createElement("div");
   quiz.className = "math-quiz";
 
-  const header = document.createElement("div");
-  header.className = "math-quiz-header";
-  const title = document.createElement("div");
-  title.className = "math-quiz-title";
-  title.textContent = "Times Tables";
-  header.append(title);
-
   const grid = document.createElement("div");
   grid.className = "math-quiz-grid";
   const answers = [];
@@ -297,15 +505,18 @@ function makeMathQuiz(questions) {
 
     input.addEventListener("input", () => {
       input.dataset.checked = "false";
+      input.dataset.correct = "false";
       input.classList.remove("is-right", "is-wrong");
       mark.className = "math-quiz-mark";
       mark.textContent = "";
       mark.removeAttribute("aria-label");
+      updateQuizProgress();
     });
 
     input.addEventListener("keydown", event => {
       if (event.key !== "Enter") return;
       event.preventDefault();
+      if (!activeQuiz || activeQuiz.expired || activeQuiz.completed || quizSaving) return;
       if (!/^\d+$/.test(input.value.trim())) return;
 
       const correctAnswer = question.blank === "a" ? question.a : question.b;
@@ -313,6 +524,8 @@ function makeMathQuiz(questions) {
       const state = correct ? "is-right" : "is-wrong";
 
       input.dataset.checked = "true";
+      input.dataset.correct = String(correct);
+      updateQuizProgress();
       input.classList.remove("is-right", "is-wrong");
       input.classList.add(state);
       mark.className = "math-quiz-mark " + state;
@@ -332,14 +545,10 @@ function makeMathQuiz(questions) {
     });
   });
 
-  const backMenu = document.createElement("nav");
-  backMenu.className = "menu-buttons math-quiz-header";
-  backMenu.setAttribute("aria-label", "Quiz navigation");
-  backMenu.append(quizOption("Back", showMathQuizList));
-
-  quiz.append(backMenu, header, grid);
+  quiz.append(grid);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
+  startQuiz(questions, answers);
 }
 
 async function loadMathQuiz() {

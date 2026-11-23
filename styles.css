@@ -309,3 +309,60 @@ h1 {
 .math-quiz-mark.is-wrong {
   color: #df3939;
 }
+
+/* Fixed quiz toolbar. Only the questions below it scroll. */
+#main-page .quiz-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#quiz-toolbar:not([hidden]) {
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px 12px;
+}
+
+#quiz-toolbar-name {
+  flex: none;
+}
+
+#quiz-count {
+  flex: none;
+  white-space: nowrap;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+#quiz-progress-track {
+  flex: 0 0 92px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ededed;
+}
+
+#quiz-progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #171717;
+}
+
+#quiz-clock {
+  flex: none;
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+#quiz-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
