@@ -254,13 +254,10 @@ function makeMathQuiz(questions) {
 
   const header = document.createElement("div");
   header.className = "math-quiz-header";
-  const subtitle = document.createElement("div");
-  subtitle.className = "math-quiz-subtitle";
-  subtitle.textContent = "Math";
   const title = document.createElement("div");
   title.className = "math-quiz-title";
   title.textContent = "Times Tables";
-  header.append(subtitle, title);
+  header.append(title);
 
   const grid = document.createElement("div");
   grid.className = "math-quiz-grid";
