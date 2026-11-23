@@ -166,6 +166,8 @@ h1 {
   border: 0;
   border-radius: 28px;
   background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #main-page .menu-inner {
@@ -200,4 +202,108 @@ h1 {
 
 #main-page .menu-buttons button:focus-visible {
   opacity: .72;
+}
+
+/* Only the new Math quiz elements; stages and frames stay unchanged. */
+.math-quiz {
+  padding: 0 12px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.math-quiz-header {
+  padding: 0 0 22px;
+}
+
+.math-quiz-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.math-quiz-title {
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -.5px;
+}
+
+.math-quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.math-quiz-card {
+  min-width: 0;
+  height: 92px;
+  padding: 12px 16px;
+  border-radius: 22px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.math-quiz-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.math-quiz-equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.math-quiz-answer {
+  width: 58px;
+  height: 46px;
+  padding: 0;
+  background: #fff;
+  color: #171717;
+  border: 0;
+  outline: 0;
+  border-radius: 14px;
+  text-align: center;
+  font: inherit;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.math-quiz-answer:focus {
+  background: #e5e5e5;
+}
+
+.math-quiz-answer.is-right,
+.math-quiz-answer.is-right:focus {
+  background: #d8f4df;
+  color: #137837;
+}
+
+.math-quiz-answer.is-wrong,
+.math-quiz-answer.is-wrong:focus {
+  background: #f9dada;
+  color: #b52b2b;
+}
+
+.math-quiz-mark {
+  flex: 0 0 26px;
+  width: 26px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.math-quiz-mark.is-right {
+  color: #159447;
+}
+
+.math-quiz-mark.is-wrong {
+  color: #df3939;
 }
