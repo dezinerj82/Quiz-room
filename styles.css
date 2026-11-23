@@ -1,0 +1,158 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #171717;
+  background: #f6f6f6;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#site-frame {
+  --frame-width: 1024px;
+  --frame-height: 768px;
+  --scale: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  margin-left: calc(var(--frame-width) / -2);
+  margin-top: calc(var(--frame-height) / -2);
+  transform: scale(var(--scale));
+  transform-origin: center center;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.corner-label {
+  position: absolute;
+  left: 42px;
+  top: 26px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.corner-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 13px;
+}
+
+#login-stage {
+  position: absolute;
+  left: 247px;
+  top: 189px;
+  width: 530px;
+  height: 390px;
+  padding: 24px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 32px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #181818;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.16;
+  letter-spacing: -1px;
+  font-weight: 750;
+}
+
+.description {
+  margin: 0;
+  color: #777;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#google-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 14px 28px;
+  border: 1.5px solid #181818;
+  border-radius: 100px;
+  background: #181818;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+#google-login:focus-visible {
+  outline: 3px solid #777;
+  outline-offset: 4px;
+}
+
+#google-login:disabled {
+  cursor: default;
+  opacity: .6;
+}
+
+.google-mark {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.helper {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#login-status {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 8px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
