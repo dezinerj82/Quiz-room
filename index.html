@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Quiz Room</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main id="site-frame">
+    <div class="corner-label">QUIZ ROOM / LEARNING SPACE</div>
+    <section id="login-stage" aria-label="Google login">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span>Quiz Room</span>
+      </div>
+      <h1>Your little learning corner.</h1>
+      <p class="description">One place to practice, learn, and grow.</p>
+      <button id="google-login" type="button">
+        <span class="google-mark" aria-hidden="true">G</span>
+        <span>Continue with Google</span>
+      </button>
+      <p class="helper">Your own lessons, all in one place.</p>
+      <p id="login-status" role="status" aria-live="polite" hidden></p>
+    </section>
+    <div class="corner-footer">A small space for big ideas.</div>
+  </main>
+</body>
+</html>
