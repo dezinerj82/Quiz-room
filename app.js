@@ -43,7 +43,8 @@ async function finishLogin(response) {
       throw new Error("Google account could not be confirmed.");
     }
 
-    frame.replaceChildren();
+    document.getElementById("login-stage").remove();
+    document.getElementById("main-page").hidden = false;
   } catch (error) {
     showError("Could not connect to Google Drive. Please try again.");
   }
@@ -76,3 +77,6 @@ loginButton.addEventListener("click", () => {
 
 window.addEventListener("resize", scaleFrame);
 scaleFrame();
+document.getElementById("logout").addEventListener("click", () => {
+  window.location.reload();
+});
