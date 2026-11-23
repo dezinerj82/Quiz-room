@@ -216,8 +216,33 @@ function selectQuizSubject(subject) {
     else button.removeAttribute("aria-pressed");
   }
   if (subject === "Math" && quizMode === "Quiz") {
-    loadMathQuiz();
+    showMathQuizList();
   }
+}
+
+function showMathQuizList() {
+  resetQuizContent();
+
+  const list = document.createElement("div");
+  list.className = "math-quiz";
+  const header = document.createElement("div");
+  header.className = "math-quiz-header";
+  const subtitle = document.createElement("div");
+  subtitle.className = "math-quiz-subtitle";
+  subtitle.textContent = "Math";
+  const title = document.createElement("div");
+  title.className = "math-quiz-title";
+  title.textContent = "Choose Quiz";
+  header.append(subtitle, title);
+
+  const options = document.createElement("nav");
+  options.className = "menu-buttons";
+  options.setAttribute("aria-label", "Math quizzes");
+  options.append(quizOption("Times Tables", loadMathQuiz));
+
+  list.append(header, options);
+  quizContent.replaceChildren(list);
+  quizContent.scrollTop = 0;
 }
 
 function textPart(value) {
@@ -313,7 +338,12 @@ function makeMathQuiz(questions) {
     });
   });
 
-  quiz.append(header, grid);
+  const backMenu = document.createElement("nav");
+  backMenu.className = "menu-buttons math-quiz-header";
+  backMenu.setAttribute("aria-label", "Quiz navigation");
+  backMenu.append(quizOption("Back", showMathQuizList));
+
+  quiz.append(backMenu, header, grid);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
 }
