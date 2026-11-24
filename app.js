@@ -329,11 +329,41 @@ async function saveCompletedScore(token, score) {
 
   if (!folderId) throw new Error("Google Drive folder is unavailable.");
 
+  const scoreFolderQuery = encodeURIComponent(
+    "name = 'Scores' and '" + folderId +
+    "' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+  );
+  const existingScoreFolders = await scoreDriveRequest(
+    "https://www.googleapis.com/drive/v3/files?q=" + scoreFolderQuery +
+    "&fields=files(id)&pageSize=100",
+    token
+  );
+  let scoresFolderId = existingScoreFolders.files?.[0]?.id;
+
+  if (!scoresFolderId) {
+    const scoreFolder = await scoreDriveRequest(
+      "https://www.googleapis.com/drive/v3/files?fields=id",
+      token,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Scores",
+          mimeType: "application/vnd.google-apps.folder",
+          parents: [folderId]
+        })
+      }
+    );
+    scoresFolderId = scoreFolder.id;
+  }
+
+  if (!scoresFolderId) throw new Error("Google Drive Scores folder is unavailable.");
+
   const boundary = "quiz_room_" + Date.now() + "_" + Math.floor(Math.random() * 1000000);
   const metadata = {
     name: "Math Times Tables " + score.completedAt.replace(/[:.]/g, "-") + ".json",
     mimeType: "application/json",
-    parents: [folderId]
+    parents: [scoresFolderId]
   };
   const body = [
     "--" + boundary,
@@ -360,6 +390,32 @@ async function saveCompletedScore(token, score) {
   if (!saved.id) throw new Error("Google Drive did not confirm the score.");
 }
 
+function showMathQuizScore(score) {
+  const result = document.createElement("div");
+  result.className = "math-quiz-score";
+
+  const label = document.createElement("span");
+  label.className = "math-quiz-title";
+  label.textContent = "Score";
+
+  const dots = document.createElement("div");
+  dots.className = "math-quiz-score-dots";
+  dots.setAttribute("aria-hidden", "true");
+  for (let index = 0; index < score.total; index++) {
+    const dot = document.createElement("span");
+    if (index < score.score) dot.className = "is-correct";
+    dots.append(dot);
+  }
+
+  const value = document.createElement("span");
+  value.className = "math-quiz-title math-quiz-score-value";
+  value.textContent = score.score + " / " + score.total;
+
+  result.append(label, dots, value);
+  quizContent.replaceChildren(result);
+  quizContent.scrollTop = 0;
+}
+
 async function finishMathQuiz() {
   const session = activeQuiz;
   if (!session || session.completed || session.expired || quizSaving ||
@@ -370,33 +426,36 @@ async function finishMathQuiz() {
   quizExitButton.disabled = true;
   quizFinishButton.disabled = true;
   quizFinishButton.textContent = "Saving";
+  quizFinishButton.title = "";
 
-  const score = {
-    subject: "Math",
-    quiz: "Times Tables",
-    score: session.answers.filter(answer => answer.dataset.correct === "true").length,
-    total: session.answers.length,
-    questionIds: session.questions.map(question => question.id),
-    startedAt: session.startedAt,
-    completedAt: new Date().toISOString()
-  };
+  if (!session.finalScore) {
+    session.finalScore = {
+      subject: "Math",
+      quiz: "Times Tables",
+      score: session.answers.filter(answer => answer.dataset.correct === "true").length,
+      total: session.answers.length,
+      questionIds: session.questions.map(question => question.id),
+      startedAt: session.startedAt,
+      completedAt: new Date().toISOString()
+    };
+    session.answers.forEach(answer => { answer.readOnly = true; });
+    showMathQuizScore(session.finalScore);
+  }
 
   try {
     const token = await freshScoreToken();
-    await saveCompletedScore(token, score);
+    await saveCompletedScore(token, session.finalScore);
     if (activeQuiz !== session) return;
     session.completed = true;
-    session.answers.forEach(answer => { answer.readOnly = true; });
-    quizFinishButton.textContent = "Saved";
-    quizFinishButton.disabled = true;
+    quizFinishButton.hidden = true;
+    quizExitButton.disabled = false;
   } catch (error) {
     if (activeQuiz !== session) return;
     quizFinishButton.textContent = "Retry save";
     quizFinishButton.disabled = false;
     quizFinishButton.title = "Could not save to Google Drive. Please try again.";
   } finally {
-    quizSaving = false;
-    if (activeQuiz === session) quizExitButton.disabled = false;
+    if (activeQuiz === session) quizSaving = false;
   }
 }
 
