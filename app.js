@@ -574,6 +574,17 @@ function showMathQuizList() {
   quizContent.scrollTop = 0;
 }
 
+function createAnswerExplanation(text = "") {
+  const pill = document.createElement("div");
+  pill.className = "math-quiz-title";
+  pill.style.setProperty("--pill-background", "#d8f3e7");
+  pill.style.color = "#145740";
+  pill.style.maxWidth = "100%";
+  pill.setAttribute("role", "status");
+  pill.textContent = text;
+  return pill;
+}
+
 function textPart(value) {
   const item = document.createElement("span");
   item.textContent = String(value);
@@ -668,9 +679,8 @@ function makeMathQuiz(questions) {
   const instruction = document.createElement("div");
   instruction.className = "math-basics-question-text";
   instruction.textContent = "Fill in the missing number. Press Enter to check.";
-  const explanation = document.createElement("div");
+  const explanation = createAnswerExplanation();
   explanation.hidden = true;
-  explanation.setAttribute("role", "status");
   quiz.append(instruction, grid, explanation);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
@@ -857,9 +867,9 @@ function pm3CommitAnswer(correct) {
   const answer = session.answers[session.currentIndex];
   answer.dataset.checked = "true";
   answer.dataset.correct = String(correct);
-  const explanation = document.createElement("div");
-  explanation.textContent = session.questions[session.currentIndex].explanation;
-  explanation.setAttribute("role", "status");
+  const explanation = createAnswerExplanation(
+    session.questions[session.currentIndex].explanation
+  );
   quizContent.append(explanation);
   quizContent.querySelectorAll("button, input").forEach(control => {
     control.disabled = true;
@@ -880,7 +890,10 @@ function pm3ChoiceOptions(question, imageOptions) {
       button.append(pm3Shape(value), mark);
       button.setAttribute("aria-label", "Picture option");
     } else {
-      button.textContent = value;
+      const unit = question.type === "image-question"
+        ? question.prompt.includes("sides") ? " sides" : " corners"
+        : "";
+      button.textContent = value + unit;
     }
     button.addEventListener("click", () => {
       if (!pm3CanAnswer()) return;
