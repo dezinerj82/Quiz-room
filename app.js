@@ -691,56 +691,59 @@ function pm3UsedKey() {
   return pm3QuestionHistoryPrefix + signedInUserId;
 }
 
+function planPM3Rounds(bank) {
+  const groups = new Map();
+  for (const question of bank) {
+    if (!groups.has(question.topic)) groups.set(question.topic, []);
+    groups.get(question.topic).push(question);
+  }
+  if (groups.size !== 9 || [...groups.values()].some(group => group.length !== 10)) {
+    throw new Error("PM3 question bank needs nine groups of ten.");
+  }
+  const topics = shufflePM3([...groups.keys()]);
+  for (let attempt = 0; attempt < 1000; attempt++) {
+    const rounds = Array.from({ length: 9 }, () => []);
+    topics.forEach((topic, topicIndex) => {
+      const items = shufflePM3(groups.get(topic));
+      const positions = shufflePM3([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+      positions.forEach((roundIndex, i) => rounds[roundIndex].push(items[i]));
+      rounds[topicIndex].push(items[9]);
+    });
+    if (rounds.every(round =>
+      round.length === 10 &&
+      round.some(question => question.type === "typing") &&
+      round.some(question => question.type === "sort") &&
+      round.some(question => ["choice", "image-question", "image-choice"]
+        .includes(question.type)))) {
+      return rounds.map(round => shufflePM3(round.map(question => question.id)));
+    }
+  }
+  throw new Error("Could not arrange a balanced PM3 quiz set.");
+}
+
 function selectFreshPM3Questions(bank) {
   const historyKey = pm3UsedKey();
-  const stored = localStorage.getItem(historyKey);
-  const used = new Set(stored ? JSON.parse(stored) : []);
-  const available = bank.filter(question => !used.has(question.id));
-  if (available.length < 10) {
-    return null; // Never reuse an old question to fill a new quiz.
+  const old = localStorage.getItem(historyKey);
+  const used = new Set(old ? JSON.parse(old) : []);
+  if (bank.filter(question => !used.has(question.id)).length < 10) {
+    return null; // Never repeat previously seen questions.
   }
-
-  const selected = [];
-  const selectedIds = new Set();
-  const addQuestion = question => {
-    if (question && !selectedIds.has(question.id)) {
-      selected.push(question);
-      selectedIds.add(question.id);
-    }
-  };
-  const picture = shufflePM3(available.filter(question => question.topic === "Shapes"))[0];
-  addQuestion(picture);
-  const typing = shufflePM3(available.filter(question =>
-    question.type === "typing" && question.topic !== "Shapes"))[0];
-  addQuestion(typing);
-  const sorting = shufflePM3(available.filter(question =>
-    question.type === "sort" && question.topic !== typing?.topic))[0];
-  addQuestion(sorting);
-
-  // Keep all nine core topics in each round, while mixing all three forms.
-  const topics = shufflePM3([...new Set(bank.map(question => question.topic))]);
-  for (const topic of topics) {
-    if (selected.some(question => question.topic === topic)) continue;
-    const candidate = shufflePM3(available.filter(question =>
-      question.topic === topic && !selectedIds.has(question.id)))[0];
-    addQuestion(candidate);
+  const planKey = historyKey + "-rounds";
+  const storedPlan = localStorage.getItem(planKey);
+  let plan = storedPlan ? JSON.parse(storedPlan) : null;
+  if (!Array.isArray(plan) || !plan.length) {
+    plan = planPM3Rounds(bank);
+    localStorage.setItem(planKey, JSON.stringify(plan));
   }
-  // Give the extra place to the topic with most unused questions left.
-  // This balances the nine topics across successive quizzes.
-  const leftByTopic = topics.map(topic => ({
-    topic,
-    remaining: available.filter(question =>
-      question.topic === topic && !selectedIds.has(question.id)).length
-  })).sort((a, b) => b.remaining - a.remaining);
-  const extraTopic = leftByTopic.find(entry => entry.remaining > 0)?.topic;
-  if (extraTopic) {
-    addQuestion(shufflePM3(available.filter(question =>
-      question.topic === extraTopic && !selectedIds.has(question.id)))[0]);
-  }
-  if (selected.length !== 10) throw new Error("Not enough different questions.");
-  const questions = shufflePM3(selected);
+  const availableIds = new Set(bank.map(question => question.id));
+  const next = plan.find(round =>
+    round.length === 10 &&
+    round.every(id => availableIds.has(id) && !used.has(id)));
+  if (!next) return null;
+  const questionsById = new Map(bank.map(question => [question.id, question]));
+  const questions = next.map(id => questionsById.get(id));
   for (const question of questions) used.add(question.id);
-  // Save on start, not Finish: leaving early cannot reuse those IDs.
+  // Reserve IDs on quiz start. Leaving early never reuses them.
   localStorage.setItem(historyKey, JSON.stringify([...used]));
   return questions;
 }
