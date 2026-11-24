@@ -51,14 +51,20 @@
         <div class="inner-card quiz-panel">
           <div id="quiz-toolbar" hidden>
             <span id="quiz-toolbar-name" class="math-quiz-title">Times Tables</span>
-            <span id="quiz-count">0 / 10</span>
-            <span id="quiz-progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
-              <span id="quiz-progress-fill"></span>
-            </span>
-            <span id="quiz-clock" role="timer">30:00</span>
+            <div id="quiz-toolbar-middle">
+              <span id="quiz-count">0 / 10</span>
+              <span id="quiz-progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+                <span id="quiz-progress-fill"></span>
+              </span>
+              <span id="quiz-clock" role="timer">30:00</span>
+            </div>
             <nav class="menu-buttons" aria-label="Quiz actions">
+              <span id="quiz-advance-slot">
+                <span class="quiz-advance-reserve" aria-hidden="true">Retry save</span>
+                <button id="quiz-next" type="button" hidden disabled>Next</button>
+                <button id="quiz-finish" type="button" hidden>Finish</button>
+              </span>
               <button id="quiz-exit" type="button">Exit</button>
-              <button id="quiz-finish" type="button" hidden>Finish</button>
             </nav>
           </div>
           <div id="quiz-content"></div>
