@@ -440,19 +440,12 @@ function showMathQuizList() {
 
   const list = document.createElement("div");
   list.className = "math-quiz";
-  const header = document.createElement("div");
-  header.className = "math-quiz-header";
-  const title = document.createElement("div");
-  title.className = "math-quiz-title";
-  title.textContent = "Choose Quiz";
-  header.append(title);
-
   const options = document.createElement("nav");
   options.className = "menu-buttons";
   options.setAttribute("aria-label", "Math quizzes");
   options.append(quizOption("Times Tables", loadMathQuiz));
 
-  list.append(header, options);
+  list.append(options);
   quizContent.replaceChildren(list);
   quizContent.scrollTop = 0;
 }
