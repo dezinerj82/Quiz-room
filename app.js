@@ -468,8 +468,6 @@ function makeMathQuiz(questions) {
     card.className = "math-quiz-card";
     card.dataset.questionId = question.id;
 
-    const row = document.createElement("div");
-    row.className = "math-quiz-row";
     const equation = document.createElement("div");
     equation.className = "math-quiz-equation";
     const input = document.createElement("input");
@@ -491,8 +489,7 @@ function makeMathQuiz(questions) {
     const mark = document.createElement("span");
     mark.className = "math-quiz-mark";
     mark.setAttribute("role", "status");
-    row.append(equation, mark);
-    card.append(row);
+    card.append(equation, mark);
     grid.append(card);
     answers.push(input);
 
@@ -538,7 +535,9 @@ function makeMathQuiz(questions) {
     });
   });
 
-  quiz.append(grid);
+  const instruction = document.createElement("div");
+  instruction.textContent = "Fill in the missing number. Press Enter to check.";
+  quiz.append(instruction, grid);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
   startQuiz(questions, answers);
