@@ -63,7 +63,7 @@ function saveLogin(response) {
 }
 
 function showError(message) {
-  loginStage.style.display = "";
+  loginStage.style.display = "flex";
   loginButton.disabled = false;
   statusMessage.textContent = message;
   statusMessage.hidden = false;
@@ -111,7 +111,10 @@ async function finishLogin(response) {
 
 async function restoreLogin() {
   const savedToken = getSavedLogin();
-  if (!savedToken) return;
+  if (!savedToken) {
+    loginStage.style.display = "flex";
+    return;
+  }
 
   loginStage.style.display = "none";
   try {
@@ -120,7 +123,7 @@ async function restoreLogin() {
     showMainPage();
   } catch (error) {
     clearSavedLogin();
-    loginStage.style.display = "";
+    loginStage.style.display = "flex";
   }
 }
 
@@ -540,7 +543,7 @@ function chooseMode(mode) {
 
 function selectQuizSubject(subject) {
   quizSubject = subject;
-  quizStepLabel.textContent = "Choose a quiz";
+  quizStepLabel.textContent = "Choose a subject";
   quizStepActions.replaceChildren(
     quizOption(subject, () => {}, true)
   );
@@ -617,6 +620,7 @@ function makeMathQuiz(questions) {
       mark.className = "math-quiz-mark";
       mark.textContent = "";
       mark.removeAttribute("aria-label");
+      explanation.hidden = true;
       updateQuizProgress();
     });
 
@@ -638,6 +642,10 @@ function makeMathQuiz(questions) {
       mark.className = "math-quiz-mark " + state;
       mark.textContent = correct ? "✓" : "✕";
       mark.setAttribute("aria-label", correct ? "Correct" : "Incorrect");
+      explanation.textContent = question.a + " × " + question.b + " = " +
+        (question.a * question.b) + ". That means " + question.a +
+        " groups of " + question.b + " make " + (question.a * question.b) + ".";
+      explanation.hidden = false;
 
       const current = answers.indexOf(input);
       const next = [...answers.slice(current + 1), ...answers.slice(0, current)]
@@ -653,8 +661,12 @@ function makeMathQuiz(questions) {
   });
 
   const instruction = document.createElement("div");
+  instruction.className = "math-basics-question-text";
   instruction.textContent = "Fill in the missing number. Press Enter to check.";
-  quiz.append(instruction, grid);
+  const explanation = document.createElement("div");
+  explanation.hidden = true;
+  explanation.setAttribute("role", "status");
+  quiz.append(instruction, grid, explanation);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
   startQuiz(questions, answers);
@@ -840,6 +852,10 @@ function pm3CommitAnswer(correct) {
   const answer = session.answers[session.currentIndex];
   answer.dataset.checked = "true";
   answer.dataset.correct = String(correct);
+  const explanation = document.createElement("div");
+  explanation.textContent = session.questions[session.currentIndex].explanation;
+  explanation.setAttribute("role", "status");
+  quizContent.querySelector(".math-basics-card").append(explanation);
   quizContent.querySelectorAll("button, input").forEach(control => {
     control.disabled = true;
   });
@@ -954,6 +970,28 @@ function pm3SortAnswer(question) {
       if (!pm3CanAnswer()) { event.preventDefault(); return; }
       event.dataTransfer.setData("text/plain", value);
       event.dataTransfer.effectAllowed = "move";
+      // Draw only the pill, without the browser's white drag rectangle.
+      if (event.dataTransfer.setDragImage) {
+        const width = button.offsetWidth;
+        const height = button.offsetHeight;
+        const canvas = document.createElement("canvas");
+        canvas.width = width * 2;
+        canvas.height = height * 2;
+        const context = canvas.getContext("2d");
+        if (context) {
+          context.scale(2, 2);
+          context.fillStyle = "#f1f1f1";
+          context.beginPath();
+          context.roundRect(0, 0, width, height, height / 2);
+          context.fill();
+          context.fillStyle = "#171717";
+          context.font = '14px "Google Sans", sans-serif';
+          context.textAlign = "center";
+          context.textBaseline = "middle";
+          context.fillText(value, width / 2, height / 2);
+          event.dataTransfer.setDragImage(canvas, width / 2, height / 2);
+        }
+      }
     });
   }
 
@@ -1060,7 +1098,10 @@ async function loadPM3MathBasics() {
     const response = await fetch("./id/math-pm3-basics.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Questions could not load.");
     const bank = await response.json();
-    if (!Array.isArray(bank) || bank.length < 10) throw new Error("Not enough questions.");
+    if (!Array.isArray(bank) || bank.length < 10 ||
+        bank.some(question => !question.explanation)) {
+      throw new Error("Questions or explanations are missing.");
+    }
     if (run !== quizRenderRun) return;
     const questions = selectFreshPM3Questions(bank);
     if (!questions) {
