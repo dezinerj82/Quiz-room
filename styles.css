@@ -223,6 +223,7 @@ h1 {
 }
 
 .math-quiz-title,
+.math-quiz-score-value,
 #quiz-step-label:not(:empty) {
   display: inline-flex;
   align-items: center;
@@ -232,6 +233,40 @@ h1 {
   border-radius: 999px;
   font-size: var(--font-size);
   font-weight: 400;
+}
+
+/* Centered final score: approved dots design with default 18px text. */
+.math-quiz-score {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--item-gap);
+  font-size: var(--font-size);
+}
+
+.math-quiz-score-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--item-gap);
+}
+
+.math-quiz-score-dots > span {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #dedede;
+}
+
+.math-quiz-score-dots > .is-correct {
+  background: #171717;
+}
+
+.math-quiz-score-value {
+  background: #171717;
+  color: #fff;
 }
 
 .math-quiz-grid {
