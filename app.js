@@ -234,6 +234,8 @@ function resetQuizContent() {
   quizFinishButton.disabled = false;
   quizFinishButton.textContent = "Finish";
   quizExitButton.disabled = false;
+  quizContent.classList.remove("math-basics-card");
+  quizContent.removeAttribute("data-question-id");
   quizContent.replaceChildren();
   quizContent.scrollTop = 0;
 }
@@ -450,6 +452,8 @@ function showMathQuizScore(score) {
   value.textContent = score.score + " / " + score.total;
 
   result.append(label, dots, value);
+  quizContent.classList.remove("math-basics-card");
+  quizContent.removeAttribute("data-question-id");
   quizContent.replaceChildren(result);
   quizContent.scrollTop = 0;
 }
@@ -854,7 +858,7 @@ function pm3CommitAnswer(correct) {
   const explanation = document.createElement("div");
   explanation.textContent = session.questions[session.currentIndex].explanation;
   explanation.setAttribute("role", "status");
-  quizContent.querySelector(".math-basics-card").append(explanation);
+  quizContent.append(explanation);
   quizContent.querySelectorAll("button, input").forEach(control => {
     control.disabled = true;
   });
@@ -1056,9 +1060,10 @@ function renderPM3Question() {
   const session = activeQuiz;
   if (!session || session.kind !== "pm3-basics") return;
   const question = session.questions[session.currentIndex];
-  const card = document.createElement("div");
-  card.className = "math-basics-card";
+  const card = quizContent;
+  card.classList.add("math-basics-card");
   card.dataset.questionId = question.id;
+  card.replaceChildren();
   const prompt = document.createElement("div");
   prompt.className = "math-basics-question-text";
   prompt.textContent = question.prompt;
@@ -1085,7 +1090,6 @@ function renderPM3Question() {
   } else {
     throw new Error("Unknown question style.");
   }
-  quizContent.replaceChildren(card);
   quizContent.scrollTop = 0;
   updateQuizProgress();
 }
