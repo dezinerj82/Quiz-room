@@ -226,7 +226,7 @@ h1 {
 }
 
 #quiz-step-label:not(:empty) {
-  background: #d8f3e7;
+  --pill-background: #d8f3e7;
   color: #145740;
 }
 
@@ -261,7 +261,7 @@ h1 {
   align-items: center;
   width: fit-content;
   padding: var(--pill-padding-y) var(--pill-padding-x);
-  background: #f1f1f1;
+  background: var(--pill-background, #f1f1f1);
   border-radius: 999px;
   font-size: var(--font-size);
   font-weight: inherit;
