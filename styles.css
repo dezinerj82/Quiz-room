@@ -272,7 +272,7 @@ h1 {
   transition: box-shadow .25s ease, transform .2s ease;
 }
 
-.math-quiz-title,
+.math-quiz-title:not([hidden]),
 .math-quiz-score-value,
 #quiz-step-label:not(:empty) {
   display: inline-flex;
@@ -283,6 +283,23 @@ h1 {
   border-radius: 999px;
   font-size: var(--font-size);
   font-weight: inherit;
+}
+
+/* Hover translation: existing pill shape, 13px text, 85% opacity. */
+.foreign-word {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.foreign-translation {
+  position: fixed;
+  z-index: 10;
+  color: #145740;
+  font-size: 13px;
+  opacity: .85;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 /* Centered final score: approved dots design with default 18px text. */
