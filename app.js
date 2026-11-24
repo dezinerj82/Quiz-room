@@ -156,6 +156,7 @@ const homeMenuButton = document.getElementById("menu-home");
 const quizMenuButton = document.getElementById("menu-quiz");
 const quizStepLabel = document.getElementById("quiz-step-label");
 const quizStepActions = document.getElementById("quiz-step-actions");
+const quizStepBack = document.getElementById("quiz-step-back");
 const quizSubjects = ["Math"];
 let quizMode = null;
 
@@ -406,10 +407,11 @@ function openQuizMenu() {
   quizMode = null;
   resetQuizContent();
   setMainMenu(quizMenuButton);
-  quizStepLabel.textContent = "Choose a mode";
+  quizStepLabel.textContent = "Choose an activity";
   quizStepActions.replaceChildren(
     quizOption("Quiz", () => chooseMode("Quiz"))
   );
+  quizStepBack.replaceChildren();
 }
 
 function chooseMode(mode) {
@@ -417,9 +419,9 @@ function chooseMode(mode) {
   resetQuizContent();
   quizStepLabel.textContent = "Choose a subject";
   quizStepActions.replaceChildren(
-    quizOption("Back", openQuizMenu),
     ...quizSubjects.map(subject => quizOption(subject, () => selectQuizSubject(subject)))
   );
+  quizStepBack.replaceChildren(quizOption("Back", openQuizMenu));
 }
 
 function selectQuizSubject(subject) {
@@ -580,6 +582,7 @@ homeMenuButton.addEventListener("click", () => {
   setMainMenu(homeMenuButton);
   quizStepLabel.textContent = "";
   quizStepActions.replaceChildren();
+  quizStepBack.replaceChildren();
 });
 quizMenuButton.addEventListener("click", openQuizMenu);
 
