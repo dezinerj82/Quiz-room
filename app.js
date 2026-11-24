@@ -159,8 +159,18 @@ const quizMenuButton = document.getElementById("menu-quiz");
 const quizStepLabel = document.getElementById("quiz-step-label");
 const quizStepActions = document.getElementById("quiz-step-actions");
 const quizStepBack = document.getElementById("quiz-step-back");
-const quizSubjects = ["Math"];
+// Only show levels, activities and subjects that have quizzes available.
+const quizCatalog = [
+  { level: "PM3", activity: "Quiz", subject: "Math", name: "Times Tables", open: loadMathQuiz },
+  { level: "PM3", activity: "Quiz", subject: "Math", name: "Basic Knowledge", open: loadPM3MathBasics }
+];
+let quizLevel = null;
 let quizMode = null;
+let quizSubject = null;
+
+function quizChoices(key, matches) {
+  return [...new Set(quizCatalog.filter(matches).map(quiz => quiz[key]))];
+}
 
 function setMainMenu(activeButton) {
   for (const button of [homeMenuButton, quizMenuButton]) {
@@ -483,52 +493,68 @@ quizExitButton.addEventListener("click", showMathQuizList);
 quizFinishButton.addEventListener("click", finishMathQuiz);
 
 function openQuizMenu() {
+  quizLevel = null;
   quizMode = null;
+  quizSubject = null;
   resetQuizContent();
   setMainMenu(quizMenuButton);
-  quizStepLabel.textContent = "Choose an activity";
+  quizStepLabel.textContent = "Choose a level";
   quizStepActions.replaceChildren(
-    quizOption("Quiz", () => chooseMode("Quiz"))
+    ...quizChoices("level", () => true).map(level =>
+      quizOption(level, () => selectQuizLevel(level)))
   );
   quizStepBack.replaceChildren();
 }
 
-function chooseMode(mode) {
-  quizMode = mode;
+function selectQuizLevel(level) {
+  quizLevel = level;
+  quizMode = null;
+  quizSubject = null;
   resetQuizContent();
-  quizStepLabel.textContent = "Choose a subject";
+  quizStepLabel.textContent = "Choose an activity";
   quizStepActions.replaceChildren(
-    ...quizSubjects.map(subject => quizOption(subject, () => selectQuizSubject(subject)))
+    ...quizChoices("activity", quiz => quiz.level === level).map(activity =>
+      quizOption(activity, () => chooseMode(activity)))
   );
   quizStepBack.replaceChildren(quizOption("Back", openQuizMenu));
 }
 
+function chooseMode(mode) {
+  quizMode = mode;
+  quizSubject = null;
+  resetQuizContent();
+  quizStepLabel.textContent = "Choose a subject";
+  quizStepActions.replaceChildren(
+    ...quizChoices("subject", quiz =>
+      quiz.level === quizLevel && quiz.activity === mode).map(subject =>
+      quizOption(subject, () => selectQuizSubject(subject)))
+  );
+  quizStepBack.replaceChildren(quizOption("Back", () => selectQuizLevel(quizLevel)));
+}
+
 function selectQuizSubject(subject) {
+  quizSubject = subject;
   quizStepLabel.textContent = "Choose a quiz";
-  for (const button of quizStepActions.querySelectorAll("button")) {
-    const selected = button.textContent === subject;
-    button.classList.toggle("is-active", selected);
-    if (selected) button.setAttribute("aria-pressed", "true");
-    else button.removeAttribute("aria-pressed");
-  }
-  if (subject === "Math" && quizMode === "Quiz") {
-    showMathQuizList();
-  }
+  quizStepActions.replaceChildren(
+    quizOption(subject, () => {}, true)
+  );
+  quizStepBack.replaceChildren(quizOption("Back", () => chooseMode(quizMode)));
+  showMathQuizList();
 }
 
 function showMathQuizList() {
   resetQuizContent();
-
   const list = document.createElement("div");
   list.className = "math-quiz";
   const options = document.createElement("nav");
   options.className = "menu-buttons";
-  options.setAttribute("aria-label", "Math quizzes");
-  options.append(
-    quizOption("Times Tables", loadMathQuiz),
-    quizOption("PM3 Math Basics", loadPM3MathBasics)
+  options.setAttribute("aria-label", "Quizzes");
+  const available = quizCatalog.filter(quiz =>
+    quiz.level === quizLevel &&
+    quiz.activity === quizMode &&
+    quiz.subject === quizSubject
   );
-
+  options.append(...available.map(quiz => quizOption(quiz.name, quiz.open)));
   list.append(options);
   quizContent.replaceChildren(list);
   quizContent.scrollTop = 0;
@@ -1032,10 +1058,10 @@ async function loadPM3MathBasics() {
     if (run !== quizRenderRun) return;
     const questions = selectFreshPM3Questions(bank);
     if (!questions) {
-      quizContent.textContent = "You have finished all PM3 Math Basics questions.";
+      quizContent.textContent = "You have finished all Basic Knowledge questions.";
       return;
     }
-    quizToolbarName.textContent = "PM3 Math Basics";
+    quizToolbarName.textContent = "Basic Knowledge";
     const answers = questions.map(() => {
       const state = document.createElement("input");
       state.dataset.checked = "false";
@@ -1044,12 +1070,12 @@ async function loadPM3MathBasics() {
     });
     startQuiz(questions, answers);
     activeQuiz.kind = "pm3-basics";
-    activeQuiz.quizName = "PM3 Math Basics";
+    activeQuiz.quizName = "Basic Knowledge";
     activeQuiz.currentIndex = 0;
     renderPM3Question();
   } catch (error) {
     if (run !== quizRenderRun) return;
-    quizContent.textContent = "PM3 Math Basics could not load. Please try again.";
+    quizContent.textContent = "Basic Knowledge could not load. Please try again.";
   }
 }
 
