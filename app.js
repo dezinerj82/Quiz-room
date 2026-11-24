@@ -460,7 +460,6 @@ async function finishMathQuiz() {
   quizSaving = true;
   quizNextButton.hidden = true;
   stopQuizTimer();
-  quizExitButton.disabled = true;
   quizFinishButton.disabled = true;
   quizFinishButton.textContent = "Finish";
   quizFinishButton.title = "";
