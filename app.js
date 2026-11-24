@@ -701,17 +701,42 @@ function selectFreshPM3Questions(bank) {
   }
 
   const selected = [];
-  const chosen = new Set();
-  // Spread questions across the main PM3 skills whenever possible.
+  const selectedIds = new Set();
+  const addQuestion = question => {
+    if (question && !selectedIds.has(question.id)) {
+      selected.push(question);
+      selectedIds.add(question.id);
+    }
+  };
+  const picture = shufflePM3(available.filter(question => question.topic === "Shapes"))[0];
+  addQuestion(picture);
+  const typing = shufflePM3(available.filter(question =>
+    question.type === "typing" && question.topic !== "Shapes"))[0];
+  addQuestion(typing);
+  const sorting = shufflePM3(available.filter(question =>
+    question.type === "sort" && question.topic !== typing?.topic))[0];
+  addQuestion(sorting);
+
+  // Keep all nine core topics in each round, while mixing all three forms.
   const topics = shufflePM3([...new Set(bank.map(question => question.topic))]);
   for (const topic of topics) {
-    const candidates = shufflePM3(available.filter(question => question.topic === topic));
-    if (!candidates.length) continue;
-    selected.push(candidates[0]);
-    chosen.add(candidates[0].id);
+    if (selected.some(question => question.topic === topic)) continue;
+    const candidate = shufflePM3(available.filter(question =>
+      question.topic === topic && !selectedIds.has(question.id)))[0];
+    addQuestion(candidate);
   }
-  const extra = shufflePM3(available.filter(question => !chosen.has(question.id)));
-  selected.push(...extra.slice(0, 10 - selected.length));
+  // Give the extra place to the topic with most unused questions left.
+  // This balances the nine topics across successive quizzes.
+  const leftByTopic = topics.map(topic => ({
+    topic,
+    remaining: available.filter(question =>
+      question.topic === topic && !selectedIds.has(question.id)).length
+  })).sort((a, b) => b.remaining - a.remaining);
+  const extraTopic = leftByTopic.find(entry => entry.remaining > 0)?.topic;
+  if (extraTopic) {
+    addQuestion(shufflePM3(available.filter(question =>
+      question.topic === extraTopic && !selectedIds.has(question.id)))[0]);
+  }
   if (selected.length !== 10) throw new Error("Not enough different questions.");
   const questions = shufflePM3(selected);
   for (const question of questions) used.add(question.id);
