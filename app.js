@@ -704,7 +704,6 @@ function makeMathQuiz(questions) {
       mark.className = "math-quiz-mark";
       mark.textContent = "";
       mark.removeAttribute("aria-label");
-      explanation.hidden = true;
       updateQuizProgress();
     });
 
@@ -726,10 +725,6 @@ function makeMathQuiz(questions) {
       mark.className = "math-quiz-mark " + state;
       mark.textContent = correct ? "✓" : "✕";
       mark.setAttribute("aria-label", correct ? "Correct" : "Incorrect");
-      explanation.textContent = question.a + " × " + question.b + " = " +
-        (question.a * question.b) + ". That means " + question.a +
-        " groups of " + question.b + " make " + (question.a * question.b) + ".";
-      explanation.hidden = false;
 
       const current = answers.indexOf(input);
       const next = [...answers.slice(current + 1), ...answers.slice(0, current)]
@@ -747,9 +742,7 @@ function makeMathQuiz(questions) {
   const instruction = document.createElement("div");
   instruction.className = "math-basics-question-text";
   instruction.textContent = "Fill in the missing number. Press Enter to check.";
-  const explanation = createAnswerExplanation();
-  explanation.hidden = true;
-  quiz.append(instruction, grid, explanation);
+  quiz.append(instruction, grid);
   quizContent.replaceChildren(quiz);
   quizContent.scrollTop = 0;
   startQuiz(questions, answers);
