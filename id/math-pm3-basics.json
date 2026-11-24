@@ -10,7 +10,8 @@
       "4,250",
       "4,025",
       "2,405"
-    ]
+    ],
+    "explanation": "4,205 has 4 thousands, 2 hundreds, 0 tens and 5 ones."
   },
   {
     "id": "PM3-MB-002",
@@ -23,7 +24,8 @@
       "7,800",
       "7,008",
       "7,088"
-    ]
+    ],
+    "explanation": "7,800 is the biggest. It has more hundreds than the other numbers."
   },
   {
     "id": "PM3-MB-003",
@@ -36,7 +38,8 @@
       "6,248",
       "7,329",
       "9,111"
-    ]
+    ],
+    "explanation": "6,248 is even because its last digit is 8."
   },
   {
     "id": "PM3-MB-004",
@@ -49,28 +52,32 @@
       "60",
       "600",
       "6,000"
-    ]
+    ],
+    "explanation": "The 6 is in the thousands place, so it means 6,000."
   },
   {
     "id": "PM3-MB-005",
     "topic": "Numbers",
     "type": "typing",
     "prompt": "What is 300 more than 2,400?",
-    "answer": "2700"
+    "answer": "2700",
+    "explanation": "2,400 + 300 = 2,700. We add three more hundreds."
   },
   {
     "id": "PM3-MB-006",
     "topic": "Numbers",
     "type": "typing",
     "prompt": "What is 10 less than 5,010?",
-    "answer": "5000"
+    "answer": "5000",
+    "explanation": "5,010 − 10 = 5,000. Taking away one ten leaves 5,000."
   },
   {
     "id": "PM3-MB-007",
     "topic": "Numbers",
     "type": "typing",
     "prompt": "Round 4,672 to the nearest ten.",
-    "answer": "4670"
+    "answer": "4670",
+    "explanation": "4,672 rounds to 4,670. The ones digit is 2, so the tens stay the same."
   },
   {
     "id": "PM3-MB-008",
@@ -88,7 +95,8 @@
       "1,205",
       "1,250",
       "1,520"
-    ]
+    ],
+    "explanation": "The order is 1,052, 1,205, 1,250, 1,520. Each number is bigger than the one before it."
   },
   {
     "id": "PM3-MB-009",
@@ -106,7 +114,8 @@
       "990",
       "909",
       "900"
-    ]
+    ],
+    "explanation": "The order is 1,090, 990, 909, 900. We start with the largest number."
   },
   {
     "id": "PM3-MB-010",
@@ -124,7 +133,8 @@
       "4,060",
       "4,600",
       "4,640"
-    ]
+    ],
+    "explanation": "The order is 4,006, 4,060, 4,600, 4,640. Compare the hundreds, then tens and ones."
   },
   {
     "id": "PM3-MB-011",
@@ -137,7 +147,8 @@
       "20",
       "30",
       "16"
-    ]
+    ],
+    "explanation": "24 − 6 = 18. Taking 6 crayons away from 24 leaves 18."
   },
   {
     "id": "PM3-MB-012",
@@ -150,7 +161,8 @@
       "8",
       "9",
       "6"
-    ]
+    ],
+    "explanation": "56 ÷ 7 = 8. Seven groups of 8 make 56."
   },
   {
     "id": "PM3-MB-013",
@@ -163,7 +175,8 @@
       "1,580",
       "1,780",
       "1,670"
-    ]
+    ],
+    "explanation": "1,230 + 450 = 1,680. Add the hundreds and tens together."
   },
   {
     "id": "PM3-MB-014",
@@ -176,28 +189,32 @@
       "635",
       "675",
       "725"
-    ]
+    ],
+    "explanation": "900 − 275 = 625. There are 625 left after taking away 275."
   },
   {
     "id": "PM3-MB-015",
     "topic": "Operations",
     "type": "typing",
     "prompt": "5 bags have 9 marbles each. How many marbles?",
-    "answer": "45"
+    "answer": "45",
+    "explanation": "5 × 9 = 45. Five bags of 9 marbles make 45 marbles."
   },
   {
     "id": "PM3-MB-016",
     "topic": "Operations",
     "type": "typing",
     "prompt": "What is 320 + 180?",
-    "answer": "500"
+    "answer": "500",
+    "explanation": "320 + 180 = 500. The hundreds and tens add up to 500."
   },
   {
     "id": "PM3-MB-017",
     "topic": "Operations",
     "type": "typing",
     "prompt": "What is 96 ÷ 8?",
-    "answer": "12"
+    "answer": "12",
+    "explanation": "96 ÷ 8 = 12. Eight groups of 12 make 96."
   },
   {
     "id": "PM3-MB-018",
@@ -215,7 +232,8 @@
       "36",
       "63",
       "81"
-    ]
+    ],
+    "explanation": "The order is 18, 36, 63, 81. Each number is larger than the one before it."
   },
   {
     "id": "PM3-MB-019",
@@ -233,7 +251,8 @@
       "5 + 2",
       "8 + 1",
       "4 + 6"
-    ]
+    ],
+    "explanation": "3 + 1 = 4, 5 + 2 = 7, 8 + 1 = 9 and 4 + 6 = 10. So they go in that order."
   },
   {
     "id": "PM3-MB-020",
@@ -251,7 +270,8 @@
       "2 × 7",
       "3 × 5",
       "4 × 6"
-    ]
+    ],
+    "explanation": "6 × 2 = 12, 2 × 7 = 14, 3 × 5 = 15 and 4 × 6 = 24. These answers go from smallest to biggest."
   },
   {
     "id": "PM3-MB-021",
@@ -264,7 +284,8 @@
       "1/4",
       "1/3",
       "3/4"
-    ]
+    ],
+    "explanation": "One of four equal cake slices is 1/4 of the whole cake."
   },
   {
     "id": "PM3-MB-022",
@@ -277,7 +298,8 @@
       "0.25",
       "0.5",
       "0.75"
-    ]
+    ],
+    "explanation": "1/2 is 0.5. Both mean one half of a whole."
   },
   {
     "id": "PM3-MB-023",
@@ -290,7 +312,8 @@
       "1/4",
       "1/2",
       "1/6"
-    ]
+    ],
+    "explanation": "1/2 is the biggest here. Half a whole is more than a quarter, a sixth or an eighth."
   },
   {
     "id": "PM3-MB-024",
@@ -303,28 +326,32 @@
       "25 out of 10",
       "25 out of 1,000",
       "25 out of 50"
-    ]
+    ],
+    "explanation": "25% means 25 out of 100. The percent sign means out of 100."
   },
   {
     "id": "PM3-MB-025",
     "topic": "Fractions",
     "type": "typing",
     "prompt": "How many quarters make one whole?",
-    "answer": "4"
+    "answer": "4",
+    "explanation": "Four quarters make one whole because 1/4 + 1/4 + 1/4 + 1/4 = 1."
   },
   {
     "id": "PM3-MB-026",
     "topic": "Fractions",
     "type": "typing",
     "prompt": "How many halves make one whole?",
-    "answer": "2"
+    "answer": "2",
+    "explanation": "Two halves make one whole because 1/2 + 1/2 = 1."
   },
   {
     "id": "PM3-MB-027",
     "topic": "Fractions",
     "type": "typing",
     "prompt": "What percentage is half of 100%?",
-    "answer": "50"
+    "answer": "50",
+    "explanation": "Half of 100% is 50%. We divide 100 by 2."
   },
   {
     "id": "PM3-MB-028",
@@ -342,7 +369,8 @@
       "1/2",
       "3/4",
       "1"
-    ]
+    ],
+    "explanation": "The order is 1/4, 1/2, 3/4, 1. Each fraction shows a larger part of a whole."
   },
   {
     "id": "PM3-MB-029",
@@ -360,7 +388,8 @@
       "0.5",
       "0.8",
       "0.9"
-    ]
+    ],
+    "explanation": "The order is 0.2, 0.5, 0.8, 0.9. Compare the tenths digits."
   },
   {
     "id": "PM3-MB-030",
@@ -378,7 +407,8 @@
       "25%",
       "50%",
       "75%"
-    ]
+    ],
+    "explanation": "The order is 10%, 25%, 50%, 75%. The percentages increase from left to right."
   },
   {
     "id": "PM3-MB-031",
@@ -391,7 +421,8 @@
       "RM3",
       "RM4",
       "RM5"
-    ]
+    ],
+    "explanation": "RM10 − RM7 = RM3. That is your change."
   },
   {
     "id": "PM3-MB-032",
@@ -404,7 +435,8 @@
       "RM6.05",
       "RM6.50",
       "RM5.99"
-    ]
+    ],
+    "explanation": "RM6.50 is the biggest because it is more than RM6.05 and the RM5 amounts."
   },
   {
     "id": "PM3-MB-033",
@@ -417,7 +449,8 @@
       "RM3",
       "RM4",
       "RM6"
-    ]
+    ],
+    "explanation": "RM2 + RM2 = RM4. Two pencils cost RM4 together."
   },
   {
     "id": "PM3-MB-034",
@@ -430,28 +463,32 @@
       "RM13",
       "RM15",
       "RM16"
-    ]
+    ],
+    "explanation": "RM12 + RM3 = RM15. Add the book and pen prices."
   },
   {
     "id": "PM3-MB-035",
     "topic": "Money",
     "type": "typing",
     "prompt": "How many sen are in RM1?",
-    "answer": "100"
+    "answer": "100",
+    "explanation": "RM1 is 100 sen. One ringgit has one hundred sen."
   },
   {
     "id": "PM3-MB-036",
     "topic": "Money",
     "type": "typing",
     "prompt": "You have RM20 and spend RM8. How many ringgit are left?",
-    "answer": "12"
+    "answer": "12",
+    "explanation": "RM20 − RM8 = RM12. You have RM12 left."
   },
   {
     "id": "PM3-MB-037",
     "topic": "Money",
     "type": "typing",
     "prompt": "3 notebooks cost RM4 each. How many ringgit in total?",
-    "answer": "12"
+    "answer": "12",
+    "explanation": "3 × RM4 = RM12. Three notebooks cost RM12 in total."
   },
   {
     "id": "PM3-MB-038",
@@ -469,7 +506,8 @@
       "RM2.05",
       "RM2.50",
       "RM5.00"
-    ]
+    ],
+    "explanation": "The order is RM1.50, RM2.05, RM2.50, RM5.00. Start with the cheapest price."
   },
   {
     "id": "PM3-MB-039",
@@ -487,7 +525,8 @@
       "RM7",
       "RM5",
       "RM3"
-    ]
+    ],
+    "explanation": "The order is RM9, RM7, RM5, RM3. Start with the most expensive price."
   },
   {
     "id": "PM3-MB-040",
@@ -505,7 +544,8 @@
       "RM1",
       "RM1.50",
       "RM2"
-    ]
+    ],
+    "explanation": "50 sen is RM0.50. So the order is 50 sen, RM1, RM1.50, RM2."
   },
   {
     "id": "PM3-MB-041",
@@ -518,7 +558,8 @@
       "45",
       "60",
       "100"
-    ]
+    ],
+    "explanation": "One hour has 60 minutes."
   },
   {
     "id": "PM3-MB-042",
@@ -531,7 +572,8 @@
       "July",
       "August",
       "April"
-    ]
+    ],
+    "explanation": "July comes just after June in the calendar."
   },
   {
     "id": "PM3-MB-043",
@@ -544,7 +586,8 @@
       "2:30",
       "3:00",
       "1:30"
-    ]
+    ],
+    "explanation": "30 minutes after 2:00 is 2:30. We add half an hour."
   },
   {
     "id": "PM3-MB-044",
@@ -557,28 +600,32 @@
       "6",
       "7",
       "8"
-    ]
+    ],
+    "explanation": "A week has 7 days, from Monday to Sunday."
   },
   {
     "id": "PM3-MB-045",
     "topic": "Time",
     "type": "typing",
     "prompt": "How many hours are in one day?",
-    "answer": "24"
+    "answer": "24",
+    "explanation": "One full day has 24 hours."
   },
   {
     "id": "PM3-MB-046",
     "topic": "Time",
     "type": "typing",
     "prompt": "How many minutes are in half an hour?",
-    "answer": "30"
+    "answer": "30",
+    "explanation": "Half an hour is 30 minutes because 60 ÷ 2 = 30."
   },
   {
     "id": "PM3-MB-047",
     "topic": "Time",
     "type": "typing",
     "prompt": "A lesson starts at 9:00 and ends at 10:00. How many minutes?",
-    "answer": "60"
+    "answer": "60",
+    "explanation": "From 9:00 to 10:00 is one hour, and one hour is 60 minutes."
   },
   {
     "id": "PM3-MB-048",
@@ -596,7 +643,8 @@
       "8:15 am",
       "8:45 am",
       "9:00 am"
-    ]
+    ],
+    "explanation": "The order is 7:30 am, 8:15 am, 8:45 am, 9:00 am. Each time comes later."
   },
   {
     "id": "PM3-MB-049",
@@ -614,7 +662,8 @@
       "Tuesday",
       "Wednesday",
       "Thursday"
-    ]
+    ],
+    "explanation": "The order is Monday, Tuesday, Wednesday, Thursday. These are four days in a row."
   },
   {
     "id": "PM3-MB-050",
@@ -632,7 +681,8 @@
       "March",
       "May",
       "July"
-    ]
+    ],
+    "explanation": "The order is January, March, May, July. These months come in that order in a year."
   },
   {
     "id": "PM3-MB-051",
@@ -645,7 +695,8 @@
       "cm",
       "kg",
       "L"
-    ]
+    ],
+    "explanation": "Centimetres (cm) measure short lengths, like a pencil."
   },
   {
     "id": "PM3-MB-052",
@@ -658,7 +709,8 @@
       "mL",
       "cm",
       "km"
-    ]
+    ],
+    "explanation": "Kilograms (kg) measure heavy things, like a watermelon."
   },
   {
     "id": "PM3-MB-053",
@@ -671,7 +723,8 @@
       "500 mL",
       "1 L",
       "2 L"
-    ]
+    ],
+    "explanation": "2 L holds the most. It is more than 1 L, 500 mL and 200 mL."
   },
   {
     "id": "PM3-MB-054",
@@ -684,28 +737,32 @@
       "50",
       "100",
       "1,000"
-    ]
+    ],
+    "explanation": "One metre is 100 centimetres."
   },
   {
     "id": "PM3-MB-055",
     "topic": "Measurement",
     "type": "typing",
     "prompt": "How many grams are in 1 kilogram?",
-    "answer": "1000"
+    "answer": "1000",
+    "explanation": "One kilogram is 1,000 grams."
   },
   {
     "id": "PM3-MB-056",
     "topic": "Measurement",
     "type": "typing",
     "prompt": "How many millilitres are in 1 litre?",
-    "answer": "1000"
+    "answer": "1000",
+    "explanation": "One litre is 1,000 millilitres."
   },
   {
     "id": "PM3-MB-057",
     "topic": "Measurement",
     "type": "typing",
     "prompt": "A ribbon is 50 cm long. Another is 30 cm. Total centimetres?",
-    "answer": "80"
+    "answer": "80",
+    "explanation": "50 cm + 30 cm = 80 cm. Add the two ribbon lengths."
   },
   {
     "id": "PM3-MB-058",
@@ -723,7 +780,8 @@
       "25 cm",
       "50 cm",
       "90 cm"
-    ]
+    ],
+    "explanation": "The order is 10 cm, 25 cm, 50 cm, 90 cm. The lengths get longer each time."
   },
   {
     "id": "PM3-MB-059",
@@ -741,7 +799,8 @@
       "250 g",
       "500 g",
       "1 kg"
-    ]
+    ],
+    "explanation": "The order is 100 g, 250 g, 500 g, 1 kg. One kilogram is 1,000 g, so it is the heaviest."
   },
   {
     "id": "PM3-MB-060",
@@ -759,7 +818,8 @@
       "250 mL",
       "500 mL",
       "1 L"
-    ]
+    ],
+    "explanation": "The order is 100 mL, 250 mL, 500 mL, 1 L. One litre is 1,000 mL, so it is the most."
   },
   {
     "id": "PM3-MB-061",
@@ -773,7 +833,8 @@
       "3",
       "4",
       "5"
-    ]
+    ],
+    "explanation": "The triangle has 3 straight sides."
   },
   {
     "id": "PM3-MB-062",
@@ -787,7 +848,8 @@
       "3",
       "4",
       "5"
-    ]
+    ],
+    "explanation": "The rectangle has 4 corners where its sides meet."
   },
   {
     "id": "PM3-MB-063",
@@ -801,7 +863,8 @@
       "4",
       "5",
       "6"
-    ]
+    ],
+    "explanation": "The pentagon has 5 straight sides."
   },
   {
     "id": "PM3-MB-064",
@@ -815,7 +878,8 @@
       "5",
       "6",
       "8"
-    ]
+    ],
+    "explanation": "The hexagon has 6 straight sides."
   },
   {
     "id": "PM3-MB-065",
@@ -829,7 +893,8 @@
       "1",
       "2",
       "4"
-    ]
+    ],
+    "explanation": "The circle has 0 corners because its edge is curved all the way around."
   },
   {
     "id": "PM3-MB-066",
@@ -842,7 +907,8 @@
       "triangle",
       "square",
       "rectangle"
-    ]
+    ],
+    "explanation": "A triangle has 3 straight sides and 3 corners."
   },
   {
     "id": "PM3-MB-067",
@@ -855,7 +921,8 @@
       "rectangle",
       "pentagon",
       "circle"
-    ]
+    ],
+    "explanation": "A square has 4 equal sides and 4 corners."
   },
   {
     "id": "PM3-MB-068",
@@ -868,7 +935,8 @@
       "square",
       "rectangle",
       "triangle"
-    ]
+    ],
+    "explanation": "A rectangle has 4 corners, with opposite sides the same length."
   },
   {
     "id": "PM3-MB-069",
@@ -881,7 +949,8 @@
       "hexagon",
       "triangle",
       "rectangle"
-    ]
+    ],
+    "explanation": "A pentagon has 5 straight sides and 5 corners."
   },
   {
     "id": "PM3-MB-070",
@@ -894,7 +963,8 @@
       "hexagon",
       "pentagon",
       "square"
-    ]
+    ],
+    "explanation": "A hexagon has 6 straight sides and 6 corners."
   },
   {
     "id": "PM3-MB-071",
@@ -907,7 +977,8 @@
       "Second number",
       "Both numbers",
       "Neither number"
-    ]
+    ],
+    "explanation": "The first number tells us how many steps to move right on the grid."
   },
   {
     "id": "PM3-MB-072",
@@ -920,7 +991,8 @@
       "(4, 2)",
       "(2, 2)",
       "(4, 4)"
-    ]
+    ],
+    "explanation": "(2, 4) means 2 steps right and 4 steps up."
   },
   {
     "id": "PM3-MB-073",
@@ -933,7 +1005,8 @@
       "(3, 1)",
       "(3, 3)",
       "(1, 1)"
-    ]
+    ],
+    "explanation": "(3, 1) means 3 steps right and 1 step up."
   },
   {
     "id": "PM3-MB-074",
@@ -946,28 +1019,32 @@
       "(5, 5)",
       "(5, 2)",
       "(2, 2)"
-    ]
+    ],
+    "explanation": "(5, 2) means 5 steps right and 2 steps up."
   },
   {
     "id": "PM3-MB-075",
     "topic": "Coordinates",
     "type": "typing",
     "prompt": "A point is at (4, 3). What is its first number?",
-    "answer": "4"
+    "answer": "4",
+    "explanation": "The first number in (4, 3) is 4. It tells us how far right to move."
   },
   {
     "id": "PM3-MB-076",
     "topic": "Coordinates",
     "type": "typing",
     "prompt": "A point is at (2, 6). What is its second number?",
-    "answer": "6"
+    "answer": "6",
+    "explanation": "The second number in (2, 6) is 6. It tells us how far up to move."
   },
   {
     "id": "PM3-MB-077",
     "topic": "Coordinates",
     "type": "typing",
     "prompt": "On a grid, a point is 3 steps up. What is its second number?",
-    "answer": "3"
+    "answer": "3",
+    "explanation": "The second number is 3 because it tells us the steps up."
   },
   {
     "id": "PM3-MB-078",
@@ -985,7 +1062,8 @@
       "(2, 2)",
       "(3, 2)",
       "(4, 2)"
-    ]
+    ],
+    "explanation": "The order is (1, 2), (2, 2), (3, 2), (4, 2). The first numbers get bigger from left to right."
   },
   {
     "id": "PM3-MB-079",
@@ -1003,7 +1081,8 @@
       "(2, 2)",
       "(2, 3)",
       "(2, 4)"
-    ]
+    ],
+    "explanation": "The order is (2, 1), (2, 2), (2, 3), (2, 4). The second numbers get bigger as we move up."
   },
   {
     "id": "PM3-MB-080",
@@ -1021,7 +1100,8 @@
       "(3, 4)",
       "(5, 4)",
       "(7, 4)"
-    ]
+    ],
+    "explanation": "The order is (1, 4), (3, 4), (5, 4), (7, 4). The first numbers show increasing steps right."
   },
   {
     "id": "PM3-MB-081",
@@ -1034,7 +1114,8 @@
       "Blue",
       "Same number",
       "Neither"
-    ]
+    ],
+    "explanation": "Blue has more because there are 9 blue balls and 6 red balls."
   },
   {
     "id": "PM3-MB-082",
@@ -1047,7 +1128,8 @@
       "11",
       "13",
       "15"
-    ]
+    ],
+    "explanation": "8 + 5 = 13. There are 13 cats and dogs altogether."
   },
   {
     "id": "PM3-MB-083",
@@ -1060,7 +1142,8 @@
       "Pears",
       "Oranges",
       "Same number"
-    ]
+    ],
+    "explanation": "Oranges are the fewest because there are only 2, compared with 4 apples and 7 pears."
   },
   {
     "id": "PM3-MB-084",
@@ -1073,28 +1156,32 @@
       "Blue",
       "Green",
       "Same number"
-    ]
+    ],
+    "explanation": "Green has the most because 8 green books is more than 6 blue or 5 red."
   },
   {
     "id": "PM3-MB-085",
     "topic": "Data",
     "type": "typing",
     "prompt": "A chart shows 4 bikes on Monday and 6 on Tuesday. Total bikes?",
-    "answer": "10"
+    "answer": "10",
+    "explanation": "4 + 6 = 10. The chart shows 10 bikes in total."
   },
   {
     "id": "PM3-MB-086",
     "topic": "Data",
     "type": "typing",
     "prompt": "There are 7 red blocks and 3 yellow blocks. How many blocks?",
-    "answer": "10"
+    "answer": "10",
+    "explanation": "7 + 3 = 10. There are 10 blocks altogether."
   },
   {
     "id": "PM3-MB-087",
     "topic": "Data",
     "type": "typing",
     "prompt": "A class picked 12 flowers. 5 were yellow. How many were not yellow?",
-    "answer": "7"
+    "answer": "7",
+    "explanation": "12 − 5 = 7. Seven flowers were not yellow."
   },
   {
     "id": "PM3-MB-088",
@@ -1112,7 +1199,8 @@
       "Music: 4",
       "Games: 6",
       "Sport: 8"
-    ]
+    ],
+    "explanation": "The order is Art: 2, Music: 4, Games: 6, Sport: 8. The vote counts go up."
   },
   {
     "id": "PM3-MB-089",
@@ -1130,7 +1218,8 @@
       "Mia: 7",
       "Sam: 5",
       "Noor: 3"
-    ]
+    ],
+    "explanation": "The order is Ali: 9, Mia: 7, Sam: 5, Noor: 3. The book counts go down."
   },
   {
     "id": "PM3-MB-090",
@@ -1148,6 +1237,7 @@
       "Apples: 3",
       "Mangoes: 5",
       "Oranges: 7"
-    ]
+    ],
+    "explanation": "The order is Pears: 1, Apples: 3, Mangoes: 5, Oranges: 7. The fruit counts go up."
   }
 ]
