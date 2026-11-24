@@ -1,7 +1,7 @@
 :root {
   /* Approved layout defaults. All sizes scale with the 1024 × 768 site frame. */
-  --font-size: 18px;
-  --equation-font-size: 16px;
+  --font-size: 14px;
+  --equation-font-size: 14px;
   --main-frame-padding: 32px;
   --card-padding: 24px;
   --item-gap: 16px;
@@ -156,7 +156,7 @@ h1 {
 }
 
 #main-page #menu-stage {
-  top: 32px;
+  top: 50px;
   height: 96px;
   padding: 0;
   border-radius: 0;
@@ -500,7 +500,7 @@ h1 {
 }
 
 #main-page .math-basics-card .menu-buttons button {
-  background: #fff;
+  background: #f1f1f1;
 }
 
 #main-page .math-basics-card .menu-buttons button.is-right,
@@ -548,8 +548,9 @@ h1 {
   gap: var(--item-gap);
 }
 
-.math-quiz-answer.math-basics-input {
+.math-basics-input {
   width: 90px;
+  background: #f1f1f1;
 }
 
 .math-basics-visual-row {
@@ -602,7 +603,6 @@ h1 {
   height: 190px;
   padding: var(--card-padding);
   border-radius: 28px;
-  background: #fff;
 }
 
 .math-basics-image-options svg {
@@ -635,7 +635,7 @@ h1 {
 }
 
 #main-page .math-basics-card .menu-buttons button.math-basics-slot.is-filled {
-  background: #fff;
+  background: #f1f1f1;
 }
 
 #main-page .math-basics-card .menu-buttons button.math-basics-slot.is-right {
