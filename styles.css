@@ -612,7 +612,7 @@ h1 {
 
 .math-basics-image-options {
   display: flex;
-  flex: 1;
+  flex: none;
   min-height: 0;
   gap: var(--item-gap);
 }
