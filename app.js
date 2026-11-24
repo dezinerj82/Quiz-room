@@ -234,8 +234,12 @@ function resetQuizContent() {
   quizFinishButton.disabled = false;
   quizFinishButton.textContent = "Finish";
   quizExitButton.disabled = false;
-  quizContent.classList.remove("math-basics-card");
+  quizContent.classList.remove("math-basics-card", "menu-buttons");
   quizContent.removeAttribute("data-question-id");
+  quizContent.removeAttribute("role");
+  quizContent.removeAttribute("aria-label");
+  quizContent.style.removeProperty("overflow");
+  quizContent.style.removeProperty("align-items");
   quizContent.replaceChildren();
   quizContent.scrollTop = 0;
 }
@@ -556,19 +560,17 @@ function selectQuizSubject(subject) {
 
 function showMathQuizList() {
   resetQuizContent();
-  const list = document.createElement("div");
-  list.className = "math-quiz";
-  const options = document.createElement("nav");
-  options.className = "menu-buttons";
-  options.setAttribute("aria-label", "Quizzes");
   const available = quizCatalog.filter(quiz =>
     quiz.level === quizLevel &&
     quiz.activity === quizMode &&
     quiz.subject === quizSubject
   );
-  options.append(...available.map(quiz => quizOption(quiz.name, quiz.open)));
-  list.append(options);
-  quizContent.replaceChildren(list);
+  quizContent.classList.add("menu-buttons");
+  quizContent.setAttribute("role", "navigation");
+  quizContent.setAttribute("aria-label", "Quizzes");
+  quizContent.style.overflow = "visible";
+  quizContent.style.alignItems = "flex-start";
+  quizContent.replaceChildren(...available.map(quiz => quizOption(quiz.name, quiz.open)));
   quizContent.scrollTop = 0;
 }
 
