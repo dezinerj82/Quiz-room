@@ -8,6 +8,7 @@ const statusMessage = document.getElementById("login-status");
 
 let tokenClient;
 let accessToken = null;
+let signedInUserId = null;
 
 function scaleFrame() {
   const width = parseFloat(getComputedStyle(frame).width);
@@ -88,6 +89,7 @@ async function checkGoogleToken(token) {
   if (!account.sub) {
     throw new Error("Google account could not be confirmed.");
   }
+  return account.sub;
 }
 
 async function finishLogin(response) {
@@ -97,7 +99,7 @@ async function finishLogin(response) {
   }
 
   try {
-    await checkGoogleToken(response.access_token);
+    signedInUserId = await checkGoogleToken(response.access_token);
     accessToken = response.access_token;
     saveLogin(response);
     showMainPage();
@@ -113,7 +115,7 @@ async function restoreLogin() {
 
   loginStage.style.display = "none";
   try {
-    await checkGoogleToken(savedToken);
+    signedInUserId = await checkGoogleToken(savedToken);
     accessToken = savedToken;
     showMainPage();
   } catch (error) {
@@ -186,6 +188,8 @@ const quizProgressTrack = document.getElementById("quiz-progress-track");
 const quizProgressFill = document.getElementById("quiz-progress-fill");
 const quizClock = document.getElementById("quiz-clock");
 const quizExitButton = document.getElementById("quiz-exit");
+const quizNextButton = document.getElementById("quiz-next");
+const quizToolbarName = document.getElementById("quiz-toolbar-name");
 const quizFinishButton = document.getElementById("quiz-finish");
 let quizRenderRun = 0;
 let activeQuiz = null;
@@ -207,6 +211,8 @@ function resetQuizContent() {
   quizSaving = false;
   quizToolbar.hidden = true;
   quizFinishButton.hidden = true;
+  quizNextButton.hidden = true;
+  quizNextButton.disabled = true;
   quizFinishButton.disabled = false;
   quizFinishButton.textContent = "Finish";
   quizExitButton.disabled = false;
@@ -222,7 +228,18 @@ function updateQuizProgress() {
   quizProgressFill.style.width = (checked / total * 100) + "%";
   quizProgressTrack.setAttribute("aria-valuemax", String(total));
   quizProgressTrack.setAttribute("aria-valuenow", String(checked));
-  quizFinishButton.hidden = checked !== total || activeQuiz.expired;
+  if (activeQuiz.kind === "pm3-basics") {
+    const current = activeQuiz.currentIndex;
+    const answered = activeQuiz.answers[current].dataset.checked === "true";
+    quizNextButton.hidden = activeQuiz.completed || activeQuiz.expired ||
+      current === total - 1 || !answered;
+    quizNextButton.disabled = false;
+    quizFinishButton.hidden = activeQuiz.expired ||
+      !(current === total - 1 && checked === total);
+  } else {
+    quizNextButton.hidden = true;
+    quizFinishButton.hidden = checked !== total || activeQuiz.expired;
+  }
 }
 
 function updateQuizClock() {
@@ -236,6 +253,8 @@ function updateQuizClock() {
     stopQuizTimer();
     activeQuiz.expired = true;
     activeQuiz.answers.forEach(answer => { answer.disabled = true; });
+    quizContent.querySelectorAll("button, input").forEach(control => { control.disabled = true; });
+    quizNextButton.hidden = true;
     quizFinishButton.hidden = true;
   }
 }
@@ -361,7 +380,7 @@ async function saveCompletedScore(token, score) {
 
   const boundary = "quiz_room_" + Date.now() + "_" + Math.floor(Math.random() * 1000000);
   const metadata = {
-    name: "Math Times Tables " + score.completedAt.replace(/[:.]/g, "-") + ".json",
+    name: "Math " + score.quiz + " " + score.completedAt.replace(/[:.]/g, "-") + ".json",
     mimeType: "application/json",
     parents: [scoresFolderId]
   };
@@ -422,6 +441,7 @@ async function finishMathQuiz() {
       session.answers.some(answer => answer.dataset.checked !== "true")) return;
 
   quizSaving = true;
+  quizNextButton.hidden = true;
   stopQuizTimer();
   quizExitButton.disabled = true;
   quizFinishButton.disabled = true;
@@ -431,7 +451,7 @@ async function finishMathQuiz() {
   if (!session.finalScore) {
     session.finalScore = {
       subject: "Math",
-      quiz: "Times Tables",
+      quiz: session.quizName || "Times Tables",
       score: session.answers.filter(answer => answer.dataset.correct === "true").length,
       total: session.answers.length,
       questionIds: session.questions.map(question => question.id),
@@ -504,7 +524,10 @@ function showMathQuizList() {
   const options = document.createElement("nav");
   options.className = "menu-buttons";
   options.setAttribute("aria-label", "Math quizzes");
-  options.append(quizOption("Times Tables", loadMathQuiz));
+  options.append(
+    quizOption("Times Tables", loadMathQuiz),
+    quizOption("PM3 Math Basics", loadPM3MathBasics)
+  );
 
   list.append(options);
   quizContent.replaceChildren(list);
@@ -518,6 +541,7 @@ function textPart(value) {
 }
 
 function makeMathQuiz(questions) {
+  quizToolbarName.textContent = "Times Tables";
   const quiz = document.createElement("div");
   quiz.className = "math-quiz";
 
@@ -648,3 +672,365 @@ quizMenuButton.addEventListener("click", openQuizMenu);
 window.addEventListener("resize", scaleFrame);
 scaleFrame();
 restoreLogin();
+
+
+/* PM3 Math Basics: independent questions and answer styles; no stage resizing. */
+const pm3QuestionHistoryPrefix = "quiz-room-pm3-basics-used-v1-";
+
+function shufflePM3(items) {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index--) {
+    const pick = Math.floor(Math.random() * (index + 1));
+    [result[index], result[pick]] = [result[pick], result[index]];
+  }
+  return result;
+}
+
+function pm3UsedKey() {
+  if (!signedInUserId) throw new Error("Google sign-in is needed.");
+  return pm3QuestionHistoryPrefix + signedInUserId;
+}
+
+function selectFreshPM3Questions(bank) {
+  const historyKey = pm3UsedKey();
+  const stored = localStorage.getItem(historyKey);
+  const used = new Set(stored ? JSON.parse(stored) : []);
+  const available = bank.filter(question => !used.has(question.id));
+  if (available.length < 10) {
+    return null; // Never reuse an old question to fill a new quiz.
+  }
+
+  const selected = [];
+  const chosen = new Set();
+  // Spread questions across the main PM3 skills whenever possible.
+  const topics = shufflePM3([...new Set(bank.map(question => question.topic))]);
+  for (const topic of topics) {
+    const candidates = shufflePM3(available.filter(question => question.topic === topic));
+    if (!candidates.length) continue;
+    selected.push(candidates[0]);
+    chosen.add(candidates[0].id);
+  }
+  const extra = shufflePM3(available.filter(question => !chosen.has(question.id)));
+  selected.push(...extra.slice(0, 10 - selected.length));
+  if (selected.length !== 10) throw new Error("Not enough different questions.");
+  const questions = shufflePM3(selected);
+  for (const question of questions) used.add(question.id);
+  // Save on start, not Finish: leaving early cannot reuse those IDs.
+  localStorage.setItem(historyKey, JSON.stringify([...used]));
+  return questions;
+}
+
+function pm3Shape(shape) {
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 120 100");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Shape picture");
+  let element;
+  if (shape === "circle" || shape === "oval") {
+    element = document.createElementNS(ns, "ellipse");
+    element.setAttribute("cx", "60");
+    element.setAttribute("cy", "50");
+    element.setAttribute("rx", shape === "circle" ? "40" : "50");
+    element.setAttribute("ry", shape === "circle" ? "40" : "28");
+  } else if (shape === "square" || shape === "rectangle") {
+    element = document.createElementNS(ns, "rect");
+    element.setAttribute("x", shape === "square" ? "20" : "8");
+    element.setAttribute("y", shape === "square" ? "10" : "22");
+    element.setAttribute("width", shape === "square" ? "80" : "104");
+    element.setAttribute("height", shape === "square" ? "80" : "56");
+  } else {
+    const points = {
+      triangle: "60,7 114,93 6,93",
+      pentagon: "60,5 113,43 93,95 27,95 7,43",
+      hexagon: "35,6 85,6 115,50 85,94 35,94 5,50"
+    };
+    if (!points[shape]) throw new Error("Unknown shape.");
+    element = document.createElementNS(ns, "polygon");
+    element.setAttribute("points", points[shape]);
+  }
+  element.setAttribute("fill", "#171717");
+  svg.append(element);
+  return svg;
+}
+
+function pm3AnswerMark() {
+  const mark = document.createElement("span");
+  mark.className = "math-quiz-mark math-basics-mark";
+  mark.setAttribute("role", "status");
+  return mark;
+}
+
+function pm3SetMark(mark, correct) {
+  mark.textContent = correct ? "✓" : "✕";
+  mark.classList.add(correct ? "is-right" : "is-wrong");
+  mark.setAttribute("aria-label", correct ? "Correct" : "Incorrect");
+}
+
+function pm3CanAnswer() {
+  const session = activeQuiz;
+  return !!session && session.kind === "pm3-basics" &&
+    !session.completed && !session.expired && !quizSaving &&
+    session.answers[session.currentIndex].dataset.checked !== "true";
+}
+
+function pm3CommitAnswer(correct) {
+  if (!pm3CanAnswer()) return;
+  const session = activeQuiz;
+  const answer = session.answers[session.currentIndex];
+  answer.dataset.checked = "true";
+  answer.dataset.correct = String(correct);
+  quizContent.querySelectorAll("button, input").forEach(control => {
+    control.disabled = true;
+  });
+  updateQuizProgress();
+}
+
+function pm3ChoiceOptions(question, imageOptions) {
+  const choices = document.createElement("div");
+  choices.className = imageOptions ? "math-basics-image-options menu-buttons" :
+    "math-basics-answer-row menu-buttons";
+  for (const value of shufflePM3(question.options)) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.value = value;
+    const mark = pm3AnswerMark();
+    if (imageOptions) {
+      button.append(pm3Shape(value), mark);
+      button.setAttribute("aria-label", "Picture option");
+    } else {
+      button.textContent = value;
+    }
+    button.addEventListener("click", () => {
+      if (!pm3CanAnswer()) return;
+      const correct = value === question.answer;
+      button.classList.add(correct ? "is-right" : "is-wrong");
+      pm3SetMark(mark, correct);
+      pm3CommitAnswer(correct);
+    });
+    if (imageOptions) {
+      choices.append(button);
+    } else {
+      const line = document.createElement("div");
+      line.className = "math-basics-option-line";
+      line.append(button, mark);
+      choices.append(line);
+    }
+  }
+  return choices;
+}
+
+function pm3TypingAnswer(question) {
+  const row = document.createElement("div");
+  row.className = "math-basics-input-row";
+  const input = document.createElement("input");
+  input.className = "math-quiz-answer math-basics-input";
+  input.type = "text";
+  input.inputMode = "numeric";
+  input.autocomplete = "off";
+  input.maxLength = 8;
+  input.setAttribute("aria-label", "Type your answer and press Enter");
+  const mark = pm3AnswerMark();
+  input.addEventListener("keydown", event => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    if (!pm3CanAnswer() || !/^\d+$/.test(input.value.trim())) return;
+    const correct = Number(input.value.trim()) === Number(question.answer);
+    input.classList.add(correct ? "is-right" : "is-wrong");
+    pm3SetMark(mark, correct);
+    pm3CommitAnswer(correct);
+    input.blur();
+  });
+  row.append(input, mark);
+  return row;
+}
+
+function pm3SortAnswer(question) {
+  const region = document.createElement("div");
+  region.className = "math-basics-sort";
+  const source = document.createElement("div");
+  source.className = "math-basics-source-row menu-buttons";
+  const targetRow = document.createElement("div");
+  targetRow.className = "math-basics-target-row";
+  const targets = document.createElement("div");
+  targets.className = "math-basics-source-row menu-buttons";
+  const mark = pm3AnswerMark();
+  targetRow.append(targets, mark);
+  region.append(source, targetRow);
+  const order = shufflePM3(question.values);
+  if (order.every((value, index) => value === question.answer[index])) {
+    order.push(order.shift()); // The starting pieces must not already be solved.
+  }
+  const placed = Array(question.answer.length).fill(null);
+
+  function place(value, index) {
+    if (!pm3CanAnswer() || !question.values.includes(value)) return;
+    if (index < 0 || index >= placed.length) return;
+    const old = placed.indexOf(value);
+    if (old === index) return;
+    const replaced = placed[index];
+    placed[index] = value;
+    if (old >= 0) placed[old] = replaced;
+    draw();
+    if (placed.every(item => item !== null)) {
+      const correct = placed.every((item, i) => item === question.answer[i]);
+      targets.querySelectorAll("button").forEach((button, i) => {
+        button.classList.add(placed[i] === question.answer[i] ? "is-right" : "is-wrong");
+      });
+      pm3SetMark(mark, correct);
+      pm3CommitAnswer(correct);
+    }
+  }
+
+  function remove(index) {
+    if (!pm3CanAnswer()) return;
+    placed[index] = null;
+    draw();
+  }
+
+  function enableDrag(button, value) {
+    button.draggable = true;
+    button.addEventListener("dragstart", event => {
+      if (!pm3CanAnswer()) { event.preventDefault(); return; }
+      event.dataTransfer.setData("text/plain", value);
+      event.dataTransfer.effectAllowed = "move";
+    });
+  }
+
+  function draw() {
+    source.replaceChildren();
+    targets.replaceChildren();
+    for (const value of order) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = value;
+      const used = placed.includes(value);
+      button.className = used ? "math-basics-used" : "";
+      button.disabled = used;
+      if (!used) {
+        enableDrag(button, value);
+        button.addEventListener("click", () => {
+          const empty = placed.indexOf(null);
+          if (empty !== -1) place(value, empty);
+        });
+      }
+      source.append(button);
+    }
+    placed.forEach((value, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "math-basics-slot" + (value === null ? "" : " is-filled");
+      button.textContent = value === null ? "" : value;
+      button.setAttribute("aria-label",
+        value === null ? "Empty answer place " + (index + 1) :
+          "Number " + value + " in place " + (index + 1) + ". Click to remove.");
+      if (value !== null) {
+        enableDrag(button, value);
+        button.addEventListener("click", () => remove(index));
+      }
+      button.addEventListener("dragover", event => {
+        if (!pm3CanAnswer()) return;
+        event.preventDefault();
+        button.classList.add("math-basics-drag-over");
+      });
+      button.addEventListener("dragleave", () => {
+        button.classList.remove("math-basics-drag-over");
+      });
+      button.addEventListener("drop", event => {
+        event.preventDefault();
+        const dropped = event.dataTransfer.getData("text/plain");
+        place(dropped, index);
+      });
+      targets.append(button);
+    });
+  }
+  source.addEventListener("dragover", event => event.preventDefault());
+  source.addEventListener("drop", event => {
+    event.preventDefault();
+    const value = event.dataTransfer.getData("text/plain");
+    const index = placed.indexOf(value);
+    if (index !== -1) remove(index);
+  });
+  draw();
+  return region;
+}
+
+function renderPM3Question() {
+  const session = activeQuiz;
+  if (!session || session.kind !== "pm3-basics") return;
+  const question = session.questions[session.currentIndex];
+  const card = document.createElement("div");
+  card.className = "math-basics-card";
+  card.dataset.questionId = question.id;
+  const prompt = document.createElement("div");
+  prompt.className = "math-basics-question-text";
+  prompt.textContent = question.prompt;
+  card.append(prompt);
+
+  if (question.type === "image-question") {
+    const row = document.createElement("div");
+    row.className = "math-basics-visual-row";
+    const picture = document.createElement("div");
+    picture.className = "math-basics-picture";
+    picture.append(pm3Shape(question.image));
+    const options = pm3ChoiceOptions(question, false);
+    options.className = "math-basics-answer-column menu-buttons";
+    row.append(picture, options);
+    card.append(row);
+  } else if (question.type === "image-choice") {
+    card.append(pm3ChoiceOptions(question, true));
+  } else if (question.type === "choice") {
+    card.append(pm3ChoiceOptions(question, false));
+  } else if (question.type === "typing") {
+    card.append(pm3TypingAnswer(question));
+  } else if (question.type === "sort") {
+    card.append(pm3SortAnswer(question));
+  } else {
+    throw new Error("Unknown question style.");
+  }
+  quizContent.replaceChildren(card);
+  quizContent.scrollTop = 0;
+  updateQuizProgress();
+}
+
+async function loadPM3MathBasics() {
+  resetQuizContent();
+  const run = quizRenderRun;
+  try {
+    const response = await fetch("./id/math-pm3-basics.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Questions could not load.");
+    const bank = await response.json();
+    if (!Array.isArray(bank) || bank.length < 10) throw new Error("Not enough questions.");
+    if (run !== quizRenderRun) return;
+    const questions = selectFreshPM3Questions(bank);
+    if (!questions) {
+      quizContent.textContent = "You have finished all PM3 Math Basics questions.";
+      return;
+    }
+    quizToolbarName.textContent = "PM3 Math Basics";
+    const answers = questions.map(() => {
+      const state = document.createElement("input");
+      state.dataset.checked = "false";
+      state.dataset.correct = "false";
+      return state;
+    });
+    startQuiz(questions, answers);
+    activeQuiz.kind = "pm3-basics";
+    activeQuiz.quizName = "PM3 Math Basics";
+    activeQuiz.currentIndex = 0;
+    renderPM3Question();
+  } catch (error) {
+    if (run !== quizRenderRun) return;
+    quizContent.textContent = "PM3 Math Basics could not load. Please try again.";
+  }
+}
+
+quizNextButton.addEventListener("click", () => {
+  const session = activeQuiz;
+  if (!session || session.kind !== "pm3-basics" ||
+      session.completed || session.expired ||
+      session.answers[session.currentIndex].dataset.checked !== "true" ||
+      session.currentIndex >= session.questions.length - 1) return;
+  session.currentIndex += 1;
+  renderPM3Question();
+});
