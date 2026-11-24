@@ -222,7 +222,7 @@ function updateQuizProgress() {
   quizProgressFill.style.width = (checked / total * 100) + "%";
   quizProgressTrack.setAttribute("aria-valuemax", String(total));
   quizProgressTrack.setAttribute("aria-valuenow", String(checked));
-  quizFinishButton.hidden = checked !== total || activeQuiz.expired || activeQuiz.completed;
+  quizFinishButton.hidden = checked !== total || activeQuiz.expired;
 }
 
 function updateQuizClock() {
@@ -425,7 +425,7 @@ async function finishMathQuiz() {
   stopQuizTimer();
   quizExitButton.disabled = true;
   quizFinishButton.disabled = true;
-  quizFinishButton.textContent = "Saving";
+  quizFinishButton.textContent = "Finish";
   quizFinishButton.title = "";
 
   if (!session.finalScore) {
@@ -447,7 +447,7 @@ async function finishMathQuiz() {
     await saveCompletedScore(token, session.finalScore);
     if (activeQuiz !== session) return;
     session.completed = true;
-    quizFinishButton.hidden = true;
+    quizFinishButton.disabled = true;
     quizExitButton.disabled = false;
   } catch (error) {
     if (activeQuiz !== session) return;
