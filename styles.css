@@ -181,8 +181,7 @@ h1 {
   border: 0;
   border-radius: 0;
   background: transparent;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #main-page .menu-inner {
