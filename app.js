@@ -484,7 +484,7 @@ function chooseMode(mode) {
 }
 
 function selectQuizSubject(subject) {
-  quizStepLabel.textContent = subject + " · " + quizMode;
+  quizStepLabel.textContent = "Choose a quiz";
   for (const button of quizStepActions.querySelectorAll("button")) {
     const selected = button.textContent === subject;
     button.classList.toggle("is-active", selected);
