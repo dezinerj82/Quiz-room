@@ -443,3 +443,176 @@ h1 {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+/* PM3 Math Basics: fixed question card, reusing approved padding and pill rules. */
+.math-basics-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-padding);
+  width: 100%;
+  height: 315px;
+  padding: var(--card-padding);
+  border: 0;
+  border-radius: 28px;
+  background: #f5f5f5;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.math-basics-question-text {
+  flex: none;
+  line-height: 24px;
+}
+
+#main-page .math-basics-card .menu-buttons button {
+  background: #fff;
+}
+
+#main-page .math-basics-card .menu-buttons button.is-right,
+.math-basics-slot.is-right {
+  background: #d8f4df;
+  color: #137837;
+}
+
+#main-page .math-basics-card .menu-buttons button.is-wrong,
+.math-basics-slot.is-wrong {
+  background: #f9dada;
+  color: #b52b2b;
+}
+
+#main-page .math-basics-card button:disabled {
+  cursor: default;
+}
+
+.math-basics-answer-row,
+.math-basics-source-row,
+.math-basics-target-row {
+  display: flex;
+  align-items: center;
+  gap: var(--item-gap);
+  flex-wrap: wrap;
+}
+
+.math-basics-option-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.math-quiz-mark.math-basics-mark {
+  position: static;
+  transform: none;
+  flex: none;
+  width: var(--answer-status-space);
+  height: var(--answer-status-space);
+}
+
+.math-basics-input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--item-gap);
+}
+
+.math-quiz-answer.math-basics-input {
+  width: 90px;
+}
+
+.math-basics-visual-row {
+  display: flex;
+  align-items: center;
+  gap: var(--item-gap);
+  flex: 1;
+  min-height: 0;
+}
+
+.math-basics-picture {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 320px;
+  height: 190px;
+  padding: var(--card-padding);
+  border-radius: 28px;
+  background: #fff;
+}
+
+.math-basics-picture svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#main-page .math-basics-answer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--item-gap);
+  flex: 1;
+}
+
+.math-basics-image-options {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: var(--item-gap);
+}
+
+#main-page .math-basics-image-options button {
+  position: relative;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  height: 190px;
+  padding: var(--card-padding);
+  border-radius: 28px;
+  background: #fff;
+}
+
+.math-basics-image-options svg {
+  width: 100%;
+  max-width: 120px;
+  height: 92px;
+}
+
+.math-basics-image-options .math-basics-mark {
+  position: absolute;
+  right: var(--pill-padding-x);
+  top: var(--pill-padding-y);
+}
+
+.math-basics-sort {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-used {
+  background: #e2e2e2;
+  color: #999;
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-slot {
+  min-width: 64px;
+  min-height: 34px;
+  background: #e5e5e5;
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-slot.is-filled {
+  background: #fff;
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-slot.is-right {
+  background: #d8f4df;
+  color: #137837;
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-slot.is-wrong {
+  background: #f9dada;
+  color: #b52b2b;
+}
+
+#main-page .math-basics-card .menu-buttons button.math-basics-drag-over {
+  background: #d4e7f8;
+}
