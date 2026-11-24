@@ -244,7 +244,7 @@ h1 {
 #main-page #menu-stage .menu-buttons button:hover:not(:disabled),
 #main-page #navigation-stage .menu-buttons button:hover:not(:disabled),
 #main-page #quiz-toolbar .menu-buttons button:hover:not(:disabled),
-#main-page #quiz-content nav[aria-label="Quizzes"] button:hover:not(:disabled) {
+#main-page #quiz-content[aria-label="Quizzes"] button:hover:not(:disabled) {
   box-shadow: 0 0 0 5px rgba(130, 217, 183, .32), 0 0 20px rgba(130, 217, 183, .5);
 }
 
@@ -252,7 +252,7 @@ h1 {
 #main-page #menu-stage .menu-buttons button:active:not(:disabled),
 #main-page #navigation-stage .menu-buttons button:active:not(:disabled),
 #main-page #quiz-toolbar .menu-buttons button:active:not(:disabled),
-#main-page #quiz-content nav[aria-label="Quizzes"] button:active:not(:disabled) {
+#main-page #quiz-content[aria-label="Quizzes"] button:active:not(:disabled) {
   box-shadow: 0 0 0 9px rgba(130, 217, 183, .24), 0 0 24px rgba(130, 217, 183, .45);
   transform: scale(.97);
 }
@@ -266,7 +266,7 @@ h1 {
 }
 
 /* Quiz-selection buttons, not quiz answers. */
-#main-page #quiz-content nav[aria-label="Quizzes"] button {
+#main-page #quiz-content[aria-label="Quizzes"] button {
   font-size: 18px;
   font-weight: 700;
   transition: box-shadow .25s ease, transform .2s ease;
