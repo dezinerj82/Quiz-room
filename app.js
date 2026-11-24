@@ -63,7 +63,6 @@ function saveLogin(response) {
 }
 
 function showError(message) {
-  loginStage.hidden = false;
   loginStage.style.display = "flex";
   loginButton.disabled = false;
   statusMessage.textContent = message;
@@ -113,19 +112,16 @@ async function finishLogin(response) {
 async function restoreLogin() {
   const savedToken = getSavedLogin();
   if (!savedToken) {
-    loginStage.hidden = false;
     loginStage.style.display = "flex";
     return;
   }
 
-  loginStage.style.display = "none";
   try {
     signedInUserId = await checkGoogleToken(savedToken);
     accessToken = savedToken;
     showMainPage();
   } catch (error) {
     clearSavedLogin();
-    loginStage.hidden = false;
     loginStage.style.display = "flex";
   }
 }
