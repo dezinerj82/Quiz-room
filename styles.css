@@ -155,14 +155,18 @@ h1 {
   overflow: hidden;
 }
 
-#menu-stage {
+#main-page #menu-stage {
   top: 32px;
   height: 96px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 #navigation-stage {
   top: 152px;
   height: 96px;
+  font-weight: 700;
 }
 
 #question-stage {
@@ -175,7 +179,7 @@ h1 {
   height: 100%;
   border: 0;
   border-radius: 0;
-  background: #fff;
+  background: transparent;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -214,6 +218,34 @@ h1 {
   opacity: .72;
 }
 
+/* Stage 1 branding and Stage 2 / toolbar navigation; quiz content stays untouched. */
+#menu-stage .brand,
+#menu-stage .brand-mark {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#quiz-step-label:not(:empty) {
+  background: #d8f3e7;
+  color: #145740;
+}
+
+#main-page #menu-stage .menu-buttons button,
+#main-page #navigation-stage .menu-buttons button,
+#main-page #quiz-toolbar .menu-buttons button {
+  background: #171717;
+  color: #fff;
+}
+
+#main-page #menu-stage .menu-buttons button:disabled,
+#main-page #navigation-stage .menu-buttons button:disabled,
+#main-page #quiz-toolbar .menu-buttons button:disabled {
+  background: #e2e2e2;
+  color: #a1a1a1;
+  opacity: 1;
+  cursor: default;
+}
+
 /* Math quiz: instruction and equations share a scrolling bottom panel. */
 .math-quiz {
   display: flex;
@@ -232,7 +264,7 @@ h1 {
   background: #f1f1f1;
   border-radius: 999px;
   font-size: var(--font-size);
-  font-weight: 400;
+  font-weight: inherit;
 }
 
 /* Centered final score: approved dots design with default 18px text. */
@@ -370,6 +402,8 @@ h1 {
 
 #quiz-toolbar-name {
   flex: none;
+  background: #d8f3e7;
+  color: #145740;
 }
 
 #quiz-toolbar-middle {
@@ -387,7 +421,8 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: var(--pill-padding-y) var(--pill-padding-x);
-  background: #f1f1f1;
+  background: #d8f3e7;
+  color: #145740;
   border-radius: 999px;
   font-size: var(--font-size);
   font-variant-numeric: tabular-nums;
