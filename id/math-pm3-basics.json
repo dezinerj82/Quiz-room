@@ -1,0 +1,1153 @@
+[
+  {
+    "id": "PM3-MB-001",
+    "topic": "Numbers",
+    "type": "choice",
+    "prompt": "Which number has 4 thousands, 2 hundreds and 5 ones?",
+    "answer": "4,205",
+    "options": [
+      "4,205",
+      "4,250",
+      "4,025",
+      "2,405"
+    ]
+  },
+  {
+    "id": "PM3-MB-002",
+    "topic": "Numbers",
+    "type": "choice",
+    "prompt": "Which number is the biggest?",
+    "answer": "7,800",
+    "options": [
+      "7,080",
+      "7,800",
+      "7,008",
+      "7,088"
+    ]
+  },
+  {
+    "id": "PM3-MB-003",
+    "topic": "Numbers",
+    "type": "choice",
+    "prompt": "Which number is even?",
+    "answer": "6,248",
+    "options": [
+      "3,715",
+      "6,248",
+      "7,329",
+      "9,111"
+    ]
+  },
+  {
+    "id": "PM3-MB-004",
+    "topic": "Numbers",
+    "type": "choice",
+    "prompt": "What is the value of 6 in 6,432?",
+    "answer": "6,000",
+    "options": [
+      "6",
+      "60",
+      "600",
+      "6,000"
+    ]
+  },
+  {
+    "id": "PM3-MB-005",
+    "topic": "Numbers",
+    "type": "typing",
+    "prompt": "What is 300 more than 2,400?",
+    "answer": "2700"
+  },
+  {
+    "id": "PM3-MB-006",
+    "topic": "Numbers",
+    "type": "typing",
+    "prompt": "What is 10 less than 5,010?",
+    "answer": "5000"
+  },
+  {
+    "id": "PM3-MB-007",
+    "topic": "Numbers",
+    "type": "typing",
+    "prompt": "Round 4,672 to the nearest ten.",
+    "answer": "4670"
+  },
+  {
+    "id": "PM3-MB-008",
+    "topic": "Numbers",
+    "type": "sort",
+    "prompt": "Order the numbers from smallest to biggest.",
+    "answer": [
+      "1,052",
+      "1,205",
+      "1,250",
+      "1,520"
+    ],
+    "values": [
+      "1,052",
+      "1,205",
+      "1,250",
+      "1,520"
+    ]
+  },
+  {
+    "id": "PM3-MB-009",
+    "topic": "Numbers",
+    "type": "sort",
+    "prompt": "Order the numbers from biggest to smallest.",
+    "answer": [
+      "1,090",
+      "990",
+      "909",
+      "900"
+    ],
+    "values": [
+      "1,090",
+      "990",
+      "909",
+      "900"
+    ]
+  },
+  {
+    "id": "PM3-MB-010",
+    "topic": "Numbers",
+    "type": "sort",
+    "prompt": "Order the numbers from smallest to biggest.",
+    "answer": [
+      "4,006",
+      "4,060",
+      "4,600",
+      "4,640"
+    ],
+    "values": [
+      "4,006",
+      "4,060",
+      "4,600",
+      "4,640"
+    ]
+  },
+  {
+    "id": "PM3-MB-011",
+    "topic": "Operations",
+    "type": "choice",
+    "prompt": "A box has 24 crayons. 6 are used. How many are left?",
+    "answer": "18",
+    "options": [
+      "18",
+      "20",
+      "30",
+      "16"
+    ]
+  },
+  {
+    "id": "PM3-MB-012",
+    "topic": "Operations",
+    "type": "choice",
+    "prompt": "What is 56 ÷ 7?",
+    "answer": "8",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "6"
+    ]
+  },
+  {
+    "id": "PM3-MB-013",
+    "topic": "Operations",
+    "type": "choice",
+    "prompt": "What is 1,230 + 450?",
+    "answer": "1,680",
+    "options": [
+      "1,680",
+      "1,580",
+      "1,780",
+      "1,670"
+    ]
+  },
+  {
+    "id": "PM3-MB-014",
+    "topic": "Operations",
+    "type": "choice",
+    "prompt": "What is 900 − 275?",
+    "answer": "625",
+    "options": [
+      "625",
+      "635",
+      "675",
+      "725"
+    ]
+  },
+  {
+    "id": "PM3-MB-015",
+    "topic": "Operations",
+    "type": "typing",
+    "prompt": "5 bags have 9 marbles each. How many marbles?",
+    "answer": "45"
+  },
+  {
+    "id": "PM3-MB-016",
+    "topic": "Operations",
+    "type": "typing",
+    "prompt": "What is 320 + 180?",
+    "answer": "500"
+  },
+  {
+    "id": "PM3-MB-017",
+    "topic": "Operations",
+    "type": "typing",
+    "prompt": "What is 96 ÷ 8?",
+    "answer": "12"
+  },
+  {
+    "id": "PM3-MB-018",
+    "topic": "Operations",
+    "type": "sort",
+    "prompt": "Order these answers from smallest to biggest.",
+    "answer": [
+      "18",
+      "36",
+      "63",
+      "81"
+    ],
+    "values": [
+      "18",
+      "36",
+      "63",
+      "81"
+    ]
+  },
+  {
+    "id": "PM3-MB-019",
+    "topic": "Operations",
+    "type": "sort",
+    "prompt": "Order these sums from smallest answer to biggest.",
+    "answer": [
+      "3 + 1",
+      "5 + 2",
+      "8 + 1",
+      "4 + 6"
+    ],
+    "values": [
+      "3 + 1",
+      "5 + 2",
+      "8 + 1",
+      "4 + 6"
+    ]
+  },
+  {
+    "id": "PM3-MB-020",
+    "topic": "Operations",
+    "type": "sort",
+    "prompt": "Order these times tables from smallest answer to biggest.",
+    "answer": [
+      "6 × 2",
+      "2 × 7",
+      "3 × 5",
+      "4 × 6"
+    ],
+    "values": [
+      "6 × 2",
+      "2 × 7",
+      "3 × 5",
+      "4 × 6"
+    ]
+  },
+  {
+    "id": "PM3-MB-021",
+    "topic": "Fractions",
+    "type": "choice",
+    "prompt": "A cake has 4 equal slices. You eat 1. How much is that?",
+    "answer": "1/4",
+    "options": [
+      "1/2",
+      "1/4",
+      "1/3",
+      "3/4"
+    ]
+  },
+  {
+    "id": "PM3-MB-022",
+    "topic": "Fractions",
+    "type": "choice",
+    "prompt": "What is 1/2 written as a decimal?",
+    "answer": "0.5",
+    "options": [
+      "0.2",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  {
+    "id": "PM3-MB-023",
+    "topic": "Fractions",
+    "type": "choice",
+    "prompt": "Which fraction is the biggest?",
+    "answer": "1/2",
+    "options": [
+      "1/8",
+      "1/4",
+      "1/2",
+      "1/6"
+    ]
+  },
+  {
+    "id": "PM3-MB-024",
+    "topic": "Fractions",
+    "type": "choice",
+    "prompt": "What does 25% mean?",
+    "answer": "25 out of 100",
+    "options": [
+      "25 out of 100",
+      "25 out of 10",
+      "25 out of 1,000",
+      "25 out of 50"
+    ]
+  },
+  {
+    "id": "PM3-MB-025",
+    "topic": "Fractions",
+    "type": "typing",
+    "prompt": "How many quarters make one whole?",
+    "answer": "4"
+  },
+  {
+    "id": "PM3-MB-026",
+    "topic": "Fractions",
+    "type": "typing",
+    "prompt": "How many halves make one whole?",
+    "answer": "2"
+  },
+  {
+    "id": "PM3-MB-027",
+    "topic": "Fractions",
+    "type": "typing",
+    "prompt": "What percentage is half of 100%?",
+    "answer": "50"
+  },
+  {
+    "id": "PM3-MB-028",
+    "topic": "Fractions",
+    "type": "sort",
+    "prompt": "Order the fractions from smallest to biggest.",
+    "answer": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "values": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ]
+  },
+  {
+    "id": "PM3-MB-029",
+    "topic": "Fractions",
+    "type": "sort",
+    "prompt": "Order the decimals from smallest to biggest.",
+    "answer": [
+      "0.2",
+      "0.5",
+      "0.8",
+      "0.9"
+    ],
+    "values": [
+      "0.2",
+      "0.5",
+      "0.8",
+      "0.9"
+    ]
+  },
+  {
+    "id": "PM3-MB-030",
+    "topic": "Fractions",
+    "type": "sort",
+    "prompt": "Order the percentages from smallest to biggest.",
+    "answer": [
+      "10%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "values": [
+      "10%",
+      "25%",
+      "50%",
+      "75%"
+    ]
+  },
+  {
+    "id": "PM3-MB-031",
+    "topic": "Money",
+    "type": "choice",
+    "prompt": "A toy costs RM7. You pay RM10. What is your change?",
+    "answer": "RM3",
+    "options": [
+      "RM2",
+      "RM3",
+      "RM4",
+      "RM5"
+    ]
+  },
+  {
+    "id": "PM3-MB-032",
+    "topic": "Money",
+    "type": "choice",
+    "prompt": "Which amount is the biggest?",
+    "answer": "RM6.50",
+    "options": [
+      "RM5.90",
+      "RM6.05",
+      "RM6.50",
+      "RM5.99"
+    ]
+  },
+  {
+    "id": "PM3-MB-033",
+    "topic": "Money",
+    "type": "choice",
+    "prompt": "Two pencils cost RM2 each. How much altogether?",
+    "answer": "RM4",
+    "options": [
+      "RM2",
+      "RM3",
+      "RM4",
+      "RM6"
+    ]
+  },
+  {
+    "id": "PM3-MB-034",
+    "topic": "Money",
+    "type": "choice",
+    "prompt": "A book costs RM12 and a pen costs RM3. Total?",
+    "answer": "RM15",
+    "options": [
+      "RM9",
+      "RM13",
+      "RM15",
+      "RM16"
+    ]
+  },
+  {
+    "id": "PM3-MB-035",
+    "topic": "Money",
+    "type": "typing",
+    "prompt": "How many sen are in RM1?",
+    "answer": "100"
+  },
+  {
+    "id": "PM3-MB-036",
+    "topic": "Money",
+    "type": "typing",
+    "prompt": "You have RM20 and spend RM8. How many ringgit are left?",
+    "answer": "12"
+  },
+  {
+    "id": "PM3-MB-037",
+    "topic": "Money",
+    "type": "typing",
+    "prompt": "3 notebooks cost RM4 each. How many ringgit in total?",
+    "answer": "12"
+  },
+  {
+    "id": "PM3-MB-038",
+    "topic": "Money",
+    "type": "sort",
+    "prompt": "Order the prices from cheapest to most expensive.",
+    "answer": [
+      "RM1.50",
+      "RM2.05",
+      "RM2.50",
+      "RM5.00"
+    ],
+    "values": [
+      "RM1.50",
+      "RM2.05",
+      "RM2.50",
+      "RM5.00"
+    ]
+  },
+  {
+    "id": "PM3-MB-039",
+    "topic": "Money",
+    "type": "sort",
+    "prompt": "Order the prices from most expensive to cheapest.",
+    "answer": [
+      "RM9",
+      "RM7",
+      "RM5",
+      "RM3"
+    ],
+    "values": [
+      "RM9",
+      "RM7",
+      "RM5",
+      "RM3"
+    ]
+  },
+  {
+    "id": "PM3-MB-040",
+    "topic": "Money",
+    "type": "sort",
+    "prompt": "Order the prices from cheapest to most expensive.",
+    "answer": [
+      "50 sen",
+      "RM1",
+      "RM1.50",
+      "RM2"
+    ],
+    "values": [
+      "50 sen",
+      "RM1",
+      "RM1.50",
+      "RM2"
+    ]
+  },
+  {
+    "id": "PM3-MB-041",
+    "topic": "Time",
+    "type": "choice",
+    "prompt": "How many minutes are in one hour?",
+    "answer": "60",
+    "options": [
+      "30",
+      "45",
+      "60",
+      "100"
+    ]
+  },
+  {
+    "id": "PM3-MB-042",
+    "topic": "Time",
+    "type": "choice",
+    "prompt": "Which month comes after June?",
+    "answer": "July",
+    "options": [
+      "May",
+      "July",
+      "August",
+      "April"
+    ]
+  },
+  {
+    "id": "PM3-MB-043",
+    "topic": "Time",
+    "type": "choice",
+    "prompt": "What time is 30 minutes after 2:00?",
+    "answer": "2:30",
+    "options": [
+      "2:15",
+      "2:30",
+      "3:00",
+      "1:30"
+    ]
+  },
+  {
+    "id": "PM3-MB-044",
+    "topic": "Time",
+    "type": "choice",
+    "prompt": "How many days are in one week?",
+    "answer": "7",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ]
+  },
+  {
+    "id": "PM3-MB-045",
+    "topic": "Time",
+    "type": "typing",
+    "prompt": "How many hours are in one day?",
+    "answer": "24"
+  },
+  {
+    "id": "PM3-MB-046",
+    "topic": "Time",
+    "type": "typing",
+    "prompt": "How many minutes are in half an hour?",
+    "answer": "30"
+  },
+  {
+    "id": "PM3-MB-047",
+    "topic": "Time",
+    "type": "typing",
+    "prompt": "A lesson starts at 9:00 and ends at 10:00. How many minutes?",
+    "answer": "60"
+  },
+  {
+    "id": "PM3-MB-048",
+    "topic": "Time",
+    "type": "sort",
+    "prompt": "Put these times in order, earliest to latest.",
+    "answer": [
+      "7:30 am",
+      "8:15 am",
+      "8:45 am",
+      "9:00 am"
+    ],
+    "values": [
+      "7:30 am",
+      "8:15 am",
+      "8:45 am",
+      "9:00 am"
+    ]
+  },
+  {
+    "id": "PM3-MB-049",
+    "topic": "Time",
+    "type": "sort",
+    "prompt": "Put these days in order, earliest to latest.",
+    "answer": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "values": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ]
+  },
+  {
+    "id": "PM3-MB-050",
+    "topic": "Time",
+    "type": "sort",
+    "prompt": "Put these months in order, earliest to latest.",
+    "answer": [
+      "January",
+      "March",
+      "May",
+      "July"
+    ],
+    "values": [
+      "January",
+      "March",
+      "May",
+      "July"
+    ]
+  },
+  {
+    "id": "PM3-MB-051",
+    "topic": "Measurement",
+    "type": "choice",
+    "prompt": "Which unit is best for measuring a pencil?",
+    "answer": "cm",
+    "options": [
+      "km",
+      "cm",
+      "kg",
+      "L"
+    ]
+  },
+  {
+    "id": "PM3-MB-052",
+    "topic": "Measurement",
+    "type": "choice",
+    "prompt": "Which unit is best for measuring a watermelon’s weight?",
+    "answer": "kg",
+    "options": [
+      "kg",
+      "mL",
+      "cm",
+      "km"
+    ]
+  },
+  {
+    "id": "PM3-MB-053",
+    "topic": "Measurement",
+    "type": "choice",
+    "prompt": "Which container holds the most water?",
+    "answer": "2 L",
+    "options": [
+      "200 mL",
+      "500 mL",
+      "1 L",
+      "2 L"
+    ]
+  },
+  {
+    "id": "PM3-MB-054",
+    "topic": "Measurement",
+    "type": "choice",
+    "prompt": "How many centimetres make 1 metre?",
+    "answer": "100",
+    "options": [
+      "10",
+      "50",
+      "100",
+      "1,000"
+    ]
+  },
+  {
+    "id": "PM3-MB-055",
+    "topic": "Measurement",
+    "type": "typing",
+    "prompt": "How many grams are in 1 kilogram?",
+    "answer": "1000"
+  },
+  {
+    "id": "PM3-MB-056",
+    "topic": "Measurement",
+    "type": "typing",
+    "prompt": "How many millilitres are in 1 litre?",
+    "answer": "1000"
+  },
+  {
+    "id": "PM3-MB-057",
+    "topic": "Measurement",
+    "type": "typing",
+    "prompt": "A ribbon is 50 cm long. Another is 30 cm. Total centimetres?",
+    "answer": "80"
+  },
+  {
+    "id": "PM3-MB-058",
+    "topic": "Measurement",
+    "type": "sort",
+    "prompt": "Order these lengths from shortest to longest.",
+    "answer": [
+      "10 cm",
+      "25 cm",
+      "50 cm",
+      "90 cm"
+    ],
+    "values": [
+      "10 cm",
+      "25 cm",
+      "50 cm",
+      "90 cm"
+    ]
+  },
+  {
+    "id": "PM3-MB-059",
+    "topic": "Measurement",
+    "type": "sort",
+    "prompt": "Order these weights from lightest to heaviest.",
+    "answer": [
+      "100 g",
+      "250 g",
+      "500 g",
+      "1 kg"
+    ],
+    "values": [
+      "100 g",
+      "250 g",
+      "500 g",
+      "1 kg"
+    ]
+  },
+  {
+    "id": "PM3-MB-060",
+    "topic": "Measurement",
+    "type": "sort",
+    "prompt": "Order these amounts of water from least to most.",
+    "answer": [
+      "100 mL",
+      "250 mL",
+      "500 mL",
+      "1 L"
+    ],
+    "values": [
+      "100 mL",
+      "250 mL",
+      "500 mL",
+      "1 L"
+    ]
+  },
+  {
+    "id": "PM3-MB-061",
+    "topic": "Shapes",
+    "type": "image-question",
+    "prompt": "How many sides does this shape have?",
+    "answer": "3",
+    "image": "triangle",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "PM3-MB-062",
+    "topic": "Shapes",
+    "type": "image-question",
+    "prompt": "How many corners does this shape have?",
+    "answer": "4",
+    "image": "rectangle",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "PM3-MB-063",
+    "topic": "Shapes",
+    "type": "image-question",
+    "prompt": "How many sides does this shape have?",
+    "answer": "5",
+    "image": "pentagon",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  {
+    "id": "PM3-MB-064",
+    "topic": "Shapes",
+    "type": "image-question",
+    "prompt": "How many sides does this shape have?",
+    "answer": "6",
+    "image": "hexagon",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ]
+  },
+  {
+    "id": "PM3-MB-065",
+    "topic": "Shapes",
+    "type": "image-question",
+    "prompt": "How many corners does this shape have?",
+    "answer": "0",
+    "image": "circle",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ]
+  },
+  {
+    "id": "PM3-MB-066",
+    "topic": "Shapes",
+    "type": "image-choice",
+    "prompt": "Which picture shows a triangle?",
+    "answer": "triangle",
+    "options": [
+      "circle",
+      "triangle",
+      "square",
+      "rectangle"
+    ]
+  },
+  {
+    "id": "PM3-MB-067",
+    "topic": "Shapes",
+    "type": "image-choice",
+    "prompt": "Which picture shows a square?",
+    "answer": "square",
+    "options": [
+      "square",
+      "rectangle",
+      "pentagon",
+      "circle"
+    ]
+  },
+  {
+    "id": "PM3-MB-068",
+    "topic": "Shapes",
+    "type": "image-choice",
+    "prompt": "Which picture shows a rectangle?",
+    "answer": "rectangle",
+    "options": [
+      "hexagon",
+      "square",
+      "rectangle",
+      "triangle"
+    ]
+  },
+  {
+    "id": "PM3-MB-069",
+    "topic": "Shapes",
+    "type": "image-choice",
+    "prompt": "Which picture shows a pentagon?",
+    "answer": "pentagon",
+    "options": [
+      "pentagon",
+      "hexagon",
+      "triangle",
+      "rectangle"
+    ]
+  },
+  {
+    "id": "PM3-MB-070",
+    "topic": "Shapes",
+    "type": "image-choice",
+    "prompt": "Which picture shows a hexagon?",
+    "answer": "hexagon",
+    "options": [
+      "circle",
+      "hexagon",
+      "pentagon",
+      "square"
+    ]
+  },
+  {
+    "id": "PM3-MB-071",
+    "topic": "Coordinates",
+    "type": "choice",
+    "prompt": "On a grid, which number tells us how far right to move?",
+    "answer": "First number",
+    "options": [
+      "First number",
+      "Second number",
+      "Both numbers",
+      "Neither number"
+    ]
+  },
+  {
+    "id": "PM3-MB-072",
+    "topic": "Coordinates",
+    "type": "choice",
+    "prompt": "On a grid, what point is 2 steps right and 4 steps up?",
+    "answer": "(2, 4)",
+    "options": [
+      "(2, 4)",
+      "(4, 2)",
+      "(2, 2)",
+      "(4, 4)"
+    ]
+  },
+  {
+    "id": "PM3-MB-073",
+    "topic": "Coordinates",
+    "type": "choice",
+    "prompt": "Which point is 3 steps right and 1 step up?",
+    "answer": "(3, 1)",
+    "options": [
+      "(1, 3)",
+      "(3, 1)",
+      "(3, 3)",
+      "(1, 1)"
+    ]
+  },
+  {
+    "id": "PM3-MB-074",
+    "topic": "Coordinates",
+    "type": "choice",
+    "prompt": "Which point is 5 steps right and 2 steps up?",
+    "answer": "(5, 2)",
+    "options": [
+      "(2, 5)",
+      "(5, 5)",
+      "(5, 2)",
+      "(2, 2)"
+    ]
+  },
+  {
+    "id": "PM3-MB-075",
+    "topic": "Coordinates",
+    "type": "typing",
+    "prompt": "A point is at (4, 3). What is its first number?",
+    "answer": "4"
+  },
+  {
+    "id": "PM3-MB-076",
+    "topic": "Coordinates",
+    "type": "typing",
+    "prompt": "A point is at (2, 6). What is its second number?",
+    "answer": "6"
+  },
+  {
+    "id": "PM3-MB-077",
+    "topic": "Coordinates",
+    "type": "typing",
+    "prompt": "On a grid, a point is 3 steps up. What is its second number?",
+    "answer": "3"
+  },
+  {
+    "id": "PM3-MB-078",
+    "topic": "Coordinates",
+    "type": "sort",
+    "prompt": "Order these grid points from left to right.",
+    "answer": [
+      "(1, 2)",
+      "(2, 2)",
+      "(3, 2)",
+      "(4, 2)"
+    ],
+    "values": [
+      "(1, 2)",
+      "(2, 2)",
+      "(3, 2)",
+      "(4, 2)"
+    ]
+  },
+  {
+    "id": "PM3-MB-079",
+    "topic": "Coordinates",
+    "type": "sort",
+    "prompt": "Order these grid points from bottom to top.",
+    "answer": [
+      "(2, 1)",
+      "(2, 2)",
+      "(2, 3)",
+      "(2, 4)"
+    ],
+    "values": [
+      "(2, 1)",
+      "(2, 2)",
+      "(2, 3)",
+      "(2, 4)"
+    ]
+  },
+  {
+    "id": "PM3-MB-080",
+    "topic": "Coordinates",
+    "type": "sort",
+    "prompt": "Order these grid points from left to right.",
+    "answer": [
+      "(1, 4)",
+      "(3, 4)",
+      "(5, 4)",
+      "(7, 4)"
+    ],
+    "values": [
+      "(1, 4)",
+      "(3, 4)",
+      "(5, 4)",
+      "(7, 4)"
+    ]
+  },
+  {
+    "id": "PM3-MB-081",
+    "topic": "Data",
+    "type": "choice",
+    "prompt": "A chart shows 6 red balls and 9 blue balls. Which has more?",
+    "answer": "Blue",
+    "options": [
+      "Red",
+      "Blue",
+      "Same number",
+      "Neither"
+    ]
+  },
+  {
+    "id": "PM3-MB-082",
+    "topic": "Data",
+    "type": "choice",
+    "prompt": "There are 8 cats and 5 dogs. How many animals altogether?",
+    "answer": "13",
+    "options": [
+      "3",
+      "11",
+      "13",
+      "15"
+    ]
+  },
+  {
+    "id": "PM3-MB-083",
+    "topic": "Data",
+    "type": "choice",
+    "prompt": "A chart shows 4 apples, 7 pears and 2 oranges. Which is the fewest?",
+    "answer": "Oranges",
+    "options": [
+      "Apples",
+      "Pears",
+      "Oranges",
+      "Same number"
+    ]
+  },
+  {
+    "id": "PM3-MB-084",
+    "topic": "Data",
+    "type": "choice",
+    "prompt": "A class has 5 red books, 6 blue books and 8 green books. Which has most?",
+    "answer": "Green",
+    "options": [
+      "Red",
+      "Blue",
+      "Green",
+      "Same number"
+    ]
+  },
+  {
+    "id": "PM3-MB-085",
+    "topic": "Data",
+    "type": "typing",
+    "prompt": "A chart shows 4 bikes on Monday and 6 on Tuesday. Total bikes?",
+    "answer": "10"
+  },
+  {
+    "id": "PM3-MB-086",
+    "topic": "Data",
+    "type": "typing",
+    "prompt": "There are 7 red blocks and 3 yellow blocks. How many blocks?",
+    "answer": "10"
+  },
+  {
+    "id": "PM3-MB-087",
+    "topic": "Data",
+    "type": "typing",
+    "prompt": "A class picked 12 flowers. 5 were yellow. How many were not yellow?",
+    "answer": "7"
+  },
+  {
+    "id": "PM3-MB-088",
+    "topic": "Data",
+    "type": "sort",
+    "prompt": "Order these class votes from fewest to most.",
+    "answer": [
+      "Art: 2",
+      "Music: 4",
+      "Games: 6",
+      "Sport: 8"
+    ],
+    "values": [
+      "Art: 2",
+      "Music: 4",
+      "Games: 6",
+      "Sport: 8"
+    ]
+  },
+  {
+    "id": "PM3-MB-089",
+    "topic": "Data",
+    "type": "sort",
+    "prompt": "Order these book counts from most to fewest.",
+    "answer": [
+      "Ali: 9",
+      "Mia: 7",
+      "Sam: 5",
+      "Noor: 3"
+    ],
+    "values": [
+      "Ali: 9",
+      "Mia: 7",
+      "Sam: 5",
+      "Noor: 3"
+    ]
+  },
+  {
+    "id": "PM3-MB-090",
+    "topic": "Data",
+    "type": "sort",
+    "prompt": "Order these fruit counts from fewest to most.",
+    "answer": [
+      "Pears: 1",
+      "Apples: 3",
+      "Mangoes: 5",
+      "Oranges: 7"
+    ],
+    "values": [
+      "Pears: 1",
+      "Apples: 3",
+      "Mangoes: 5",
+      "Oranges: 7"
+    ]
+  }
+]
