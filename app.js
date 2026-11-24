@@ -234,6 +234,7 @@ function resetQuizContent() {
   quizFinishButton.disabled = false;
   quizFinishButton.textContent = "Finish";
   quizExitButton.disabled = false;
+  hideEnglishTooltip();
   quizContent.classList.remove("math-basics-card", "menu-buttons");
   quizContent.removeAttribute("data-question-id");
   quizContent.removeAttribute("role");
@@ -574,6 +575,73 @@ function showMathQuizList() {
   quizContent.scrollTop = 0;
 }
 
+/* Reusable English word explanations; add Malay/Korean entries here later. */
+const englishWordMeanings = new Map([["sen", "cent"]]);
+
+function addEnglishWordHints(element, text) {
+  const phrase = String(text);
+  const words = [...englishWordMeanings.keys()]
+    .sort((a, b) => b.length - a.length);
+  const pattern = new RegExp(
+    "(?<![\\p{L}\\p{N}])(" + words.join("|") + ")(?![\\p{L}\\p{N}])", "giu"
+  );
+  element.replaceChildren(...phrase.split(pattern).map(part => {
+    const meaning = englishWordMeanings.get(part.toLowerCase());
+    if (!meaning) return document.createTextNode(part);
+    const word = document.createElement("span");
+    word.className = "foreign-word";
+    word.textContent = part;
+    word.dataset.englishMeaning = meaning;
+    word.tabIndex = 0;
+    return word;
+  }));
+}
+
+let englishTooltip = null;
+function hideEnglishTooltip() {
+  if (englishTooltip) englishTooltip.style.display = "none";
+}
+function canShowEnglishTooltip() {
+  if (!activeQuiz || !activeQuiz.answers.length) return false;
+  const index = activeQuiz.currentIndex;
+  return Number.isInteger(index)
+    ? activeQuiz.answers[index]?.dataset.checked === "true"
+    : activeQuiz.answers.every(answer => answer.dataset.checked === "true");
+}
+function showEnglishTooltip(word, x, y) {
+  if (!word || !canShowEnglishTooltip()) {
+    hideEnglishTooltip();
+    return;
+  }
+  if (!englishTooltip) {
+    englishTooltip = document.createElement("span");
+    englishTooltip.className = "math-quiz-title foreign-translation";
+    englishTooltip.setAttribute("role", "tooltip");
+    englishTooltip.style.setProperty("--pill-background", "#d8f3e7");
+    document.body.append(englishTooltip);
+  }
+  englishTooltip.textContent = word.dataset.englishMeaning;
+  englishTooltip.style.display = "inline-flex";
+  englishTooltip.style.left = Math.max(8, Math.min(x + 18,
+    window.innerWidth - englishTooltip.offsetWidth - 8)) + "px";
+  englishTooltip.style.top = Math.max(8, Math.min(y - 10,
+    window.innerHeight - englishTooltip.offsetHeight - 8)) + "px";
+}
+quizContent.addEventListener("pointermove", event => {
+  const word = event.target.closest?.(".foreign-word");
+  showEnglishTooltip(word && quizContent.contains(word) ? word : null,
+    event.clientX, event.clientY);
+});
+quizContent.addEventListener("pointerleave", hideEnglishTooltip);
+quizContent.addEventListener("scroll", hideEnglishTooltip);
+quizContent.addEventListener("focusin", event => {
+  const word = event.target.closest?.(".foreign-word");
+  if (!word) return;
+  const rect = word.getBoundingClientRect();
+  showEnglishTooltip(word, rect.right, rect.top);
+});
+quizContent.addEventListener("focusout", hideEnglishTooltip);
+
 function createAnswerExplanation(text = "") {
   const pill = document.createElement("div");
   pill.className = "math-quiz-title";
@@ -581,7 +649,7 @@ function createAnswerExplanation(text = "") {
   pill.style.color = "#145740";
   pill.style.maxWidth = "100%";
   pill.setAttribute("role", "status");
-  pill.textContent = text;
+  addEnglishWordHints(pill, text);
   return pill;
 }
 
@@ -734,8 +802,6 @@ restoreLogin();
 
 
 /* PM3 Math Basics: independent questions and answer styles; no stage resizing. */
-const pm3QuestionHistoryPrefix = "quiz-room-pm3-basics-used-v1-";
-
 function shufflePM3(items) {
   const result = [...items];
   for (let index = result.length - 1; index > 0; index--) {
@@ -743,11 +809,6 @@ function shufflePM3(items) {
     [result[index], result[pick]] = [result[pick], result[index]];
   }
   return result;
-}
-
-function pm3UsedKey() {
-  if (!signedInUserId) throw new Error("Google sign-in is needed.");
-  return pm3QuestionHistoryPrefix + signedInUserId;
 }
 
 function planPM3Rounds(bank) {
@@ -781,30 +842,8 @@ function planPM3Rounds(bank) {
 }
 
 function selectFreshPM3Questions(bank) {
-  const historyKey = pm3UsedKey();
-  const old = localStorage.getItem(historyKey);
-  const used = new Set(old ? JSON.parse(old) : []);
-  if (bank.filter(question => !used.has(question.id)).length < 10) {
-    return null; // Never repeat previously seen questions.
-  }
-  const planKey = historyKey + "-rounds";
-  const storedPlan = localStorage.getItem(planKey);
-  let plan = storedPlan ? JSON.parse(storedPlan) : null;
-  if (!Array.isArray(plan) || !plan.length) {
-    plan = planPM3Rounds(bank);
-    localStorage.setItem(planKey, JSON.stringify(plan));
-  }
-  const availableIds = new Set(bank.map(question => question.id));
-  const next = plan.find(round =>
-    round.length === 10 &&
-    round.every(id => availableIds.has(id) && !used.has(id)));
-  if (!next) return null;
-  const questionsById = new Map(bank.map(question => [question.id, question]));
-  const questions = next.map(id => questionsById.get(id));
-  for (const question of questions) used.add(question.id);
-  // Reserve IDs on quiz start. Leaving early never reuses them.
-  localStorage.setItem(historyKey, JSON.stringify([...used]));
-  return questions;
+  const byId = new Map(bank.map(question => [question.id, question]));
+  return planPM3Rounds(bank)[0].map(id => byId.get(id));
 }
 
 function pm3Shape(shape) {
@@ -893,7 +932,7 @@ function pm3ChoiceOptions(question, imageOptions) {
       const unit = question.type === "image-question"
         ? question.prompt.includes("sides") ? " sides" : " corners"
         : "";
-      button.textContent = value + unit;
+      addEnglishWordHints(button, value + unit);
     }
     button.addEventListener("click", () => {
       if (!pm3CanAnswer()) return;
@@ -1019,7 +1058,7 @@ function pm3SortAnswer(question) {
     for (const value of order) {
       const button = document.createElement("button");
       button.type = "button";
-      button.textContent = value;
+      addEnglishWordHints(button, value);
       const used = placed.includes(value);
       button.className = used ? "math-basics-used" : "";
       button.disabled = used;
@@ -1036,7 +1075,7 @@ function pm3SortAnswer(question) {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "math-basics-slot" + (value === null ? "" : " is-filled");
-      button.textContent = value === null ? "" : value;
+      addEnglishWordHints(button, value === null ? "" : value);
       button.setAttribute("aria-label",
         value === null ? "Empty answer place " + (index + 1) :
           "Number " + value + " in place " + (index + 1) + ". Click to remove.");
@@ -1074,6 +1113,7 @@ function pm3SortAnswer(question) {
 function renderPM3Question() {
   const session = activeQuiz;
   if (!session || session.kind !== "pm3-basics") return;
+  hideEnglishTooltip();
   const question = session.questions[session.currentIndex];
   const card = quizContent;
   card.classList.add("math-basics-card");
@@ -1081,7 +1121,7 @@ function renderPM3Question() {
   card.replaceChildren();
   const prompt = document.createElement("div");
   prompt.className = "math-basics-question-text";
-  prompt.textContent = question.prompt;
+  addEnglishWordHints(prompt, question.prompt);
   card.append(prompt);
 
   if (question.type === "image-question") {
