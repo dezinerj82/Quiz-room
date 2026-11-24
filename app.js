@@ -63,6 +63,7 @@ function saveLogin(response) {
 }
 
 function showError(message) {
+  loginStage.hidden = false;
   loginStage.style.display = "flex";
   loginButton.disabled = false;
   statusMessage.textContent = message;
@@ -112,6 +113,7 @@ async function finishLogin(response) {
 async function restoreLogin() {
   const savedToken = getSavedLogin();
   if (!savedToken) {
+    loginStage.hidden = false;
     loginStage.style.display = "flex";
     return;
   }
@@ -123,6 +125,7 @@ async function restoreLogin() {
     showMainPage();
   } catch (error) {
     clearSavedLogin();
+    loginStage.hidden = false;
     loginStage.style.display = "flex";
   }
 }
