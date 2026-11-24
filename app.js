@@ -214,8 +214,14 @@ function stopQuizTimer() {
   }
 }
 
+function setStageNavigationDisabled(disabled) {
+  document.querySelectorAll("#menu-stage button, #navigation-stage button")
+    .forEach(button => { button.disabled = disabled; });
+}
+
 function resetQuizContent() {
   stopQuizTimer();
+  setStageNavigationDisabled(false);
   quizRenderRun += 1;
   activeQuiz = null;
   quizSaving = false;
@@ -271,6 +277,7 @@ function updateQuizClock() {
 
 function startQuiz(questions, answers) {
   stopQuizTimer();
+  setStageNavigationDisabled(true);
   activeQuiz = {
     questions,
     answers,
