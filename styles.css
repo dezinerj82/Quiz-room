@@ -543,14 +543,14 @@ h1 {
 }
 
 /* Match the 24px Quiz history title line without enlarging the panel. */
-.home-dashboard-history-controls button {
+#main-page .home-dashboard-history-controls button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
+  width: 28px;
   height: 24px;
   padding: var(--pill-padding-y);
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1;
 }
 
@@ -570,7 +570,7 @@ h1 {
   justify-content: space-between;
   gap: var(--item-gap);
   min-height: 52px;
-  padding: var(--pill-padding-x);
+  padding: 16px;
   background: #fff;
   border-radius: 999px;
 }
