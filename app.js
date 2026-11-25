@@ -72,6 +72,7 @@ function showError(message) {
 function showMainPage() {
   loginStage.remove();
   document.getElementById("main-page").hidden = false;
+  openHomePage();
 }
 
 async function checkGoogleToken(token) {
@@ -171,6 +172,10 @@ let quizMode = null;
 let quizSubject = null;
 let selectedQuizType = "Skill Builder";
 const quizTypes = ["Skill Builder", "Brain Booster", "Brain Challenge"];
+const homeSubjects = ["Math", "English", "Malay", "Korean", "Science", "History", "Geography"];
+let homeSubject = "Math";
+let homeScores = null;
+let homeRun = 0;
 
 function quizChoices(key, matches) {
   return [...new Set(quizCatalog.filter(matches).map(quiz => quiz[key]))];
@@ -246,7 +251,7 @@ function resetQuizContent() {
   quizFinishButton.textContent = "Finish";
   quizExitButton.disabled = false;
   hideEnglishTooltip();
-  quizContent.classList.remove("math-basics-card", "menu-buttons");
+  quizContent.classList.remove("math-basics-card", "menu-buttons", "home-dashboard");
   quizContent.removeAttribute("data-question-id");
   quizContent.removeAttribute("role");
   quizContent.removeAttribute("aria-label");
@@ -254,6 +259,7 @@ function resetQuizContent() {
   quizContent.style.removeProperty("align-items");
   quizContent.style.removeProperty("flex-wrap");
   quizContent.style.removeProperty("align-content");
+  homeRun += 1;
   quizContent.replaceChildren();
   quizContent.scrollTop = 0;
 }
@@ -522,6 +528,166 @@ async function finishMathQuiz() {
   } finally {
     if (activeQuiz === session) quizSaving = false;
   }
+}
+
+
+/* Home scores use only saved records from the signed-in Google Drive. */
+function makeHomeElement(tag, cls, text) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function makeHomeSvg(tag, props) {
+  const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  Object.entries(props).forEach(([name, value]) => node.setAttribute(name, String(value)));
+  return node;
+}
+
+function showHomeSubject() {
+  if (!quizContent.classList.contains("home-dashboard")) return;
+  quizToolbarName.textContent = homeSubject;
+  quizStepActions.replaceChildren(...homeSubjects.map(subject =>
+    quizOption(subject, () => {
+      homeSubject = subject;
+      showHomeSubject();
+    }, subject === homeSubject)
+  ));
+
+  const historyCard = makeHomeElement("section", "home-dashboard-card");
+  historyCard.setAttribute("aria-label", "Quiz history");
+  historyCard.append(makeHomeElement("div", "math-basics-question-text", "Quiz history"));
+  const history = makeHomeElement("div", "home-dashboard-history");
+  historyCard.append(history);
+
+  const chartCard = makeHomeElement("section", "home-dashboard-card");
+  chartCard.setAttribute("aria-label", "Quiz score average");
+  chartCard.append(makeHomeElement("div", "math-basics-question-text", "Quiz score average"));
+  const chart = makeHomeElement("div", "home-dashboard-chart");
+  const svg = makeHomeSvg("svg", {viewBox:"0 0 200 200", class:"home-dashboard-donut", role:"img", "aria-label":"Overall subject average"});
+  const circumference = 2 * Math.PI * 73;
+  svg.append(makeHomeSvg("circle", {cx:100,cy:100,r:73,fill:"none",stroke:"#ffffff","stroke-width":20}));
+  const ring = makeHomeSvg("circle", {cx:100,cy:100,r:73,fill:"none",stroke:"#a4dfc4","stroke-width":20,"stroke-linecap":"round",transform:"rotate(-90 100 100)","stroke-dasharray":"0 "+circumference});
+  svg.append(ring);
+  const number = makeHomeSvg("text", {x:100,y:104,"text-anchor":"middle","font-size":38,"font-weight":700,fill:"#171717"});
+  number.textContent = "—";
+  const label = makeHomeSvg("text", {x:100,y:127,"text-anchor":"middle","font-size":13,fill:"#777"});
+  label.textContent = homeSubject + " average";
+  svg.append(number,label);
+  chart.append(svg);
+  chartCard.append(chart);
+  const note = makeHomeElement("div","home-dashboard-note");
+  chartCard.append(note);
+  quizContent.replaceChildren(historyCard,chartCard);
+
+  if (homeScores === null) return;
+  if (homeScores === false) {
+    history.append(makeHomeElement("span","","Could not load scores."));
+    return;
+  }
+  const entries = homeScores.filter(item => item.subject === homeSubject)
+    .sort((a,b) => new Date(b.date) - new Date(a.date));
+  if (!entries.length) {
+    history.append(makeHomeElement("span","","No quiz scores yet."));
+    note.append(makeHomeElement("span","home-dashboard-detail","No scores yet to suggest a focus area."));
+    return;
+  }
+  let earned=0,possible=0;
+  const byQuiz=new Map();
+  for (const entry of entries) {
+    earned+=entry.score;
+    possible+=entry.total;
+    const row=makeHomeElement("div","home-dashboard-history-row");
+    const info=makeHomeElement("div","home-dashboard-history-info");
+    info.append(makeHomeElement("span","home-dashboard-history-name",entry.quiz));
+    const date=new Date(entry.date);
+    info.append(makeHomeElement("span","home-dashboard-detail",Number.isNaN(date.getTime())?"":date.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})));
+    row.append(info,makeHomeElement("span","home-dashboard-score",entry.score+" / "+entry.total));
+    history.append(row);
+    const aggregate=byQuiz.get(entry.quiz)||{score:0,total:0};
+    aggregate.score+=entry.score;
+    aggregate.total+=entry.total;
+    byQuiz.set(entry.quiz,aggregate);
+  }
+  const average=Math.round(100*earned/possible);
+  number.textContent=average+"%";
+  ring.setAttribute("stroke-dasharray",(circumference*average/100)+" "+circumference);
+  const weakest=[...byQuiz.entries()].sort((a,b)=>(a[1].score/a[1].total)-(b[1].score/b[1].total))[0];
+  if (weakest && weakest[1].score<weakest[1].total) {
+    note.append(makeHomeElement("span","home-dashboard-focus","Focus on: "+weakest[0]));
+    note.append(makeHomeElement("span","home-dashboard-detail","Practice this quiz again to improve."));
+  }
+}
+
+async function getHomeScores(token) {
+  const base="https://www.googleapis.com/drive/v3/files";
+  const mime="application/vnd.google-apps.folder";
+  const lookup=async query => {
+    const response=await scoreDriveRequest(base+"?q="+encodeURIComponent(query)+"&fields=files(id)&pageSize=100",token);
+    return response.files?.[0]?.id||null;
+  };
+  const parent=await lookup("name = 'Quiz Room' and mimeType = '"+mime+"' and trashed = false");
+  if (!parent) return [];
+  const scoreFolder=await lookup("name = 'Scores' and '"+parent+"' in parents and mimeType = '"+mime+"' and trashed = false");
+  if (!scoreFolder) return [];
+
+  const query="'"+scoreFolder+"' in parents and mimeType = 'application/json' and trashed = false";
+  const files=[];
+  let page="";
+  do {
+    const url=base+"?q="+encodeURIComponent(query)+"&fields="+encodeURIComponent("nextPageToken,files(id,createdTime)")+
+      "&pageSize=1000"+(page?"&pageToken="+encodeURIComponent(page):"");
+    const response=await scoreDriveRequest(url,token);
+    files.push(...(response.files||[]));
+    page=response.nextPageToken||"";
+  } while(page);
+
+  const items=[];
+  for (let offset=0;offset<files.length;offset+=8) {
+    const batch=await Promise.all(files.slice(offset,offset+8).map(async file => {
+      const score=await scoreDriveRequest(base+"/"+encodeURIComponent(file.id)+"?alt=media",token);
+      if (typeof score.subject!=="string" || typeof score.quiz!=="string" ||
+          !Number.isFinite(score.score) || !Number.isFinite(score.total) ||
+          score.total<=0 || score.score<0 || score.score>score.total) return null;
+      return {subject:score.subject,quiz:score.quiz,score:score.score,total:score.total,
+        date:score.completedAt||file.createdTime||""};
+    }));
+    items.push(...batch.filter(Boolean));
+  }
+  return items;
+}
+
+function openHomePage() {
+  quizLevel=null;
+  quizMode=null;
+  quizSubject=null;
+  homeSubject="Math";
+  homeScores=null;
+  resetQuizContent();
+  const run=homeRun;
+  setMainMenu(homeMenuButton);
+  quizStepLabel.textContent="Choose a subject";
+  quizStepBack.replaceChildren();
+  quizToolbarReserve.hidden=true;
+  quizToolbarMiddle.style.display="none";
+  quizToolbarActions.style.display="none";
+  quizTypeActions.hidden=true;
+  quizTypeActions.style.display="none";
+  quizToolbar.hidden=false;
+  quizContent.classList.add("home-dashboard");
+  quizContent.setAttribute("aria-label","Home dashboard");
+  showHomeSubject();
+
+  freshScoreToken().then(getHomeScores).then(result => {
+    if (run!==homeRun || !quizContent.classList.contains("home-dashboard")) return;
+    homeScores=result;
+    showHomeSubject();
+  }).catch(() => {
+    if (run!==homeRun || !quizContent.classList.contains("home-dashboard")) return;
+    homeScores=false;
+    showHomeSubject();
+  });
 }
 
 quizExitButton.addEventListener("click", showMathQuizList);
@@ -815,14 +981,7 @@ async function loadMathQuiz() {
   }
 }
 
-homeMenuButton.addEventListener("click", () => {
-  quizMode = null;
-  resetQuizContent();
-  setMainMenu(homeMenuButton);
-  quizStepLabel.textContent = "";
-  quizStepActions.replaceChildren();
-  quizStepBack.replaceChildren();
-});
+homeMenuButton.addEventListener("click", openHomePage);
 quizMenuButton.addEventListener("click", openQuizMenu);
 
 window.addEventListener("resize", scaleFrame);
