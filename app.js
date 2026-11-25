@@ -163,8 +163,8 @@ const quizStepActions = document.getElementById("quiz-step-actions");
 const quizStepBack = document.getElementById("quiz-step-back");
 // Only show levels, activities and subjects that have quizzes available.
 const quizCatalog = [
-  { level: "PM3", activity: "Quiz", subject: "Math", type: "Skill Builder", name: "Times Tables", open: loadMathQuiz },
-  { level: "PM3", activity: "Quiz", subject: "Math", type: "Brain Challenge", name: "Basic Knowledge", open: loadPM3MathBasics }
+  { level: "Basic", activity: "Quiz", subject: "Math", type: "Skill Builder", name: "Times Tables", open: loadMathQuiz },
+  { level: "Basic", activity: "Quiz", subject: "Math", type: "Brain Challenge", name: "Basic Knowledge", open: loadPM3MathBasics }
 ];
 let quizLevel = null;
 let quizMode = null;
