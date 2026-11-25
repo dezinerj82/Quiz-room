@@ -614,11 +614,13 @@ h1 {
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 0;
+  gap: var(--item-gap);
 }
 
 .home-dashboard-donut {
+  flex: none;
   width: 180px;
   height: 180px;
   max-height: 100%;
@@ -626,11 +628,40 @@ h1 {
 
 .home-dashboard-note {
   display: flex;
-  flex: none;
+  flex: 1 1 auto;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
   min-height: 54px;
   gap: var(--item-gap);
+}
+
+.home-dashboard-note .home-dashboard-focus {
+  max-width: 100%;
+  white-space: normal;
+}
+
+#main-page .home-dashboard-shortcuts {
+  display: flex;
+  flex: none;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 54px;
+  max-height: 72px;
+  gap: var(--pill-padding-y);
+  overflow-y: auto;
+}
+
+#main-page .home-dashboard-shortcuts button {
+  background: #171717;
+  color: #fff;
+  transition: box-shadow .25s ease, transform .2s ease;
+}
+
+#main-page .home-dashboard-shortcuts button:hover:not(:disabled) {
+  box-shadow: 0 0 0 5px rgba(130, 217, 183, .32), 0 0 20px rgba(130, 217, 183, .5);
 }
 
 
