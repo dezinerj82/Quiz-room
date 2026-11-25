@@ -558,9 +558,34 @@ function showHomeSubject() {
 
   const historyCard = makeHomeElement("section", "home-dashboard-card");
   historyCard.setAttribute("aria-label", "Quiz history");
-  historyCard.append(makeHomeElement("div", "math-basics-question-text", "Quiz history"));
+  const historyHeader = makeHomeElement("div", "home-dashboard-history-header");
+  const historyControls = makeHomeElement("div", "menu-buttons home-dashboard-history-controls");
+  const historyUp = makeHomeElement("button", "", "↑");
+  const historyDown = makeHomeElement("button", "", "↓");
+  historyUp.type = "button";
+  historyDown.type = "button";
+  historyUp.setAttribute("aria-label", "Scroll quiz history up");
+  historyDown.setAttribute("aria-label", "Scroll quiz history down");
+  historyControls.append(historyUp, historyDown);
+  historyHeader.append(makeHomeElement("div", "math-basics-question-text", "Quiz history"), historyControls);
+  historyCard.append(historyHeader);
   const history = makeHomeElement("div", "home-dashboard-history");
   historyCard.append(history);
+
+  const updateHistoryControls = () => {
+    const bottom = Math.max(0, history.scrollHeight - history.clientHeight);
+    historyUp.disabled = history.scrollTop <= 1;
+    historyDown.disabled = history.scrollTop >= bottom - 1;
+  };
+  const scrollHistory = direction => {
+    const first = history.querySelector(".home-dashboard-history-row");
+    if (!first) return;
+    const gap = parseFloat(getComputedStyle(history).rowGap) || 0;
+    history.scrollBy({ top: direction * (first.offsetHeight + gap), behavior: "smooth" });
+  };
+  historyUp.addEventListener("click", () => scrollHistory(-1));
+  historyDown.addEventListener("click", () => scrollHistory(1));
+  history.addEventListener("scroll", updateHistoryControls);
 
   const chartCard = makeHomeElement("section", "home-dashboard-card");
   chartCard.setAttribute("aria-label", "Quiz score average");
@@ -582,9 +607,13 @@ function showHomeSubject() {
   chartCard.append(note);
   quizContent.replaceChildren(historyCard,chartCard);
 
-  if (homeScores === null) return;
+  if (homeScores === null) {
+    updateHistoryControls();
+    return;
+  }
   if (homeScores === false) {
     history.append(makeHomeElement("span","","Could not load scores."));
+    updateHistoryControls();
     return;
   }
   const entries = homeScores.filter(item => item.subject === homeSubject)
@@ -592,6 +621,7 @@ function showHomeSubject() {
   if (!entries.length) {
     history.append(makeHomeElement("span","","No quiz scores yet."));
     note.append(makeHomeElement("span","home-dashboard-detail","No scores yet to suggest a focus area."));
+    updateHistoryControls();
     return;
   }
   let earned=0,possible=0;
@@ -611,6 +641,7 @@ function showHomeSubject() {
     aggregate.total+=entry.total;
     byQuiz.set(entry.quiz,aggregate);
   }
+  updateHistoryControls();
   const average=Math.round(100*earned/possible);
   number.textContent=average+"%";
   ring.setAttribute("stroke-dasharray",(circumference*average/100)+" "+circumference);
