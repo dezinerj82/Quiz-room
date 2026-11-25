@@ -15,6 +15,7 @@ function scaleFrame() {
   const height = parseFloat(getComputedStyle(frame).height);
   const scale = Math.min(1, window.innerWidth / width, window.innerHeight / height);
   frame.style.setProperty("--scale", String(scale));
+  frame.style.visibility = "visible";
 }
 
 function clearSavedLogin() {
