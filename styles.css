@@ -572,7 +572,7 @@ h1 {
   row-gap: var(--pill-padding-y);
   align-items: center;
   min-height: 52px;
-  padding: 16px;
+  padding: 16px 16px 16px 20px;
   background: #fff;
   border-radius: 999px;
 }
