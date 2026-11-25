@@ -557,9 +557,11 @@ h1 {
   flex-direction: column;
   min-width: 0;
   gap: var(--pill-padding-y);
+  font-size: 12px;
 }
 
 .home-dashboard-history-name {
+  font-size: var(--font-size);
   font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
