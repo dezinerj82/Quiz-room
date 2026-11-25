@@ -234,6 +234,7 @@ function resetQuizContent() {
   activeQuiz = null;
   quizSaving = false;
   quizToolbar.hidden = true;
+  quizTypeActions.hidden = true;
   quizTypeActions.style.display = "none";
   quizToolbarMiddle.style.removeProperty("display");
   quizToolbarActions.style.removeProperty("display");
@@ -307,6 +308,7 @@ function startQuiz(questions, answers) {
     expired: false
   };
   quizToolbar.hidden = false;
+  quizTypeActions.hidden = true;
   quizTypeActions.style.display = "none";
   quizToolbarReserve.hidden = false;
   quizToolbarMiddle.style.removeProperty("display");
@@ -588,6 +590,7 @@ function showMathQuizList() {
   quizToolbarReserve.hidden = true;
   quizToolbarMiddle.style.display = "none";
   quizToolbarActions.style.display = "none";
+  quizTypeActions.hidden = false;
   quizTypeActions.style.removeProperty("display");
   quizToolbar.hidden = false;
 
