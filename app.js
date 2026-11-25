@@ -630,11 +630,10 @@ function showHomeSubject() {
     earned+=entry.score;
     possible+=entry.total;
     const row=makeHomeElement("div","home-dashboard-history-row");
-    const info=makeHomeElement("div","home-dashboard-history-info");
-    info.append(makeHomeElement("span","home-dashboard-history-name",entry.quiz));
+    row.append(makeHomeElement("span","home-dashboard-history-name",entry.quiz));
     const date=new Date(entry.date);
-    info.append(makeHomeElement("span","home-dashboard-detail",Number.isNaN(date.getTime())?"":date.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})));
-    row.append(info,makeHomeElement("span","home-dashboard-score",entry.score+" / "+entry.total));
+    row.append(makeHomeElement("span","home-dashboard-detail",Number.isNaN(date.getTime())?"":date.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})));
+    row.append(makeHomeElement("span","home-dashboard-score",entry.score+" / "+entry.total));
     history.append(row);
     const aggregate=byQuiz.get(entry.quiz)||{score:0,total:0};
     aggregate.score+=entry.score;
