@@ -580,7 +580,7 @@ h1 {
 .home-dashboard-history-row > .home-dashboard-detail {
   grid-column: 1;
   grid-row: 2;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .home-dashboard-history-name {
