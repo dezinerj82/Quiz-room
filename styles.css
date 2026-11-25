@@ -225,7 +225,8 @@ h1 {
 
 #main-page #menu-stage .menu-buttons button,
 #main-page #navigation-stage .menu-buttons button,
-#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button {
+#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button,
+#main-page .home-dashboard-history-controls button {
   background: #171717;
   color: #fff;
   transition: box-shadow .25s ease, transform .2s ease;
@@ -233,7 +234,8 @@ h1 {
 
 #main-page #menu-stage .menu-buttons button:disabled,
 #main-page #navigation-stage .menu-buttons button:disabled,
-#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button:disabled {
+#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button:disabled,
+#main-page .home-dashboard-history-controls button:disabled {
   background: #e2e2e2;
   color: #a1a1a1;
   opacity: 1;
@@ -245,7 +247,8 @@ h1 {
 #main-page #menu-stage .menu-buttons button:hover:not(:disabled),
 #main-page #navigation-stage .menu-buttons button:hover:not(:disabled),
 #main-page #quiz-toolbar .menu-buttons button:hover:not(:disabled),
-#main-page #quiz-content[aria-label="Quizzes"] button:hover:not(:disabled) {
+#main-page #quiz-content[aria-label="Quizzes"] button:hover:not(:disabled),
+#main-page .home-dashboard-history-controls button:hover:not(:disabled) {
   box-shadow: 0 0 0 5px rgba(130, 217, 183, .32), 0 0 20px rgba(130, 217, 183, .5);
 }
 
@@ -253,7 +256,8 @@ h1 {
 #main-page #menu-stage .menu-buttons button:active:not(:disabled),
 #main-page #navigation-stage .menu-buttons button:active:not(:disabled),
 #main-page #quiz-toolbar .menu-buttons button:active:not(:disabled),
-#main-page #quiz-content[aria-label="Quizzes"] button:active:not(:disabled) {
+#main-page #quiz-content[aria-label="Quizzes"] button:active:not(:disabled),
+#main-page .home-dashboard-history-controls button:active:not(:disabled) {
   box-shadow: 0 0 0 9px rgba(130, 217, 183, .24), 0 0 24px rgba(130, 217, 183, .45);
   transform: scale(.97);
 }
@@ -531,13 +535,20 @@ h1 {
   overflow: hidden;
 }
 
+.home-dashboard-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--item-gap);
+}
+
 .home-dashboard-history {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   min-height: 0;
   gap: var(--item-gap);
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .home-dashboard-history-row {
