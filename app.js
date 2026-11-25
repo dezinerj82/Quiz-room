@@ -601,10 +601,11 @@ function showHomeSubject() {
   const label = makeHomeSvg("text", {x:100,y:127,"text-anchor":"middle","font-size":13,fill:"#777"});
   label.textContent = homeSubject + " average";
   svg.append(number,label);
-  chart.append(svg);
-  chartCard.append(chart);
   const note = makeHomeElement("div","home-dashboard-note");
-  chartCard.append(note);
+  chart.append(svg,note);
+  chartCard.append(chart);
+  const shortcuts = makeHomeElement("div","menu-buttons home-dashboard-shortcuts");
+  chartCard.append(shortcuts);
   quizContent.replaceChildren(historyCard,chartCard);
 
   if (homeScores === null) {
@@ -644,10 +645,28 @@ function showHomeSubject() {
   const average=Math.round(100*earned/possible);
   number.textContent=average+"%";
   ring.setAttribute("stroke-dasharray",(circumference*average/100)+" "+circumference);
-  const weakest=[...byQuiz.entries()].sort((a,b)=>(a[1].score/a[1].total)-(b[1].score/b[1].total))[0];
-  if (weakest && weakest[1].score<weakest[1].total) {
-    note.append(makeHomeElement("span","home-dashboard-focus","Focus on: "+weakest[0]));
+  const needsPractice=[...byQuiz.entries()]
+    .filter(([,totals]) => totals.total > 0 && totals.score < totals.total)
+    .sort((a,b) => (a[1].score/a[1].total)-(b[1].score/b[1].total));
+  if (needsPractice.length) {
+    note.append(makeHomeElement("span","home-dashboard-focus","Focus on: "+needsPractice[0][0]));
     note.append(makeHomeElement("span","home-dashboard-detail","Practice this quiz again to improve."));
+    for (const [name] of needsPractice) {
+      const quiz=quizCatalog.find(item => item.subject === homeSubject && item.name === name);
+      if (!quiz) continue;
+      const button=makeHomeElement("button","","▶ "+quiz.name);
+      button.type="button";
+      button.setAttribute("aria-label","Start "+quiz.name+" quiz");
+      button.addEventListener("click", () => {
+        openQuizMenu();
+        selectQuizLevel(quiz.level);
+        chooseMode(quiz.activity);
+        selectQuizSubject(quiz.subject);
+        selectedQuizType=quiz.type;
+        quiz.open();
+      });
+      shortcuts.append(button);
+    }
   }
 }
 
