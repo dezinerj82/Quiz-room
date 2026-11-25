@@ -603,6 +603,7 @@ function showMathQuizList() {
   quizContent.classList.add("menu-buttons");
   quizContent.setAttribute("role", "navigation");
   quizContent.setAttribute("aria-label", "Quizzes");
+  quizContent.style.overflow = "visible";
   quizContent.style.alignItems = "flex-start";
   quizContent.style.alignContent = "flex-start";
   quizContent.style.flexWrap = "wrap";
