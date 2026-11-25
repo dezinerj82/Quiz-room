@@ -224,7 +224,7 @@ h1 {
 
 #main-page #menu-stage .menu-buttons button,
 #main-page #navigation-stage .menu-buttons button,
-#main-page #quiz-toolbar .menu-buttons button {
+#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button {
   background: #171717;
   color: #fff;
   transition: box-shadow .25s ease, transform .2s ease;
@@ -232,7 +232,7 @@ h1 {
 
 #main-page #menu-stage .menu-buttons button:disabled,
 #main-page #navigation-stage .menu-buttons button:disabled,
-#main-page #quiz-toolbar .menu-buttons button:disabled {
+#main-page #quiz-toolbar .menu-buttons:not([aria-label="Quiz types"]) button:disabled {
   background: #e2e2e2;
   color: #a1a1a1;
   opacity: 1;
