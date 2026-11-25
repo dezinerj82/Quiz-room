@@ -163,12 +163,14 @@ const quizStepActions = document.getElementById("quiz-step-actions");
 const quizStepBack = document.getElementById("quiz-step-back");
 // Only show levels, activities and subjects that have quizzes available.
 const quizCatalog = [
-  { level: "PM3", activity: "Quiz", subject: "Math", name: "Times Tables", open: loadMathQuiz },
-  { level: "PM3", activity: "Quiz", subject: "Math", name: "Basic Knowledge", open: loadPM3MathBasics }
+  { level: "PM3", activity: "Quiz", subject: "Math", type: "Skill Builder", name: "Times Tables", open: loadMathQuiz },
+  { level: "PM3", activity: "Quiz", subject: "Math", type: "Brain Challenge", name: "Basic Knowledge", open: loadPM3MathBasics }
 ];
 let quizLevel = null;
 let quizMode = null;
 let quizSubject = null;
+let selectedQuizType = "Skill Builder";
+const quizTypes = ["Skill Builder", "Brain Booster", "Brain Challenge"];
 
 function quizChoices(key, matches) {
   return [...new Set(quizCatalog.filter(matches).map(quiz => quiz[key]))];
@@ -202,6 +204,10 @@ const quizClock = document.getElementById("quiz-clock");
 const quizExitButton = document.getElementById("quiz-exit");
 const quizNextButton = document.getElementById("quiz-next");
 const quizToolbarName = document.getElementById("quiz-toolbar-name");
+const quizTypeActions = document.getElementById("quiz-type-actions");
+const quizToolbarMiddle = document.getElementById("quiz-toolbar-middle");
+const quizToolbarActions = document.getElementById("quiz-toolbar-actions");
+const quizToolbarReserve = quizToolbar.querySelector(":scope > .quiz-advance-reserve");
 const quizFinishButton = document.getElementById("quiz-finish");
 let quizRenderRun = 0;
 let activeQuiz = null;
@@ -228,6 +234,10 @@ function resetQuizContent() {
   activeQuiz = null;
   quizSaving = false;
   quizToolbar.hidden = true;
+  quizTypeActions.style.display = "none";
+  quizToolbarMiddle.style.removeProperty("display");
+  quizToolbarActions.style.removeProperty("display");
+  quizToolbarReserve.hidden = false;
   quizFinishButton.hidden = true;
   quizNextButton.hidden = true;
   quizNextButton.disabled = true;
@@ -241,6 +251,8 @@ function resetQuizContent() {
   quizContent.removeAttribute("aria-label");
   quizContent.style.removeProperty("overflow");
   quizContent.style.removeProperty("align-items");
+  quizContent.style.removeProperty("flex-wrap");
+  quizContent.style.removeProperty("align-content");
   quizContent.replaceChildren();
   quizContent.scrollTop = 0;
 }
@@ -295,6 +307,10 @@ function startQuiz(questions, answers) {
     expired: false
   };
   quizToolbar.hidden = false;
+  quizTypeActions.style.display = "none";
+  quizToolbarReserve.hidden = false;
+  quizToolbarMiddle.style.removeProperty("display");
+  quizToolbarActions.style.removeProperty("display");
   quizExitButton.disabled = false;
   quizFinishButton.disabled = false;
   quizFinishButton.textContent = "Finish";
@@ -551,6 +567,7 @@ function chooseMode(mode) {
 
 function selectQuizSubject(subject) {
   quizSubject = subject;
+  selectedQuizType = "Skill Builder";
   quizStepLabel.textContent = "Choose a subject";
   quizStepActions.replaceChildren(
     quizOption(subject, () => {}, true)
@@ -561,16 +578,31 @@ function selectQuizSubject(subject) {
 
 function showMathQuizList() {
   resetQuizContent();
+  quizToolbarName.textContent = "Choose quiz type";
+  quizTypeActions.replaceChildren(...quizTypes.map(type =>
+    quizOption(type, () => {
+      selectedQuizType = type;
+      showMathQuizList();
+    }, type === selectedQuizType)
+  ));
+  quizToolbarReserve.hidden = true;
+  quizToolbarMiddle.style.display = "none";
+  quizToolbarActions.style.display = "none";
+  quizTypeActions.style.removeProperty("display");
+  quizToolbar.hidden = false;
+
   const available = quizCatalog.filter(quiz =>
     quiz.level === quizLevel &&
     quiz.activity === quizMode &&
-    quiz.subject === quizSubject
+    quiz.subject === quizSubject &&
+    quiz.type === selectedQuizType
   );
   quizContent.classList.add("menu-buttons");
   quizContent.setAttribute("role", "navigation");
   quizContent.setAttribute("aria-label", "Quizzes");
-  quizContent.style.overflow = "visible";
   quizContent.style.alignItems = "flex-start";
+  quizContent.style.alignContent = "flex-start";
+  quizContent.style.flexWrap = "wrap";
   quizContent.replaceChildren(...available.map(quiz => quizOption(quiz.name, quiz.open)));
   quizContent.scrollTop = 0;
 }
