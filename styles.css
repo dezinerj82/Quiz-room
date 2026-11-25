@@ -43,6 +43,7 @@ button {
   transform: scale(var(--scale));
   transform-origin: center center;
   overflow: hidden;
+  visibility: hidden;
   background: #f6f6f6;
 }
 
