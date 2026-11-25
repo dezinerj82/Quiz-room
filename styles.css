@@ -542,6 +542,18 @@ h1 {
   gap: var(--item-gap);
 }
 
+/* Match the 24px Quiz history title line without enlarging the panel. */
+.home-dashboard-history-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: var(--pill-padding-y);
+  font-size: 12px;
+  line-height: 1;
+}
+
 .home-dashboard-history {
   display: flex;
   flex: 1 1 auto;
@@ -558,7 +570,7 @@ h1 {
   justify-content: space-between;
   gap: var(--item-gap);
   min-height: 52px;
-  padding: 10px;
+  padding: var(--pill-padding-x);
   background: #fff;
   border-radius: 999px;
 }
@@ -584,7 +596,7 @@ h1 {
 }
 
 .home-dashboard-score {
-  padding: 10px;
+  padding: var(--pill-padding-x);
   font-weight: 700;
 }
 
