@@ -564,26 +564,29 @@ h1 {
 }
 
 .home-dashboard-history-row {
-  display: flex;
+  display: grid;
   flex: none;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  column-gap: var(--item-gap);
+  row-gap: var(--pill-padding-y);
   align-items: center;
-  justify-content: space-between;
-  gap: var(--item-gap);
   min-height: 52px;
   padding: 16px;
   background: #fff;
   border-radius: 999px;
 }
 
-.home-dashboard-history-info {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  gap: var(--pill-padding-y);
+.home-dashboard-history-row > .home-dashboard-detail {
+  grid-column: 1;
+  grid-row: 2;
   font-size: 12px;
 }
 
 .home-dashboard-history-name {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
   font-size: var(--font-size);
   font-weight: 700;
   overflow: hidden;
@@ -596,6 +599,9 @@ h1 {
 }
 
 .home-dashboard-score {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
   padding: var(--pill-padding-x);
   font-weight: 700;
 }
