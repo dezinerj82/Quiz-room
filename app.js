@@ -560,8 +560,8 @@ function showHomeSubject() {
   historyCard.setAttribute("aria-label", "Quiz history");
   const historyHeader = makeHomeElement("div", "home-dashboard-history-header");
   const historyControls = makeHomeElement("div", "menu-buttons home-dashboard-history-controls");
-  const historyUp = makeHomeElement("button", "", "↑");
-  const historyDown = makeHomeElement("button", "", "↓");
+  const historyUp = makeHomeElement("button", "", "▲");
+  const historyDown = makeHomeElement("button", "", "▼");
   historyUp.type = "button";
   historyDown.type = "button";
   historyUp.setAttribute("aria-label", "Scroll quiz history up");
