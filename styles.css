@@ -444,7 +444,9 @@ h1 {
 }
 
 #quiz-count,
-#quiz-clock {
+#quiz-clock,
+.home-dashboard-score,
+.home-dashboard-focus {
   flex: none;
   display: inline-flex;
   align-items: center;
@@ -507,6 +509,94 @@ h1 {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+/* Home: two fixed-size cards share the existing Stage 3 bottom panel. */
+#quiz-content.home-dashboard {
+  display: flex;
+  gap: var(--item-gap);
+  overflow: hidden;
+}
+
+.home-dashboard-card {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: var(--card-padding);
+  gap: var(--card-padding);
+  background: #f1f1f1;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.home-dashboard-history {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  gap: var(--item-gap);
+  overflow-y: auto;
+}
+
+.home-dashboard-history-row {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--item-gap);
+  min-height: 52px;
+  padding: var(--pill-padding-y) var(--pill-padding-x);
+  background: #fff;
+  border-radius: 999px;
+}
+
+.home-dashboard-history-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: var(--pill-padding-y);
+}
+
+.home-dashboard-history-name {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-dashboard-detail {
+  color: #777;
+}
+
+.home-dashboard-score,
+.home-dashboard-focus {
+  font-weight: 700;
+}
+
+.home-dashboard-chart {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.home-dashboard-donut {
+  width: 180px;
+  height: 180px;
+  max-height: 100%;
+}
+
+.home-dashboard-note {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 54px;
+  gap: var(--item-gap);
+}
+
 
 /* PM3 Math Basics: fixed question card, reusing approved padding and pill rules. */
 .math-basics-card {
