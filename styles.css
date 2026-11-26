@@ -3,8 +3,8 @@
   --font-size: 14px;
   --equation-font-size: 14px;
   --main-frame-padding: 32px;
-  --card-padding: 24px;
-  --item-gap: 16px;
+  --card-padding: 20px;
+  --item-gap: 14px;
   --pill-padding-y: 6px;
   --pill-padding-x: 10px;
   --answer-status-space: 22px;
@@ -55,7 +55,7 @@ button {
   top: 189px;
   width: 530px;
   height: 390px;
-  padding: 24px;
+  padding: 20px;
   border: 0;
   border-radius: 32px;
   background: #fff;
@@ -615,7 +615,7 @@ h1 {
   row-gap: var(--pill-padding-y);
   align-items: center;
   min-height: 52px;
-  padding: 16px 16px 16px 20px;
+  padding: 14px 14px 14px 20px;
   background: #fff;
   border-radius: 999px;
 }
