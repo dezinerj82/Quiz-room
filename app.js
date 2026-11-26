@@ -4,6 +4,7 @@ const storageKey = "quiz-room-google-session-v1";
 const frame = document.getElementById("site-frame");
 const loginStage = document.getElementById("login-stage");
 const loginButton = document.getElementById("google-login");
+const loginProgress = document.getElementById("login-progress");
 const statusMessage = document.getElementById("login-status");
 
 let tokenClient;
@@ -67,9 +68,16 @@ function saveLogin(response) {
   }
 }
 
+function showLoginProgress() {
+  loginStage.style.display = "flex";
+  loginButton.disabled = true;
+  loginProgress.hidden = false;
+}
+
 function showError(message) {
   loginStage.style.display = "flex";
   loginButton.disabled = false;
+  loginProgress.hidden = true;
   statusMessage.textContent = message;
   statusMessage.hidden = false;
 }
@@ -98,20 +106,30 @@ async function checkGoogleToken(token) {
   return account.sub;
 }
 
+// Show Home only after the signed-in user's saved quiz results have loaded.
+async function prepareHomeAfterLogin(token) {
+  const userId = await checkGoogleToken(token);
+  const scores = await getHomeScores(token);
+  signedInUserId = userId;
+  accessToken = token;
+  homeScoresCache = scores;
+  homeScoresCacheUserId = userId;
+}
+
 async function finishLogin(response) {
   if (response.error || !response.access_token) {
     showError("Google sign-in was not completed.");
     return;
   }
 
+  showLoginProgress();
   try {
-    signedInUserId = await checkGoogleToken(response.access_token);
-    accessToken = response.access_token;
+    await prepareHomeAfterLogin(response.access_token);
     saveLogin(response);
     showMainPage();
   } catch (error) {
     clearSavedLogin();
-    showError("Could not connect to Google Drive. Please try again.");
+    showError("Could not load Quiz Room. Please try again.");
   }
 }
 
@@ -122,13 +140,13 @@ async function restoreLogin() {
     return;
   }
 
+  showLoginProgress();
   try {
-    signedInUserId = await checkGoogleToken(savedToken);
-    accessToken = savedToken;
+    await prepareHomeAfterLogin(savedToken);
     showMainPage();
   } catch (error) {
     clearSavedLogin();
-    loginStage.style.display = "flex";
+    showError("Could not load Quiz Room. Please sign in again.");
   }
 }
 
@@ -149,7 +167,7 @@ loginButton.addEventListener("click", () => {
     });
   }
 
-  loginButton.disabled = true;
+  showLoginProgress();
   try {
     tokenClient.requestAccessToken({ prompt: "select_account" });
   } catch (error) {
