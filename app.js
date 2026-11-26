@@ -2,6 +2,7 @@ const clientId = "574290651847-gr406870mug7sfhv4oamvjg4jtvdc8l3.apps.googleuserc
 const scopes = "openid email profile https://www.googleapis.com/auth/drive.file";
 const storageKey = "quiz-room-google-session-v1";
 const frame = document.getElementById("site-frame");
+const navigationStage = document.getElementById("navigation-stage");
 const loginStage = document.getElementById("login-stage");
 const loginButton = document.getElementById("google-login");
 const loginProgress = document.getElementById("login-progress");
@@ -18,6 +19,12 @@ function scaleFrame() {
   const scale = Math.min(1.1, window.innerWidth / width, window.innerHeight / height);
   frame.style.setProperty("--scale", String(scale));
   frame.style.visibility = "visible";
+}
+
+// Keep Stage 3 exactly one default card gap below the auto-height Stage 2.
+function alignStage3() {
+  if (!navigationStage.offsetHeight) return;
+  frame.style.setProperty("--stage-2-bottom", `${navigationStage.offsetTop + navigationStage.offsetHeight}px`);
 }
 
 function clearSavedLogin() {
@@ -87,6 +94,7 @@ function showMainPage() {
   loginStage.remove();
   document.getElementById("main-page").hidden = false;
   openHomePage();
+  alignStage3();
 }
 
 async function checkGoogleToken(token) {
@@ -1108,6 +1116,7 @@ homeMenuButton.addEventListener("click", openHomePage);
 quizMenuButton.addEventListener("click", openQuizMenu);
 
 window.addEventListener("resize", scaleFrame);
+new ResizeObserver(alignStage3).observe(navigationStage);
 scaleFrame();
 restoreLogin();
 
