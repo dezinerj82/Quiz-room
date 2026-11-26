@@ -25,6 +25,10 @@ function clearSavedLogin() {
     // The browser may have storage disabled.
   }
   accessToken = null;
+  homeScoresCache = null;
+  homeScoresCacheUserId = null;
+  homeScoresRequest = null;
+  homeScoresVersion += 1;
 }
 
 function getSavedLogin() {
@@ -177,6 +181,11 @@ const homeSubjects = ["Math", "English", "Malay", "Korean", "Science", "History"
 let homeSubject = "Math";
 let homeScores = null;
 let homeRun = 0;
+// Scores stay in memory for this signed-in user only, never in GitHub or browser storage.
+let homeScoresCache = null;
+let homeScoresCacheUserId = null;
+let homeScoresRequest = null;
+let homeScoresVersion = 0;
 
 function quizChoices(key, matches) {
   return [...new Set(quizCatalog.filter(matches).map(quiz => quiz[key]))];
@@ -518,6 +527,16 @@ async function finishMathQuiz() {
     const token = await freshScoreToken();
     await saveCompletedScore(token, session.finalScore);
     if (activeQuiz !== session) return;
+    homeScoresVersion += 1;
+    if (homeScoresCacheUserId === signedInUserId && Array.isArray(homeScoresCache)) {
+      homeScoresCache.push({
+        subject: session.finalScore.subject,
+        quiz: session.finalScore.quiz,
+        score: session.finalScore.score,
+        total: session.finalScore.total,
+        date: session.finalScore.completedAt
+      });
+    }
     session.completed = true;
     quizFinishButton.disabled = true;
     quizExitButton.disabled = false;
@@ -731,7 +750,7 @@ function openHomePage() {
   quizMode=null;
   quizSubject=null;
   homeSubject="Math";
-  homeScores=null;
+  homeScores=homeScoresCacheUserId===signedInUserId ? homeScoresCache : null;
   resetQuizContent();
   const run=homeRun;
   setMainMenu(homeMenuButton);
@@ -747,7 +766,22 @@ function openHomePage() {
   quizContent.setAttribute("aria-label","Home dashboard");
   showHomeSubject();
 
-  freshScoreToken().then(getHomeScores).then(result => {
+  if (homeScores !== null) return;
+
+  const userId = signedInUserId;
+  const version = homeScoresVersion;
+  const pending = homeScoresRequest &&
+    homeScoresRequest.userId === userId &&
+    homeScoresRequest.version === version;
+  const request = pending
+    ? homeScoresRequest.promise
+    : freshScoreToken().then(getHomeScores);
+  if (!pending) homeScoresRequest = { userId, version, promise: request };
+
+  request.then(result => {
+    if (signedInUserId !== userId || homeScoresVersion !== version) return;
+    homeScoresCache = result;
+    homeScoresCacheUserId = userId;
     if (run!==homeRun || !quizContent.classList.contains("home-dashboard")) return;
     homeScores=result;
     showHomeSubject();
@@ -755,6 +789,8 @@ function openHomePage() {
     if (run!==homeRun || !quizContent.classList.contains("home-dashboard")) return;
     homeScores=false;
     showHomeSubject();
+  }).finally(() => {
+    if (homeScoresRequest?.promise === request) homeScoresRequest = null;
   });
 }
 
