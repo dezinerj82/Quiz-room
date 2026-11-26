@@ -214,8 +214,8 @@ h1 {
 }
 
 #question-stage {
-  top: 272px;
-  height: 464px;
+  top: calc(var(--stage-2-bottom, 248px) + var(--card-padding));
+  bottom: var(--main-frame-padding);
   display: flex;
   flex-direction: column;
 }
