@@ -14,7 +14,8 @@ let signedInUserId = null;
 function scaleFrame() {
   const width = parseFloat(getComputedStyle(frame).width);
   const height = parseFloat(getComputedStyle(frame).height);
-  const scale = Math.min(1, window.innerWidth / width, window.innerHeight / height);
+  // Scale the full 4:3 layout uniformly, including on 1920 x 1080 screens.
+  const scale = Math.min(window.innerWidth / width, window.innerHeight / height);
   frame.style.setProperty("--scale", String(scale));
   frame.style.visibility = "visible";
 }
