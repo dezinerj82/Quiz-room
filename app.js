@@ -548,8 +548,17 @@ function makeHomeSvg(tag, props) {
 
 function showHomeSubject() {
   if (!quizContent.classList.contains("home-dashboard")) return;
-  quizToolbarName.textContent = homeSubject;
-  quizStepActions.replaceChildren(...homeSubjects.map(subject =>
+  const availableSubjects = Array.isArray(homeScores)
+    ? homeSubjects.filter(subject => homeScores.some(item => item.subject === subject))
+    : [];
+  const noRecords = Array.isArray(homeScores) && availableSubjects.length === 0;
+  if (availableSubjects.length && !availableSubjects.includes(homeSubject)) {
+    homeSubject = availableSubjects[0];
+  }
+  quizStepLabel.textContent = noRecords ? "Let's get quizzing!" : "Choose a subject";
+  quizToolbar.hidden = availableSubjects.length === 0;
+  quizToolbarName.textContent = availableSubjects.length ? homeSubject : "";
+  quizStepActions.replaceChildren(...availableSubjects.map(subject =>
     quizOption(subject, () => {
       homeSubject = subject;
       showHomeSubject();
@@ -589,7 +598,8 @@ function showHomeSubject() {
 
   const chartCard = makeHomeElement("section", "home-dashboard-card");
   chartCard.setAttribute("aria-label", "Quiz score average");
-  chartCard.append(makeHomeElement("div", "math-basics-question-text", "Quiz score average"));
+  const chartTitle = makeHomeElement("div", "math-basics-question-text", "Quiz score average");
+  chartCard.append(chartTitle);
   const chart = makeHomeElement("div", "home-dashboard-chart");
   const svg = makeHomeSvg("svg", {viewBox:"0 0 200 200", class:"home-dashboard-donut", role:"img", "aria-label":"Overall subject average"});
   const circumference = 2 * Math.PI * 73;
@@ -608,6 +618,14 @@ function showHomeSubject() {
   chartCard.append(shortcuts);
   quizContent.replaceChildren(historyCard,chartCard);
 
+  if (noRecords) {
+    const emptyMessage = "Your results will pop up here after your first quiz.";
+    historyControls.remove();
+    history.append(makeHomeElement("span","home-dashboard-detail",emptyMessage));
+    chartCard.replaceChildren(chartTitle,makeHomeElement("span","home-dashboard-detail",emptyMessage));
+    updateHistoryControls();
+    return;
+  }
   if (homeScores === null) {
     updateHistoryControls();
     return;
