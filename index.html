@@ -19,10 +19,15 @@
       </div>
       <h1>Your little learning corner.</h1>
       <p class="description">One place to practice, learn, and grow.</p>
-      <button id="google-login" type="button">
-        <span class="google-mark" aria-hidden="true">G</span>
-        <span>Continue with Google</span>
-      </button>
+      <div id="login-action">
+        <button id="google-login" type="button">
+          <span class="google-mark" aria-hidden="true">G</span>
+          <span>Continue with Google</span>
+        </button>
+        <div id="login-progress" role="progressbar" aria-label="Getting your quiz room ready" hidden>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
       <p id="login-status" role="status" aria-live="polite" hidden></p>
     </section>
     <div id="main-page" hidden>
